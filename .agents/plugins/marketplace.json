@@ -1,0 +1,20 @@
+{
+  "name": "foculoom-aiartifacts",
+  "interface": {
+    "displayName": "Foculoom AI Artifacts"
+  },
+  "plugins": [
+    {
+      "name": "editorial",
+      "source": {
+        "source": "local",
+        "path": "./plugins/editorial"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

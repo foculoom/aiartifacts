@@ -1,0 +1,31 @@
+name: Validate artifacts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  editorial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Test editorial warning checker
+        run: python -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q
+      - name: Parse package metadata
+        run: |
+          python -m json.tool .agents/plugins/marketplace.json > /dev/null
+          python -m json.tool plugins/editorial/plugin.json > /dev/null
+          python - <<'PY'
+          import pathlib
+          import tomllib
+
+          for path in pathlib.Path('agents/codex').glob('*.toml'):
+              with path.open('rb') as source:
+                  tomllib.load(source)
+          PY
