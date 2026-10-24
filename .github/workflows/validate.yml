@@ -21,6 +21,8 @@ jobs:
         run: python scripts/validate_catalog.py
       - name: Test static release verifier
         run: python -m unittest discover -s plugins/release/skills/release-evidence/scripts -q
+      - name: Test private decision reporting
+        run: python -m unittest discover -s plugins/reporting/skills/decision-reporting/scripts -q
       - name: Parse package metadata
         run: |
           python -m json.tool .agents/plugins/marketplace.json > /dev/null

@@ -2,6 +2,12 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## 0.4.0 — 2026-10-24
+
+- Add Reporting 0.1.0: normalized source adapters, private aggregate reports, freshness and missing-evidence handling.
+- Add synthetic regression coverage for QA, deduplication, backlog age, and sensitive-text exclusion.
+- Document authorized collection, source limitations, recurring review, and aggregate retention.
+
 ## 0.3.0 — 2026-10-23
 
 - Add Release 0.1.0 with credential-free static readback tooling and deployment evidence workflow.

@@ -52,3 +52,7 @@ This repository is licensed under [Apache-2.0](LICENSE). See the [changelog](CHA
 ## Release plugin
 
 Release 0.1.0 adds `release-evidence`: reuse existing signed-in access, check history before upload, avoid duplicate deployment retries, compare packaged/live hashes, and publish sanitized evidence. Its optional Python 3.9+ verifier writes a manifest with `--root PAYLOAD --output MANIFEST`, or reads public HTTPS assets with `--manifest MANIFEST --origin https://example.com --output REPORT`. Reports must remain outside the payload. It never deploys, requests credentials, or accepts unexplained host rewrites. Repository snapshot v0.3.0 adds this plugin; Design and Editorial remain at 0.1.0.
+
+## Reporting plugin
+
+[Reporting 0.1.0](plugins/reporting/) adds the [decision-reporting skill](plugins/reporting/skills/decision-reporting/SKILL.md) and a dependency-free Python 3.9+ aggregate report generator. Separate normalized Tally, Gmail, and analytics adapters distinguish incomplete evidence from zero, exclude tagged QA and linked notifications, and keep message text out of reports. Collection uses separately authorized connectors/exports; this plugin does not authenticate, schedule, or send messages. Project inputs and reports stay private. The synthetic fixture is the public regression input. Repository snapshot v0.4.0 adds Reporting; other plugin versions are unchanged.
