@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Identity"
+  short_description: "Define product identities within a brand family"
+  default_prompt: "Use $product-identity with the project brief and record the evidence and revisions."

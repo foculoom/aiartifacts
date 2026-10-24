@@ -13,6 +13,12 @@ Reusable AI workflows from Foculoom live in one repository. A plugin is an insta
 
 The editorial method is shared. Voice is chosen for the actual work: long-form nonfiction, children's writing, a website, game interface text, and game dialogue have different reader needs. Audience and medium profiles guide the review; a project's own brief supplies its brand, characters, terminology, and approved examples. No single "human voice" score establishes quality or authorship. An automated review also does not replace a human editor or reader.
 
+## Design plugin
+
+The optional [Design plugin](plugins/design/) includes `product-identity` for brand-family briefs and `experience-review` for evidence-based interface audits. Use the [identity brief template](templates/project-identity-brief.md) beside the project voice brief. Keep completed product briefs and private mockups in their owning repositories. The [dependency register](plugins/design/DEPENDENCIES.md) distinguishes reviewed candidates from tested dependencies; neither skill requires an external design skill. [Behavior cases](evals/design/README.md) cover preservation, audience fit, availability, and evidence limits.
+
+Design starts at 0.1.0; Editorial remains 0.1.0. Repository tag v0.2.0 pins this combined snapshot.
+
 ## Use the editorial plugin
 
 The repository's [marketplace catalog](.agents/plugins/marketplace.json) lists the editorial plugin as an optional install. For local testing, add this repository as a marketplace source:
