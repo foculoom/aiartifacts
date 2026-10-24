@@ -1,5 +1,15 @@
 # Maintainer handoff
 
+## Strict manifest parsing — October 24, 2026
+
+The unreleased Design 0.1.1 checker now rejects duplicate JSON members at every
+object level and requires the integer version `1`. This prevents duplicate
+filenames or repeated inventories from silently replacing earlier evidence.
+Eleven synthetic Design tests and catalog validation passed locally, including
+CLI rejection with exit 2 and no success receipt. No product fixtures or private
+data are included. CI registration remains a separate reviewed change; no new
+release, installed-plugin update, workflow change or consumer-pin change occurred.
+
 Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. Design 0.1.1 below is an unreleased source increment. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
 
 ## Architecture and release state

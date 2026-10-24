@@ -4,6 +4,7 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — Design 0.1.1 candidate
 
+- Reject ambiguous export manifests with duplicate JSON members or non-integer versions; add synthetic parser and CLI regressions.
 - Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
 - Add a dependency-free, read-only path/inventory/hash checker and synthetic regression cases. No asset generation, QR decoding, publishing or deployment authority is implied.
 - This source candidate does not change the released v0.5.0 tag or consumers' pins. CI registration and public release remain separate work.

@@ -28,6 +28,10 @@ classify rights or publish. Its manifest format is compatible with the release
 plugin's static manifest (`version: 1`, `files: {relative_path: sha256}`). Supply
 a separately reviewed list of intended public files; generating an allowlist
 from the output being checked would bless its accidental contents.
+Manifest JSON must have unique member names at every level and an integer
+version of `1`. Repeated filenames or `files` members are rejected instead of
+silently discarding an earlier inventory; boolean and floating-point versions
+are not accepted.
 
 ```sh
 python3 check_export.py preflight --source-root /absolute/source --output-root /new/absolute/kit
