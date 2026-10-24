@@ -70,6 +70,15 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(result['total'],0)
         self.assertEqual(result['oldest_open_days'],11)
 
+    def test_allowlisted_dimensions_exclude_raw_urls(self):
+        self.data["config"]["pages"]=["home"]
+        self.data["sources"]["analytics"]["dimensions"]={"pages":{"home":5,"https://example.com/?email=secret":2},"devices":{}}
+        result=generate(self.data)
+        self.assertEqual(result["analytics"]["dimensions"]["pages"],{"home":5,"unclassified":2})
+        self.assertEqual(result["analytics"]["dimensions"]["devices"],{})
+        self.assertIsNone(result["analytics"]["dimensions"]["referrers"])
+        self.assertNotIn("email=secret",json.dumps(result))
+
     def test_boundaries_and_numeric_validation(self):
         self.data['sources']['tally']['records'][0]['created_at']=self.data['window']['end']
         self.data['sources']['analytics']['metrics']['visits']=-1

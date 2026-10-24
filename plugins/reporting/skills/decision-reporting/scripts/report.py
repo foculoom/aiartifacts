@@ -79,7 +79,7 @@ def gmail_adapter(source, allowed):
     return feedback_adapter(source, allowed)
 
 
-def analytics_adapter(source):
+def analytics_adapter(source, config):
     values = source['metrics']
     result = {}
     for name in METRICS:
@@ -87,6 +87,22 @@ def analytics_adapter(source):
         if value is not None and (type(value) not in (int, float) or value < 0 or value != value or value == float('inf')):
             raise ValueError('invalid analytics value')
         result[name] = value
+    dimensions = {}
+    for name in ("pages", "referrers", "devices"):
+        permitted = {label(v) for v in config.get(name, [])}
+        raw = source.get("dimensions", {}).get(name)
+        if raw is None:
+            dimensions[name] = None
+            continue
+        if not isinstance(raw, dict):
+            raise ValueError("dimension must map approved categories to counts")
+        grouped = Counter()
+        for category, count in raw.items():
+            if type(count) is not int or count < 0:
+                raise ValueError("dimension counts must be nonnegative integers")
+            grouped[category if category in permitted else "unclassified"] += count
+        dimensions[name] = dict(sorted(grouped.items()))
+    result["dimensions"] = dimensions
     return result
 
 
@@ -116,7 +132,7 @@ def generate(data):
             continue
         try:
             if name == 'analytics':
-                report['analytics'] = analytics_adapter(source)
+                report['analytics'] = analytics_adapter(source, config)
             else:
                 loaded[name] = (tally_adapter if name == 'tally' else gmail_adapter)(source, allowed)
                 report['sources'][name]['input_records'] = len(loaded[name])
