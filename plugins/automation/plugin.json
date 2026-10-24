@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "automation",
+  "version": "0.1.0",
+  "description": "Reviewed local task execution with scoped vault credentials and evidence checks.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/automation",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "automation",
+    "credentials",
+    "local-execution"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Local Automation",
+        "shortDescription": "Reviewed local tasks with scoped credentials",
+        "longDescription": "Reviewed local task execution with scoped vault credentials and evidence checks.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Prepare and validate a local reviewed task runner without exposing credentials."
+        ]
+      }
+    }
+  }
+}

@@ -6,9 +6,11 @@ import json
 from pathlib import Path
 import re
 
-REVISION = 'reporting/0.1.0'
+REVISION = 'reporting/0.1.1'
 SOURCES = ('tally', 'gmail', 'analytics')
 METRICS = ('visits', 'page_views', 'lcp_p75_ms', 'inp_p75_ms', 'cls_p75')
+USAGE_CONTEXTS = ('free_used', 'paid_used', 'pre_use', 'qa', 'owner_test', 'unknown')
+ACTUAL_USE_CONTEXTS = ('free_used', 'paid_used')
 
 
 def time(value):
@@ -22,6 +24,14 @@ def label(value):
     if not isinstance(value, str) or not re.fullmatch(r'[a-z][a-z0-9_-]{0,47}', value):
         raise ValueError('configuration labels must be short lowercase slugs')
     return value
+
+
+def optional_tag(value, approved):
+    if value is None:
+        return 'unknown'
+    if not isinstance(value, str):
+        raise ValueError('edition/build must be a string when supplied')
+    return value if value in approved else 'unclassified'
 
 
 def ready(source, start, end, now, max_age):
@@ -57,12 +67,18 @@ def feedback_adapter(source, allowed):
         qa = record.get('is_qa', False)
         if not isinstance(qa, bool):
             raise ValueError('is_qa must be boolean')
+        usage_context = record.get('usage_context', 'unknown')
+        if usage_context not in USAGE_CONTEXTS:
+            raise ValueError('invalid usage context')
         fields = {k: record.get(k) if record.get(k) in allowed[k] else 'unclassified'
                   for k in ('product', 'contact_type', 'theme')}
+        edition = optional_tag(record.get('edition'), allowed['edition'])
+        build = optional_tag(record.get('build'), allowed['build'])
         submission = record.get('submission_id')
         if submission is not None and (not isinstance(submission, str) or not submission):
             raise ValueError('invalid submission reference')
         normalized = dict(fields, id=rid, created=created, status=status, is_qa=qa,
+                          usage_context=usage_context, edition=edition, build=build,
                           submission_id=submission)
         if rid in identities and identities[rid] != normalized:
             raise ValueError("conflicting duplicate record")
@@ -113,6 +129,8 @@ def generate(data):
     config = data['config']
     allowed = {key: {label(v) for v in config[name]} for key, name in
                (('product', 'products'), ('contact_type', 'contact_types'), ('theme', 'themes'))}
+    allowed['edition'] = {label(v) for v in config.get('editions', [])}
+    allowed['build'] = {label(v) for v in config.get('builds', [])}
     max_age = config.get('max_source_age_hours', 48)
     if type(max_age) not in (float, int) or not 0 < max_age <= 8760:
         raise ValueError('invalid maximum source age')
@@ -120,7 +138,8 @@ def generate(data):
                   as_of=now.isoformat(), sources={}, feedback={}, analytics=None,
                   findings=[], decisions_needed=[], limitations=[
                       'Counts describe records and visits, not unique customers or demand.',
-                      'QA exclusion requires source tagging; deployment/test traffic may remain in analytics.',
+                      'Usage context is reported evidence, not purchase validation or proof of unique customers.',
+                      'QA and owner-test exclusion requires source tagging; deployment/test traffic may remain in analytics.',
                       'Themes are approved categories assigned upstream; message text is not retained.',
                       'Unresolved age covers supplied open records only; completeness of backlog is not inferred.'])
     loaded = {}
@@ -157,8 +176,11 @@ def generate(data):
                 if r['submission_id'] not in tally_ids:
                     exclusions['unmatched_notifications'] += 1
                 continue
-            if r['is_qa']:
+            if r['is_qa'] or r['usage_context'] == 'qa':
                 exclusions['qa_records'] += 1
+                continue
+            if r['usage_context'] == 'owner_test':
+                exclusions['owner_test_records'] += 1
                 continue
             if r['created'] >= end:
                 exclusions['outside_window'] += 1
@@ -170,10 +192,26 @@ def generate(data):
                 continue
             included.append(r)
     complete = all(report['sources'][k]['status'] == 'ok' for k in ('tally', 'gmail'))
+    actual_use = {context: sum(r['usage_context'] == context for r in included)
+                  for context in ACTUAL_USE_CONTEXTS} if loaded else None
+    def actual_use_by(field):
+        grouped = {}
+        for r in included:
+            if r['usage_context'] in ACTUAL_USE_CONTEXTS:
+                grouped.setdefault(r[field], dict.fromkeys(ACTUAL_USE_CONTEXTS, 0))
+                grouped[r[field]][r['usage_context']] += 1
+        return dict(sorted(grouped.items()))
     report['feedback'] = {'complete': complete, 'total': len(included) if complete else None,
         'observed_records': len(included) if loaded else None,
         'by_product': dict(sorted(Counter(r['product'] for r in included).items())) if loaded else None,
         'by_contact_type': dict(sorted(Counter(r['contact_type'] for r in included).items())) if loaded else None,
+        'by_usage_context': dict(sorted(Counter(r['usage_context'] for r in included).items())) if loaded else None,
+        'by_edition': dict(sorted(Counter(r['edition'] for r in included).items())) if loaded else None,
+        'by_build': dict(sorted(Counter(r['build'] for r in included).items())) if loaded else None,
+        'actual_use': actual_use,
+        'actual_use_by_product': actual_use_by('product') if loaded else None,
+        'actual_use_by_edition': actual_use_by('edition') if loaded else None,
+        'actual_use_by_build': actual_use_by('build') if loaded else None,
         'themes': dict(sorted(Counter(r['theme'] for r in included).items())) if loaded else None,
         'open_records_in_supplied_backlog': len(ages) if loaded else None,
         'oldest_open_days': max(ages) if ages else None, 'exclusions': dict(exclusions)}

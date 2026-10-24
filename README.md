@@ -58,3 +58,9 @@ Release 0.1.0 adds `release-evidence`: reuse existing signed-in access, check hi
 ## Reporting plugin
 
 [Reporting 0.1.0](plugins/reporting/) adds the [decision-reporting skill](plugins/reporting/skills/decision-reporting/SKILL.md) and a dependency-free Python 3.9+ aggregate report generator. Separate normalized Tally, Gmail, and analytics adapters distinguish incomplete evidence from zero, exclude tagged QA and linked notifications, and keep message text out of reports. Collection uses separately authorized connectors/exports; this plugin does not authenticate, schedule, or send messages. Project inputs and reports stay private. The synthetic fixture is the public regression input. Repository snapshot v0.4.0 adds Reporting; other plugin versions are unchanged.
+
+## Current snapshot: v0.5.0
+
+[Automation 0.1.0](plugins/automation/) adds a local credential-runner skill, macOS Keychain task launcher, scoped 1Password resolver and synthetic tests. A fixed reviewed profile pins tasks and code; credentials stay out of arguments, logs and reports. Actual Keychain/provider execution must be validated on the consuming Mac. This toolkit grants no release, financial or broader access authority and does not install or schedule itself.
+
+[Reporting 0.1.1](plugins/reporting/) adds optional self-reported free/paid use context and allowlisted edition/build counts. Legacy records remain `unknown`; QA and owner testing are excluded. These are submission counts, never unique-customer or verified-purchase claims. Editorial, Design and Release remain 0.1.0. Pin the tested repository tag `v0.5.0` after it is published; the earlier sections document previous snapshots.

@@ -2,6 +2,13 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## 0.5.0 — 2026-10-24
+
+- Add Automation 0.1.0: local Keychain bootstrap, compiled task/profile/code pins, scoped service-account resolution, sanitized fresh-result contracts, and explicit local-only limitations.
+- Add synthetic failure tests for missing/malformed/revoked/inaccessible credentials, incorrect identity/scope/field type, changed files, relative interpreter inputs, unsupported tasks, missing evidence and secret-printing children. The compiled launcher has no credential-export operation.
+- Update Reporting to 0.1.1 with voluntary actual-use context, edition/build aggregation, QA and owner-test exclusions, and backward-compatible unknown context for earlier records.
+- Retain Apache-2.0, existing plugin versions, and product/private data separation. No additional agent role or upstream code was vendored.
+
 ## 0.4.0 — 2026-10-24
 
 - Add Reporting 0.1.0: normalized source adapters, private aggregate reports, freshness and missing-evidence handling.
