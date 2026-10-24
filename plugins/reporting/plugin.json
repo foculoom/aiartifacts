@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "reporting",
+  "version": "0.1.0",
+  "description": "Private decision reports from minimized feedback and website measurement exports.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/reporting",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "reporting",
+    "feedback",
+    "measurement"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Reporting",
+        "shortDescription": "Evidence-based private product reports",
+        "longDescription": "Private decision reports from minimized feedback and website measurement exports.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Review feedback and measurement with explicit missing evidence."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# Normalized input contract (version 1)
+
+The helper accepts one JSON document. It makes no network calls. Use authorized exports/connectors and write private input files with restrictive permissions. All timestamps must include timezone; the reporting interval is start-inclusive, end-exclusive.
+
+- `window`: `start`, `end`; `as_of` is at or after end.
+- `config`: `products`, `contact_types`, `themes` arrays of approved lowercase slugs (letters, digits, underscore, hyphen; max 48 characters), and optional `max_source_age_hours` (default 48). These categories are not source text.
+- `sources`: fixed keys `tally`, `gmail`, `analytics`. Omitted sources are unavailable.
+- Each source has `status` (`ok`, otherwise unavailable), `fetched_at`, and `coverage` with start/end. `ok` attests the export covers the entire interval, including pagination; source adapters must not mark truncated searches complete. Old/future fetch times are stale. Incomplete interval coverage is partial.
+- Tally/Gmail sources contain `records`: `id`, `created_at`, `product`, `contact_type`, `theme`, `status` (`open`, `resolved`, `unknown`), `is_qa` boolean. Unknown categories become `unclassified`. Omitted triage status remains `unknown`, not resolved. IDs stay internal.
+- Gmail can have `submission_id`, referencing Tally's submission ID. All linked notifications are excluded; missing matching Tally records are separately counted as unmatched. For direct support mail, normalize one record per thread/case, using the original case timestamp, not each reply. Include older open cases when available. Do not infer resolved status from archive/read status.
+- Analytics contains `metrics`: optional nonnegative numbers `visits`, `page_views`, `lcp_p75_ms`, `inp_p75_ms`, `cls_p75`. Missing metrics are null. Other dimensions and raw URLs are deliberately excluded from this minimal generator; record dimension availability in the private evidence note.
+
+Source failures do not expose provider errors or arbitrary text in output. Invalid records invalidate their entire source, rather than silently undercounting. Outputs contain source status, normalized fetch timestamps, input counts, aggregate categories, exclusions, open-case age, fixed finding/action codes, and limitations. No input IDs or message text is emitted. Unavailable feedback sources cause `feedback.total = null`; `observed_records` is a partial count and must not be labeled a total. A complete empty import produces zero.
+
+Reports are exclusively created with mode 0600; existing outputs are not overwritten. The caller selects a private directory, handles input permissions, collects source evidence, and implements approved retention/scheduling. The generator performs no deletions or scheduling.

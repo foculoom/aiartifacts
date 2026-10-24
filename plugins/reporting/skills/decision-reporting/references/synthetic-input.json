@@ -1,0 +1,10 @@
+{
+  "window": {"start":"2026-01-05T00:00:00Z", "end":"2026-01-12T00:00:00Z"},
+  "as_of":"2026-01-12T09:00:00Z",
+  "config": {"products":["puzzle"],"contact_types":["issue","idea"],"themes":["navigation"],"max_source_age_hours":48},
+  "sources": {
+    "tally":{"status":"ok","fetched_at":"2026-01-12T08:00:00Z","coverage":{"start":"2026-01-05T00:00:00Z","end":"2026-01-12T00:00:00Z"},"records":[{"id":"synthetic-1","created_at":"2026-01-06T00:00:00Z","product":"puzzle","contact_type":"issue","theme":"navigation","status":"open","is_qa":false}]},
+    "gmail":{"status":"ok","fetched_at":"2026-01-12T08:00:00Z","coverage":{"start":"2026-01-05T00:00:00Z","end":"2026-01-12T00:00:00Z"},"records":[{"id":"synthetic-mail-1","submission_id":"synthetic-1","created_at":"2026-01-06T00:00:00Z","product":"puzzle","contact_type":"issue","theme":"navigation","status":"unknown","is_qa":false}]},
+    "analytics":{"status":"ok","fetched_at":"2026-01-12T08:00:00Z","coverage":{"start":"2026-01-05T00:00:00Z","end":"2026-01-12T00:00:00Z"},"metrics":{"visits":12,"page_views":18}}
+  }
+}
