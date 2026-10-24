@@ -17,6 +17,9 @@ ITEM = 'b' * 26
 USER = 'c' * 26
 SECRET = 'synthetic-only-provider-secret'
 TOKEN = 'synthetic-only-service-token'
+# The hosted CI toolcache interpreter is group-writable and must be rejected by
+# production guards. Use the system interpreter for these stdlib-only fixtures.
+TEST_PYTHON = Path('/usr/bin/python3').resolve()
 
 
 def cfg():
@@ -104,6 +107,12 @@ class RunnerTests(unittest.TestCase):
             with self.assertRaisesRegex(runner.Blocked, 'changed'):
                 runner.verify_file(str(p), sha)
 
+    def test_group_writable_reviewed_file_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / 'script'; p.write_text('original'); p.chmod(0o660)
+            with self.assertRaisesRegex(runner.Blocked, 'reviewed_file_writable_by_others'):
+                runner.verify_file(str(p), runner.digest(p))
+
     def test_unreviewed_task_fails_before_keychain(self):
         with patch.object(runner, 'run') as read:
             with self.assertRaisesRegex(runner.Blocked, 'not_reviewed'):
@@ -115,8 +124,8 @@ class RunnerTests(unittest.TestCase):
             child = Path(tmp) / 'child.py'
             child.write_text('import os,sys,json\nassert "OP_SERVICE_ACCOUNT_TOKEN" not in os.environ\nassert "OTHER_SECRET" not in os.environ\nassert os.environ["PROVIDER_KEY"] == "' + SECRET + '"\nprint(os.environ["PROVIDER_KEY"])\nprint(os.environ["PROVIDER_KEY"],file=sys.stderr)\nopen(os.environ["LOCAL_RESULT_PATH"],"w").write(json.dumps({"run_id":os.environ["LOCAL_RUN_ID"],"target":"fixture","checks":{"scope":True}}))\n')
             config = {**cfg(), 'keychain_helper': {'path': '/synthetic/keychain'}, 'keychain_service': 'fixture', 'keychain_account': 'fixture', 'tasks': {'probe': {
-                'authorization': 'Synthetic read-only test', 'source_revision': 'fixture-v1', 'argv': [str(Path(sys.executable).resolve()), '-I', str(child)],
-                'cwd': tmp, 'reviewed_files': {str(Path(sys.executable).resolve()): runner.digest(str(Path(sys.executable).resolve())), str(child): runner.digest(child)},
+                'authorization': 'Synthetic read-only test', 'source_revision': 'fixture-v1', 'argv': [str(TEST_PYTHON), '-I', str(child)],
+                'cwd': tmp, 'reviewed_files': {str(TEST_PYTHON): runner.digest(str(TEST_PYTHON)), str(child): runner.digest(child)},
                 'result_contract': {'directory': tmp, 'target':'fixture', 'checks':['scope']}, 'credentials': {'PROVIDER_KEY': {}}}}}
             with patch.dict(os.environ, {'OTHER_SECRET': SECRET}), \
                  patch.object(runner, 'run', return_value=subprocess.CompletedProcess([], 0, TOKEN.encode(), b'')), \
@@ -137,8 +146,8 @@ class RunnerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / 'unreviewed.py'; script.write_text('pass')
             config = {'tasks': {'probe': {'authorization': 'test', 'source_revision': 'fixture',
-                'argv': [str(Path(sys.executable).resolve()), '-I', str(script)], 'cwd': tmp,
-                'reviewed_files': {str(Path(sys.executable).resolve()): runner.digest(str(Path(sys.executable).resolve()))}}}}
+                'argv': [str(TEST_PYTHON), '-I', str(script)], 'cwd': tmp,
+                'reviewed_files': {str(TEST_PYTHON): runner.digest(str(TEST_PYTHON))}}}}
             with self.assertRaisesRegex(runner.Blocked, 'file_argument_not_pinned'):
                 runner.execute(config, 'probe', TOKEN)
 
@@ -147,7 +156,7 @@ class RunnerTests(unittest.TestCase):
         compiler = importlib.util.module_from_spec(spec); spec.loader.exec_module(compiler)
         with tempfile.TemporaryDirectory() as tmp:
             child = Path(tmp) / 'child.py'; child.write_text('pass')
-            executable = str(Path(sys.executable).resolve())
+            executable = str(TEST_PYTHON)
             for argv in ([executable, '-I', 'child.py'], [executable, '-c', 'pass'], [executable, str(child)]):
                 with self.assertRaises(ValueError):
                     compiler.validate_tasks({'tasks': {'x': {'argv':argv,'cwd':tmp,'reviewed_files':{executable:'pin'}}}})
@@ -157,7 +166,7 @@ class RunnerTests(unittest.TestCase):
     def test_success_exit_without_fresh_evidence_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
             child = Path(tmp) / 'empty.py'; child.write_text('pass')
-            executable = str(Path(sys.executable).resolve())
+            executable = str(TEST_PYTHON)
             config = {**cfg(), 'tasks': {'probe': {'authorization':'test','source_revision':'fixture',
                 'argv':[executable,'-I',str(child)],'cwd':tmp,
                 'reviewed_files':{executable:runner.digest(executable),str(child):runner.digest(child)},
