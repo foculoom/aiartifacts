@@ -37,6 +37,28 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(result["sources"]["tally"]["status"],"invalid")
         self.assertIsNone(result["feedback"]["total"])
 
+    def test_qa_notification_and_duplicates_never_enter_counts(self):
+        records=self.data["sources"]["tally"]["records"]
+        records[0]["is_qa"]=True
+        records.append(copy.deepcopy(records[0]))
+        result=generate(self.data)["feedback"]
+        self.assertEqual(result["total"],0)
+        self.assertEqual(result["exclusions"],{"qa_records":1,"duplicate_records":1,"linked_notifications":1})
+
+    def test_all_sources_unavailable_keeps_observed_counts_null(self):
+        self.data["sources"]={}
+        result=generate(self.data)
+        self.assertIsNone(result["feedback"]["total"])
+        self.assertIsNone(result["feedback"]["observed_records"])
+        self.assertIsNone(result["feedback"]["by_product"])
+        self.assertIsNone(result["analytics"])
+
+    def test_fetch_before_window_end_cannot_attest_full_coverage(self):
+        self.data["sources"]["tally"]["fetched_at"]="2026-01-11T23:00:00Z"
+        result=generate(self.data)
+        self.assertEqual(result["sources"]["tally"]["status"],"partial")
+        self.assertIsNone(result["feedback"]["total"])
+
     def test_empty_complete_is_zero(self):
         for name in ('tally','gmail'):
             self.data['sources'][name]['records'] = []

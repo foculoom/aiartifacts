@@ -32,7 +32,7 @@ def ready(source, start, end, now, max_age):
         coverage = source['coverage']
         if fetched > now or (now-fetched).total_seconds() > max_age * 3600:
             return 'stale'
-        if time(coverage['start']) > start or time(coverage['end']) < end:
+        if fetched < end or time(coverage['start']) > start or time(coverage['end']) < end:
             return 'partial'
     except (KeyError, TypeError, ValueError, AttributeError):
         return 'invalid'
@@ -180,6 +180,9 @@ def generate(data):
     for name, info in report['sources'].items():
         if info['status'] != 'ok':
             report['decisions_needed'].append({'code': 'restore_source', 'source': name})
+    if exclusions['unmatched_notifications']:
+        report['decisions_needed'].append({'code': 'reconcile_unmatched_notifications',
+                                           'records': exclusions['unmatched_notifications']})
     for theme, count in (report['feedback']['themes'] or {}).items():
         if theme != 'unclassified' and count >= 2:
             report['findings'].append({'code': 'repeated_theme', 'theme': theme, 'records': count,
