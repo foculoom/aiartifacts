@@ -63,4 +63,13 @@ Release 0.1.0 adds `release-evidence`: reuse existing signed-in access, check hi
 
 [Automation 0.1.0](plugins/automation/) adds a local credential-runner skill, macOS Keychain task launcher, scoped 1Password resolver and synthetic tests. A fixed reviewed profile pins tasks and code; credentials stay out of arguments, logs and reports. Actual Keychain/provider execution must be validated on the consuming Mac. This toolkit grants no release, financial or broader access authority and does not install or schedule itself.
 
-[Reporting 0.1.1](plugins/reporting/) adds optional self-reported free/paid use context and allowlisted edition/build counts. Legacy records remain `unknown`; QA and owner testing are excluded. These are submission counts, never unique-customer or verified-purchase claims. Editorial, Design and Release remain 0.1.0. Pin the tested repository tag `v0.5.0` after it is published; the earlier sections document previous snapshots.
+[Reporting 0.1.1](plugins/reporting/) adds optional self-reported free/paid use context and allowlisted edition/build counts. Legacy records remain `unknown`; QA and owner testing are excluded. These are submission counts, never unique-customer or verified-purchase claims. Editorial, Design and Release remain 0.1.0. Pin the published repository tag `v0.5.0`; the earlier sections document previous snapshots.
+
+## Unreleased Design source candidate
+
+Design 0.1.1 adds [design-kit export guidance](plugins/design/skills/product-identity/references/export-handoff.md)
+and an optional read-only standard-library checker for explicit roots, new
+output paths, exact website inventories and hashes. It separates final-raster
+QR decoding from physical/vendor proof. This is an unreleased source candidate;
+existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
+locally; registering them in CI is a separate reviewed change.

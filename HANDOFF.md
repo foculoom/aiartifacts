@@ -1,10 +1,10 @@
 # Maintainer handoff
 
-Checkpoint: **v0.5.0**, 24 October 2026; publish the tag only after reviewed merge. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
+Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. Design 0.1.1 below is an unreleased source increment. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
 
 ## Architecture and release state
 
-One repository holds independently versioned plugins, skills, agent templates, synthetic evaluations and templates. Do not create one repo per product or writing medium. Current plugins are Editorial, Design, Release and Automation at 0.1.0, and Reporting at 0.1.1. The catalog is `.agents/plugins/marketplace.json`. Repository tags pin the combined tested snapshot; they do not imply installation or listing in a universal plugin directory.
+One repository holds independently versioned plugins, skills, agent templates, synthetic evaluations and templates. Do not create one repo per product or writing medium. In the released v0.5.0 snapshot, Editorial, Design, Release and Automation are 0.1.0, and Reporting is 0.1.1. The unreleased source adds Design 0.1.1 as described below. The catalog is `.agents/plugins/marketplace.json`. Repository tags pin the combined tested snapshot; they do not imply installation or listing in a universal plugin directory.
 
 - Editorial: shared review method with audience/medium profiles and project voice brief. Never certify human authorship from lint or replace a human editor with a score.
 - Design: product-identity and experience-review; shared publisher frame versus product identity, preserve approved choices, distinguish defects/preferences/hypotheses and record observed scope/revisions. Product briefs/artwork stay with their owners.
@@ -36,3 +36,18 @@ The candidate passed 17 automation, 20 reporting, 27 editorial and 5 release tes
 The consumer's existing private profile also passed the final compiler guards. Live Keychain/provider evidence remains in the owning consumer, as do its exact configuration and task identities. Synthetic error cases do not claim live revocation/expiry tests.
 
 CI initially rejected its group-writable toolcache Python as a reviewed executable. Synthetic child-process tests now use the system interpreter; a regression test explicitly preserves rejection of group-writable files. Production runner guards were not relaxed.
+
+## Unreleased Design 0.1.1 source candidate
+
+Design's product-identity skill now links a reusable export handoff and an
+optional Python standard-library checker. Seven synthetic tests cover explicit
+source roots, output preservation, linked entries, exact inventory and hash
+mismatches; no product files or provider access are used. The checker establishes
+local file identity only. Final-raster QR decoding and physical/vendor checks
+remain separately observed actions, not results of the checker.
+
+Run `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`
+and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
+no new tag, dependency or CI configuration is introduced. The existing CI does
+not yet invoke the new Design test suite, so preserve its local validation record
+and register the command through the normal reviewed CI change before release.

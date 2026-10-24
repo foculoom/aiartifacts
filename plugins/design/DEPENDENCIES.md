@@ -8,3 +8,8 @@ The design plugin has no required third-party skill or runtime dependency. It do
 | Editorial review | ../editorial, within foculoom/aiartifacts | Editorial 0.1.0; baseline commit 46645ac1af69f9a5e58b7cfed71b3d862215b7e0 | Optional repository marketplace plugin; Apache-2.0. Product voice briefs stay with products. |
 
 Image generation, Figma implementation, and browser/game testing can use skills already available in the host. Their availability is not promised by this plugin. Record the actual skill/source revision in the consuming project's run report. Before adopting an upstream dependency, inspect its license and instructions, test it on a representative brief, and replace the untested marker with the exact tested commit and result. Do not imply inspection alone establishes compatibility.
+
+The optional design-export checker uses Python's standard library only. It does
+not install an image renderer or QR decoder. Record the separately available
+renderer/decoder and actual final-raster result in the consuming project's
+private handoff; the checker does not claim that validation itself.

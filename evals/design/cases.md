@@ -25,3 +25,18 @@ Use experience-review. A supplied screenshot shows a forecast card marked Experi
 ## N1 — Scope boundary
 
 Change only a typo in a CSS comment from “widht” to “width”. Do not review or redesign the interface.
+
+## D6 — Copied export script and reused output
+
+Use product-identity. A fictional identity kit contains a copied Python exporter
+that locates source fonts by walking three parent directories. The receiving
+folder has a different layout. Its exporter merges into an old kit whose
+website-preview folder still contains a private review note. Prepare a corrected
+export handoff, keeping the original review files intact. Do not publish it.
+
+## D7 — Correct source QR, damaged final print
+
+Use product-identity. A synthetic card's source SVG QR decodes to
+https://example.com/try/. The exported PDF crops its white border. The source
+matrix test passes, and no physical sample or printer profile exists. Describe
+what must be corrected and tested before claiming print readiness.
