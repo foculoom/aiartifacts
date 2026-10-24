@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Evidence"
+  short_description: "Verify static releases and preserve publication evidence"
+  default_prompt: "Use $release-evidence to verify this authorized release against its repository runbook."

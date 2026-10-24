@@ -48,3 +48,7 @@ Additional skills, agents, or plugins can be added here without creating a repos
 Open a focused pull request with the behavior you want to change and a public or cleared example that demonstrates it. Add meaningful positive and negative evaluation cases when a skill's routing or review judgment changes. Do not submit unpublished manuscripts, customer data, credentials, private project briefs, or examples whose publication rights are unclear. Keep prose checks advisory and trace findings to exact passages; do not turn stylistic signals into claims about who wrote the text.
 
 This repository is licensed under [Apache-2.0](LICENSE). See the [changelog](CHANGELOG.md) for release notes.
+
+## Release plugin
+
+Release 0.1.0 adds `release-evidence`: reuse existing signed-in access, check history before upload, avoid duplicate deployment retries, compare packaged/live hashes, and publish sanitized evidence. Its optional Python 3.9+ verifier writes a manifest with `--root PAYLOAD --output MANIFEST`, or reads public HTTPS assets with `--manifest MANIFEST --origin https://example.com --output REPORT`. Reports must remain outside the payload. It never deploys, requests credentials, or accepts unexplained host rewrites. Repository snapshot v0.3.0 adds this plugin; Design and Editorial remain at 0.1.0.
