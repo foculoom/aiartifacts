@@ -28,3 +28,5 @@ Copy this file into the product repository and replace the prompts with approved
 ## Cleared examples
 
 Add short, rights-cleared examples of passages that fit and miss this project's voice, with a sentence explaining why. Do not put private examples in the public aiartifacts repository.
+
+For visual decisions, link the product’s completed [identity brief](project-identity-brief.md) and its revision. Keep prose guidance here and visual decisions there.

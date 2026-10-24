@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "design",
+  "version": "0.1.0",
+  "description": "Define product identities and review rendered experiences against their briefs.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/design",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "design",
+    "identity",
+    "usability",
+    "review"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Design",
+        "shortDescription": "Product identity and experience review",
+        "longDescription": "Define product identities and review rendered experiences against their briefs.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Define this product identity within its existing brand family.",
+          "Review this interface against its brief using observed evidence."
+        ]
+      }
+    }
+  }
+}

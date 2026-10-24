@@ -1,0 +1,4 @@
+interface:
+  display_name: "Experience Review"
+  short_description: "Review interfaces using observed journey evidence"
+  default_prompt: "Use $experience-review with the project brief and record the evidence and revisions."

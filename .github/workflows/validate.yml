@@ -17,10 +17,13 @@ jobs:
           python-version: '3.12'
       - name: Test editorial warning checker
         run: python -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q
+      - name: Validate catalog and skill references
+        run: python scripts/validate_catalog.py
       - name: Parse package metadata
         run: |
           python -m json.tool .agents/plugins/marketplace.json > /dev/null
           python -m json.tool plugins/editorial/plugin.json > /dev/null
+          python -m json.tool plugins/design/plugin.json > /dev/null
           python - <<'PY'
           import pathlib
           import tomllib
