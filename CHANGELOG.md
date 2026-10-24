@@ -2,6 +2,12 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — Design 0.1.1 candidate
+
+- Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
+- Add a dependency-free, read-only path/inventory/hash checker and synthetic regression cases. No asset generation, QR decoding, publishing or deployment authority is implied.
+- This local candidate does not change the released v0.5.0 tag or consumers' pins. CI registration and public release remain separate work.
+
 ## 0.5.0 — 2026-10-24
 
 - Add Automation 0.1.0: local Keychain bootstrap, compiled task/profile/code pins, scoped service-account resolution, sanitized fresh-result contracts, and explicit local-only limitations.

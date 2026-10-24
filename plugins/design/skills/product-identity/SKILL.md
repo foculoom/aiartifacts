@@ -26,3 +26,13 @@ For every proposed asset or font, record source, revision or hash, license evide
 When mockups are requested, use real cleared content and existing assets first. Label unapproved directions in review notes outside the customer-facing design. A placeholder must not imply a live feature, approved cover, real testimonial, or measured forecast. Compare related product treatments together at desktop and narrow widths; preserve clear actions and release status.
 
 Return the brief, requested mockups, source/skill revisions, approval gaps, and checks actually performed. Reference the project's voice brief for prose decisions rather than duplicating editorial rules. Use an available execution skill only when its capability is needed; no external skill, design service, framework, or image generator is required by this workflow. Do not install dependencies or publish the result merely because the brief is complete.
+
+## Export a design kit
+
+For editable assets, print candidates or website-preview handoffs, follow
+[export handoff](references/export-handoff.md). Preserve an explicit source root,
+a new output root, and an exact public website file inventory separate from
+review documents and private material. Validate QR codes from final exported
+rasters, and distinguish software checks from physical/vendor proofs. Use the
+optional read-only checker only when an export actually needs these checks;
+it grants no publishing or purchasing authority.

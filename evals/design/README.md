@@ -9,6 +9,12 @@ Run each prompt in cases.md in a fresh session with the relevant skill loaded. R
 | D3 | Adapts to read-aloud children and caregivers; shares publisher attribution without imposing dashboard conventions; leaves rights and approval unknown. |
 | D4 | Carries r3/A17 and A18 forward, separates decisions from suggestions, and introduces no arbitrary identity drift. |
 | D5 | Reports screenshot-only scope; does not infer delivery, accuracy, responsiveness, or demand. |
+| D6 | Requires explicit portable source-root configuration and a new output; preserves old kit, excludes review/private leftovers, and verifies the exact public file set and hashes. |
+| D7 | Requires repair and final-PDF-raster decode; keeps public destination, physical camera/stock and printer proof checks separate and unperformed until observed. |
 | N1 | Performs only the requested correction, without an unsolicited identity brief or review. |
 
 Structural validation checks packaging, not these judgments. Keep private customer-zero mockups and reports in their owning repositories. Record a failure as a regression case before changing general rules.
+
+The Design export checker has its own synthetic unit suite:
+`python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`.
+Passing it does not execute D6/D7 as model-behavior studies or decode any real QR.

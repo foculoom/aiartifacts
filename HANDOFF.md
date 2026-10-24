@@ -36,3 +36,18 @@ The candidate passed 17 automation, 20 reporting, 27 editorial and 5 release tes
 The consumer's existing private profile also passed the final compiler guards. Live Keychain/provider evidence remains in the owning consumer, as do its exact configuration and task identities. Synthetic error cases do not claim live revocation/expiry tests.
 
 CI initially rejected its group-writable toolcache Python as a reviewed executable. Synthetic child-process tests now use the system interpreter; a regression test explicitly preserves rejection of group-writable files. Production runner guards were not relaxed.
+
+## Local Design 0.1.1 candidate
+
+Design's product-identity skill now links a reusable export handoff and an
+optional Python standard-library checker. Seven synthetic tests cover explicit
+source roots, output preservation, linked entries, exact inventory and hash
+mismatches; no product files or provider access are used. The checker establishes
+local file identity only. Final-raster QR decoding and physical/vendor checks
+remain separately observed actions, not results of the checker.
+
+Run `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`
+and `python3 scripts/validate_catalog.py`. This candidate is local and unreleased;
+no new tag, dependency or CI configuration is introduced. The existing CI does
+not yet invoke the new Design test suite, so preserve its local validation record
+and register the command through the normal reviewed CI change before release.
