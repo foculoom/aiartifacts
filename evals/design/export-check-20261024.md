@@ -21,3 +21,13 @@ No dependency, CI file, tag or consumer pin changed. The Design manifest is
 0.1.1 as an unreleased local candidate. The new unit suite is documented for
 local execution; add it to CI through a separately reviewed configuration change
 before release. Existing released snapshots remain intact.
+
+A subsequent local run also passed every existing workflow check: 27 editorial,
+5 release-verifier, 20 reporting, and 17 credential-runner synthetic tests;
+catalog validation; package JSON; and agent TOML parsing. The 7 Design tests
+passed separately. On macOS, the editorial suite uses `TMPDIR=/private/tmp`
+because the default temporary directory has a symlink ancestor that the checker
+correctly rejects. Metadata parsing used Python 3.12.14 with standard-library
+`tomllib`; system Python 3.9 was insufficient. CI remains unchanged, and its
+current job does not run the Design suite. No release is prepared from this
+candidate until a separate test-registration decision is resolved.
