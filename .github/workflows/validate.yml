@@ -23,6 +23,8 @@ jobs:
         run: python -m unittest discover -s plugins/release/skills/release-evidence/scripts -q
       - name: Test private decision reporting
         run: python -m unittest discover -s plugins/reporting/skills/decision-reporting/scripts -q
+      - name: Test local credential runner with synthetic fixtures
+        run: python -m unittest discover -s plugins/automation/skills/local-credential-runner/tests -q
       - name: Parse package metadata
         run: |
           python -m json.tool .agents/plugins/marketplace.json > /dev/null

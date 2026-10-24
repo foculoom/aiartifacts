@@ -12,6 +12,71 @@ class ReportTests(unittest.TestCase):
         result = generate(self.data)
         self.assertEqual(result['feedback']['total'], 1)
         self.assertEqual(result['feedback']['exclusions']['linked_notifications'], 1)
+        self.assertEqual(result['skill_revision'], 'reporting/0.1.1')
+
+    def test_legacy_missing_context_and_identity_stay_unknown(self):
+        feedback = generate(self.data)['feedback']
+        self.assertEqual(feedback['by_usage_context'], {'unknown': 1})
+        self.assertEqual(feedback['by_edition'], {'unknown': 1})
+        self.assertEqual(feedback['by_build'], {'unknown': 1})
+        self.assertEqual(feedback['actual_use'], {'free_used': 0, 'paid_used': 0})
+        self.assertEqual(feedback['actual_use_by_product'], {})
+        self.assertEqual(feedback['actual_use_by_edition'], {})
+
+    def test_free_and_paid_reported_use_are_separate(self):
+        self.data['config']['editions'] = ['three-room', 'recorded-echoes']
+        self.data['config']['builds'] = ['web-1', 'ios-1_0-3']
+        records = self.data['sources']['tally']['records']
+        records[0].update(usage_context='free_used', edition='three-room', build='web-1')
+        records.append(dict(records[0], id='synthetic-paid', usage_context='paid_used',
+                            edition='recorded-echoes', build='ios-1_0-3'))
+        records.append(dict(records[0], id='synthetic-before-use', usage_context='pre_use',
+                            edition=None, build=None))
+        feedback = generate(self.data)['feedback']
+        self.assertEqual(feedback['total'], 3)
+        self.assertEqual(feedback['by_usage_context'],
+                         {'free_used': 1, 'paid_used': 1, 'pre_use': 1})
+        self.assertEqual(feedback['actual_use'], {'free_used': 1, 'paid_used': 1})
+        self.assertEqual(feedback['actual_use_by_product'],
+                         {'puzzle': {'free_used': 1, 'paid_used': 1}})
+        self.assertEqual(feedback['actual_use_by_edition'],
+                         {'recorded-echoes': {'free_used': 0, 'paid_used': 1},
+                          'three-room': {'free_used': 1, 'paid_used': 0}})
+        self.assertEqual(feedback['actual_use_by_build'],
+                         {'ios-1_0-3': {'free_used': 0, 'paid_used': 1},
+                          'web-1': {'free_used': 1, 'paid_used': 0}})
+        self.assertEqual(feedback['by_edition'],
+                         {'recorded-echoes': 1, 'three-room': 1, 'unknown': 1})
+        self.assertEqual(feedback['by_build'], {'ios-1_0-3': 1, 'unknown': 1, 'web-1': 1})
+        self.assertIn('not purchase validation', ' '.join(generate(self.data)['limitations']))
+
+    def test_context_qa_and_owner_test_are_excluded(self):
+        records = self.data['sources']['tally']['records']
+        records[0]['usage_context'] = 'qa'
+        records.append(dict(records[0], id='synthetic-owner', usage_context='owner_test'))
+        records.append(dict(records[0], id='synthetic-explicit-qa',
+                            usage_context='paid_used', is_qa=True))
+        feedback = generate(self.data)['feedback']
+        self.assertEqual(feedback['total'], 0)
+        self.assertEqual(feedback['exclusions']['qa_records'], 2)
+        self.assertEqual(feedback['exclusions']['owner_test_records'], 1)
+        self.assertEqual(feedback['actual_use'], {'free_used': 0, 'paid_used': 0})
+
+    def test_invalid_context_invalidates_source(self):
+        self.data['sources']['tally']['records'][0]['usage_context'] = 'purchased'
+        result = generate(self.data)
+        self.assertEqual(result['sources']['tally']['status'], 'invalid')
+        self.assertIsNone(result['feedback']['total'])
+
+    def test_unapproved_edition_and_build_do_not_leak(self):
+        row = self.data['sources']['tally']['records'][0]
+        row.update(usage_context='free_used', edition='private@example.com',
+                   build='customer-id-123')
+        result = generate(self.data)
+        self.assertEqual(result['feedback']['by_edition'], {'unclassified': 1})
+        self.assertEqual(result['feedback']['by_build'], {'unclassified': 1})
+        self.assertNotIn('private@example.com', json.dumps(result))
+        self.assertNotIn('customer-id-123', json.dumps(result))
 
     def test_duplicate_and_qa_exclusion(self):
         records = self.data['sources']['tally']['records']
@@ -51,6 +116,8 @@ class ReportTests(unittest.TestCase):
         self.assertIsNone(result["feedback"]["total"])
         self.assertIsNone(result["feedback"]["observed_records"])
         self.assertIsNone(result["feedback"]["by_product"])
+        self.assertIsNone(result["feedback"]["actual_use"])
+        self.assertIsNone(result["feedback"]["actual_use_by_edition"])
         self.assertIsNone(result["analytics"])
 
     def test_fetch_before_window_end_cannot_attest_full_coverage(self):

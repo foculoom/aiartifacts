@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "reporting",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Private decision reports from minimized feedback and website measurement exports.",
   "author": {
     "name": "Foculoom",
