@@ -1,5 +1,7 @@
 # Foculoom AI Artifacts
 
+For the latest cross-session checkpoint, read [HANDOFF.md](HANDOFF.md) before dated historical notes.
+
 Reusable AI workflows from Foculoom live in one repository. A plugin is an installable bundle, a skill is a focused workflow inside a plugin, and an agent is an optional role configuration. Product-specific voice, unpublished writing, and private examples stay with the product that owns them.
 
 ## Available artifacts
