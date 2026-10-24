@@ -19,6 +19,8 @@ jobs:
         run: python -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q
       - name: Validate catalog and skill references
         run: python scripts/validate_catalog.py
+      - name: Test static release verifier
+        run: python -m unittest discover -s plugins/release/skills/release-evidence/scripts -q
       - name: Parse package metadata
         run: |
           python -m json.tool .agents/plugins/marketplace.json > /dev/null

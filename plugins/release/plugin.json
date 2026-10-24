@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "release",
+  "version": "0.1.0",
+  "description": "Prepare and verify authorized static-site releases without storing credentials.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/release",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "release",
+    "verification",
+    "evidence"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Release",
+        "shortDescription": "Static release evidence and readback",
+        "longDescription": "Prepare and verify authorized static-site releases without storing credentials.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Verify this static release and preserve its evidence."
+        ]
+      }
+    }
+  }
+}
