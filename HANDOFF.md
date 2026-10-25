@@ -1,5 +1,39 @@
 # Maintainer handoff
 
+## Readiness and conditional forecast — October 24, 2026
+
+AI Artifacts is a supporting toolkit and proposed support service, not an
+app-store product. Foculoom LLC is the accountable release owner. For a toolkit
+version, **feature complete** means its scoped behavior and synthetic tests
+are implemented; **submission ready** adds version/catalog, license, security,
+documentation and exact-revision review; **submitted** means a release or
+distribution action has an actual receipt; **approved** means the maintainer's
+release decision and host result are recorded; **publicly available** means the
+tagged package can be acquired and verified. For paid support, a presented
+owner activation packet, owner authorization and a working customer path are
+the corresponding later milestones. No app-store processing interval applies.
+
+| Channel | Feature complete | Submission ready | Submitted | Approved | Publicly available | Next gate |
+| --- | --- | --- | --- | --- | --- | --- |
+| Free v0.5.0 toolkit | Yes for its recorded scope | Its exact released snapshot passed the recorded 69 tests and catalog review | GitHub v0.5.0 release recorded October 24 | Released snapshot was approved | Existing free release available | Maintainer preserves tag and consumer pins; reverify acquisition for any new distribution claim. |
+| Unreleased Design 0.1.1 | Source candidate and strict-manifest CI registration exist; no version release | No new release packet | No Design 0.1.1 release | No release decision | No new version available | Hosted PR #8 run `40107693307` passed at `afa3523`; maintainer still checks the dependency chain, catalog, license and consumer behavior before proposing a separately authorized release. |
+| Proposed paid implementation/support | Scope and service contract undefined | No price, staffing, rights, support, privacy or operating-cost packet | No activation packet | No owner approval | No paid service | Owner defines offer and measurable capacity/cost; keep forecast unresolved until the work is sized and the terms and customer path are reviewed. |
+
+The earlier unconditional November–June portfolio dates do not apply to this
+service. The next toolkit release and any paid-service activation date are
+**unresolved** until exact scope, reviewer and owner capacity, hosted CI and
+operating assumptions are measured. Size remaining work by **30 October
+2026**, the fifth working day after this checkpoint, and revise a conditional
+forecast each Friday. Existing v0.5.0 availability is a dated release fact,
+not approval to move its tag, upgrade consumers or launch paid support. No
+merge, release, sale or spending follows from this forecast.
+
+The 24 October hosted readback of PR #8 at exact head
+`afa3523c758cd88c37baa42525a245add483e987` found Actions run
+`40107693307`, job `120912691716`, successful. Its untruncated log ran 11
+Design synthetic tests and catalog validation. This validates CI registration
+on that head only; v0.5.0 remains the last released version.
+
 ## Design CI registration — October 24, 2026
 
 The existing validation workflow now runs Design's synthetic export-evidence
