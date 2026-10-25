@@ -31,3 +31,6 @@ judgment cases. Keep the expected criteria out of a fresh evaluator's prompt.
 - Case 4: distinguish source/artifact/provider/public states; reuse unchanged
   gameplay-input evidence explicitly, prepare with real fresh history, and verify
   the final package/live result under one production owner.
+
+The [2026-10-25 evaluation](review-20261025.md) records the first independent
+read-only synthetic pass; it does not certify production coordination.
