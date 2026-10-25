@@ -36,3 +36,7 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 - Establish the public artifact catalog and portable editorial plugin package.
 - Add medium and audience aware editorial guidance, an optional Codex reviewer agent, and public evaluation cases.
+
+## Engineering source candidate
+
+Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.

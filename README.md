@@ -73,3 +73,7 @@ output paths, exact website inventories and hashes. It separates final-raster
 QR decoding from physical/vendor proof. This is an unreleased source candidate;
 existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
 locally; registering them in CI is a separate reviewed change.
+
+## Engineering source candidate
+
+Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
