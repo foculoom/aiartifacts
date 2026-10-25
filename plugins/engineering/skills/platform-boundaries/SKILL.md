@@ -56,6 +56,13 @@ simulator, physical-device and store sandbox checks. Reuse existing tests and
 release tooling. Distinguish tested, untested, mocked and unimplemented behavior.
 Do not repeat expensive full suites for documentation-only changes.
 
+## Parallel work
+
+When independent lanes would help, read [parallel-work.md](references/parallel-work.md)
+and use its [handoff template](assets/parallel-handoff.md). Keep writing lanes
+isolated, shared paths owned, and reviews tied to exact source/artifact identities.
+The coordinator serializes integration and production operations.
+
 ## Review and handoff
 
 Use a feature branch and focused PR. Review the complete current diff, test

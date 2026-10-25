@@ -55,3 +55,13 @@ and register the command through the normal reviewed CI change before release.
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Unreleased parallel-work source candidate
+
+Engineering and Release 0.1.1 add conditional parallel-preparation guidance and an
+Engineering handoff template. Both plugins remain independently usable; references
+stay inside their own package. The method separates isolated writing/review lanes
+from serialized integration and production ownership. See
+[synthetic cases](evals/engineering/parallel-work.md) for evaluation prompts and
+observable criteria. This is source guidance, not an orchestrator, global lock or
+permission grant. Existing release tags and consumer pins are unchanged.
