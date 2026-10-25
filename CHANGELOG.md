@@ -2,6 +2,12 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — Engineering and Release 0.1.1 candidates
+
+- Add parallel-work guidance and a project-owned handoff template for isolated writing lanes, explicit dependencies, exact source/artifact identity and renewed review after changes.
+- Preserve one production owner through history, deployment and readback; independent preparation does not authorize parallel production mutations or broader access.
+- Add synthetic behavioral evaluation cases. Existing tags, installed plugins and consumer pins remain unchanged; no deployment or hosted workflow is introduced.
+
 ## Unreleased — Design 0.1.1 candidate
 
 - Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
