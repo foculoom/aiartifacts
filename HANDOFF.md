@@ -51,3 +51,10 @@ and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
 no new tag, dependency or CI configuration is introduced. The existing CI does
 not yet invoke the new Design test suite, so preserve its local validation record
 and register the command through the normal reviewed CI change before release.
+
+## Performance prevention source increment
+
+Performance 0.1.0 adds an advisory browser measurement helper and comparator,
+with synthetic behavioral tests. See the [skill](plugins/performance/skills/performance-regression/SKILL.md).
+The Design export suite is now registered in CI. This source increment creates
+no release tag and changes no installed consumer automatically.

@@ -73,3 +73,10 @@ output paths, exact website inventories and hashes. It separates final-raster
 QR decoding from physical/vendor proof. This is an unreleased source candidate;
 existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
 locally; registering them in CI is a separate reviewed change.
+
+## Performance prevention source increment
+
+Performance 0.1.0 adds an advisory browser measurement helper and comparator,
+with synthetic behavioral tests. See the [skill](plugins/performance/skills/performance-regression/SKILL.md).
+The Design export suite is now registered in CI. This source increment creates
+no release tag and changes no installed consumer automatically.

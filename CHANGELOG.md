@@ -36,3 +36,10 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 - Establish the public artifact catalog and portable editorial plugin package.
 - Add medium and audience aware editorial guidance, an optional Codex reviewer agent, and public evaluation cases.
+
+## Performance prevention source increment
+
+Performance 0.1.0 adds an advisory browser measurement helper and comparator,
+with synthetic behavioral tests. See the [skill](plugins/performance/skills/performance-regression/SKILL.md).
+The Design export suite is now registered in CI. This source increment creates
+no release tag and changes no installed consumer automatically.
