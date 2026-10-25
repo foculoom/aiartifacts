@@ -51,3 +51,7 @@ and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
 no new tag, dependency or CI configuration is introduced. The existing CI does
 not yet invoke the new Design test suite, so preserve its local validation record
 and register the command through the normal reviewed CI change before release.
+
+## Engineering source candidate
+
+Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
