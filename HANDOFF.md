@@ -1,6 +1,32 @@
 # Maintainer handoff
 
-Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. Design 0.1.1 below is an unreleased source increment. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
+Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. The Design and Release 0.1.1 guidance below is unreleased source. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
+
+## Start on a new computer
+
+Install Git and Python 3.9 or later. These commands use `python3`; on Windows,
+use an equivalent Python 3 command. From a fresh checkout, record the exact
+source revision before applying any unreleased guidance:
+
+```sh
+git clone https://github.com/foculoom/aiartifacts.git
+cd aiartifacts
+git fetch origin --tags
+git switch main
+git pull --ff-only origin main
+git status --short
+git rev-parse HEAD
+python3 scripts/validate_catalog.py
+python3 -m unittest discover -s plugins/release/skills/release-evidence/scripts -q
+```
+
+Read this handoff, README, CONTRIBUTING, CHANGELOG and the specific skill and
+evaluation before changing shared guidance. `main` contains unreleased source
+candidates; published `v0.5.0` remains the tested release snapshot. Reading a
+reference from `main` does not install or release that candidate in a consuming
+product. Record the exact repository commit and any installed plugin version
+separately. Keep the product's deployment commands, credentials and live
+evidence in its owning repository or private operations storage.
 
 ## Pending input and controls guidance
 
@@ -115,6 +141,29 @@ and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
 no new tag, dependency or CI configuration is introduced. The existing CI does
 not yet invoke the new Design test suite, so preserve its local validation record
 and register the command through the normal reviewed CI change before release.
+
+## Unreleased operational-status and release-evidence source
+
+The operational-status review guidance and exact ZIP-inventory rule merged in
+[PR #14](https://github.com/foculoom/aiartifacts/pull/14) at
+`1c95239d7662a37b560b836dab5bdb482cf13a38`. The reusable review entry
+point is [experience-review](plugins/design/skills/experience-review/SKILL.md)
+and its [operational-status reference](plugins/design/skills/experience-review/references/operational-status.md).
+Use [Design case D8](evals/design/cases.md) and its
+[evaluation criteria](evals/design/README.md) to check claim scope, unknown
+states, metric provenance and public/private boundaries. The release entry
+point is [release-evidence](plugins/release/skills/release-evidence/SKILL.md);
+its [archive-inventory cases](evals/release/archive-inventory.md) catch an old
+ZIP that retains an extra file while `unzip -t` still succeeds.
+
+The Release verifier tests run with the command in the fresh-computer section.
+Design case D8 and the archive-inventory cases are model-behavior evaluations,
+not unit tests or live deployment evidence. Run each case in a fresh session
+using the exact changed skill revision, with expected criteria withheld, and
+record the model, tool access, output and pass/partial/fail evidence. These
+sources contain fictional examples only; do not import account data, private
+metrics, credentials or captures from a consuming project. This contribution
+did not tag a new release or change any consumer's existing v0.5.0 pin.
 
 ## Engineering source candidate
 
