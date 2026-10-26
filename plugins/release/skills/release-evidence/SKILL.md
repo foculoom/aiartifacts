@@ -26,6 +26,8 @@ Check complete deployment history and unsettled operations before choosing any h
 
 Prepare only the allowlisted site payload, excluding repository metadata, private briefs and logs. Verify ZIP paths and hashes against the candidate manifest. Select that exact archive in the dashboard, inspect the destination and environment, and confirm the final file list. An upload is not proof of successful publication. On timeout or stale dashboard state, inspect deployment history before retrying; avoid duplicate releases.
 
+Create an archive at a fresh path. Updating an existing ZIP can retain old files that were not named in the new command; an integrity check such as `unzip -t` will still pass. Inspect the archive itself and require its exact entry set and file hashes to match the reviewed manifest before upload. A clean staging directory or successful archive-integrity check alone does not prove the packaged inventory.
+
 ## Verify and preserve
 
 Check the final successful deployment ID, completion time and label ordinal. Compare every deployed asset with the packaged manifest at the deployment URL and public domain. Verify useful page content, links and stylesheet appearance in the requested browser. A byte comparison and visual check establish different facts. If a browser shows old CSS, try reload without cache and record the result; do not use that as proof that cache invalidation is solved for all visitors.

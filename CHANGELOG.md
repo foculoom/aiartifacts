@@ -4,12 +4,14 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — Engineering and Release 0.1.1 candidates
 
+- Require a fresh archive and exact packaged entry/hash readback; add a synthetic case for an old ZIP retaining an extra file despite passing integrity checks.
 - Add parallel-work guidance and a project-owned handoff template for isolated writing lanes, explicit dependencies, exact source/artifact identity and renewed review after changes.
 - Preserve one production owner through history, deployment and readback; independent preparation does not authorize parallel production mutations or broader access.
 - Add synthetic behavioral evaluation cases. Existing tags, installed plugins and consumer pins remain unchanged; no deployment or hosted workflow is introduced.
 
 ## Unreleased — Design 0.1.1 candidate
 
+- Add operational-status review guidance and a synthetic case for calibrated health claims, unknown states, metric provenance and public/private boundaries.
 - Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
 - Add a dependency-free, read-only path/inventory/hash checker and synthetic regression cases. No asset generation, QR decoding, publishing or deployment authority is implied.
 - This source candidate does not change the released v0.5.0 tag or consumers' pins. CI registration and public release remain separate work.
