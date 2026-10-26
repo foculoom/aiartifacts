@@ -74,6 +74,16 @@ QR decoding from physical/vendor proof. This is an unreleased source candidate;
 existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
 locally; registering them in CI is a separate reviewed change.
 
+The same unreleased Design source includes an
+[operational-status review reference](plugins/design/skills/experience-review/references/operational-status.md)
+and [fictional evaluation case D8](evals/design/cases.md). Release 0.1.1 source
+adds an [exact ZIP-inventory rule](plugins/release/skills/release-evidence/SKILL.md)
+and [synthetic archive case](evals/release/archive-inventory.md). These are
+generic methods for judging status claims and release evidence. Their presence
+on `main` does not update an installed plugin, a published tag or a consuming
+project's pinned version. For fresh-machine setup, exact revisions and
+validation commands, start with [HANDOFF.md](HANDOFF.md).
+
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
