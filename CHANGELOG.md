@@ -4,6 +4,8 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — Engineering and Release 0.1.1 candidates
 
+- Add an optional source-ownership inventory guard with synthetic negative cases. This is scoped inventory validation, not dependency-graph enforcement or a merge guarantee.
+
 - Add a reuse-decision reference for comparing contracts before extraction, keeping storage failures visible, and protecting frozen artifacts; add synthetic positive and negative cases. This changes shared guidance only, not product code or consumer pins.
 
 - Require a fresh archive and exact packaged entry/hash readback; add a synthetic case for an old ZIP retaining an extra file despite passing integrity checks.
