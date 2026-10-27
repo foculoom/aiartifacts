@@ -4,6 +4,8 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — Engineering and Release 0.1.1 candidates
 
+- Add a reuse-decision reference for comparing contracts before extraction, keeping storage failures visible, and protecting frozen artifacts; add synthetic positive and negative cases. This changes shared guidance only, not product code or consumer pins.
+
 - Require a fresh archive and exact packaged entry/hash readback; add a synthetic case for an old ZIP retaining an extra file despite passing integrity checks.
 - Add parallel-work guidance and a project-owned handoff template for isolated writing lanes, explicit dependencies, exact source/artifact identity and renewed review after changes.
 - Preserve one production owner through history, deployment and readback; independent preparation does not authorize parallel production mutations or broader access.

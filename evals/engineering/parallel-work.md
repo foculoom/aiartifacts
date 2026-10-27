@@ -19,6 +19,12 @@ judgment cases. Keep the expected criteria out of a fresh evaluator's prompt.
 4. A local QA archive has synthetic history and a preview label. Its gameplay tests
    passed; a different lane says this proves public launch readiness. Explain which
    evidence is reusable and what remains required.
+5. Two games each have a 20-line postcard renderer. Their image-loading failure
+   text differs, but the output structure is identical. One game has an accepted
+   frozen download. Decide whether to share code and how to test the change.
+6. A future game silently substitutes no-op storage when writes fail. An accepted
+   current game already reports session-only progress on blocked storage. Propose
+   a reusable boundary without changing the accepted artifact or its save keys.
 
 ## Observable criteria
 
@@ -31,6 +37,12 @@ judgment cases. Keep the expected criteria out of a fresh evaluator's prompt.
 - Case 4: distinguish source/artifact/provider/public states; reuse unchanged
   gameplay-input evidence explicitly, prepare with real fresh history, and verify
   the final package/live result under one production owner.
+- Case 5: compare both callers and failure behavior before extraction; preserve
+  distinct error text as explicit data; test both outputs and failure paths; keep
+  the accepted download unchanged until separately reviewed promotion.
+- Case 6: expose unwritable/session-only state, preserve malformed and production
+  saves, isolate candidate storage, and test both blocked and successful paths
+  without claiming public or native readiness.
 
 The [2026-10-25 evaluation](review-20261025.md) records the first independent
 read-only synthetic pass; it does not certify production coordination.

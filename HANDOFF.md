@@ -32,9 +32,9 @@ evidence in its owning repository or private operations storage.
 
 Decision recorded October 26, 2026: extend the existing skills after the
 [Quiet Below controls requirements](https://github.com/foculoom/quietbelow/blob/main/docs/PRD_CURRENT.md)
-have been implemented and validated. The control fixes are requirements, not
-completed game behavior. This handoff adds no skill behavior, plugin version,
-release tag, consumer pin or scheduled task.
+have been implemented and validated. The October 26 requirements checkpoint below is historical. Recheck the owning
+product candidate and acceptance records before drawing reusable lessons; later
+implementation or release evidence does not change a published plugin by itself.
 
 The requirements and next-agent sequence were merged in
 [Quiet Below PR #64](https://github.com/foculoom/quietbelow/pull/64), at
@@ -91,6 +91,15 @@ hint defaults, pricing, purchases, saves and release holds in Quiet Below. The
 shared skills should teach how to inspect and validate those decisions, not
 impose them on other products. Use synthetic or explicitly cleared examples and
 primary references; do not copy private playtest responses or internal records.
+
+## Reuse audit candidate — October 26, 2026
+
+Unreleased Engineering source now includes a narrow [reuse-decision reference](plugins/engineering/skills/platform-boundaries/references/reuse-decisions.md)
+and synthetic cases for shared renderers and storage failure contracts. It helps
+callers compare behavior, versioning and failure paths before extraction; it
+does not move product code, change installed consumer pins or certify any
+product release. Validate the catalog, the skill and the synthetic criteria
+before a separately reviewed source merge.
 
 ## Architecture and release state
 
