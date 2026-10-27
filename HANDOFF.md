@@ -13,11 +13,21 @@ rules. No product data, plugin package, tag or consumer pin changed.
 From the repository root on October 27, `python3 scripts/validate_catalog.py`
 passed (six plugins, seven skills), the Design export checker suite passed
 (seven tests), and `git diff --check` passed. The new D9/D10 model-behavior
-evaluations have not been run in fresh sessions; their expected judgments are
-recorded in `evals/design/README.md` for independent review. The next action is
-an independent exact-head review of the focused PR and, if needed, a fresh
-behavior evaluation before any merge. A source merge alone would not publish
-Design or update consumers.
+evaluations ran on October 27 against exact head
+`33347aec63e53f6226a64e0905db2f4a15f96123`, with expected judgments withheld:
+an initial paired-context run and separate fresh-session runs for D9 and D10.
+Both cases passed the observable criteria in `evals/design/README.md`. The
+[evaluation record](evals/design/stateful-review-20261027.md) preserves all four
+answers, inputs, context/tool limits and agent assessments. The exact model
+identifier was unavailable; no rendered UI, real booking, native/device test or
+cross-model study is claimed. The evidence-only follow-up reran the same catalog,
+Design and diff checks successfully without changing the evaluated inputs.
+
+The next action is independent review of the final
+[PR #23](https://github.com/foculoom/aiartifacts/pull/23) head and its required CI
+before any merge. Recording these results is not independent review of the new
+head. Design 0.1.1 remains unreleased source; no package, tag or consumer pin
+changes, and a source merge alone would not publish Design or update consumers.
 
 Engineering 0.1.2 source integration — 27 October 2026: reviewed
 [PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
