@@ -1,5 +1,24 @@
 # Maintainer handoff
 
+## Stateful experience-review source follow-up — October 27, 2026
+
+An unreleased Design 0.1.1 guidance candidate at source commit
+`38ce770ca8885d47bdf1fd10bf832627f61ea1b5` adds four-state review
+(starting, active, overview/pause, recovery) and an exact released/source/
+candidate comparison to the existing experience-review skill. Fictional D9
+exercises a navigation and paused-action divergence across three artifacts;
+fictional D10 preserves an already-correct booking form without importing game
+rules. No product data, plugin package, tag or consumer pin changed.
+
+From the repository root on October 27, `python3 scripts/validate_catalog.py`
+passed (six plugins, seven skills), the Design export checker suite passed
+(seven tests), and `git diff --check` passed. The new D9/D10 model-behavior
+evaluations have not been run in fresh sessions; their expected judgments are
+recorded in `evals/design/README.md` for independent review. The next action is
+an independent exact-head review of the focused PR and, if needed, a fresh
+behavior evaluation before any merge. A source merge alone would not publish
+Design or update consumers.
+
 Engineering 0.1.2 source integration — 27 October 2026: reviewed
 [PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
 `ff6a1767ea19c5e8dedc8c3c33299031228c1a82` merged to `main` as
