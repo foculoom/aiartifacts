@@ -92,14 +92,15 @@ shared skills should teach how to inspect and validate those decisions, not
 impose them on other products. Use synthetic or explicitly cleared examples and
 primary references; do not copy private playtest responses or internal records.
 
-## Reuse audit candidate — October 26, 2026
+## Reuse audit source — October 26, 2026
 
 Unreleased Engineering source now includes a narrow [reuse-decision reference](plugins/engineering/skills/platform-boundaries/references/reuse-decisions.md)
 and synthetic cases for shared renderers and storage failure contracts. It helps
 callers compare behavior, versioning and failure paths before extraction; it
 does not move product code, change installed consumer pins or certify any
-product release. Validate the catalog, the skill and the synthetic criteria
-before a separately reviewed source merge.
+product release. PR #19 records the source review; verify its final head and
+required checks before merging. A source merge remains separate from a plugin
+tag or a consumer pin.
 
 ## Architecture and release state
 
