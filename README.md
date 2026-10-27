@@ -74,9 +74,54 @@ QR decoding from physical/vendor proof. This is an unreleased source candidate;
 existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
 locally; registering them in CI is a separate reviewed change.
 
-## Performance prevention source increment
+The same unreleased Design source includes an
+[operational-status review reference](plugins/design/skills/experience-review/references/operational-status.md)
+and [fictional evaluation case D8](evals/design/cases.md). Release 0.1.1 source
+adds an [exact ZIP-inventory rule](plugins/release/skills/release-evidence/SKILL.md)
+and [synthetic archive case](evals/release/archive-inventory.md). These are
+generic methods for judging status claims and release evidence. Their presence
+on `main` does not update an installed plugin, a published tag or a consuming
+project's pinned version. For fresh-machine setup, exact revisions and
+validation commands, start with [HANDOFF.md](HANDOFF.md).
 
-Performance 0.1.0 adds an advisory browser measurement helper and comparator,
-with synthetic behavioral tests. See the [skill](plugins/performance/skills/performance-regression/SKILL.md).
-The Design export suite is now registered in CI. This source increment creates
-no release tag and changes no installed consumer automatically.
+## Engineering source candidate
+
+Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Source ownership inventory guard
+
+The Engineering source includes an optional, dependency-free
+[`check_inventory.py`](plugins/engineering/skills/platform-boundaries/scripts/check_inventory.py).
+Run `python3 PATH/TO/check_inventory.py --root PRODUCT_ROOT` against a reviewed
+`architecture-inventory.json`. Version 1 declares `scopes` (directory `root`
+and file `extensions`), `areas` (unique `id`, `responsibility`, explicit `files`),
+optional `exceptions` (exact `file`, `reason`, `owner`, `review_condition`,
+`review_by` ISO date), and nonempty `review_gaps`. Synthetic examples are in
+[`test_inventory.py`](plugins/engineering/skills/platform-boundaries/scripts/test_inventory.py).
+
+Every matching file must have exactly one owner or a current exception. Missing
+files, overlapping scopes and symlinks fail closed. New files outside declared
+roots/extensions are not covered. Review scope changes alongside code; do not
+hide new production roots by omitting them. This tool does not parse imports,
+prove dependency direction, detect behavioral duplication or enforce GitHub
+merge protection. Use it alongside lexical checks and product behavior tests.
+Vendored consumers must record the exact source revision and checksum; copying
+this script does not update the installed skill or release a new plugin.
+
+## Optional JavaScript import graph
+
+The Engineering 0.1.2 source candidate adds a separate
+[`js-import-graph`](plugins/engineering/skills/platform-boundaries/scripts/js-import-graph/check.mjs)
+guard for declared `.js`, `.mjs` and `.cjs` files. It uses a locked, MIT-licensed
+Acorn parser installed only when this optional command runs. The
+[adoption reference](plugins/engineering/skills/platform-boundaries/references/import-graph-adoption.md)
+describes the product-owned policy, limits and ten synthetic tests. Run the
+inventory guard first; neither checker proves behavioral correctness or product
+release readiness. Existing tags and consumer pins remain unchanged.
+
+## Performance 0.1.0 source candidate
+
+The [performance-regression skill](plugins/performance/skills/performance-regression/SKILL.md)
+adds advisory browser sampling and a dependency-free comparison script. The
+Design export suite is registered in CI. This source candidate has no release
+tag and does not update an installed consumer pin.

@@ -13,11 +13,20 @@ Prefer the user's specified browser and existing signed-in session when it can c
 
 Use existing repository build, stamp, manifest and verification scripts before creating replacements. Batch safe read-only checks. Keep credentials, screenshots of account settings, personal paths, and raw provider responses out of public artifacts. Store sanitized evidence with the owning project.
 
+## Parallel preparation
+
+When multiple agents contribute to a release, read
+[parallel-release.md](references/parallel-release.md) before accepting their
+handoffs. Preparation and independent review can overlap; the final production
+window has one owner, from fresh history through live verification.
+
 ## Prepare once, publish once
 
 Check complete deployment history and unsettled operations before choosing any history-derived release label. Use provider completion timestamps and the project's timezone. Refresh after a pause, approval handoff, failed upload or unknown result; do not reuse stale history just because a ZIP exists. Rebuild if intervening releases invalidate the label. Preserve one deployment owner through upload and verification.
 
 Prepare only the allowlisted site payload, excluding repository metadata, private briefs and logs. Verify ZIP paths and hashes against the candidate manifest. Select that exact archive in the dashboard, inspect the destination and environment, and confirm the final file list. An upload is not proof of successful publication. On timeout or stale dashboard state, inspect deployment history before retrying; avoid duplicate releases.
+
+Create an archive at a fresh path. Updating an existing ZIP can retain old files that were not named in the new command; an integrity check such as `unzip -t` will still pass. Inspect the archive itself and require its exact entry set and file hashes to match the reviewed manifest before upload. A clean staging directory or successful archive-integrity check alone does not prove the packaged inventory.
 
 ## Verify and preserve
 
