@@ -24,6 +24,7 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — Design 0.1.1 candidate
 
+- Add bounded starting, active, pause/overview and recovery-state review guidance; compare released bytes, canonical source and unpublished candidate by exact identity and date. Add fictional cases for a divergent game journey and an already-correct non-game form, without claiming native usability from browser evidence.
 - Add operational-status review guidance and a synthetic case for calibrated health claims, unknown states, metric provenance and public/private boundaries.
 - Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
 - Add a dependency-free, read-only path/inventory/hash checker and synthetic regression cases. No asset generation, QR decoding, publishing or deployment authority is implied.

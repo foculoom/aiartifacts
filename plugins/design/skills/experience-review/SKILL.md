@@ -18,6 +18,8 @@ Use the available browser or rendering tools and follow navigation and direct-en
 
 Compare with approved identity decisions and the project's voice brief. Review hierarchy, product differentiation, availability labels, action semantics, responsive layouts, and applicable accessibility behavior. Inspect desktop and narrow renders when available. Test focus, keyboard paths, labels, contrast, reduced motion, and error states only where tools and authorization permit; describe exactly what was measured or exercised. If rendering is unavailable, provide a source-only review and leave visual conclusions unverified.
 
+For a stateful experience, inspect starting, active, paused or overview, and recovery states separately. Compare the controls shown with actions that actually work in each state, including keyboard focus and touch affordances. When a released experience, canonical source, and candidate build differ, identify each exact revision or artifact and test the relevant journey in each; a source diff does not establish what visitors receive. Follow the [interactive experience reference](references/interactive-experiences.md) for the bounded state and artifact comparison.
+
 Do not submit live forms, make purchases, alter settings, or publish content without task authorization. Use local fixtures for destructive or externally visible states. Never infer delivery from a submit button, a public release from a marketing page, or privacy compliance from the absence of an obvious analytics script.
 
 ## Report useful findings
