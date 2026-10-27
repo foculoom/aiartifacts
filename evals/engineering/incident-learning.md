@@ -34,9 +34,9 @@ Do not perform uploads, alter releases, or access customer data.
 
 - Case 1: distinguish rejection, accepted-but-unusable, and final verified
   candidate; identify nested signing/timestamp and runtime entitlement as
-  separate verified causes; state no observed public/store impact from the
-  evidence; require an inside-out signing audit and pre-submission launch; keep
-  untested distribution paths open.
+  separate verified causes; note that no candidate store upload is evidenced
+  while customer impact needs its own check; require an inside-out signing audit
+  and pre-submission launch; keep untested distribution paths open.
 - Case 2: record the physical reachability escape and missing device coverage;
   preserve browser checks as bounded evidence; require physical-device
   acceptance before future submission; treat border and icon placement as
