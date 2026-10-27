@@ -3,7 +3,7 @@
 Source ownership guard candidate: `check_inventory.py` adds explicit-file ownership
 within declared roots/extensions, expired/unused exception rejection and symlink
 rejection. `python3 -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q`
-passes 26 synthetic tests (12 lexical, 14 inventory). It does not parse import
+passes 28 synthetic tests (12 lexical, 16 inventory). It does not parse import
 graphs or change hosted protection. Existing CI already discovers this suite.
 No new dependency, plugin version/tag or installed consumer pin is changed.
 Independent exact-head PR review and explicit consumer adoption are required.

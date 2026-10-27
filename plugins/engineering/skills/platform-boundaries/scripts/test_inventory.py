@@ -55,6 +55,20 @@ class Inventory(unittest.TestCase):
         (self.root / 'src/linked').symlink_to(self.root / 'src', target_is_directory=True)
         with self.assertRaises(ValueError): self.run_check()
 
+    def test_scope_root_symlink(self):
+        (self.root / 'src').rename(self.root / 'real')
+        (self.root / 'src').symlink_to(self.root / 'real', target_is_directory=True)
+        with self.assertRaises(ValueError): self.run_check()
+
+    def test_scope_ancestor_symlink(self):
+        (self.root / 'src/nested').mkdir()
+        (self.root / 'src/core.js').rename(self.root / 'src/nested/core.js')
+        (self.root / 'src').rename(self.root / 'real')
+        (self.root / 'src').symlink_to(self.root / 'real', target_is_directory=True)
+        self.profile['scopes'][0]['root'] = 'src/nested'
+        self.profile['areas'][0]['files'] = ['src/nested/core.js']
+        with self.assertRaises(ValueError): self.run_check()
+
     def test_exception(self):
         self.exception()
         self.assertEqual(self.run_check()['excepted'], 1)

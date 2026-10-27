@@ -11,6 +11,11 @@ def inside(root, value):
     p = Path(value)
     if p.is_absolute() or '..' in p.parts or str(p) != value:
         raise ValueError('expected normalized repository-relative path: ' + value)
+    cursor = root
+    for part in p.parts:
+        cursor = cursor / part
+        if cursor.is_symlink():
+            raise ValueError("symlink path component unsupported: " + value)
     target = root / p
     if not target.resolve().is_relative_to(root):
         raise ValueError('path escapes repository: ' + value)
