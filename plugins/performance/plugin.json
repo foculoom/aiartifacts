@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "performance",
+  "version": "0.1.0",
+  "description": "Measure reproducible runtime regressions with advisory comparisons.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/performance",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "performance",
+    "regression",
+    "measurement"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Performance",
+        "shortDescription": "Advisory runtime regression checks",
+        "longDescription": "Measure reproducible runtime regressions with advisory comparisons.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Measure this runtime change against a comparable baseline."
+        ]
+      }
+    }
+  }
+}

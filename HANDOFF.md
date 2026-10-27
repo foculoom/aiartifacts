@@ -205,9 +205,9 @@ remain separately observed actions, not results of the checker.
 
 Run `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`
 and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
-no new tag, dependency or CI configuration is introduced. The existing CI does
-not yet invoke the new Design test suite, so preserve its local validation record
-and register the command through the normal reviewed CI change before release.
+no new tag or dependency was introduced at this checkpoint. The Design suite
+was local only when this section was written; PR #10 registers it in CI as a
+separate reviewed change. Confirm that PR's final checks before a release.
 
 ## Unreleased operational-status and release-evidence source
 
@@ -245,3 +245,11 @@ from serialized integration and production ownership. See
 [synthetic cases](evals/engineering/parallel-work.md) for evaluation prompts and
 observable criteria. This is source guidance, not an orchestrator, global lock or
 permission grant. Existing release tags and consumer pins are unchanged.
+
+## Performance 0.1.0 source candidate
+
+[PR #10](https://github.com/foculoom/aiartifacts/pull/10) adds advisory browser
+measurement, a dependency-free comparator, synthetic tests, and CI registration
+for the Design export suite. It was reconciled with the current Engineering
+source on `main`; exact-head review and checks remain before integration. No
+release tag or installed consumer pin changes with this source candidate.

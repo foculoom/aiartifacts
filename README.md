@@ -118,3 +118,10 @@ Acorn parser installed only when this optional command runs. The
 describes the product-owned policy, limits and ten synthetic tests. Run the
 inventory guard first; neither checker proves behavioral correctness or product
 release readiness. Existing tags and consumer pins remain unchanged.
+
+## Performance 0.1.0 source candidate
+
+The [performance-regression skill](plugins/performance/skills/performance-regression/SKILL.md)
+adds advisory browser sampling and a dependency-free comparison script. The
+Design export suite is registered in CI. This source candidate has no release
+tag and does not update an installed consumer pin.

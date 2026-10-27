@@ -62,3 +62,9 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Performance 0.1.0 source candidate
+
+Add an advisory browser measurement helper and comparator with synthetic
+behavior tests. Register the Design export suite in CI. This unreleased source
+does not change a tag or installed consumer pin.
