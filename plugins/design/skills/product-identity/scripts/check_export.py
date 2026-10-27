@@ -18,11 +18,24 @@ def preflight(source_root, output_root):
             'source_root': str(source_root.resolve()), 'output_root': str(output_root.resolve())}
 
 
+def parse_manifest(value):
+    """Reject ambiguous JSON before duplicate entries can discard evidence."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError('Duplicate manifest member')
+            result[key] = value
+        return result
+    return json.loads(value, object_pairs_hook=unique_object)
+
+
 def checked_files(record):
     if not isinstance(record, dict):
         raise ValueError('Manifest must be an object')
     files = record.get('files')
-    if record.get('version') != 1 or not isinstance(files, dict) or not files:
+    version = record.get('version')
+    if type(version) is not int or version != 1 or not isinstance(files, dict) or not files:
         raise ValueError('A nonempty version 1 reviewed public-file manifest is required')
     for name, expected in files.items():
         if not isinstance(name, str):
@@ -70,7 +83,7 @@ def main():
     args = parser.parse_args()
     try:
         result = (preflight(args.source_root, args.output_root) if args.mode == 'preflight'
-                  else verify_payload(args.payload_root, json.loads(args.manifest.read_text())))
+                  else verify_payload(args.payload_root, parse_manifest(args.manifest.read_text())))
     except (ValueError, OSError, TypeError) as error:
         parser.exit(2, f'Blocked: {error}\n')
     print(json.dumps(result, indent=2))

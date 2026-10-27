@@ -1,7 +1,10 @@
 """Synthetic fixtures only; no product assets, private paths or provider calls."""
 import hashlib
 import importlib.util
+import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -12,6 +15,44 @@ spec.loader.exec_module(checker)
 
 
 class ExportCheckTests(unittest.TestCase):
+    def test_duplicate_manifest_members_rejected_at_every_level(self):
+        for value in ('{"version":1,"version":1,"files":{}}',
+                      '{"version":1,"files":{},"files":{}}',
+                      '{"version":1,"files":{"index.html":"a","index.html":"b"}}',
+                      '{"metadata":{"source":"a","source":"b"}}'):
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Duplicate'):
+                checker.parse_manifest(value)
+
+    def test_manifest_version_requires_an_integer(self):
+        for version in (True, False, 1.0, "1", None, 2):
+            with self.subTest(version=version), self.assertRaisesRegex(ValueError, 'version 1'):
+                checker.checked_files({'version': version, 'files': {'index.html': 'a' * 64}})
+
+    def test_valid_manifest_parses_and_verifies(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            payload, record = self.fixture(Path(temporary))
+            record['metadata'] = {'source': 'synthetic', 'nested': {'label': 'example'}}
+            result = checker.verify_payload(payload, checker.parse_manifest(json.dumps(record)))
+            self.assertEqual(result['status'], 'passed')
+
+    def test_cli_rejects_ambiguous_manifest_without_success_receipt(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            payload, record = self.fixture(root)
+            manifest = root / 'manifest.json'
+            valid = json.dumps(record)
+            for value in (valid.replace('"version": 1', '"version": 1, "version": 1'),
+                          valid.replace('"version": 1', '"version": true'),
+                          valid.replace('"version": 1', '"version": 1.0')):
+                with self.subTest(value=value):
+                    manifest.write_text(value)
+                    result = subprocess.run([sys.executable, str(SCRIPT), 'payload',
+                                             '--payload-root', str(payload), '--manifest', str(manifest)],
+                                            capture_output=True, text=True)
+                    self.assertEqual(result.returncode, 2)
+                    self.assertEqual(result.stdout, '')
+                    self.assertIn('Blocked:', result.stderr)
+
     def fixture(self, root):
         payload = root / 'website-preview'
         payload.mkdir()
