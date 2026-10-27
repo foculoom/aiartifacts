@@ -1,13 +1,44 @@
 # Maintainer handoff
 
+## Distribution readiness and conditional forecast — October 27, 2026
+
+AI Artifacts is a supporting toolkit; paid implementation or support is a
+separate proposal. Foculoom LLC owns release and service decisions. For a new
+toolkit version, source and synthetic tests establish a candidate; a release
+packet also needs exact-revision review, version/catalog, license, security and
+documentation checks. A tag and hosted release receipt establish distribution.
+For paid support, an owner-approved offer and working customer path are further
+gates. These stages do not follow an app-store submission process.
+
+| Channel | Achieved milestone and evidence | Present public acquisition | Remaining work and next action |
+| --- | --- | --- | --- |
+| Free v0.5.0 toolkit | Released October 24 after 69 recorded tests and catalog review; the GitHub release was rechecked October 27. This is an acquirable baseline for explicitly pinned consumers. | **Available** as the existing [v0.5.0 release](https://github.com/foculoom/aiartifacts/releases/tag/v0.5.0), verified October 27. | Preserve the tag and current pins. Prepare and review a distinct release packet before offering newer source. |
+| Design 0.1.1 source | Strict manifest parsing and Design CI registration merged through reviewed PRs #7 and #10 on October 27; #23 added stateful review guidance. The source can be evaluated and packaged deliberately. | **No newer Design release** was observed October 27; these main-branch changes are not an installed consumer update. | Review version, catalog, license, security, consumer behavior and exact source before a separately authorized release. |
+| Proposed paid implementation/support | A conditional planning proposal exists; no offer or activation receipt is recorded in this handoff. | **No paid service or customer acquisition path** is recorded as of October 27. | Owner defines scope, price, rights, staffing, support, privacy, cost and customer path before any offer or activation. |
+
+The date for another toolkit release or any paid-service activation remains
+unresolved until scope, reviewer and owner capacity, hosted checks and operating
+assumptions are measured. PR #9 proposed sizing the remaining work by October
+30 and revisiting a conditional forecast weekly; those are planning suggestions
+for the owner, not a release commitment or approval to sell or spend. The
+existing v0.5.0 release does not authorize moving its tag or updating consumers.
+
+The October 24 hosted readback of the now-superseded Design CI [PR #8](https://github.com/foculoom/aiartifacts/pull/8)
+at exact head `afa3523c758cd88c37baa42525a245add483e987` found successful
+Actions run `40107693307`, job `120912691716`, including 11 synthetic Design
+tests and catalog validation. That is a dated receipt for the old head only.
+The same Design test command is registered on `main` through merged PR #10;
+no separate CI behavior from PR #8 is needed.
+
 ## Strict Design manifest parsing — 27 October 2026 source reconciliation
 
 [PR #7](https://github.com/foculoom/aiartifacts/pull/7) makes the unreleased
 Design 0.1.1 export checker reject duplicate JSON members at every object level
 and require integer version `1`. After reconciliation with the October 27
 `main`, its 11 synthetic Design tests, catalog validation, the 27-test Editorial
-suite and the 10-test Performance suite passed locally. Hosted checks and
-independent review of the final head remain before merge. It changes no released tag,
+suite and the 10-test Performance suite passed locally. Its final head passed
+hosted checks and independent review, then merged as
+`f08d1d29d789d699e9593d97a253ab5783229b09`. It changes no released tag,
 installed plugin, or consumer pin. Reviewed [PR #10](https://github.com/foculoom/aiartifacts/pull/10)
 merged as `c4093e699872d4fd8a00eb99c4ddf195698bc22a` and registers the
 Design suite in CI.
@@ -218,7 +249,7 @@ Run `python3 -m unittest discover -s plugins/design/skills/product-identity/test
 and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
 no new tag or dependency was introduced at this checkpoint. The Design suite
 was local only when this section was written; PR #10 registers it in CI as a
-separate reviewed change. Confirm that PR's final checks before a release.
+separate reviewed change. Re-run it against the exact candidate before a release.
 
 ## Unreleased operational-status and release-evidence source
 
