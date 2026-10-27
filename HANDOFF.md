@@ -1,5 +1,16 @@
 # Maintainer handoff
 
+Engineering 0.1.2 source candidate: the optional `js-import-graph` guard parses
+declared JavaScript modules with locked Acorn 8.18.0. It is separate from the
+Python inventory and does not install Node in other plugin workflows. From
+`plugins/engineering/skills/platform-boundaries/scripts/js-import-graph`, run
+`npm ci --ignore-scripts` and `npm test` (ten synthetic tests passed locally on
+Node 24.19.0). Run the existing Python boundary suite and catalog validation as
+well. The evaluated dependency-cruiser 18.5.0 did not report nonliteral dynamic
+imports or malformed JavaScript; see the adoption reference for exact limits.
+No product has adopted this candidate, no tag or installed consumer pin changed,
+and independent final-head review is still required.
+
 Source ownership guard candidate: `check_inventory.py` adds explicit-file ownership
 within declared roots/extensions, expired/unused exception rejection and symlink
 rejection. `python3 -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q`
