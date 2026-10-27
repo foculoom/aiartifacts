@@ -8,6 +8,21 @@ permissions:
   contents: read
 
 jobs:
+  engineering_js:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: npm
+          cache-dependency-path: plugins/engineering/skills/platform-boundaries/scripts/js-import-graph/package-lock.json
+      - name: Test optional JavaScript import graph guard
+        working-directory: plugins/engineering/skills/platform-boundaries/scripts/js-import-graph
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm test
   editorial:
     runs-on: ubuntu-latest
     steps:

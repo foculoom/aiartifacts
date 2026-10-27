@@ -107,3 +107,14 @@ prove dependency direction, detect behavioral duplication or enforce GitHub
 merge protection. Use it alongside lexical checks and product behavior tests.
 Vendored consumers must record the exact source revision and checksum; copying
 this script does not update the installed skill or release a new plugin.
+
+## Optional JavaScript import graph
+
+The Engineering 0.1.2 source candidate adds a separate
+[`js-import-graph`](plugins/engineering/skills/platform-boundaries/scripts/js-import-graph/check.mjs)
+guard for declared `.js`, `.mjs` and `.cjs` files. It uses a locked, MIT-licensed
+Acorn parser installed only when this optional command runs. The
+[adoption reference](plugins/engineering/skills/platform-boundaries/references/import-graph-adoption.md)
+describes the product-owned policy, limits and ten synthetic tests. Run the
+inventory guard first; neither checker proves behavioral correctness or product
+release readiness. Existing tags and consumer pins remain unchanged.

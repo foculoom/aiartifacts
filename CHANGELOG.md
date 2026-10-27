@@ -2,6 +2,15 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — Engineering 0.1.2 source candidate
+
+- Add an optional Acorn-based JavaScript import graph guard with synthetic
+  failures for forbidden edges, cycles, unresolved and nonliteral imports,
+  unsupported syntax and unclassified file types. It supplements the existing
+  inventory guard; no product, plugin tag or consumer pin changes automatically.
+- Record the evaluated dependency-cruiser limitations and require an explicit
+  coverage review before product adoption.
+
 ## Unreleased — Engineering and Release 0.1.1 candidates
 
 - Add an optional source-ownership inventory guard with synthetic negative cases. This is scoped inventory validation, not dependency-graph enforcement or a merge guarantee.

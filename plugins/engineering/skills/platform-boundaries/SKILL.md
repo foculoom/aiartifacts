@@ -55,6 +55,13 @@ by fixing boundaries or narrowing the map with a reviewed rationale, not by
 silently deleting rules. Pin the shared checker revision in consumers; run it
 locally or in existing authorized CI, without adding a network fetch to builds.
 
+For a JavaScript import graph, evaluate the optional [AST guard](references/import-graph-adoption.md)
+against the product's actual module syntax before adopting it. Run the inventory
+guard first; the graph guard reads its exact file ownership but does not discover
+unowned source. Keep unsupported languages and indirect loading patterns in the
+product's review gaps. A clean graph is evidence about declared imports, not
+proof of correct responsibilities or behavior.
+
 Add meaningful core behavior and adapter contract tests for changed behavior.
 Test unsupported capabilities and failure paths. Verify copied core assets or
 shared fixture outcomes in packaged targets, then perform the required browser,
