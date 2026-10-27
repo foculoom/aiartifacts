@@ -2,6 +2,13 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — engineering retrospective source guidance
+
+- Add a proportional incident template and fictional behavior cases for
+  verified causes, evidence limits, private/public boundaries, and action
+  verification. This is source guidance only; no plugin, tag, or consumer pin
+  changes.
+
 ## Unreleased — Engineering 0.1.2 source candidate
 
 - Add an optional Acorn-based JavaScript import graph guard with synthetic

@@ -12,6 +12,15 @@ Do not include unpublished manuscripts, private product voice briefs, customer
 material, credentials, or internal review records. Product-specific guidance
 belongs in the consuming project.
 
+## Engineering retrospectives
+
+The [retrospective template](templates/engineering-retrospective.md) is a
+source-only method for a product's own incident record. Use the
+[fictional behavior cases](evals/engineering/incident-learning.md) when
+changing its judgment or trigger guidance. Keep actual incident timelines,
+provider receipts, customer data, and private repository links in the owning
+project. A merged template does not publish a plugin or update a consumer pin.
+
 ## Changes to editorial guidance
 
 Describe the medium and audience the change serves. Add a small, cleared example

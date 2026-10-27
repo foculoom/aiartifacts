@@ -44,6 +44,18 @@ Use only public or cleared evidence here; private project decisions, reports and
 receipts stay in their owning project. Changing these instructions does not
 release a plugin, alter a package version or update a consuming project's pin.
 
+## Engineering incident learning
+
+For a material engineering failure or near miss, use the
+[engineering retrospective template](templates/engineering-retrospective.md)
+in the owning repository. Record dated impact, verified causes separately from
+hypotheses, the detection gap, recovery, and actions with owners and verification.
+Keep routine review fixes and owner-directed design iteration proportional; they
+do not each require an incident report. Contribute a reusable lesson here only
+as a separate reviewed change with synthetic
+[behavior cases](evals/engineering/incident-learning.md). Do not copy private
+receipts or customer data into this public repository.
+
 ## Portable handoff and release evidence
 
 Start from the current default branch and record its exact revision and working-tree state; preserve existing changes. Read [README.md](README.md), [HANDOFF.md](HANDOFF.md), and [CHANGELOG.md](CHANGELOG.md) before changing source or claiming release state. Dated checkpoints are evidence to recheck, not proof of current external state. Changes on main are unreleased source until a separately reviewed tag and release; installed consumers keep their explicit pins.
