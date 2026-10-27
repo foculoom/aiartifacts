@@ -8,6 +8,21 @@ permissions:
   contents: read
 
 jobs:
+  engineering_js:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: npm
+          cache-dependency-path: plugins/engineering/skills/platform-boundaries/scripts/js-import-graph/package-lock.json
+      - name: Test optional JavaScript import graph guard
+        working-directory: plugins/engineering/skills/platform-boundaries/scripts/js-import-graph
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm test
   editorial:
     runs-on: ubuntu-latest
     steps:
@@ -17,8 +32,8 @@ jobs:
           python-version: '3.12'
       - name: Test editorial warning checker
         run: python -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q
-      - name: Test Design export evidence with synthetic fixtures
-        run: python -m unittest discover -s plugins/design/skills/product-identity/tests -q
+      - name: Test platform boundary guard
+        run: python -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q
       - name: Validate catalog and skill references
         run: python scripts/validate_catalog.py
       - name: Test static release verifier
@@ -27,6 +42,10 @@ jobs:
         run: python -m unittest discover -s plugins/reporting/skills/decision-reporting/scripts -q
       - name: Test local credential runner with synthetic fixtures
         run: python -m unittest discover -s plugins/automation/skills/local-credential-runner/tests -q
+      - name: Test Design export validation
+        run: python -m unittest discover -s plugins/design/skills/product-identity/tests -q
+      - name: Test performance comparisons
+        run: python -m unittest discover -s plugins/performance/skills/performance-regression/tests -q
       - name: Parse package metadata
         run: |
           python -m json.tool .agents/plugins/marketplace.json > /dev/null

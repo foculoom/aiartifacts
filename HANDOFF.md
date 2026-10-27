@@ -1,60 +1,205 @@
 # Maintainer handoff
 
-## Readiness and conditional forecast — October 24, 2026
+## Distribution readiness and conditional forecast — October 27, 2026
 
-AI Artifacts is a supporting toolkit and proposed support service, not an
-app-store product. Foculoom LLC is the accountable release owner. For a toolkit
-version, **feature complete** means its scoped behavior and synthetic tests
-are implemented; **submission ready** adds version/catalog, license, security,
-documentation and exact-revision review; **submitted** means a release or
-distribution action has an actual receipt; **approved** means the maintainer's
-release decision and host result are recorded; **publicly available** means the
-tagged package can be acquired and verified. For paid support, a presented
-owner activation packet, owner authorization and a working customer path are
-the corresponding later milestones. No app-store processing interval applies.
+AI Artifacts is a supporting toolkit; paid implementation or support is a
+separate proposal. Foculoom LLC owns release and service decisions. For a new
+toolkit version, source and synthetic tests establish a candidate; a release
+packet also needs exact-revision review, version/catalog, license, security and
+documentation checks. A tag and hosted release receipt establish distribution.
+For paid support, an owner-approved offer and working customer path are further
+gates. These stages do not follow an app-store submission process.
 
-| Channel | Feature complete | Submission ready | Submitted | Approved | Publicly available | Next gate |
-| --- | --- | --- | --- | --- | --- | --- |
-| Free v0.5.0 toolkit | Yes for its recorded scope | Its exact released snapshot passed the recorded 69 tests and catalog review | GitHub v0.5.0 release recorded October 24 | Released snapshot was approved | Existing free release available | Maintainer preserves tag and consumer pins; reverify acquisition for any new distribution claim. |
-| Unreleased Design 0.1.1 | Source candidate and strict-manifest CI registration exist; no version release | No new release packet | No Design 0.1.1 release | No release decision | No new version available | Hosted PR #8 run `40107693307` passed at `afa3523`; maintainer still checks the dependency chain, catalog, license and consumer behavior before proposing a separately authorized release. |
-| Proposed paid implementation/support | Scope and service contract undefined | No price, staffing, rights, support, privacy or operating-cost packet | No activation packet | No owner approval | No paid service | Owner defines offer and measurable capacity/cost; keep forecast unresolved until the work is sized and the terms and customer path are reviewed. |
+| Channel | Achieved milestone and evidence | Present public acquisition | Remaining work and next action |
+| --- | --- | --- | --- |
+| Free v0.5.0 toolkit | Released October 24 after 69 recorded tests and catalog review; the GitHub release was rechecked October 27. This is an acquirable baseline for explicitly pinned consumers. | **Available** as the existing [v0.5.0 release](https://github.com/foculoom/aiartifacts/releases/tag/v0.5.0), verified October 27. | Preserve the tag and current pins. Prepare and review a distinct release packet before offering newer source. |
+| Design 0.1.1 source | Strict manifest parsing and Design CI registration merged through reviewed PRs #7 and #10 on October 27; #23 added stateful review guidance. The source can be evaluated and packaged deliberately. | **No newer Design release** was observed October 27; these main-branch changes are not an installed consumer update. | Review version, catalog, license, security, consumer behavior and exact source before a separately authorized release. |
+| Proposed paid implementation/support | A conditional planning proposal exists; no offer or activation receipt is recorded in this handoff. | **No paid service or customer acquisition path** is recorded as of October 27. | Owner defines scope, price, rights, staffing, support, privacy, cost and customer path before any offer or activation. |
 
-The earlier unconditional November–June portfolio dates do not apply to this
-service. The next toolkit release and any paid-service activation date are
-**unresolved** until exact scope, reviewer and owner capacity, hosted CI and
-operating assumptions are measured. Size remaining work by **30 October
-2026**, the fifth working day after this checkpoint, and revise a conditional
-forecast each Friday. Existing v0.5.0 availability is a dated release fact,
-not approval to move its tag, upgrade consumers or launch paid support. No
-merge, release, sale or spending follows from this forecast.
+The date for another toolkit release or any paid-service activation remains
+unresolved until scope, reviewer and owner capacity, hosted checks and operating
+assumptions are measured. PR #9 proposed sizing the remaining work by October
+30 and revisiting a conditional forecast weekly; those are planning suggestions
+for the owner, not a release commitment or approval to sell or spend. The
+existing v0.5.0 release does not authorize moving its tag or updating consumers.
 
-The 24 October hosted readback of PR #8 at exact head
-`afa3523c758cd88c37baa42525a245add483e987` found Actions run
-`40107693307`, job `120912691716`, successful. Its untruncated log ran 11
-Design synthetic tests and catalog validation. This validates CI registration
-on that head only; v0.5.0 remains the last released version.
+The October 24 hosted readback of the now-superseded Design CI [PR #8](https://github.com/foculoom/aiartifacts/pull/8)
+at exact head `afa3523c758cd88c37baa42525a245add483e987` found successful
+Actions run `40107693307`, job `120912691716`, including 11 synthetic Design
+tests and catalog validation. That is a dated receipt for the old head only.
+The same Design test command is registered on `main` through merged PR #10;
+no separate CI behavior from PR #8 is needed.
 
-## Design CI registration — October 24, 2026
+## Strict Design manifest parsing — 27 October 2026 source reconciliation
 
-The existing validation workflow now runs Design's synthetic export-evidence
-suite, including duplicate-member and strict integer-version regressions.
-This focused CI follow-up depends on the strict-manifest source change. It
-does not release a plugin, move v0.5.0, update consumer pins, add dependencies,
-or introduce product/private fixtures. Local command results and hosted CI
-results are separate evidence; inspect the follow-up PR's exact commit checks.
+[PR #7](https://github.com/foculoom/aiartifacts/pull/7) makes the unreleased
+Design 0.1.1 export checker reject duplicate JSON members at every object level
+and require integer version `1`. After reconciliation with the October 27
+`main`, its 11 synthetic Design tests, catalog validation, the 27-test Editorial
+suite and the 10-test Performance suite passed locally. Its final head passed
+hosted checks and independent review, then merged as
+`f08d1d29d789d699e9593d97a253ab5783229b09`. It changes no released tag,
+installed plugin, or consumer pin. Reviewed [PR #10](https://github.com/foculoom/aiartifacts/pull/10)
+merged as `c4093e699872d4fd8a00eb99c4ddf195698bc22a` and registers the
+Design suite in CI.
 
-## Strict manifest parsing — October 24, 2026
+## Stateful experience-review source follow-up — October 27, 2026
 
-The unreleased Design 0.1.1 checker now rejects duplicate JSON members at every
-object level and requires the integer version `1`. This prevents duplicate
-filenames or repeated inventories from silently replacing earlier evidence.
-Eleven synthetic Design tests and catalog validation passed locally, including
-CLI rejection with exit 2 and no success receipt. No product fixtures or private
-data are included. CI registration was left to the separate follow-up above;
-this parser increment made no release, installed-plugin update, workflow or
-consumer-pin change.
+An unreleased Design 0.1.1 guidance candidate at source commit
+`38ce770ca8885d47bdf1fd10bf832627f61ea1b5` adds four-state review
+(starting, active, overview/pause, recovery) and an exact released/source/
+candidate comparison to the existing experience-review skill. Fictional D9
+exercises a navigation and paused-action divergence across three artifacts;
+fictional D10 preserves an already-correct booking form without importing game
+rules. No product data, plugin package, tag or consumer pin changed.
 
-Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. Design 0.1.1 below is an unreleased source increment. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
+From the repository root on October 27, `python3 scripts/validate_catalog.py`
+passed (six plugins, seven skills), the Design export checker suite passed
+(seven tests), and `git diff --check` passed. The new D9/D10 model-behavior
+evaluations ran on October 27 against exact head
+`33347aec63e53f6226a64e0905db2f4a15f96123`, with expected judgments withheld:
+an initial paired-context run and separate fresh-session runs for D9 and D10.
+Both cases passed the observable criteria in `evals/design/README.md`. The
+[evaluation record](evals/design/stateful-review-20261027.md) preserves all four
+answers, inputs, context/tool limits and agent assessments. The exact model
+identifier was unavailable; no rendered UI, real booking, native/device test or
+cross-model study is claimed. The evidence-only follow-up reran the same catalog,
+Design and diff checks successfully without changing the evaluated inputs.
+
+Reviewed [PR #23](https://github.com/foculoom/aiartifacts/pull/23) subsequently
+merged as `fcf44212172ec6817c601490ca8ab9776b64d86e` on October 27. Design
+0.1.1 remains unreleased source; no package, tag or consumer pin changed, and
+this source merge did not publish Design or update consumers.
+
+Engineering 0.1.2 source integration — 27 October 2026: reviewed
+[PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
+`ff6a1767ea19c5e8dedc8c3c33299031228c1a82` merged to `main` as
+`2319cab3f152960bf0b119b30af97a4b7e31bc7a`; the
+[default-branch validation](https://github.com/foculoom/aiartifacts/actions/runs/40488088102)
+passed. The optional `js-import-graph` guard parses declared JavaScript
+modules with locked Acorn 8.18.0. It is separate from the Python inventory
+and does not install Node in other plugin workflows. From
+`plugins/engineering/skills/platform-boundaries/scripts/js-import-graph`, run
+`npm ci --ignore-scripts` and `npm test` (ten synthetic tests passed locally on
+Node 24.19.0). The existing Python boundary suite passed 28 tests, and catalog
+validation passed six plugins/seven skills. The evaluated dependency-cruiser
+18.5.0 did not report nonliteral dynamic imports or malformed JavaScript; see
+the adoption reference for exact limits. Forticle subsequently adopted this
+source pin in reviewed [PR #52](https://github.com/foculoom/forticle/pull/52),
+merged to its `main` as `56ed398d2dbdc2a9182eee96051fe4feda1725e0`;
+that product owns its policy and CI. No AI Artifacts tag, plugin package release
+or installed consumer pin changed. Publishing an updated plugin remains a
+separate version/release decision.
+
+Source ownership guard candidate: `check_inventory.py` adds explicit-file ownership
+within declared roots/extensions, expired/unused exception rejection and symlink
+rejection. `python3 -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q`
+passes 28 synthetic tests (12 lexical, 16 inventory). It does not parse import
+graphs or change hosted protection. Existing CI already discovers this suite.
+No new dependency, plugin version/tag or installed consumer pin is changed.
+Independent exact-head PR review and explicit consumer adoption are required.
+
+Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. The Design and Release 0.1.1 guidance below is unreleased source. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
+
+## Start on a new computer
+
+Install Git and Python 3.9 or later. These commands use `python3`; on Windows,
+use an equivalent Python 3 command. From a fresh checkout, record the exact
+source revision before applying any unreleased guidance:
+
+```sh
+git clone https://github.com/foculoom/aiartifacts.git
+cd aiartifacts
+git fetch origin --tags
+git switch main
+git pull --ff-only origin main
+git status --short
+git rev-parse HEAD
+python3 scripts/validate_catalog.py
+python3 -m unittest discover -s plugins/release/skills/release-evidence/scripts -q
+```
+
+Read this handoff, README, CONTRIBUTING, CHANGELOG and the specific skill and
+evaluation before changing shared guidance. `main` contains unreleased source
+candidates; published `v0.5.0` remains the tested release snapshot. Reading a
+reference from `main` does not install or release that candidate in a consuming
+product. Record the exact repository commit and any installed plugin version
+separately. Keep the product's deployment commands, credentials and live
+evidence in its owning repository or private operations storage.
+
+## Pending input and controls guidance
+
+Decision recorded October 26, 2026: extend the existing skills after the
+[Quiet Below controls requirements](https://github.com/foculoom/quietbelow/blob/main/docs/PRD_CURRENT.md)
+have been implemented and validated. The October 26 requirements checkpoint below is historical. Recheck the owning
+product candidate and acceptance records before drawing reusable lessons; later
+implementation or release evidence does not change a published plugin by itself.
+
+The requirements and next-agent sequence were merged in
+[Quiet Below PR #64](https://github.com/foculoom/quietbelow/pull/64), at
+`862fe709f75e2a897b1cff42506bd5da9917054c`. Its
+[controls plan](https://github.com/foculoom/quietbelow/blob/862fe709f75e2a897b1cff42506bd5da9917054c/docs/CONTROLS_UPDATE_PLAN.md)
+records the reproduced findings and acceptance checks. This is the requirements
+baseline; a later corrective implementation PR must supply passing evidence.
+
+For this follow-up, a successful game update means a corrected, reviewed source
+candidate with reproducible before/after evidence and passing gameplay and
+browser checks. It does not require commercial success or completion of the
+whole puzzle expansion. Browser evidence supports browser guidance; native
+claims require separate packaged-app and physical-device evidence. Source merge,
+native submission and public availability remain distinct milestones.
+
+| Existing skill or profile | Candidate reusable guidance |
+| --- | --- |
+| [Experience review](plugins/design/skills/experience-review/SKILL.md) and its [interactive experiences reference](plugins/design/skills/experience-review/references/interactive-experiences.md) | Exercise keyboard-only, pointer-only, touch and mixed-input journeys separately. Check visible focus, repeated button activation, dialogs, modifier shortcuts, landscape/safe-area layout, fullscreen access to controls and recovery. |
+| [Game UI](plugins/editorial/skills/editorial-writing/references/medium/game-ui.md) | Match instructions to supported input, keep alternative controls discoverable, and explain action effects and unavailable states. Screen width alone does not establish which input devices a player has. |
+| [Platform boundaries](plugins/engineering/skills/platform-boundaries/SKILL.md) | Keep shared gameplay actions and outcomes separate from device bindings and presentation. Test input adapters against the same behavior while preserving platform-specific accessibility and lifecycle needs. |
+
+The next agent should complete these steps in order:
+
+1. Read the game's current PRD and handoff; verify its corrective PR and exact
+   tested source revision. Record the reproduced problem, expected behavior,
+   actual result and test command for each pattern proposed for reuse. Retain
+   product audit logs, screenshots and device records in the owning project's
+   private or local evidence storage under its retention rules, outside tracked
+   source and shared skills.
+2. Confirm gameplay regressions and complete keyboard-only, pointer-only and
+   touch journeys pass, including start, play, hints, undo/restart, overview,
+   pause/dialog return and reload. Include mixed-input switching, modifier keys,
+   focus retention and input-repeat behavior. Mark missing native/device or
+   assistive-technology checks explicitly; do not convert browser emulation into
+   physical-device evidence or accessible buttons into nonvisual gameplay.
+3. Add narrowly scoped guidance to the existing skills and synthetic positive
+   and negative behavior evaluations. Cases should catch hidden pointer controls,
+   focus stolen after button activation, browser shortcuts changing game state,
+   controls covering feedback, and unsupported claims from limited evidence.
+   Include a case that preserves an already-correct interface and a non-game
+   case that rejects importing game-specific control rules.
+4. Run affected plugin tests, catalog/skill validation and the new behavior
+   evaluations, following their recorded evaluation procedure. Have an independent
+   reviewer inspect the exact candidate diff, examples, references and evidence
+   limits before the focused PR is merged. Record actual results and unresolved
+   gaps; automated passes do not establish enjoyment or universal accessibility.
+5. Advance affected plugin versions and changelog only with the implemented
+   guidance. Publish a tested repository snapshot through the normal release
+   process, preserving existing tags. A consuming product adopts and records
+   that tested revision explicitly; do not silently replace its current pin.
+
+Keep exact key bindings, directional movement, turn/repeat policy, puzzle rules,
+hint defaults, pricing, purchases, saves and release holds in Quiet Below. The
+shared skills should teach how to inspect and validate those decisions, not
+impose them on other products. Use synthetic or explicitly cleared examples and
+primary references; do not copy private playtest responses or internal records.
+
+## Reuse audit source — October 26, 2026
+
+Unreleased Engineering source now includes a narrow [reuse-decision reference](plugins/engineering/skills/platform-boundaries/references/reuse-decisions.md)
+and synthetic cases for shared renderers and storage failure contracts. It helps
+callers compare behavior, versioning and failure paths before extraction; it
+does not move product code, change installed consumer pins or certify any
+product release. PR #19 records the source review; verify its final head and
+required checks before merging. A source merge remains separate from a plugin
+tag or a consumer pin.
 
 ## Architecture and release state
 
@@ -102,6 +247,52 @@ remain separately observed actions, not results of the checker.
 
 Run `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`
 and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
-that increment introduced no tag, dependency or CI configuration. The separate
-CI follow-up above registers the suite. Preserve local validation and inspect
-the exact hosted commit results before any release.
+no new tag or dependency was introduced at this checkpoint. The Design suite
+was local only when this section was written; PR #10 registers it in CI as a
+separate reviewed change. Re-run it against the exact candidate before a release.
+
+## Unreleased operational-status and release-evidence source
+
+The operational-status review guidance and exact ZIP-inventory rule merged in
+[PR #14](https://github.com/foculoom/aiartifacts/pull/14) at
+`1c95239d7662a37b560b836dab5bdb482cf13a38`. The reusable review entry
+point is [experience-review](plugins/design/skills/experience-review/SKILL.md)
+and its [operational-status reference](plugins/design/skills/experience-review/references/operational-status.md).
+Use [Design case D8](evals/design/cases.md) and its
+[evaluation criteria](evals/design/README.md) to check claim scope, unknown
+states, metric provenance and public/private boundaries. The release entry
+point is [release-evidence](plugins/release/skills/release-evidence/SKILL.md);
+its [archive-inventory cases](evals/release/archive-inventory.md) catch an old
+ZIP that retains an extra file while `unzip -t` still succeeds.
+
+The Release verifier tests run with the command in the fresh-computer section.
+Design case D8 and the archive-inventory cases are model-behavior evaluations,
+not unit tests or live deployment evidence. Run each case in a fresh session
+using the exact changed skill revision, with expected criteria withheld, and
+record the model, tool access, output and pass/partial/fail evidence. These
+sources contain fictional examples only; do not import account data, private
+metrics, credentials or captures from a consuming project. This contribution
+did not tag a new release or change any consumer's existing v0.5.0 pin.
+
+## Engineering source candidate
+
+Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Unreleased parallel-work source candidate
+
+Engineering and Release 0.1.1 add conditional parallel-preparation guidance and an
+Engineering handoff template. Both plugins remain independently usable; references
+stay inside their own package. The method separates isolated writing/review lanes
+from serialized integration and production ownership. See
+[synthetic cases](evals/engineering/parallel-work.md) for evaluation prompts and
+observable criteria. This is source guidance, not an orchestrator, global lock or
+permission grant. Existing release tags and consumer pins are unchanged.
+
+## Performance 0.1.0 source candidate
+
+[PR #10](https://github.com/foculoom/aiartifacts/pull/10) added advisory browser
+measurement, a dependency-free comparator, synthetic tests, and CI registration
+for the Design export suite. It merged as
+`c4093e699872d4fd8a00eb99c4ddf195698bc22a` on October 27 after an
+independent agent review and passing checks. No release tag or installed
+consumer pin changed with this source integration.

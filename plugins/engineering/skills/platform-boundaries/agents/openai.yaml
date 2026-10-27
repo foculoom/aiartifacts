@@ -1,0 +1,4 @@
+interface:
+  display_name: "Platform Boundaries"
+  short_description: "Separate product behavior from platform adapters"
+  default_prompt: "Use $platform-boundaries to review this product's platform boundaries and verify the relevant contracts."
