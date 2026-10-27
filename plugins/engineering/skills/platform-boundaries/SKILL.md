@@ -23,6 +23,12 @@ Do not revive archived products or change a business model to fit an adapter.
    rendering, performance, and platform conventions can differ. When different
    implementations are justified, share schemas and behavioral fixtures instead
    of forcing an unsuitable framework or claiming source parity.
+   For a proposed shared component, compare its behavior, ownership, failure
+   modes and versioning in two real callers before extracting it. Keep a shared
+   policy or codec small and side-effect-free where practical; inject storage,
+   clocks and provider calls at the boundary. A file merely looking similar is
+   insufficient evidence. See [reuse decisions](references/reuse-decisions.md)
+   for a compact audit and migration contract.
 4. Separate save/progress data from store ownership. Version migrations; preserve
    recovery and unsupported bytes. If purchases exist, specify purchase, restore,
    cancellation, pending, revocation/refund and offline behavior. A local flag or
