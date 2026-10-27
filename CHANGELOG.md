@@ -26,6 +26,7 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 - Reject ambiguous export manifests with duplicate JSON members or non-integer
   versions; add synthetic parser and CLI regressions.
+- Add bounded starting, active, pause/overview and recovery-state review guidance; compare released bytes, canonical source and unpublished candidate by exact identity and date. Add fictional cases for a divergent game journey and an already-correct non-game form, without claiming native usability from browser evidence.
 - Add operational-status review guidance and a synthetic case for calibrated health claims, unknown states, metric provenance and public/private boundaries.
 - Add design-kit handoff guidance for explicit source roots, new output ownership, exact public payload inventories, final-raster QR checks and separate physical/vendor proofs.
 - Add a dependency-free, read-only path/inventory/hash checker and synthetic regression cases. No asset generation, QR decoding, publishing or deployment authority is implied.
@@ -63,3 +64,9 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Performance 0.1.0 source candidate
+
+Add an advisory browser measurement helper and comparator with synthetic
+behavior tests. Register the Design export suite in CI. This unreleased source
+does not change a tag or installed consumer pin.

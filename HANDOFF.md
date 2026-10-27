@@ -4,11 +4,41 @@
 
 [PR #7](https://github.com/foculoom/aiartifacts/pull/7) makes the unreleased
 Design 0.1.1 export checker reject duplicate JSON members at every object level
-and require integer version `1`. Its 11 synthetic Design tests and catalog
-validation passed after reconciliation with current `main`; independent
-exact-head review and hosted checks remain. It changes no released tag,
-installed plugin, or consumer pin. Design CI registration is proposed in
-separate [PR #10](https://github.com/foculoom/aiartifacts/pull/10).
+and require integer version `1`. After reconciliation with the October 27
+`main`, its 11 synthetic Design tests, catalog validation, the 27-test Editorial
+suite and the 10-test Performance suite passed locally. Hosted checks and
+independent review of the final head remain before merge. It changes no released tag,
+installed plugin, or consumer pin. Reviewed [PR #10](https://github.com/foculoom/aiartifacts/pull/10)
+merged as `c4093e699872d4fd8a00eb99c4ddf195698bc22a` and registers the
+Design suite in CI.
+
+## Stateful experience-review source follow-up — October 27, 2026
+
+An unreleased Design 0.1.1 guidance candidate at source commit
+`38ce770ca8885d47bdf1fd10bf832627f61ea1b5` adds four-state review
+(starting, active, overview/pause, recovery) and an exact released/source/
+candidate comparison to the existing experience-review skill. Fictional D9
+exercises a navigation and paused-action divergence across three artifacts;
+fictional D10 preserves an already-correct booking form without importing game
+rules. No product data, plugin package, tag or consumer pin changed.
+
+From the repository root on October 27, `python3 scripts/validate_catalog.py`
+passed (six plugins, seven skills), the Design export checker suite passed
+(seven tests), and `git diff --check` passed. The new D9/D10 model-behavior
+evaluations ran on October 27 against exact head
+`33347aec63e53f6226a64e0905db2f4a15f96123`, with expected judgments withheld:
+an initial paired-context run and separate fresh-session runs for D9 and D10.
+Both cases passed the observable criteria in `evals/design/README.md`. The
+[evaluation record](evals/design/stateful-review-20261027.md) preserves all four
+answers, inputs, context/tool limits and agent assessments. The exact model
+identifier was unavailable; no rendered UI, real booking, native/device test or
+cross-model study is claimed. The evidence-only follow-up reran the same catalog,
+Design and diff checks successfully without changing the evaluated inputs.
+
+Reviewed [PR #23](https://github.com/foculoom/aiartifacts/pull/23) subsequently
+merged as `fcf44212172ec6817c601490ca8ab9776b64d86e` on October 27. Design
+0.1.1 remains unreleased source; no package, tag or consumer pin changed, and
+this source merge did not publish Design or update consumers.
 
 Engineering 0.1.2 source integration — 27 October 2026: reviewed
 [PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
@@ -186,9 +216,9 @@ remain separately observed actions, not results of the checker.
 
 Run `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`
 and `python3 scripts/validate_catalog.py`. This source candidate is unreleased;
-no new tag, dependency or CI configuration is introduced. The existing CI does
-not yet invoke the new Design test suite, so preserve its local validation record
-and register the command through the normal reviewed CI change before release.
+no new tag or dependency was introduced at this checkpoint. The Design suite
+was local only when this section was written; PR #10 registers it in CI as a
+separate reviewed change. Confirm that PR's final checks before a release.
 
 ## Unreleased operational-status and release-evidence source
 
@@ -226,3 +256,12 @@ from serialized integration and production ownership. See
 [synthetic cases](evals/engineering/parallel-work.md) for evaluation prompts and
 observable criteria. This is source guidance, not an orchestrator, global lock or
 permission grant. Existing release tags and consumer pins are unchanged.
+
+## Performance 0.1.0 source candidate
+
+[PR #10](https://github.com/foculoom/aiartifacts/pull/10) added advisory browser
+measurement, a dependency-free comparator, synthetic tests, and CI registration
+for the Design export suite. It merged as
+`c4093e699872d4fd8a00eb99c4ddf195698bc22a` on October 27 after an
+independent agent review and passing checks. No release tag or installed
+consumer pin changed with this source integration.

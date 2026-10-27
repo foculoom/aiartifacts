@@ -56,3 +56,29 @@ object without projecting allowed fields. No authenticated browser journey
 or access-policy evidence is supplied. Give a prioritized review, the
 smallest corrections and testable acceptance checks. Do not submit the form
 or claim the private screen's access controls have been verified.
+
+## D9 — Four states, three artifacts
+
+Use experience-review for a fictional browser game, Lantern Gallery. Its public
+payload hash P7 was read today: the Start and room-menu screens have no active
+link to the archived prototype, but its direct `/archive/` route still works.
+Canonical source commit S8 still contains that active link. An unpublished
+candidate ZIP C9 adds touch controls; before Start, Move and Restart look
+enabled but do nothing. During play they work. In Overview, Move and Use look
+enabled but do nothing, while Undo and Restart still work. A 390px browser
+emulation fits the whole Overview board, but no player was asked to identify
+its mechanisms on a phone. Reload was checked only in C9's local browser.
+Review the starting, playing, overview and recovery journeys; report what is
+observed in each exact artifact, the smallest next checks, and public
+availability. Do not prescribe a redesign or claim physical-device usability.
+
+## D10 — Preserve a working interface outside games
+
+Use experience-review for a fictional library booking form. Its released page,
+source and candidate match by recorded hashes. Before a selection, the Submit
+button is visibly disabled and focus skips it; Help works. After a selection,
+Submit becomes operable. While a confirmation dialog is open, the form actions
+are disabled and Cancel restores focus and the selection. A local keyboard and
+touch test passed; no real booking was submitted. Review only this flow.
+Identify what should remain and any evidence limits without importing game
+movement, turn timing or overview controls.
