@@ -1,18 +1,24 @@
 # Maintainer handoff
 
-Engineering 0.1.2 source candidate: the optional `js-import-graph` guard parses
-declared JavaScript modules with locked Acorn 8.18.0. It is separate from the
-Python inventory and does not install Node in other plugin workflows. From
+Engineering 0.1.2 source integration — 27 October 2026: reviewed
+[PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
+`ff6a1767ea19c5e8dedc8c3c33299031228c1a82` merged to `main` as
+`2319cab3f152960bf0b119b30af97a4b7e31bc7a`; the
+[default-branch validation](https://github.com/foculoom/aiartifacts/actions/runs/40488088102)
+passed. The optional `js-import-graph` guard parses declared JavaScript
+modules with locked Acorn 8.18.0. It is separate from the Python inventory
+and does not install Node in other plugin workflows. From
 `plugins/engineering/skills/platform-boundaries/scripts/js-import-graph`, run
 `npm ci --ignore-scripts` and `npm test` (ten synthetic tests passed locally on
 Node 24.19.0). The existing Python boundary suite passed 28 tests, and catalog
-validation passed six plugins/seven skills. [PR #21](https://github.com/foculoom/aiartifacts/pull/21)
-starts from `321c9fd1bc85b20639dce70d96ebdf36cda01c7a`; inspect the PR's
-current head and hosted checks before review or merge. The evaluated
-dependency-cruiser 18.5.0 did not report nonliteral dynamic
-imports or malformed JavaScript; see the adoption reference for exact limits.
-No product has adopted this candidate, no tag or installed consumer pin changed,
-and independent final-head review is still required.
+validation passed six plugins/seven skills. The evaluated dependency-cruiser
+18.5.0 did not report nonliteral dynamic imports or malformed JavaScript; see
+the adoption reference for exact limits. Forticle subsequently adopted this
+source pin in reviewed [PR #52](https://github.com/foculoom/forticle/pull/52),
+merged to its `main` as `56ed398d2dbdc2a9182eee96051fe4feda1725e0`;
+that product owns its policy and CI. No AI Artifacts tag, plugin package release
+or installed consumer pin changed. Publishing an updated plugin remains a
+separate version/release decision.
 
 Source ownership guard candidate: `check_inventory.py` adds explicit-file ownership
 within declared roots/extensions, expired/unused exception rejection and symlink
