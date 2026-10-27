@@ -1,5 +1,13 @@
 # Maintainer handoff
 
+Source ownership guard candidate: `check_inventory.py` adds explicit-file ownership
+within declared roots/extensions, expired/unused exception rejection and symlink
+rejection. `python3 -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q`
+passes 26 synthetic tests (12 lexical, 14 inventory). It does not parse import
+graphs or change hosted protection. Existing CI already discovers this suite.
+No new dependency, plugin version/tag or installed consumer pin is changed.
+Independent exact-head PR review and explicit consumer adoption are required.
+
 Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing tag and release; do not recreate or move it. The Design and Release 0.1.1 guidance below is unreleased source. This public document contains reusable-method context only. Product/private account decisions, reports, manuscripts and credentials belong in their owning repositories.
 
 ## Start on a new computer

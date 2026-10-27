@@ -87,3 +87,23 @@ validation commands, start with [HANDOFF.md](HANDOFF.md).
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
+
+## Source ownership inventory guard
+
+The Engineering source includes an optional, dependency-free
+[`check_inventory.py`](plugins/engineering/skills/platform-boundaries/scripts/check_inventory.py).
+Run `python3 PATH/TO/check_inventory.py --root PRODUCT_ROOT` against a reviewed
+`architecture-inventory.json`. Version 1 declares `scopes` (directory `root`
+and file `extensions`), `areas` (unique `id`, `responsibility`, explicit `files`),
+optional `exceptions` (exact `file`, `reason`, `owner`, `review_condition`,
+`review_by` ISO date), and nonempty `review_gaps`. Synthetic examples are in
+[`test_inventory.py`](plugins/engineering/skills/platform-boundaries/scripts/test_inventory.py).
+
+Every matching file must have exactly one owner or a current exception. Missing
+files, overlapping scopes and symlinks fail closed. New files outside declared
+roots/extensions are not covered. Review scope changes alongside code; do not
+hide new production roots by omitting them. This tool does not parse imports,
+prove dependency direction, detect behavioral duplication or enforce GitHub
+merge protection. Use it alongside lexical checks and product behavior tests.
+Vendored consumers must record the exact source revision and checksum; copying
+this script does not update the installed skill or release a new plugin.
