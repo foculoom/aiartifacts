@@ -1,5 +1,34 @@
 # Maintainer handoff
 
+## Stateful experience-review source follow-up — October 27, 2026
+
+An unreleased Design 0.1.1 guidance candidate at source commit
+`38ce770ca8885d47bdf1fd10bf832627f61ea1b5` adds four-state review
+(starting, active, overview/pause, recovery) and an exact released/source/
+candidate comparison to the existing experience-review skill. Fictional D9
+exercises a navigation and paused-action divergence across three artifacts;
+fictional D10 preserves an already-correct booking form without importing game
+rules. No product data, plugin package, tag or consumer pin changed.
+
+From the repository root on October 27, `python3 scripts/validate_catalog.py`
+passed (six plugins, seven skills), the Design export checker suite passed
+(seven tests), and `git diff --check` passed. The new D9/D10 model-behavior
+evaluations ran on October 27 against exact head
+`33347aec63e53f6226a64e0905db2f4a15f96123`, with expected judgments withheld:
+an initial paired-context run and separate fresh-session runs for D9 and D10.
+Both cases passed the observable criteria in `evals/design/README.md`. The
+[evaluation record](evals/design/stateful-review-20261027.md) preserves all four
+answers, inputs, context/tool limits and agent assessments. The exact model
+identifier was unavailable; no rendered UI, real booking, native/device test or
+cross-model study is claimed. The evidence-only follow-up reran the same catalog,
+Design and diff checks successfully without changing the evaluated inputs.
+
+The next action is independent review of the final
+[PR #23](https://github.com/foculoom/aiartifacts/pull/23) head and its required CI
+before any merge. Recording these results is not independent review of the new
+head. Design 0.1.1 remains unreleased source; no package, tag or consumer pin
+changes, and a source merge alone would not publish Design or update consumers.
+
 Engineering 0.1.2 source integration — 27 October 2026: reviewed
 [PR #21](https://github.com/foculoom/aiartifacts/pull/21) head
 `ff6a1767ea19c5e8dedc8c3c33299031228c1a82` merged to `main` as
