@@ -88,6 +88,13 @@ validation commands, start with [HANDOFF.md](HANDOFF.md).
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
 
+The [engineering retrospective template](templates/engineering-retrospective.md)
+provides a proportional way to record material failures and verified prevention
+in the owning project. The [synthetic cases](evals/engineering/incident-learning.md)
+test the distinction between incidents, ordinary iteration, and unsupported
+causal claims. These documents are source guidance only; they do not change an
+installed plugin, published tag, or consumer pin.
+
 ## Source ownership inventory guard
 
 The Engineering source includes an optional, dependency-free
