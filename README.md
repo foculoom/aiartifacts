@@ -71,8 +71,16 @@ Design 0.1.1 adds [design-kit export guidance](plugins/design/skills/product-ide
 and an optional read-only standard-library checker for explicit roots, new
 output paths, exact website inventories and hashes. It separates final-raster
 QR decoding from physical/vendor proof. This is an unreleased source candidate;
-existing v0.5.0 tags and consumer pins remain unchanged. New synthetic tests run
-locally; registering them in CI is a separate reviewed change.
+existing v0.5.0 tags and consumer pins remain unchanged. The Design export suite
+is registered in CI through merged PR #10; no replacement CI change is needed.
+
+The same source candidate includes scoped
+[production-experience acceptance](plugins/design/skills/experience-review/references/production-acceptance.md)
+and [four original rendered evaluation fixtures](evals/design/rendered/README.md).
+These extend the existing Design skills. They add no art-direction plugin,
+universal visual style or automatic quality certificate. The
+[initial quality audit](docs/quality-audit-20261028.md) distinguishes structural
+verification, independent evaluation, source review and publication.
 
 The same unreleased Design source includes an
 [operational-status review reference](plugins/design/skills/experience-review/references/operational-status.md)

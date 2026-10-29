@@ -23,6 +23,17 @@ Use approved, observed, proposed, or unknown for each row. Only mark approved wh
 | Layout and hierarchy | | | | |
 | Motion and reduced motion | | | | |
 
+## Production target when applicable
+
+- Approved visual target/examples and their approval source, or explicit gap:
+- What the audience must recognize and do at intended sizes:
+- Distinctive shape/material/light/motion choices and deliberate constraints:
+- Observable acceptance criteria and representative states/artifacts:
+- Required reviewer scope, owner decision and unresolved evidence:
+
+Keep export/rights checks separate from rendered quality acceptance. A working
+minimal treatment need not gain decoration; a valid export can still need rework.
+
 ## Assets and rights
 
 | Asset/font | Source and revision/hash | License evidence | Permitted use | Clearance gaps |

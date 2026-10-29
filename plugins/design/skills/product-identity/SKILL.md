@@ -19,6 +19,15 @@ Describe the shared publisher elements and product-specific choices. Common navi
 
 Produce a concise brief covering color roles, typography and fallback fonts, imagery, layout, motion, and parent-brand relationship. Distinguish **approved**, **observed**, **proposed**, and **unknown** decisions and cite their sources. Include rationale and constraints, not merely a mood adjective or a list of hex codes. Use the consuming project's identity-brief template when present; otherwise deliver these sections directly without depending on another installation.
 
+For production-facing visual work, establish what the intended audience must
+recognize and do at the target size, and what makes this product distinct.
+Record an approved visual target or explicit approval gap, the permitted degree
+of change, and observable acceptance criteria. Separate export correctness and
+rights clearance from whether the rendered work meets that target. An earlier
+palette approval is not approval of every later illustration or game frame.
+For games, include representative play states and character/object identity in
+motion; do not replace gameplay evidence with an unrelated polished illustration.
+
 For every proposed asset or font, record source, revision or hash, license evidence, permitted use, and unresolved clearance. Public availability is not permission to redistribute. Keep private briefs, manuscripts, and uncleared examples in the owning project. Do not copy a reference company's distinctive branding or artwork.
 
 ## Apply and hand off

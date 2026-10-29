@@ -15,6 +15,7 @@ Use the available browser or rendering tools and follow navigation and direct-en
 - [Product pages](references/product-pages.md): audience, value, availability, and conversion paths.
 - [Interactive experiences](references/interactive-experiences.md): state, feedback, help, input, and return paths.
 - [Operational status](references/operational-status.md): public health claims, incident states, and private measurement views.
+- [Production acceptance](references/production-acceptance.md): a requested production-quality decision, material visual/game-art change, or owning-project acceptance gate. It is not required for every small edit.
 
 Compare with approved identity decisions and the project's voice brief. Review hierarchy, product differentiation, availability labels, action semantics, responsive layouts, and applicable accessibility behavior. Inspect desktop and narrow renders when available. Test focus, keyboard paths, labels, contrast, reduced motion, and error states only where tools and authorization permit; describe exactly what was measured or exercised. If rendering is unavailable, provide a source-only review and leave visual conclusions unverified.
 
@@ -27,5 +28,10 @@ Do not submit live forms, make purchases, alter settings, or publish content wit
 For each actionable finding, provide the URL or component, source file when verified, observed evidence, consequence for the visitor, classification, proposed correction, and testable acceptance criterion. Classify findings as defect, strategic tradeoff, aesthetic preference, or hypothesis; do not disguise preference as a failure. Prioritize critical broken journeys or exposure as P0, important usability/clarity problems as P1, and optional refinements as P2. Do not manufacture findings or numerical quality scores.
 
 State what works and should remain. Separate observed facts from inferred causes and proposed changes. Include coverage and untested states. A passing automated check is not accessibility certification; clicks are not demand or purchases; a polished forecast interface is not accuracy evidence. Do not invent uplift, customers, measurements, or test results.
+
+When an acceptance decision is required, make it explicit and bounded to the
+artifact, brief and inspected scope. A technically correct export can still need
+visual rework; a restrained design can meet its brief without more decoration.
+Do not turn "no findings" in one review lane into whole-product approval.
 
 Recommend the smallest correction supported by the findings. Prose revisions can use an available editorial skill and the project voice brief, but this review remains independently usable. Record affected revisions so later changes can invalidate the relevant findings without pretending that an old report covers new work.
