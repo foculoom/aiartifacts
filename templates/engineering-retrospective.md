@@ -37,7 +37,7 @@ deployment, and public acquisition as separate facts.
 
 ## Causes and detection
 
-| Finding | Evidence | Confidence | Detection gap |
+| Finding | Evidence and observation date | Confidence | Detection gap or next discriminating check |
 | --- | --- | --- | --- |
 | Verified cause | | Verified / bounded | |
 | Contributing condition | | Verified / bounded | |
@@ -46,6 +46,35 @@ deployment, and public acquisition as separate facts.
 Explain why the earlier checks did not catch the failure. A passed test proves
 only the state and inputs it actually covered. Separate a tool or process
 failure from normal owner-directed iteration. Name system conditions, not blame.
+
+For a failed or partial evidence check, record the attempted operation and its
+retrieval result separately from the product outcome, with the exact candidate
+and environment. An inaccessible source does not prove absence; a timeout does
+not prove that a mutation had no effect. Preserve the last verified state and
+its date until a new observation supersedes it.
+
+If using five whys, identify the evidence or inference supporting each causal
+link. Stop where evidence stops, even before five levels; retain competing
+explanations and the next check rather than forcing a single root cause. A
+recovery that works does not by itself prove why the failure occurred. Use the
+[synthetic evidence-recovery cases](../evals/engineering/evidence-recovery/README.md)
+when evaluating changes to this method; they do not require an incident report
+for every ordinary lookup or test failure.
+
+Choose the smallest comparison that separates the competing explanations:
+change one suspected factor while matching the candidate, runtime, profile and
+other relevant conditions. Before running, name the expected distinguishing
+observations, evidence streams and stop condition. Start with one execution per
+condition under the existing run cap; inspect those results before expanding.
+Correlate the initiating request, current authoritative state, durable history
+and asynchronous updates when applicable. Keep existing assertions, acceptance
+criteria and trust checks intact. An inconclusive comparison leaves the cause
+unresolved; it does not justify retries or looser checks until something passes.
+
+For an unresolved consequential operation, record its correlation privately,
+the authoritative state check and the contract that permits retry or clearing a
+hold. Restart, elapsed time and an empty history are not cancellation receipts.
+Preserve independent work that can proceed within the existing authorization.
 
 ## Prevention and closure
 

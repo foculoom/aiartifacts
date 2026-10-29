@@ -20,6 +20,21 @@ Prefer the user's specified browser and existing signed-in session when it can c
 
 Use existing repository build, stamp, manifest and verification scripts before creating replacements. Batch safe read-only checks. Keep credentials, screenshots of account settings, personal paths, and raw provider responses out of public artifacts. Store sanitized evidence with the owning project.
 
+Follow the source index or search for records before guessing paths. A 404 or
+inaccessible dashboard describes that access attempt, not product availability.
+If a response is truncated, read the relevant bounded section before using it.
+In progress updates as well as final handoffs, retain the observation date,
+candidate, environment and stage. Report unavailable fresh evidence alongside
+the last verified state; distinguish failed, untested, indeterminate and pending
+review. Do not promote a probable explanation into a verified cause.
+
+When release diagnostics conflict, isolate one suspected factor with the other
+candidate/environment conditions matched. Declare the distinguishing evidence
+and stop condition first; use one execution per condition within the existing
+cap before deciding whether more work is justified. Correlate requests, current
+provider state, operation history and asynchronous updates as applicable. Keep
+acceptance and trust checks intact; an inconclusive result remains unresolved.
+
 ## Parallel preparation
 
 When multiple agents contribute to a release, read
@@ -32,6 +47,14 @@ window has one owner, from fresh history through live verification.
 Check complete deployment history and unsettled operations before choosing any history-derived release label. Use provider completion timestamps and the project's timezone. Refresh after a pause, approval handoff, failed upload or unknown result; do not reuse stale history just because a ZIP exists. Rebuild if intervening releases invalidate the label. Preserve one deployment owner through upload and verification.
 
 Prepare only the allowlisted site payload, excluding repository metadata, private briefs and logs. Verify ZIP paths and hashes against the candidate manifest. Select that exact archive in the dashboard, inspect the destination and environment, and confirm the final file list. An upload is not proof of successful publication. On timeout or stale dashboard state, inspect deployment history before retrying; avoid duplicate releases.
+
+Correlate an ambiguous upload with its operation ID, artifact and destination,
+using the provider's recorded state and completion time. An empty or failed
+history read cannot prove the operation did not happen. If its outcome remains
+unresolved, hold that retry and continue independent authorized preparation.
+Once completion is established, verify the delivered result instead of uploading
+again. Keep the existing authorization separate from evidence of completion;
+an evidence gap alone does not require the owner to repeat an unchanged decision.
 
 Create an archive at a fresh path. Updating an existing ZIP can retain old files that were not named in the new command; an integrity check such as `unzip -t` will still pass. Inspect the archive itself and require its exact entry set and file hashes to match the reviewed manifest before upload. A clean staging directory or successful archive-integrity check alone does not prove the packaged inventory.
 
