@@ -1,0 +1,729 @@
+{
+  "evaluatedSourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "originals": "Local immutable evaluator outputs retained outside tracked source. Original SHA-256 identities below permit comparison; public copies normalize only disclosed machine/runtime/output paths.",
+  "files": [
+    {
+      "case": "r1",
+      "file": "r1/action-receipts.json",
+      "originalSha256": "556c8120b293552316cd77931dce5fdfd3e05167e077c9ad1c943735fec91836",
+      "publicSha256": "556c8120b293552316cd77931dce5fdfd3e05167e077c9ad1c943735fec91836",
+      "bytes": 218035,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/active-1280.png",
+      "originalSha256": "a557bb79f05e48c2988a2a53112d4e10477697e337725924fe333c5a79e30c05",
+      "publicSha256": "a557bb79f05e48c2988a2a53112d4e10477697e337725924fe333c5a79e30c05",
+      "bytes": 40783,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/active-390.png",
+      "originalSha256": "49de7c90536b2743781f2e3ddfbfb540d4491f1f4014000c3e33ba89d21b25e5",
+      "publicSha256": "49de7c90536b2743781f2e3ddfbfb540d4491f1f4014000c3e33ba89d21b25e5",
+      "bytes": 35417,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/cap-1280.png",
+      "originalSha256": "0cbd96b207baafc9c0ba3f0bacd5a34f73e29c580d59c0dfd0720f44bd4077a4",
+      "publicSha256": "0cbd96b207baafc9c0ba3f0bacd5a34f73e29c580d59c0dfd0720f44bd4077a4",
+      "bytes": 40574,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/cap-390.png",
+      "originalSha256": "1439431fdf18698f93eb99b2bffd64837c023e6828bfc1192301b90eeb3b1c1f",
+      "publicSha256": "1439431fdf18698f93eb99b2bffd64837c023e6828bfc1192301b90eeb3b1c1f",
+      "bytes": 34078,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/check.cjs",
+      "originalSha256": "fba51f44ac9d91bca022af3078b4fdd15a83410424984c954362805365a65e46",
+      "publicSha256": "71313ac5e1a4c24355a92ebdb690d473d32952b408e90ca08053644133cd16ed",
+      "bytes": 8491,
+      "pathNormalizations": [
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 2
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r1",
+      "file": "r1/keyboard-focus-1280.png",
+      "originalSha256": "dcdf2df03d5c727be1a454cd2fe3e98084fd4012e95bdfb8ed4be4c0d38a92d7",
+      "publicSha256": "dcdf2df03d5c727be1a454cd2fe3e98084fd4012e95bdfb8ed4be4c0d38a92d7",
+      "bytes": 40062,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/keyboard-focus-390.png",
+      "originalSha256": "7e963f5bce4129827a6c188330dbd11f6a1503549fac786764f9bfa01ea99a11",
+      "publicSha256": "7e963f5bce4129827a6c188330dbd11f6a1503549fac786764f9bfa01ea99a11",
+      "bytes": 34170,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/overview-1280.png",
+      "originalSha256": "39248f96c0393fb1383ba64214eb2e61d80fb780d5d85e969ebab57248a10857",
+      "publicSha256": "39248f96c0393fb1383ba64214eb2e61d80fb780d5d85e969ebab57248a10857",
+      "bytes": 42115,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/overview-390.png",
+      "originalSha256": "db56db19047d024367a228ebb1cb01ebd27d19848a6b15cb3bdaf04d9eed37b3",
+      "publicSha256": "db56db19047d024367a228ebb1cb01ebd27d19848a6b15cb3bdaf04d9eed37b3",
+      "bytes": 36036,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/overview-undo-1280.png",
+      "originalSha256": "ee02770777f42e5e6d256fe1991b15b3592f6997c01de5e870fd737019efd2fe",
+      "publicSha256": "ee02770777f42e5e6d256fe1991b15b3592f6997c01de5e870fd737019efd2fe",
+      "bytes": 41681,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/overview-undo-390.png",
+      "originalSha256": "b0b1b12b94648981c7e0b02b6d2e4534fa330fe1cd10b9acd8eea3ff26677acd",
+      "publicSha256": "b0b1b12b94648981c7e0b02b6d2e4534fa330fe1cd10b9acd8eea3ff26677acd",
+      "bytes": 36630,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/recovery-1280.png",
+      "originalSha256": "7198af7bd53eab8ab69df9b6b3096a50a2dbf7c752098b7429776387792556e6",
+      "publicSha256": "7198af7bd53eab8ab69df9b6b3096a50a2dbf7c752098b7429776387792556e6",
+      "bytes": 40237,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/recovery-390.png",
+      "originalSha256": "8f350c4897f23221b81e5a7fe839ae66b883d9417091f3494882d2005c14f73d",
+      "publicSha256": "8f350c4897f23221b81e5a7fe839ae66b883d9417091f3494882d2005c14f73d",
+      "bytes": 35050,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/report.md",
+      "originalSha256": "093f54044f4ddd87cb5bd1b84f74f52f884a6b4c4373209a413c036e81ff9c79",
+      "publicSha256": "093f54044f4ddd87cb5bd1b84f74f52f884a6b4c4373209a413c036e81ff9c79",
+      "bytes": 11179,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/start-1280.png",
+      "originalSha256": "e8ee4306f41be70e4275f209d2ba4c9ca2a62e399aa685fb87da4c9e38753974",
+      "publicSha256": "e8ee4306f41be70e4275f209d2ba4c9ca2a62e399aa685fb87da4c9e38753974",
+      "bytes": 40728,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/start-390.png",
+      "originalSha256": "84be1d81f940fbbd3855fe3c26ac459c16ec11f9174c5bf5a038d065e8fc17fa",
+      "publicSha256": "84be1d81f940fbbd3855fe3c26ac459c16ec11f9174c5bf5a038d065e8fc17fa",
+      "bytes": 34930,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r1",
+      "file": "r1/input.md",
+      "originalSha256": "44b4c2e15b9717f3f33672e7e75efb9794c592f2d16075e979373def299f9b0e",
+      "publicSha256": "d07a29edeeea2d01117e7d3bfdbc8e93e0a55cffd2851efc2f46e2b13fa2493b",
+      "bytes": 2167,
+      "pathNormalizations": [
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Node executable \u2192 /NODE_EXECUTABLE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r1",
+      "file": "r1/input-provenance.json",
+      "originalSha256": "247337b6b1124903ff58aee85f7ab6a04a6eba3eeadd2b3b58ad18772d9b6708",
+      "publicSha256": "247337b6b1124903ff58aee85f7ab6a04a6eba3eeadd2b3b58ad18772d9b6708",
+      "bytes": 4780,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/action-receipts.json",
+      "originalSha256": "ce3e31b49a9e3b3454a334fc839bdf235055d1256366c6cc8426730be22a80e3",
+      "publicSha256": "ce3e31b49a9e3b3454a334fc839bdf235055d1256366c6cc8426730be22a80e3",
+      "bytes": 69772,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-delivered-1280.png",
+      "originalSha256": "5ab0f323a3facce3e216c46b3eb256b1df2f8185eb458c9a065157fb3c5c21cc",
+      "publicSha256": "5ab0f323a3facce3e216c46b3eb256b1df2f8185eb458c9a065157fb3c5c21cc",
+      "bytes": 30278,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-delivered-390.png",
+      "originalSha256": "002cb112f707c24352e411b2e71851c803d1df401dd442baa817165af7e9a285",
+      "publicSha256": "002cb112f707c24352e411b2e71851c803d1df401dd442baa817165af7e9a285",
+      "bytes": 24143,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-focus-1280.png",
+      "originalSha256": "62cb5a25156e0410e1ffcce756c3b6f452df29375a636d62d018ab5ebdea1c6c",
+      "publicSha256": "62cb5a25156e0410e1ffcce756c3b6f452df29375a636d62d018ab5ebdea1c6c",
+      "bytes": 30332,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-ready-1280.png",
+      "originalSha256": "6ba1d254408371b97c3c7d6f42d02ef6f092505712bc772e89640e0ce2e7eecd",
+      "publicSha256": "6ba1d254408371b97c3c7d6f42d02ef6f092505712bc772e89640e0ce2e7eecd",
+      "bytes": 29452,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-ready-390.png",
+      "originalSha256": "b64b4b99a4d7131d21a960f5c01cf8bb3564a73efa76a5fd198f3a5be1c9721b",
+      "publicSha256": "b64b4b99a4d7131d21a960f5c01cf8bb3564a73efa76a5fd198f3a5be1c9721b",
+      "bytes": 23935,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-reset-1280.png",
+      "originalSha256": "0536cf8a2d36629344bc061eefcbac7883425f83c5b25ee9edbcd0eb03fa6f03",
+      "publicSha256": "0536cf8a2d36629344bc061eefcbac7883425f83c5b25ee9edbcd0eb03fa6f03",
+      "bytes": 30336,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-reset-390.png",
+      "originalSha256": "fc7ae9dd86b674052ecbed7cc4415f35ad405bddc564fdc4dd76b5f164168bd3",
+      "publicSha256": "fc7ae9dd86b674052ecbed7cc4415f35ad405bddc564fdc4dd76b5f164168bd3",
+      "bytes": 24185,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-transition-1280.png",
+      "originalSha256": "c7c836222f75ff811c20804050ff2e4073a018580c87a52f082ca5ffcc599d26",
+      "publicSha256": "c7c836222f75ff811c20804050ff2e4073a018580c87a52f082ca5ffcc599d26",
+      "bytes": 30976,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/actual-transition-390.png",
+      "originalSha256": "0f28a721e2d9d2b91502ef95eeb50ee2669e68b58c1ebe3a617db6bd175f80c6",
+      "publicSha256": "0f28a721e2d9d2b91502ef95eeb50ee2669e68b58c1ebe3a617db6bd175f80c6",
+      "bytes": 24754,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/capture-and-contrast-receipts.json",
+      "originalSha256": "634a54077428125a0c9c61174acf7f2d7e836f345a9258922aeb25c0e89c56af",
+      "publicSha256": "634a54077428125a0c9c61174acf7f2d7e836f345a9258922aeb25c0e89c56af",
+      "bytes": 1229,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r2",
+      "file": "r2/evaluate.cjs",
+      "originalSha256": "c1242dc724e12b63d7ec54ccfea2467f7e12ed27a6d1a570aeb1ffef507601a1",
+      "publicSha256": "5ef85ebcbd96a0ce2a88076154350327fd718c7aec10be2a662266c5c5e425a1",
+      "bytes": 5951,
+      "pathNormalizations": [
+        {
+          "normalization": "packet parent directory \u2192 /EVALUATOR_PACKETS",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 2
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r2",
+      "file": "r2/evaluation.md",
+      "originalSha256": "1f4d2c6a959aa87e2f83d17e6c40ef64331ad661f61af6be9fc016aa770919c5",
+      "publicSha256": "b7a4b18f6b8ebd4857a583bcaa79fdfa6af65b2931da43cfda5212377a7ba5f1",
+      "bytes": 13473,
+      "pathNormalizations": [
+        {
+          "normalization": "evaluation output directory \u2192 .",
+          "occurrences": 12
+        }
+      ]
+    },
+    {
+      "case": "r2",
+      "file": "r2/input.md",
+      "originalSha256": "abc5e6680bba29f23b8378cdacc4635fd7478b896cb91010d3ea57b68add175b",
+      "publicSha256": "d4e18c01d89429ef8d453e6adb2ced3a0de31677be95546424727be9e9cad4c3",
+      "bytes": 2418,
+      "pathNormalizations": [
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Node executable \u2192 /NODE_EXECUTABLE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r2",
+      "file": "r2/input-provenance.json",
+      "originalSha256": "0b59c5e9974d42d8b41cf1d63d2f4003a946549f13ee68e14f74aeca35593659",
+      "publicSha256": "0b59c5e9974d42d8b41cf1d63d2f4003a946549f13ee68e14f74aeca35593659",
+      "bytes": 3186,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/action-receipts.json",
+      "originalSha256": "f1fe44d191fb91f69bbf709181d8505c2104eba499acbd3e9b27e27596efc601",
+      "publicSha256": "f1fe44d191fb91f69bbf709181d8505c2104eba499acbd3e9b27e27596efc601",
+      "bytes": 103336,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/additional-checks.cjs",
+      "originalSha256": "cbb8f3d5314c9ec569db6e0b55b3bfcbfc901087a69581ab91c3d5fa268fc972",
+      "publicSha256": "89f458336b79850aff155d422e24af3458a591bb91aaf006818935f98d037085",
+      "bytes": 3479,
+      "pathNormalizations": [
+        {
+          "normalization": "packet parent directory \u2192 /EVALUATOR_PACKETS",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r3",
+      "file": "r3/additional-checks.json",
+      "originalSha256": "b8bad1a7171bb4c62387468975ec672078ca3d45ad1fb2881f52f09b924a8694",
+      "publicSha256": "b8bad1a7171bb4c62387468975ec672078ca3d45ad1fb2881f52f09b924a8694",
+      "bytes": 4448,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/dialog-1280.png",
+      "originalSha256": "ea842fabda89643119e64da7fe4eeb10a686dcb98ace2e964a16e0dd739e65d6",
+      "publicSha256": "ea842fabda89643119e64da7fe4eeb10a686dcb98ace2e964a16e0dd739e65d6",
+      "bytes": 43409,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/dialog-390.png",
+      "originalSha256": "ea5f29b1ec87ad4f7d90ae0d22ea8033a283783c01d426f8b5d9cb9a4e99f065",
+      "publicSha256": "ea5f29b1ec87ad4f7d90ae0d22ea8033a283783c01d426f8b5d9cb9a4e99f065",
+      "bytes": 35421,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/evaluate.cjs",
+      "originalSha256": "c9315597988c8cc5b00f9cd7af61c522ea838a17ebc3d978f988abe768e1e8b5",
+      "publicSha256": "a8fbf18ebfc345fc01c2405cde31659d83a6a28aebcb97f6880ed9d3ffe2f77c",
+      "bytes": 7444,
+      "pathNormalizations": [
+        {
+          "normalization": "packet parent directory \u2192 /EVALUATOR_PACKETS",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 2
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r3",
+      "file": "r3/first-attempt-action-receipts.json",
+      "originalSha256": "6c024bcc5fb04bbcf7dc289e94cb8e0bc79b274c45f9fe82a1860fc42e29fdd1",
+      "publicSha256": "20a91fbe27bde777cc6e23201c0d8d0c7a8453662184cdabc07254d6273d55fb",
+      "bytes": 29450,
+      "pathNormalizations": [
+        {
+          "normalization": "evaluation output directory \u2192 .",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r3",
+      "file": "r3/first-attempt-dialog-1280.png",
+      "originalSha256": "f93e0e0d1e950acc34408b606715e37bbcaf6fe5008bd37201ea1f197f6dc4fa",
+      "publicSha256": "f93e0e0d1e950acc34408b606715e37bbcaf6fe5008bd37201ea1f197f6dc4fa",
+      "bytes": 39284,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/first-attempt-help-1280.png",
+      "originalSha256": "9b937528c5a178e75fda7ff0bee69549f76a9f5cbde8042794fafc2c61306a55",
+      "publicSha256": "9b937528c5a178e75fda7ff0bee69549f76a9f5cbde8042794fafc2c61306a55",
+      "bytes": 38536,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/first-attempt-selection-1280.png",
+      "originalSha256": "1f6abd72fde5de8ee8638b389f9259908f35847d97e8958cb506dd8809b1fed3",
+      "publicSha256": "1f6abd72fde5de8ee8638b389f9259908f35847d97e8958cb506dd8809b1fed3",
+      "bytes": 32036,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/first-attempt-start-1280.png",
+      "originalSha256": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+      "publicSha256": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+      "bytes": 31222,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/help-1280.png",
+      "originalSha256": "9b937528c5a178e75fda7ff0bee69549f76a9f5cbde8042794fafc2c61306a55",
+      "publicSha256": "9b937528c5a178e75fda7ff0bee69549f76a9f5cbde8042794fafc2c61306a55",
+      "bytes": 38536,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/help-390.png",
+      "originalSha256": "b38817586c16908a1e35bc5ee5f48791ff4b12e7af338c5c8aa9eb7899927a1f",
+      "publicSha256": "b38817586c16908a1e35bc5ee5f48791ff4b12e7af338c5c8aa9eb7899927a1f",
+      "bytes": 34729,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/report.md",
+      "originalSha256": "52b573548b19614f11631618ca8505ed39446dfde79e8cb86f6a1f35817000a5",
+      "publicSha256": "52b573548b19614f11631618ca8505ed39446dfde79e8cb86f6a1f35817000a5",
+      "bytes": 9135,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/return-1280.png",
+      "originalSha256": "cc255b032e0aa7dcd93a6c7f570b1eb389aa497977adf5250c5082f8d5e00d4a",
+      "publicSha256": "cc255b032e0aa7dcd93a6c7f570b1eb389aa497977adf5250c5082f8d5e00d4a",
+      "bytes": 31515,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/return-390.png",
+      "originalSha256": "a6c213c6da86a8f44960e646fcc6af1e71c13f225bc1bacb5bb71af0c1bf3836",
+      "publicSha256": "a6c213c6da86a8f44960e646fcc6af1e71c13f225bc1bacb5bb71af0c1bf3836",
+      "bytes": 27305,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/selection-1280.png",
+      "originalSha256": "cc255b032e0aa7dcd93a6c7f570b1eb389aa497977adf5250c5082f8d5e00d4a",
+      "publicSha256": "cc255b032e0aa7dcd93a6c7f570b1eb389aa497977adf5250c5082f8d5e00d4a",
+      "bytes": 31515,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/selection-390.png",
+      "originalSha256": "a6c213c6da86a8f44960e646fcc6af1e71c13f225bc1bacb5bb71af0c1bf3836",
+      "publicSha256": "a6c213c6da86a8f44960e646fcc6af1e71c13f225bc1bacb5bb71af0c1bf3836",
+      "bytes": 27305,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/start-1280.png",
+      "originalSha256": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+      "publicSha256": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+      "bytes": 31222,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/start-390.png",
+      "originalSha256": "89525e7ef9b24ee72128b2a1520b9b01b15aa8d96c2b8c1ddfcc461873e873f7",
+      "publicSha256": "89525e7ef9b24ee72128b2a1520b9b01b15aa8d96c2b8c1ddfcc461873e873f7",
+      "bytes": 27125,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/touch-dialog-390.png",
+      "originalSha256": "09098eb807554f487ef941e9541641502a5655d015fa013e8bbb82bf75b2968e",
+      "publicSha256": "09098eb807554f487ef941e9541641502a5655d015fa013e8bbb82bf75b2968e",
+      "bytes": 35682,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/touch-return-390.png",
+      "originalSha256": "3fff8ec2e96d5f8d6db9b93de36263a9f7ccc40c1bed615524fefbc0c43a3325",
+      "publicSha256": "3fff8ec2e96d5f8d6db9b93de36263a9f7ccc40c1bed615524fefbc0c43a3325",
+      "bytes": 34696,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r3",
+      "file": "r3/input.md",
+      "originalSha256": "69e76f7ca25e18a07ab026a261afa269e3f101b5dc41916146448f94f4f92096",
+      "publicSha256": "7f2207b0969754bb9ff3dd14e1147cdf8b9cc29319334dd0fdcbb648cdd63631",
+      "bytes": 2261,
+      "pathNormalizations": [
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Node executable \u2192 /NODE_EXECUTABLE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r3",
+      "file": "r3/input-provenance.json",
+      "originalSha256": "9736cba05e2ba76d841f95b8da89a31d79e60714214954211aecdacbb899d31f",
+      "publicSha256": "9736cba05e2ba76d841f95b8da89a31d79e60714214954211aecdacbb899d31f",
+      "bytes": 3668,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/action-receipts.json",
+      "originalSha256": "5dc0cfbc07284e39eebc90136677b4055b90fd5a660ba47d9f085ca2b1ecda0e",
+      "publicSha256": "5dc0cfbc07284e39eebc90136677b4055b90fd5a660ba47d9f085ca2b1ecda0e",
+      "bytes": 123878,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/capture-manifest.json",
+      "originalSha256": "f2546fdfb54f410488dd375d5729f939e8edb57fc9b4bb0222f62580f4ee32af",
+      "publicSha256": "f2546fdfb54f410488dd375d5729f939e8edb57fc9b4bb0222f62580f4ee32af",
+      "bytes": 1444,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/evaluate.cjs",
+      "originalSha256": "b2b7b81dd2651a328ca78e24a09d5aedb5612e44a450a1c47fa6683b00795c97",
+      "publicSha256": "6a52d1d53cb7a10a56b7768d3e6c91924dd0acb179f46d435fdfe8e1a383679a",
+      "bytes": 5997,
+      "pathNormalizations": [
+        {
+          "normalization": "packet parent directory \u2192 /EVALUATOR_PACKETS",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 2
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r4",
+      "file": "r4/evaluation.md",
+      "originalSha256": "b131f6729c06c646be3fa9b2a6e9d921def57f82e391baea0d93a43289641318",
+      "publicSha256": "b131f6729c06c646be3fa9b2a6e9d921def57f82e391baea0d93a43289641318",
+      "bytes": 10015,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/exploratory-action-receipts.json",
+      "originalSha256": "72a0b351ce1ad75447e5a909db6c0729f448fa576b105da513bc2825a003daf6",
+      "publicSha256": "72a0b351ce1ad75447e5a909db6c0729f448fa576b105da513bc2825a003daf6",
+      "bytes": 123656,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-a-1280-initial.png",
+      "originalSha256": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7",
+      "publicSha256": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7",
+      "bytes": 39374,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-a-1280-keyboard-focus.png",
+      "originalSha256": "69aa672ee78d0340d1ed451c9c07035a3415dbdc622b1d0d62a53537f463863a",
+      "publicSha256": "69aa672ee78d0340d1ed451c9c07035a3415dbdc622b1d0d62a53537f463863a",
+      "bytes": 39460,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-a-390-initial.png",
+      "originalSha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+      "publicSha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+      "bytes": 38133,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-a-390-keyboard-focus.png",
+      "originalSha256": "f7df899b97bcc9b30017596b817044e3e7bc4a9d5b349ca1ce38eeafa474ee3d",
+      "publicSha256": "f7df899b97bcc9b30017596b817044e3e7bc4a9d5b349ca1ce38eeafa474ee3d",
+      "bytes": 38204,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-a-390-ridge-click.png",
+      "originalSha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+      "publicSha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+      "bytes": 38133,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-b-1280-initial.png",
+      "originalSha256": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2",
+      "publicSha256": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2",
+      "bytes": 39265,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-b-1280-keyboard-focus.png",
+      "originalSha256": "9e3db1d78824920501baa3b674a60de2f43f8c3cfc536d1132975466eb0a31d2",
+      "publicSha256": "9e3db1d78824920501baa3b674a60de2f43f8c3cfc536d1132975466eb0a31d2",
+      "bytes": 39344,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-b-390-initial.png",
+      "originalSha256": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c",
+      "publicSha256": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c",
+      "bytes": 25436,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-b-390-keyboard-focus.png",
+      "originalSha256": "12db2836486ff3c9be2c352774d44dc33422519e8e59b24834f18aa86a4145a6",
+      "publicSha256": "12db2836486ff3c9be2c352774d44dc33422519e8e59b24834f18aa86a4145a6",
+      "bytes": 25508,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/r4-b-390-ridge-click.png",
+      "originalSha256": "2a1268d34f9a66ee810ae0ebcffcb380f28e0bbe843e87a986e9646ac6372b3d",
+      "publicSha256": "2a1268d34f9a66ee810ae0ebcffcb380f28e0bbe843e87a986e9646ac6372b3d",
+      "bytes": 11150,
+      "pathNormalizations": []
+    },
+    {
+      "case": "r4",
+      "file": "r4/input.md",
+      "originalSha256": "9a24147acb5758628fc701e5418ffdac7d59081b7c9277d4d2694bb505cbc71a",
+      "publicSha256": "61f87eb11d96fe4c284b6a590b9057c1d2a3ece2da24dd9d2777f0ba4a4e2230",
+      "bytes": 2353,
+      "pathNormalizations": [
+        {
+          "normalization": "Playwright directory \u2192 /PLAYWRIGHT_PACKAGE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Node executable \u2192 /NODE_EXECUTABLE",
+          "occurrences": 1
+        },
+        {
+          "normalization": "Chromium-compatible executable \u2192 /CHROMIUM_EXECUTABLE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "case": "r4",
+      "file": "r4/input-provenance.json",
+      "originalSha256": "2ff9e0b05ae79dc75caec4ce3315fbf90020fc510fbd959d6edb38d426abc633",
+      "publicSha256": "2ff9e0b05ae79dc75caec4ce3315fbf90020fc510fbd959d6edb38d426abc633",
+      "bytes": 2916,
+      "pathNormalizations": []
+    }
+  ]
+}

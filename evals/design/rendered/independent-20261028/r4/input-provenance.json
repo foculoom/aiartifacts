@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "createdAt": "2026-10-29T03:26:31.948Z",
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "browser": "156.0.8078.48",
+  "captures": [
+    {
+      "file": "r4-a-1280.png",
+      "sha256": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7",
+      "width": 1280,
+      "height": 900,
+      "artifact": "N4",
+      "documentWidth": 1280,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r4-b-1280.png",
+      "sha256": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2",
+      "width": 1280,
+      "height": 900,
+      "artifact": "N5",
+      "documentWidth": 1280,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r4-a-390.png",
+      "sha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+      "width": 390,
+      "height": 900,
+      "artifact": "N4",
+      "documentWidth": 390,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r4-b-390.png",
+      "sha256": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c",
+      "width": 390,
+      "height": 900,
+      "artifact": "N5",
+      "documentWidth": 944,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    }
+  ],
+  "inputHashes": {
+    "evidence/r4-b-390.png": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c",
+    "evidence/r4-a-390.png": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+    "evidence/r4-b-1280.png": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2",
+    "evidence/r4-a-1280.png": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7",
+    "fixtures/r4-b.html": "bcbb008aa8e50b06752bbaa570bcd34846f3d6589bf2eecc6d99bd55701c673c",
+    "fixtures/fixture.js": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+    "fixtures/style.css": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+    "fixtures/r4-a.html": "02c304466049ad0608c74792e74911bf6a202c96d1d11ad712210faaf5ab201e",
+    "skills/experience-review/SKILL.md": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+    "skills/experience-review/references/operational-status.md": "04a153632eab5a1904751971932a73a70e74effcbcc31e462a77f8f7e1da0324",
+    "skills/experience-review/references/interactive-experiences.md": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+    "skills/experience-review/references/production-acceptance.md": "c0fdf56d5287eed4468de8c1c1ce3d9c8adab12f5cd06caa2d36e4cc7403fb9d",
+    "skills/experience-review/references/product-pages.md": "b72130fe243c2b638385a19f501db13a9a55cc43d1c9d52d50fdd8f9894327ae",
+    "skills/experience-review/references/publisher-sites.md": "cc6be756229f7fefe9e2796c134b3d1ca07612807a05369dfbb62ca0c36d3736"
+  }
+}

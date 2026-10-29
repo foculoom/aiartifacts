@@ -1,5 +1,39 @@
 # Maintainer handoff
 
+## Production-quality source candidate — October 28, 2026
+
+The [initial toolkit quality audit](docs/quality-audit-20261028.md) records the
+current source baseline, actual checks, new rendered inputs and remaining
+acceptance. This focused candidate extends the existing Design and Release
+skills with a brief-relative production target, reviewer/evidence scope and an
+explicit bounded decision. It introduces no new art plugin or universal style.
+
+Four original [rendered cases](evals/design/rendered/README.md) now have a real
+local browser receipt: 35 fixture assertions and 22 captures at 1280×900 and
+390×900, completed October 28 at 20:26 PDT. The captures and manifest travel with
+the repository; only synthetic, original interfaces appear in them. The
+assertions verify the test fixtures, not design quality. Four fresh independent
+agent evaluations subsequently ran at source
+`7b6bf416173666d20b35def9c1200e0054122356` on October 28, 20:31–20:43 PDT.
+All four pass the held-out behavior criteria; the
+[complete public-safe record](evals/design/rendered/independent-20261028/README.md)
+retains full answers, input/skill hashes, new action receipts and captures,
+unsuccessful exploratory checks and scoped limits. R3's native-select keyboard
+gap remains unverified; no physical-device or universal quality claim follows.
+The source-review agent reported no blockers at that evaluated head. This
+evidence/contributor-instruction follow-up still requires final exact-head
+review and checks. Evaluated skills, references, prompts and fixtures are
+unchanged. The audit gives reproduction commands and the next action.
+
+Public acquisition: **v0.5.0 remains available**, with its October 24 publication
+and latest-release/archive readback reverified October 28. New Design 0.1.1,
+Release 0.1.1, Engineering 0.1.2 and Performance 0.1.0 remain unreleased source;
+this candidate changes no tag, package, installed plugin or consumer pin.
+Publication of a new toolkit package is held pending required acceptance and
+owner release authorization. Reviewed source adoption is a deliberate separate
+decision and must record the exact reviewed commit. Preserve earlier achieved
+releases and their evidence while closing the current gaps.
+
 ## Distribution readiness and conditional forecast — October 27, 2026
 
 AI Artifacts is a supporting toolkit; paid implementation or support is a

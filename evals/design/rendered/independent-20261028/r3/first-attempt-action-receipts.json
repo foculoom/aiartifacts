@@ -1,0 +1,855 @@
+{
+  "evaluation": "agent evaluation",
+  "startedAt": "2026-10-29T03:37:18.779Z",
+  "model": "Exact model identifier not exposed",
+  "tools": [
+    "functions.exec",
+    "exec_command",
+    "Playwright",
+    "headless Chrome"
+  ],
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "runs": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "inputEnvironment": "Headless desktop browser with viewport emulation; not a physical device",
+      "actions": [
+        {
+          "action": "Direct entry with no selection",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "BODY",
+            "status": "",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Pointer click Help",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "help",
+            "status": "Choose a room, then review it. You can return without losing your choice.",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(228, 238, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Keyboard Tab from fresh entry reaches room selector",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "room",
+            "status": "",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Keyboard ArrowDown chooses Window room",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "room",
+            "status": "",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Keyboard Tab reaches enabled review button",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "help",
+            "status": "",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Keyboard Enter on review opens dialog",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "help",
+            "status": "Choose a room, then review it. You can return without losing your choice.",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Tab while dialog is open",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "BODY",
+            "status": "Choose a room, then review it. You can return without losing your choice.",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Second Tab while dialog is open",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "room",
+            "status": "Choose a room, then review it. You can return without losing your choice.",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        },
+        {
+          "action": "Shift+Tab while dialog is open",
+          "state": {
+            "artifact": "L3",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "selection": "",
+            "reserveDisabled": true,
+            "dialogOpen": false,
+            "dialogSelection": "",
+            "focus": "help",
+            "status": "Choose a room, then review it. You can return without losing your choice.",
+            "body": {
+              "x": 0,
+              "y": 36,
+              "width": 1280,
+              "height": 516.296875,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(243, 240, 232)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "room": {
+              "x": 152,
+              "y": 263.296875,
+              "width": 500,
+              "height": 51,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "reserve": {
+              "x": 152,
+              "y": 326.296875,
+              "width": 500,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "help": {
+              "x": 152,
+              "y": 399.296875,
+              "width": 77.25,
+              "height": 55,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "cancel": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(32, 56, 50)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialog": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "color": "rgb(0, 0, 0)",
+              "background": "rgb(255, 255, 255)",
+              "font": "18px / 27px system-ui, sans-serif",
+              "outline": "rgb(0, 0, 0) none 3px",
+              "outlineOffset": "0px"
+            },
+            "dialogName": "dialog-title",
+            "roomLabel": "Reading room",
+            "motion": "none"
+          }
+        }
+      ],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/r3.html"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/style.css"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/fixture.js"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/r3.html"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/style.css"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:59354/fixture.js"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#cancel')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"cancel\">Back to selection</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at main (./evaluate.cjs:72:37)"
+  ],
+  "sourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "artifact": "L3",
+  "verifiedHashes": {
+    "fixtures/r3.html": {
+      "sha256": "3d61d59e4591543e3f9517c32790f5b9164813a1eade7ea07e3040ac165fda49",
+      "matchesProvenance": true
+    },
+    "fixtures/style.css": {
+      "sha256": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+      "matchesProvenance": true
+    },
+    "fixtures/fixture.js": {
+      "sha256": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+      "matchesProvenance": true
+    },
+    "skills/experience-review/SKILL.md": {
+      "sha256": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+      "matchesProvenance": true
+    },
+    "skills/experience-review/references/interactive-experiences.md": {
+      "sha256": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+      "matchesProvenance": true
+    }
+  },
+  "url": "http://127.0.0.1:59354/r3.html",
+  "browser": "156.0.8078.48",
+  "finishedAt": "2026-10-29T03:37:51.016Z"
+}

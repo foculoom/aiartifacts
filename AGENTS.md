@@ -44,6 +44,21 @@ Use only public or cleared evidence here; private project decisions, reports and
 receipts stay in their owning project. Changing these instructions does not
 release a plugin, alter a package version or update a consuming project's pin.
 
+## Toolkit production-quality acceptance
+
+For material guidance changes, state the intended user task and the scope that
+would justify acceptance. Extend existing skills and use synthetic or cleared
+evaluations. When the change concerns rendered experience judgment, inspect
+actual renders and relevant interactions; a text scenario or structural pass
+alone cannot establish that behavior. Give independent evaluators input-only
+cases and retain complete answers, exact input/skill identities, tools, evidence
+and limits before assessing against held-out criteria. Use the existing
+[production-acceptance method](plugins/design/skills/experience-review/references/production-acceptance.md)
+and [toolkit audit](docs/quality-audit-20261028.md) proportionally; do not impose
+visual or game review on unrelated changes. Record source review, behavior
+acceptance and package-release authorization separately. Hold unresolved
+required release gates without erasing previous public releases.
+
 ## Engineering incident learning
 
 For a material engineering failure or near miss, use the

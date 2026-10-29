@@ -21,3 +21,24 @@ Structural validation checks packaging, not these judgments. Keep private custom
 The Design export checker has its own synthetic unit suite:
 `python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q`.
 Passing it does not execute D6/D7 as model-behavior studies or decode any real QR.
+
+## Rendered production-experience cases
+
+[R1–R4](rendered/README.md) add original, executable local interfaces for stateful
+actions, brief-relative visual judgment, preserving a plain working form, and
+changed-artifact acceptance. Their optional runner produces actual desktop and
+narrow captures, interaction checks and exact hashes. Fixture-integrity checks
+are separate from a fresh evaluator's judgment; the evaluator receives only its
+case input, relevant skills and raw evidence. See the held-out
+[assessment criteria](rendered/assessment.md) only after the answer is fixed.
+
+The [initial toolkit quality audit](../../docs/quality-audit-20261028.md) records
+what has run, what remains unverified and the publication disposition. Earlier
+D1–D10 records retain their original scope; these fixtures do not retroactively
+turn text-only evaluations into rendered studies.
+
+The [October 28 independent record](rendered/independent-20261028/README.md)
+retains four fresh input-only evaluations at `7b6bf416173666d20b35def9c1200e0054122356`.
+All four meet the held-out behavior criteria with actual rendered/interaction
+evidence. This is bounded Design behavior coverage, separate from source-PR
+review, native/device checks and package-release authorization.

@@ -2,6 +2,23 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — scoped production-experience acceptance
+
+- Extend existing Design 0.1.1 source guidance with a brief-relative visual
+  target and a bounded acceptance record for actual renders, reviewer scope,
+  evidence, deviations and unresolved checks. Preserve intentional minimalism
+  and product-specific game rules; technical validity is not artistic approval.
+- Add four original local rendered fixtures and an optional interaction/capture
+  runner. Keep fixture assertions, independent model judgment and PR review
+  separate; the dated audit records actual coverage.
+- Retain four fresh independent rendered evaluations, complete answers and
+  action evidence at source `7b6bf416173666d20b35def9c1200e0054122356`.
+  All four meet their held-out behavior criteria; disclosed keyboard/device
+  limits remain, and no publication or universal quality claim follows.
+- Extend Release 0.1.1 source guidance to honor an owning project's required
+  experience decision without inventing a gate for unrelated work. Existing
+  packages, tags, installs and consumer pins remain unchanged.
+
 ## Unreleased — engineering retrospective source guidance
 
 - Add a proportional incident template and fictional behavior cases for

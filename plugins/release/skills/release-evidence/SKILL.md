@@ -7,6 +7,13 @@ description: Prepare and verify an authorized static-site release using reposito
 
 Treat source merge, artifact preparation, upload, and live verification as separate states. Read the owning repository's deployment rules and current release evidence first. Record source commit, reviewed artifact, intended account/project, audience and authorization. A skill does not supply deployment permission.
 
+If the owning project requires production-experience acceptance, read its
+decision, reviewer scope, evidence and accepted deviations for this exact payload.
+Hold publication when a required decision is missing, unverified or requests
+rework. Engineering checks, asset hashes and a narrow "no findings" review do
+not replace that decision. Do not infer a portfolio policy, add a new gate to an
+unrelated small task, or treat this static-release workflow as native certification.
+
 ## Reuse existing access and tooling
 
 Prefer the user's specified browser and existing signed-in session when it can complete the release. A logged-out CLI is not evidence that the service is inaccessible. Do not create broad OAuth grants or credentials merely to avoid an available dashboard. Do not extract browser cookies or tokens. If an action is blocked, identify the exact blocker; do not repeatedly ask for unrelated authentication.

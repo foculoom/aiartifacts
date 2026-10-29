@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "createdAt": "2026-10-29T03:26:31.948Z",
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "browser": "156.0.8078.48",
+  "captures": [
+    {
+      "file": "r3-start-1280.png",
+      "sha256": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+      "width": 1280,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 1280,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r3-dialog-1280.png",
+      "sha256": "0a54aa11f385e171fcf5f6c2ae5e1a2572e5839d54e2eb798d1ee7324f6760ef",
+      "width": 1280,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 1280,
+      "status": "",
+      "focus": "cancel",
+      "dialogOpen": true
+    },
+    {
+      "file": "r3-return-1280.png",
+      "sha256": "435951bb2a1cf11dfc4d9fd3ddc74b09d9d4f0a2fece7a5c0e270967ecd76e15",
+      "width": 1280,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 1280,
+      "status": "",
+      "focus": "reserve",
+      "dialogOpen": false
+    },
+    {
+      "file": "r3-start-390.png",
+      "sha256": "89525e7ef9b24ee72128b2a1520b9b01b15aa8d96c2b8c1ddfcc461873e873f7",
+      "width": 390,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 390,
+      "status": "",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r3-dialog-390.png",
+      "sha256": "b1298cac2ae21e2fb43cc32da26956f551d521799e822d2726c70c96267d679f",
+      "width": 390,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 390,
+      "status": "",
+      "focus": "cancel",
+      "dialogOpen": true
+    },
+    {
+      "file": "r3-return-390.png",
+      "sha256": "5c986541c2efa406dbf2949058e2c39e2495e3e4592abbc43abae0cf57762844",
+      "width": 390,
+      "height": 900,
+      "artifact": "L3",
+      "documentWidth": 390,
+      "status": "",
+      "focus": "reserve",
+      "dialogOpen": false
+    }
+  ],
+  "inputHashes": {
+    "evidence/r3-start-390.png": "89525e7ef9b24ee72128b2a1520b9b01b15aa8d96c2b8c1ddfcc461873e873f7",
+    "evidence/r3-start-1280.png": "b89927c3b0b4902b0dc1f7606aa07a3b92bbd382510ba8c496500222b635c77a",
+    "evidence/r3-dialog-390.png": "b1298cac2ae21e2fb43cc32da26956f551d521799e822d2726c70c96267d679f",
+    "evidence/r3-return-1280.png": "435951bb2a1cf11dfc4d9fd3ddc74b09d9d4f0a2fece7a5c0e270967ecd76e15",
+    "evidence/r3-dialog-1280.png": "0a54aa11f385e171fcf5f6c2ae5e1a2572e5839d54e2eb798d1ee7324f6760ef",
+    "evidence/r3-return-390.png": "5c986541c2efa406dbf2949058e2c39e2495e3e4592abbc43abae0cf57762844",
+    "fixtures/r3.html": "3d61d59e4591543e3f9517c32790f5b9164813a1eade7ea07e3040ac165fda49",
+    "fixtures/fixture.js": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+    "fixtures/style.css": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+    "skills/experience-review/SKILL.md": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+    "skills/experience-review/references/operational-status.md": "04a153632eab5a1904751971932a73a70e74effcbcc31e462a77f8f7e1da0324",
+    "skills/experience-review/references/interactive-experiences.md": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+    "skills/experience-review/references/production-acceptance.md": "c0fdf56d5287eed4468de8c1c1ce3d9c8adab12f5cd06caa2d36e4cc7403fb9d",
+    "skills/experience-review/references/product-pages.md": "b72130fe243c2b638385a19f501db13a9a55cc43d1c9d52d50fdd8f9894327ae",
+    "skills/experience-review/references/publisher-sites.md": "cc6be756229f7fefe9e2796c134b3d1ca07612807a05369dfbb62ca0c36d3736"
+  }
+}

@@ -1,0 +1,3719 @@
+{
+  "agentEvaluation": true,
+  "reviewer": "Codex agent /root/quality_eval_r4",
+  "model": "unknown (exact model identifier not exposed)",
+  "startedAt": "2026-10-29T03:42:24.208Z",
+  "sourceCommitReported": "7b6bf416173666d20b35def9c1200e0054122356",
+  "provenanceCreatedAt": "2026-10-29T03:26:31.948Z",
+  "hashes": {
+    "INSTRUCTIONS.md": "9a24147acb5758628fc701e5418ffdac7d59081b7c9277d4d2694bb505cbc71a",
+    "provenance.json": "2ff9e0b05ae79dc75caec4ce3315fbf90020fc510fbd959d6edb38d426abc633",
+    "skills/experience-review/SKILL.md": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+    "skills/experience-review/references/production-acceptance.md": "c0fdf56d5287eed4468de8c1c1ce3d9c8adab12f5cd06caa2d36e4cc7403fb9d",
+    "skills/experience-review/references/interactive-experiences.md": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+    "fixtures/r4-a.html": "02c304466049ad0608c74792e74911bf6a202c96d1d11ad712210faaf5ab201e",
+    "fixtures/r4-b.html": "bcbb008aa8e50b06752bbaa570bcd34846f3d6589bf2eecc6d99bd55701c673c",
+    "fixtures/style.css": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+    "fixtures/fixture.js": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+    "evidence/r4-a-1280.png": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7",
+    "evidence/r4-b-1280.png": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2",
+    "evidence/r4-a-390.png": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a",
+    "evidence/r4-b-390.png": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c"
+  },
+  "provenanceHashMatches": {
+    "skills/experience-review/SKILL.md": true,
+    "skills/experience-review/references/production-acceptance.md": true,
+    "skills/experience-review/references/interactive-experiences.md": true,
+    "fixtures/r4-a.html": true,
+    "fixtures/r4-b.html": true,
+    "fixtures/style.css": true,
+    "fixtures/fixture.js": true,
+    "evidence/r4-a-1280.png": true,
+    "evidence/r4-b-1280.png": true,
+    "evidence/r4-a-390.png": true,
+    "evidence/r4-b-390.png": true
+  },
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "results": [
+    {
+      "variant": "a",
+      "artifact": "N4",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "browser automation mouse and keyboard, no physical device",
+      "errors": [],
+      "actions": [
+        {
+          "type": "mouse click",
+          "target": "Coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#woods",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#ridge",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Coast",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Woods",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Ridge",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#woods",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#ridge",
+            "artifact": "N4",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        }
+      ],
+      "initial": {
+        "url": "http://127.0.0.1:59755/r4-a.html",
+        "artifact": "N4",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "documentWidth": 1280,
+        "documentHeight": 900,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "focus": {
+          "tag": "BODY",
+          "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+          "href": null,
+          "outline": "rgb(32, 56, 50) none 3px",
+          "outlineOffset": "0px"
+        },
+        "heading": {
+          "font": "600 42px / 48.3px Georgia, serif",
+          "color": "rgb(32, 56, 50)"
+        },
+        "bodyFont": "18px / 27px system-ui, sans-serif",
+        "cards": [
+          {
+            "id": "coast",
+            "text": "CoastSalt air, pale stones and a clear horizon.",
+            "rect": {
+              "x": 152,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 464,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "woods",
+            "text": "WoodsA shaded path through the trees.",
+            "rect": {
+              "x": 484,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 796,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "ridge",
+            "text": "RidgeThe narrow path opens onto a long view.",
+            "rect": {
+              "x": 816,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 1128,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          }
+        ]
+      }
+    },
+    {
+      "variant": "a",
+      "artifact": "N4",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "input": "browser automation mouse and keyboard, no physical device",
+      "errors": [],
+      "actions": [
+        {
+          "type": "mouse click",
+          "target": "Coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#woods",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#ridge",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Coast",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Woods",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Ridge",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#coast",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#woods",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-a.html#ridge",
+            "artifact": "N4",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 390,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 24,
+                  "y": 439.90625,
+                  "width": 342,
+                  "height": 170.8125,
+                  "right": 366,
+                  "bottom": 610.71875
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 24,
+                  "y": 630.71875,
+                  "width": 342,
+                  "height": 197.8125,
+                  "right": 366,
+                  "bottom": 828.53125
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        }
+      ],
+      "initial": {
+        "url": "http://127.0.0.1:59755/r4-a.html",
+        "artifact": "N4",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "documentWidth": 390,
+        "documentHeight": 900,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "focus": {
+          "tag": "BODY",
+          "text": "LOCAL FIXTURE · N4Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+          "href": null,
+          "outline": "rgb(32, 56, 50) none 3px",
+          "outlineOffset": "0px"
+        },
+        "heading": {
+          "font": "600 34px / 39.1px Georgia, serif",
+          "color": "rgb(32, 56, 50)"
+        },
+        "bodyFont": "18px / 27px system-ui, sans-serif",
+        "cards": [
+          {
+            "id": "coast",
+            "text": "CoastSalt air, pale stones and a clear horizon.",
+            "rect": {
+              "x": 24,
+              "y": 222.09375,
+              "width": 342,
+              "height": 197.8125,
+              "right": 366,
+              "bottom": 419.90625
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "woods",
+            "text": "WoodsA shaded path through the trees.",
+            "rect": {
+              "x": 24,
+              "y": 439.90625,
+              "width": 342,
+              "height": 170.8125,
+              "right": 366,
+              "bottom": 610.71875
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "ridge",
+            "text": "RidgeThe narrow path opens onto a long view.",
+            "rect": {
+              "x": 24,
+              "y": 630.71875,
+              "width": 342,
+              "height": 197.8125,
+              "right": 366,
+              "bottom": 828.53125
+            },
+            "fullyWithinViewport": true
+          }
+        ]
+      }
+    },
+    {
+      "variant": "b",
+      "artifact": "N5",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "browser automation mouse and keyboard, no physical device",
+      "errors": [],
+      "actions": [
+        {
+          "type": "mouse click",
+          "target": "Coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#woods",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#ridge",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Coast",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Woods",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Ridge",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#woods",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#ridge",
+            "artifact": "N5",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "documentWidth": 1280,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 42px / 48.3px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 152,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 464,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 484,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 796,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 816,
+                  "y": 275.296875,
+                  "width": 312,
+                  "height": 197.8125,
+                  "right": 1128,
+                  "bottom": 473.109375
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        }
+      ],
+      "initial": {
+        "url": "http://127.0.0.1:59755/r4-b.html",
+        "artifact": "N5",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "documentWidth": 1280,
+        "documentHeight": 900,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "focus": {
+          "tag": "BODY",
+          "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+          "href": null,
+          "outline": "rgb(32, 56, 50) none 3px",
+          "outlineOffset": "0px"
+        },
+        "heading": {
+          "font": "600 42px / 48.3px Georgia, serif",
+          "color": "rgb(32, 56, 50)"
+        },
+        "bodyFont": "18px / 27px system-ui, sans-serif",
+        "cards": [
+          {
+            "id": "coast",
+            "text": "CoastSalt air, pale stones and a clear horizon.",
+            "rect": {
+              "x": 152,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 464,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "woods",
+            "text": "WoodsA shaded path through the trees.",
+            "rect": {
+              "x": 484,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 796,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "ridge",
+            "text": "RidgeThe narrow path opens onto a long view.",
+            "rect": {
+              "x": 816,
+              "y": 275.296875,
+              "width": 312,
+              "height": 197.8125,
+              "right": 1128,
+              "bottom": 473.109375
+            },
+            "fullyWithinViewport": true
+          }
+        ]
+      }
+    },
+    {
+      "variant": "b",
+      "artifact": "N5",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "input": "browser automation mouse and keyboard, no physical device",
+      "errors": [],
+      "actions": [
+        {
+          "type": "mouse click",
+          "target": "Coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#woods",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 241,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": -217,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 76.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 96.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 389.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 409.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 703,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "mouse click",
+          "target": "Ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#ridge",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 554,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": -530,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": -236.671875,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": -216.671875,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 76.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 96.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 390,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Coast",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Woods",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "keyboard Tab then Enter",
+          "target": "Ridge",
+          "before": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "A",
+              "text": "Coast",
+              "href": "#coast",
+              "outline": "rgb(160, 80, 18) solid 3px",
+              "outlineOffset": "4px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          },
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "coast",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#coast",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 0,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": 24,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 317.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 337.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 630.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 650.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 944,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "woods",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#woods",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 241,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": -217,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 76.328125,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": 96.328125,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 389.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 409.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 703,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "direct fragment entry",
+          "target": "ridge",
+          "state": {
+            "url": "http://127.0.0.1:59755/r4-b.html#ridge",
+            "artifact": "N5",
+            "viewport": {
+              "width": 390,
+              "height": 900
+            },
+            "documentWidth": 944,
+            "documentHeight": 900,
+            "scroll": {
+              "x": 554,
+              "y": 0
+            },
+            "focus": {
+              "tag": "BODY",
+              "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+              "href": null,
+              "outline": "rgb(32, 56, 50) none 3px",
+              "outlineOffset": "0px"
+            },
+            "heading": {
+              "font": "600 34px / 39.1px Georgia, serif",
+              "color": "rgb(32, 56, 50)"
+            },
+            "bodyFont": "18px / 27px system-ui, sans-serif",
+            "cards": [
+              {
+                "id": "coast",
+                "text": "CoastSalt air, pale stones and a clear horizon.",
+                "rect": {
+                  "x": -530,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": -236.671875,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "woods",
+                "text": "WoodsA shaded path through the trees.",
+                "rect": {
+                  "x": -216.671875,
+                  "y": 222.09375,
+                  "width": 293.328125,
+                  "height": 197.8125,
+                  "right": 76.65625,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": false
+              },
+              {
+                "id": "ridge",
+                "text": "RidgeThe narrow path opens onto a long view.",
+                "rect": {
+                  "x": 96.65625,
+                  "y": 222.09375,
+                  "width": 293.34375,
+                  "height": 197.8125,
+                  "right": 390,
+                  "bottom": 419.90625
+                },
+                "fullyWithinViewport": true
+              }
+            ]
+          }
+        }
+      ],
+      "initial": {
+        "url": "http://127.0.0.1:59755/r4-b.html",
+        "artifact": "N5",
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "documentWidth": 944,
+        "documentHeight": 900,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "focus": {
+          "tag": "BODY",
+          "text": "LOCAL FIXTURE · N5Field NotesBrowse three saved trail notes.CoastWoodsRidgeCoastSalt air, pale stones and a clear horizon.WoodsA shaded path through the trees.RidgeThe narrow path opens onto a long view.\n",
+          "href": null,
+          "outline": "rgb(32, 56, 50) none 3px",
+          "outlineOffset": "0px"
+        },
+        "heading": {
+          "font": "600 34px / 39.1px Georgia, serif",
+          "color": "rgb(32, 56, 50)"
+        },
+        "bodyFont": "18px / 27px system-ui, sans-serif",
+        "cards": [
+          {
+            "id": "coast",
+            "text": "CoastSalt air, pale stones and a clear horizon.",
+            "rect": {
+              "x": 24,
+              "y": 222.09375,
+              "width": 293.328125,
+              "height": 197.8125,
+              "right": 317.328125,
+              "bottom": 419.90625
+            },
+            "fullyWithinViewport": true
+          },
+          {
+            "id": "woods",
+            "text": "WoodsA shaded path through the trees.",
+            "rect": {
+              "x": 337.328125,
+              "y": 222.09375,
+              "width": 293.328125,
+              "height": 197.8125,
+              "right": 630.65625,
+              "bottom": 419.90625
+            },
+            "fullyWithinViewport": false
+          },
+          {
+            "id": "ridge",
+            "text": "RidgeThe narrow path opens onto a long view.",
+            "rect": {
+              "x": 650.65625,
+              "y": 222.09375,
+              "width": 293.34375,
+              "height": 197.8125,
+              "right": 944,
+              "bottom": 419.90625
+            },
+            "fullyWithinViewport": false
+          }
+        ]
+      }
+    }
+  ],
+  "blockedRequests": [],
+  "browser": "156.0.8078.48",
+  "completedAt": "2026-10-29T03:42:40.643Z"
+}
