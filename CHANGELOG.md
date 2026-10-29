@@ -2,6 +2,19 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — evidence and recovery safeguards
+
+- Extend reporting, retrospective and Release source guidance to distinguish
+  failed retrieval from product state, bind claims to dated candidate evidence,
+  reconcile ambiguous operations before retrying, and stop causal analysis where
+  evidence stops. Continue independent authorized work while a gate is blocked.
+- Add seven fictional input cases with separate evaluator criteria for source
+  navigation, partial records, inaccessible providers, completed timed-out
+  actions, runtime failures, contradictory diagnostics and completed releases.
+- Keep instruction comprehension, automatic startup loading, source adoption
+  and public release as separate acceptance claims. No package, tag or consumer
+  pin changes.
+
 ## Unreleased — scoped production-experience acceptance
 
 - Extend existing Design 0.1.1 source guidance with a brief-relative visual

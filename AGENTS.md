@@ -39,6 +39,25 @@ milestones as well as remaining work, evidence dates and limits, and the next
 action. Keep this proportional to the request; it adds no separate ceremony to
 routine coding tasks.
 
+Apply the same evidence check to intermediate updates. Bind a material claim to
+its source, observation date, exact target or candidate, environment and stage.
+Keep retrieval outcomes separate from product outcomes: a failed lookup does
+not establish an outage, missing capability, zero activity or a completed
+cancellation. Use source indexes or search to discover paths; reread relevant
+truncated sections before interpreting them. Distinguish failed, untested,
+indeterminate, access blocked, pending review and not applicable.
+
+When a cause remains uncertain, preserve the symptom, competing explanations
+and next discriminating check. Do not turn a plausible explanation into a
+verified cause to complete a report. After an ambiguous mutating operation,
+reconcile its identity and resulting state before retrying; continue independent
+authorized work while the affected outcome remains unresolved.
+
+Retain unresolved consequential operations across restarts and account changes
+under the owning contract. A timer, empty history or restarted process does not
+establish cancellation. Use the [synthetic evidence-recovery cases](evals/engineering/evidence-recovery/README.md)
+to evaluate this guidance with expected judgments withheld.
+
 These are repository reporting instructions, not installed skill behavior.
 Use only public or cleared evidence here; private project decisions, reports and
 receipts stay in their owning project. Changing these instructions does not

@@ -5,6 +5,10 @@ without the observable criteria below; record the template revision, answer,
 and pass/partial/fail evidence. They test judgment, not a real provider or device.
 Do not perform uploads, alter releases, or access customer data.
 
+The separate [evidence-recovery cases](evidence-recovery/README.md) exercise
+lookup failures, ambiguous mutations and causal uncertainty without requiring
+an incident report for every ordinary failure.
+
 ## Prompts
 
 1. A fictional drawing app's ZIP fails notarization because an embedded
@@ -38,8 +42,10 @@ Do not perform uploads, alter releases, or access customer data.
   while customer impact needs its own check; require an inside-out signing audit
   and pre-submission launch; keep untested distribution paths open.
 - Case 2: record the physical reachability escape and missing device coverage;
-  preserve browser checks as bounded evidence; require physical-device
-  acceptance before future submission; treat border and icon placement as
+  preserve browser checks as bounded evidence; require the owning project's
+  accepted runtime/device coverage of the escaped behavior before future
+  submission, without inventing a universal physical-hardware gate; treat border
+  and icon placement as
   owner-directed iteration unless separate defect evidence exists.
 - Case 3: keep the isolated typo in the ordinary PR record; trigger a
   proportionate retrospective for repeated costly packaging failure; close a

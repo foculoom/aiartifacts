@@ -1,5 +1,39 @@
 # Maintainer handoff
 
+## Evidence and recovery source candidate — October 29, 2026
+
+This candidate extends repository reporting instructions, the engineering
+retrospective template and the existing Release skill with dated claim evidence,
+retrieval/product-state separation, ambiguous-operation reconciliation and
+bounded causal analysis. Seven original fictional
+[evidence-recovery cases](evals/engineering/evidence-recovery/README.md) keep
+evaluator inputs separate from expected judgments. Actual product incidents,
+private correlation and provider receipts remain in their owning repositories.
+
+Source base: `7bacdfe91e80f670b41eddef859afddb6ffd9ad1`. From this checkout,
+`git rev-parse HEAD` identifies the exact candidate; preserve that commit and
+input hashes in the behavioral evaluation and final independent review.
+Local checks on October 29 passed: catalog validation (seven plugins/eight
+skills and local Markdown references), the five-test Release verifier suite,
+the packet's local link check, the skill-authoring frontmatter validator and
+`git diff --check`. Reproduce the existing
+checks using the commands in **Start on a new computer** below. These are
+structural/script results; fresh-context behavioral evaluation and final-head
+review remain pending. No automatic startup-loading or consumer-adoption pass
+is claimed.
+
+Next: run the input-only packet in fresh contexts with the criteria withheld,
+retain complete answers/tool traces and exact file identities, then assess the
+seven cases. Review the final PR head and required checks before source merge.
+A consuming project must explicitly record adoption of the reviewed source
+commit and its evidence limits; this source change cannot alter installed pins.
+
+Public acquisition is unchanged by this candidate: **v0.5.0 was last verified
+available October 28**, as recorded below. No fresh provider readback is claimed
+here. The new safeguards remain unreleased source; no plugin/package version,
+tag, installation or consumer pin changed, and no toolkit publication is part
+of this work.
+
 ## Production-quality source candidate — October 28, 2026
 
 The [initial toolkit quality audit](docs/quality-audit-20261028.md) records the
