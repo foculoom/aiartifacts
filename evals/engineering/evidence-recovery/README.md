@@ -41,3 +41,7 @@ Catalog validation and unit tests check packaging and existing scripts; they
 do not grade these answers. Reviewed source adoption must record the selected
 commit and evaluation limits in the consuming repository. A source merge does
 not publish a package, install a skill or move a consumer pin.
+
+The [October 29 assessment](results-20261029.md) retains the initial six passes
+and one partial result, its input identities, trace limits and corrective rerun
+gate. It is evaluator material; withhold it from agents under test.

@@ -18,13 +18,17 @@ skills and local Markdown references), the five-test Release verifier suite,
 the packet's local link check, the skill-authoring frontmatter validator and
 `git diff --check`. Reproduce the existing
 checks using the commands in **Start on a new computer** below. These are
-structural/script results; fresh-context behavioral evaluation and final-head
-review remain pending. No automatic startup-loading or consumer-adoption pass
-is claimed.
+structural/script results. The [initial behavioral assessment](evals/engineering/evidence-recovery/results-20261029.md)
+at `67ad0d77f188ad679170cea0f74792649cef194e` reports six passes and one
+partial: the contradictory-diagnostics answer kept uncertainty but did not
+specify a sufficiently controlled, bounded comparison. The sanitized result
+retains the partial and trace/metadata limits. Generic investigation guidance
+has been tightened; a fresh case-F rerun and final-head review remain pending.
+No automatic startup-loading or consumer-adoption pass is claimed.
 
-Next: run the input-only packet in fresh contexts with the criteria withheld,
-retain complete answers/tool traces and exact file identities, then assess the
-seven cases. Review the final PR head and required checks before source merge.
+Next: rerun case F in a fresh context with the criteria and previous result
+withheld. Retain complete answers, meaningful tool traces and exact file
+identities. Review the final PR head and required checks before source merge.
 A consuming project must explicitly record adoption of the reviewed source
 commit and its evidence limits; this source change cannot alter installed pins.
 

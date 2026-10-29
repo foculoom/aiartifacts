@@ -61,6 +61,16 @@ recovery that works does not by itself prove why the failure occurred. Use the
 when evaluating changes to this method; they do not require an incident report
 for every ordinary lookup or test failure.
 
+Choose the smallest comparison that separates the competing explanations:
+change one suspected factor while matching the candidate, runtime, profile and
+other relevant conditions. Before running, name the expected distinguishing
+observations, evidence streams and stop condition. Start with one execution per
+condition under the existing run cap; inspect those results before expanding.
+Correlate the initiating request, current authoritative state, durable history
+and asynchronous updates when applicable. Keep existing assertions, acceptance
+criteria and trust checks intact. An inconclusive comparison leaves the cause
+unresolved; it does not justify retries or looser checks until something passes.
+
 For an unresolved consequential operation, record its correlation privately,
 the authoritative state check and the contract that permits retry or clearing a
 hold. Restart, elapsed time and an empty history are not cancellation receipts.

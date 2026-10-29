@@ -28,6 +28,13 @@ candidate, environment and stage. Report unavailable fresh evidence alongside
 the last verified state; distinguish failed, untested, indeterminate and pending
 review. Do not promote a probable explanation into a verified cause.
 
+When release diagnostics conflict, isolate one suspected factor with the other
+candidate/environment conditions matched. Declare the distinguishing evidence
+and stop condition first; use one execution per condition within the existing
+cap before deciding whether more work is justified. Correlate requests, current
+provider state, operation history and asynchronous updates as applicable. Keep
+acceptance and trust checks intact; an inconclusive result remains unresolved.
+
 ## Parallel preparation
 
 When multiple agents contribute to a release, read
