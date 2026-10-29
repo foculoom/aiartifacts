@@ -11,6 +11,10 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 - Add four original local rendered fixtures and an optional interaction/capture
   runner. Keep fixture assertions, independent model judgment and PR review
   separate; the dated audit records actual coverage.
+- Retain four fresh independent rendered evaluations, complete answers and
+  action evidence at source `7b6bf416173666d20b35def9c1200e0054122356`.
+  All four meet their held-out behavior criteria; disclosed keyboard/device
+  limits remain, and no publication or universal quality claim follows.
 - Extend Release 0.1.1 source guidance to honor an owning project's required
   experience decision without inventing a gate for unrelated work. Existing
   packages, tags, installs and consumer pins remain unchanged.

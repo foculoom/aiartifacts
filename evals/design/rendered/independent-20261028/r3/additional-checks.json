@@ -1,0 +1,177 @@
+{
+  "evaluation": "agent evaluation",
+  "date": "2026-10-29T03:40:40.128Z",
+  "viewport": {
+    "width": 390,
+    "height": 900
+  },
+  "environment": "Headless Chrome with touch/mobile emulation; not a physical device",
+  "actions": [
+    {
+      "action": "Emulated touch tap Help",
+      "selection": "",
+      "dialogOpen": false,
+      "dialogSelection": "",
+      "focus": "help",
+      "status": "Choose a room, then review it. You can return without losing your choice.",
+      "documentWidth": 390,
+      "viewport": 390,
+      "targets": [
+        {
+          "id": "room",
+          "width": 342,
+          "height": 51
+        },
+        {
+          "id": "reserve",
+          "width": 342,
+          "height": 55
+        },
+        {
+          "id": "help",
+          "width": 77.25,
+          "height": 55
+        },
+        {
+          "id": "cancel",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "action": "Playwright native-select selection; does not verify touch select popup",
+      "selection": "Courtyard room",
+      "dialogOpen": false,
+      "dialogSelection": "",
+      "focus": "help",
+      "status": "Choose a room, then review it. You can return without losing your choice.",
+      "documentWidth": 390,
+      "viewport": 390,
+      "targets": [
+        {
+          "id": "room",
+          "width": 342,
+          "height": 51
+        },
+        {
+          "id": "reserve",
+          "width": 342,
+          "height": 55
+        },
+        {
+          "id": "help",
+          "width": 77.25,
+          "height": 55
+        },
+        {
+          "id": "cancel",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "action": "Emulated touch tap Review reservation",
+      "selection": "Courtyard room",
+      "dialogOpen": true,
+      "dialogSelection": "Courtyard room",
+      "focus": "cancel",
+      "status": "Choose a room, then review it. You can return without losing your choice.",
+      "documentWidth": 390,
+      "viewport": 390,
+      "targets": [
+        {
+          "id": "room",
+          "width": 342,
+          "height": 51
+        },
+        {
+          "id": "reserve",
+          "width": 342,
+          "height": 55
+        },
+        {
+          "id": "help",
+          "width": 77.25,
+          "height": 55
+        },
+        {
+          "id": "cancel",
+          "width": 177.390625,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "action": "Emulated touch tap Back to selection",
+      "selection": "Courtyard room",
+      "dialogOpen": false,
+      "dialogSelection": "Courtyard room",
+      "focus": "reserve",
+      "status": "Choose a room, then review it. You can return without losing your choice.",
+      "documentWidth": 390,
+      "viewport": 390,
+      "targets": [
+        {
+          "id": "room",
+          "width": 342,
+          "height": 51
+        },
+        {
+          "id": "reserve",
+          "width": 342,
+          "height": 55
+        },
+        {
+          "id": "help",
+          "width": 77.25,
+          "height": 55
+        },
+        {
+          "id": "cancel",
+          "width": 0,
+          "height": 0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "contrast": [
+    {
+      "component": "body text",
+      "foreground": "#203832",
+      "background": "#f3f0e8",
+      "ratio": 11.021304066713565,
+      "method": "sRGB relative luminance from inspected CSS/computed colors; not pixel sampling"
+    },
+    {
+      "component": "enabled control text",
+      "foreground": "#203832",
+      "background": "#ffffff",
+      "ratio": 12.55123260647706,
+      "method": "sRGB relative luminance from inspected CSS/computed colors; not pixel sampling"
+    },
+    {
+      "component": "dialog text",
+      "foreground": "#000000",
+      "background": "#ffffff",
+      "ratio": 21,
+      "method": "sRGB relative luminance from inspected CSS/computed colors; not pixel sampling"
+    },
+    {
+      "component": "focus outline on page",
+      "foreground": "#a05012",
+      "background": "#f3f0e8",
+      "ratio": 5.050845996877209,
+      "method": "sRGB relative luminance from inspected CSS/computed colors; not pixel sampling"
+    },
+    {
+      "component": "focus outline on dialog",
+      "foreground": "#a05012",
+      "background": "#ffffff",
+      "ratio": 5.751982032485822,
+      "method": "sRGB relative luminance from inspected CSS/computed colors; not pixel sampling"
+    }
+  ]
+}

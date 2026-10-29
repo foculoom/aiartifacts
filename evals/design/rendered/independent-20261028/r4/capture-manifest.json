@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-10-29T03:43:39.285Z",
+  "files": [
+    {
+      "file": "r4-a-1280-initial.png",
+      "sha256": "930d28015db7ab0cd45f57c24b3949379c11b79de52e4c8e1c9c6e97f76c27a7"
+    },
+    {
+      "file": "r4-a-1280-keyboard-focus.png",
+      "sha256": "69aa672ee78d0340d1ed451c9c07035a3415dbdc622b1d0d62a53537f463863a"
+    },
+    {
+      "file": "r4-a-390-initial.png",
+      "sha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a"
+    },
+    {
+      "file": "r4-a-390-keyboard-focus.png",
+      "sha256": "f7df899b97bcc9b30017596b817044e3e7bc4a9d5b349ca1ce38eeafa474ee3d"
+    },
+    {
+      "file": "r4-a-390-ridge-click.png",
+      "sha256": "8df86b305b9d85bfe3ae1fc5840511708b36bed461566996b741a4ea60476a6a"
+    },
+    {
+      "file": "r4-b-1280-initial.png",
+      "sha256": "360fdfc36195588c4c56ef8147158bc6fd620e333c10f5ad7304fe2a7c442fb2"
+    },
+    {
+      "file": "r4-b-1280-keyboard-focus.png",
+      "sha256": "9e3db1d78824920501baa3b674a60de2f43f8c3cfc536d1132975466eb0a31d2"
+    },
+    {
+      "file": "r4-b-390-initial.png",
+      "sha256": "1bcb0e051d384a48b8351af7a210c48d16da669be9af511ff49d27f3c531a88c"
+    },
+    {
+      "file": "r4-b-390-keyboard-focus.png",
+      "sha256": "12db2836486ff3c9be2c352774d44dc33422519e8e59b24834f18aa86a4145a6"
+    },
+    {
+      "file": "r4-b-390-ridge-click.png",
+      "sha256": "2a1268d34f9a66ee810ae0ebcffcb380f28e0bbe843e87a986e9646ac6372b3d"
+    }
+  ]
+}

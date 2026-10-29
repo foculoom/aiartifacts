@@ -1,0 +1,20 @@
+{
+  "method": "sRGB relative luminance from observed CSS colors; ratios are measurements, not a full accessibility audit",
+  "ratios": {
+    "worldObjectAnd10pxLabels": 1.4958839084752016,
+    "deliverRestingText": 1.9171870107663298,
+    "statusText": 1.941345293800778,
+    "headerCompositeText": 1.678937482074599
+  },
+  "captures": {
+    "actual-delivered-1280.png": "5ab0f323a3facce3e216c46b3eb256b1df2f8185eb458c9a065157fb3c5c21cc",
+    "actual-delivered-390.png": "002cb112f707c24352e411b2e71851c803d1df401dd442baa817165af7e9a285",
+    "actual-focus-1280.png": "62cb5a25156e0410e1ffcce756c3b6f452df29375a636d62d018ab5ebdea1c6c",
+    "actual-ready-1280.png": "6ba1d254408371b97c3c7d6f42d02ef6f092505712bc772e89640e0ce2e7eecd",
+    "actual-ready-390.png": "b64b4b99a4d7131d21a960f5c01cf8bb3564a73efa76a5fd198f3a5be1c9721b",
+    "actual-reset-1280.png": "0536cf8a2d36629344bc061eefcbac7883425f83c5b25ee9edbcd0eb03fa6f03",
+    "actual-reset-390.png": "fc7ae9dd86b674052ecbed7cc4415f35ad405bddc564fdc4dd76b5f164168bd3",
+    "actual-transition-1280.png": "c7c836222f75ff811c20804050ff2e4073a018580c87a52f082ca5ffcc599d26",
+    "actual-transition-390.png": "0f28a721e2d9d2b91502ef95eeb50ee2669e68b58c1ebe3a617db6bd175f80c6"
+  }
+}

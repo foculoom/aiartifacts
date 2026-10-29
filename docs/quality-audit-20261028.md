@@ -2,13 +2,16 @@
 
 ## Scope and evidence
 
-Implementing-agent audit, not independent acceptance or human approval. Source
+Implementing-agent initial audit with subsequent independent behavior evidence;
+not human approval or whole-toolkit certification. Source
 baseline: `283f8360090c1b8e62b27e018246e376c61ea70d`. This audit covers the
 toolkit's current source/distribution distinction, existing Design and Release
 guidance, documentation routing, and the new original rendered evaluation
 fixtures. It does not certify every skill, consumer, native device or release.
 The focused candidate is tracked by [issue #25](https://github.com/foculoom/aiartifacts/issues/25);
-its final PR head and independent review are required before source adoption.
+its [PR #26](https://github.com/foculoom/aiartifacts/pull/26) final head and
+independent review are required before source adoption. The initial audit is
+complete for this stated scope; unresolved broader acceptance remains explicit.
 
 The [v0.5.0 release](https://github.com/foculoom/aiartifacts/releases/tag/v0.5.0)
 was published October 24, 2026 and remained the latest public release on the
@@ -24,10 +27,10 @@ merging source does not install those versions in a consumer.
 | Finding | Evidence and disposition | Next action |
 | --- | --- | --- |
 | Existing review/evidence controls are present | Design already requires rendered hierarchy, state and evidence limits; Release already separates source, artifact and live readback. Keep these workflows. | Extend the existing skills, not a duplicate art plugin. |
-| Production-experience acceptance needs an explicit bounded decision | Technical/export correctness and narrow review can be overread as whole-product quality. This candidate adds target, artifact, reviewer lane, evidence, disposition, limits and owner deviations. | Independently evaluate the changed guidance and review its exact head. |
-| Prior model coverage was largely text-based | D9/D10 retain their recorded fresh-session text-scenario passes; they were not rendered interaction studies. | Exercise the new original R1–R4 interfaces independently. |
+| Production-experience acceptance needed an explicit bounded decision | This candidate adds target, artifact, reviewer lane, evidence, disposition, limits and owner deviations. Independent R1–R4 behavior evaluations pass at source `7b6bf416173666d20b35def9c1200e0054122356`; technical correctness is not treated as whole-product approval. | Review the final evidence/source head and required checks. |
+| Prior model coverage was largely text-based | D9/D10 retain their recorded text-scenario passes. Four fresh independent agents now inspected actual R1–R4 pixels and local interactions, with complete answers and scoped limits recorded. | Preserve the dated coverage; do not infer native, cross-model or universal creative capability. |
 | Source documentation overstated unfinished CI work | Design export CI already merged through PR #10. README now acknowledges it; historical dated counts remain historical. | Preserve the existing CI registration; no replacement CI PR. |
-| Rendered fixture integrity is verified, model judgment is pending | The implementing agent ran 35 assertions and generated 22 desktop/narrow captures, then inspected representative PNGs. This verifies the test inputs, including deliberate defects, not acceptance of the interfaces or the skill's judgment. | Fresh input-only evaluator runs, then separate assessment and source review. |
+| Rendered fixture integrity and bounded model behavior are verified | The author ran 35 assertions/22 captures. Fresh independent evaluations then generated their own action receipts and renders; all four pass the held-out behavior criteria. The failing fictional interfaces remain failing, as intended. | Retain the independent answers and assessment separately from fixture assertions and final PR review. |
 | New package acceptance and distribution remain incomplete | No new package, tag, installation or consumer pin is produced by this change. | Keep publication held until required acceptance and owner release authorization; prepare a separate reviewed release packet. |
 
 ## Reproducible candidate verification
@@ -59,18 +62,35 @@ available skill-structure validator. The render runner and the final source
 diff check are separate from model-behavior evaluation. No package dependency
 or hosted workflow was added.
 
+The independent-record follow-up passed catalog/reference validation, exact
+public inventory and all 75 retained-file hashes, JSON parsing, path/private
+context exclusion, and staged whitespace checks. Evaluated skills, references,
+prompts, fixtures and runner were byte-unchanged from the evaluated commit, so
+the existing browser receipt remains applicable; no new browser pass is claimed
+for this documentation/evidence follow-up.
+
 ## Acceptance and adoption boundary
 
-Current decision for the **new guidance**: **unverified for independent
-production-experience acceptance**. Implementing-agent checks establish a
-reviewable source candidate; they do not satisfy independent evaluation or PR
-review. R1–R4 must each use a fresh context with only the relevant revised
-skills, case brief, raw fixture and render evidence. Keep the held-out rubric,
-runner assertions and previous answers out of that context. Retain complete
-answers and tools/model identity, then record an assessor's result separately.
-Missing required interaction is partial coverage, not a screenshot-derived pass.
+Current decision for the **new Design guidance**: **accepted within the R1–R4
+behavior-evaluation scope**, assessed against the held-out criteria after four
+fresh input-only agent runs on October 28, 20:31–20:43 PDT. The
+[complete record](../evals/design/rendered/independent-20261028/README.md)
+preserves exact evaluated head `7b6bf416173666d20b35def9c1200e0054122356`,
+skill/input/capture hashes, full answers, actions, tools and the model-identifier
+unknown. No rubric or earlier answer was supplied to those evaluators. It also
+preserves unsuccessful exploration and distinguishes it from passing evidence.
+No skill, reference, prompt or fixture change was needed after evaluation.
 
-After evaluation fixes, review the final exact source head and required checks.
+R3 preserves an explicit native-select keyboard and modal-traversal evidence
+gap; R4 preserves the earlier N4 milestone while rejecting N5's changed narrow
+layout. These limits are part of the result, not removed to make the score pass.
+No physical-device, full accessibility, human taste, demand or universal
+art-direction capability is claimed. The Release gate wording has source review
+and existing verifier-test coverage, not a live-publication behavior study.
+
+The independent source-review agent reported no blockers at `7b6bf416173666d20b35def9c1200e0054122356`;
+the evidence and contributor-instruction follow-up still needs review at its
+final exact head and required checks. These milestones do not authorize release.
 A consumer may then deliberately adopt that reviewed commit with an explicit
 scope, checksum where vendored, its own acceptance evidence and release holds.
 Do not label reading source as installation or silently replace an existing pin.

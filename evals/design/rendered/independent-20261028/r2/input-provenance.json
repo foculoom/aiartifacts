@@ -1,0 +1,70 @@
+{
+  "sourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "createdAt": "2026-10-29T03:26:31.948Z",
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "browser": "156.0.8078.48",
+  "captures": [
+    {
+      "file": "r2-ready-1280.png",
+      "sha256": "6ba1d254408371b97c3c7d6f42d02ef6f092505712bc772e89640e0ce2e7eecd",
+      "width": 1280,
+      "height": 900,
+      "artifact": "P2",
+      "documentWidth": 1280,
+      "status": "1 parcel ready.",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r2-delivered-1280.png",
+      "sha256": "4080eb3d14e45017920f204d311e0d6c93dadddb88a97867e15ef1e6f95de775",
+      "width": 1280,
+      "height": 900,
+      "artifact": "P2",
+      "documentWidth": 1280,
+      "status": "1 parcel delivered.",
+      "focus": "deliver",
+      "dialogOpen": false
+    },
+    {
+      "file": "r2-ready-390.png",
+      "sha256": "b64b4b99a4d7131d21a960f5c01cf8bb3564a73efa76a5fd198f3a5be1c9721b",
+      "width": 390,
+      "height": 900,
+      "artifact": "P2",
+      "documentWidth": 390,
+      "status": "1 parcel ready.",
+      "focus": "",
+      "dialogOpen": false
+    },
+    {
+      "file": "r2-delivered-390.png",
+      "sha256": "002cb112f707c24352e411b2e71851c803d1df401dd442baa817165af7e9a285",
+      "width": 390,
+      "height": 900,
+      "artifact": "P2",
+      "documentWidth": 390,
+      "status": "1 parcel delivered.",
+      "focus": "deliver",
+      "dialogOpen": false
+    }
+  ],
+  "inputHashes": {
+    "evidence/r2-ready-1280.png": "6ba1d254408371b97c3c7d6f42d02ef6f092505712bc772e89640e0ce2e7eecd",
+    "evidence/r2-delivered-390.png": "002cb112f707c24352e411b2e71851c803d1df401dd442baa817165af7e9a285",
+    "evidence/r2-ready-390.png": "b64b4b99a4d7131d21a960f5c01cf8bb3564a73efa76a5fd198f3a5be1c9721b",
+    "evidence/r2-delivered-1280.png": "4080eb3d14e45017920f204d311e0d6c93dadddb88a97867e15ef1e6f95de775",
+    "fixtures/r2.html": "f79aa2bab6863dca3271ca75ae5b1056dbbed1e72f68561a422f43898f7c4110",
+    "fixtures/fixture.js": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+    "fixtures/style.css": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+    "skills/product-identity/SKILL.md": "d8ce950b443cbac6dc98a20bccffaebb95e07d2f4ef74f0e52e0ad9e0373bbeb",
+    "skills/product-identity/references/export-handoff.md": "bf27458bad04dca35ade5dbeb65ce5b0ecedc260f44c1a8073cab0cffcfdb787",
+    "skills/experience-review/SKILL.md": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+    "skills/experience-review/references/operational-status.md": "04a153632eab5a1904751971932a73a70e74effcbcc31e462a77f8f7e1da0324",
+    "skills/experience-review/references/interactive-experiences.md": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+    "skills/experience-review/references/production-acceptance.md": "c0fdf56d5287eed4468de8c1c1ce3d9c8adab12f5cd06caa2d36e4cc7403fb9d",
+    "skills/experience-review/references/product-pages.md": "b72130fe243c2b638385a19f501db13a9a55cc43d1c9d52d50fdd8f9894327ae",
+    "skills/experience-review/references/publisher-sites.md": "cc6be756229f7fefe9e2796c134b3d1ca07612807a05369dfbb62ca0c36d3736"
+  }
+}

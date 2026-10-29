@@ -12,10 +12,18 @@ Four original [rendered cases](evals/design/rendered/README.md) now have a real
 local browser receipt: 35 fixture assertions and 22 captures at 1280×900 and
 390×900, completed October 28 at 20:26 PDT. The captures and manifest travel with
 the repository; only synthetic, original interfaces appear in them. The
-assertions verify the test fixtures, not design quality. Fresh independent
-model evaluations and exact-head source review remain required; no pass is
-inferred from implementing-agent checks. The audit gives reproduction commands,
-scope, limitations and the next action.
+assertions verify the test fixtures, not design quality. Four fresh independent
+agent evaluations subsequently ran at source
+`7b6bf416173666d20b35def9c1200e0054122356` on October 28, 20:31–20:43 PDT.
+All four pass the held-out behavior criteria; the
+[complete public-safe record](evals/design/rendered/independent-20261028/README.md)
+retains full answers, input/skill hashes, new action receipts and captures,
+unsuccessful exploratory checks and scoped limits. R3's native-select keyboard
+gap remains unverified; no physical-device or universal quality claim follows.
+The source-review agent reported no blockers at that evaluated head. This
+evidence/contributor-instruction follow-up still requires final exact-head
+review and checks. Evaluated skills, references, prompts and fixtures are
+unchanged. The audit gives reproduction commands and the next action.
 
 Public acquisition: **v0.5.0 remains available**, with its October 24 publication
 and latest-release/archive readback reverified October 28. New Design 0.1.1,

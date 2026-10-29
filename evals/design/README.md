@@ -36,3 +36,9 @@ The [initial toolkit quality audit](../../docs/quality-audit-20261028.md) record
 what has run, what remains unverified and the publication disposition. Earlier
 D1–D10 records retain their original scope; these fixtures do not retroactively
 turn text-only evaluations into rendered studies.
+
+The [October 28 independent record](rendered/independent-20261028/README.md)
+retains four fresh input-only evaluations at `7b6bf416173666d20b35def9c1200e0054122356`.
+All four meet the held-out behavior criteria with actual rendered/interaction
+evidence. This is bounded Design behavior coverage, separate from source-PR
+review, native/device checks and package-release authorization.

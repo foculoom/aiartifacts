@@ -1,0 +1,116 @@
+{
+  "sourceCommit": "7b6bf416173666d20b35def9c1200e0054122356",
+  "createdAt": "2026-10-29T03:26:31.948Z",
+  "node": "v24.19.0",
+  "playwright": "1.62.1",
+  "browser": "156.0.8078.48",
+  "captures": [
+    {
+      "file": "r1-start-1280.png",
+      "sha256": "18d0badb6a79763c954e0f8ba431411fa5151c35153da22f6de2168a4c2628ca",
+      "width": 1280,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 1280,
+      "status": "Ready to start \u00b7 0 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-active-1280.png",
+      "sha256": "a557bb79f05e48c2988a2a53112d4e10477697e337725924fe333c5a79e30c05",
+      "width": 1280,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 1280,
+      "status": "Playing \u00b7 1 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-overview-1280.png",
+      "sha256": "f647627f616006c7c095e5e65642dfd0e76c7583be0a0a9f72ce340257acb102",
+      "width": 1280,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 1280,
+      "status": "Overview \u2014 planning paused \u00b7 1 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-recovery-1280.png",
+      "sha256": "7198af7bd53eab8ab69df9b6b3096a50a2dbf7c752098b7429776387792556e6",
+      "width": 1280,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 1280,
+      "status": "Playing \u00b7 1 beds watered",
+      "focus": "undo",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-start-390.png",
+      "sha256": "8795507b90b8fc1641e75138e3ccd6b00ee69d586ce5acf312b9c7bc672ab4ca",
+      "width": 390,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 390,
+      "status": "Ready to start \u00b7 0 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-active-390.png",
+      "sha256": "49de7c90536b2743781f2e3ddfbfb540d4491f1f4014000c3e33ba89d21b25e5",
+      "width": 390,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 390,
+      "status": "Playing \u00b7 1 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-overview-390.png",
+      "sha256": "92054676db8aaef8777a5d4cca6734f167c0661ef5aae7c0d12e032cf0f875dd",
+      "width": 390,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 390,
+      "status": "Overview \u2014 planning paused \u00b7 1 beds watered",
+      "focus": "water",
+      "dialogOpen": false
+    },
+    {
+      "file": "r1-recovery-390.png",
+      "sha256": "8f350c4897f23221b81e5a7fe839ae66b883d9417091f3494882d2005c14f73d",
+      "width": 390,
+      "height": 900,
+      "artifact": "G1",
+      "documentWidth": 390,
+      "status": "Playing \u00b7 1 beds watered",
+      "focus": "undo",
+      "dialogOpen": false
+    }
+  ],
+  "inputHashes": {
+    "evidence/r1-active-1280.png": "a557bb79f05e48c2988a2a53112d4e10477697e337725924fe333c5a79e30c05",
+    "evidence/r1-start-1280.png": "18d0badb6a79763c954e0f8ba431411fa5151c35153da22f6de2168a4c2628ca",
+    "evidence/r1-recovery-1280.png": "7198af7bd53eab8ab69df9b6b3096a50a2dbf7c752098b7429776387792556e6",
+    "evidence/r1-overview-1280.png": "f647627f616006c7c095e5e65642dfd0e76c7583be0a0a9f72ce340257acb102",
+    "evidence/r1-overview-390.png": "92054676db8aaef8777a5d4cca6734f167c0661ef5aae7c0d12e032cf0f875dd",
+    "evidence/r1-active-390.png": "49de7c90536b2743781f2e3ddfbfb540d4491f1f4014000c3e33ba89d21b25e5",
+    "evidence/r1-start-390.png": "8795507b90b8fc1641e75138e3ccd6b00ee69d586ce5acf312b9c7bc672ab4ca",
+    "evidence/r1-recovery-390.png": "8f350c4897f23221b81e5a7fe839ae66b883d9417091f3494882d2005c14f73d",
+    "fixtures/fixture.js": "04cf5e6de7573c2dfa47745f4ffdf6e53ec8d0668034f506cf939b534414dc68",
+    "fixtures/style.css": "e233a2e26aa4c729a78fbe4871f9864577d7057f6f10149a7b282d14e36deb70",
+    "fixtures/r1.html": "1eec1080b0f24ea98f5e77f9a57672306935b9c1bf8fa531d5991f2378d11182",
+    "skills/experience-review/SKILL.md": "1a5877bcde3593943566730a07b48e3e2147bef3ab58cfd40c996ae7bcc64bd6",
+    "skills/experience-review/references/operational-status.md": "04a153632eab5a1904751971932a73a70e74effcbcc31e462a77f8f7e1da0324",
+    "skills/experience-review/references/interactive-experiences.md": "fe4046a3fdc783ca972587adf660021844146d2f423a035c0d0426c0d55bb919",
+    "skills/experience-review/references/production-acceptance.md": "c0fdf56d5287eed4468de8c1c1ce3d9c8adab12f5cd06caa2d36e4cc7403fb9d",
+    "skills/experience-review/references/product-pages.md": "b72130fe243c2b638385a19f501db13a9a55cc43d1c9d52d50fdd8f9894327ae",
+    "skills/experience-review/references/publisher-sites.md": "cc6be756229f7fefe9e2796c134b3d1ca07612807a05369dfbb62ca0c36d3736"
+  }
+}
