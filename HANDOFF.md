@@ -2,6 +2,15 @@
 
 ## Evidence and recovery source candidate — October 29, 2026
 
+The [evaluation record](evals/engineering/evidence-recovery/results-20261029.md)
+now retains the original six passes/one partial, the second F partial under the
+original criterion, independent identification of an over-specific criterion,
+and a third blinded F pass against its corrected general requirement. Earlier
+answers were not silently relabeled. The final independent source review and
+normal protected merge remain separate; no new all-seven run, installed
+adoption or live-provider recovery is claimed. The dated initial structural
+checkpoint below remains evidence for its original revision.
+
 This candidate extends repository reporting instructions, the engineering
 retrospective template and the existing Release skill with dated claim evidence,
 retrieval/product-state separation, ambiguous-operation reconciliation and
