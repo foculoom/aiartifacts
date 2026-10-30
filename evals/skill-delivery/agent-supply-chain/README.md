@@ -31,6 +31,12 @@ and actual model-visible catalog/context. Use Codex gpt-6.1-sol with medium
 reasoning and existing ChatGPT access. Freeze one authorized explicit Copilot
 model/provider; no Auto, silent fallback or additional spending. A successful
 preflight does not excuse contaminated context or unknown model identity.
+Keep measurement inventories outside the runtime project and pass their path
+through the runner's `--input-inventory` argument. They are evaluator receipts,
+not task inputs. The initial October 30 attempt exposed its measurement file
+and used an ambiguous P4 boundary; preserve that attempt without using it to
+claim controlled benefit. The corrected P4 explicitly permits the named
+manifest and installed skill while forbidding reads through escaping entries.
 
 F1 needs a disposable environment in which the agent genuinely cannot execute
 or obtain Python, including alternate absolute paths. F2 needs a payload that
@@ -66,11 +72,15 @@ merged SHA, account for installer transforms, and check skills.sh separately.
 
 ## Current gates
 
-The October 30 preflight found no saved authorized cloud environment. Previous
-Copilot fixed-model access and Codex context-isolation failures remain unresolved;
-no unchanged denied request should be repeated. Offline work and local-source
-installation checks do not clear these gates. Human task feedback is also
-recorded for the helper example, while runtime acceptance remains outstanding.
+The [October 30 follow-up](results-20261030-runtime/README.md) records local
+Linux helper tests and resolution of the observed Codex initial-context blocker
+through a separately signed-in profile. Corrected positive/negative cases and
+an explicit diagnostic passed independent functional review. The independent
+paired review found three ties: the required two-pair benefit was not met.
+Enforced model failure checks and Copilot evidence also remain incomplete.
+No saved authorized cloud environment or suitable Copilot fixed-model route
+was established; do not repeat an unchanged denied request. The owner's human
+feedback on the recorded helper example remains achieved within that scope.
 No upstream submission or new release is authorized before the
 selected acceptance conditions pass. Preserve the extra-skill deferral, existing
 release tags and consumer pins.

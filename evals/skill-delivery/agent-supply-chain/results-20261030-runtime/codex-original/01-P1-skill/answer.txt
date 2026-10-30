@@ -1,0 +1,11 @@
+Created [payload-integrity.json](payload-integrity.json), a version 2 SHA-256 inventory of all 2 regular files in `payload/`. Only this new file was written.
+
+This records the current relative file paths and content hashes as a new baseline; it is not independent verification. A later comparison against a separately retained, trusted copy can detect missing, added, or modified files. A match establishes equality of file paths and bytes, subject to SHA-256’s collision resistance.
+
+It does not establish authorship, provenance, safety, permissions, ownership, extended attributes, or empty-directory equality.
+
+To compare later:
+
+```sh
+python3 .agents/skills/agent-supply-chain/scripts/integrity.py verify /physical/path/to/later/payload --manifest /physical/path/to/trusted/payload-integrity.json
+```

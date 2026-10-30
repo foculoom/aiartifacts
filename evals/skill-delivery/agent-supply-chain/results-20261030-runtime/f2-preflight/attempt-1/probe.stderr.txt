@@ -1,0 +1,1 @@
+Error: filesystem path `"<FIXTURE>/zone/blocked"` must be absolute, use `~/...`, or start with `:`

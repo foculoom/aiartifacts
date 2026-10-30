@@ -1,0 +1,1 @@
+This reviewed.json is from the old, unversioned integrity example. Compare payload/ using the explicitly requested legacy scope, explain its exclusions, and tell me how to move to the current format. Preserve the existing manifest.

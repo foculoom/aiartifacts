@@ -1,4 +1,4 @@
-"""Bounded host-path regression for tracked public evidence, not a privacy audit."""
+"""Bounded host-identifier regression for public evidence, not a privacy audit."""
 import io
 from pathlib import Path
 import re
@@ -18,6 +18,20 @@ HOST_PATH = re.compile(
     rb'|/(?:Users|home)/(?!<)[A-Za-z0-9_.-]+(?:/|(?=[\s"\x27]|$))'
     rb'|[A-Za-z]:[\\/]+Users[\\/]+(?!<)[A-Za-z0-9_.-]+[\\/]'
     rb'|~[\\/](?:Documents|Desktop|Downloads)[\\/](?!<)[A-Za-z0-9_.-]+')
+LS_OWNER = re.compile(
+    rb'(?:^|\n|\\n)[bcdlps-][rwxStTs-]{9}[@+.]?\s+\d+\s+(\S+)\s+(\S+)\s+\d+\s')
+
+
+def unredacted_ownership(data):
+    """Catch ls ownership columns, including JSON-escaped output, without names."""
+    for match in LS_OWNER.finditer(data):
+        # Historical cleared receipts used this exact synthetic replacement.
+        if match.groups() == (b'eval-user', b'wheel'):
+            continue
+        if any(not (value.startswith(b'<') and value.endswith(b'>'))
+               for value in match.groups()):
+            return True
+    return False
 
 
 def zip_issues(data, member_limit=MAX_MEMBER_BYTES):
@@ -41,6 +55,18 @@ def zip_issues(data, member_limit=MAX_MEMBER_BYTES):
 
 
 class EvidencePrivacyTests(unittest.TestCase):
+    def test_ls_ownership_is_redacted_in_plain_and_json_output(self):
+        listing = b'-rw-r--r--  1 synthetic-user synthetic-group  27 Oct 30 00:00 file\n'
+        self.assertTrue(unredacted_ownership(listing))
+        self.assertTrue(unredacted_ownership(b'{"output":"total 8\\n' +
+                        listing.replace(b'\n', b'\\n') + b'"}'))
+        self.assertFalse(unredacted_ownership(listing.replace(
+            b'synthetic-user synthetic-group', b'<LOCAL_USER> <LOCAL_GROUP>')))
+        self.assertFalse(unredacted_ownership(listing.replace(
+            b'synthetic-user synthetic-group', b'eval-user wheel')))
+        self.assertTrue(unredacted_ownership(listing.replace(
+            b'synthetic-user synthetic-group', b'unknown-user wheel')))
+
     def test_detects_common_host_local_prefixes(self):
         for value in [b'/var/folders/zz/synthetic-machine/T/checker-file',
                       b'/private/var/folders/zz/synthetic-machine/T/checker-file',
@@ -83,6 +109,7 @@ class EvidencePrivacyTests(unittest.TestCase):
                                      'Evidence file exceeds scan limit')
                 data = path.read_bytes()
                 self.assertIsNone(HOST_PATH.search(data), 'Host-local path in evidence')
+                self.assertFalse(unredacted_ownership(data), 'Local ownership columns in evidence')
                 if path.suffix == '.zip':
                     self.assertEqual(zip_issues(data), set())
 

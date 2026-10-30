@@ -1,0 +1,20 @@
+{"name": "allowed_control", "command": ["/bin/cat", "<FIXTURE>/control.txt"], "exit": 0, "stdout": "SYNTHETIC-F2-ALLOWED-CONTROL\n", "stderr": ""}
+{"name": "direct_cat", "command": ["/bin/cat", "<FIXTURE>/zone/blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "python_read", "status": "denied", "error": "[Errno 1] Operation not permitted: '<FIXTURE>/zone/blocked/payload.txt'"}
+{"name": "copy", "command": ["/bin/cp", "<FIXTURE>/zone/blocked/payload.txt", "<FIXTURE>/copied"], "exit": 1, "stdout": "", "stderr": "cp: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "copy_read", "command": ["/bin/cat", "<FIXTURE>/copied"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/copied: No such file or directory\n"}
+{"name": "chmod_file", "command": ["/bin/chmod", "644", "<FIXTURE>/zone/blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "chmod: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "chmod_file_read", "command": ["/bin/cat", "<FIXTURE>/zone/blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "chmod_directory", "command": ["/bin/chmod", "755", "<FIXTURE>/zone/blocked"], "exit": 1, "stdout": "", "stderr": "chmod: <FIXTURE>/zone/blocked: Operation not permitted\n"}
+{"name": "chmod_directory_read", "command": ["/bin/cat", "<FIXTURE>/zone/blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "create_symlink", "command": ["/bin/ln", "-s", "<FIXTURE>/zone/blocked/payload.txt", "<FIXTURE>/new-symlink"], "exit": 0, "stdout": "", "stderr": ""}
+{"name": "create_symlink_read", "command": ["/bin/cat", "<FIXTURE>/new-symlink"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/new-symlink: Operation not permitted\n"}
+{"name": "create_hardlink", "command": ["/bin/ln", "<FIXTURE>/zone/blocked/payload.txt", "<FIXTURE>/new-hardlink"], "exit": 1, "stdout": "", "stderr": "ln: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"}
+{"name": "create_hardlink_read", "command": ["/bin/cat", "<FIXTURE>/new-hardlink"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/new-hardlink: No such file or directory\n"}
+{"name": "rename_file", "command": ["/bin/mv", "<FIXTURE>/zone/blocked/payload.txt", "<FIXTURE>/renamed-file"], "exit": 1, "stdout": "", "stderr": "mv: rename <FIXTURE>/zone/blocked/payload.txt to <FIXTURE>/renamed-file: Operation not permitted\n"}
+{"name": "rename_file_read", "command": ["/bin/cat", "<FIXTURE>/renamed-file"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/renamed-file: No such file or directory\n"}
+{"name": "rename_denied_directory", "command": ["/bin/mv", "<FIXTURE>/zone/blocked", "<FIXTURE>/renamed-blocked"], "exit": 1, "stdout": "", "stderr": "mv: rename <FIXTURE>/zone/blocked to <FIXTURE>/renamed-blocked: Operation not permitted\n"}
+{"name": "rename_denied_directory_read", "command": ["/bin/cat", "<FIXTURE>/renamed-blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/renamed-blocked/payload.txt: No such file or directory\n"}
+{"name": "rename_ancestor", "command": ["/bin/mv", "<FIXTURE>/zone", "<FIXTURE>/renamed-zone"], "exit": 1, "stdout": "", "stderr": "mv: rename <FIXTURE>/zone to <FIXTURE>/renamed-zone: Operation not permitted\n"}
+{"name": "rename_ancestor_read", "command": ["/bin/cat", "<FIXTURE>/renamed-zone/blocked/payload.txt"], "exit": 1, "stdout": "", "stderr": "cat: <FIXTURE>/renamed-zone/blocked/payload.txt: No such file or directory\n"}
+{"status": "all_probes_denied"}

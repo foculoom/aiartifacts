@@ -24,11 +24,34 @@ The owner called the recorded verification output “Useful and clear”; this
 is feedback on helper output, not human runtime execution. Initial candidate
 8c0ef34 and its review-discovered path defects remain in history.
 
-No upstream PR was sent. Copilot/Codex functional and paired usefulness gates
-remain unperformed: the prior fixed-model access and context-isolation failures
-remain unresolved, and enforced failure environments must be verified. No
-unchanged denied request was repeated. No saved cloud environment was listed;
-offline work used the authorized local runtime. Linux CI is prepared, not run.
+The [runtime follow-up](evals/skill-delivery/agent-supply-chain/results-20261030-runtime/README.md)
+adds 47 passing local Linux helper tests (zero skips), alongside the earlier
+macOS checks. An existing cached image ran without network access or downloads;
+hosted Python 3.11 CI remains unperformed. A separate supported Codex profile
+and normal owner sign-in resolved the observed company-context contamination.
+The runner now supports that explicit profile and external measurement records.
+Its 22 offline tests pass; the prior default behavior remains reproducible.
+
+One explicit Codex diagnostic and the corrected six positive/three negative
+cases passed independent functional review with observed loading/non-loading,
+unchanged inputs and fixed runtime-recorded gpt-6.1-sol/medium. Three paired
+tasks also completed; an independent reviewer rated all three as ties, below
+the predeclared two-pair benefit requirement. No material regression was
+demonstrated. This does not establish added skill value. Preserve all twelve
+first attempts: their measurement inventory was visible and P4's read boundary
+was ambiguous. Those attempts do not establish comparative benefit. The rerun
+uses external inventories and matched, clarified task inputs. Backend identity
+remains unreported; actual session context and tool schemas were reviewed.
+
+No upstream PR was sent. The usefulness gate was not met; Copilot fixed-model
+access and enforced model failure cases remain incomplete. No unchanged denied Copilot
+request was repeated. No saved cloud environment was listed; work used the
+authorized local runtime without purchases or credential copying.
+Offline denied-access preparation preserves all three attempts, including an
+allowed-path hardlink exposure and a later scoped pass with an alias-free
+fixture. It does not establish F2 model behavior or other-tool confinement;
+F1 interpreter confinement remains unproven. Do not restart favorable-outcome
+searching or submit upstream merely because static/functional checks passed.
 
 Public availability on October 30: the original upstream skill is cataloged
 and the reviewed fork source is public; the improved candidate has local-source

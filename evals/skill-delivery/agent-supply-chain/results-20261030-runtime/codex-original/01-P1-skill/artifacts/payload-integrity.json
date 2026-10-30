@@ -1,0 +1,12 @@
+{
+  "algorithm": "sha256",
+  "file_count": 2,
+  "files": {
+    "README.md": "7a935bf02e3393327214b62ec809344b6f3eac77983682e1a550861ff97a77ef",
+    "tool.txt": "dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9"
+  },
+  "generated_at": "2026-10-30T22:59:30.021843+00:00",
+  "manifest_hash": "a459a929e6d243881168c442b8b65535e70102a16d656b50e51311d3a0277441",
+  "plugin_name": "payload",
+  "schema_version": 2
+}

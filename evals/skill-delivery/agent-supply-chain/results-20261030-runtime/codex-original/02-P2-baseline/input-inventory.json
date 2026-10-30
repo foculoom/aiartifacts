@@ -1,0 +1,18 @@
+{
+  "payload/added.txt": {
+    "mode": "0644",
+    "sha256": "0f15384d18789b1ebf3043dc7b6bc27273c8576373fbeb6f3e15854b588141c0"
+  },
+  "payload/tool.txt": {
+    "mode": "0644",
+    "sha256": "906ed25f555e00f40f9f4293fe60f3ca97ef69ad82d1c47ff7b332dea5cb8197"
+  },
+  "prompt.txt": {
+    "mode": "0644",
+    "sha256": "fd5d873c0134cf4421312207c641b4cab70f19746e516686e68e3f284cc28e54"
+  },
+  "reviewed.json": {
+    "mode": "0644",
+    "sha256": "1c213e877c6b4269c4c8c3064a1beb368c50b6f75e56e3e93783cfbdb4177085"
+  }
+}

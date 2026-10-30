@@ -1,0 +1,26 @@
+{
+  ".agents/skills/agent-supply-chain/LICENSE": {
+    "mode": "0644",
+    "sha256": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823"
+  },
+  ".agents/skills/agent-supply-chain/SKILL.md": {
+    "mode": "0644",
+    "sha256": "eb17f1afa00e3c04bdf1430eaa5e638620e5aaf047cb27db529f2b8284431fda"
+  },
+  ".agents/skills/agent-supply-chain/references/manifest-format.md": {
+    "mode": "0644",
+    "sha256": "756f3e27ab2894562cb02efd6cafe18f1a28159caff423feb92a2c7703313ff9"
+  },
+  ".agents/skills/agent-supply-chain/scripts/integrity.py": {
+    "mode": "0644",
+    "sha256": "21831f003c1e56ecd3d90b57f6e1e39f9ae3b1898c481381dab8c57541de4ee9"
+  },
+  ".agents/skills/agent-supply-chain/tests/test_integrity.py": {
+    "mode": "0644",
+    "sha256": "0562d6eb579e7ebf2975489f561540cc56ded5351497904c637e47438935ad5c"
+  },
+  "prompt.txt": {
+    "mode": "0644",
+    "sha256": "7dc7ac9961ba12deceed0324c38ac55f1e5861385760926b2e499363c99f9dc1"
+  }
+}

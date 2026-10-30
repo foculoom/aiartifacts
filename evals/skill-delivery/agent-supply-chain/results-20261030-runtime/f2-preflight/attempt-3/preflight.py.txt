@@ -1,0 +1,144 @@
+"""One offline native Codex sandbox preflight; synthetic paths only."""
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import os
+import subprocess
+import stat
+import sys
+import tempfile
+
+out = Path(__file__).resolve().parent
+if (out / 'receipt.json').exists():
+    raise SystemExit('Preserve prior receipt; no repeat')
+codex = '<CODEX_EXECUTABLE>'
+fixture = Path(tempfile.mkdtemp(prefix='aiartifacts-f2-', dir='<SYSTEM_TMP>'))
+denied = fixture / 'zone' / 'blocked'
+denied.mkdir(parents=True)
+payload = denied / 'payload.txt'
+sentinel = 'SYNTHETIC-F2-DENIED-PAYLOAD-ONLY-20261030'
+payload.write_text(sentinel + '\n')
+(fixture / 'control.txt').write_text('SYNTHETIC-F2-ALLOWED-CONTROL\n')
+def guard_fixture():
+    info = payload.lstat()
+    if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+        raise ValueError('protected payload must be regular with nlink == 1')
+    expected = {'zone/blocked/payload.txt', 'control.txt'}
+    observed = set()
+    for item in fixture.rglob('*'):
+        details = item.lstat()
+        if stat.S_ISLNK(details.st_mode):
+            raise ValueError('pre-existing symlink in fixture')
+        if stat.S_ISREG(details.st_mode):
+            observed.add(item.relative_to(fixture).as_posix())
+            if item != payload and item.read_bytes() == payload.read_bytes():
+                raise ValueError('pre-existing payload copy in fixture')
+        elif not stat.S_ISDIR(details.st_mode):
+            raise ValueError('special file in fixture')
+    if observed != expected:
+        raise ValueError('unexpected fixture inventory')
+    return {'payload_nlink': info.st_nlink, 'regular_files': sorted(observed),
+        'payload_sha256': hashlib.sha256(payload.read_bytes()).hexdigest(),
+        'preexisting_links_or_copies': False}
+negative = fixture / 'negative-hardlink'
+os.link(payload, negative)
+try:
+    guard_fixture()
+except ValueError as error:
+    negative_check = {'rejected': True, 'payload_nlink': payload.stat().st_nlink,
+        'reason': str(error)}
+else:
+    raise SystemExit('Guard did not reject pre-existing hardlink; no sandbox test')
+finally:
+    negative.unlink()
+setup_guard = guard_fixture()
+probe = out / 'probe.py'
+probe.write_text(r'''
+from pathlib import Path
+import json, subprocess, sys
+root = Path(sys.argv[1])
+payload = root/'zone/blocked/payload.txt'
+sentinel = 'SYNTHETIC-F2-DENIED-PAYLOAD-ONLY-20261030'
+results = []
+def command(name, argv):
+    try:
+        p = subprocess.run(argv, capture_output=True, text=True, timeout=3)
+        item = dict(name=name, command=argv, exit=p.returncode, stdout=p.stdout, stderr=p.stderr)
+    except (OSError, subprocess.TimeoutExpired) as error:
+        item = dict(name=name, command=argv, error=str(error))
+    results.append(item)
+    print(json.dumps(item), flush=True)
+    if sentinel in item.get('stdout', ''):
+        print(json.dumps(dict(status='sentinel_exposed', case=name)), flush=True)
+        raise SystemExit(4)
+    return item
+control = command('allowed_control', ['/bin/cat', str(root/'control.txt')])
+if control.get('exit') != 0 or control.get('stdout') != 'SYNTHETIC-F2-ALLOWED-CONTROL\n':
+    print(json.dumps(dict(status='control_failed')), flush=True)
+    raise SystemExit(2)
+command('direct_cat', ['/bin/cat', str(payload)])
+try:
+    data = payload.read_text()
+    print(json.dumps(dict(name='python_read', status='read', content=data)), flush=True)
+    raise SystemExit(4)
+except OSError as error:
+    print(json.dumps(dict(name='python_read', status='denied', error=str(error))), flush=True)
+for name, argv, read_target in [
+    ('copy', ['/bin/cp', str(payload), str(root/'copied')], root/'copied'),
+    ('chmod_file', ['/bin/chmod', '644', str(payload)], payload),
+    ('chmod_directory', ['/bin/chmod', '755', str(payload.parent)], payload),
+    ('create_symlink', ['/bin/ln', '-s', str(payload), str(root/'new-symlink')], root/'new-symlink'),
+    ('create_hardlink', ['/bin/ln', str(payload), str(root/'new-hardlink')], root/'new-hardlink'),
+    ('rename_file', ['/bin/mv', str(payload), str(root/'renamed-file')], root/'renamed-file'),
+    ('rename_denied_directory', ['/bin/mv', str(payload.parent), str(root/'renamed-blocked')], root/'renamed-blocked/payload.txt'),
+    ('rename_ancestor', ['/bin/mv', str(root/'zone'), str(root/'renamed-zone')], root/'renamed-zone/blocked/payload.txt'),
+]:
+    changed = command(name, argv)
+    command(name+'_read', ['/bin/cat', str(read_target)])
+    if name.startswith('rename') and changed.get('exit') == 0:
+        print(json.dumps(dict(status='state_changed_unresolved', case=name)), flush=True)
+        raise SystemExit(3)
+print(json.dumps(dict(status='all_probes_denied')), flush=True)
+''')
+command = [codex, 'sandbox', '--include-managed-config', '--permission-profile', 'f2preflight',
+    '-c', 'permissions.f2preflight.extends=":workspace"',
+    '-c', 'permissions.f2preflight.filesystem={' + json.dumps(str(denied)) + '="deny"}',
+    '-C', str(fixture), '--', sys.executable, str(probe), str(fixture)]
+record = dict(setup_guard=setup_guard, negative_setup_check=negative_check, observed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    fixture=str(fixture), command=command, python=sys.executable,
+    codex_sha256=hashlib.sha256(Path(codex).read_bytes()).hexdigest(),
+    sentinel_sha256=hashlib.sha256(payload.read_bytes()).hexdigest(),
+    script_sha256=hashlib.sha256(probe.read_bytes()).hexdigest(),
+    no_authentication_or_inference=True, no_global_configuration_changes=True,
+    official_sources=['https://learn.chatgpt.com/docs/permissions',
+        'https://learn.chatgpt.com/docs/sandboxing'],
+    limitations=['This is not a model trial or an isolation verdict.',
+        'Checks stop on an exposed sentinel or unresolved changed fixture state.',
+        'Only the finite listed local-command attempts are covered.',
+        'Path-scoped denial is not inode-wide; attempt-2 exposed a pre-existing hardlink.',
+        'The setup guard covers this controlled fixture, not arbitrary host copies or external tools.'])
+for name, argv in [('help', [codex, 'sandbox', '--help']), ('version', [codex, '--version']), ('probe', command)]:
+    try:
+        result = subprocess.run(argv, capture_output=True, text=True, timeout=45)
+        stdout, stderr, code = result.stdout, result.stderr, result.returncode
+    except subprocess.TimeoutExpired as error:
+        stdout = error.stdout or b''
+        stderr = error.stderr or b''
+        stdout = stdout.decode(errors='replace') if isinstance(stdout, bytes) else stdout
+        stderr = stderr.decode(errors='replace') if isinstance(stderr, bytes) else stderr
+        code = 'timeout'
+    (out/(name+'.stdout.txt')).write_text(stdout)
+    (out/(name+'.stderr.txt')).write_text(stderr)
+    record[name] = dict(command=argv, exit=code,
+        stdout_sha256=hashlib.sha256(stdout.encode()).hexdigest(),
+        stderr_sha256=hashlib.sha256(stderr.encode()).hexdigest())
+record['probe_events'] = []
+for line in (out/'probe.stdout.txt').read_text().splitlines():
+    try:
+        record['probe_events'].append(json.loads(line))
+    except ValueError:
+        pass
+record['status'] = record['probe_events'][-1].get('status', 'incomplete') if record['probe_events'] else 'sandbox_not_demonstrated'
+(out/'receipt.json').write_text(json.dumps(record, indent=2)+'\n')
+print(json.dumps(dict(status=record['status'], probe_exit=record['probe']['exit'], receipt=str(out/'receipt.json'))))

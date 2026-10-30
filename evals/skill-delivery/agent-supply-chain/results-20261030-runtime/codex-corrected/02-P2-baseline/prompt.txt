@@ -1,0 +1,1 @@
+Compare payload/ against reviewed.json, which I retained from my reviewed release. Report all differences and preserve both the baseline and payload.

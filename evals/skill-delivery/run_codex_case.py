@@ -25,6 +25,38 @@ def file_hash(path):
     return digest.hexdigest()
 
 
+def validate_codex_home(path, project):
+    """Select an existing physical profile; never create it or inspect auth."""
+    if ".." in path.parts:
+        raise ValueError("codex home must not contain parent-directory components")
+    selected = path.absolute()
+    if any(part.is_symlink() for part in (selected, *selected.parents)):
+        raise ValueError("codex home must not use symlink aliases")
+    if not selected.is_dir():
+        raise ValueError("codex home must be an existing directory")
+    if selected.resolve(strict=True) != selected:
+        raise ValueError("codex home must be a physical directory")
+    if selected == project or project in selected.parents:
+        raise ValueError("codex home must be outside the evaluator project")
+    if not os.access(selected, os.R_OK | os.W_OK | os.X_OK):
+        raise ValueError("codex home must be readable, writable and searchable")
+    return selected
+
+
+def validate_external_inventory(path, project):
+    """Select measurement metadata without staging it in the model's project."""
+    if ".." in path.parts:
+        raise ValueError("inventory must not contain parent-directory components")
+    selected = path.absolute()
+    if any(part.is_symlink() for part in (selected, *selected.parents)):
+        raise ValueError("inventory must not use symlink aliases")
+    if selected == project or project in selected.parents:
+        raise ValueError("inventory must be outside the evaluator project")
+    if not selected.is_file() or selected.resolve(strict=True) != selected:
+        raise ValueError("inventory must be an existing physical regular file")
+    return selected
+
+
 def discover_host_skills(roots, limit=10000):
     """Follow installed links, retaining alias/canonical paths; fail closed."""
     found, visited = set(), 0
@@ -111,8 +143,12 @@ def main():
     parser.add_argument("--project", type=Path, required=True)
     parser.add_argument("--prompt", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--input-inventory", type=Path,
+                        help="Existing external inventory file; required for new controlled trials")
     parser.add_argument("--timeout", type=int, default=180)
     parser.add_argument("--codex", default="codex", help="Already-installed Codex executable")
+    parser.add_argument("--codex-home", type=Path,
+                        help="Explicit existing Codex profile outside the project; ambient CODEX_HOME is ignored")
     parser.add_argument("--command-path", help="Optional controlled command PATH for a failure case")
     parser.add_argument("--model", help="Explicit model; never silently substitute on failure")
     parser.add_argument("--reasoning-effort", choices=("none", "minimal", "low", "medium", "high", "xhigh"))
@@ -128,9 +164,25 @@ def main():
         parser.error("output must be outside the evaluator project")
     if not 1 <= args.timeout <= 600:
         parser.error("timeout must be between 1 and 600 seconds")
+    inventory_path = project / "input-inventory.json"
+    inventory_source = "legacy_project_path" if inventory_path.exists() else "not_provided"
+    try:
+        if args.input_inventory is not None:
+            inventory_path = validate_external_inventory(args.input_inventory, project)
+            inventory_source = "explicit_external"
+        inventory_hash = file_hash(inventory_path) if inventory_source != "not_provided" else None
+    except (OSError, ValueError) as error:
+        parser.error("invalid input inventory: " + str(error))
     environment = {key: os.environ[key] for key in (
         "HOME", "PATH", "TMPDIR", "SHELL", "USER", "LOGNAME", "LANG", "TERM"
     ) if key in os.environ}
+    codex_state_dir = Path(environment.get("HOME", str(Path.home()))) / ".codex"
+    if args.codex_home is not None:
+        try:
+            codex_state_dir = validate_codex_home(args.codex_home, project)
+        except (OSError, ValueError) as error:
+            parser.error("invalid explicit Codex profile: " + str(error))
+        environment["CODEX_HOME"] = str(codex_state_dir)
     try:
         status = subprocess.run([args.codex, "login", "status"], env=environment,
                                 capture_output=True, text=True, timeout=15)
@@ -148,7 +200,6 @@ def main():
     if not executable:
         parser.error("Codex executable could not be resolved; refusing inference")
     executable_hash, runner_hash = file_hash(executable), file_hash(__file__)
-    codex_state_dir = Path(environment.get("HOME", str(Path.home()))) / ".codex"
     roots = [codex_state_dir / "skills", Path.home() / ".agents/skills", Path("/etc/codex/skills")]
     roots += [parent / ".agents/skills" for parent in project.parents]
     try:
@@ -181,7 +232,8 @@ def main():
     if args.command_path:
         command += ["-c", "shell_environment_policy.set.PATH=" + json.dumps(args.command_path)]
     command += ["-o", str(output / "answer.txt"), "-"]
-    # Preserve ordinary existing HOME without moving it or copying auth state.
+    # Preserve HOME and use only an explicitly selected CODEX_HOME override;
+    # never create a profile or move/copy authentication state.
     # Provider keys, endpoint overrides and parent-agent session variables do
     # not enter this process. The supported existing ChatGPT login is required.
     start = time.monotonic()
@@ -212,15 +264,17 @@ def main():
         "auth": "existing ChatGPT login; no API environment passed",
         "cli_version": version.stdout.strip(),
         "cli_executable_sha256": executable_hash, "runner_sha256": runner_hash,
-        "input_inventory_sha256": hashlib.sha256(
-            (project / "input-inventory.json").read_bytes()).hexdigest()
-            if (project / "input-inventory.json").exists() else None,
+        "input_inventory_sha256": inventory_hash,
+        "input_inventory_source": inventory_source,
+        "input_inventory_path": str(inventory_path) if inventory_hash is not None else None,
         "requested_model": args.model, "requested_reasoning_effort": args.reasoning_effort,
         "session_capture": capture,
         "model_identity": identity_status(args.model, args.reasoning_effort, capture),
         "disabled_host_skills": disabled,
         "disabled_host_skill_count": len(disabled),
         "parent_codex_home_override_present": bool(os.environ.get("CODEX_HOME")),
+        "codex_home": str(codex_state_dir),
+        "codex_home_source": "explicit_argument" if args.codex_home is not None else "default_home",
         "initial_exec_context": "inspect captured rollout independently; no automatic isolation verdict",
     }
     (output / "run.json").write_text(json.dumps(result, indent=2) + "\n")

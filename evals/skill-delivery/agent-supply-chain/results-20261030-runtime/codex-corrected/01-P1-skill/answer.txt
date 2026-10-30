@@ -1,0 +1,11 @@
+Created [payload.INTEGRITY.json](<PROJECT>/payload.INTEGRITY.json), a version 2 SHA-256 baseline covering all 2 regular files in `payload/`. Only this new file was written.
+
+It records relative filenames and content hashes. A later complete match against this retained baseline establishes matching file paths and bytes, with no missing or extra files.
+
+This is a newly recorded baseline, not independent verification. It does not establish authorship, safety, permissions, ownership, extended attributes, empty directories, or metadata authenticity. Retain the baseline separately: replacing both payload and manifest can produce a matching pair.
+
+To compare a later copy:
+
+```sh
+python3 -B .agents/skills/agent-supply-chain/scripts/integrity.py verify /physical/path/to/later/payload --manifest "$PWD/payload.INTEGRITY.json"
+```

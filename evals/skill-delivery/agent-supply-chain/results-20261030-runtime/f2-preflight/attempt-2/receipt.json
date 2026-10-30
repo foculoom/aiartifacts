@@ -1,0 +1,298 @@
+{
+  "observed_at": "2026-10-30T23:11:49.774189+00:00",
+  "fixture": "<FIXTURE>",
+  "command": [
+    "<CODEX_EXECUTABLE>",
+    "sandbox",
+    "--include-managed-config",
+    "--permission-profile",
+    "f2preflight",
+    "-c",
+    "permissions.f2preflight.extends=\":workspace\"",
+    "-c",
+    "permissions.f2preflight.filesystem={\"<FIXTURE>/zone/blocked\"=\"deny\"}",
+    "-C",
+    "<FIXTURE>",
+    "--",
+    "<PYTHON_EXECUTABLE>",
+    "<FIXTURE>/probe.py",
+    "<FIXTURE>"
+  ],
+  "python": "<PYTHON_EXECUTABLE>",
+  "codex_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+  "sentinel_sha256": "2177019bdd3d7cb15a59b6c8be532a76027bab6085547a70fd3152eb1484d01c",
+  "script_sha256": "cd17b50e03d92f3dba7a83907d6bbde6101012995f7a403d2f3e8c898f4e4f9e",
+  "no_authentication_or_inference": true,
+  "no_global_configuration_changes": true,
+  "official_sources": [
+    "https://learn.chatgpt.com/docs/permissions",
+    "https://learn.chatgpt.com/docs/sandboxing"
+  ],
+  "limitations": [
+    "This is not a model trial or an isolation verdict.",
+    "Checks stop on an exposed sentinel or unresolved changed fixture state.",
+    "Only the finite listed local-command attempts are covered."
+  ],
+  "help": {
+    "command": [
+      "<CODEX_EXECUTABLE>",
+      "sandbox",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout_sha256": "9c1a28dd4817163ccdbe6bd9e808f87402cef5490170c37f4679fbb2c75139bf",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "version": {
+    "command": [
+      "<CODEX_EXECUTABLE>",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "probe": {
+    "command": [
+      "<CODEX_EXECUTABLE>",
+      "sandbox",
+      "--include-managed-config",
+      "--permission-profile",
+      "f2preflight",
+      "-c",
+      "permissions.f2preflight.extends=\":workspace\"",
+      "-c",
+      "permissions.f2preflight.filesystem={\"<FIXTURE>/zone/blocked\"=\"deny\"}",
+      "-C",
+      "<FIXTURE>",
+      "--",
+      "<PYTHON_EXECUTABLE>",
+      "<FIXTURE>/probe.py",
+      "<FIXTURE>"
+    ],
+    "exit": 4,
+    "stdout_sha256": "154499f3ebabb91e9956e6f9d5ea820aa7ab6384e26aa53d36019a3b4698cd60",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "probe_events": [
+    {
+      "name": "allowed_control",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/control.txt"
+      ],
+      "exit": 0,
+      "stdout": "SYNTHETIC-F2-ALLOWED-CONTROL\n",
+      "stderr": ""
+    },
+    {
+      "name": "direct_cat",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/zone/blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "python_read",
+      "status": "denied",
+      "error": "[Errno 1] Operation not permitted: '<FIXTURE>/zone/blocked/payload.txt'"
+    },
+    {
+      "name": "copy",
+      "command": [
+        "/bin/cp",
+        "<FIXTURE>/zone/blocked/payload.txt",
+        "<FIXTURE>/copied"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cp: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "copy_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/copied"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/copied: No such file or directory\n"
+    },
+    {
+      "name": "chmod_file",
+      "command": [
+        "/bin/chmod",
+        "644",
+        "<FIXTURE>/zone/blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "chmod: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "chmod_file_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/zone/blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "chmod_directory",
+      "command": [
+        "/bin/chmod",
+        "755",
+        "<FIXTURE>/zone/blocked"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "chmod: <FIXTURE>/zone/blocked: Operation not permitted\n"
+    },
+    {
+      "name": "chmod_directory_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/zone/blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "create_symlink",
+      "command": [
+        "/bin/ln",
+        "-s",
+        "<FIXTURE>/zone/blocked/payload.txt",
+        "<FIXTURE>/new-symlink"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "create_symlink_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/new-symlink"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/new-symlink: Operation not permitted\n"
+    },
+    {
+      "name": "create_hardlink",
+      "command": [
+        "/bin/ln",
+        "<FIXTURE>/zone/blocked/payload.txt",
+        "<FIXTURE>/new-hardlink"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "ln: <FIXTURE>/zone/blocked/payload.txt: Operation not permitted\n"
+    },
+    {
+      "name": "create_hardlink_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/new-hardlink"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/new-hardlink: No such file or directory\n"
+    },
+    {
+      "name": "rename_file",
+      "command": [
+        "/bin/mv",
+        "<FIXTURE>/zone/blocked/payload.txt",
+        "<FIXTURE>/renamed-file"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "mv: rename <FIXTURE>/zone/blocked/payload.txt to <FIXTURE>/renamed-file: Operation not permitted\n"
+    },
+    {
+      "name": "rename_file_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/renamed-file"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/renamed-file: No such file or directory\n"
+    },
+    {
+      "name": "rename_denied_directory",
+      "command": [
+        "/bin/mv",
+        "<FIXTURE>/zone/blocked",
+        "<FIXTURE>/renamed-blocked"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "mv: rename <FIXTURE>/zone/blocked to <FIXTURE>/renamed-blocked: Operation not permitted\n"
+    },
+    {
+      "name": "rename_denied_directory_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/renamed-blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/renamed-blocked/payload.txt: No such file or directory\n"
+    },
+    {
+      "name": "rename_ancestor",
+      "command": [
+        "/bin/mv",
+        "<FIXTURE>/zone",
+        "<FIXTURE>/renamed-zone"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "mv: rename <FIXTURE>/zone to <FIXTURE>/renamed-zone: Operation not permitted\n"
+    },
+    {
+      "name": "rename_ancestor_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/renamed-zone/blocked/payload.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/renamed-zone/blocked/payload.txt: No such file or directory\n"
+    },
+    {
+      "name": "preexisting_symlink_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/preexisting-symlink"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: <FIXTURE>/preexisting-symlink: Operation not permitted\n"
+    },
+    {
+      "name": "preexisting_hardlink_read",
+      "command": [
+        "/bin/cat",
+        "<FIXTURE>/preexisting-hardlink"
+      ],
+      "exit": 0,
+      "stdout": "SYNTHETIC-F2-DENIED-PAYLOAD-ONLY-20261030\n",
+      "stderr": ""
+    },
+    {
+      "status": "sentinel_exposed",
+      "case": "preexisting_hardlink_read"
+    }
+  ],
+  "status": "sentinel_exposed"
+}

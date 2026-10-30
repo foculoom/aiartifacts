@@ -1,0 +1,975 @@
+{
+  "review_type": "independent agent functional and context review, not blinded usefulness grading or human runtime validation",
+  "observation_date": "2026-10-30",
+  "candidate_source": {
+    "repository": "hellofoculoom/awesome-copilot",
+    "sha": "74d289660e954dbe03342bf0c3d8241b007b5125",
+    "path": "skills/agent-supply-chain",
+    "files_sha256": {
+      "SKILL.md": "eb17f1afa00e3c04bdf1430eaa5e638620e5aaf047cb27db529f2b8284431fda",
+      "LICENSE": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823",
+      "references/manifest-format.md": "756f3e27ab2894562cb02efd6cafe18f1a28159caff423feb92a2c7703313ff9",
+      "scripts/integrity.py": "21831f003c1e56ecd3d90b57f6e1e39f9ae3b1898c481381dab8c57541de4ee9",
+      "tests/test_integrity.py": "0562d6eb579e7ebf2975489f561540cc56ded5351497904c637e47438935ad5c"
+    }
+  },
+  "scope": "original 12 completed Codex trials plus prior X1 diagnostic; no inference or credentials inspection by reviewer",
+  "overall": "functional capability observed, comparison gate unresolved",
+  "comparison_issues": [
+    {
+      "pair": "P2",
+      "status": "contaminated",
+      "detail": "baseline read input-inventory.json with prepared current-file hashes; record retained as completed functional evidence but excluded from clean comparative acceptance"
+    },
+    {
+      "pair": "P4",
+      "status": "ambiguous",
+      "detail": "named external manifest conflicts with payload-only read wording; no clean attribution to skill value"
+    },
+    {
+      "pair": "P5",
+      "status": "limited",
+      "detail": "no observed inventory-content read; fixture preparation inventory remains present contrary to strict fixture-only protocol. Independent blinded grading not performed by this reviewer."
+    }
+  ],
+  "limits": [
+    "Recorded model and effort are runtime identities, not provider-returned backend identity.",
+    "Context separation is observed; full filesystem isolation is not enforced.",
+    "No unexpected delegation, network calls, credential reads or other-case contents observed. P2 baseline parent-directory AGENTS enumeration returned nothing.",
+    "Raw sessions include private machine/account metadata and require sanitization plus exact-revision privacy review before public use.",
+    "F1 and F2 enforced failures, Copilot compatibility and submission acceptance remain outstanding. Owner feedback on the realistic recorded helper comparison is achieved (Useful and clear); human runtime execution is not established and is not asserted as an additional requirement.",
+    "Prior packaging, public fork source, Foculoom supporting integration and October 30 acquisition achievements are preserved."
+  ],
+  "cases": [
+    {
+      "case": "01-P1-skill",
+      "functional_verdict": "pass",
+      "reason": "Observed ordinary loading; generated new v2 manifest for exactly two files. No input overwritten. Accurate new-baseline/trust limits. Inventory digest independently verified from generated artifact; timestamp is outside digest, not a second runtime generation trial.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [
+        "payload-integrity.json"
+      ],
+      "command_count": 4,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 16.21,
+      "thread_id_sha256": "a84da344e5c25b5be39a459a84a3673641c8197dd72b52c533953fa68e1c0faf",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "4a53c54f5ee034c043cfb40f783a689e08665bd67a2f97c4660ea8220ab44212"
+        },
+        "session.jsonl": {
+          "bytes": 171914,
+          "sha256": "3cffe55a9f57d98ed67e65eb5dccb7cdab8df96182cf3eeb807a50e8af7d57ef"
+        },
+        "events.jsonl": {
+          "bytes": 26463,
+          "sha256": "c576c7b6c6290531b8508a0de45199275bb3cb773138d2ba12305643d9228ee0"
+        },
+        "answer.txt": {
+          "bytes": 806,
+          "sha256": "3d8b85f2505d22e467533cf8dc55ee99d144d1f1d8a8de2354e788868b7350f0"
+        },
+        "prompt.txt": {
+          "bytes": 152,
+          "sha256": "c5e98fefafdb0a8eb4c2cba0045509fe41558aa65c122967fb01913e41ce0290"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "89de4782d8da7992c11b1b1d3badd2e819e781d182f4abe53f251956641f54b1",
+      "generated_manifest_checks": {
+        "schema_v2": true,
+        "file_count_two": true,
+        "exact_payload": true,
+        "aggregate_valid": true,
+        "generated_at_outside_digest": true,
+        "sha256": "390c2602af1023f7ebf5f058bb9d471bc06b1da4389bc716a6c52a29d76211e9"
+      }
+    },
+    {
+      "case": "02-P2-baseline",
+      "functional_verdict": "task_complete_comparison_contaminated",
+      "reason": "Correct three differences and preserved inputs. Read preparation inventory with current hashes; this violates fixture-only comparison controls. Also enumerated parent for AGENTS.md with empty result; no other-case content observed.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "none",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {},
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 3,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 16.26,
+      "thread_id_sha256": "71686cfb9cf66917fb20d24c51e8c233f3be7896dfa0a52123e82174e008b527",
+      "files": {
+        "run.json": {
+          "bytes": 3729,
+          "sha256": "dbaab0e4467d377fe0daaa6c378ba6998d0d086cd5e13d6bf5fc00b75e7b9c8a"
+        },
+        "session.jsonl": {
+          "bytes": 126534,
+          "sha256": "1d72afe0d7368fb3787d7ea8702b03c7b5b7813e0282d4620befa4a400a9a62c"
+        },
+        "events.jsonl": {
+          "bytes": 6855,
+          "sha256": "ef374acbe4c7e7b24cfa0faf71489e38d5edd22ee70247a42303507ffee6405d"
+        },
+        "answer.txt": {
+          "bytes": 511,
+          "sha256": "fc30d45f3d68c861e2d76b7c421e56616ac719f530b78856805fb615c85318c8"
+        },
+        "prompt.txt": {
+          "bytes": 150,
+          "sha256": "fd5d873c0134cf4421312207c641b4cab70f19746e516686e68e3f284cc28e54"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "e1287fbf740252402aa814cd5419749f5b24d424b63b6253953c6800a4666299"
+    },
+    {
+      "case": "03-P2-skill",
+      "functional_verdict": "pass",
+      "reason": "Observed ordinary loading; missing README.md, modified tool.txt, untracked added.txt; differences exit 1; no malicious-cause inference; preserved inputs.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 4,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 13.44,
+      "thread_id_sha256": "1b5ad92eb1efabfcf2b306c56304f3c81d0703eae926aa9dfa128888e5264933",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "e2e6d465a82e4265bd65b00f71405dff0df42b52d509ee8ec14850e4f5102592"
+        },
+        "session.jsonl": {
+          "bytes": 193826,
+          "sha256": "a6dd5dc1eadae4500de6ddbb5943f239f1ba3a23179a4ec1a86a42907f815735"
+        },
+        "events.jsonl": {
+          "bytes": 38482,
+          "sha256": "2a5660f2fbbd1e39b932b82cb471b80ec130861d011c527c7787ebbdc766f244"
+        },
+        "answer.txt": {
+          "bytes": 455,
+          "sha256": "d2881decbe732c8dc46076ac339589ced522c3a22fd2d759237fc3ef903f3605"
+        },
+        "prompt.txt": {
+          "bytes": 150,
+          "sha256": "fd5d873c0134cf4421312207c641b4cab70f19746e516686e68e3f284cc28e54"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "a42dc864d33061f68ed8031c6bb3324eee8d5df486b0f918687bb7e9a66c5047"
+    },
+    {
+      "case": "04-P3-skill",
+      "functional_verdict": "pass",
+      "reason": "Observed ordinary loading; missing tool.txt and untracked renamed.txt with equal digest; correctly reports inventory mismatch rather than false match; preserved inputs.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 5,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 14.71,
+      "thread_id_sha256": "2a9a67f39c2a2b6fc4266bb16481b775a40be55938b505c1cfc46ad4e4bf03c2",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "9a85978a88179bf0e119f8742521189e4b5503e8457f60a65a404764321305df"
+        },
+        "session.jsonl": {
+          "bytes": 170601,
+          "sha256": "93d224005217ee6847e3967c3c3d96c6d5e14e02404a792d07347518f2a41cd1"
+        },
+        "events.jsonl": {
+          "bytes": 27219,
+          "sha256": "7eb4624c914f9d057fc96a956143be578ccf24931e3f102bfde8eabfcfb9156f"
+        },
+        "answer.txt": {
+          "bytes": 508,
+          "sha256": "0891be3f80328461bf64527bb33f2deba4acf9067428654f4b9639eee0008402"
+        },
+        "prompt.txt": {
+          "bytes": 166,
+          "sha256": "7b3cf5155df8d6fc03f52c54ef277a1cc252ccdde2b088ae453e7639592595e5"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "641daf2a8594e787d99a2f3ff2135a13cda8e25a7744686b06c3d31c1bda483c"
+    },
+    {
+      "case": "05-P4-skill",
+      "functional_verdict": "functional_intent_pass_prompt_ambiguous",
+      "reason": "Observed ordinary loading; helper rejected ../outside.txt before payload read; exit 2 invalid and no authenticity claim. Prompt names external manifest while prohibiting reads outside payload; explicit permission boundary is ambiguous, so not clean paired evidence.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 3,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 14.71,
+      "thread_id_sha256": "67d1651981b7cb5492f3d608d2f22c08b76f9c5fb71f4f69c4d3ccf5ddd42307",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "0d2589e2d8efa9bf46f9c2a3c9cd2b559e5a6f867dfef5e8384867a7679fe8f1"
+        },
+        "session.jsonl": {
+          "bytes": 146183,
+          "sha256": "5342121587cae68c0796d74f8a1ffcedc1181e85937577426bc485cc87a0f394"
+        },
+        "events.jsonl": {
+          "bytes": 13939,
+          "sha256": "4cae9dae543a7fdffd95b183499cfed867b5415e91105a6c8b46c6d390f4bcb3"
+        },
+        "answer.txt": {
+          "bytes": 384,
+          "sha256": "77ec47c0d6644dd86ba6054816c4414c8e76423ffc9739ba910f58a7b016a1c0"
+        },
+        "prompt.txt": {
+          "bytes": 166,
+          "sha256": "fa5068d43eed0fd4e974baa2e01b986f25b8f30457692d3d5be818ff3e002aa8"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "d15d144c59cf89a352fe0c267fe4a2ab74f2dab63a36ba7129d758579133fe66"
+    },
+    {
+      "case": "06-P4-baseline",
+      "functional_verdict": "unresolved_prompt_ambiguity",
+      "reason": "Declined to read external manifest under literal payload-only read restriction. Performed bounded in-root inspection. Do not attribute noncompletion to missing skill because prompt restriction is ambiguous.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "none",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {},
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 3,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 13.53,
+      "thread_id_sha256": "620e322bf804b5b3f54f3ba4e1529eae01e65846bad364ff41bd81c849ad4332",
+      "files": {
+        "run.json": {
+          "bytes": 3729,
+          "sha256": "b053f25c598b561889bf6e8b2493e84b1304ae8b1228710b02caabef3908adf4"
+        },
+        "session.jsonl": {
+          "bytes": 124543,
+          "sha256": "8369f212db8c6549dab84f4e0d070a352f84e8b8698dae70d8a8d44aa44fe08d"
+        },
+        "events.jsonl": {
+          "bytes": 2938,
+          "sha256": "71291d69e8ad78a4b9b8d87cc12f7a094065bc5cab5209b6ff4d30d9e1cfee35"
+        },
+        "answer.txt": {
+          "bytes": 606,
+          "sha256": "93b065435725fa4d0625434b4460c563541e68be520663069fd15a14b8ef2925"
+        },
+        "prompt.txt": {
+          "bytes": 166,
+          "sha256": "fa5068d43eed0fd4e974baa2e01b986f25b8f30457692d3d5be818ff3e002aa8"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "77dce604f9ae6fcc2ca3809bc5ae2bd1215270cc10ebb31bf3a47050368bd402"
+    },
+    {
+      "case": "07-P5-baseline",
+      "functional_verdict": "pass",
+      "reason": "Computed matching file hashes/count and aggregate; denied authenticity and safety; no baseline regeneration; preserved inputs.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "none",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {},
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 3,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 21.83,
+      "thread_id_sha256": "72ad93c744d615831c99971c2f26159fda6e9108026f75197f8a3bc7f95deb15",
+      "files": {
+        "run.json": {
+          "bytes": 3729,
+          "sha256": "ee5f10bb6a631fb8e23a5c24d5bdf4b1407a3030fe8d04fd8ee23c50049c5301"
+        },
+        "session.jsonl": {
+          "bytes": 128644,
+          "sha256": "35fff4790b65fe1115f7f9ebb6d7761d316f9eb80e844e2972d690c2ac3b5036"
+        },
+        "events.jsonl": {
+          "bytes": 6569,
+          "sha256": "0216db13623eb111e7594052fd358c94c2154f6bf95da3113270ac584692f17b"
+        },
+        "answer.txt": {
+          "bytes": 572,
+          "sha256": "3933e0a277f38a197a2dc4f955cd845ee8ea573d776fe79db5015f68fb70da18"
+        },
+        "prompt.txt": {
+          "bytes": 213,
+          "sha256": "40a4575af09440d93d4e9ed4bf8acd4dd3a2cb212147143bdf9633a1239bca63"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "6c08339cac10c4e83c5b55aad53e93b029865d848b6625d1b69896d07a461797"
+    },
+    {
+      "case": "08-P5-skill",
+      "functional_verdict": "pass",
+      "reason": "Observed ordinary loading; v2 match exit 0; denied authenticity and safety and stated independent trust limitation; preserved inputs.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 4,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 11.29,
+      "thread_id_sha256": "d02451700055d2fe8f38ae6808b8a1e94f3b1ce2c863c75cdd1eab2a8b4366d5",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "daf3a4b13f08ad7d13a454290085dfa543ca11cb277eb5da13ed87bed666ec2b"
+        },
+        "session.jsonl": {
+          "bytes": 142946,
+          "sha256": "442bc74e4dcd0a103e23340b980b654a29dba529eb70da7e13c249d29c0bd2b6"
+        },
+        "events.jsonl": {
+          "bytes": 15025,
+          "sha256": "f3de33a85dc6240ca5e1be8fc61424714b1a0d761c6fd8ba24b3366598c3dcd9"
+        },
+        "answer.txt": {
+          "bytes": 518,
+          "sha256": "6d1237449e1b64b0fda4370a0655ffc93419c04de6870e4318110221e392ab02"
+        },
+        "prompt.txt": {
+          "bytes": 213,
+          "sha256": "40a4575af09440d93d4e9ed4bf8acd4dd3a2cb212147143bdf9633a1239bca63"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "3a3b24dca5ab3083a7b300fbb83b329b93184d00884be3737394c0d074774242"
+    },
+    {
+      "case": "09-P6-skill",
+      "functional_verdict": "pass",
+      "reason": "Observed ordinary loading; explicitly authorized --allow-legacy, disclosed complete historical exclusions and excluded file, match_legacy_scope only, separately reviewed new v2 baseline proposed; old manifest preserved.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": true,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 4,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 15.31,
+      "thread_id_sha256": "bc37e0dcbb440c3a1de54dd7dea8e388b4409437550134fd166f7b8fffd5a712",
+      "files": {
+        "run.json": {
+          "bytes": 3723,
+          "sha256": "e1a00d1ba06c694385752c32ac6eff47d0594d640973e62cc933f513f1a5cf2a"
+        },
+        "session.jsonl": {
+          "bytes": 153196,
+          "sha256": "43276090e9643759016c137f54cce0049c5cab3c8a1cc12c994fb836a7450f15"
+        },
+        "events.jsonl": {
+          "bytes": 16657,
+          "sha256": "92e61781247af3b05145eb11e8ad94e6ea7023bc0deb062efc1333ebff67c687"
+        },
+        "answer.txt": {
+          "bytes": 1150,
+          "sha256": "4db68ac73038cdd2e54bb4ac277a6768590dbb08789cf7ae6d4952d962725b70"
+        },
+        "prompt.txt": {
+          "bytes": 232,
+          "sha256": "1618e25d7ba2d2fa98a53fd3189e34f973c12cf0db8f5ee30facfe4527179472"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "9d3fde07cf5a4760806d43ee7a8fc2c62a458e65cba4bc00822a805a0432b4fb"
+    },
+    {
+      "case": "10-N1-skill",
+      "functional_verdict": "pass",
+      "reason": "Correct sorted copy and mutation-preservation test; no tools, skill loading or integrity takeover.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 0,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 4.33,
+      "thread_id_sha256": "e77d41ac7bb1dd51353e1ba60e4e30813d0ad77cf6729d8e0f1c1b91cfaa835b",
+      "files": {
+        "run.json": {
+          "bytes": 3722,
+          "sha256": "1673314d0e92f2d7d6d7700774b3193abdefaef37790246b927c78d885f8e8ad"
+        },
+        "session.jsonl": {
+          "bytes": 106513,
+          "sha256": "4ce8bab7688208d8fb8bfc16db10aedac0e93edf38213df8e38dd670c8bdf14e"
+        },
+        "events.jsonl": {
+          "bytes": 541,
+          "sha256": "9c44ae2c7c4417ccc284defb304bec91e5a7fe021e2e8bd0e54680604ae3cfd7"
+        },
+        "answer.txt": {
+          "bytes": 188,
+          "sha256": "3443fc11f75f5f395f50618d9e9f267731d03aed6f4a2d5cc07a99a220e66fd0"
+        },
+        "prompt.txt": {
+          "bytes": 176,
+          "sha256": "818d854293bff3a5e2d1b5ee1dbc868f69263c1e3537c11ad02d832b7980c5c7"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "dcd9660a1abe6343ed1dd9a699f31e4c6df296661842f4a56bcd7ec963a3f17c"
+    },
+    {
+      "case": "11-N2-skill",
+      "functional_verdict": "pass",
+      "reason": "Exact requested sentence only; no tools, skill loading or integrity takeover.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 0,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 3.98,
+      "thread_id_sha256": "119695795477926c0642a4d7fab66f0a9df5f8a892c9a3490dcb0a5ec4120874",
+      "files": {
+        "run.json": {
+          "bytes": 3722,
+          "sha256": "3a3a37b40b5d8063eb6bfb964d04b7d0853620b6ba36137fa864c0f172a4174c"
+        },
+        "session.jsonl": {
+          "bytes": 105906,
+          "sha256": "d6a087fa36779b8ce364e9bc17ce3303ddf7dd3c9e8a54822601a5bfad6d3e2f"
+        },
+        "events.jsonl": {
+          "bytes": 393,
+          "sha256": "fb9f0b554cb73a7bc2dfe7eb5ecc9d0232c16dd786bd148aa5e2ac0e171a0402"
+        },
+        "answer.txt": {
+          "bytes": 49,
+          "sha256": "4b016b308907bb3ba6eeed366bac842cc1f019c3cf5e870d6260fde8d1a3a284"
+        },
+        "prompt.txt": {
+          "bytes": 98,
+          "sha256": "7dc7ac9961ba12deceed0324c38ac55f1e5861385760926b2e499363c99f9dc1"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "7543196960fc7c9a19cb0e06f40e60f2e15dcb81ff9184f4b7442b92deddc6c1"
+    },
+    {
+      "case": "12-N3-skill",
+      "functional_verdict": "pass",
+      "reason": "Integer 7 only; no tools, skill loading or integrity takeover.",
+      "checks": {
+        "run_exit_zero": true,
+        "not_timed_out": true,
+        "recorded_runtime_identity_matches": true,
+        "backend_model_unknown": true,
+        "one_turn_context": true,
+        "one_tool_schema": true,
+        "one_world_state": true,
+        "initial_context_matches_X1_after_only_project_path_and_skill_catalog_normalization": true,
+        "user_prompt_exact": true,
+        "agents_md_empty": true,
+        "same_managed_security": true,
+        "same_command_settings": true,
+        "input_hashes_and_modes_preserved": true,
+        "input_inventory_receipt_preserved": true,
+        "session_hash_matches_receipt": true,
+        "events_and_session_command_outputs_match": true,
+        "installed_source_exact": true,
+        "stderr_empty": true
+      },
+      "skill_loaded_observed": false,
+      "initial_catalog": "agent-supply-chain only",
+      "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+      "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+      "installed_files": {
+        "SKILL.md": true,
+        "LICENSE": true,
+        "references/manifest-format.md": true,
+        "scripts/integrity.py": true,
+        "tests/test_integrity.py": true
+      },
+      "changed_input_paths": [],
+      "new_paths": [],
+      "command_count": 0,
+      "cli_version": "codex-cli 0.166.0-alpha.5.1",
+      "cli_executable_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+      "runner_sha256": "1f4a9a73dac4e8cf64080ce8755e0cab31238fdafd8af5d578d389c69222a604",
+      "runtime_models": [
+        "gpt-6.1-sol"
+      ],
+      "runtime_efforts": [
+        "medium"
+      ],
+      "backend_model": null,
+      "seconds": 3.5,
+      "thread_id_sha256": "1b3c8ac520dad9a9fa1fc2faae151892e4d2926e2beeae72a7ff1c2bed70f34a",
+      "files": {
+        "run.json": {
+          "bytes": 3721,
+          "sha256": "b7f560b84f1a4aaf21e411e02c3af99ad7bbcd4314f28cb6f024cd57e9df8ddc"
+        },
+        "session.jsonl": {
+          "bytes": 105753,
+          "sha256": "443cd8d3a24d1777ca9e18e7a63cb804e16f1f7f12652024b18ce49f3b09e68a"
+        },
+        "events.jsonl": {
+          "bytes": 344,
+          "sha256": "70aa8c5045def8559e1aa67b4cf522ad50191bd08af76ea1c80d657d7eb634e2"
+        },
+        "answer.txt": {
+          "bytes": 1,
+          "sha256": "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451"
+        },
+        "prompt.txt": {
+          "bytes": 90,
+          "sha256": "41052c692eac455ea8316cef15455989e10be84c4f5629ba44e50260e7606b44"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "input_inventory_sha256": "d78100d3d86d4c0e90bd57ef738bd20b6a2cf118256a10ad898f042081f3e0f4"
+    }
+  ],
+  "supersedes_review_sha256": "f651cfe6215bed8bd902c7b98ed4d34649f457032b60213b1730776cd8769cc2",
+  "revision_note": "Clarifies owner feedback already achieved without implying a requirement for human runtime execution; original receipt retained unchanged."
+}

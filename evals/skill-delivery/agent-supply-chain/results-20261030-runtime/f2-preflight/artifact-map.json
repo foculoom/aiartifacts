@@ -1,0 +1,427 @@
+{
+  "observed_date": "2026-10-30",
+  "kind": "sanitized_candidate_pending_independent_privacy_review",
+  "preservation": "Original raw receipts, logs and scripts remain private and unchanged. Raw identity fields inside sanitized receipts continue to identify original bytes, not the transformed snapshots.",
+  "omissions": "No stdout/stderr/event records omitted. Machine-specific paths and temporary fixture IDs are normalized. No environment variables, credentials, authentication output, managed configuration contents or model tool catalog were captured in these preflights.",
+  "script_snapshots": "Python sources are .py.txt evidence snapshots, not installation or executable distribution artifacts. Placeholder paths require operator substitution to reproduce.",
+  "files": [
+    {
+      "attempt": 1,
+      "original_name": "help.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 2300,
+      "original_sha256": "9c1a28dd4817163ccdbe6bd9e808f87402cef5490170c37f4679fbb2c75139bf",
+      "snapshot": "attempt-1/help.stdout.txt",
+      "snapshot_bytes": 2290,
+      "snapshot_sha256": "d0660a2dcbf4e9bab3edba7433b8950fc6a9e724f5267350aeb3c4ba777cb7b4",
+      "transformations": [
+        "trailing whitespace normalized for repository checks"
+      ]
+    },
+    {
+      "attempt": 1,
+      "original_name": "help.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-1/help.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 1,
+      "original_name": "version.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 28,
+      "original_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "snapshot": "attempt-1/version.stdout.txt",
+      "snapshot_bytes": 28,
+      "snapshot_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "transformations": []
+    },
+    {
+      "attempt": 1,
+      "original_name": "version.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-1/version.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 1,
+      "original_name": "probe.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-1/probe.stdout.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 1,
+      "original_name": "probe.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 126,
+      "original_sha256": "b799b6291cff96c6df571c51d5fbc91fced98f7d1c1576930f55f5d92a2fa8ce",
+      "snapshot": "attempt-1/probe.stderr.txt",
+      "snapshot_bytes": 99,
+      "snapshot_sha256": "bdfae2987e7ed06e297e78ec545a98f88d49f4b2a32419706bb60abb685d29ea",
+      "transformations": [
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "original_name": "receipt.json",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 3134,
+      "original_sha256": "ebab666688dbe25b2893a28a6d95b04b493ae9565492a5007986ecd5670efa50",
+      "snapshot": "attempt-1/receipt.json",
+      "snapshot_bytes": 2494,
+      "snapshot_sha256": "4689a41a6fb750e3f65a8124eb2bee8be7668430e4051441eb7be4a2fc553e8e",
+      "transformations": [
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 4
+        },
+        {
+          "kind": "native_python_location",
+          "replacement": "<PYTHON_EXECUTABLE>",
+          "occurrences": 3
+        },
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 9
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "original_name": "preflight.py",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 6064,
+      "original_sha256": "c3e344718a811795d75df5f4bb46a7d80ff6c5d892db38c43664f5d1bb9a638d",
+      "snapshot": "attempt-1/preflight.py.txt",
+      "snapshot_bytes": 5994,
+      "snapshot_sha256": "40b0f51314cb22dbc6ef6bef25a0227c09cf2aa801e9cd5b8c219ad0452c6300",
+      "transformations": [
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 1
+        },
+        {
+          "kind": "generic_temporary_root",
+          "replacement": "<SYSTEM_TMP>",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "original_name": "probe.py",
+      "original_origin": "generated_fixture_probe",
+      "original_bytes": 2639,
+      "original_sha256": "cd17b50e03d92f3dba7a83907d6bbde6101012995f7a403d2f3e8c898f4e4f9e",
+      "snapshot": "attempt-1/probe.py.txt",
+      "snapshot_bytes": 2639,
+      "snapshot_sha256": "cd17b50e03d92f3dba7a83907d6bbde6101012995f7a403d2f3e8c898f4e4f9e",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "help.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 2300,
+      "original_sha256": "9c1a28dd4817163ccdbe6bd9e808f87402cef5490170c37f4679fbb2c75139bf",
+      "snapshot": "attempt-2/help.stdout.txt",
+      "snapshot_bytes": 2290,
+      "snapshot_sha256": "d0660a2dcbf4e9bab3edba7433b8950fc6a9e724f5267350aeb3c4ba777cb7b4",
+      "transformations": [
+        "trailing whitespace normalized for repository checks"
+      ]
+    },
+    {
+      "attempt": 2,
+      "original_name": "help.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-2/help.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "version.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 28,
+      "original_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "snapshot": "attempt-2/version.stdout.txt",
+      "snapshot_bytes": 28,
+      "snapshot_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "version.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-2/version.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "probe.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 5366,
+      "original_sha256": "154499f3ebabb91e9956e6f9d5ea820aa7ab6384e26aa53d36019a3b4698cd60",
+      "snapshot": "attempt-2/probe.stdout.txt",
+      "snapshot_bytes": 4097,
+      "snapshot_sha256": "a47d98c7a8006a78efa4c109e3f03d2d548fde75b6c70af9d48d5fdd6fc0caf2",
+      "transformations": [
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 47
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "original_name": "probe.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-2/probe.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "receipt.json",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 9922,
+      "original_sha256": "3afb244c9dc9628ab77fa0e46790cf15215ecce557bb55b34e5a38e991b640c8",
+      "snapshot": "attempt-2/receipt.json",
+      "snapshot_bytes": 8013,
+      "snapshot_sha256": "3ee58b6689b068ee0cd3df8aad40578139e0651b866486258d96a682a45045be",
+      "transformations": [
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 4
+        },
+        {
+          "kind": "native_python_location",
+          "replacement": "<PYTHON_EXECUTABLE>",
+          "occurrences": 3
+        },
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 56
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "original_name": "preflight.py",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 6066,
+      "original_sha256": "21d3fea770b64469a0247ceacde46034fae657f4ce72b20c8543cbc1e03ecb27",
+      "snapshot": "attempt-2/preflight.py.txt",
+      "snapshot_bytes": 5996,
+      "snapshot_sha256": "90eca4eece13e9282774ba86c155d253a0bb8710cafe0f10ff67d3e27fa4cfa7",
+      "transformations": [
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 1
+        },
+        {
+          "kind": "generic_temporary_root",
+          "replacement": "<SYSTEM_TMP>",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "original_name": "change.json",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 525,
+      "original_sha256": "50bf7dfc8d861b0e6fbba4a0c748975f1dfc769fc2a0081273b2031295ad27ad",
+      "snapshot": "attempt-2/change.json",
+      "snapshot_bytes": 525,
+      "snapshot_sha256": "50bf7dfc8d861b0e6fbba4a0c748975f1dfc769fc2a0081273b2031295ad27ad",
+      "transformations": []
+    },
+    {
+      "attempt": 2,
+      "original_name": "probe.py",
+      "original_origin": "generated_fixture_probe",
+      "original_bytes": 2639,
+      "original_sha256": "cd17b50e03d92f3dba7a83907d6bbde6101012995f7a403d2f3e8c898f4e4f9e",
+      "snapshot": "attempt-2/probe.py.txt",
+      "snapshot_bytes": 2639,
+      "snapshot_sha256": "cd17b50e03d92f3dba7a83907d6bbde6101012995f7a403d2f3e8c898f4e4f9e",
+      "transformations": []
+    },
+    {
+      "attempt": 3,
+      "original_name": "help.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 2300,
+      "original_sha256": "9c1a28dd4817163ccdbe6bd9e808f87402cef5490170c37f4679fbb2c75139bf",
+      "snapshot": "attempt-3/help.stdout.txt",
+      "snapshot_bytes": 2290,
+      "snapshot_sha256": "d0660a2dcbf4e9bab3edba7433b8950fc6a9e724f5267350aeb3c4ba777cb7b4",
+      "transformations": [
+        "trailing whitespace normalized for repository checks"
+      ]
+    },
+    {
+      "attempt": 3,
+      "original_name": "help.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-3/help.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 3,
+      "original_name": "version.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 28,
+      "original_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "snapshot": "attempt-3/version.stdout.txt",
+      "snapshot_bytes": 28,
+      "snapshot_sha256": "be0e6ff319c54a10bf765d5095e195f8600fc242efac27050d7aec00a00ddfa5",
+      "transformations": []
+    },
+    {
+      "attempt": 3,
+      "original_name": "version.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-3/version.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 3,
+      "original_name": "probe.stdout.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 4875,
+      "original_sha256": "358eb076dac9674da8e534d3d9a85234038c5e16189357f864be66d68a631aad",
+      "snapshot": "attempt-3/probe.stdout.txt",
+      "snapshot_bytes": 3687,
+      "snapshot_sha256": "8f99ceea141a87a17f98d5327804e8e924159b648137de1ff5789b007c1d4d7a",
+      "transformations": [
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 44
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "original_name": "probe.stderr.txt",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot": "attempt-3/probe.stderr.txt",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "attempt": 3,
+      "original_name": "receipt.json",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 10142,
+      "original_sha256": "a91eff11036874f5ed321579735bccd0a676190f8a80dcb32b06c9c580aa56b3",
+      "snapshot": "attempt-3/receipt.json",
+      "snapshot_bytes": 8080,
+      "snapshot_sha256": "0630e16e32d7edb0cd7aff0085e6b76ca45e8d52c89f046287a8184e1765eb16",
+      "transformations": [
+        {
+          "kind": "private_receipt_directory",
+          "replacement": "<PRIVATE_ATTEMPT>",
+          "occurrences": 2
+        },
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 4
+        },
+        {
+          "kind": "native_python_location",
+          "replacement": "<PYTHON_EXECUTABLE>",
+          "occurrences": 3
+        },
+        {
+          "kind": "temporary_fixture_directory_and_id",
+          "replacement": "<FIXTURE>",
+          "occurrences": 51
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "original_name": "preflight.py",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 7530,
+      "original_sha256": "8431f2059b61ebfb3df6b942ab366a36fa0cda9f5086e7c8c7cbd87d555faa24",
+      "snapshot": "attempt-3/preflight.py.txt",
+      "snapshot_bytes": 7460,
+      "snapshot_sha256": "07b0b71f339780e9e810bd0119bd9977c118c9397c6a43982a185d71bacb1767",
+      "transformations": [
+        {
+          "kind": "native_cli_location",
+          "replacement": "<CODEX_EXECUTABLE>",
+          "occurrences": 1
+        },
+        {
+          "kind": "generic_temporary_root",
+          "replacement": "<SYSTEM_TMP>",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "original_name": "probe.py",
+      "original_origin": "private_attempt_record",
+      "original_bytes": 2471,
+      "original_sha256": "0b72b1e5cb7854670d9396df4e945590303f48514e29f1550fa0109958bb7758",
+      "snapshot": "attempt-3/probe.py.txt",
+      "snapshot_bytes": 2471,
+      "snapshot_sha256": "0b72b1e5cb7854670d9396df4e945590303f48514e29f1550fa0109958bb7758",
+      "transformations": []
+    }
+  ]
+}

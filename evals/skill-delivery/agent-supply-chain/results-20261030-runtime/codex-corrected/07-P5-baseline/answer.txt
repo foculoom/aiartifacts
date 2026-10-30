@@ -1,0 +1,9 @@
+Yes, they match:
+
+- Both payload files match their SHA-256 hashes in `supplied.json`.
+- The file count is 2, with no missing or extra files.
+- `manifest_hash` matches the SHA-256 of the compact, key-sorted JSON `files` mapping.
+
+This establishes internal consistency, **not authenticity or safety**. Someone could replace both the payload and manifest and recompute all hashes. Authenticity requires an independently trusted reference or a signature verified with a trusted vendor key. Even authentic software can contain malicious code or vulnerabilities.
+
+All files were left unchanged.

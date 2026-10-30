@@ -1,0 +1,22 @@
+{
+  "outside.txt": {
+    "mode": "0644",
+    "sha256": "bc3f0abef90cfe3f8514139327d8f5ac31d7fb18fa0ef30cb4073800dfe33edd"
+  },
+  "payload/README.md": {
+    "mode": "0644",
+    "sha256": "7a935bf02e3393327214b62ec809344b6f3eac77983682e1a550861ff97a77ef"
+  },
+  "payload/tool.txt": {
+    "mode": "0644",
+    "sha256": "dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9"
+  },
+  "prompt.txt": {
+    "mode": "0644",
+    "sha256": "fa5068d43eed0fd4e974baa2e01b986f25b8f30457692d3d5be818ff3e002aa8"
+  },
+  "supplied.json": {
+    "mode": "0644",
+    "sha256": "36285e548ad2c54b627471304631b2f163e40bd740178cc5b2a840541ce752e0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "Correct quoted dotted-key parsing by passing one TOML inline table",
+  "original_driver_sha256": "c3e344718a811795d75df5f4bb46a7d80ff6c5d892db38c43664f5d1bb9a638d",
+  "corrected_driver_sha256": "21d3fea770b64469a0247ceacde46034fae657f4ce72b20c8543cbc1e03ecb27",
+  "original_argument_expression": "'-c', 'permissions.f2preflight.filesystem.' + json.dumps(str(denied)) + '=\"deny\"',",
+  "corrected_argument_expression": "'-c', 'permissions.f2preflight.filesystem={' + json.dumps(str(denied)) + '=\"deny\"}',"
+}

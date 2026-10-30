@@ -95,13 +95,30 @@ fixtures before applying the mode restriction. Archive timestamps and machine
 paths need not reproduce historical bytes: record the new exact archive/input
 hashes and preserve the same semantics and balanced arms.
 
-Before inference, create `input-inventory.json` with SHA-256 of every staged
-regular file except that inventory itself; do not include a prior `receipt`
-directory. Use `hashlib.sha256(path.read_bytes()).hexdigest()` with paths relative
-to the disposable project. The runner binds the inventory's own hash into its
-receipt. For a correction, make a fresh copy of the original project including
-its output, omit its old receipt/inventory, supply only the reviewer's narrow
-prompt and recompute the inventory. Never replace the original attempt.
+Before inference, create an inventory **outside the disposable project** with
+SHA-256 of every staged regular file; do not stage measurement metadata or a
+prior receipt directory. Use `hashlib.sha256(path.read_bytes()).hexdigest()` with
+paths relative to the disposable project. New controlled trials must pass that
+external file as `--input-inventory /absolute/input-inventory.json`. It must be
+an existing regular file outside the project, without symlink aliases or
+parent-directory components. The runner hashes it before authentication or
+inference, records its path and `explicit_external` source in the private
+receipt, and never copies it or forwards its path/content to the model command,
+environment or prompt. Preserve the selected inventory separately with the
+private run evidence.
+
+For historical compatibility, omitting the option still reads a project's
+`input-inventory.json` when present and labels it `legacy_project_path`; absence
+is `not_provided`. Neither fallback qualifies as the required setup for new
+controlled trials. An October 30 Agent Supply Chain baseline read its staged
+inventory: preserve all twelve first attempts and assess their actual context;
+do not rewrite them as isolated runs. Moving metadata outside the project
+prevents automatic staging, but is not a filesystem access boundary. Inspect
+actual tool calls and context for measurement access before accepting a run.
+
+For a correction, make a fresh copy of the original project including its
+output, omit old receipts/inventories, supply only the reviewer's narrow prompt
+and recompute the external inventory. Never replace the original attempt.
 
 For missing-Python trials, create a test-only command directory containing
 symlinks to the ordinary read/file utilities needed by the case, but no Python
@@ -111,6 +128,11 @@ Record this as **Python unavailable on the controlled command PATH**, not
 absence of every interpreter on the host. Preserve any actual attempted command
 and failure; a narrated restriction alone does not prove execution behavior.
 
+That historical PATH check is only a diagnostic. The active Agent Supply Chain
+acceptance gate requires independently enforced interpreter unavailability,
+including alternative paths and obtaining an interpreter; PATH hiding cannot
+satisfy it. See the [active pilot procedure](agent-supply-chain/README.md).
+
 For read-denial trials on a POSIX host, write the synthetic file first, record
 its hash, then set that fixture file's mode to `000`. Verify a direct read fails
 under the evaluator identity. No permission change or alternate copy is allowed
@@ -118,12 +140,18 @@ to the evaluator. Do not restrict the installed skill itself. A user running
 with privileges that bypass those modes needs a different enforced fixture;
 do not count an ineffective setup as a passing failure case.
 
+For the active pilot, user-changeable mode bits and instructions not to change
+them are also insufficient. The denied resource must remain unreadable with
+the evaluator's granted tools and permissions, including attempted permission
+changes. Preserve evidence of that enforcement before running the model.
+
 ## Execute and preserve
 
 ```sh
 python3 evals/skill-delivery/run_codex_case.py \
   --project /absolute/disposable-project \
   --prompt /absolute/prompt.txt \
+  --input-inventory /absolute/input-inventory.json \
   --output /absolute/new-receipt-directory --timeout 300 \
   --model gpt-6.1-sol --reasoning-effort medium --capture-session
 ```
@@ -137,11 +165,34 @@ an API-key login, unavailable authentication or a failed CLI version check. It
 does not log authentication output. It retains only ordinary existing process
 environment variables, excluding API keys, provider overrides and parent-agent
 session variables. It preserves the existing HOME value and does not copy
-credentials. It enumerates the home skill directories, `/etc/codex/skills` and
+credentials. By default it ignores an ambient `CODEX_HOME` and uses
+`HOME/.codex`, preserving the historical runner behavior. To select a separately
+prepared profile, add `--codex-home /absolute/existing-profile` to the command.
+The directory must already exist, be readable/writable/searchable, have no
+symlink aliases or parent-directory components, and be outside the evaluated
+project so profile credentials are not staged as evaluation inputs. The runner
+does not create a profile, copy credentials, or change profile security settings.
+
+For a separate profile, the owner first completes the normal
+[ChatGPT login](https://learn.chatgpt.com/docs/auth) using that same explicitly
+selected `CODEX_HOME`; the runner only checks its existing authentication method.
+[Codex state locations](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations)
+include configuration and session state under `CODEX_HOME`, while credentials
+may use the configured OS store. Do not copy an `auth.json` from another profile
+or override managed authentication/security requirements to prepare a trial.
+The runner passes the explicit directory consistently to authentication status,
+version and execution, and reads captured sessions only from that directory.
+The private receipt records the selected path and whether it was explicit.
+
+It enumerates skills in the selected profile, the home `.agents/skills`,
+`/etc/codex/skills` and
 ancestor `.agents/skills` directories, following installed links and recording
 both alias and canonical paths. Cycles, dangling links, unreadable entries,
 enumeration overflow or a staged skill aliasing a disabled host skill cause
-refusal before inference. Process-only settings request that these skills,
+refusal before inference. Enumeration happens after authentication/version
+initialization, so built-in skills created during those steps are also disabled.
+A previously empty profile or a pre-initialization preview is not proof of an
+empty catalog. Process-only settings request that these skills,
 plugins, apps, hooks, memories and subagents be disabled; sandboxing and approval
 denial remain enabled. The exact command and disabled paths stay in private
 run metadata. Inspect the actual execution context independently: an inventory,
@@ -154,7 +205,7 @@ values. Omitting the model still uses the CLI default, as in the historical
 trials; do not retroactively assign those runs a model identity.
 
 `--capture-session` is opt-in: it omits ephemeral mode, leaving the ordinary
-local session in the existing Codex state directory, and copies only this run's
+local session in the selected Codex state directory, and copies only this run's
 UUID-bound rollout to the private receipt directory. The capture checks session,
 project and CLI identities and rejects linked, stale or oversized rollouts.
 Without the flag, the run remains ephemeral and no rollout copy is requested.
@@ -197,7 +248,10 @@ raw originals privately, update snapshot transforms/hashes after redaction, and
 do not describe a corrective commit as recall of earlier public copies.
 
 The runner's synthetic, offline regression tests cover its authentication guard,
-skill enumeration and session evidence handling:
+explicit-profile forwarding and rejection, post-initialization skill enumeration,
+and session evidence handling. They also check that profile selection neither
+forwards provider-key environment variables nor relaxes the command's sandbox
+and approval settings:
 
 ```sh
 python3 -m unittest discover -s evals/skill-delivery -p test_runtime_runner.py -q

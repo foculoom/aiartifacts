@@ -1,0 +1,1 @@
+Return only the integer file_count in this JSON: {"plugin_name": "demo", "file_count": 7}

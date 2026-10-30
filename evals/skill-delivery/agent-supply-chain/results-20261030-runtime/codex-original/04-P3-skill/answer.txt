@@ -1,0 +1,7 @@
+The file contents match the supplied baseline, but the version 2 inventory does **not** fully match because it binds filenames as well as bytes.
+
+- `README.md` matches.
+- `tool.txt` is missing; `renamed.txt` has exactly its recorded SHA-256 digest, consistent with a rename.
+- No content modifications were detected.
+
+Verification returned `differences` (exit 1). I treated `reviewed.json` as the supplied comparison baseline; its review provenance was not independently verified. Neither input was modified.

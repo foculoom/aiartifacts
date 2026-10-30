@@ -1,0 +1,1 @@
+Use the agent-supply-chain skill to compare payload/ against reviewed.json. Preserve both inputs and explain the result's limits.

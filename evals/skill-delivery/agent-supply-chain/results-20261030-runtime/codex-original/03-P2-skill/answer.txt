@@ -1,0 +1,9 @@
+SHA-256 verification of `payload/` against your retained reviewed-release baseline, `reviewed.json` (schema v2), found:
+
+- **Missing:** `README.md`
+- **Modified:** `tool.txt`
+- **Added:** `added.txt`
+
+These are all file-path and content differences. The check completed with exit code `1` (`differences`). Both the baseline and payload were left unchanged.
+
+The inventory does not compare permissions, ownership, extended attributes, or empty directories.

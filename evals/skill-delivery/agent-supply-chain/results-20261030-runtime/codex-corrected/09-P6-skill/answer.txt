@@ -1,0 +1,19 @@
+`payload/` **matches the legacy scope** of the unversioned `reviewed.json`: exit code `0`, status `match_legacy_scope`. Both inventoried files match; no missing, modified, or untracked files were found within that scope. `reviewed.json` remains unchanged.
+
+Legacy exclusions are:
+
+- Directories: `.git`, `__pycache__`, `node_modules`, `.venv`, `.pytest_cache`.
+- File names: `.DS_Store`, `Thumbs.db`, `INTEGRITY.json`.
+- The selected manifest itself.
+
+Here, `payload/node_modules/` was skipped entirely. This is therefore **not a complete package match**. Independent trust in the supplied baseline was not established in this session.
+
+To migrate, separately review the intended package contents, then generate a new version 2 baseline at a new destination:
+
+```sh
+python3 .agents/skills/agent-supply-chain/scripts/integrity.py generate \
+  <PROJECT>/payload \
+  --manifest <PROJECT>/reviewed-v2.json
+```
+
+Version 2 includes every regular file except the selected manifest, including dependencies, hidden files, caches, and nested manifests. Its aggregate hash binds both paths and content digests. Stage only intended contents before review and generation; simply adding `schema_version: 2` to the old manifest is not a valid migration.

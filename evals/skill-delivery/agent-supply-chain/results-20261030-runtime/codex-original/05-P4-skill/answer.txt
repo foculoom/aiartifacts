@@ -1,0 +1,3 @@
+Verification failed: `supplied.json` is a version 2 manifest containing `../outside.txt`, which escapes `payload/`. The verifier rejected it as invalid (exit code 2), so no content match was established.
+
+The referenced outside file was not read, and the download was not modified. Because the manifest came with the download, it also provides no independent evidence of authenticity.
