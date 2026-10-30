@@ -1,0 +1,83 @@
+"""Prepare reviewed local exports without chmod, installation or network access."""
+import datetime
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import stat
+import sys
+import zipfile
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'output'
+sys.dont_write_bytecode = True
+spec = importlib.util.spec_from_file_location('export_checks', ROOT / '.agents/skills/skill-delivery/scripts/export_skill.py')
+checks = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(checks)
+record = json.loads((ROOT / 'source-record.json').read_text())
+selected = [
+    'SKILL.md', 'LICENSE', 'DEPENDENCIES.md',
+    'references/examples.md', 'references/audience/adult.md',
+    'references/audience/early-reader.md', 'references/medium/web.md',
+    'references/medium/longform.md', 'references/medium/game-ui.md',
+    'references/medium/game-dialogue.md', 'scripts/prose_lint.py',
+    'tests/test_prose_lint.py',
+]
+skill_files = {p: 'editorial-writing/' + p for p in selected}
+plugin_files = {'skills/editorial-writing/' + p: source for p, source in skill_files.items()}
+plugin_files.update({'plugin.json': 'existing-plugin.json',
+                     'LICENSE': 'editorial-writing/LICENSE',
+                     'DEPENDENCIES.md': 'editorial-writing/DEPENDENCIES.md'})
+results = []
+for name, kind, files in [('editorial-writing', 'skill', skill_files), ('editorial', 'plugin', plugin_files)]:
+    config = dict(version=1, name=name, kind=kind,
+                  source_commit=record['base_revision'], files=files)
+    config_path = OUT / (name + '-export.json')
+    config_path.write_text(json.dumps(config, indent=2) + '\n')
+    config = checks.config_record(config_path.read_bytes())
+    payload = {dest: checks.source_bytes(ROOT / 'source', source) for dest, source in files.items()}
+    checks.check_payload(config, payload)
+    package = OUT / name
+    package.mkdir()
+    stage = package / 'payload'
+    stage.mkdir()
+    entries = {}
+    with zipfile.ZipFile(package / 'skill.zip', 'x', compression=zipfile.ZIP_STORED) as archive:
+        for dest in sorted(payload):
+            path = stage / dest
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(payload[dest])
+            # Observe default-created permissions; never set or change them.
+            mode = format(stat.S_IMODE(path.stat().st_mode), '04o')
+            assert mode in {'0644', '0755'}, 'Unexpected default file mode'
+            entry = zipfile.ZipInfo(dest, date_time=(1980, 1, 1, 0, 0, 0))
+            entry.create_system = 3
+            entry.external_attr = (stat.S_IFREG | int(mode, 8)) << 16
+            archive.writestr(entry, payload[dest])
+            entries[dest] = dict(source=files[dest], sha256=checks.digest(payload[dest]), mode=mode)
+    manifest = {k: config[k] for k in ('version', 'name', 'kind', 'source_commit')}
+    manifest.update(source_commit_verification=checks.PROVENANCE_LIMIT,
+                    config_sha256=checks.digest(config_path.read_bytes()),
+                    limitations=checks.LIMITS, files=entries)
+    manifest_path = package / 'manifest.json'
+    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n')
+    archive_result = checks.verify(manifest_path, archive=package / 'skill.zip')
+    stage_result = checks.verify(manifest_path, installed_root=stage)
+    results.append(dict(name=name, file_count=len(entries), archive=archive_result,
+                        staged_payload=stage_result, archive_sha256=checks.digest((package / 'skill.zip').read_bytes())))
+
+after = {p.relative_to(ROOT / 'source/editorial-writing').as_posix(): checks.digest(p.read_bytes())
+         for p in (ROOT / 'source/editorial-writing').rglob('*') if p.is_file()}
+assert after == record['files'] == json.loads((OUT / 'source-before.json').read_text())
+assert checks.digest((ROOT / 'source/existing-plugin.json').read_bytes()) == json.loads((ROOT / 'input-inventory.json').read_text())['source/existing-plugin.json']
+(OUT / 'source-after.json').write_text(json.dumps(after, indent=2) + '\n')
+evidence = dict(observed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                packages=results, source_unchanged=True, plugin_manifest_unchanged=True,
+                source_commit=record['base_revision'],
+                source_identity='Supplied snapshot hashes match source-record.json; not a Git checkout or remote verification.',
+                permissions='No chmod or permission changes. New files retain creation defaults; ZIP records those observed modes.',
+                excluded=['scripts/__pycache__/prose_lint.cpython-312.pyc',
+                          'tests/__pycache__/test_prose_lint.cpython-312.pyc'],
+                exclusion_reason='Generated interpreter caches, not portable runtime resources.')
+(OUT / 'package-inventory.json').write_text(json.dumps(evidence, indent=2) + '\n')
+print(json.dumps(evidence, indent=2))

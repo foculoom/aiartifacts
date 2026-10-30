@@ -1,0 +1,19 @@
+{
+  "source_url": "https://github.com/foculoom/aiartifacts",
+  "source_path": "plugins/editorial/skills/editorial-writing",
+  "base_revision": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "documentation_revisions": {
+    "awesome": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+    "skills": "92a9a34ac3bf88e695e468b90c7bf32f163d32c8"
+  },
+  "inputs": {
+    "source-record.json": "636550dcf043a58988a13376dfdc28ddd6d05d8b16ec28c097dabeee694b647e",
+    "README.md": "83adead38f00726bbf3371e052c6e3ed8dfdd7101ac08cbb636cf29f893f0896",
+    "existing-authoring/SKILL.md": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+    "existing-authoring/scripts/quick_validate.py": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+    "official-sources/skills-creating.md": "5f8a9b0ca2783c68f464bf21d8e8ee2db12b186cd8fddda95d105d350c6584f5",
+    "official-sources/skills-commands.md": "595355b00da494d336ce495931ce6c4a90e61509f4493c48dfc8fdca5cbb36b7",
+    "official-sources/awesome-contributing.md": "4aa8b5bdb0d18c1744c55aaf9c078e3682c7d0e185d6365d12a03b2106fa1b40",
+    "source/existing-plugin.json": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c"
+  }
+}

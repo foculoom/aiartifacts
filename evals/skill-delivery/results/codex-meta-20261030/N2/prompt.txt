@@ -1,0 +1,3 @@
+Shorten this release announcement to one clear sentence, preserving its facts:
+"We are pleased to announce that version 2.4 is now available, and it adds
+keyboard shortcuts for opening and closing the search panel."

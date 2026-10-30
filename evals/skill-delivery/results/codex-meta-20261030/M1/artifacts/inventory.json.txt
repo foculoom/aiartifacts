@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-30",
+  "source_revision": null,
+  "python": "3.9.6",
+  "PyYAML": "6.0.3",
+  "files": [
+    {
+      "path": "output/DELIVERY.md",
+      "sha256": "9c11dc3c6bbe67c0ea5be2e6d2e207aeb2841686f631ee1fabdccbacaabd536a",
+      "bytes": 2510
+    },
+    {
+      "path": "output/cases/expected.md",
+      "sha256": "086a24c99a65bf05d506d7f9d466cbc126dbfa89f2ee63b1d15748f0792f2ef5",
+      "bytes": 1670
+    },
+    {
+      "path": "output/cases/fixtures/clean.md",
+      "sha256": "a11b2579de30314aaf2f1f1486c4721b92954294cd6b44471e661c948136c22c",
+      "bytes": 224
+    },
+    {
+      "path": "output/cases/fixtures/docs/guide.md",
+      "sha256": "ba21ecb6e515faaf37c5672b42c902589af14dead30a1e0c3addd0425585f91f",
+      "bytes": 41
+    },
+    {
+      "path": "output/cases/fixtures/docs/space guide.md",
+      "sha256": "148e9f4ffb4bd803d85fdd4b12cff104a9dc88e0cf7df94c8f04b0af92d13857",
+      "bytes": 62
+    },
+    {
+      "path": "output/cases/fixtures/handoff.md",
+      "sha256": "08cc6055722a59716c2dff7d400184b47e03bd070d423b0a9873ea4dbaa0cf15",
+      "bytes": 412
+    },
+    {
+      "path": "output/cases/fixtures/media/marker.svg",
+      "sha256": "0deef654dae4dede48203ccbf33ba0a0c8a87bb5b401f9114d8dde5889d91fc1",
+      "bytes": 97
+    },
+    {
+      "path": "output/cases/fixtures/uncertain.md",
+      "sha256": "7c0851e9ab5c3e7c35ee91060f264620385c1fd6beaf16fa4d53250cf72bf6df",
+      "bytes": 285
+    },
+    {
+      "path": "output/cases/inputs.json",
+      "sha256": "5b412ed3cb7e380a5180b533151f272aea6f3d5d3e58f712f94d6f4bb85b22a4",
+      "bytes": 931
+    },
+    {
+      "path": "output/evidence/validation.md",
+      "sha256": "9451a6fa4b139924babf8ae91838ac1deaeeb79240ab42cf94bab80f3e09f999",
+      "bytes": 1964
+    },
+    {
+      "path": "output/source/markdown-local-links/DEPENDENCIES.md",
+      "sha256": "ff11352426e1021048990e083014c8bdb2f9cb0ef72895eadb53b753defb6854",
+      "bytes": 907
+    },
+    {
+      "path": "output/source/markdown-local-links/SKILL.md",
+      "sha256": "1f47a7974651abf9922eb03968131d53d8db6205b6b5ca142dbf1e481e273441",
+      "bytes": 3026
+    },
+    {
+      "path": "output/source/markdown-local-links/agents/openai.yaml",
+      "sha256": "600f3a306231948120d318be0434002f24d75f3f7275a156a8b6001fd7d6b1c8",
+      "bytes": 115
+    }
+  ],
+  "authoring_tools": [
+    {
+      "path": "existing-authoring/scripts/init_skill.py",
+      "sha256": "bf0656a5f9d8d8cdecf0245eaf27e1df8e0e9b6d40ccdda814eb8e3d5f6992c8",
+      "bytes": 10314
+    },
+    {
+      "path": "existing-authoring/scripts/generate_openai_yaml.py",
+      "sha256": "816df12072d74faf924d802a6599a139997e1441e90bfe4869ec304f2e5e2851",
+      "bytes": 6669
+    },
+    {
+      "path": "existing-authoring/scripts/quick_validate.py",
+      "sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+      "bytes": 4249
+    }
+  ]
+}

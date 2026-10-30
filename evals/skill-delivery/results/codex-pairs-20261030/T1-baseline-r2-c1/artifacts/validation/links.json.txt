@@ -1,0 +1,43 @@
+{
+  "checked": 9,
+  "missing": 0,
+  "escaping_package": 0,
+  "links": [
+    {
+      "from": "candidate/skills/editorial-writing/DEPENDENCIES.md",
+      "target": "LICENSE"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/medium/longform.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/medium/web.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/medium/game-ui.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/medium/game-dialogue.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/audience/adult.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/audience/early-reader.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "references/examples.md"
+    },
+    {
+      "from": "candidate/skills/editorial-writing/SKILL.md",
+      "target": "scripts/prose_lint.py"
+    }
+  ]
+}

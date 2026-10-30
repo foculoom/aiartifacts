@@ -1,0 +1,288 @@
+[
+  {
+    "original_path": "output/PROVENANCE.md",
+    "original_sha256": "7d772607c94e56318b92b6682fac8c8d12ebf203432230af06f25face6080c55",
+    "bytes": 4946,
+    "snapshot": "artifacts/PROVENANCE.md.txt",
+    "snapshot_sha256": "7d772607c94e56318b92b6682fac8c8d12ebf203432230af06f25face6080c55",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/REPORT.md",
+    "original_sha256": "227514291e37da81208316368ec15e65dea40f426149c21ec1efee13c6549fbe",
+    "bytes": 3492,
+    "snapshot": "artifacts/REPORT.md.txt",
+    "snapshot_sha256": "227514291e37da81208316368ec15e65dea40f426149c21ec1efee13c6549fbe",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/SHA256SUMS",
+    "original_sha256": "ea74adcaec7263d3d322d626b99f9d5b5fef29b35bedb5fbcaa17b4786395af1",
+    "bytes": 2897,
+    "snapshot": "artifacts/SHA256SUMS.txt",
+    "snapshot_sha256": "ea74adcaec7263d3d322d626b99f9d5b5fef29b35bedb5fbcaa17b4786395af1",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/DEPENDENCIES.md",
+    "original_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "bytes": 1856,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/DEPENDENCIES.md.txt",
+    "snapshot_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/LICENSE",
+    "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/LICENSE.txt",
+    "snapshot_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/SKILL.md",
+    "original_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "bytes": 4282,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/SKILL.md.txt",
+    "snapshot_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/audience/adult.md",
+    "original_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "bytes": 941,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/audience/adult.md.txt",
+    "snapshot_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/audience/early-reader.md",
+    "original_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "bytes": 1283,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/audience/early-reader.md.txt",
+    "snapshot_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/examples.md",
+    "original_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "bytes": 2108,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/examples.md.txt",
+    "snapshot_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/medium/game-dialogue.md",
+    "original_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "bytes": 1096,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/medium/game-dialogue.md.txt",
+    "snapshot_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/medium/game-ui.md",
+    "original_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "bytes": 1156,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/medium/game-ui.md.txt",
+    "snapshot_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/medium/longform.md",
+    "original_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "bytes": 1457,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/medium/longform.md.txt",
+    "snapshot_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/references/medium/web.md",
+    "original_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "bytes": 1131,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/references/medium/web.md.txt",
+    "snapshot_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/scripts/prose_lint.py",
+    "original_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "bytes": 16864,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/scripts/prose_lint.py.txt",
+    "snapshot_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/candidate/skills/editorial-writing/tests/test_prose_lint.py",
+    "original_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "bytes": 12983,
+    "snapshot": "artifacts/candidate/skills/editorial-writing/tests/test_prose_lint.py.txt",
+    "snapshot_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/editorial-writing-candidate.zip",
+    "original_sha256": "c27c718bbf1fbb67566b5c0a82940bc7514c634f552d36cff66273246a18e564",
+    "bytes": 23208,
+    "archive_members": [
+      {
+        "path": "skills/editorial-writing/DEPENDENCIES.md",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/SKILL.md",
+        "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/audience/adult.md",
+        "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/audience/early-reader.md",
+        "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/examples.md",
+        "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/game-dialogue.md",
+        "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/game-ui.md",
+        "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/longform.md",
+        "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/web.md",
+        "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/scripts/prose_lint.py",
+        "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/tests/test_prose_lint.py",
+        "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+        "mode": "0o100644"
+      }
+    ],
+    "snapshot": "artifacts/editorial-writing-candidate.zip",
+    "snapshot_sha256": "c27c718bbf1fbb67566b5c0a82940bc7514c634f552d36cff66273246a18e564",
+    "transform": "exact bytes"
+  },
+  {
+    "original_path": "output/file-inventory.json",
+    "original_sha256": "783188e7a19c0801a3943243c9db727caefe31a775bfff62f934bc6782b9f5fd",
+    "bytes": 4541,
+    "snapshot": "artifacts/file-inventory.json.txt",
+    "snapshot_sha256": "783188e7a19c0801a3943243c9db727caefe31a775bfff62f934bc6782b9f5fd",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/provenance-inputs.json",
+    "original_sha256": "95617c743ad19353dbe9d14c41b39a220debe966e5cc2500d445ed902b6a2004",
+    "bytes": 1201,
+    "snapshot": "artifacts/provenance-inputs.json.txt",
+    "snapshot_sha256": "95617c743ad19353dbe9d14c41b39a220debe966e5cc2500d445ed902b6a2004",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/source-inventory.json",
+    "original_sha256": "85460ef5d249af70d95a33e377fdb4b2c7cb0a98ffef62a01d4969b712448da1",
+    "bytes": 1860,
+    "snapshot": "artifacts/source-inventory.json.txt",
+    "snapshot_sha256": "85460ef5d249af70d95a33e377fdb4b2c7cb0a98ffef62a01d4969b712448da1",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/final-integrity.json",
+    "original_sha256": "3162f434cd74f1fc98087d274b48ca07c26b8fab113f582708f1ce3d8a6ca41d",
+    "bytes": 247,
+    "snapshot": "artifacts/validation/final-integrity.json.txt",
+    "snapshot_sha256": "3162f434cd74f1fc98087d274b48ca07c26b8fab113f582708f1ce3d8a6ca41d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/links.json",
+    "original_sha256": "9d503e0615b3ff6e5b389c14c0c4f6828339952f667c620af8e4edbff943f7e8",
+    "bytes": 1149,
+    "snapshot": "artifacts/validation/links.json.txt",
+    "snapshot_sha256": "9d503e0615b3ff6e5b389c14c0c4f6828339952f667c620af8e4edbff943f7e8",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/prose-lint.json",
+    "original_sha256": "7a2ab7532e2818ac5be7a8612b5e73335ae3b7cf9f328bd93fc8a6e26ef61114",
+    "bytes": 43,
+    "snapshot": "artifacts/validation/prose-lint.json.txt",
+    "snapshot_sha256": "7a2ab7532e2818ac5be7a8612b5e73335ae3b7cf9f328bd93fc8a6e26ef61114",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/quick-validate.txt",
+    "original_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+    "bytes": 16,
+    "snapshot": "artifacts/validation/quick-validate.txt.txt",
+    "snapshot_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/results.json",
+    "original_sha256": "643b7e8a40900e48e44aa011274eb68b6d5eafa69cecd9c1bd7bb4e43f5424b5",
+    "bytes": 1614,
+    "snapshot": "artifacts/validation/results.json.txt",
+    "snapshot_sha256": "643b7e8a40900e48e44aa011274eb68b6d5eafa69cecd9c1bd7bb4e43f5424b5",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/tests-python312-canonical-temp.txt",
+    "original_sha256": "2cfe69fa5717056cf89211684cb36cb63bb1478c0a72795c35533252ef528ab0",
+    "bytes": 3793,
+    "snapshot": "artifacts/validation/tests-python312-canonical-temp.txt.txt",
+    "snapshot_sha256": "2cfe69fa5717056cf89211684cb36cb63bb1478c0a72795c35533252ef528ab0",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/tests-python312.txt",
+    "original_sha256": "ea8b105956209fcbea93c8277c3cbcd71cfd799db77a182d43fad5732b93772d",
+    "bytes": 8206,
+    "snapshot": "artifacts/validation/tests-python312.txt.txt",
+    "snapshot_sha256": "1dfc6104c17f88b1cbbd8a0778b730bae284659a1a58b0fec933410987ca30dc",
+    "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
+  },
+  {
+    "original_path": "output/validation/tests-python39-canonical-temp.txt",
+    "original_sha256": "26674b3a4b921de683c5180647bf611b41e72913567f32dc38ddca515f15d6ae",
+    "bytes": 2453,
+    "snapshot": "artifacts/validation/tests-python39-canonical-temp.txt.txt",
+    "snapshot_sha256": "26674b3a4b921de683c5180647bf611b41e72913567f32dc38ddca515f15d6ae",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/validation/tests-python39.txt",
+    "original_sha256": "a339cf38a5017dcb57de2c8b3505e75b50743cfa140d6b368577a010959c12f7",
+    "bytes": 6397,
+    "snapshot": "artifacts/validation/tests-python39.txt.txt",
+    "snapshot_sha256": "1b43dc4b300b62adb99b5244072771208a30f7158c39c243a1dec68c9050fae8",
+    "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "editorial-writing",
+  "kind": "skill",
+  "source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "files": {
+    "DEPENDENCIES.md": "source/new/editorial-writing/DEPENDENCIES.md",
+    "LICENSE": "source/new/editorial-writing/LICENSE",
+    "SKILL.md": "source/new/editorial-writing/SKILL.md",
+    "references/audience/adult.md": "source/new/editorial-writing/references/audience/adult.md",
+    "references/audience/early-reader.md": "source/new/editorial-writing/references/audience/early-reader.md",
+    "references/examples.md": "source/new/editorial-writing/references/examples.md",
+    "references/medium/game-dialogue.md": "source/new/editorial-writing/references/medium/game-dialogue.md",
+    "references/medium/game-ui.md": "source/new/editorial-writing/references/medium/game-ui.md",
+    "references/medium/longform.md": "source/new/editorial-writing/references/medium/longform.md",
+    "references/medium/web.md": "source/new/editorial-writing/references/medium/web.md",
+    "scripts/prose_lint.py": "source/new/editorial-writing/scripts/prose_lint.py"
+  }
+}

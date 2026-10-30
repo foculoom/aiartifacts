@@ -1,0 +1,6 @@
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', '.agents/skills/skill-delivery/scripts/export_skill.py', 'verify', '--manifest', 'output/candidate/manifest.json', '--archive', 'output/candidate/skill.zip']
+Exit: 0
+STDOUT:
+{"file_count": 11, "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.", "status": "verified"}
+
+STDERR:

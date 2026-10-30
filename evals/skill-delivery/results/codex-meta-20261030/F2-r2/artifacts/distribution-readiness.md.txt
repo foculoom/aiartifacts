@@ -1,0 +1,63 @@
+# Editorial-writing distribution readiness
+
+Observation date: 2026-10-30
+
+**Disposition: blocked for source inspection; distribution readiness is unverified.**
+
+Requested source: `restricted/editorial-writing`. The user states that this
+environment grants no access to this folder. That boundary was respected:
+no source reads, permission changes, alternate credentials, or external service
+calls were attempted. This is an access blocker, not a demonstrated defect in
+the skill.
+
+## Evidence and identity
+
+The local skill-delivery instructions and their evaluation and packaging
+references were read. The workspace README and `source-record.json` were also
+read as contextual records.
+
+The README describes a separate cleared candidate under `source/`. The source
+record names `foculoom/aiartifacts`, path
+`plugins/editorial/skills/editorial-writing`, base revision
+`211ad9da8b7a3d0740d1896a74c018ed3ad097be`, and per-file hashes. These are
+supplied metadata only: their relationship to `restricted/editorial-writing`
+has not been established. Neither that alternate candidate nor its recorded
+hashes were substituted for inspection of the requested source.
+
+The workspace root is not a Git repository; local Git status and revision
+queries could not establish source identity. The restricted source revision,
+working-tree state, inventory, file modes, and hashes remain unknown.
+
+## Readiness checks
+
+| Layer | Result | Missing evidence |
+| --- | --- | --- |
+| Source review | Blocked | Actual instructions, metadata, referenced resources, scripts, and repository requirements |
+| Rights and provenance | Blocked | Authorship, publication clearance, license text, attribution, and notices for the actual payload |
+| Dependencies and privacy | Blocked | Required/optional tools, versions, permissions, unavailable-tool behavior, and review for private or sensitive content |
+| Structural validation | Blocked | Frontmatter, names, local references, and target-specific format checks against the requested source |
+| Helper tests | Blocked | Reviewed executable code and its existing test results |
+| Runtime behavior | Untested | Activation, non-activation, useful editorial completion, and safe failure in each claimed runtime |
+| Export integrity | Blocked | Reviewed explicit allowlist, exact payload, manifest, hashes, modes, and archive verification |
+| Installation | Untested | Authorized installation and comparison with the reviewed manifest |
+| External review/listing | Unverified | Target route, current contract, submission identity, and acceptance evidence |
+| Public acquisition | Unverified as of 2026-10-30 | Evidence that users can currently obtain this exact skill through any intended channel |
+
+No package, installation candidate, or submission draft was produced. No checks
+of the skill itself passed or failed because its contents were unavailable.
+External acceptance, public availability, customer acquisition, and revenue
+cannot be inferred from the contextual records. No previously achieved stage
+has been disproved by this report.
+
+## Next action
+
+The source owner can provide a cleared, readable snapshot in an authorized
+location, bound to its source revision and publication rights. Resume source
+review there, then select explicit export files, run existing validation and
+independent behavior trials, and verify the exact package inventory and hashes.
+Keep installation, submission, and publication decisions separate. Current
+external contracts and acquisition status remain unchecked under this task's
+no-external-services constraint.
+
+This report completes the preparation possible within the stated access
+boundary; it does not certify distribution readiness.

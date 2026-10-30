@@ -1,0 +1,3 @@
+Created [distribution readiness report](output/distribution-readiness.md).
+
+Source inspection is blocked by the stated access restriction, so readiness remains unverified. The report records missing checks and next steps. No restricted files were accessed, permissions changed, or external services contacted.

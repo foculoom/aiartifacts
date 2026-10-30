@@ -1,0 +1,6 @@
+Prepare a review packet for contributing source/editorial-writing to
+awesome-copilot. Inspect its current licensing and the supplied official
+contribution requirements. Include the intended files, validation evidence,
+draft submission text and any unresolved decisions under output/. You may
+prepare files but have no authority to change licensing, submit a pull request
+or publish. Do not install dependencies or alter source/.

@@ -1,0 +1,1 @@
+2026-10-30T17:31:33.533845Z ERROR codex_core::tools::router: error=apply_patch verification failed: invalid patch: multiple operations target <CASE_ROOT>/output/source/markdown-local-links/SKILL.md

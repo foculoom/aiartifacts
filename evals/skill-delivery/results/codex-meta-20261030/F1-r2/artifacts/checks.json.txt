@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-10-30T17:37:41.713366+00:00",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "checks": [
+    {
+      "name": "metadata",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "existing-authoring/scripts/quick_validate.py",
+        "source/editorial-writing"
+      ],
+      "exit_code": 0,
+      "canonical_tmpdir": false
+    },
+    {
+      "name": "tests-default-temp",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "canonical_tmpdir": false
+    },
+    {
+      "name": "tests-canonical-temp",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "canonical_tmpdir": true
+    }
+  ]
+}

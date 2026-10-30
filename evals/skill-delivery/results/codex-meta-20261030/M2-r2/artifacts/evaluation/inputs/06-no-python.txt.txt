@@ -1,0 +1,3 @@
+Revise this web help text in a calm voice. Environment: Python and script execution are unavailable, and you may not install tools. Text is available inline. Return the revised text and any essential production note separately.
+
+In conclusion, to summarize, you must press Retry to try the upload again. Your original file remains on your device. The upload has not completed.

@@ -1,0 +1,6 @@
+{
+  "after_file_count": 15,
+  "before_file_count": 15,
+  "identical": true,
+  "scope": "Complete source/ regular-file inventory, SHA-256, modes and symlink flags"
+}

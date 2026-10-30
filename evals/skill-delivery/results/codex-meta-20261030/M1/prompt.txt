@@ -1,0 +1,6 @@
+Create a reusable agent skill for checking a small Markdown document's local
+links before handoff. It should report broken links without rewriting prose.
+Use the existing authoring tools when available. Prepare source, a few useful
+behavior cases and a reviewable delivery summary under output/. Use only
+synthetic examples. Do not install dependencies, change global configuration,
+publish anything or contact an external service.

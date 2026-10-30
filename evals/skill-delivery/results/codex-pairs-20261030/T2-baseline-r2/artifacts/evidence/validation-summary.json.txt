@@ -1,0 +1,84 @@
+{
+  "observed_at_utc": "2026-10-30T17:45:39.749481+00:00",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "pyyaml": "6.0.3",
+  "candidate_files": 12,
+  "description_characters": 204,
+  "maximum_file_bytes": 16864,
+  "all_supplied_inputs_unchanged": true,
+  "source_record_hashes_match": true,
+  "candidate_has_no_generated_bytecode": true,
+  "candidate_lf_only": true,
+  "local_links_and_direct_resource_coverage": "pass",
+  "links": [
+    {
+      "from": "DEPENDENCIES.md",
+      "to": "LICENSE"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/medium/longform.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/medium/web.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/medium/game-ui.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/medium/game-dialogue.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/audience/adult.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/audience/early-reader.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "references/examples.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "scripts/prose_lint.py"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "DEPENDENCIES.md"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "tests/test_prose_lint.py"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "LICENSE"
+    }
+  ],
+  "commands": [
+    {
+      "check": "quick-validate",
+      "exit_code": 0
+    },
+    {
+      "check": "unittest-default-temp",
+      "exit_code": 1
+    },
+    {
+      "check": "unittest-canonical-temp",
+      "exit_code": 0
+    },
+    {
+      "check": "prose-lint",
+      "exit_code": 0
+    }
+  ],
+  "upstream_build": "not run: upstream checkout and dependency tree unavailable; no installation authorized",
+  "copilot_behavior_and_installation": "not run; local structure and checker tests do not certify host behavior"
+}

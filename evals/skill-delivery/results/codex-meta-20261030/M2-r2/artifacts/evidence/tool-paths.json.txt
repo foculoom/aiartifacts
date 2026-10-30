@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/bin/zsh",
+    "-c",
+    "command -v skills copilot gh"
+  ],
+  "exit_code": 1,
+  "extra_env": {},
+  "stderr": "",
+  "stdout": "/opt/homebrew/bin/copilot\n/opt/homebrew/bin/gh\n"
+}

@@ -1,0 +1,3 @@
+Review draft.md for an adult beginner audience. Identify the two most useful
+editorial changes and save your review under output/. Use any available prose
+warning check when appropriate. Do not install software or change permissions.

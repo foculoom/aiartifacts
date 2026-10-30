@@ -1,0 +1,10 @@
+Rewrite this website section so a visitor can quickly understand the offer and
+next step. Keep these facts: a free 20-minute call is available only to teams
+with 5–50 employees; there is no commitment after the call. Do not invent
+results, testimonials, or additional services. Return a heading, two short
+sentences, and a button label.
+
+"Unlock revolutionary transformation for your team! Our proven method
+guarantees that every organization will become more productive. We are pleased
+to offer a complimentary consultation so that you may embark upon your journey
+with us."

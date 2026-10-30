@@ -1,0 +1,5 @@
+Revise this return-help section for adults scanning a web page. Give only the replacement copy. Facts: returns must start within 30 days of delivery; opened items are eligible; return shipping costs $5, deducted from the refund. The button opens instructions and does not start a return.
+
+Current copy:
+We are committed to making returns easy. You can return your item within 30 days. Even if you opened it, you can still send it back. Click below to learn more.
+Button: Learn more

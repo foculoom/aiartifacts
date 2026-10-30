@@ -1,0 +1,69 @@
+# Distribution drafts — not executed
+
+Prepared 2026-10-30. These are review drafts, not authorization to install or submit. Use the same canonical editorial skill for both routes.
+
+## skills.sh
+
+Use a direct skill-subdirectory URL to avoid collecting unrelated skills from the repository. The proposed source locator is:
+
+```text
+https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing
+```
+
+That SHA is the supplied base label. Before using it externally, compare its full remote subtree to `skill-export/manifest.json`, including license, dependencies, modes and cache exclusions. If a reviewed release revision differs, replace the locator and preserve the previous pin. No remote-byte comparison or CLI resolution was performed here.
+
+Proposed public description: “Review and revise prose for its reader, medium and project voice. Includes longform, web, game UI/dialogue and early-reader guidance, synthetic examples, and an optional Python warning checker.” Do not claim human editorial review, authorship detection or tested compatibility.
+
+For a later authorized isolated check, choose and review a published skills CLI version, its lockfile/license and Node requirement; confirm its actual help output. Do not run unpinned `npx`, fetch tools automatically or change global configuration. With that already available `skills` executable, the proposed discovery command is:
+
+```sh
+DISABLE_TELEMETRY=1 skills add "https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing" --list
+```
+
+Discovery should return precisely `editorial-writing`. This command was not run. A later project-scoped placement check, from the workspace root in an authorized isolated project, can use the reviewed standalone folder:
+
+```sh
+DISABLE_TELEMETRY=1 skills add ./output/skill-export/payload --skill editorial-writing --agent github-copilot --copy
+```
+
+The local folder is a staging artifact whose root is not named `editorial-writing`; confirm the chosen CLI accepts metadata-based selection, or stage an identical copy under that canonical folder name. Neither step was tested here. Capture actual installed location, CLI version, resolved commit, lock/provenance metadata and full inventory/hashes. Compare installer-added metadata separately. File placement alone does not prove runtime use.
+
+The [skills CLI documentation](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) describes direct URLs and agent selection. Its version-specific behavior needs verification. The [skills.sh FAQ](https://skills.sh/docs/faq) describes telemetry-driven directory inclusion; no publishing API, pack or paid account is required for this route. Disable telemetry in isolated checks; do not manufacture installs for ranking. Current listing and public acquisition for this candidate were unverified on 2026-10-30. A package pass does not establish them.
+
+## Awesome Copilot
+
+Recommended route: external-plugin consideration using the existing Editorial plugin. This retains Apache-2.0 and its client extension. A direct skill contribution would involve the collection's MIT terms and a separate rights decision; do not relicense the candidate simply to fit that route. There is no draft PR editing the external catalog.
+
+The [external-plugin form](https://github.com/github/awesome-copilot/blob/main/.github/ISSUE_TEMPLATE/external-plugin.yml) is the intended intake. The [contribution guide](https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md) describes automated checks followed by maintainer review. The following fields are populated from the existing manifest; unresolved checks remain visibly unchecked.
+
+Draft title: `[External Plugin]: editorial`
+
+| Form field | Draft value |
+| --- | --- |
+| Plugin name | editorial |
+| Short description | Review and revise writing for its audience, medium, and project voice. |
+| GitHub repository | foculoom/aiartifacts |
+| Plugin path inside repository | plugins/editorial |
+| Ref to review | Leave empty; no verified release tag supplied. |
+| Commit SHA to review | Candidate base: `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. Confirm remote plugin-tree identity or replace with the actual reviewed release SHA before submission. |
+| Version | 0.1.1, retained from the supplied manifest; confirm at the chosen SHA. |
+| License identifier | Apache-2.0 |
+| Author name | Foculoom |
+| Author URL | https://github.com/foculoom |
+| Homepage URL | https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial |
+| Keywords | editorial, writing, accessibility, review |
+
+Draft additional notes: “This candidate reuses one editorial skill with audience and medium profiles, factual/voice preservation, branch/state-aware game copy guidance, synthetic diagnosis examples and an advisory Python checker. Local metadata and package identity checks completed; the checker passed 27 tests with a physical temp directory. Vally, full manifest schema checks, Copilot installation and independent runtime evaluation remain unperformed. The preparation export reconstructs a plugin layout from supplied files and does not authenticate the remote revision. Evidence of useful uplift beyond general editing is still needed.”
+
+Submission checklist, deliberately not attested:
+
+- [ ] Confirm the plugin lives in a publicly accessible GitHub repository at the selected revision.
+- [ ] Confirm the immutable SHA/ref resolves to the reviewed complete plugin bytes. If both are used, they must agree.
+- [ ] Review compliance with contribution, security and responsible AI policies.
+- [ ] Verify the plugin is not already listed; do not submit a duplicate.
+
+Before considering intake, use a reviewed tooling environment to perform the target schema and Vally checks and an isolated Copilot smoke test. The supplied route documentation identifies `@microsoft/vally@0.20.0` as a **library**, separate from `@microsoft/vally-cli`; use the actual pinned `runLint({ rootPath })` interface, not a guessed binary or inferred install. Verify current gate versions first. Upstream lint is not an editorial runtime evaluation. Maintainers retain discretion about usefulness and acceptance.
+
+For future authorized direct acquisition testing, upstream documents `copilot plugin install foculoom/aiartifacts:plugins/editorial`; that moving-source command alone cannot identify this candidate's bytes. Prefer the reviewed local plugin folder in an isolated runtime and capture its receipts. A future marketplace install such as `editorial@awesome-copilot` is appropriate only after listing and acquisition are verified. Neither install was performed. Awesome Copilot approval, listing, and current public acquisition were unverified on 2026-10-30.
+
+After an authorized release or listing, verify the actual public page/install route, resolved bytes, date, and an independent consumer receipt separately. Keep source merge, release, curated approval, catalog inclusion, runtime success and customer acquisition as distinct evidence.

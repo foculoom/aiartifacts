@@ -1,0 +1,68 @@
+# Draft external-plugin issue — alternative route, do not send
+
+Use the official external-plugin issue form if the owner selects this route. This draft proposes review of the existing remote plugin; it does not propose editing `plugins/external.json` directly. The required public-access, uniqueness and compliance confirmations remain unchecked pending verification. Source SHA and metadata below come from the supplied records, not a live remote plugin inspection.
+
+Proposed title: `[External Plugin]: editorial`
+
+### Plugin name
+
+editorial
+
+### Short description
+
+Review and revise writing for its audience, medium, and project voice.
+
+### GitHub repository
+
+foculoom/aiartifacts
+
+### Plugin path inside the repository
+
+plugins/editorial
+
+### Ref to review
+
+Leave blank. No release tag has been verified; the form permits a full commit SHA alone.
+
+### Commit SHA to review
+
+211ad9da8b7a3d0740d1896a74c018ed3ad097be
+
+### Version
+
+0.1.1
+
+### License identifier
+
+Apache-2.0
+
+### Author name
+
+Foculoom
+
+### Author URL
+
+https://github.com/foculoom
+
+### Homepage URL
+
+https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial
+
+### Keywords
+
+editorial, writing, accessibility, review
+
+### Additional notes for reviewers
+
+The supplied manifest identifies this plugin and version. The skill uses medium/audience profiles and synthetic examples, with an optional standard-library Python checker and no required external service or credential. The supplied skill snapshot matches the recorded SHA-256 hashes. The existing manifest declares a `com.openai` interface; compatibility with the upstream external-plugin schema, skill lint and Copilot installation still needs verification at the exact remote plugin path/SHA. This packet has not inspected the entire remote plugin tree.
+
+Local helper validation found a macOS temporary-path limitation: default symlinked temporary paths fail five tests; all 27 tests pass with a canonical temporary directory. No Copilot installation or behavioral test is claimed. The output-only resource-link adaptation prepared for the direct-inclusion candidate is not asserted to exist at this remote SHA. If a later source revision is chosen, update this SHA, version and evidence together; do not assume local output changes are published.
+
+### Submission checklist
+
+- [ ] The plugin lives in a public GitHub repository.
+- [ ] The provided SHA is the intended immutable review revision and the plugin/version exist there.
+- [ ] This submission follows the repository's contribution, security and responsible AI policies.
+- [ ] This plugin is not already listed in the Awesome Copilot marketplace.
+
+Before sending, verify the public repo and exact reviewed files, inspect required manifest schema/version, run applicable `vally lint` and Copilot installation checks with existing authorized tools, and get separate owner authorization to submit. Passing metadata review does not replace quality gates or human maintainer approval. Approval automation, rather than this draft, would create the listing PR.

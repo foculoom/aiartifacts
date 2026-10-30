@@ -1,0 +1,3 @@
+interface:
+  display_name: "Markdown Local Links"
+  short_description: "Check local Markdown links before handoff"

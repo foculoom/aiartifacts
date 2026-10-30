@@ -1,0 +1,13 @@
+{
+  "base_revision_is_supplied_label": true,
+  "git_checkout_verification": "Unavailable: supplied workspace has no .git checkout and git is not on PATH.",
+  "helper_sha256": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+  "observation_date": "2026-10-30",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "pyyaml_version": "6.0.3",
+  "source_record_sha256": "636550dcf043a58988a13376dfdc28ddd6d05d8b16ec28c097dabeee694b647e",
+  "source_unchanged": true,
+  "validator_sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c"
+}

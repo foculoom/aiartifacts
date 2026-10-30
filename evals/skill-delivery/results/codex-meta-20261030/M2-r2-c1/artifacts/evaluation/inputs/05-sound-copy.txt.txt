@@ -1,0 +1,3 @@
+Review this help paragraph for adults. Revise only if you find a reader problem. All stated behavior is verified. Context: this is the complete export help panel, no product claims are missing.
+
+Choose Export to download a CSV file. The file includes the rows shown by your current filter. To export all rows, clear the filter first.

@@ -1,0 +1,36 @@
+# Changes and provenance
+
+Observation date: 2026-10-30. This is a local standalone skill distribution candidate.
+
+## Source identity and clearance
+
+The supplied README explicitly identifies `source/` as the cleared editorial candidate from `https://github.com/foculoom/aiartifacts`. `source-record.json` identifies the upstream skill path as `plugins/editorial/skills/editorial-writing` and base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. These are supplied provenance, not a remotely verified commit or a claim that the new tree is committed. No Git checkout metadata is supplied here.
+
+All 14 old-tree file hashes match the source record. The new tree differs from that record in exactly `references/examples.md`. The supplied `input-inventory.json` independently matches the actual new and old inputs. Exact local hashes, rather than the base revision alone, identify this candidate. `comparison.json` preserves complete old/new file inventories and the old archive's entry inventory; `candidate/manifest.json` binds each selected destination to its new source path, SHA-256 and normalized mode. The manifest's `source_commit` is a base label only.
+
+Authorship is attributed by the supplied dependency record to Foculoom AI Artifacts, including the helper, profiles and synthetic examples. The full supplied Apache-2.0 LICENSE travels in the package unchanged. No third-party material was added, no license was changed, and no separate NOTICE exists in the supplied skill trees or old ZIP. This review relies on the supplied clearance and provenance; it is not an independent audit of upstream authorship. No new rights are inferred for the archive-only private entry.
+
+## Exact changes
+
+Only `references/examples.md` changes between source trees: four appended lines introduce “Synthetic update for this trial” and the guidance, “For a short help panel, explain the next action before background detail.” `changes.diff` gives the exact textual patch. Its old SHA-256 is `b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3`; its new SHA-256 is `6e2b4b986ea6b7f506a8dcfdc6cd7157fdb8cf09adad79a37e44d21aaa8b572d`.
+
+All 13 other source files, including two bytecode caches, are identical. No source bytes or candidate payload bytes were edited by this preparation; the payload is an exact selected copy of the new tree. The synthetic addition is retained as supplied, including its trial heading.
+
+The old ZIP SHA-256 is `fbd1864d573f818e5975a8f80299d3b61841e8ac2db5b3c258162784ff5058b6`. Its CRC check passes. Its 15 unique entries comprise all 14 old-tree files with matching hashes plus `private-notes.txt`. The archive-only file is excluded without copying its contents into any output. The old ZIP is not a suitable allowlist or distribution baseline to copy wholesale.
+
+Relative to that ZIP, the candidate changes one file, retains ten other files unchanged, adds no paths, and removes four paths:
+
+- `private-notes.txt`: archive-only private material; not cleared as skill content.
+- `scripts/__pycache__/prose_lint.cpython-312.pyc`: generated interpreter cache.
+- `tests/__pycache__/test_prose_lint.cpython-312.pyc`: generated interpreter cache.
+- `tests/test_prose_lint.py`: development-only tests, not needed to use the skill. Used for validation outside the payload.
+
+The 11-file allowlist includes SKILL.md, LICENSE, DEPENDENCIES.md, all seven referenced audience/medium/example documents and the optional checker. Every packaged local Markdown link resolves within this payload. The development test row in DEPENDENCIES.md describes an upstream development dependency; it is not a runtime requirement or a link to an omitted resource.
+
+The existing plugin manifest, authoring skill, lockfile, source records, packaging tools, test workspaces, and reports are not included. The manifest is contextual evidence only; this candidate is not a plugin release or version 0.1.1 bump. All selected modes normalize to 0644; the checker is invoked with Python, so it does not require an executable bit. ZIP timestamps normalize to 1980-01-01; ownership, ACLs and extended attributes are omitted.
+
+## Dependencies and tools
+
+The skill requires a runtime that can discover Agent Skills and read relative resources. Its optional checker requires Python 3.9+ and only the standard library, needs no network or credentials, and reads UTF-8 Markdown/plain text without rewriting inputs. If unavailable, the instructions require completing possible editorial work and reporting that lint was not run. Unreadable inputs must be reported without bypassing access controls.
+
+Preparation used the supplied `skill-delivery/scripts/export_skill.py` (SHA-256 `397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe`) and the supplied `existing-authoring/scripts/quick_validate.py` (SHA-256 `ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c`). Python/platform and installed PyYAML versions are recorded in `validation-results.json`. PyYAML is used by the development validator only; it is not a payload dependency. No dependencies were installed. All supplied input hashes still match at completion, including source trees and old ZIP.

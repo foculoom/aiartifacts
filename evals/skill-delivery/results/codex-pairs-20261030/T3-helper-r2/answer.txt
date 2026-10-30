@@ -1,0 +1,12 @@
+Prepared under `output/`:
+
+- [Fresh 11-file package](output/candidate/skill.zip)
+- [Exact file/hash inventory](output/inventory.tsv) and [output checksums](output/SHA256SUMS)
+- [Change and provenance notes](output/CHANGE-AND-PROVENANCE.md)
+- [Validation and remaining-work report](output/VALIDATION-AND-REMAINING-WORK.md)
+
+Only the synthetic help-panel example changed. Private archive content, caches and development tests are excluded.
+
+Package integrity passes; all 27 checker tests pass against the packaged helper. Three repository-layout-dependent exporter checks remain unresolved; runtime behavior is untested.
+
+Source and old archive are unchanged. Nothing was installed or published.

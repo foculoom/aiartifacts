@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "editorial",
+  "version": "0.1.1",
+  "description": "Review and revise writing for its audience, medium, and project voice.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "editorial",
+    "writing",
+    "accessibility",
+    "review"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Editorial",
+        "shortDescription": "Review writing for its readers and medium",
+        "longDescription": "Use audience and medium profiles to review or revise prose while preserving project-specific voice and factual accuracy.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Review this chapter for its intended readers and suggest the smallest useful edits.",
+          "Review this website copy for clarity and accessibility without changing its product claims."
+        ]
+      }
+    }
+  }
+}

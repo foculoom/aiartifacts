@@ -1,0 +1,33 @@
+# External plugin issue draft — not submitted
+
+Use the official **External plugin submission** issue form, not an initial PR editing `plugins/external.json`. This draft proposes reusing the existing plugin without changing its Apache-2.0 license or `extensions.com.openai` metadata. Its full remote subtree and public acquisition state remain unverified in this run.
+
+Title: **[External Plugin]: editorial**
+
+| Form field | Draft value |
+| --- | --- |
+| Plugin name | editorial |
+| Short description | Review and revise writing for its audience, medium, and project voice. |
+| GitHub repository | foculoom/aiartifacts |
+| Plugin path inside the repository | plugins/editorial |
+| Ref to review | Leave blank: no release tag verified; use full SHA below |
+| Commit SHA to review | 211ad9da8b7a3d0740d1896a74c018ed3ad097be |
+| Version | 0.1.1 |
+| License identifier | Apache-2.0 |
+| Author name | Foculoom |
+| Author URL | https://github.com/foculoom |
+| Homepage URL | https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial |
+| Keywords | editorial, writing, accessibility, review |
+
+Additional notes for reviewers:
+
+> This plugin bundles editorial-writing with audience and medium profiles, synthetic examples and an optional Python 3.9+ advisory prose checker using only the standard library. It preserves source facts, project voice and game-state/branch continuity. The checker does not rewrite or grade text or detect authorship. Local validation passed 27 helper tests, the available authoring validator and exact reconstructed-package inventory/hash/mode verification. Copilot behavior, external schema validation, Vally lint and installation smoke checks have not been run. The SHA and metadata above come from the supplied review record and manifest; source availability, full remote subtree identity, version agreement and duplicate-listing status must be verified before filing. Retain Apache-2.0 and applicable notices.
+
+Submission checklist — deliberately unchecked pending verification and authority:
+
+- [ ] The plugin lives in a public GitHub repository.
+- [ ] The ref and/or SHA provided is immutable, not a branch; the remote subtree matches the reviewed candidate.
+- [ ] This submission follows contribution, security and responsible-AI policies.
+- [ ] This plugin is not already listed in the Awesome Copilot marketplace.
+
+Do not infer any attestation from the prefilled draft. This issue may be filed only after authorization. Intake must pass metadata, schema, Vally, installation and version/locator consistency gates; human maintainers then decide acceptance. Approval automation creates the listing PR. The homepage's `main` URL is descriptive metadata, not the review locator.

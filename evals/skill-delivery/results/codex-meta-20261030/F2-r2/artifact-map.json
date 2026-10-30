@@ -1,0 +1,10 @@
+[
+  {
+    "original_path": "output/distribution-readiness.md",
+    "original_sha256": "4aa54da469d27dbf6bfebbf220738b7e85658d87ae4f75745bc4afa4a9d66b19",
+    "bytes": 3699,
+    "snapshot": "artifacts/distribution-readiness.md.txt",
+    "snapshot_sha256": "4aa54da469d27dbf6bfebbf220738b7e85658d87ae4f75745bc4afa4a9d66b19",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  }
+]

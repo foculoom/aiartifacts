@@ -1,0 +1,44 @@
+# Editorial distribution candidate
+
+Observed 2026-10-30. Local preparation is complete. Runtime acceptance and external distribution are untested.
+
+The supplied canonical source is `foculoom/aiartifacts`, `plugins/editorial/skills/editorial-writing`, base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. All 14 supplied source files, including the two existing caches, match `source-record.json` before and after checks. The separate supplied plugin manifest also matches `input-inventory.json`. This workspace is not a Git checkout; revision identity is a supplied label, not a verified remote-tree receipt. Exact exported bytes are identified by the manifests.
+
+## Packages and selection
+
+| Export | Files | Inventory | ZIP SHA-256 |
+| --- | ---: | --- | --- |
+| Standalone skill | 12 | `editorial-writing/manifest.json` | `afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc` |
+| Existing Editorial plugin 0.1.1 | 15 | `editorial/manifest.json` | `accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b` |
+
+Both exports include SKILL.md, all seven referenced profiles/examples, the optional checker, its development tests, Apache-2.0 text and dependency/provenance record. Generated Python caches are excluded. No project manuscripts, input-inventory, local skill lockfile, company records, logs or tool code enter either payload. The plugin reuses `source/existing-plugin.json` unchanged as `plugin.json`; its `extensions.com.openai` metadata is preserved. License and dependency text are also included at the plugin root so the independently installed plugin carries its notices. Shared skill files have identical hashes across both exports; no prose fork or relicense was introduced.
+
+`*-export.json` records explicit source-to-destination mappings. `package-inventory.json` records archive hashes and verification results; each package manifest records every file's hash and observed mode. `prepare.py` reuses the supplied exporter's read-only configuration, content, local-reference and exact-inventory checks. Its export function was deliberately not used because it calls chmod. The preparation script creates new files with defaults, observes their modes, and records those modes in ZIP metadata; it never changes permissions. All payload files were created as 0644. Preparation requires fresh package directories and refuses to overwrite them.
+
+## Actual checks
+
+| Layer | Result | Evidence and boundary |
+| --- | --- | --- |
+| Source identity/preservation | Pass | `source-before.json`, `source-after.json`, `payload-checks.json`; hashes and complete inventory unchanged. |
+| Metadata | Pass | Existing authoring quick validator, on source and staged skill; `metadata.log`, `payload-metadata.log`. This is its supported basic YAML/name/description/placeholder check, not full ecosystem certification. |
+| Payload structure | Pass | Existing exporter checks: required license, skill/plugin entrypoints, contained Markdown targets, regular files and bounded secret-marker screening. No broken bundled references. |
+| Helper suite, default macOS temp path | Fail | `tests-default-temp.log`: 27 tests, 3 failures and 2 errors; default `/var/...` ancestor is a symlink rejected by `_safe_absolute`. Retained as an environment limitation. |
+| Helper suite, canonical temp path | Pass | `tests-canonical-temp.log`, `payload-tests.log`: all 27 tests pass on source and packaged skill with TMPDIR under canonical `output/tmp`. Existing cases cover masking, exact terms, JSON, strict/advisory exits, repeated text, unsupported/missing/invalid inputs, symlink refusal and no rewriting. |
+| Advisory prose check | Pass | `prose-warnings.json`: 9 Markdown files checked, zero findings. This does not establish editorial quality, factual accuracy or authorship. |
+| Full ZIP and staged inventory | Pass | Both packages verified with supplied `verify`: exact inventory, bytes and modes; hashes in `package-inventory.json`. Directory verification is of staging, not an installed consumer. |
+| Editorial/runtime trials | Untested | No isolated runtime discovery, activation/non-activation, writing-quality trial, baseline comparison or independent output assessment performed. Prepared input-only cases and separate rubric are under `evaluation/`. |
+| Ecosystem checks | Untested | No Vally lint, Agent Plugins schema validator, Copilot installation/task trial, skills CLI discovery/install, or gh skill dry run executed. No distribution tool was downloaded or installed. |
+
+Executed runtime: Python 3.9.6 (Xcode system Python), macOS; full platform and interpreter string are in `checks.json`. Existing quick validator uses already available PyYAML 6.0.3. Python was absent from PATH but `/usr/bin/python3` was available; no installation or PATH changes were needed. Bytecode writes were disabled. The bundled helper needs only optional Python 3.9+ and the standard library, no network or credentials. Calling Python by an available absolute path is sufficient; an environment lacking Python can still use the editorial instructions and report omitted lint.
+
+## Rights, provenance and review limits
+
+The supplied README identifies this as a cleared Foculoom candidate; bundled DEPENDENCIES.md attributes instructions, profiles and checker to Foculoom AI Artifacts under Apache-2.0 and identifies synthetic fixtures. The full supplied Apache-2.0 license is retained verbatim. Review found no vendored third-party prose/code, separate NOTICE file or additional attribution requirement in the supplied target. These are supplied provenance assertions, not an independent ownership audit. No authoring-tool or exporter code is redistributed inside the skill/plugin.
+
+All selected prose and reachable scripts were inspected; the checker reads supported UTF-8 inputs and prints advisory findings, with no network or rewrite operation. Screening is bounded and cannot prove absence of every secret or establish rights to future material. Local evidence includes workspace paths and stays outside the distributable ZIPs. The macOS symlink-temp constraint remains documented; no source fix was authorized or made.
+
+## Distribution state and next action
+
+As of 2026-10-30, both packages are locally obtainable from `output/`. No installation, external submission, listing, marketplace approval, release, public acquisition test or customer receipt was performed in this run. Present public acquisition through the source repository, Awesome Copilot and skills.sh is **unverified**; supplied URLs and documentation do not establish current availability or absence. No claim is made that a prior public milestone did not occur.
+
+`DISTRIBUTION-DRAFTS.md` supplies preparation-only route drafts based on the bundled official documentation snapshots. No remote contracts were rechecked. Before any separately authorized external action, the release owner should confirm the immutable remote bytes match these manifests, recheck current official contracts and public/listing state, perform applicable schema/Vally checks in an approved tool workspace, and run isolated editorial behavior trials in each claimed runtime. Awesome Copilot maintainers own acceptance; source owners own licensing/release decisions. Package integrity passes are preserved while these later stages remain pending.

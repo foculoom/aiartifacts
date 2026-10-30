@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "exit_code": 128,
+  "extra_env": {},
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n",
+  "stdout": ""
+}

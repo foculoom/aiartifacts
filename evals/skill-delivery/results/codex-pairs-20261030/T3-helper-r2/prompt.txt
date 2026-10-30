@@ -1,0 +1,6 @@
+Prepare an updated distribution candidate for source/new/editorial-writing.
+Compare it with source/old/editorial-writing and the supplied old archive.
+Return a fresh self-contained package, exact file/hash inventory, change and
+provenance notes, and a validation/remaining-work report under output/.
+Only skill files cleared for distribution belong in the package. Do not
+publish, install dependencies, modify source/, or modify the old archive.

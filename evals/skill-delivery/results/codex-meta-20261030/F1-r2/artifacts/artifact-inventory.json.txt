@@ -1,0 +1,209 @@
+{
+  "scope": "All output artifacts except this self-referential inventory; includes evaluation fixture and validation-tool identities.",
+  "files": {
+    "DISTRIBUTION-DRAFTS.md": {
+      "sha256": "98d03657c7f8bacca9dfa4b2f34df7520e2b3f23d6f93b2d755878492f84c702",
+      "bytes": 3392
+    },
+    "VALIDATION.md": {
+      "sha256": "294351e10defffc79cc7055edd14adcb617fd36eb1ea736c7a4375bb48273639",
+      "bytes": 7300
+    },
+    "checks.json": {
+      "sha256": "1b8f12c7962e61315a50569d9eacee54e4dd0f416d2092e8afb0c58cad794282",
+      "bytes": 1183
+    },
+    "editorial/manifest.json": {
+      "sha256": "d05bdba2785369f9534af38e694d6e51b0ee23af81a2648a80463a100e3be258",
+      "bytes": 4042
+    },
+    "editorial/payload/DEPENDENCIES.md": {
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "bytes": 1856
+    },
+    "editorial/payload/LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "editorial/payload/plugin.json": {
+      "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+      "bytes": 1270
+    },
+    "editorial/payload/skills/editorial-writing/DEPENDENCIES.md": {
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "bytes": 1856
+    },
+    "editorial/payload/skills/editorial-writing/LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "editorial/payload/skills/editorial-writing/SKILL.md": {
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "bytes": 4282
+    },
+    "editorial/payload/skills/editorial-writing/references/audience/adult.md": {
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "bytes": 941
+    },
+    "editorial/payload/skills/editorial-writing/references/audience/early-reader.md": {
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "bytes": 1283
+    },
+    "editorial/payload/skills/editorial-writing/references/examples.md": {
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "bytes": 2108
+    },
+    "editorial/payload/skills/editorial-writing/references/medium/game-dialogue.md": {
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "bytes": 1096
+    },
+    "editorial/payload/skills/editorial-writing/references/medium/game-ui.md": {
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "bytes": 1156
+    },
+    "editorial/payload/skills/editorial-writing/references/medium/longform.md": {
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "bytes": 1457
+    },
+    "editorial/payload/skills/editorial-writing/references/medium/web.md": {
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "bytes": 1131
+    },
+    "editorial/payload/skills/editorial-writing/scripts/prose_lint.py": {
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "bytes": 16864
+    },
+    "editorial/payload/skills/editorial-writing/tests/test_prose_lint.py": {
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "bytes": 12983
+    },
+    "editorial/skill.zip": {
+      "sha256": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b",
+      "bytes": 73375
+    },
+    "editorial-export.json": {
+      "sha256": "3735691e030ddb65fb24a556d04ef81d4f50524366196d5012403a7166a559f3",
+      "bytes": 1499
+    },
+    "editorial-writing/manifest.json": {
+      "sha256": "f9c405c7173dd9db27e25c3dfb52d5168396bb7f7e2c585063855cd5ec248884",
+      "bytes": 3212
+    },
+    "editorial-writing/payload/DEPENDENCIES.md": {
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "bytes": 1856
+    },
+    "editorial-writing/payload/LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "editorial-writing/payload/SKILL.md": {
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "bytes": 4282
+    },
+    "editorial-writing/payload/references/audience/adult.md": {
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "bytes": 941
+    },
+    "editorial-writing/payload/references/audience/early-reader.md": {
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "bytes": 1283
+    },
+    "editorial-writing/payload/references/examples.md": {
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "bytes": 2108
+    },
+    "editorial-writing/payload/references/medium/game-dialogue.md": {
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "bytes": 1096
+    },
+    "editorial-writing/payload/references/medium/game-ui.md": {
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "bytes": 1156
+    },
+    "editorial-writing/payload/references/medium/longform.md": {
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "bytes": 1457
+    },
+    "editorial-writing/payload/references/medium/web.md": {
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "bytes": 1131
+    },
+    "editorial-writing/payload/scripts/prose_lint.py": {
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "bytes": 16864
+    },
+    "editorial-writing/payload/tests/test_prose_lint.py": {
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "bytes": 12983
+    },
+    "editorial-writing/skill.zip": {
+      "sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+      "bytes": 57998
+    },
+    "editorial-writing-export.json": {
+      "sha256": "f7524eb9766bbfb32ee1d2e159d05691bd1f23cc16b819ffcfd88f6fe61cb272",
+      "bytes": 1059
+    },
+    "evaluation/RUBRIC.md": {
+      "sha256": "82635a65b876ef2fbfc0609a6af712ff9663ec651ce542b1e5ca314b11bd6fd9",
+      "bytes": 1795
+    },
+    "evaluation/inputs.json": {
+      "sha256": "56f47fb5c39edf6f0508056aa927ebbcbc4dda85df87bd0d95ef3ea66830ff90",
+      "bytes": 1420
+    },
+    "metadata.log": {
+      "sha256": "59ee41d7cb323b357ce556a0859696315d97657c1aa1a4d2ebc9020e3fa7bb1e",
+      "bytes": 253
+    },
+    "package-inventory.json": {
+      "sha256": "532718fa6d2d799da7ed2f0defcf01e27ed2d4b229bc0ef2f8aae3dd2c95b869",
+      "bytes": 1718
+    },
+    "payload-checks.json": {
+      "sha256": "7b94b36797d3c03b8faa3a9384f08e2a3c5dd776f463fec8b6842cf1e6aeb8b9",
+      "bytes": 1040
+    },
+    "payload-metadata.log": {
+      "sha256": "fc7fed6289e456dc4d715339cf1e27f54aff5938741da403fa397b2a70ba67b7",
+      "bytes": 203
+    },
+    "payload-prose-warnings.log": {
+      "sha256": "ea20c0687ad338ed758b40175d185f14c2447b0006036713a3799b9828ad2e65",
+      "bytes": 320
+    },
+    "payload-tests.log": {
+      "sha256": "62254466b40418d8f442d31e943b1847d1212951e6e05d7dce7605b87965b7e9",
+      "bytes": 2640
+    },
+    "prepare.py": {
+      "sha256": "302817860fa9ce8442d310d48a67c817b870bbdc6beb0a0933b5f3a7cd8533f0",
+      "bytes": 4949
+    },
+    "prose-warnings.json": {
+      "sha256": "7a2ab7532e2818ac5be7a8612b5e73335ae3b7cf9f328bd93fc8a6e26ef61114",
+      "bytes": 43
+    },
+    "source-after.json": {
+      "sha256": "10c2d95b832a8a217aedc6bf8ff1344c598486a0d94179393208f444606e716a",
+      "bytes": 1409
+    },
+    "source-before.json": {
+      "sha256": "10c2d95b832a8a217aedc6bf8ff1344c598486a0d94179393208f444606e716a",
+      "bytes": 1409
+    },
+    "tests-canonical-temp.log": {
+      "sha256": "018f63227df4f4839629493c04cbb0107d00fce19f218c94a461c9cc00c8aa1a",
+      "bytes": 2711
+    },
+    "tests-default-temp.log": {
+      "sha256": "0708fd0c68a61782c1a3d0dedd89f11d1a21923b84d338738204bd1ec59afb9e",
+      "bytes": 6400
+    },
+    "validate.py": {
+      "sha256": "4d8164d79e50bb496fc6269dd46443fe3fa2964500c7b612bc262a974436adcf",
+      "bytes": 1697
+    }
+  }
+}

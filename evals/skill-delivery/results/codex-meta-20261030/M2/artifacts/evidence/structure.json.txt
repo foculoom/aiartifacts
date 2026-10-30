@@ -1,0 +1,14 @@
+{
+  "extensions_preserved": [
+    "com.openai"
+  ],
+  "frontmatter": {
+    "description": "Draft, revise, or review reader-facing prose using the intended medium, audience, and project voice. Use for books, websites, and game text when clarity, rhythm, continuity, or editorial judgment matters.",
+    "license": "Apache-2.0",
+    "name": "editorial-writing"
+  },
+  "plugin_version": "0.1.1",
+  "scope": "Basic fields inspected and asserted; not full plugin JSON Schema or Vally validation",
+  "skill_lines": 36,
+  "status": "pass"
+}

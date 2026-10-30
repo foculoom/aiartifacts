@@ -1,0 +1,6 @@
+{
+  "skill-candidate/manifest.json": "afc7651a8a58f819db0a1bf631900bb1475738f3f2cd727922cc5845357c4a41",
+  "skill-candidate/skill.zip": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+  "plugin-candidate/manifest.json": "3c027f5c108739eafc9ca0e2cac16d5ac589669b89afdf1ba8a2ef27389ed2a9",
+  "plugin-candidate/skill.zip": "383513752d7397c4b5525e347609baf454b0b6fe4c6937ee6221a751fa287497"
+}

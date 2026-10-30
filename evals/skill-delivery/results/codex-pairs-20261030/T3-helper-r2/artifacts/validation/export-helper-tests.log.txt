@@ -1,0 +1,73 @@
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', '-m', 'unittest', 'discover', '-s', '.agents/skills/skill-delivery/tests', '-v']
+Exit: 1
+STDOUT:
+
+STDERR:
+test_block_description_is_preserved_for_target_yaml_validation (test_export_skill.ExportTests) ... ok
+test_checked_in_pilot_contracts_preserve_same_skill_and_license_boundaries (test_export_skill.ExportTests) ... ERROR
+test_config_duplicate_members_unknown_fields_versions_and_collisions_rejected (test_export_skill.ExportTests) ... ok
+test_duplicate_manifest_members_and_invalid_digest_fail (test_export_skill.ExportTests) ... ok
+test_empty_inline_destination_refers_to_current_document (test_export_skill.ExportTests) ... ok
+test_end_to_end_exact_files_deterministic_archive_and_candidate_provenance (test_export_skill.ExportTests) ... ok
+test_executable_helper_retains_behavior_and_mode_tampering_fails (test_export_skill.ExportTests) ... ok
+test_existing_directory_and_archive_are_preserved (test_export_skill.ExportTests) ... ok
+test_external_anchor_and_contained_parent_links_work (test_export_skill.ExportTests) ... ok
+test_file_directory_destination_conflict_fails_before_output (test_export_skill.ExportTests) ... ok
+test_installed_missing_changed_extra_and_symlinked_files_fail (test_export_skill.ExportTests) ... ok
+test_missing_escaping_encoded_and_reference_style_links_rejected (test_export_skill.ExportTests) ... ok
+test_missing_file_and_missing_license_are_rejected (test_export_skill.ExportTests) ... ok
+test_missing_frontmatter_or_empty_instructions_rejected (test_export_skill.ExportTests) ... ok
+test_new_output_inside_source_is_safe_with_explicit_allowlist (test_export_skill.ExportTests) ... ok
+test_one_plugin_with_nested_skill_and_root_license (test_export_skill.ExportTests) ... ok
+test_package_root_and_balanced_parentheses_links_work (test_export_skill.ExportTests) ... ok
+test_private_paths_rejected_even_when_explicitly_allowlisted (test_export_skill.ExportTests) ... ok
+test_real_editorial_skill_exports_with_its_references_tests_and_license (test_export_skill.ExportTests) ... FAIL
+test_secret_screen_does_not_echo_secret_or_create_payload (test_export_skill.ExportTests) ... ok
+test_skill_delivery_can_export_its_own_runtime_files (test_export_skill.ExportTests) ... ERROR
+test_source_and_destination_traversal_and_absolute_paths_fail_before_writing (test_export_skill.ExportTests) ... ok
+test_source_links_and_linked_ancestors_are_rejected (test_export_skill.ExportTests) ... ok
+test_source_root_and_output_links_are_rejected (test_export_skill.ExportTests) ... ok
+test_zip_duplicate_unexpected_traversal_symlink_and_changed_bytes_fail (test_export_skill.ExportTests) ... ok
+
+======================================================================
+ERROR: test_checked_in_pilot_contracts_preserve_same_skill_and_license_boundaries (test_export_skill.ExportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/tests/test_export_skill.py", line 106, in test_checked_in_pilot_contracts_preserve_same_skill_and_license_boundaries
+    exporter.export(REPO, config, self.base / kind)
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py", line 220, in export
+    raw = Path(config).read_bytes()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1249, in read_bytes
+    with self.open(mode='rb') as f:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1242, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1110, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '<RUN_ROOT>/evals/skill-delivery/pilot/editorial-skill.json'
+
+======================================================================
+ERROR: test_skill_delivery_can_export_its_own_runtime_files (test_export_skill.ExportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/tests/test_export_skill.py", line 127, in test_skill_delivery_can_export_its_own_runtime_files
+    exporter.export(REPO, self.config, self.output)
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py", line 221, in export
+    record = config_record(raw)
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py", line 117, in config_record
+    public_path(source)
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py", line 67, in public_path
+    raise ValueError('Private or generated path is not exportable')
+ValueError: Private or generated path is not exportable
+
+======================================================================
+FAIL: test_real_editorial_skill_exports_with_its_references_tests_and_license (test_export_skill.ExportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CASE_ROOT>/.agents/skills/skill-delivery/tests/test_export_skill.py", line 88, in test_real_editorial_skill_exports_with_its_references_tests_and_license
+    self.assertTrue(skill.is_dir(), REPO)
+AssertionError: False is not true : <RUN_ROOT>
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.116s
+
+FAILED (failures=1, errors=2)

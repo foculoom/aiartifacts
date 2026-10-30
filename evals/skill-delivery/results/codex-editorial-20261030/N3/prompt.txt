@@ -1,0 +1,5 @@
+From the following draft, return only the stated warranty period in days as a
+number. Do not revise the draft.
+
+"In today's fast-paced world, the Rillstone lamp provides a 90-day warranty.
+Our team can delve into your questions later."

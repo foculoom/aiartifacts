@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-10-30T17:38:06.256640+00:00",
+  "packages": [
+    {
+      "name": "editorial-writing",
+      "file_count": 12,
+      "archive": {
+        "status": "verified",
+        "file_count": 12,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim."
+      },
+      "staged_payload": {
+        "status": "verified",
+        "file_count": 12,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim."
+      },
+      "archive_sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc"
+    },
+    {
+      "name": "editorial",
+      "file_count": 15,
+      "archive": {
+        "status": "verified",
+        "file_count": 15,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim."
+      },
+      "staged_payload": {
+        "status": "verified",
+        "file_count": 15,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim."
+      },
+      "archive_sha256": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b"
+    }
+  ],
+  "source_unchanged": true,
+  "plugin_manifest_unchanged": true,
+  "source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "source_identity": "Supplied snapshot hashes match source-record.json; not a Git checkout or remote verification.",
+  "permissions": "No chmod or permission changes. New files retain creation defaults; ZIP records those observed modes.",
+  "excluded": [
+    "scripts/__pycache__/prose_lint.cpython-312.pyc",
+    "tests/__pycache__/test_prose_lint.cpython-312.pyc"
+  ],
+  "exclusion_reason": "Generated interpreter caches, not portable runtime resources."
+}

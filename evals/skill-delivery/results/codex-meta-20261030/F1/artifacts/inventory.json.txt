@@ -1,0 +1,165 @@
+{
+  "plugin": {
+    "archive": "plugin/skill.zip",
+    "archive_sha256": "801e21efbb4749bceb293197912047a5b51743df806b3fcbdcf785f64f39a8dd",
+    "archive_verification": {
+      "file_count": 14,
+      "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+      "status": "verified"
+    },
+    "file_count": 14,
+    "files": {
+      "DEPENDENCIES.md": {
+        "mode": "0644",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "source": "editorial-writing/DEPENDENCIES.md"
+      },
+      "LICENSE": {
+        "mode": "0644",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "source": "editorial-writing/LICENSE"
+      },
+      "plugin.json": {
+        "mode": "0644",
+        "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+        "source": "existing-plugin.json"
+      },
+      "skills/editorial-writing/DEPENDENCIES.md": {
+        "mode": "0644",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "source": "editorial-writing/DEPENDENCIES.md"
+      },
+      "skills/editorial-writing/LICENSE": {
+        "mode": "0644",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "source": "editorial-writing/LICENSE"
+      },
+      "skills/editorial-writing/SKILL.md": {
+        "mode": "0644",
+        "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+        "source": "editorial-writing/SKILL.md"
+      },
+      "skills/editorial-writing/references/audience/adult.md": {
+        "mode": "0644",
+        "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+        "source": "editorial-writing/references/audience/adult.md"
+      },
+      "skills/editorial-writing/references/audience/early-reader.md": {
+        "mode": "0644",
+        "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+        "source": "editorial-writing/references/audience/early-reader.md"
+      },
+      "skills/editorial-writing/references/examples.md": {
+        "mode": "0644",
+        "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+        "source": "editorial-writing/references/examples.md"
+      },
+      "skills/editorial-writing/references/medium/game-dialogue.md": {
+        "mode": "0644",
+        "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+        "source": "editorial-writing/references/medium/game-dialogue.md"
+      },
+      "skills/editorial-writing/references/medium/game-ui.md": {
+        "mode": "0644",
+        "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+        "source": "editorial-writing/references/medium/game-ui.md"
+      },
+      "skills/editorial-writing/references/medium/longform.md": {
+        "mode": "0644",
+        "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+        "source": "editorial-writing/references/medium/longform.md"
+      },
+      "skills/editorial-writing/references/medium/web.md": {
+        "mode": "0644",
+        "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+        "source": "editorial-writing/references/medium/web.md"
+      },
+      "skills/editorial-writing/scripts/prose_lint.py": {
+        "mode": "0644",
+        "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+        "source": "editorial-writing/scripts/prose_lint.py"
+      }
+    },
+    "manifest_sha256": "eaaa0433cc13fa1ef3995385ce1324d50756aa3abc31ed83133b060ab8728344",
+    "permission_policy": "New files use default creation permissions; no chmod, permission changes, or executable normalization performed. Invoke the checker with python3.",
+    "staged_folder_verification": {
+      "file_count": 14,
+      "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+      "status": "verified"
+    }
+  },
+  "standalone": {
+    "archive": "standalone/skill.zip",
+    "archive_sha256": "d4d0ec215d8b1a17c744349cf76ff760ab5bbd4ea4a5248d83dfc5ea7b946fc4",
+    "archive_verification": {
+      "file_count": 11,
+      "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+      "status": "verified"
+    },
+    "file_count": 11,
+    "files": {
+      "DEPENDENCIES.md": {
+        "mode": "0644",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "source": "editorial-writing/DEPENDENCIES.md"
+      },
+      "LICENSE": {
+        "mode": "0644",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "source": "editorial-writing/LICENSE"
+      },
+      "SKILL.md": {
+        "mode": "0644",
+        "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+        "source": "editorial-writing/SKILL.md"
+      },
+      "references/audience/adult.md": {
+        "mode": "0644",
+        "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+        "source": "editorial-writing/references/audience/adult.md"
+      },
+      "references/audience/early-reader.md": {
+        "mode": "0644",
+        "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+        "source": "editorial-writing/references/audience/early-reader.md"
+      },
+      "references/examples.md": {
+        "mode": "0644",
+        "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+        "source": "editorial-writing/references/examples.md"
+      },
+      "references/medium/game-dialogue.md": {
+        "mode": "0644",
+        "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+        "source": "editorial-writing/references/medium/game-dialogue.md"
+      },
+      "references/medium/game-ui.md": {
+        "mode": "0644",
+        "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+        "source": "editorial-writing/references/medium/game-ui.md"
+      },
+      "references/medium/longform.md": {
+        "mode": "0644",
+        "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+        "source": "editorial-writing/references/medium/longform.md"
+      },
+      "references/medium/web.md": {
+        "mode": "0644",
+        "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+        "source": "editorial-writing/references/medium/web.md"
+      },
+      "scripts/prose_lint.py": {
+        "mode": "0644",
+        "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+        "source": "editorial-writing/scripts/prose_lint.py"
+      }
+    },
+    "manifest_sha256": "a41a17bcb3f3a240120bffc0351aa757a996d5aacb38ece13499b39e8b587263",
+    "permission_policy": "New files use default creation permissions; no chmod, permission changes, or executable normalization performed. Invoke the checker with python3.",
+    "staged_folder_verification": {
+      "file_count": 11,
+      "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+      "status": "verified"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+--- source/old/editorial-writing/references/examples.md
++++ source/new/editorial-writing/references/examples.md
+@@ -41,3 +41,7 @@
+ **Passage:** “Pip waited. Pip waited. Pip waited.”
+ 
+ **Issue to test in context:** The repetition may build a page-turn pause or may stall the story. Read it aloud with the illustration and next page before cutting it. If nothing changes, let the third beat reveal a sound, action, or surprise.
++
++## Synthetic update for this trial
++
++For a short help panel, explain the next action before background detail.

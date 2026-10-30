@@ -1,0 +1,49 @@
+# Dependencies and provenance
+
+## Source and transformation
+
+Supplied source: `https://github.com/foculoom/aiartifacts`, revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`, path `plugins/editorial/skills/editorial-writing`. This is supplied provenance, verified against local recorded hashes, not an independently fetched remote revision. The workspace README identifies this as the cleared editorial candidate.
+
+The copied `SKILL.md` declares `Apache-2.0`; the full supplied `LICENSE` and `DEPENDENCIES.md` are retained verbatim. No relicensing or instruction edits were made. The source's dependency notes identify the profiles, synthetic examples and helper as Foculoom-authored and state that no third-party prose/code is vendored. That statement is recorded provenance, not an independent rights audit. The source plugin manifest corroborates the Apache-2.0 declaration but is context only, not required by this standalone skill and not copied into the candidate.
+
+`file-inventory.json` records the two excluded generated CPython 3.12 caches alongside every retained file. Exclusion removes interpreter-specific artifacts, without changing executable source or tests. `source-inventory.json` records all source files for the no-edit check. SHA-256 detects byte changes; it is not a publisher signature.
+
+## Dependency boundary
+
+| Component | Requirement | Included / exercised |
+| --- | --- | --- |
+| Instructions and profiles | Agent Skills-compatible host able to read local files | All references included; actual host behavior untested |
+| Advisory prose checker | Optional Python 3.9+, standard library only | Included unchanged; exercised on Python 3.9.6 and 3.12 |
+| Checker tests | Python `unittest`, development only | Included unchanged; 27 tests per interpreter |
+| Voice briefs, factual evidence and source prose | Consumer-supplied project inputs and appropriate access | Not bundled; no customer/private project text added |
+| Existing authoring validator | Python plus already available PyYAML | Used from `existing-authoring/`; tooling not bundled into candidate |
+| skills CLI / distribution tooling | Separate reviewed, pinned development dependency | Not installed or executed; `npx` availability was not treated as CLI availability |
+
+No external skill, MCP server, SDK, credential, network service or package-manager installation is required by the packaged helper. The host's model and filesystem facilities remain host requirements. Existing authoring tools are development tools, not skill runtime dependencies. No initializer was run because this is an existing skill; optional UI metadata was not added.
+
+## Documentation used
+
+Used the supplied `existing-authoring/SKILL.md` workflow and inspected `scripts/quick_validate.py` before running it. The workflow favors preserving task scope, retaining relevant resources and validating existing skills without reinitializing them.
+
+Distribution conclusions use supplied upstream snapshots, not live skills.sh verification:
+
+- `official-sources/skills-creating.md`: repository discovery includes `skills/`; skill frontmatter requires `name` and `description`.
+- `official-sources/skills-commands.md`: supports local source directories and a listing option. No command was run to download or install the CLI.
+- These skills documentation snapshots are recorded at revision `92a9a34ac3bf88e695e468b90c7bf32f163d32c8` in the supplied source record (upstream `vercel-labs/skills`).
+- The supplied Awesome Copilot material is a separate destination's contribution context and does not impose its MIT contribution terms on this Apache-2.0 skills.sh candidate. No Awesome submission artifacts were created.
+
+`provenance-inputs.json` records the source record and authoring/documentation inputs with hashes. No current remote platform behavior or acceptance is claimed from these snapshots.
+
+## Reproduce local checks without installation
+
+From the supplied workspace root:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 existing-authoring/scripts/quick_validate.py output/candidate/skills/editorial-writing
+mkdir -p output/validation/tmp
+TMPDIR="$PWD/output/validation/tmp" PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s output/candidate/skills/editorial-writing/tests -v
+TMPDIR="$PWD/output/validation/tmp" PYTHONDONTWRITEBYTECODE=1 python3.12 -m unittest discover -s output/candidate/skills/editorial-writing/tests -v
+PYTHONDONTWRITEBYTECODE=1 python3 output/candidate/skills/editorial-writing/scripts/prose_lint.py output/candidate/skills/editorial-writing --format json
+```
+
+Use an absolute physical workspace path; symlink ancestors are rejected by the helper. Test temp files are disposable and were removed after this run. The standalone candidate's checker and tests work without the authoring toolkit; only the first command needs that separate toolkit and PyYAML. To verify this delivery's checksums on macOS, run `shasum -a 256 -c SHA256SUMS` from `output/`.

@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+"""Build and verify the local distribution using only explicit cleared paths."""
+import difflib
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import zipfile
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'output'
+NEW = ROOT / 'source/new/editorial-writing'
+OLD = ROOT / 'source/old/editorial-writing'
+ALLOW = ['DEPENDENCIES.md', 'LICENSE', 'SKILL.md',
+ 'references/audience/adult.md', 'references/audience/early-reader.md',
+ 'references/examples.md', 'references/medium/game-dialogue.md',
+ 'references/medium/game-ui.md', 'references/medium/longform.md',
+ 'references/medium/web.md', 'scripts/prose_lint.py', 'tests/test_prose_lint.py']
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+def inventory(base):
+    return {p.relative_to(base).as_posix(): {'bytes': p.stat().st_size, 'sha256': digest(p.read_bytes())}
+            for p in sorted(base.rglob('*')) if p.is_file()}
+
+def write_json(name, data):
+    (OUT / name).write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+
+before = inventory(ROOT / 'source')
+inputs = json.loads((ROOT / 'input-inventory.json').read_text())
+assert all(digest((ROOT / p).read_bytes()) == h for p, h in inputs.items()), 'Supplied input inventory mismatch'
+new_inv, old_inv = inventory(NEW), inventory(OLD)
+record = json.loads((ROOT / 'source-record.json').read_text())
+record_mismatches = {p: {'recorded': h, 'actual': new_inv.get(p, {}).get('sha256')}
+                     for p, h in record['files'].items() if new_inv.get(p, {}).get('sha256') != h}
+package = OUT / 'editorial-writing'
+package.mkdir(exist_ok=True)
+assert not list(package.iterdir()), 'Refusing to overwrite a populated package'
+for rel in ALLOW:
+    src = NEW / rel
+    assert src.is_file() and not src.is_symlink()
+    dest = package / rel
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(src.read_bytes())
+    dest.chmod(0o644)
+pack_inv = inventory(package)
+assert set(pack_inv) == set(ALLOW)
+assert all(pack_inv[p] == new_inv[p] for p in ALLOW)
+
+with zipfile.ZipFile(ROOT / 'source/old.zip') as oldzip:
+    assert len(oldzip.namelist()) == len(set(oldzip.namelist()))
+    archive_inv = {i.filename: {'bytes': i.file_size, 'sha256': digest(oldzip.read(i))}
+                   for i in oldzip.infolist() if not i.is_dir()}
+    assert oldzip.testzip() is None
+archive_vs_old = {'added': sorted(set(archive_inv) - set(old_inv)),
+                  'missing': sorted(set(old_inv) - set(archive_inv)),
+                  'changed': sorted(p for p in set(archive_inv) & set(old_inv) if archive_inv[p] != old_inv[p])}
+source_comparison = {'added': sorted(set(new_inv) - set(old_inv)),
+                     'removed': sorted(set(old_inv) - set(new_inv)),
+                     'changed': sorted(p for p in set(new_inv) & set(old_inv) if new_inv[p] != old_inv[p]),
+                     'unchanged_count': sum(new_inv[p] == old_inv[p] for p in set(new_inv) & set(old_inv))}
+write_json('comparison.json', {'new_source': new_inv, 'old_source': old_inv, 'old_archive': archive_inv,
+ 'new_vs_old_source': source_comparison, 'old_archive_vs_old_source': archive_vs_old,
+ 'candidate_vs_old_archive': {'added': sorted(set(pack_inv) - set(archive_inv)),
+ 'removed': sorted(set(archive_inv) - set(pack_inv)),
+ 'changed': sorted(p for p in set(pack_inv) & set(archive_inv) if pack_inv[p] != archive_inv[p])},
+ 'source_record_mismatches': record_mismatches})
+patch = ''.join(''.join(difflib.unified_diff((OLD / p).read_text().splitlines(True),
+ (NEW / p).read_text().splitlines(True), fromfile='source/old/editorial-writing/' + p,
+ tofile='source/new/editorial-writing/' + p)) for p in source_comparison['changed'])
+(OUT / 'source-changes.diff').write_text(patch)
+write_json('package-inventory.json', {'algorithm': 'SHA-256', 'root': 'editorial-writing/', 'files': pack_inv})
+(OUT / 'package-files.sha256').write_text(''.join(f"{v['sha256']}  editorial-writing/{p}\n" for p,v in pack_inv.items()))
+archive = OUT / 'editorial-writing-candidate.zip'
+with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+    for rel in sorted(ALLOW):
+        info = zipfile.ZipInfo('editorial-writing/' + rel, date_time=(2026,10,30,0,0,0))
+        info.create_system = 3
+        info.external_attr = 0o100644 << 16
+        info.compress_type = zipfile.ZIP_DEFLATED
+        z.writestr(info, (package / rel).read_bytes(), compresslevel=9)
+with zipfile.ZipFile(archive) as z:
+    assert z.testzip() is None
+    assert z.namelist() == ['editorial-writing/' + p for p in sorted(ALLOW)]
+    assert all(digest(z.read('editorial-writing/' + p)) == pack_inv[p]['sha256'] for p in ALLOW)
+
+checks = []
+env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', TMPDIR=str(OUT.resolve()))
+commands = [
+ ('frontmatter', [sys.executable, '-B', 'existing-authoring/scripts/quick_validate.py', 'output/editorial-writing']),
+ ('unit-tests', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'output/editorial-writing/tests', '-v']),
+ ('prose-lint', [sys.executable, '-B', 'output/editorial-writing/scripts/prose_lint.py', 'output/editorial-writing', '--format', 'json']),
+]
+for name, cmd in commands:
+    result = subprocess.run(cmd, cwd=ROOT, env=env, capture_output=True, text=True)
+    (OUT / (name + '.log')).write_text(result.stdout + result.stderr)
+    checks.append({'name': name, 'command': cmd, 'exit_code': result.returncode, 'log': name + '.log'})
+    assert result.returncode == 0, name
+links = []
+for rel in ALLOW:
+    if not rel.endswith('.md'):
+        continue
+    for target in re.findall(r'\]\(([^)]+)\)', (package / rel).read_text()):
+        if '://' in target or target.startswith('#'):
+            continue
+        path = ((package / rel).parent / target.split('#')[0]).resolve()
+        assert package.resolve() in path.parents and path.is_file(), (rel, target)
+        links.append({'from': rel, 'target': target})
+assert inventory(package) == pack_inv, 'Validation changed package'
+assert inventory(ROOT / 'source') == before, 'Inputs changed'
+write_json('validation.json', {'observation_date': '2026-10-30', 'python': sys.version,
+ 'commands': checks, 'local_links': links, 'local_links_resolve': True,
+ 'input_inventory_verified': True, 'source_and_old_archive_unchanged': True,
+ 'archive_crc_and_hashes_verified': True, 'package_allowlist_verified': True,
+ 'package_matches_new_source_bytes': True, 'bytecode_absent': True})
+write_json('input-verification.json', {'algorithm': 'SHA-256', 'verified_against': 'input-inventory.json',
+ 'all_supplied_hashes_match': True, 'source_before_and_after': before})
+print(json.dumps({'source_comparison': source_comparison, 'archive_vs_old': archive_vs_old,
+ 'record_mismatches': record_mismatches, 'package_files': len(pack_inv), 'archive_sha256': digest(archive.read_bytes()),
+ 'validation': checks}, indent=2))

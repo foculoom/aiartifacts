@@ -1,0 +1,6 @@
+COMMAND: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', '<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py', 'export', '--source-root', '<CASE_ROOT>', '--config', '<CASE_ROOT>/output/skill-export.json', '--output', '<CASE_ROOT>/output/skill-candidate']
+EXIT: 0
+STDOUT:
+{"file_count": 12, "limitations": ["Basic metadata and local Markdown checks, not full format validation.", "Narrow secret/path screening, not privacy or licensing clearance.", "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.", "No dependency installation, runtime compatibility or behavior evaluation.", "No publication, submission or consumer update."], "status": "prepared"}
+
+STDERR:

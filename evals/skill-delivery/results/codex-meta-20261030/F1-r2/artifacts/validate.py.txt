@@ -1,0 +1,29 @@
+"""Capture local validation without writing into the supplied source."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+root = Path(__file__).resolve().parent.parent
+out = root / 'output'
+env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', TMPDIR=str(out / 'tmp'))
+commands = [
+    ('payload-metadata', [sys.executable, '-B', 'existing-authoring/scripts/quick_validate.py', 'output/editorial-writing/payload']),
+    ('payload-tests', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'output/editorial-writing/payload/tests', '-v']),
+    ('payload-prose-warnings', [sys.executable, '-B', 'output/editorial-writing/payload/scripts/prose_lint.py', str(out / 'editorial-writing/payload'), '--format', 'json']),
+]
+results = []
+for name, command in commands:
+    run = subprocess.run(command, cwd=root, env=env, text=True, capture_output=True)
+    (out / (name + '.log')).write_text('COMMAND: ' + repr(command) + '\nEXIT: ' + str(run.returncode) + '\nSTDOUT:\n' + run.stdout + '\nSTDERR:\n' + run.stderr)
+    results.append(dict(name=name, command=command, exit_code=run.returncode))
+    assert run.returncode == 0
+    if name == 'payload-prose-warnings':
+        (out / 'prose-warnings.json').write_text(run.stdout)
+actual = {p.relative_to(root / 'source/editorial-writing').as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+          for p in (root / 'source/editorial-writing').rglob('*') if p.is_file()}
+assert actual == json.loads((out / 'source-before.json').read_text())
+(out / 'payload-checks.json').write_text(json.dumps(dict(checks=results, source_unchanged_after_checks=True), indent=2) + '\n')
+print(json.dumps(results, indent=2))

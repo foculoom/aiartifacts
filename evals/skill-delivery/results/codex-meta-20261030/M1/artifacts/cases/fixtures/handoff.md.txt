@@ -1,0 +1,19 @@
+# Synthetic handoff
+
+[Guide](docs/guide.md#setup)
+[Absent](docs/absent.md)
+[Wrong anchor](docs/guide.md#absent)
+[Reference][lost]
+![Image](media/absent.svg)
+[Spaced](<docs/space%20guide.md> "Synthetic title")
+[Local section](#synthetic-handoff)
+[Remote](https://example.invalid/guide)
+`[Not a link](code-only.md)`
+
+```md
+[Not a link](fenced-only.md)
+```
+
+    [Not a link](indented-only.md)
+
+[lost]: docs/lost.md

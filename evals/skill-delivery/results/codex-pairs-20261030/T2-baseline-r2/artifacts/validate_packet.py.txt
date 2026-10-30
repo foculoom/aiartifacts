@@ -1,0 +1,117 @@
+"""Reproduce local review checks without installation or source mutations.
+
+Run from the supplied workspace root: python3 -B output/validate_packet.py
+Evidence is written only below output/. An expected default-temp failure is
+retained separately; a canonical-temp pass does not erase that portability issue.
+"""
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import os
+import platform
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "output"
+EVIDENCE = OUT / "evidence"
+CANDIDATE = OUT / "candidate/skills/editorial-writing"
+EVIDENCE.mkdir(exist_ok=True)
+env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+checks = []
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def run(label, args, extra=None):
+    process = subprocess.run(args, cwd=ROOT, env=dict(env, **(extra or {})),
+                             text=True, capture_output=True)
+    record = {"check": label, "argv": args, "environment_overrides": extra or {},
+              "exit_code": process.returncode, "stdout": process.stdout,
+              "stderr": process.stderr}
+    (EVIDENCE / (label + ".json")).write_text(json.dumps(record, indent=2) + "\n")
+    checks.append({"check": label, "exit_code": process.returncode})
+    return process
+
+
+inventory = json.loads((ROOT / "input-inventory.json").read_text())
+integrity = [{"path": path, "expected": expected,
+              "actual": digest(ROOT / path),
+              "unchanged": digest(ROOT / path) == expected}
+             for path, expected in inventory.items()]
+(EVIDENCE / "input-integrity.json").write_text(json.dumps(integrity, indent=2) + "\n")
+assert all(entry["unchanged"] for entry in integrity), "An input differs from inventory"
+source_record = json.loads((ROOT / "source-record.json").read_text())
+assert all(digest(ROOT / "source/editorial-writing" / p) == sha
+           for p, sha in source_record["files"].items())
+assert set(source_record["files"]) == {
+    str(p.relative_to(ROOT / "source/editorial-writing"))
+    for p in (ROOT / "source/editorial-writing").rglob("*") if p.is_file()}
+
+manifest = json.loads((OUT / "file-manifest.json").read_text())
+for item in manifest:
+    if item["included"]:
+        target = OUT / "candidate" / item["intended_path"]
+        item["candidate_sha256"] = digest(target)
+        item["candidate_bytes"] = target.stat().st_size
+        item["changed_from_source"] = item["sha256"] != digest(target)
+        if item["changed_from_source"]:
+            assert target.name == "SKILL.md"
+            item["reason"] = "Add links to dependencies, tests and existing license; no licensing change"
+        else:
+            item["reason"] = "Unchanged source file; supplied license retained"
+(OUT / "file-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+expected_paths = {item["intended_path"] for item in manifest if item["included"]}
+assert expected_paths == {str(p.relative_to(OUT / "candidate"))
+                          for p in (OUT / "candidate").rglob("*") if p.is_file()}
+original = (ROOT / "source/editorial-writing/SKILL.md").read_text()
+text = (CANDIDATE / "SKILL.md").read_text()
+assert text.split("---", 2)[1] == original.split("---", 2)[1]
+assert (CANDIDATE / "LICENSE").read_bytes() == (ROOT / "source/editorial-writing/LICENSE").read_bytes()
+
+quick = run("quick-validate", [sys.executable, "-B", "existing-authoring/scripts/quick_validate.py", str(CANDIDATE)])
+tests = [sys.executable, "-B", "-m", "unittest", "discover", "-s", str(CANDIDATE / "tests"), "-v"]
+default = run("unittest-default-temp", tests)
+temp_root = (OUT / "test-tmp").resolve()
+temp_root.mkdir(exist_ok=True)
+canonical = run("unittest-canonical-temp", tests, {"TMPDIR": str(temp_root)})
+lint = run("prose-lint", [sys.executable, "-B", str(CANDIDATE / "scripts/prose_lint.py"), str(CANDIDATE), "--format", "json"])
+
+import yaml  # Already supplied; never installed by this script.
+front = yaml.safe_load(text.split("---", 2)[1])
+assert front["name"] == CANDIDATE.name
+assert re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", front["name"])
+assert len(front["name"]) <= 64 and 10 <= len(front["description"]) <= 1024
+links = []
+for path in CANDIDATE.rglob("*.md"):
+    for ref in re.findall(r"\]\(([^)]+)\)", path.read_text()):
+        if "://" in ref or ref.startswith("#"):
+            continue
+        target = (path.parent / ref.split("#")[0]).resolve()
+        assert target.is_relative_to(CANDIDATE) and target.is_file(), str(target)
+        links.append({"from": str(path.relative_to(CANDIDATE)), "to": ref})
+assets = {str(p.relative_to(CANDIDATE)) for p in CANDIDATE.rglob("*") if p.is_file()}
+assert all((CANDIDATE / rel).stat().st_size < 5_000_000 for rel in assets)
+assert all(b"\r" not in (CANDIDATE / rel).read_bytes() for rel in assets)
+assert all("__pycache__" not in p and not p.endswith(".pyc") for p in assets)
+linked = {str((CANDIDATE / item["from"]).parent.joinpath(item["to"]).relative_to(CANDIDATE))
+          for item in links if item["from"] == "SKILL.md"}
+assert assets - {"SKILL.md"} <= linked
+
+summary = {"observed_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+           "python": sys.version, "platform": platform.platform(), "pyyaml": yaml.__version__,
+           "candidate_files": len(assets), "description_characters": len(front["description"]),
+           "maximum_file_bytes": max((CANDIDATE / rel).stat().st_size for rel in assets),
+           "all_supplied_inputs_unchanged": True, "source_record_hashes_match": True,
+           "candidate_has_no_generated_bytecode": True, "candidate_lf_only": True,
+           "local_links_and_direct_resource_coverage": "pass", "links": links,
+           "commands": checks,
+           "upstream_build": "not run: upstream checkout and dependency tree unavailable; no installation authorized",
+           "copilot_behavior_and_installation": "not run; local structure and checker tests do not certify host behavior"}
+(EVIDENCE / "validation-summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+print(json.dumps({key: value for key, value in summary.items() if key != "links"}, indent=2))
+assert quick.returncode == canonical.returncode == lint.returncode == 0

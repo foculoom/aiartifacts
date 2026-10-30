@@ -1,0 +1,477 @@
+[
+  {
+    "original_path": "output/additional-checks.py",
+    "original_sha256": "fcf162715171f1337475f5908aba77dbfe0ed2a3b3db438a82239a4c9445c355",
+    "bytes": 1484,
+    "snapshot": "artifacts/additional-checks.py.txt",
+    "snapshot_sha256": "fcf162715171f1337475f5908aba77dbfe0ed2a3b3db438a82239a4c9445c355",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/config/plugin.json",
+    "original_sha256": "bfbc8e16d9e15481daf56338cc3bbd4d00dcf877bcef1adbe393414367e30c82",
+    "bytes": 1604,
+    "snapshot": "artifacts/config/plugin.json.txt",
+    "snapshot_sha256": "bfbc8e16d9e15481daf56338cc3bbd4d00dcf877bcef1adbe393414367e30c82",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/config/skill.json",
+    "original_sha256": "a4f0d4303b8d4055fc12490f88e42e61a0566016bc43770066fd5c70f9e5e1b3",
+    "bytes": 1143,
+    "snapshot": "artifacts/config/skill.json.txt",
+    "snapshot_sha256": "a4f0d4303b8d4055fc12490f88e42e61a0566016bc43770066fd5c70f9e5e1b3",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/artifact-hashes.json",
+    "original_sha256": "7ae4464a8f835674f119c4098ad4b4e2491e4e96afa598d7499c56d0e467906f",
+    "bytes": 3713,
+    "snapshot": "artifacts/evidence/artifact-hashes.json.txt",
+    "snapshot_sha256": "7ae4464a8f835674f119c4098ad4b4e2491e4e96afa598d7499c56d0e467906f",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/commands.json",
+    "original_sha256": "e7536ab809f8b4646699d45c83bc03d2e13aed1690b9359401bafabaac326e1b",
+    "bytes": 22793,
+    "snapshot": "artifacts/evidence/commands.json.txt",
+    "snapshot_sha256": "1e2788eba32cf9a427f462f7c7e587df9bd51da3367915cf34138199700aa6eb",
+    "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
+  },
+  {
+    "original_path": "output/evidence/environment.json",
+    "original_sha256": "ddbf656ec70b9e87e01390b3005dd965bb5d00ded7a72655d12a942e61cba654",
+    "bytes": 1062,
+    "snapshot": "artifacts/evidence/environment.json.txt",
+    "snapshot_sha256": "ddbf656ec70b9e87e01390b3005dd965bb5d00ded7a72655d12a942e61cba654",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/source-after.json",
+    "original_sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+    "bytes": 2700,
+    "snapshot": "artifacts/evidence/source-after.json.txt",
+    "snapshot_sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/source-before.json",
+    "original_sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+    "bytes": 2700,
+    "snapshot": "artifacts/evidence/source-before.json.txt",
+    "snapshot_sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/source-integrity.json",
+    "original_sha256": "8ad63d348e3d095c98f85280a472b5205fc833bcec002ef5b669051f87fac992",
+    "bytes": 565,
+    "snapshot": "artifacts/evidence/source-integrity.json.txt",
+    "snapshot_sha256": "8ad63d348e3d095c98f85280a472b5205fc833bcec002ef5b669051f87fac992",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/evidence/structure.json",
+    "original_sha256": "9fc7ba6ac30fd58e5bb3d4b1e8628c344bfd7b9a9d8af57abc571828cc3b7aaf",
+    "bytes": 534,
+    "snapshot": "artifacts/evidence/structure.json.txt",
+    "snapshot_sha256": "9fc7ba6ac30fd58e5bb3d4b1e8628c344bfd7b9a9d8af57abc571828cc3b7aaf",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/manifest.json",
+    "original_sha256": "e9449afe67be8a98c1856b26dd31b4c5e2d0a9beccdb3f9f2335f9638861a1e8",
+    "bytes": 4147,
+    "snapshot": "artifacts/plugin/manifest.json.txt",
+    "snapshot_sha256": "e9449afe67be8a98c1856b26dd31b4c5e2d0a9beccdb3f9f2335f9638861a1e8",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/DEPENDENCIES.md",
+    "original_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "bytes": 1856,
+    "snapshot": "artifacts/plugin/payload/DEPENDENCIES.md.txt",
+    "snapshot_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/LICENSE",
+    "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357,
+    "snapshot": "artifacts/plugin/payload/LICENSE.txt",
+    "snapshot_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/plugin.json",
+    "original_sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+    "bytes": 1270,
+    "snapshot": "artifacts/plugin/payload/plugin.json.txt",
+    "snapshot_sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/DEPENDENCIES.md",
+    "original_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "bytes": 1856,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/DEPENDENCIES.md.txt",
+    "snapshot_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/LICENSE",
+    "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/LICENSE.txt",
+    "snapshot_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/SKILL.md",
+    "original_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "bytes": 4282,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/SKILL.md.txt",
+    "snapshot_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/audience/adult.md",
+    "original_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "bytes": 941,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/audience/adult.md.txt",
+    "snapshot_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/audience/early-reader.md",
+    "original_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "bytes": 1283,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/audience/early-reader.md.txt",
+    "snapshot_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/examples.md",
+    "original_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "bytes": 2108,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/examples.md.txt",
+    "snapshot_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/medium/game-dialogue.md",
+    "original_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "bytes": 1096,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/medium/game-dialogue.md.txt",
+    "snapshot_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/medium/game-ui.md",
+    "original_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "bytes": 1156,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/medium/game-ui.md.txt",
+    "snapshot_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/medium/longform.md",
+    "original_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "bytes": 1457,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/medium/longform.md.txt",
+    "snapshot_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/references/medium/web.md",
+    "original_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "bytes": 1131,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/references/medium/web.md.txt",
+    "snapshot_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/scripts/prose_lint.py",
+    "original_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "bytes": 16864,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/scripts/prose_lint.py.txt",
+    "snapshot_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/payload/skills/editorial-writing/tests/test_prose_lint.py",
+    "original_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "bytes": 12983,
+    "snapshot": "artifacts/plugin/payload/skills/editorial-writing/tests/test_prose_lint.py.txt",
+    "snapshot_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/plugin/skill.zip",
+    "original_sha256": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b",
+    "bytes": 73375,
+    "archive_members": [
+      {
+        "path": "DEPENDENCIES.md",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "mode": "0o100644"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "plugin.json",
+        "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/DEPENDENCIES.md",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/SKILL.md",
+        "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/audience/adult.md",
+        "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/audience/early-reader.md",
+        "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/examples.md",
+        "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/game-dialogue.md",
+        "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/game-ui.md",
+        "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/longform.md",
+        "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/references/medium/web.md",
+        "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/scripts/prose_lint.py",
+        "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+        "mode": "0o100644"
+      },
+      {
+        "path": "skills/editorial-writing/tests/test_prose_lint.py",
+        "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+        "mode": "0o100644"
+      }
+    ],
+    "snapshot": "artifacts/plugin/skill.zip",
+    "snapshot_sha256": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b",
+    "transform": "exact bytes"
+  },
+  {
+    "original_path": "output/prepare.py",
+    "original_sha256": "a0a97552354005ec7300b24f6da012e5a9df2c05e3985594a6f1ac3dc63df89b",
+    "bytes": 6646,
+    "snapshot": "artifacts/prepare.py.txt",
+    "snapshot_sha256": "a0a97552354005ec7300b24f6da012e5a9df2c05e3985594a6f1ac3dc63df89b",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/manifest.json",
+    "original_sha256": "e141cdb1aaa676bfcbfa321d5ac5dd89a851912d2c4d9626d5f246f6ef0221ee",
+    "bytes": 3296,
+    "snapshot": "artifacts/standalone/manifest.json.txt",
+    "snapshot_sha256": "e141cdb1aaa676bfcbfa321d5ac5dd89a851912d2c4d9626d5f246f6ef0221ee",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/DEPENDENCIES.md",
+    "original_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "bytes": 1856,
+    "snapshot": "artifacts/standalone/payload/DEPENDENCIES.md.txt",
+    "snapshot_sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/LICENSE",
+    "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357,
+    "snapshot": "artifacts/standalone/payload/LICENSE.txt",
+    "snapshot_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/SKILL.md",
+    "original_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "bytes": 4282,
+    "snapshot": "artifacts/standalone/payload/SKILL.md.txt",
+    "snapshot_sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/audience/adult.md",
+    "original_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "bytes": 941,
+    "snapshot": "artifacts/standalone/payload/references/audience/adult.md.txt",
+    "snapshot_sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/audience/early-reader.md",
+    "original_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "bytes": 1283,
+    "snapshot": "artifacts/standalone/payload/references/audience/early-reader.md.txt",
+    "snapshot_sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/examples.md",
+    "original_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "bytes": 2108,
+    "snapshot": "artifacts/standalone/payload/references/examples.md.txt",
+    "snapshot_sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/medium/game-dialogue.md",
+    "original_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "bytes": 1096,
+    "snapshot": "artifacts/standalone/payload/references/medium/game-dialogue.md.txt",
+    "snapshot_sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/medium/game-ui.md",
+    "original_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "bytes": 1156,
+    "snapshot": "artifacts/standalone/payload/references/medium/game-ui.md.txt",
+    "snapshot_sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/medium/longform.md",
+    "original_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "bytes": 1457,
+    "snapshot": "artifacts/standalone/payload/references/medium/longform.md.txt",
+    "snapshot_sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/references/medium/web.md",
+    "original_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "bytes": 1131,
+    "snapshot": "artifacts/standalone/payload/references/medium/web.md.txt",
+    "snapshot_sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/scripts/prose_lint.py",
+    "original_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "bytes": 16864,
+    "snapshot": "artifacts/standalone/payload/scripts/prose_lint.py.txt",
+    "snapshot_sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/payload/tests/test_prose_lint.py",
+    "original_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "bytes": 12983,
+    "snapshot": "artifacts/standalone/payload/tests/test_prose_lint.py.txt",
+    "snapshot_sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+  },
+  {
+    "original_path": "output/standalone/skill.zip",
+    "original_sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+    "bytes": 57998,
+    "archive_members": [
+      {
+        "path": "DEPENDENCIES.md",
+        "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+        "mode": "0o100644"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "SKILL.md",
+        "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/audience/adult.md",
+        "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/audience/early-reader.md",
+        "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/examples.md",
+        "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/medium/game-dialogue.md",
+        "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/medium/game-ui.md",
+        "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/medium/longform.md",
+        "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+        "mode": "0o100644"
+      },
+      {
+        "path": "references/medium/web.md",
+        "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+        "mode": "0o100644"
+      },
+      {
+        "path": "scripts/prose_lint.py",
+        "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+        "mode": "0o100644"
+      },
+      {
+        "path": "tests/test_prose_lint.py",
+        "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+        "mode": "0o100644"
+      }
+    ],
+    "snapshot": "artifacts/standalone/skill.zip",
+    "snapshot_sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+    "transform": "exact bytes"
+  }
+]

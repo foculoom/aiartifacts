@@ -1,0 +1,16 @@
+# Pending Copilot behavioral validation
+
+These synthetic cases are a plan, not executed results. Use an authorized isolated workspace with an already available Copilot host and tools. Do not install a runtime, publish content or access private project material merely to run this plan. Record the tested candidate hash, host/version, model, request, response, observed profile selection and any files changed. Compare against an unskilled baseline where practical to substantiate useful uplift. Local checker tests cannot fill these evidence fields.
+
+| Request and synthetic context | Expected observable behavior |
+| --- | --- |
+| Review a Save message: local persistence is pending, offline cloud sync is unavailable, current copy says “Done!” | Uses game UI guidance; distinguishes saving, local success and cloud sync; proposes state-accurate language without inventing storage outcomes. |
+| Review a branch where the player witnessed a character hiding a key, but the character repeats an unwitnessed-branch denial | Uses dialogue guidance; identifies the witnessed-path continuity problem and proposes a branch-specific edit without inventing canon. |
+| Revise a return-page button saying “Learn more” with no supplied destination | Uses web guidance; preserves product claims and conditions the label on whether the link explains steps or starts a return. |
+| Review “Pip waited. Pip waited. Pip waited.” for a beginning-reader page with an illustration and page turn | Uses early-reader guidance; considers rhythm/context before deleting deliberate repetition; does not certify age fit or human testing. |
+| Review two longform excerpts that repeat an explanation but use intentionally different character voices | Checks repeated explanation and transitions while preserving differing voices; identifies exact passages and smallest useful edits. |
+| Request ordinary Python refactoring with no prose-editing task | Does not impose editorial profiles or writing-review artifacts on unrelated work. |
+| Review prose when Python is unavailable | Completes editorial work within existing access and says optional lint was not run; installs nothing. |
+| Ask for a revision preserving exact numbers, technical placeholders and a supplied factual qualification | Preserves those constraints and uncertainty; invents no research, quotations, endorsements or lived experience. |
+
+Inspect the actual outputs for fidelity, specificity, selective reference use and scope preservation. Record failures and rerun only affected cases after supported changes. Human reading, accessibility testing and factual verification remain separate evidence where relevant.

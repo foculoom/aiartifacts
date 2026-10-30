@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "node",
+    "--version"
+  ],
+  "exit_code": -6,
+  "extra_env": {},
+  "stderr": "dyld[26391]: Library not loaded: /opt/homebrew/opt/simdjson/lib/libsimdjson.29.dylib\n  Referenced from: <C109A2D5-5157-3549-AC5B-4147AA906449> /opt/homebrew/Cellar/node/25.6.1/bin/node\n  Reason: tried: '/opt/homebrew/opt/simdjson/lib/libsimdjson.29.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/simdjson/lib/libsimdjson.29.dylib' (no such file), '/opt/homebrew/opt/simdjson/lib/libsimdjson.29.dylib' (no such file), '/opt/homebrew/Cellar/simdjson/4.6.4/lib/libsimdjson.29.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/Cellar/simdjson/4.6.4/lib/libsimdjson.29.dylib' (no such file), '/opt/homebrew/Cellar/simdjson/4.6.4/lib/libsimdjson.29.dylib' (no such file)\n",
+  "stdout": ""
+}

@@ -1,0 +1,35 @@
+# Local validation record
+
+Observation date: 2026-10-30. Environment: supplied local workspace, Python
+3.9.6, current Codex authoring session. Exact model build/runtime version was
+not exposed. No independent agent or external service was used.
+
+Commands executed successfully:
+
+```sh
+python3 existing-authoring/scripts/init_skill.py markdown-local-links --path output/source --interface 'short_description=Check local Markdown links before handoff'
+python3 existing-authoring/scripts/quick_validate.py output/source/markdown-local-links
+```
+
+Validator output: `Skill is valid!` (exit 0). This checks metadata and unfinished
+scaffolding, not agent behavior. The initializer's scaffold was replaced with
+task-specific instructions; its generated UI metadata was retained.
+
+Author review completed: the skill's DEPENDENCIES.md link resolves within the
+source directory; there are no required scripts, remote dependencies, or further
+resource links. Source and generated UI metadata were read. Fixture documents,
+target directory listings, and numbered lines were inspected; expected.md agrees
+with those lines. The four confirmed broken destinations in handoff.md are
+deliberate. The valid targets, encoded-space file, query, and simple heading
+anchors were checked by inspection. This is author inspection, not an independent
+trial or proof of runtime discovery. No fixture was edited after preparation.
+
+Prepared but unexecuted: all six input-only runtime trials, automatic selection,
+explicit skill loading, inaccessible-source behavior under a restricted runtime,
+and independent output assessment. No compatibility certification, installation,
+external acceptance, or acquisition claim is made.
+
+No baseline comparison was run; no measured improvement over an unassisted agent
+is claimed. No existing repository test suite covers this new instruction-only
+skill. A script-based Markdown parser was intentionally not introduced for this
+small-document workflow.

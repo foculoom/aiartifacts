@@ -1,0 +1,154 @@
+"""Reproduce local review evidence; no installation or external mutations."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import re
+import shutil
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'output'
+SOURCE = ROOT / 'source/editorial-writing'
+RECORD = json.loads((ROOT / 'source-record.json').read_text())
+FILES = [
+    'SKILL.md', 'LICENSE', 'DEPENDENCIES.md',
+    'references/examples.md',
+    'references/audience/adult.md', 'references/audience/early-reader.md',
+    'references/medium/web.md', 'references/medium/longform.md',
+    'references/medium/game-ui.md', 'references/medium/game-dialogue.md',
+    'scripts/prose_lint.py', 'tests/test_prose_lint.py',
+]
+ENV = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', TMPDIR=str(OUT / 'tmp'))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(name, value):
+    (OUT / name).write_text(json.dumps(value, indent=2) + '\n')
+
+
+def snapshot():
+    return {p.relative_to(ROOT / 'source').as_posix(): sha(p)
+            for p in sorted((ROOT / 'source').rglob('*')) if p.is_file()}
+
+
+before = snapshot()
+save('evidence/source-before.json', before)
+assert all(sha(SOURCE / f) == h for f, h in RECORD['files'].items())
+expected_inputs = json.loads((ROOT / 'input-inventory.json').read_text())
+input_checks = {p: sha(ROOT / p) == h for p, h in expected_inputs.items()}
+assert all(input_checks.values())
+save('evidence/input-integrity.json', input_checks)
+
+commands = []
+
+
+def run(name, args):
+    result = subprocess.run(args, cwd=ROOT, env=ENV, text=True, capture_output=True)
+    (OUT / 'evidence' / (name + '.log')).write_text(
+        'COMMAND: ' + repr(args) + '\nEXIT: ' + str(result.returncode)
+        + '\nSTDOUT:\n' + result.stdout + '\nSTDERR:\n' + result.stderr)
+    commands.append({'name': name, 'argv': args, 'exit_code': result.returncode})
+    return result
+
+
+save('evidence/environment.json', {
+    'observation_date': '2026-10-30', 'python': sys.version,
+    'executable': sys.executable, 'platform': platform.platform(),
+    'tools_found': {t: shutil.which(t) for t in ['python3', 'node', 'npm', 'copilot', 'vally']},
+    'dependencies_installed': False, 'runtime_model': 'No Copilot runtime/model trial executed',
+    'workspace_git': 'No .git checkout; source revision is supplied provenance, not locally verified Git ancestry',
+})
+assert run('helper-tests', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s',
+                          'source/editorial-writing/tests', '-v']).returncode == 0
+run('authoring-validator', [sys.executable, '-B', 'existing-authoring/scripts/quick_validate.py',
+                            'source/editorial-writing'])
+assert run('advisory-lint', [sys.executable, '-B', 'source/editorial-writing/scripts/prose_lint.py',
+                           'source/editorial-writing', '--format', 'json']).returncode == 0
+
+skill = (SOURCE / 'SKILL.md').read_text()
+front = skill.split('---', 2)[1]
+fields = dict(line.split(': ', 1) for line in front.strip().splitlines())
+assert fields['name'] == SOURCE.name
+assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', fields['name'])
+assert len(fields['name']) <= 64 and 10 <= len(fields['description']) <= 1024
+assert fields['license'] == 'Apache-2.0'
+checks = {
+    'status': 'pass', 'scope': 'Bounded local checks, not upstream skill:validate',
+    'name': fields['name'], 'description_characters': len(fields['description']),
+    'fields': list(fields), 'file_count': len(FILES),
+    'all_under_5MB': all((SOURCE / f).stat().st_size < 5_000_000 for f in FILES),
+    'all_LF_no_CR': all(b'\r' not in (SOURCE / f).read_bytes() for f in FILES),
+    'no_selected_symlinks': all(not (SOURCE / f).is_symlink() for f in FILES),
+    'excluded': [f for f in RECORD['files'] if f not in FILES],
+    'reference_gap': 'DEPENDENCIES.md and tests/test_prose_lint.py are not linked from SKILL.md; clarify supporting-file reference expectations before direct PR',
+}
+save('evidence/structure.json', checks)
+
+helper = str(ROOT / '.agents/skills/skill-delivery/scripts/export_skill.py')
+for kind in ['skill', 'plugin']:
+    files = {f: 'source/editorial-writing/' + f for f in FILES}
+    name = 'editorial-writing'
+    if kind == 'plugin':
+        name = 'editorial'
+        files = {'skills/editorial-writing/' + k: v for k, v in files.items()}
+        files.update({'plugin.json': 'source/existing-plugin.json',
+                      'LICENSE': 'source/editorial-writing/LICENSE'})
+    config = OUT / (kind + '-export.json')
+    save(config.name, {'version': 1, 'name': name, 'kind': kind,
+                       'source_commit': RECORD['base_revision'], 'files': files})
+    target = OUT / (kind + '-candidate')
+    assert run(kind + '-export', [sys.executable, '-B', helper, 'export',
+        '--source-root', str(ROOT), '--config', str(config), '--output', str(target)]).returncode == 0
+    assert run(kind + '-archive-verify', [sys.executable, '-B', helper, 'verify',
+        '--manifest', str(target / 'manifest.json'), '--archive', str(target / 'skill.zip')]).returncode == 0
+    assert run(kind + '-payload-verify', [sys.executable, '-B', helper, 'verify',
+        '--manifest', str(target / 'manifest.json'), '--installed-root', str(target / 'payload')]).returncode == 0
+
+plugin = json.loads((ROOT / 'source/existing-plugin.json').read_text())
+save('evidence/plugin-metadata.json', {
+    'status': 'partial', 'checks': 'Parsed supplied JSON; checked required fields only, no external schema/intake run',
+    'name': plugin['name'], 'version': plugin['version'], 'license': plugin['license'],
+    'schema': plugin['$schema'], 'extensions_preserved': list(plugin['extensions']),
+    'source_repo': 'foculoom/aiartifacts', 'source_path': 'plugins/editorial',
+    'candidate_sha_from_supplied_record': RECORD['base_revision'],
+    'remote_subtree_bytes_verified': False,
+})
+
+after = snapshot()
+assert before == after
+save('evidence/source-after.json', after)
+save('evidence/source-preservation.json', {'status': 'pass', 'all_source_files_unchanged': True,
+    'files_checked': len(after), 'recorded_skill_hashes_match': True,
+    'all_supplied_inventory_hashes_match': all(input_checks.values())})
+save('evidence/commands.json', commands)
+save('evidence/package-hashes.json', {
+    str(p.relative_to(OUT)): sha(p)
+    for kind in ['skill', 'plugin']
+    for p in [OUT / (kind + '-candidate') / 'manifest.json', OUT / (kind + '-candidate') / 'skill.zip']
+})
+rows = ['| Intended direct-PR destination (held) | Supplied source | SHA-256 |',
+        '| --- | --- | --- |']
+rows += ['| `skills/editorial-writing/' + f + '` | `source/editorial-writing/' + f + '` | `'
+         + sha(SOURCE / f) + '` |' for f in FILES]
+(OUT / 'intended-files.md').write_text(
+    '# Intended files\n\nThese 12 files are copied unchanged in `skill-candidate/payload/`. '
+    'This is a review candidate, not an MIT-ready direct contribution.\n\n'
+    + '\n'.join(rows) + '\n\n'
+    'Exclude both supplied `__pycache__/*.pyc` files. Tests are development evidence; '
+    'the prose helper is optional at runtime. No fixtures, evaluation logs, credentials, '
+    'authoring tools, or unrelated repository files belong in the payload.\n\n'
+    'The alternative `plugin-candidate/payload/` has 14 files: the same 12 under '
+    '`skills/editorial-writing/`, the unchanged supplied manifest as `plugin.json`, '
+    'and an unchanged copy of the skill LICENSE at plugin root. This reconstructed '
+    'local layout is not proof of the remote subtree inventory. It preserves '
+    '`extensions.com.openai`; no new plugin or MCP integration is needed.\n\n'
+    'A future direct PR must also regenerate upstream README tables via `npm run build` '
+    'and inspect the resulting diff; no guessed README row is included. '
+    'It must not include this entire packet or an initial edit to `plugins/external.json`.\n')
+print(json.dumps({'source_unchanged': before == after, 'commands': commands}, indent=2))

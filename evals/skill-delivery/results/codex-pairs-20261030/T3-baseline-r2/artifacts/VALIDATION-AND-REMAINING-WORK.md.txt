@@ -1,0 +1,23 @@
+# Validation and remaining work
+
+Observed 2026-10-30: local candidate preparation complete. See `validation.json` for commands/results and the adjacent logs for raw output.
+
+## Completed checks
+
+- Every supplied input-inventory hash matched before preparation. All files under source/, including the old ZIP, remained unchanged afterward; see `input-verification.json`.
+- Package membership matches the explicit 12-file allowlist, with no symlinks, bytecode, private notes, authoring tools, plugin manifest or reports. Every package file is byte-identical to its new-source counterpart.
+- Existing `quick_validate.py` passed using already available PyYAML 6.0.3; no dependencies were installed. Frontmatter has a valid name, description and license. Description routes reader-facing writing by audience/medium; instructions preserve the brief, do not invent factual evidence, and distinguish automated checks from human editorial review.
+- All 27 supplied behavioral checker tests passed on Python 3.9.6, including Markdown masking, phrase matching, repetition checks, symlink handling, CLI error codes, JSON output and non-rewriting behavior. Bytecode writing was disabled; temporary test artifacts were confined to output/ and removed by the tests.
+- Local Markdown resource links resolve within the package. Instructions route to the audience/medium profiles and checker. DEPENDENCIES.md links to the included license.
+- Bundled checker scanned nine Markdown files and returned zero findings. This is an advisory result, not an assessment of writing quality or facts.
+- Both old and new ZIP CRC checks passed. Fresh ZIP membership and each uncompressed member's SHA-256 match the package inventory. Sorted entries use a fixed 2026-10-30 ZIP timestamp and regular-file permissions 0644. The fresh ZIP was built from the allowlist, never by updating the old ZIP.
+
+## Remaining work and limits
+
+No remaining work blocks delivery of this local candidate. Before a public release, record the updated examples hash in the owning provenance/release record and tie these bytes to an immutable reviewed source revision. Decide whether to keep the trial-specific heading; it has been preserved faithfully here. Any later edits require rebuilding and revalidating the package and inventories.
+
+No host installation or actual agent editorial session was performed. The provided test suite validates the warning checker, not instruction-following behavior, authoring quality, factual verification, human review or accessibility in a live product. Host discovery and installation compatibility remain unverified. No independent-agent forward test was needed for this narrow packaging change.
+
+This is a standalone skill candidate, not a complete provider-specific plugin submission. Any future plugin release would need its own approved version, manifest/layout, immutable public revision, and provider checks. Supplied upstream docs describe separate curated-skill and external-plugin contribution routes; no npm build, provider validator, submission workflow or installer was run here. Those activities were outside the requested local packaging task.
+
+Public availability/acquisition as of 2026-10-30: this updated candidate is available only as a local output artifact in this workspace; it has not been uploaded or published by this task. Current public availability of the upstream skill or plugin, marketplace listing/approval, and customer acquisition were not checked and are unknown. Local package validation does not establish any of those states.

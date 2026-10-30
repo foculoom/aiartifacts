@@ -1,0 +1,17 @@
+{
+  ".agents/skills/skill-delivery/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  ".agents/skills/skill-delivery/SKILL.md": "fd0e23926156028f9446b43c275eb9fb667b8af9aa3cc5dbf3282a02fb464733",
+  ".agents/skills/skill-delivery/references/ecosystems.md": "29c79ec1f0a3cf2c5797fa8ea2434c748ed96cd6c0d67a442029c33af4e4b238",
+  ".agents/skills/skill-delivery/references/evaluation.md": "e69f0334fc26c76e49a71b35cc1c549c11ddac50ad1030b3f726bb773c4558f3",
+  ".agents/skills/skill-delivery/references/packaging.md": "ad724ceabc2ca9725efa993b2e0f7487b9e4ced500fa5f537fe6f2c0d032763f",
+  ".agents/skills/skill-delivery/scripts/export_skill.py": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+  ".agents/skills/skill-delivery/tests/test_export_skill.py": "151117ac558363bdf83ae25ee1a6a40a3fb83b74cfb6fdaa2858f8d63996b7b8",
+  "existing-authoring/SKILL.md": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+  "existing-authoring/license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "existing-authoring/scripts/quick_validate.py": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+  "official-sources/awesome-contributing.md": "4aa8b5bdb0d18c1744c55aaf9c078e3682c7d0e185d6365d12a03b2106fa1b40",
+  "official-sources/awesome-external-plugin.yml": "ccff290dcfe5e850629df57e17296d45e731029072391aa5bc48eb1d06718350",
+  "official-sources/awesome-instructions.md": "7ad698efbcdabcacfdaafb4d668d5b7b61687eadc0a49ecd85952057014a1653",
+  "official-sources/skills-commands.md": "595355b00da494d336ce495931ce6c4a90e61509f4493c48dfc8fdca5cbb36b7",
+  "official-sources/skills-creating.md": "5f8a9b0ca2783c68f464bf21d8e8ee2db12b186cd8fddda95d105d350c6584f5"
+}

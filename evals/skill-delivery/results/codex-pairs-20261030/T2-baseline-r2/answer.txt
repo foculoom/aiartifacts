@@ -1,0 +1,7 @@
+Prepared the [review packet](output/README.md) with 12 intended files, hashes, validation logs, submission drafts and unresolved decisions.
+
+Local validation passes; all 27 checker tests pass with a resolved temporary path. Default macOS path failures are documented.
+
+Direct submission remains blocked on Apache-2.0 versus [MIT contribution terms](https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md#license). Upstream build and Copilot testing remain pending.
+
+`source/` and licensing are unchanged. Nothing was installed, submitted or published.

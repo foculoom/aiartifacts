@@ -1,0 +1,3 @@
+Added the preparation section to [REPORT.md](output/REPORT.md), with exact local-source commands labeled **UNEXECUTED**, an isolated Claude Code target, and installer/version/telemetry choices.
+
+Updated `SHA256SUMS` and affected inventory hashes; all checks pass. No installer commands ran. The candidate, archive, existing evidence and limits remain unchanged.

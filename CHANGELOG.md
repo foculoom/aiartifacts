@@ -2,6 +2,29 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — skill delivery tooling and Editorial 0.1.1
+
+- Retain skill-delivery documentation, ecosystem references and a Python
+  standard-library exporter with explicit file allowlists, exact inventory,
+  hashes, executable modes and bounded privacy/path checks. It never installs,
+  submits, publishes or grants access.
+- Reuse Editorial as the shared-source pilot. Include Apache-2.0 text at the
+  plugin and skill installation boundaries, declare dependencies, and handle
+  missing optional lint or denied source access explicitly.
+- Add independent runtime/activation/failure cases, three paired usefulness
+  tasks, exact packaging checks and an unsent Awesome Copilot intake packet.
+  Record blocked and unverified gates separately from completed checks.
+- Preserve v0.5.0, installed consumers and external distribution decisions.
+- October 30 paired preparation trials favor the helper in one of three pairs,
+  below the predeclared adoption threshold; controlled runtime/model evidence
+  remains incomplete. Retain tooling/documentation and defer the extra skill.
+- Keep standalone exporter tests independent of repository-only pilot fixtures;
+  CI separately exercises those integration checks and an isolated tool copy.
+- Apply the owner's selected fallback: keep the exporter/tests under
+  `scripts/skill-delivery`, procedures under `docs/skill-delivery`, and the
+  experimental entrypoint only as `evals/skill-delivery/candidate/SKILL.md.txt`.
+  Restore Engineering's existing 0.1.2 metadata; no extra skill is discoverable.
+
 ## Unreleased — evidence and recovery safeguards
 
 - Extend reporting, retrospective and Release source guidance to distinguish

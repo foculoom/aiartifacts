@@ -1,5 +1,6 @@
 ---
 name: editorial-writing
+license: Apache-2.0
 description: Draft, revise, or review reader-facing prose using the intended medium, audience, and project voice. Use for books, websites, and game text when clarity, rhythm, continuity, or editorial judgment matters.
 ---
 
@@ -29,5 +30,7 @@ For review, identify the most consequential issue first. Point to the exact pass
 For a substantial or assembled work, also check transitions, repeated explanations, shifts in voice, factual consistency, and the parts a reader encounters outside the main text. Record the reviewed scope and source revision when the project needs a durable handoff; material changes make the affected review stale. Distinguish agent review from actual human editorial or reader testing, and never infer the latter from a clean automated check.
 
 For substantial saved Markdown or plain text, run the bundled [prose warning checker](scripts/prose_lint.py) when available: `python3 <skill-directory>/scripts/prose_lint.py <path>`. Inspect each warning in context; keep precise terms or purposeful repetition when justified. The checker does not rewrite text, verify facts, or assess authorship, and a clean run does not establish editorial quality.
+
+If Python or the checker is unavailable, complete the editorial work you can and state that lint was not run. If a requested source cannot be read with existing permission, explain the missing input; do not bypass access controls or claim to have reviewed it.
 
 Deliver the requested prose or review in the requested format. Keep production notes out of reader-facing copy unless asked for them.

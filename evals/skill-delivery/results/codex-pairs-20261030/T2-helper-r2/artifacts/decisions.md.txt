@@ -1,0 +1,17 @@
+# Unresolved decisions and next actions
+
+As of **2026-10-30**, local review packaging and helper validation are achieved. Their artifacts remain useful while these external prerequisites are pending.
+
+| Decision / unknown | Owner | Next action |
+| --- | --- | --- |
+| Direct MIT contribution versus existing Apache-2.0 external plugin route | Foculoom rights holder / contributor | Review both drafts and choose route. For direct contribution, establish rights and explicit terms for every included file; no permission was granted to change licensing here |
+| Direct-route policy exception or authorized licensing terms | Rights holder and Awesome Copilot maintainers as applicable | Resolve before treating the unchanged Apache package as a direct-PR candidate; retain evidence of the decision |
+| Exact public source, immutable locator, plugin version and complete remote subtree identity | Source maintainer | Confirm `foculoom/aiartifacts`, `plugins/editorial`, SHA `211ad9da8b7a3d0740d1896a74c018ed3ad097be`, manifest 0.1.1 and all required notices/dependencies at that revision. SHA is supplied, not independently fetched; do not substitute `main` |
+| Existing listing/duplicate and editorial skill overlap | Contributor / curator | Check current marketplace and similar resources. Leave form non-duplication attestation unchecked until verified |
+| Specialized value beyond generic writing ability | Contributor, independent evaluator, curator | Run prepared cases and no-skill baselines; document concrete factual/continuity/voice outcomes and variability |
+| Test/dependency file references and payload scope | Source owner / upstream reviewer | Decide whether SKILL.md should link development tests/dependencies, or omit development tests from final upstream payload. Any approved content change needs a new manifest and affected checks; source was left unchanged |
+| Copilot selection and completion, including safe failure | Runtime evaluator | With separately authorized existing setup, run isolated discovery/behavior trials; retain version, model, permissions and output receipts |
+| Upstream validation/build and external gates | Contributor / upstream automation | Run applicable documented checks in an approved provisioned checkout; do not install dependencies under current authority |
+| External submission or publication | User / authorized contributor, then maintainers | Obtain authorization only after route and candidate are reviewable. This packet grants none. Maintainers decide acceptance; automation creates any listing PR |
+
+No pending stage erases completed local validation. Neither a passing package nor a future source merge would establish Copilot behavior, listing, public acquisition or customer receipts. Current acquisition status remains unverified in this run; no claim is made that an existing public source was removed or unavailable.

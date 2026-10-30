@@ -1,0 +1,5 @@
+{
+  "files": 15,
+  "identical": true,
+  "scope": "All supplied source/ file hashes and full regular-file inventory match input-inventory.json"
+}

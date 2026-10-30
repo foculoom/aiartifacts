@@ -1,0 +1,1 @@
+Return a Python function named clamp(value, lower, upper) that returns lower when value is below lower, upper when above upper, and value otherwise. Raise ValueError if lower is greater than upper. Only return the function.

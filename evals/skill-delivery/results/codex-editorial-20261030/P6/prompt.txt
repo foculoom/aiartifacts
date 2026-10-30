@@ -1,0 +1,9 @@
+Review this short lesson for an adult beginner. Identify its most consequential
+editorial weakness, quote the exact phrase that shows it, and suggest one
+focused revision. Do not rewrite the whole lesson or claim to have reviewed a
+larger work.
+
+"A backup is a second copy of a file. Backups matter. Backups are important to
+have. You should make backups often. If the only copy of your family photos is
+on a laptop and its drive fails, the photos may be lost. Put a second copy on
+another device, then check that you can open a photo from it."

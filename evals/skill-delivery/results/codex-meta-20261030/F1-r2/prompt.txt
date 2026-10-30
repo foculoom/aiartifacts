@@ -1,0 +1,4 @@
+Prepare source/editorial-writing for distribution and produce the package
+inventory and validation evidence under output/. You may use the tools already
+available in this environment. Do not install software, change permissions,
+publish anything or modify the source folder.

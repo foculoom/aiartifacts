@@ -1,6 +1,108 @@
 # Maintainer handoff
 
-## Strict Release manifest candidate — October 30, 2026
+## Skill delivery tooling fallback — October 30, 2026
+
+The owner selected **integrate the tested tooling and documentation; keep the
+extra skill deferred**. The canonical exporter, license and portable tests are
+now under `scripts/skill-delivery/`; current procedures are under
+`docs/skill-delivery/`. The evaluated entrypoint is retained byte-for-byte only
+as [SKILL.md.txt](evals/skill-delivery/candidate/SKILL.md.txt), outside ordinary
+skill discovery. Engineering's original 0.1.2 manifest is restored; its existing
+platform-boundary skill is unchanged. Editorial 0.1.1's packaging improvements
+remain. No historical result, payload, source pin or privacy record was erased.
+
+Reproduce current preparation with the
+[pilot commands](evals/skill-delivery/pilot/README.md). Run the portable suite
+with `python3 -m unittest discover -s scripts/skill-delivery/tests -q`, repository
+checks with `python3 -m unittest discover -s evals/skill-delivery -p 'test_*.py' -q`,
+and `python3 scripts/validate_catalog.py`. Expected discovery is seven plugins
+and eight skills. Local macOS checks use a canonical temporary directory;
+existing Ubuntu CI runs the same source checks. The new discovery regression
+guards the deferral; model/provider tests are not repeated for a path-only
+tooling move and removal of the installed entrypoint.
+
+[PR #30](https://github.com/foculoom/aiartifacts/pull/30) owns the final source
+review, checks and normal merge receipt for this selected scope. Source
+integration is authorized; extra-skill adoption, release, external submission
+and consumer updates remain separate. The previous experiment and its verified
+outcomes are preserved below. Its failure to demonstrate incremental benefit
+does not hold the independently useful tooling and documentation indefinitely.
+
+## Skill delivery experiment — October 30, 2026
+
+Work started from clean default-branch source
+`1ce208bf7fb4b102bac8f31b192bc378790ed712`. The initial Engineering 0.2.0 proposal
+added the [skill-delivery workflow](evals/skill-delivery/candidate/SKILL.md.txt),
+three focused references and a standard-library exporter. Editorial 0.1.1 is
+the real shared-source pilot: plugin and standalone-skill license text,
+dependency declarations and explicit missing-tool/access behavior. See the
+[pilot](evals/skill-delivery/pilot/README.md) for exact selection configs,
+fresh export commands and the unsent external-plugin packet. No separate
+instruction fork, generator, evaluation service or runtime dependency was added.
+
+Portable preparation used the existing authorized local macOS environment after
+no attached or listed authorized cloud environment was available. Bundled Python
+3.12.14 and Node 24.19.0 worked; the default Homebrew Node had a missing simdjson
+library and was not used. The existing Ubuntu CI now discovers the new exporter
+tests. Runtime evaluation uses existing sign-in; no paid API fallback, credential
+transfer or policy change is authorized by the toolkit.
+
+The [evaluation procedure](evals/skill-delivery/README.md) keeps prompts and
+held-out criteria separate. The [evidence index](evals/skill-delivery/results/README.md)
+links dated receipts, independent reviews and selected-file hashes: the original
+base SHA alone does not identify changed candidate bytes. The implemented source
+at `211ad9da8b7a3d0740d1896a74c018ed3ad097be` passed 148 Python tests,
+10 JavaScript tests and both hosted Ubuntu checks. Separate reviewers covered
+the exporter/integration and authored skill references. Final scoped independent
+reviews accepted head `4592a641d9fc6ea39e055d943a8dc71521442060`, and both
+[hosted checks](https://github.com/foculoom/aiartifacts/actions/runs/41104482894)
+passed there: 156 Python methods and 10 JavaScript tests. Those review and
+validation milestones are complete. Fresh installed-file
+comparison and runtime behavior are separate evidence. Copilot CLI 1.0.54 successfully installed the isolated
+local Editorial plugin, but its unrelated connectivity probe returned
+`Access denied by policy settings` before any skill evaluation. Copilot behavior
+remains access-blocked; the cause beyond that observed denial is unverified.
+A bounded retry after restored workspace usage returned the same provider denial.
+Eleven Codex Editorial outcomes pass independent task grading within their
+recorded scope; initial instruction isolation and exact model identity remain
+unverified. Original failed sandbox setup attempts remain in the record.
+
+Source review, hosted checks, independent behavioral grading and paired usefulness
+results must be read at their exact recorded identities before claiming acceptance.
+The initial PR #30 experiment was held as a draft because the paired trials
+did not support adoption: baseline/helper corrections
+were 1/0, 0/0 and 0/1, favoring the helper in one of three pairs against the
+predeclared two-pair threshold. Full context/model controls remain unverified.
+All six meta tasks reach scoped acceptance after one finishing correction;
+explicit invocation diagnostics pass. Preserve those achieved outcomes and the
+original failures. Retain reusable tooling/documentation; defer the extra skill.
+
+A final test-layout correction removes the standalone suite's dependency on
+other repository files. All 23 portable tests pass in an isolated installed
+layout; three integration tests stay in `evals/`. The final local checks pass
+152 Python methods and 10 JavaScript tests, with instructions/exporter unchanged.
+Historical runtime receipts retain their old test hashes and 22/25 result.
+The [evidence-redaction record](docs/skill-delivery-evidence-redaction-20261030.md)
+documents temporary paths found after the first evidence push, the corrected
+current packet, and the fact that earlier public history has not been erased.
+Source/packages and the adoption hold are unchanged by that correction.
+Four new offline host-path regression tests pass and are picked up by the
+existing evaluation-test CI command. The prior 152-test receipt is retained;
+these checks add bounded retention coverage rather than a privacy certificate.
+The extra skill remains deferred because adoption has not met its stated
+threshold; final review and checks at the recorded head are not pending work.
+The tooling-only follow-up above has its own review/checks. The release owner
+separately resolves remaining runtime/usefulness gates and rights review before
+any tag or external submission. The prepared packet is not sent automatically.
+
+Public availability is unchanged: v0.5.0 was published October 24; release
+metadata was rechecked October 30 and archive acquisition was last explicitly
+verified October 28. This candidate is unreleased, with no Awesome Copilot
+submission or listing created and skills.sh public listing/acquisition still
+unverified. Local telemetry-disabled installations do not establish public
+discovery. Preserve all published tags and consumer pins.
+
+## Strict Release manifest integration — October 30, 2026
 
 The [red–green–refactor record](evals/release/manifest-validation-20261030.md)
 reproduces silent inventory/hash loss from duplicate JSON members in the
@@ -10,19 +112,19 @@ correction `a6cbba40941a95fc07796bd8802237c051b59392` passes all 10 Release
 methods. The final refactor separates complete validation from network readback.
 Release 10/10 and neighboring Design 11/11 pass in cloud Linux/Python 3.12.14.
 The record includes exact commands and the local catalog setup limitation:
-the connector text snapshot omits existing rendered PNGs. Hosted validation of
-the complete checkout and independent final-head review remain merge gates;
-follow the focused PR for their receipts rather than treating this checkpoint
-as a completed review or merge.
+the connector text snapshot omits existing rendered PNGs. Reviewed
+[PR #29](https://github.com/foculoom/aiartifacts/pull/29) merged on October 30
+at 08:13:08 UTC as `1ce208bf7fb4b102bac8f31b192bc378790ed712`.
+The [default-branch validation](https://github.com/foculoom/aiartifacts/actions/runs/41024980232)
+passed. Those source review, integration and hosted checks are achieved.
 
 No instruction evaluation, consumer compatibility, deployment or live customer
 path is claimed. Maintainer owns source integration; consumer owners separately
 review adoption. Existing v0.5.0 is still the latest non-draft release in the
 October 30 GitHub metadata readback; no package/tag/version or consumer pin
 changes. Archive download, native/provider acceptance and new publication are
-not part of this work. Next: complete exact-head review and required checks,
-then use the normal protected source merge; any adoption/publication remains a
-distinct owning workflow.
+not part of this work. Next: a consumer owner may review explicit adoption;
+any package publication remains a distinct owning workflow.
 
 ## Evidence and recovery source integration — October 29, 2026
 

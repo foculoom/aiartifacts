@@ -1,0 +1,123 @@
+"""Local review build. No installs, network, chmod, or source writes."""
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import platform
+import stat
+import sys
+import zipfile
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'output'
+SOURCE = ROOT / 'source/editorial-writing'
+RECORD = json.loads((ROOT / 'source-record.json').read_text())
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, indent=2, sort_keys=True) + '\n')
+
+def source_snapshot():
+    return {p.relative_to(SOURCE).as_posix(): {
+        'sha256': sha(p.read_bytes()),
+        'mode': format(stat.S_IMODE(p.stat().st_mode), '04o'),
+        'size': p.stat().st_size,
+    } for p in sorted(SOURCE.rglob('*')) if p.is_file()}
+
+before = source_snapshot()
+assert {k: v['sha256'] for k, v in before.items()} == RECORD['files']
+assert not any(p.is_symlink() for p in SOURCE.rglob('*'))
+write_json(OUT / 'evidence/source-before.json', before)
+
+# Reuse read-only checks from the reviewed helper; do not invoke its exporter,
+# which calls chmod. No Python bytecode is written (-B and environment setting).
+helper_path = ROOT / '.agents/skills/skill-delivery/scripts/export_skill.py'
+spec = importlib.util.spec_from_file_location('export_checks', helper_path)
+helper = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(helper)
+
+selected = [
+    'SKILL.md', 'LICENSE', 'DEPENDENCIES.md', 'scripts/prose_lint.py',
+    'references/examples.md', 'references/medium/longform.md',
+    'references/medium/web.md', 'references/medium/game-ui.md',
+    'references/medium/game-dialogue.md', 'references/audience/adult.md',
+    'references/audience/early-reader.md',
+]
+skill_map = {name: 'editorial-writing/' + name for name in selected}
+plugin_map = {'skills/editorial-writing/' + name: source
+              for name, source in skill_map.items()}
+plugin_map.update({'plugin.json': 'existing-plugin.json',
+                   'LICENSE': 'editorial-writing/LICENSE',
+                   'DEPENDENCIES.md': 'editorial-writing/DEPENDENCIES.md'})
+
+inventory = {}
+for label, kind, name, mapping in [
+    ('standalone', 'skill', 'editorial-writing', skill_map),
+    ('plugin', 'plugin', 'editorial', plugin_map),
+]:
+    config = {'version': 1, 'kind': kind, 'name': name,
+              'source_commit': RECORD['base_revision'], 'files': mapping}
+    helper.config_record(json.dumps(config))
+    payload = {target: helper.source_bytes(ROOT / 'source', source)
+               for target, source in mapping.items()}
+    helper.check_payload(config, payload)
+    folder = OUT / label
+    folder.mkdir()
+    stage = folder / 'payload'
+    stage.mkdir()
+    files = {}
+    for target, data in sorted(payload.items()):
+        dest = stage / target
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        with dest.open('xb') as handle:
+            handle.write(data)
+        mode = format(stat.S_IMODE(dest.stat().st_mode), '04o')
+        files[target] = {'source': mapping[target], 'sha256': sha(data),
+                         'mode': mode}
+    manifest = {key: config[key] for key in
+                ('version', 'kind', 'name', 'source_commit')}
+    manifest.update(source_commit_verification=helper.PROVENANCE_LIMIT,
+                    config_sha256=sha((json.dumps(config, sort_keys=True) + '\n').encode()),
+                    limitations=helper.LIMITS, files=files)
+    (folder / 'export-config.json').write_text(json.dumps(config, sort_keys=True) + '\n')
+    write_json(folder / 'manifest.json', manifest)
+    archive_path = folder / 'skill.zip'
+    with zipfile.ZipFile(archive_path, 'x', zipfile.ZIP_STORED) as archive:
+        for target, data in sorted(payload.items()):
+            entry = zipfile.ZipInfo(target, (1980, 1, 1, 0, 0, 0))
+            entry.create_system = 3
+            entry.external_attr = (stat.S_IFREG | int(files[target]['mode'], 8)) << 16
+            archive.writestr(entry, data)
+    archive_result = helper.verify(folder / 'manifest.json', archive=archive_path)
+    stage_result = helper.verify(folder / 'manifest.json', installed_root=stage)
+    inventory[label] = {
+        'archive': archive_path.relative_to(OUT).as_posix(),
+        'archive_sha256': sha(archive_path.read_bytes()),
+        'manifest_sha256': sha((folder / 'manifest.json').read_bytes()),
+        'file_count': len(files), 'files': files,
+        'archive_verification': archive_result,
+        'staged_folder_verification': stage_result,
+        'permission_policy': 'New files use default creation permissions; no chmod, permission changes, or executable normalization performed. Invoke the checker with python3.',
+    }
+
+after = source_snapshot()
+assert before == after
+write_json(OUT / 'evidence/source-after.json', after)
+write_json(OUT / 'inventory.json', inventory)
+import yaml
+write_json(OUT / 'evidence/environment.json', {
+    'observation_date': '2026-10-30', 'python': sys.version,
+    'python_executable': sys.executable, 'platform': platform.platform(),
+    'pyyaml_version': yaml.__version__,
+    'helper_sha256': sha(helper_path.read_bytes()),
+    'validator_sha256': sha((ROOT / 'existing-authoring/scripts/quick_validate.py').read_bytes()),
+    'source_record_sha256': sha((ROOT / 'source-record.json').read_bytes()),
+    'source_unchanged': before == after,
+    'base_revision_is_supplied_label': True,
+    'git_checkout_verification': 'Unavailable: supplied workspace has no .git checkout and git is not on PATH.',
+})
+print(json.dumps({'status': 'prepared', 'source_unchanged': before == after,
+                  'packages': {k: v['file_count'] for k, v in inventory.items()}}))

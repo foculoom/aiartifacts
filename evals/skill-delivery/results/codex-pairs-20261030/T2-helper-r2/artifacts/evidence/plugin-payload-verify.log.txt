@@ -1,0 +1,6 @@
+COMMAND: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', '<CASE_ROOT>/.agents/skills/skill-delivery/scripts/export_skill.py', 'verify', '--manifest', '<CASE_ROOT>/output/plugin-candidate/manifest.json', '--installed-root', '<CASE_ROOT>/output/plugin-candidate/payload']
+EXIT: 0
+STDOUT:
+{"file_count": 14, "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.", "status": "verified"}
+
+STDERR:

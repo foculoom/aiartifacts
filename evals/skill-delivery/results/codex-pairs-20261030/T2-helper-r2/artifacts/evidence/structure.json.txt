@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "scope": "Bounded local checks, not upstream skill:validate",
+  "name": "editorial-writing",
+  "description_characters": 204,
+  "fields": [
+    "name",
+    "license",
+    "description"
+  ],
+  "file_count": 12,
+  "all_under_5MB": true,
+  "all_LF_no_CR": true,
+  "no_selected_symlinks": true,
+  "excluded": [
+    "tests/__pycache__/test_prose_lint.cpython-312.pyc",
+    "scripts/__pycache__/prose_lint.cpython-312.pyc"
+  ],
+  "reference_gap": "DEPENDENCIES.md and tests/test_prose_lint.py are not linked from SKILL.md; clarify supporting-file reference expectations before direct PR"
+}

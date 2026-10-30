@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "editorial",
+  "kind": "plugin",
+  "source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "files": {
+    "skills/editorial-writing/SKILL.md": "editorial-writing/SKILL.md",
+    "skills/editorial-writing/LICENSE": "editorial-writing/LICENSE",
+    "skills/editorial-writing/DEPENDENCIES.md": "editorial-writing/DEPENDENCIES.md",
+    "skills/editorial-writing/references/examples.md": "editorial-writing/references/examples.md",
+    "skills/editorial-writing/references/audience/adult.md": "editorial-writing/references/audience/adult.md",
+    "skills/editorial-writing/references/audience/early-reader.md": "editorial-writing/references/audience/early-reader.md",
+    "skills/editorial-writing/references/medium/web.md": "editorial-writing/references/medium/web.md",
+    "skills/editorial-writing/references/medium/longform.md": "editorial-writing/references/medium/longform.md",
+    "skills/editorial-writing/references/medium/game-ui.md": "editorial-writing/references/medium/game-ui.md",
+    "skills/editorial-writing/references/medium/game-dialogue.md": "editorial-writing/references/medium/game-dialogue.md",
+    "skills/editorial-writing/scripts/prose_lint.py": "editorial-writing/scripts/prose_lint.py",
+    "skills/editorial-writing/tests/test_prose_lint.py": "editorial-writing/tests/test_prose_lint.py",
+    "plugin.json": "existing-plugin.json",
+    "LICENSE": "editorial-writing/LICENSE",
+    "DEPENDENCIES.md": "editorial-writing/DEPENDENCIES.md"
+  }
+}

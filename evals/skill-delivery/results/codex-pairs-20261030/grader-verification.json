@@ -1,0 +1,212 @@
+{
+  "observed_date": "2026-10-30",
+  "reviewer": "/root/copilot_ecosystem",
+  "criteria_revision": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "criteria_sha256": "983d8dd86fa135f4cff3a4a5815ce81e0e8430de66a9bbd5772bfac64f555538",
+  "paired_inputs_sha256": "c2fc018873aaf67f589458d67a7830e2d7331a84c9069f3d3673a44e6ef60ae8",
+  "records": {
+    "T1-baseline-r2": {
+      "exit_code": 0,
+      "seconds": 155.36,
+      "artifact_map_sha256": "11734d4ece38f6cea803a09890a6bde1ba9fc97eacd88a68b7ac8bf7102bed34",
+      "original_artifacts_verified": 28,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/editorial-writing-candidate.zip",
+          "sha256": "c27c718bbf1fbb67566b5c0a82940bc7514c634f552d36cff66273246a18e564",
+          "member_count": 12,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": []
+    },
+    "T1-baseline-r2-c1": {
+      "exit_code": 0,
+      "seconds": 66.2,
+      "artifact_map_sha256": "807181f88b45bb4413d72dec651e3347dbc74f46477b0bdf8c2b6f57bd09fca1",
+      "original_artifacts_verified": 28,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/editorial-writing-candidate.zip",
+          "sha256": "c27c718bbf1fbb67566b5c0a82940bc7514c634f552d36cff66273246a18e564",
+          "member_count": 12,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [],
+      "reported_candidate_inventory_verified": {
+        "path": "output/file-inventory.json",
+        "file_count": 12,
+        "inventory_sha256": "783188e7a19c0801a3943243c9db727caefe31a775bfff62f934bc6782b9f5fd"
+      }
+    },
+    "T1-helper-r2": {
+      "exit_code": 0,
+      "seconds": 165.56,
+      "artifact_map_sha256": "abd6bdd510f64f38843692b37121533f0481f42e8d8fc0ec42fa726bb2b76d10",
+      "original_artifacts_verified": 26,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/candidate/skill.zip",
+          "sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+          "member_count": 12,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [
+        {
+          "path": "output/test-tmp/xcrun_db",
+          "sha256": "c2a69ba4987480a314eec2d2864e1487d3002ec6602364ae2362cb4f239a4a7a",
+          "reason": "withheld binary containing machine paths; original retained locally; archive member inventory recorded when applicable"
+        }
+      ],
+      "reported_candidate_inventory_verified": {
+        "path": "output/candidate/manifest.json",
+        "file_count": 12,
+        "inventory_sha256": "02a14826f34e81da5a41d68d80387a0de57a375e4b3bea46ba76f902c8bc0361"
+      }
+    },
+    "T2-baseline-r2": {
+      "exit_code": 0,
+      "seconds": 228.27,
+      "artifact_map_sha256": "856325d5858251e3613ebcdb4a641407962e24a8c9db70d54fd4be995e817188",
+      "original_artifacts_verified": 39,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [],
+      "withheld": [],
+      "reported_candidate_inventory_verified": {
+        "path": "output/file-manifest.json",
+        "file_count": 12,
+        "inventory_sha256": "26b7383633a678a3c61f5a36028a55b0dca9c00fc3e3176d5406e6eeb803f404"
+      }
+    },
+    "T2-helper-r2": {
+      "exit_code": 0,
+      "seconds": 246.58,
+      "artifact_map_sha256": "e9fccb6303f61240c39c3510a39484be1020e9cb999257d366ab63e30ebe2360",
+      "original_artifacts_verified": 62,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/plugin-candidate/skill.zip",
+          "sha256": "383513752d7397c4b5525e347609baf454b0b6fe4c6937ee6221a751fa287497",
+          "member_count": 14,
+          "exact_members_bytes_and_safe_regular_paths": true
+        },
+        {
+          "path": "output/skill-candidate/skill.zip",
+          "sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+          "member_count": 12,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [],
+      "reported_candidate_inventory_verified": {
+        "path": "output/skill-candidate/manifest.json",
+        "file_count": 12,
+        "inventory_sha256": "afc7651a8a58f819db0a1bf631900bb1475738f3f2cd727922cc5845357c4a41"
+      }
+    },
+    "T3-baseline-r2": {
+      "exit_code": 0,
+      "seconds": 125.15,
+      "artifact_map_sha256": "5b89a557d56ca9fc5655c887249d266153833ef434c263ff8e94de61e8467061",
+      "original_artifacts_verified": 27,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/editorial-writing-candidate.zip",
+          "sha256": "4423a8cd3e9923b9c184b882638a6dfbe3b4a845145cba60454ccd4a8f0c5376",
+          "member_count": 12,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [],
+      "reported_candidate_inventory_verified": {
+        "path": "output/package-inventory.json",
+        "file_count": 12,
+        "inventory_sha256": "1c0788f307d52060f1835b251a0390646f3f391b8d8c888f3cda2ccb58f2475d"
+      }
+    },
+    "T3-helper-r2": {
+      "exit_code": 0,
+      "seconds": 177.59,
+      "artifact_map_sha256": "10d5ee45fcc29172868d036049092211fcef14c0068fed32816ea55ea73c8411",
+      "original_artifacts_verified": 45,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [],
+      "archives": [
+        {
+          "path": "output/candidate/skill.zip",
+          "sha256": "2292abf035548593f70c4342dffb04a56562a04c9e080c9ff5a3a70a0ebba336",
+          "member_count": 11,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [
+        {
+          "path": "output/xcrun_db",
+          "sha256": "1c480b3dc7be7b5a9a02928cd06b2e8c4041e7af08c48870a5518a63c05f176c",
+          "reason": "withheld binary containing machine paths; original retained locally; archive member inventory recorded when applicable"
+        }
+      ]
+    },
+    "T3-helper-r2-c1": {
+      "exit_code": 0,
+      "seconds": 34.49,
+      "artifact_map_sha256": "5f6b5c8076a35e07e1a455c8089e0a40567521d2db4aa094de3857b86a62c78a",
+      "original_artifacts_verified": 45,
+      "available_snapshot_hashes_match": true,
+      "supplied_source_inputs_unchanged": true,
+      "correction_changed_existing_output_files": [
+        "output/SHA256SUMS",
+        "output/VALIDATION-AND-REMAINING-WORK.md"
+      ],
+      "archives": [
+        {
+          "path": "output/candidate/skill.zip",
+          "sha256": "2292abf035548593f70c4342dffb04a56562a04c9e080c9ff5a3a70a0ebba336",
+          "member_count": 11,
+          "exact_members_bytes_and_safe_regular_paths": true
+        }
+      ],
+      "withheld": [
+        {
+          "path": "output/xcrun_db",
+          "sha256": "1c480b3dc7be7b5a9a02928cd06b2e8c4041e7af08c48870a5518a63c05f176c",
+          "reason": "withheld binary containing machine paths; original retained locally; archive member inventory recorded when applicable"
+        }
+      ],
+      "reported_candidate_inventory_verified": {
+        "path": "output/candidate/manifest.json",
+        "file_count": 11,
+        "inventory_sha256": "a2dad5b7acf5e84d6072621ca7b9892747f4123d53fbb05b29db127ed9d24209"
+      }
+    }
+  },
+  "limits": [
+    "Inspection of retained originals and snapshots, not a new model evaluation or installer run.",
+    "Original artifact hashes, available snapshot hashes, candidate archives and reported inventories were independently checked.",
+    "Path/session-redacted snapshots differ from originals as labeled in each artifact map.",
+    "Shared baseline/helper input paths have identical hashes; helper-only files are its installed folder and skills-lock.json.",
+    "Machine-path scratch binaries were withheld after review; their hashes and reasons remain in artifact maps.",
+    "Remaining private-key-marker scan match is a literal synthetic exporter test fixture, not a credential.",
+    "Exact model identity and complete initial instruction isolation remain unverified."
+  ]
+}

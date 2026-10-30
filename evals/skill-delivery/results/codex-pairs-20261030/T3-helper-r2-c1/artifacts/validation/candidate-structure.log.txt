@@ -1,0 +1,6 @@
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', 'existing-authoring/scripts/quick_validate.py', 'output/candidate/payload']
+Exit: 0
+STDOUT:
+Skill is valid!
+
+STDERR:

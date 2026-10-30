@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "all_source_files_unchanged": true,
+  "files_checked": 15,
+  "recorded_skill_hashes_match": true,
+  "all_supplied_inventory_hashes_match": true
+}
