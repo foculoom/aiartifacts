@@ -1,5 +1,14 @@
 # Skill delivery implementation evidence — 30 October 2026
 
+Latest runtime follow-up: the [context diagnostic](editorial-context-check-20261030/README.md)
+records explicit model/effort and the first actual initial-context capture.
+The runtime identity matched, but an unrelated user-global overlay contaminated
+the baseline. Five remaining trials were held; the controlled Editorial
+comparison is unmeasured. The runner now distinguishes requested configuration,
+runtime records and unknown backend identity, with bounded linked-skill discovery.
+Copilot access remains unresolved without making a paid seat a prerequisite.
+The candidate, completed preparation and earlier scoped outcomes remain unchanged.
+
 Latest preparation: the [Editorial-only readiness record](../pilot/editorial-readiness-20261030.md)
 uses merged `c6fd520`, fresh package manifests and the
 [public-source acquisition receipt](editorial-readiness-20261030/acquisition.json).

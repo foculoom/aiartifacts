@@ -1,5 +1,44 @@
 # Maintainer handoff
 
+## Editorial runtime evidence and access boundaries — October 30, 2026
+
+The owner retained the full Copilot functional/usefulness gate and separated
+account provisioning from the skill project. Continue Editorial 0.1.1 at
+`c6fd52080ee50165ac673c72d5dd7adbe0b43e3c`; no exported content changed. PRs
+[#30](https://github.com/foculoom/aiartifacts/pull/30) and
+[#31](https://github.com/foculoom/aiartifacts/pull/31), existing package checks
+and exact twelve-file public GitHub acquisition remain achieved October 30.
+The extra skill remains deferred, and v0.5.0/consumer pins remain unchanged.
+
+The [runtime procedure](evals/skill-delivery/runtime.md) adds explicit model and
+reasoning arguments, bounded linked-skill enumeration and opt-in private capture
+of only the evaluation's own local session. Requested values, runtime-resolved
+configuration, backend identity and context acceptance are separate fields.
+Reproduce offline runner checks with
+`python3 -m unittest discover -s evals/skill-delivery -p test_runtime_runner.py -q`.
+
+The [dated diagnostic](evals/skill-delivery/results/editorial-context-check-20261030/README.md)
+records one fresh P2 baseline using existing ChatGPT access and CLI
+0.166.0-alpha.5.1. Its runtime record confirms gpt-6.1-sol/medium, but the actual
+initial context contains an unrelated user-global overlay despite the requested
+isolation settings. Independent agent review confirmed the failure. The other
+five comparison trials were held; usefulness remains unmeasured. Preserve the
+diagnostic and private rollout. Establish a supported clean-context execution
+route before restarting all six runs; never clear the gate from flags alone.
+
+Copilot 1.0.54 supports BYOK without a paid seat, but no already-authorized
+fixed-model route with verified included usage was established. No new Copilot
+inference probe ran. Keep account/provider diagnostics private. Human editorial
+feedback, Copilot behavior and its controlled comparison remain required before
+the conditionally authorized external-plugin submission. No public issue was sent.
+
+At 14:18 Pacific October 30 the rendered skills.sh candidate URL displayed 404
+despite HTTP 200; it is not a usable listing. Indexing elsewhere remains
+unverified. Public GitHub acquisition remains achieved, and Awesome Copilot
+submission/acceptance remain pending. No saved cloud environment was available;
+this bounded diagnostic used the authorized local runtime. Tooling/evidence
+changes follow their own reviewed PR/CI path and do not release a plugin.
+
 ## Editorial-only distribution preparation — October 30, 2026
 
 The owner requested a rubber-duck review and continuation of the minimal pilot.

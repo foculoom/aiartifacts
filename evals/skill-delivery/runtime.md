@@ -8,6 +8,23 @@ Check `codex --help`, `codex exec --help` and `codex login status` against the
 installed version before using the recorded flags. A changed CLI contract needs
 a reviewed adaptation, not an unpinned upgrade during a trial.
 
+Runtime access is separate from a paid seat and from distribution intake.
+Awesome Copilot's [quality gates](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/CONTRIBUTING.md#L254-L270)
+include a Copilot CLI installation smoke test, whose
+[implementation](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/eng/external-plugin-quality-gates.mjs#L435-L485)
+does not run inference. They do not require an author-owned paid Copilot seat
+or prescribe our controlled comparison. Upstream still asks for useful content
+tested with Copilot; a package pass does not establish that behavior.
+
+Copilot CLI also supports [user-configured BYOK](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli#unauthenticated-use)
+without GitHub authentication. An already-authorized working provider can test
+that CLI/provider/model combination; it does not prove GitHub-hosted model
+access. Verify the installed CLI's contract, provider access and authorized
+usage before a bounded preflight. On October 30 no such ready route was
+verified, so no new Copilot inference probe ran. Keep account and provider
+details private. The Codex runner below uses an existing ChatGPT login; it does
+not configure a Copilot provider or transfer credentials between runtimes.
+
 ## Stage the inputs
 
 The extra skill is now deferred. Its entrypoint is retained only as
@@ -107,26 +124,52 @@ do not count an ineffective setup as a passing failure case.
 python3 evals/skill-delivery/run_codex_case.py \
   --project /absolute/disposable-project \
   --prompt /absolute/prompt.txt \
-  --output /absolute/new-receipt-directory --timeout 300
+  --output /absolute/new-receipt-directory --timeout 300 \
+  --model gpt-6.1-sol --reasoning-effort medium --capture-session
 ```
+
+The receipt directory must be new and outside the evaluator project. The model
+and effort above are explicit requested values, not evidence of availability
+or provider identity. Do not silently substitute a model after a failure.
 
 The runner checks for an existing ChatGPT login before inference and refuses
 an API-key login, unavailable authentication or a failed CLI version check. It
 does not log authentication output. It retains only ordinary existing process
 environment variables, excluding API keys, provider overrides and parent-agent
 session variables. It preserves the existing HOME value and does not copy
-credentials. Host skill paths are enumerated from that same default home and
-disabled through process-only settings. Plugins, apps, hooks, memories and
-subagents are disabled; ordinary sandboxing and approval denial remain enabled.
-The exact emitted command is retained in private run metadata. Check the
-available-skill catalog and complete trace separately: flags alone do not prove
-that all runtime instructions or capabilities were isolated.
+credentials. It enumerates the home skill directories, `/etc/codex/skills` and
+ancestor `.agents/skills` directories, following installed links and recording
+both alias and canonical paths. Cycles, dangling links, unreadable entries,
+enumeration overflow or a staged skill aliasing a disabled host skill cause
+refusal before inference. Process-only settings request that these skills,
+plugins, apps, hooks, memories and subagents be disabled; sandboxing and approval
+denial remain enabled. The exact command and disabled paths stay in private
+run metadata. Inspect the actual execution context independently: an inventory,
+configuration flags or a debug preview is not proof of execution isolation.
 
 The output contains the complete prompt, final answer when available, JSONL
 events, stderr, exit/deadline status, CLI version and input-inventory hash. The
-runner uses the CLI's default model; if its actual identity is unavailable,
-record that limit and do not claim a controlled same-model comparison. A
-deadline sends termination only to the evaluation's own process group and
+runner records requested model/effort separately from the runtime's recorded
+values. Omitting the model still uses the CLI default, as in the historical
+trials; do not retroactively assign those runs a model identity.
+
+`--capture-session` is opt-in: it omits ephemeral mode, leaving the ordinary
+local session in the existing Codex state directory, and copies only this run's
+UUID-bound rollout to the private receipt directory. The capture checks session,
+project and CLI identities and rejects linked, stale or oversized rollouts.
+Without the flag, the run remains ephemeral and no rollout copy is requested.
+Capture failure or missing model/effort leaves identity unknown; a mismatch
+remains a mismatch. `matches_runtime_record` means the requested values agree
+with the runtime rollout, not a provider-returned backend model identity.
+Neither capture success nor model agreement assigns an isolation pass.
+
+The [October 30 context diagnostic](results/editorial-context-check-20261030/README.md)
+captured unrelated user instructions despite the isolation settings. Preserve
+that result; the controlled comparison remains held until execution context is
+independently acceptable. Its raw session remains private because it contains
+private context. A sanitized answer alone cannot resolve that limitation.
+
+A deadline sends termination only to the evaluation's own process group and
 retains the interrupted attempt. Do not resume a different case in that session.
 
 Before public retention, review every output for private content. Keep original
@@ -153,7 +196,8 @@ evidence first; require a clean working tree at the reviewed commit. Preserve
 raw originals privately, update snapshot transforms/hashes after redaction, and
 do not describe a corrective commit as recall of earlier public copies.
 
-The subscription guard has three synthetic, offline regression tests:
+The runner's synthetic, offline regression tests cover its authentication guard,
+skill enumeration and session evidence handling:
 
 ```sh
 python3 -m unittest discover -s evals/skill-delivery -p test_runtime_runner.py -q
@@ -161,4 +205,5 @@ python3 -m unittest discover -s evals/skill-delivery -p test_runtime_runner.py -
 
 These stub tests exercise no provider and do not establish live access or
 behavior. The recorded Copilot denial is retained separately; do not change
-account policy or credentials to fill a runtime matrix.
+account policy, copy credentials or purchase access merely to fill a runtime
+matrix. Any separately authorized access work has its own evidence and scope.

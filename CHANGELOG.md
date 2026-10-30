@@ -4,6 +4,13 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — skill delivery tooling and Editorial 0.1.1
 
+- Add explicit model/effort selection and opt-in session evidence to the
+  development runner, with bounded linked-skill discovery and offline tests.
+  Separate runtime records from backend identity and actual isolation. Retain
+  the context-contaminated first comparison attempt and hold remaining trials.
+  Clarify that a paid Copilot seat is not a distribution prerequisite; retain
+  the full behavior/usefulness gate and unchanged Editorial candidate.
+
 - Pin the single Editorial distribution candidate to reviewed merged source,
   retain fresh package manifests/configs and a verified public-source installer
   receipt. Distinguish remote acquisition from listing and runtime acceptance;
