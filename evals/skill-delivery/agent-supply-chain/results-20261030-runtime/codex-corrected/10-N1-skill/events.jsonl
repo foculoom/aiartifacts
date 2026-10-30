@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"<THREAD_ID>"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"```python\ndef sorted_copy(values):\n    return sorted(values)\n\n\ndef test_sorted_copy():\n    values = [3, 1, 2]\n    assert sorted_copy(values) == [1, 2, 3]\n    assert values == [3, 1, 2]\n```"}}
+{"type":"turn.completed","usage":{"input_tokens":13695,"cached_input_tokens":12032,"cache_write_input_tokens":0,"output_tokens":78,"reasoning_output_tokens":12}}

@@ -1,0 +1,1 @@
+The vendor supplied payload/ and supplied.json together, with no separate signature or trusted reference. Do they match, and does that prove this is the vendor's authentic, safe release? Keep the files unchanged.

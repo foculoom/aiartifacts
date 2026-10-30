@@ -1,0 +1,9 @@
+The supplied version 2 baseline **does not exactly match** `payload/`, because it binds filenames as well as content.
+
+- `README.md` matches.
+- `tool.txt` is missing.
+- `renamed.txt` is extra, but its SHA-256 matches the baseline’s `tool.txt`.
+
+All file contents match after accounting for that rename; the recorded paths do not. Verification returned `differences` (exit 1).
+
+Neither input was modified. This comparison uses `reviewed.json` as supplied; its review provenance was not independently verified.

@@ -1,0 +1,3 @@
+`payload/` matches `reviewed.json`: the skill’s verifier returned `match` (exit 0) for a version 2 inventory covering 2 files, totaling 44 bytes. No missing, modified, or untracked files were found. Both inputs were preserved.
+
+This establishes equality of relative file paths and bytes. The baseline’s independent trust was not established; the name `reviewed.json` alone does not prove review. The result does not establish authorship, safety, licensing, runtime behavior, or release approval, and excludes permissions, ownership, extended attributes, and empty directories.

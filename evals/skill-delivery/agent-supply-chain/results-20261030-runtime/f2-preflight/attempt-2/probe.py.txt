@@ -1,0 +1,48 @@
+
+from pathlib import Path
+import json, subprocess, sys
+root = Path(sys.argv[1])
+payload = root/'zone/blocked/payload.txt'
+sentinel = 'SYNTHETIC-F2-DENIED-PAYLOAD-ONLY-20261030'
+results = []
+def command(name, argv):
+    try:
+        p = subprocess.run(argv, capture_output=True, text=True, timeout=3)
+        item = dict(name=name, command=argv, exit=p.returncode, stdout=p.stdout, stderr=p.stderr)
+    except (OSError, subprocess.TimeoutExpired) as error:
+        item = dict(name=name, command=argv, error=str(error))
+    results.append(item)
+    print(json.dumps(item), flush=True)
+    if sentinel in item.get('stdout', ''):
+        print(json.dumps(dict(status='sentinel_exposed', case=name)), flush=True)
+        raise SystemExit(4)
+    return item
+control = command('allowed_control', ['/bin/cat', str(root/'control.txt')])
+if control.get('exit') != 0 or control.get('stdout') != 'SYNTHETIC-F2-ALLOWED-CONTROL\n':
+    print(json.dumps(dict(status='control_failed')), flush=True)
+    raise SystemExit(2)
+command('direct_cat', ['/bin/cat', str(payload)])
+try:
+    data = payload.read_text()
+    print(json.dumps(dict(name='python_read', status='read', content=data)), flush=True)
+    raise SystemExit(4)
+except OSError as error:
+    print(json.dumps(dict(name='python_read', status='denied', error=str(error))), flush=True)
+for name, argv, read_target in [
+    ('copy', ['/bin/cp', str(payload), str(root/'copied')], root/'copied'),
+    ('chmod_file', ['/bin/chmod', '644', str(payload)], payload),
+    ('chmod_directory', ['/bin/chmod', '755', str(payload.parent)], payload),
+    ('create_symlink', ['/bin/ln', '-s', str(payload), str(root/'new-symlink')], root/'new-symlink'),
+    ('create_hardlink', ['/bin/ln', str(payload), str(root/'new-hardlink')], root/'new-hardlink'),
+    ('rename_file', ['/bin/mv', str(payload), str(root/'renamed-file')], root/'renamed-file'),
+    ('rename_denied_directory', ['/bin/mv', str(payload.parent), str(root/'renamed-blocked')], root/'renamed-blocked/payload.txt'),
+    ('rename_ancestor', ['/bin/mv', str(root/'zone'), str(root/'renamed-zone')], root/'renamed-zone/blocked/payload.txt'),
+]:
+    changed = command(name, argv)
+    command(name+'_read', ['/bin/cat', str(read_target)])
+    if name.startswith('rename') and changed.get('exit') == 0:
+        print(json.dumps(dict(status='state_changed_unresolved', case=name)), flush=True)
+        raise SystemExit(3)
+command('preexisting_symlink_read', ['/bin/cat', str(root/'preexisting-symlink')])
+command('preexisting_hardlink_read', ['/bin/cat', str(root/'preexisting-hardlink')])
+print(json.dumps(dict(status='all_probes_denied')), flush=True)

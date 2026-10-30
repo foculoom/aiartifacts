@@ -1,0 +1,1 @@
+Create an integrity manifest for payload/ so a reviewer can compare a later copy. Write a new file only. Explain precisely what the result establishes.

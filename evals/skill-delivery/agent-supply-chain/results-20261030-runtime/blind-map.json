@@ -1,0 +1,38 @@
+{
+  "comparison-1": {
+    "response-A": {
+      "case": "P2",
+      "arm": "skill",
+      "trial": "03-P2-skill"
+    },
+    "response-B": {
+      "case": "P2",
+      "arm": "baseline",
+      "trial": "02-P2-baseline"
+    }
+  },
+  "comparison-2": {
+    "response-A": {
+      "case": "P4",
+      "arm": "skill",
+      "trial": "05-P4-skill"
+    },
+    "response-B": {
+      "case": "P4",
+      "arm": "baseline",
+      "trial": "06-P4-baseline"
+    }
+  },
+  "comparison-3": {
+    "response-A": {
+      "case": "P5",
+      "arm": "baseline",
+      "trial": "07-P5-baseline"
+    },
+    "response-B": {
+      "case": "P5",
+      "arm": "skill",
+      "trial": "08-P5-skill"
+    }
+  }
+}

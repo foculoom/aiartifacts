@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-30",
+  "kind": "no-inference Codex context preview",
+  "cli_version": "0.166.0-alpha.5.1",
+  "cli_sha256": "58a91f6ea19bea477ae3a2ec48d619f0039afe75d3476260747e11d201fa7cea",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning_effort": "medium",
+  "observed_model": null,
+  "model_trials": 0,
+  "profile": "new existing CODEX_HOME directory; no credentials copied",
+  "initial_preview": {
+    "requested_disabled_skill_count": 0,
+    "rendered_skill_count": 4,
+    "result": "built-in skills present; not accepted"
+  },
+  "revised_preview": {
+    "requested_disabled_skill_count": 5,
+    "rendered_skill_count": 0,
+    "company_instructions_present": false,
+    "prior_assistant_history_present": false,
+    "result": "independently agent-reviewed initial context; not runtime acceptance"
+  },
+  "private_artifact_hashes": {
+    "preview.json": "12e445c423afad09651cc9a3594aa0713a36313ed2f2f911bfd54b00f7ce6052",
+    "receipt.json": "0c6b900cde0ffc6ec97e27c33fc74bf08c41954571d5d4569155e7245626f52d",
+    "preview-disabled.json": "88149fd98c0f33b1b33d2545ebd2552255567f27f731801559efca5256ad5750",
+    "receipt-disabled.json": "9004932429676f8cf16fb3b8949f49f13a12c3d0db1ec5dab772422e71c2f723"
+  },
+  "limits": [
+    "Login may introduce managed context; recheck afterward.",
+    "Renderer differs from exec; compare configuration and verify actual fresh session.",
+    "Initial-context isolation is not enforced filesystem isolation.",
+    "Collaboration tools appear in the preview; reject unintended delegation in controlled trials.",
+    "No observed model identity, behavioral pass or usefulness result."
+  ],
+  "next": "Compare renderer and runner configuration, then perform one bounded actual fixed-model preflight and inspect its complete session.",
+  "authentication": {
+    "date": "2026-10-30",
+    "method": "normal browser ChatGPT sign-in completed by owner",
+    "login_exit": 0,
+    "status": "ChatGPT login verified in isolated profile",
+    "credentials_copied": false
+  },
+  "post_login_preview": {
+    "exit": 0,
+    "sha256": "511aef506022eb9fdd147a80eff673bea622342271cd3fed1f491716f1aac42f",
+    "result": "independent agent review found identical content and tool schemas; only generated IDs/timestamps differ",
+    "runtime_identity_verified": false
+  }
+}

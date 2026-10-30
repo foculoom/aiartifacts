@@ -1,0 +1,11 @@
+Found three differences against `reviewed.json`:
+
+| File | Difference |
+|---|---|
+| `README.md` | Missing from `payload/`. |
+| `added.txt` | Added; contains `new file` followed by a newline. |
+| `tool.txt` | Modified; contains `version two` followed by a newline. SHA-256 differs from baseline. |
+
+Both list 2 files, but none are unchanged. The baseline contains hashes only, so previous contents and line-by-line changes cannot be recovered.
+
+`reviewed.json` and `payload/` were preserved without modification.

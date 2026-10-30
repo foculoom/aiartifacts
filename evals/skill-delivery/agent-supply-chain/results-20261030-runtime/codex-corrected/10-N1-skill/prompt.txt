@@ -1,0 +1,5 @@
+Fix this function so it returns a sorted list without changing its input. Return the function and one small test.
+
+def sorted_copy(values):
+    values.sort()
+    return values

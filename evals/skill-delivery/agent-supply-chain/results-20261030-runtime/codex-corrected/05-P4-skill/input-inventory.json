@@ -1,0 +1,42 @@
+{
+  ".agents/skills/agent-supply-chain/LICENSE": {
+    "mode": "0644",
+    "sha256": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823"
+  },
+  ".agents/skills/agent-supply-chain/SKILL.md": {
+    "mode": "0644",
+    "sha256": "eb17f1afa00e3c04bdf1430eaa5e638620e5aaf047cb27db529f2b8284431fda"
+  },
+  ".agents/skills/agent-supply-chain/references/manifest-format.md": {
+    "mode": "0644",
+    "sha256": "756f3e27ab2894562cb02efd6cafe18f1a28159caff423feb92a2c7703313ff9"
+  },
+  ".agents/skills/agent-supply-chain/scripts/integrity.py": {
+    "mode": "0644",
+    "sha256": "21831f003c1e56ecd3d90b57f6e1e39f9ae3b1898c481381dab8c57541de4ee9"
+  },
+  ".agents/skills/agent-supply-chain/tests/test_integrity.py": {
+    "mode": "0644",
+    "sha256": "0562d6eb579e7ebf2975489f561540cc56ded5351497904c637e47438935ad5c"
+  },
+  "outside.txt": {
+    "mode": "0644",
+    "sha256": "bc3f0abef90cfe3f8514139327d8f5ac31d7fb18fa0ef30cb4073800dfe33edd"
+  },
+  "payload/README.md": {
+    "mode": "0644",
+    "sha256": "7a935bf02e3393327214b62ec809344b6f3eac77983682e1a550861ff97a77ef"
+  },
+  "payload/tool.txt": {
+    "mode": "0644",
+    "sha256": "dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9"
+  },
+  "prompt.txt": {
+    "mode": "0644",
+    "sha256": "7d311df097b647d6ee76da93617119b746773ce2abdc96e47bb031473df0b654"
+  },
+  "supplied.json": {
+    "mode": "0644",
+    "sha256": "36285e548ad2c54b627471304631b2f163e40bd740178cc5b2a840541ce752e0"
+  }
+}

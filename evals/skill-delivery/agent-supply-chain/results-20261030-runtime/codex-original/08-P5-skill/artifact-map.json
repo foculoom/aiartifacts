@@ -1,0 +1,37 @@
+{
+  "redactions": [
+    "local project/profile/toolchain/home paths",
+    "thread identifier",
+    "local ownership columns",
+    "temporary trial parent identity"
+  ],
+  "raw_session": "private; includes account and harness metadata",
+  "raw_session_sha256": "442bc74e4dcd0a103e23340b980b654a29dba529eb70da7e13c249d29c0bd2b6",
+  "files": {
+    "run.json": {
+      "raw_sha256": "daf3a4b13f08ad7d13a454290085dfa543ca11cb277eb5da13ed87bed666ec2b",
+      "sanitized_sha256": "1059903649ca94620b517d229271dade78b6a069c24a0464cd71ecb24a18e4f0"
+    },
+    "events.jsonl": {
+      "raw_sha256": "f3de33a85dc6240ca5e1be8fc61424714b1a0d761c6fd8ba24b3366598c3dcd9",
+      "sanitized_sha256": "34df9569727f18a8a17c965bc36fb2cd6ff044a89067eb5cf7ed968392522740"
+    },
+    "answer.txt": {
+      "raw_sha256": "6d1237449e1b64b0fda4370a0655ffc93419c04de6870e4318110221e392ab02",
+      "sanitized_sha256": "6d1237449e1b64b0fda4370a0655ffc93419c04de6870e4318110221e392ab02"
+    },
+    "prompt.txt": {
+      "raw_sha256": "40a4575af09440d93d4e9ed4bf8acd4dd3a2cb212147143bdf9633a1239bca63",
+      "sanitized_sha256": "40a4575af09440d93d4e9ed4bf8acd4dd3a2cb212147143bdf9633a1239bca63"
+    },
+    "stderr.txt": {
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "input-inventory.json": {
+      "raw_sha256": "3a3b24dca5ab3083a7b300fbb83b329b93184d00884be3737394c0d074774242",
+      "sanitized_sha256": "3a3b24dca5ab3083a7b300fbb83b329b93184d00884be3737394c0d074774242",
+      "runtime_visibility": "inside"
+    }
+  }
+}

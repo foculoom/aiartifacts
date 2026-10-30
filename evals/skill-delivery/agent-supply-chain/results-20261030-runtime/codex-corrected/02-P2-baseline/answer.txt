@@ -1,0 +1,15 @@
+Found **3 differences** against `reviewed.json`:
+
+| File | Difference |
+|---|---|
+| `README.md` | Missing from payload |
+| `added.txt` | Added to payload |
+| `tool.txt` | Modified; SHA-256 differs |
+
+`tool.txt` SHA-256:
+- Reviewed: `dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9`
+- Payload: `906ed25f555e00f40f9f4293fe60f3ca97ef69ad82d1c47ff7b332dea5cb8197`
+
+Both contain two file entries; no files match unchanged. The baseline contains hashes only, so line-level changes cannot be determined.
+
+Both `reviewed.json` and `payload/` were preserved without modification.

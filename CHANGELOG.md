@@ -4,6 +4,10 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — upstream Agent Supply Chain pilot
 
+- Extend the existing evaluation runner with an explicit signed-in profile and
+  external measurement receipts. Preserve contaminated first attempts; record
+  corrected Codex activation/non-activation checks and local Linux helper tests
+  without treating them as Copilot, usefulness or submission acceptance.
 - Replace Editorial as the active pilot with a focused improvement to Awesome
   Copilot's existing skill; keep its canonical implementation in the contribution
   fork/upstream, with no duplicate Foculoom skill or marketplace listing.

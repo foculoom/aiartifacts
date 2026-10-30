@@ -1,0 +1,18 @@
+{
+  "payload/README.md": {
+    "mode": "0644",
+    "sha256": "7a935bf02e3393327214b62ec809344b6f3eac77983682e1a550861ff97a77ef"
+  },
+  "payload/tool.txt": {
+    "mode": "0644",
+    "sha256": "dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9"
+  },
+  "prompt.txt": {
+    "mode": "0644",
+    "sha256": "40a4575af09440d93d4e9ed4bf8acd4dd3a2cb212147143bdf9633a1239bca63"
+  },
+  "supplied.json": {
+    "mode": "0644",
+    "sha256": "1c213e877c6b4269c4c8c3064a1beb368c50b6f75e56e3e93783cfbdb4177085"
+  }
+}

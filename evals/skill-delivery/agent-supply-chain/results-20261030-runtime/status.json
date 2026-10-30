@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-30",
+  "candidate": "74d289660e954dbe03342bf0c3d8241b007b5125",
+  "codex_model_attempts": 25,
+  "original_comparison_attempts": 12,
+  "corrected_attempts": 12,
+  "explicit_diagnostic_attempts": 1,
+  "corrected_skill_positives": {
+    "passed": 6,
+    "ordinary_loading": "observed"
+  },
+  "corrected_skill_negatives": {
+    "passed": 3,
+    "skill_loading": "not observed; no tool calls"
+  },
+  "codex_runtime_recorded_model": "gpt-6.1-sol",
+  "codex_runtime_recorded_effort": "medium",
+  "backend_model": null,
+  "tool_schema_sha256": "09a9f17cbfcbbac2ce799c09bc4912c0638799e93ec2e7197b356b601fae9324",
+  "base_instructions_sha256": "2181ecc51528326182f349c9d83effa598156a4a307e9fd50bc7bd050496fa7a",
+  "controlled_comparison": {
+    "reviewer": "independent agent; anonymous arm mapping withheld until verdict",
+    "method_blind": false,
+    "method_blind_limit": "complete tool traces reveal methods",
+    "pairs": 3,
+    "ties": 3,
+    "skill_wins": 0,
+    "required_skill_wins": 2,
+    "regressions": "no material regressions demonstrated",
+    "gate": "not met",
+    "statistical_claim": false
+  },
+  "copilot_runtime": "unperformed; authorized fixed-model access not established",
+  "enforced_model_failure_cases": "unperformed; separate enforcement preflights do not count as model behavior",
+  "human_feedback": "achieved on recorded helper example; no human runtime execution claimed",
+  "upstream_submission": "withheld; usefulness gate not met and runtime/failure gates incomplete",
+  "source_distribution": "original upstream skill cataloged and improved fork source public as observed October 30",
+  "candidate_acquisition": "local-source installation achieved; merged upstream acquisition and skills.sh indexing unverified",
+  "existing_editorial_acquisition": "achieved October 30; preserved",
+  "release": "v0.5.0 and consumer pins unchanged",
+  "offline_f2_preflight": {
+    "attempts": 3,
+    "outcomes": [
+      "configuration syntax rejected before execution",
+      "pre-existing allowed-path hardlink exposed synthetic sentinel",
+      "alias-free fixture guard and path-denial checks passed"
+    ],
+    "model_trial": false,
+    "limits": "path-scoped local-command checks, not inode-wide or other-tool enforcement"
+  },
+  "runner_offline_tests_passed": 22,
+  "skill_delivery_tests_passed": 31
+}

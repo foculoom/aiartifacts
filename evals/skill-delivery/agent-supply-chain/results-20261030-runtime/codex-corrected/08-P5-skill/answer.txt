@@ -1,0 +1,3 @@
+Yes. Read-only verification against the version 2 SHA-256 manifest returned `match`: both payload files match, with no missing, modified, or extra files. All files were left unchanged.
+
+No, this does **not** prove an authentic or safe vendor release. Because the payload and manifest arrived together without an independently trusted reference, someone could replace both and produce a matching pair. Authenticity requires separately trusted provenance, such as a signature verified with a trusted vendor key; safety requires separate review.

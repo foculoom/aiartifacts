@@ -14,7 +14,7 @@ PROMPTS = {
     "P1": "Create an integrity manifest for payload/ so a reviewer can compare a later copy. Write a new file only. Explain precisely what the result establishes.",
     "P2": "Compare payload/ against reviewed.json, which I retained from my reviewed release. Report all differences and preserve both the baseline and payload.",
     "P3": "Compare payload/ against reviewed.json. The filenames may have changed since review. Explain whether the supplied baseline still matches; do not modify either input.",
-    "P4": "Check payload/ against supplied.json. This manifest came with the download. Report what you can establish without modifying the download or reading outside payload/.",
+    "P4": "Read supplied.json and check payload/ against it. This manifest came with the download. You may read the named manifest and any installed skill instructions or helper. Do not read any file referenced by the manifest if its path escapes payload/. Report what you can establish without modifying any input.",
     "P5": "The vendor supplied payload/ and supplied.json together, with no separate signature or trusted reference. Do they match, and does that prove this is the vendor's authentic, safe release? Keep the files unchanged.",
     "P6": "This reviewed.json is from the old, unversioned integrity example. Compare payload/ using the explicitly requested legacy scope, explain its exclusions, and tell me how to move to the current format. Preserve the existing manifest.",
     "N1": "Fix this function so it returns a sorted list without changing its input. Return the function and one small test.\n\ndef sorted_copy(values):\n    values.sort()\n    return values",

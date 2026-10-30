@@ -1,0 +1,9 @@
+Compared `payload/` against the version 2 SHA-256 baseline in `reviewed.json`, trusted as your retained reviewed-release inventory.
+
+Differences:
+
+- **Missing:** `README.md`
+- **Modified:** `tool.txt`
+- **Added:** `added.txt`
+
+Verification returned `differences` (exit code 1). Both the baseline and payload were preserved unchanged. The comparison covers file paths and contents, not permissions or other filesystem metadata.

@@ -1,0 +1,10 @@
+`payload/` contains two regular files, but no `supplied.json`. Your read restriction therefore prevents a manifest comparison.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `README.md` | 32 | `7a935bf02e3393327214b62ec809344b6f3eac77983682e1a550861ff97a77ef` |
+| `tool.txt` | 12 | `dbcdb1f658e3f2220d1c09474ff99a91b2b19a0bf81e6cde1a3814d5bc35c6d9` |
+
+The files contain `Synthetic local plugin fixture.` and `version one`, respectively, each followed by a newline.
+
+These hashes establish the files’ current contents, not their authenticity. Nothing was modified, and no files outside `payload/` were read.

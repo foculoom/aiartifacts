@@ -1,0 +1,88 @@
+{
+  "observed_at_utc": "2026-10-30T22:52:06.132769+00:00",
+  "source_repository": "https://github.com/hellofoculoom/awesome-copilot",
+  "source_commit": "74d289660e954dbe03342bf0c3d8241b007b5125",
+  "kind": "helper-only local Linux container test",
+  "source_files": {
+    "LICENSE": {
+      "sha256": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823",
+      "mode": "0644"
+    },
+    "SKILL.md": {
+      "sha256": "eb17f1afa00e3c04bdf1430eaa5e638620e5aaf047cb27db529f2b8284431fda",
+      "mode": "0644"
+    },
+    "references/manifest-format.md": {
+      "sha256": "756f3e27ab2894562cb02efd6cafe18f1a28159caff423feb92a2c7703313ff9",
+      "mode": "0644"
+    },
+    "scripts/integrity.py": {
+      "sha256": "21831f003c1e56ecd3d90b57f6e1e39f9ae3b1898c481381dab8c57541de4ee9",
+      "mode": "0644"
+    },
+    "tests/test_integrity.py": {
+      "sha256": "0562d6eb579e7ebf2975489f561540cc56ded5351497904c637e47438935ad5c",
+      "mode": "0644"
+    }
+  },
+  "source_unchanged": true,
+  "container_image_id": "sha256:19c3cc7e6b17c9ca68f973f8329be2173a01703dd8b8bd3b7408256ab1da3e71",
+  "image_source": "pre-existing local image; no pull or download",
+  "container_platform": "linux/amd64",
+  "host_daemon_platform": "linux/arm64",
+  "execution_note": "Docker Desktop cross-architecture execution on local macOS; not hosted CI",
+  "python": "3.12.14",
+  "docker_server": "29.9.2",
+  "uid": 65534,
+  "network": "none",
+  "source_mount": "read-only",
+  "root_filesystem": "read-only",
+  "temporary_files": "disposable tmpfs",
+  "capabilities": "all dropped",
+  "no_new_privileges": true,
+  "exit_code": 0,
+  "timed_out": false,
+  "tests_passed": 47,
+  "tests_skipped": 0,
+  "model_trials": 0,
+  "python_3_11_ci": "not executed",
+  "limitations": [
+    "Does not establish Copilot or Codex runtime behavior, skill activation, controlled usefulness, or F1/F2 model restrictions.",
+    "Does not establish upstream acceptance, listing, release, or public acquisition."
+  ],
+  "test_container_removed": true,
+  "test_log_sha256": "f30a71ef4b70d0f67d08e0ec2f26c1247625fbb9b204bb0db22a1e756f0dd9a4",
+  "command": [
+    "docker",
+    "run",
+    "--pull=never",
+    "--rm",
+    "--name",
+    "<DISPOSABLE_TEST_CONTAINER>",
+    "--platform=linux/amd64",
+    "--network=none",
+    "--user=65534:65534",
+    "--read-only",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--pids-limit=128",
+    "--memory=512m",
+    "--cpus=1",
+    "--tmpfs=/tmp:rw,nosuid,nodev,size=64m",
+    "--workdir=/tmp",
+    "--mount",
+    "type=bind,source=<REVIEWED_SKILL_DIRECTORY>,target=/reviewed-skill,readonly",
+    "--entrypoint=/usr/local/bin/python3",
+    "sha256:19c3cc7e6b17c9ca68f973f8329be2173a01703dd8b8bd3b7408256ab1da3e71",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/reviewed-skill/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "duration_seconds_reported_by_unittest": 18.746
+}

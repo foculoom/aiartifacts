@@ -1,0 +1,8 @@
+The manifest cannot verify `payload/`:
+
+- Its only entry, `../outside.txt`, escapes `payload/`. I did not read it.
+- `payload/README.md` and `payload/tool.txt` are present but have no manifest entries, so their integrity is unverified.
+- `file_count: 1` matches the manifest’s entry count.
+- `manifest_hash` remains unverified; its calculation method is unspecified.
+
+No inputs were modified.
