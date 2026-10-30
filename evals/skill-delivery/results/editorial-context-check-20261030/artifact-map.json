@@ -1,0 +1,43 @@
+[
+  {
+    "source": "prompt.txt",
+    "snapshot": "prompt.txt",
+    "source_sha256": "0cc8c8bfcaab203d2ed3a7cc72cf88df69785535e5a715f031829abf6402ab44",
+    "snapshot_sha256": "0cc8c8bfcaab203d2ed3a7cc72cf88df69785535e5a715f031829abf6402ab44",
+    "transform": "replace machine paths and session UUIDs; otherwise complete"
+  },
+  {
+    "source": "answer.txt",
+    "snapshot": "answer.txt",
+    "source_sha256": "8e1f6c23f2c68dafee2cf83d717a73f06638c68ab7cd4bd22549ebe9bb0b9369",
+    "snapshot_sha256": "8e1f6c23f2c68dafee2cf83d717a73f06638c68ab7cd4bd22549ebe9bb0b9369",
+    "transform": "replace machine paths and session UUIDs; otherwise complete"
+  },
+  {
+    "source": "events.jsonl",
+    "snapshot": "events.jsonl",
+    "source_sha256": "fe92458d6ee3687deb3ca84df67da27af93b37ead9e27961f468dc98da08d6ca",
+    "snapshot_sha256": "393b91144e21aa57a093e46021709cc1967762e54603f078d65d257348c22299",
+    "transform": "replace machine paths and session UUIDs; otherwise complete"
+  },
+  {
+    "source": "stderr.txt",
+    "snapshot": "stderr.txt",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transform": "replace machine paths and session UUIDs; otherwise complete"
+  },
+  {
+    "source": "run.json",
+    "snapshot": "run.json",
+    "source_sha256": "bbac230f271dd1fcdc28993ca6fa36aaea662e39e0faef365a596f44646e1b75",
+    "snapshot_sha256": "a15c3ecf697bd284a85e9aa52c914229c418f8223569f5ebb8c1b4a0fe232563",
+    "transform": "replace machine paths, disabled host-skill paths and UUIDs; add separately verified executable/runner hashes and acceptance disposition"
+  },
+  {
+    "source": "session.jsonl",
+    "snapshot": null,
+    "source_sha256": "282ab0c248b6e50ce003e4b22e506f4300614809ca6ddd87314a26f93daf37e3",
+    "transform": "private only: account/session identifiers, unrelated user-global instructions and runtime base context; independently reviewed without publishing contents"
+  }
+]

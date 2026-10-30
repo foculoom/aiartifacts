@@ -1,7 +1,9 @@
 # Unsent Awesome Copilot external-plugin packet
 
 Preparation only. The release owner must approve public distribution after the
-exact candidate passes independent review, package, install and behavior gates.
+exact candidate passes this project's independent review, package, install and
+behavior gates. These are local readiness decisions, not a requirement to buy
+a Copilot seat or an upstream prescription for a fixed-model comparison.
 Do not send this packet, open an issue, publish a tag or edit the upstream
 marketplace as part of preparation.
 
@@ -43,6 +45,27 @@ usefulness gate is a different experiment. Do not claim human validation from
 automated evidence alone; keep the form's actual public-source, immutable-pin,
 policy and duplicate-listing attestations separate from testing evidence.
 
+The [October 30 context diagnostic](../results/editorial-context-check-20261030/README.md)
+records a requested model and effort plus captured runtime context. Unrelated
+user instructions were present, so this does not close the controlled
+comparison or establish isolation. Runtime-recorded model identity is not
+provider-returned backend identity. Historical results remain intact.
+
+Upstream's [installation smoke test](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/eng/external-plugin-quality-gates.mjs#L435-L485)
+does not run inference or require the submitter to own a paid seat. Its
+[contribution guidance](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/CONTRIBUTING.md#L49-L59)
+still calls for meaningful value and testing with Copilot. The
+[review guidance](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/.github/skills/code-review/SKILL.md#L146-L163)
+allows realistic manual evaluation and treats non-Copilot-only or AI-only
+synthetic evidence as weak on its own. Human validation must be reported as
+such only when it occurred.
+
+An authorized, user-configured BYOK model is a supported Copilot CLI route;
+see the [runtime procedure](../runtime.md). It would establish only the tested
+CLI/provider/model combination. No ready provider route was verified on
+October 30, so a new Copilot preflight was not run. Keep provider/account
+diagnostics private and retain the outstanding behavior/usefulness holds.
+
 Before checking the form confirmations, recheck public repository visibility,
 immutable source/version agreement, duplicate or pending listings, applicable
 content policies and all evidence. Automated intake and human maintainer
@@ -50,7 +73,7 @@ approval are external gates, not results produced by this packet.
 
 Official intake: https://github.com/github/awesome-copilot/issues/new?template=external-plugin.yml
 
-Policy: https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md
+Inspected policy (October 30): https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/CONTRIBUTING.md
 
 Listed-plugin updates use reviewed listing PRs and repeat the current gates.
 Retain the exact listed SHA; six-month upstream re-review can retain, request
