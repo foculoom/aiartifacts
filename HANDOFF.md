@@ -1,5 +1,42 @@
 # Maintainer handoff
 
+## Agent Supply Chain pilot — October 30, 2026
+
+The owner replaced Editorial as the active distribution pilot with an
+improvement to Awesome Copilot's existing `agent-supply-chain` skill. This
+supersedes the earlier Editorial-only selection below. Keep the extra authoring
+skill deferred and preserve all earlier Editorial packaging/acquisition and
+runtime-attempt evidence. PRs #30–#32, public GitHub acquisition on October 30,
+v0.5.0 and consumer pins remain unchanged.
+
+The implementation is in the public contribution fork at
+[`74d289660e954dbe03342bf0c3d8241b007b5125`](https://github.com/hellofoculoom/awesome-copilot/commit/74d289660e954dbe03342bf0c3d8241b007b5125),
+based on upstream `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`. It adds one
+standard-library helper, strict v2/explicit legacy verification, bounded
+no-follow file access, scoped CI and a package-local MIT notice. There is no
+second installed Foculoom skill or copied implementation here.
+
+The [pilot procedure](evals/skill-delivery/agent-supply-chain/README.md) and
+[dated receipts](evals/skill-delivery/agent-supply-chain/results-20261030/README.md)
+record 47 passing helper tests, official static validation, five-file exact
+exports, both local installation routes and independent source/privacy review.
+The owner called the recorded verification output “Useful and clear”; this
+is feedback on helper output, not human runtime execution. Initial candidate
+8c0ef34 and its review-discovered path defects remain in history.
+
+No upstream PR was sent. Copilot/Codex functional and paired usefulness gates
+remain unperformed: the prior fixed-model access and context-isolation failures
+remain unresolved, and enforced failure environments must be verified. No
+unchanged denied request was repeated. No saved cloud environment was listed;
+offline work used the authorized local runtime. Linux CI is prepared, not run.
+
+Public availability on October 30: the original upstream skill is cataloged
+and the reviewed fork source is public; the improved candidate has local-source
+installation receipts only. Awesome Copilot acceptance and skills.sh indexing
+for the candidate are unverified. After full acceptance, recheck parallel work
+and requirements, submit one ordinary upstream update PR, and verify public
+acquisition at the merged SHA. Do not send the old Editorial intake packet.
+
 ## Editorial runtime evidence and access boundaries — October 30, 2026
 
 The owner retained the full Copilot functional/usefulness gate and separated

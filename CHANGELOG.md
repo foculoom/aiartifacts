@@ -2,6 +2,18 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — upstream Agent Supply Chain pilot
+
+- Replace Editorial as the active pilot with a focused improvement to Awesome
+  Copilot's existing skill; keep its canonical implementation in the contribution
+  fork/upstream, with no duplicate Foculoom skill or marketplace listing.
+- Add synthetic input preparation, held-out criteria, explicit export mapping
+  and cleared receipts for 47 helper tests, static checks and local installation.
+  Preserve the initial failed-review candidate and corrected path regressions.
+- Record scoped human feedback and hold upstream submission for unresolved
+  Copilot/Codex behavior, isolation and controlled-usefulness evidence. Retain
+  the achieved Editorial acquisition, extra-skill deferral and existing pins.
+
 ## Unreleased — skill delivery tooling and Editorial 0.1.1
 
 - Add explicit model/effort selection and opt-in session evidence to the

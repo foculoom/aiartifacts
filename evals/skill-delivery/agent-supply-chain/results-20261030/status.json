@@ -1,0 +1,34 @@
+{
+  "observed_at_utc": "2026-10-30T22:30:32.989519+00:00",
+  "upstream_base": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+  "candidate": "74d289660e954dbe03342bf0c3d8241b007b5125",
+  "candidate_repository": "https://github.com/hellofoculoom/awesome-copilot",
+  "candidate_branch": "fix/agent-supply-chain-integrity",
+  "candidate_source_visibility": "public; exact helper fetched after push",
+  "source_review": "independent agent review; no remaining source/privacy blockers",
+  "helper_tests": {
+    "passed": 47,
+    "skipped": 0,
+    "runtime": "Python 3.12.14 on macOS"
+  },
+  "linux_ci": "step prepared, not executed",
+  "local_installers": {
+    "github_cli": "2.97.0",
+    "skills": "1.7.4",
+    "node": "24.19.0"
+  },
+  "model_trials": 0,
+  "copilot_acceptance": "unverified; no suitable authorized fixed-model route established",
+  "codex_acceptance": "unverified; actual clean context not established",
+  "controlled_usefulness": "unmeasured",
+  "human_feedback": {
+    "date": "2026-10-30",
+    "response": "Useful and clear",
+    "scope": "human review of recorded synthetic helper output",
+    "not_established": "human execution or model-runtime acceptance"
+  },
+  "upstream_submission": "withheld",
+  "skills_sh_listing": "unverified",
+  "public_upstream_acquisition": "not performed for candidate; requires upstream merge",
+  "prior_editorial_acquisition": "achieved October 30; preserved"
+}

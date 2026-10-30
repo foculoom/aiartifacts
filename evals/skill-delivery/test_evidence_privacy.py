@@ -8,14 +8,16 @@ import zipfile
 
 
 REPO = Path(__file__).resolve().parents[2]
-EVIDENCE = 'evals/skill-delivery/results'
+EVIDENCE = ('evals/skill-delivery/results',
+            'evals/skill-delivery/agent-supply-chain/results-*')
 MAX_FILE_BYTES = 16 * 1024 * 1024
 MAX_MEMBER_BYTES = 4 * 1024 * 1024
 MAX_ARCHIVE_BYTES = 32 * 1024 * 1024
 HOST_PATH = re.compile(
     rb'/(?:private/)?var/folders/(?!<)[A-Za-z0-9_.-]+/'
     rb'|/(?:Users|home)/(?!<)[A-Za-z0-9_.-]+(?:/|(?=[\s"\x27]|$))'
-    rb'|[A-Za-z]:[\\/]+Users[\\/]+(?!<)[A-Za-z0-9_.-]+[\\/]')
+    rb'|[A-Za-z]:[\\/]+Users[\\/]+(?!<)[A-Za-z0-9_.-]+[\\/]'
+    rb'|~[\\/](?:Documents|Desktop|Downloads)[\\/](?!<)[A-Za-z0-9_.-]+')
 
 
 def zip_issues(data, member_limit=MAX_MEMBER_BYTES):
@@ -44,7 +46,8 @@ class EvidencePrivacyTests(unittest.TestCase):
                       b'/private/var/folders/zz/synthetic-machine/T/checker-file',
                       b'/Users/synthetic-user/work/file',
                       b'/home/synthetic-user/work/file',
-                      rb'C:\Users\synthetic-user\work\file']:
+                      rb'C:\Users\synthetic-user\work\file',
+                      b'| ~/Documents/synthetic-workspace/project |\n| /build/output |']:
             with self.subTest(prefix_case=value.split(b'synthetic')[0]):
                 self.assertIsNotNone(HOST_PATH.search(value))
 
@@ -54,7 +57,7 @@ class EvidencePrivacyTests(unittest.TestCase):
                       b'/var/folders/<REDACTED>/file',
                       b'/private/var/folders/<REDACTED>/file',
                       rb'C:\Users\<REDACTED>\file', b'/private/tmp',
-                      b'/usr/bin/python3']:
+                      b'/usr/bin/python3', b'~/Documents/<REDACTED>/file']:
             self.assertIsNone(HOST_PATH.search(value))
 
     def test_compressed_zip_members_are_scanned_and_size_bounded(self):
@@ -69,7 +72,7 @@ class EvidencePrivacyTests(unittest.TestCase):
         # Only tracked evidence is selected; ignored/raw local captures are excluded.
         # CI checks the committed checkout; locally this checks its current file bytes.
         output = subprocess.check_output(
-            ['git', 'ls-files', '-z', '--', EVIDENCE], cwd=REPO)
+            ['git', 'ls-files', '-z', '--', *EVIDENCE], cwd=REPO)
         names = [name.decode('utf-8') for name in output.split(b'\0') if name]
         self.assertTrue(names, 'No tracked public evidence found')
         for name in names:

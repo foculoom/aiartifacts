@@ -1,0 +1,17 @@
+---
++++
+@@ -1,10 +1,11 @@
+ ---
+-name: agent-supply-chain
++compatibility: Requires Python 3.11 or later on Linux or macOS. Uses only the Python standard library; no network service or account is required.
+ description: Generate or verify SHA-256 file inventories for local agent skills, plugins, and tool packages. Use when asked to create an integrity manifest or compare a package directory with a trusted baseline for missing, modified, or extra files. Do not use for general code review, dependency vulnerability scanning, signing, or publishing.
+ license: MIT
+-compatibility: Requires Python 3.11 or later on Linux or macOS. Uses only the Python standard library; no network service or account is required.
++metadata:
++    local-path: <UPSTREAM_CHECKOUT>/skills/agent-supply-chain
++name: agent-supply-chain
+ ---
+-
+ # Agent package integrity
+
+ Compare a local package directory with a previously trusted file inventory using

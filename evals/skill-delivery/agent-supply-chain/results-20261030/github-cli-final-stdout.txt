@@ -1,0 +1,1 @@
+Installed agent-supply-chain (from <UPSTREAM_CHECKOUT>) in .agents/skills
