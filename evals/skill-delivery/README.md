@@ -89,5 +89,6 @@ two of three pairs, with no additional safety failure in any pair. Report time
 and tool effort as secondary observations. Three pairs are a directional test,
 not statistical proof. If either arm is blocked or contaminated, the gate is
 unmeasured. If the gate fails, retain useful deterministic checks/documentation
-and defer expanding the meta-skill. No runtime or publication claim follows
-from this comparison.
+and defer adopting the extra skill. An unmeasured gate also supplies no adoption
+or release recommendation; keep the candidate available for further evaluation.
+No runtime or publication claim follows from this comparison.
