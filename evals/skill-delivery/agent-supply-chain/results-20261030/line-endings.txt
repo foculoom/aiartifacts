@@ -1,0 +1,3 @@
+Existing GNU sed invocation adapted to BSD sed -i with a literal CR; repository script unchanged.
+Normalizing line endings in markdown files...
+Done! All markdown files now have LF line endings.

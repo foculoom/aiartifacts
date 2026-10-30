@@ -1,0 +1,101 @@
+Generating marketplace.json...
+Found 109 local plugin manifests
+
+Found 91 external plugins
+✓ Added external plugin: accessibility-agents
+✓ Added external plugin: agent-council
+✓ Added external plugin: agentcouncil
+✓ Added external plugin: ai-ready
+✓ Added external plugin: anarlog
+✓ Added external plugin: apify
+✓ Added external plugin: atlassian-twg-cli
+✓ Added external plugin: aws-core
+✓ Added external plugin: azure
+✓ Added external plugin: azure-cost-health-check
+✓ Added external plugin: azure-functions-hosted-skills
+✓ Added external plugin: azure-resiliency-agent
+✓ Added external plugin: azure-resources-query
+✓ Added external plugin: azure-sre-agent
+✓ Added external plugin: azure-storage
+✓ Added external plugin: bd-skills
+✓ Added external plugin: blea
+✓ Added external plugin: bootui
+✓ Added external plugin: brainmaxxing
+✓ Added external plugin: cache-stats
+✓ Added external plugin: canvas-authoring
+✓ Added external plugin: catalyst-by-zoho
+✓ Added external plugin: chat-fork-map
+✓ Added external plugin: chrome-devtools-plugin
+✓ Added external plugin: cockroachdb
+✓ Added external plugin: connector-namespaces
+✓ Added external plugin: containers
+✓ Added external plugin: copilot-goal-skill
+✓ Added external plugin: copilot-session-dj
+✓ Added external plugin: crowdstrike-charlotte-ai-agentworks
+✓ Added external plugin: crowdstrike-falcon-foundry
+✓ Added external plugin: crowdstrike-falcon-fusion
+✓ Added external plugin: datadog
+✓ Added external plugin: dataverse
+✓ Added external plugin: dependabot-triage
+✓ Added external plugin: dotnet
+✓ Added external plugin: dotnet-diag
+✓ Added external plugin: dotnet-test
+✓ Added external plugin: elasticsearch
+✓ Added external plugin: excel-cli
+✓ Added external plugin: excel-mcp
+✓ Added external plugin: figma
+✓ Added external plugin: foundation-models
+✓ Added external plugin: gh-skills-builder
+✓ Added external plugin: git-ape
+✓ Added external plugin: github-copilot-modernization
+✓ Added external plugin: incident-io
+✓ Added external plugin: jira-workbench
+✓ Added external plugin: keep-the-why
+✓ Added external plugin: markdstage
+✓ Added external plugin: megalinter
+✓ Added external plugin: microsoft-docs
+✓ Added external plugin: microsoft-events
+✓ Added external plugin: microsoft-foundry
+✓ Added external plugin: mobile-canvas
+✓ Added external plugin: modern-web-guidance
+✓ Added external plugin: modernize-dotnet
+✓ Added external plugin: modernize-java
+✓ Added external plugin: msgraph-developer-skills
+✓ Added external plugin: netlify
+✓ Added external plugin: nitrosend
+✓ Added external plugin: orrery
+✓ Added external plugin: pm-skills
+✓ Added external plugin: pmx-canvas
+✓ Added external plugin: postgres-skills
+✓ Added external plugin: radius
+✓ Added external plugin: rayfin
+✓ Added external plugin: remotion
+✓ Added external plugin: rhost
+✓ Added external plugin: sap-ux-fiori-tools
+✓ Added external plugin: skills-for-copilot-studio
+✓ Added external plugin: sonarqube
+✓ Added external plugin: spacefast
+✓ Added external plugin: statuslines
+✓ Added external plugin: stripe
+✓ Added external plugin: sumo-logic
+✓ Added external plugin: timebase
+✓ Added external plugin: tmforge
+✓ Added external plugin: typescript
+✓ Added external plugin: ui-theme-designer
+✓ Added external plugin: ui5
+✓ Added external plugin: ui5-modernization
+✓ Added external plugin: ui5-typescript-conversion
+✓ Added external plugin: upgrade-agent
+✓ Added external plugin: usage-insights
+✓ Added external plugin: vercel-plugin
+✓ Added external plugin: whatidid
+✓ Added external plugin: winappcli
+✓ Added external plugin: windbg
+✓ Added external plugin: winui
+✓ Added external plugin: wiqd
+
+✓ Successfully generated marketplace.json with 200 plugins (109 local, 91 external)
+  Location: <WORKSPACE>/awesome-copilot/.github/plugin/marketplace.json
+Warning: external.json[15]: "license" value `PolyForm-Shield-1.0.0` is not a recognized SPDX identifier; prefer a standard SPDX id (https://spdx.org/licenses), though non-SPDX or proprietary licenses are allowed
+Warning: external.json[67]: "license" value `Remotion License` is not a recognized SPDX identifier; prefer a standard SPDX id (https://spdx.org/licenses), though non-SPDX or proprietary licenses are allowed
+Warning: external.json[71]: "license" value `SSAL-1.0` is not a recognized SPDX identifier; prefer a standard SPDX id (https://spdx.org/licenses), though non-SPDX or proprietary licenses are allowed

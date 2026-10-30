@@ -1,0 +1,13 @@
+
+│
+●   codex  Agent detected — installing non-interactively
+│
+●  Selected 1 skill: agent-supply-chain
+
+│
+◇  Installation Summary ───────────────────────────────────────────────────────╮
+│                                                                              │
+│  <DISPOSABLE_PROJECT>/.agents/skills/agent-supply-chain
+│    copy → Codex, GitHub Copilot                                              │
+│                                                                              │
+├──────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "agent-supply-chain",
+    "status": "installed",
+    "source": "<UPSTREAM_CHECKOUT>/skills/agent-supply-chain",
+    "ref": null,
+    "hash": "f936a80e8def975edb140318071742436dafbbd0f99012976cb64ccfc84d8047",
+    "path": "<WORKSPACE>/aiartifacts/build/skill-delivery/agent-supply-chain/skills-cli-final-install/.agents/skills/agent-supply-chain",
+    "scope": "project",
+    "agents": [
+      "Codex",
+      "GitHub Copilot"
+    ],
+    "mode": "copy",
+    "security": null
+  }
+]

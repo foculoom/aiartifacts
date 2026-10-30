@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name": "agent-supply-chain",
+  "kind": "skill",
+  "source_commit": "74d289660e954dbe03342bf0c3d8241b007b5125",
+  "files": {
+    "SKILL.md": "skills/agent-supply-chain/SKILL.md",
+    "LICENSE": "skills/agent-supply-chain/LICENSE",
+    "references/manifest-format.md": "skills/agent-supply-chain/references/manifest-format.md",
+    "scripts/integrity.py": "skills/agent-supply-chain/scripts/integrity.py",
+    "tests/test_integrity.py": "skills/agent-supply-chain/tests/test_integrity.py"
+  }
+}

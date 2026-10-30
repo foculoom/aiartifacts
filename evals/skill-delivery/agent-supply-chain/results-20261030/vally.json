@@ -1,0 +1,145 @@
+{
+  "skillResults": [
+    {
+      "skill": {
+        "name": "agent-supply-chain",
+        "path": "skills/agent-supply-chain/SKILL.md",
+        "sha256": "eb17f1afa00e3c04bdf1430eaa5e638620e5aaf047cb27db529f2b8284431fda"
+      },
+      "graderResults": [
+        {
+          "name": "spec-compliance",
+          "kind": "code",
+          "passed": true,
+          "score": 1,
+          "label": "spec-compliant",
+          "evidence": "All 1 skill(s) are spec-compliant.",
+          "details": [
+            {
+              "name": "spec-compliance",
+              "kind": "code",
+              "passed": true,
+              "score": 1,
+              "label": "spec-compliant",
+              "evidence": "All spec checks passed.",
+              "details": [
+                {
+                  "name": "file-length",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "File length (97 lines) is within limit (500)."
+                },
+                {
+                  "name": "name-missing",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Skill name is present."
+                },
+                {
+                  "name": "name-length",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Name length (18) is within limit (64)."
+                },
+                {
+                  "name": "name-format",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Name contains only lowercase alphanumeric characters and hyphens."
+                },
+                {
+                  "name": "name-hyphen-edge",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Name does not start or end with a hyphen."
+                },
+                {
+                  "name": "name-consecutive-hyphens",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Name does not contain consecutive hyphens."
+                },
+                {
+                  "name": "name-directory-mismatch",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Name matches directory name \"agent-supply-chain\"."
+                },
+                {
+                  "name": "description-missing",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Description is present."
+                },
+                {
+                  "name": "description-length",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Description length (331) is within limit (1024)."
+                },
+                {
+                  "name": "compatibility-type",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Compatibility field is a string."
+                },
+                {
+                  "name": "compatibility-length",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "Compatibility length (130) is within limit (500)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "valid-refs",
+          "kind": "code",
+          "passed": true,
+          "score": 1,
+          "label": "refs-valid",
+          "evidence": "All file references across 1 skill(s) are valid.",
+          "details": [
+            {
+              "name": "valid-refs",
+              "kind": "code",
+              "passed": true,
+              "score": 1,
+              "label": "refs-valid",
+              "evidence": "All file references resolve to existing files within the skill directory.",
+              "details": [
+                {
+                  "name": "valid-refs",
+                  "kind": "code",
+                  "passed": true,
+                  "score": 1,
+                  "evidence": "All file references resolve to existing files within the skill directory."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "skillScores": [],
+  "discoveryErrors": [],
+  "referenceFindings": [],
+  "passed": true,
+  "timestamp": "2026-10-30T22:29:22.911Z",
+  "config": {},
+  "sanitization": "Duplicated skill input omitted; exact source SHA-256 retained and grader results unchanged."
+}

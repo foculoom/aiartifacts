@@ -1,0 +1,16 @@
+
+! Skills are not verified by GitHub and may contain prompt injections, hidden instructions, or malicious scripts. Always review skill contents before use.
+
+
+  agent-supply-chain/
+  ├── LICENSE
+  ├── SKILL.md
+  ├── references/
+  │   └── manifest-format.md
+  ├── scripts/
+  │   └── integrity.py
+  └── tests/
+      └── test_integrity.py
+
+! Skills may contain prompt injections or malicious scripts.
+  Review the installed files before use.

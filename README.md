@@ -8,14 +8,18 @@ Reusable AI workflows from Foculoom live in one repository. A plugin is an insta
 
 The [export helper](scripts/skill-delivery/export_skill.py) and
 [packaging guide](docs/skill-delivery/packaging.md) prepare explicit distribution
-payloads without adding an installed authoring skill. The
-[Editorial pilot](evals/skill-delivery/pilot/README.md) keeps one
-canonical skill for skills.sh installation and Awesome Copilot external-plugin
-preparation. Editorial 0.1.1 adds package-local Apache licenses, dependencies and
-missing-tool guidance. [Evaluations](evals/skill-delivery/README.md) distinguish
+payloads without adding an installed authoring skill. The active
+[Agent Supply Chain pilot](evals/skill-delivery/agent-supply-chain/README.md)
+improves an existing Awesome Copilot skill upstream; this repository retains
+only preparation fixtures and evidence. The earlier
+[Editorial pilot](evals/skill-delivery/pilot/README.md) and its verified public
+source acquisition remain preserved. Editorial 0.1.1 adds package-local Apache
+licenses, dependencies and missing-tool guidance.
+[Evaluations](evals/skill-delivery/README.md) distinguish
 metadata, isolated installation, runtime behavior and usefulness.
 
-These are unreleased source candidates. The submission packet remains unsent;
+These are source candidates. The Editorial submission packet remains unsent,
+and the upstream improvement awaits runtime acceptance before a PR;
 no ecosystem listing, package release or consumer update follows from this work.
 The published v0.5.0 tag and existing consumer pins remain unchanged.
 The [October 30 evaluation](evals/skill-delivery/results/README.md) did not meet

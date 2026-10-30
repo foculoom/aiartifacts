@@ -1,0 +1,14 @@
+[
+  {
+    "export": "final-a",
+    "export_exit": 0,
+    "verify_exit": 0,
+    "zip_sha256": "55ee676b9fe0a231b38cab272dd3e294818301c0db0360790c08c4b02f705449"
+  },
+  {
+    "export": "final-b",
+    "export_exit": 0,
+    "verify_exit": 0,
+    "zip_sha256": "55ee676b9fe0a231b38cab272dd3e294818301c0db0360790c08c4b02f705449"
+  }
+]
