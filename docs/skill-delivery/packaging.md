@@ -24,14 +24,15 @@ do not export an entire repository to avoid deciding what belongs in the skill.
 
 ## Optional standard-library helper
 
-The bundled `scripts/export_skill.py` requires Python 3.9+ and does not fetch,
-install, execute payload scripts, submit or publish. Run it from this skill's
-directory. Both source root and output must be absolute; output must be new.
+The repository [exporter](../../scripts/skill-delivery/export_skill.py) requires
+Python 3.9+ and does not fetch, install, execute payload scripts, submit or
+publish. Run these commands from the repository root. Both source root and
+output must be absolute; output must be new.
 
 ```sh
-python3 scripts/export_skill.py export \
+python3 scripts/skill-delivery/export_skill.py export \
   --source-root "$SOURCE_ROOT" --config "$EXPORT_CONFIG" --output "$EXPORT_DIR"
-python3 scripts/export_skill.py verify \
+python3 scripts/skill-delivery/export_skill.py verify \
   --manifest "$EXPORT_DIR/manifest.json" --archive "$EXPORT_DIR/skill.zip"
 ```
 
@@ -71,7 +72,7 @@ checks do not establish legal clearance, absence of secrets or runtime safety.
 After a separately authorized installation, verify the exact installed folder:
 
 ```sh
-python3 scripts/export_skill.py verify \
+python3 scripts/skill-delivery/export_skill.py verify \
   --manifest "$EXPORT_DIR/manifest.json" --installed-root "$INSTALLED_ROOT"
 ```
 

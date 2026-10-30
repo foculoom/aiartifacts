@@ -27,13 +27,13 @@ for kind in ('skill', 'plugin'):
         json.dump(record, output, indent=2)
         output.write('\n')
 PY
-python3 plugins/engineering/skills/skill-delivery/scripts/export_skill.py export \
+python3 scripts/skill-delivery/export_skill.py export \
   --source-root "$PWD" --config build/skill-delivery/editorial-skill.json \
   --output "$PWD/build/skill-delivery/editorial-skill"
-python3 plugins/engineering/skills/skill-delivery/scripts/export_skill.py export \
+python3 scripts/skill-delivery/export_skill.py export \
   --source-root "$PWD" --config build/skill-delivery/editorial-plugin.json \
   --output "$PWD/build/skill-delivery/editorial-plugin"
-python3 plugins/engineering/skills/skill-delivery/scripts/export_skill.py verify \
+python3 scripts/skill-delivery/export_skill.py verify \
   --manifest build/skill-delivery/editorial-plugin/manifest.json \
   --archive build/skill-delivery/editorial-plugin/skill.zip
 ```

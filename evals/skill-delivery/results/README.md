@@ -1,5 +1,15 @@
 # Skill delivery implementation evidence — 30 October 2026
 
+Follow-up owner decision: integrate the tested tooling and documentation while
+deferring the extra skill. Current source keeps the exporter in
+`scripts/skill-delivery/`, procedures in `docs/skill-delivery/` and the original
+entrypoint only as [a non-discoverable fixture](../candidate/README.md).
+Engineering's existing manifest/skill set is restored. This applies the
+predeclared fallback; it does not change any historical outcomes or hashes.
+The reviews and final [CI](https://github.com/foculoom/aiartifacts/actions/runs/41104482894)
+at `4592a641d9fc6ea39e055d943a8dc71521442060` are achieved; the path/discovery
+follow-up receives its own source checks and review in PR #30.
+
 The implementation is a reviewable source candidate in
 [PR #30](https://github.com/foculoom/aiartifacts/pull/30), beginning at
 `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. **Defer adopting the extra skill.**
@@ -62,8 +72,8 @@ not a new release. No Awesome Copilot listing was created; skills.sh public
 indexing/acquisition remains unverified. Telemetry-disabled local installs are
 not directory visibility, customer demand or revenue evidence.
 
-Next: preserve this draft and reusable checks rather than rolling out an extra
-skill on unsupported benefit. Any further trial should address a concrete gap,
+Next: integrate the selected tooling/documentation scope through normal review
+and CI, retaining the extra skill as a deferred fixture. Any further trial should address a concrete gap,
 use a pinned observable runtime/model and independent grading, and retain the
 original results. An already-authorized Copilot environment is needed to close
 that runtime gate. External submission, package release and consumer adoption

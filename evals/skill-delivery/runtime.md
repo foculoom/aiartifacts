@@ -10,6 +10,14 @@ a reviewed adaptation, not an unpinned upgrade during a trial.
 
 ## Stage the inputs
 
+The extra skill is now deferred. Its entrypoint is retained only as
+[SKILL.md.txt](candidate/SKILL.md.txt), and current tools/procedures live outside
+plugin discovery. The paths and revision in `fixtures.json` describe the
+historical trials. Check out that exact revision for a historical replay; do
+not assume those old plugin paths exist on current `main`. Explicitly staging
+a new candidate from current tools and procedures requires its own input hashes
+and evaluation authority. This change does not uninstall historical copies.
+
 Create a new disposable project and a separate new receipt directory. Copy only
 the selected input block into `prompt.txt`, with the fixtures described in the
 case README. Record a SHA-256 inventory before the run. Keep the expected

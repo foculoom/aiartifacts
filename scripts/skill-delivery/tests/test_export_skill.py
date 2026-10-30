@@ -11,7 +11,7 @@ import warnings
 import zipfile
 
 
-SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/export_skill.py'
+SCRIPT = Path(__file__).resolve().parents[1] / 'export_skill.py'
 SPEC = importlib.util.spec_from_file_location('export_skill', SCRIPT)
 exporter = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(exporter)
@@ -82,15 +82,12 @@ class ExportTests(unittest.TestCase):
                          (second / 'skill.zip').read_bytes())
         self.assertEqual(manifest.read_bytes(), (second / 'manifest.json').read_bytes())
 
-    def test_skill_delivery_can_export_its_own_runtime_files(self):
-        skill = SCRIPT.parents[1]
-        self.record.update(name='skill-delivery')
-        self.record['files'] = {
-            path.relative_to(skill).as_posix(): path.relative_to(skill).as_posix()
-            for path in skill.rglob('*') if path.is_file()
-            and not {'tests', '__pycache__'}.intersection(path.relative_to(skill).parts)}
+    def test_exporter_can_package_its_own_source_without_false_secret_match(self):
+        # The helper is reusable tooling; its test fixture needs no production skill.
+        self.write('skill/scripts/export_skill.py', '').write_bytes(SCRIPT.read_bytes())
+        self.record['files']['scripts/export_skill.py'] = 'skill/scripts/export_skill.py'
         self.save()
-        exporter.export(skill, self.config, self.output)
+        self.run_export()
         exporter.verify(self.output / 'manifest.json', installed_root=self.output / 'payload')
         self.assertEqual((self.output / 'payload/scripts/export_skill.py').read_bytes(),
                          SCRIPT.read_bytes())

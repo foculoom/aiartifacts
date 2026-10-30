@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "engineering",
-  "version": "0.2.0",
-  "description": "Review platform boundaries and prepare reusable skills for tested distribution.",
+  "version": "0.1.2",
+  "description": "Keep product behavior separate from platform and distribution adapters.",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -13,16 +13,14 @@
   "keywords": [
     "architecture",
     "platforms",
-    "verification",
-    "skills",
-    "distribution"
+    "verification"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Engineering",
-        "shortDescription": "Platform boundaries and skill delivery",
-        "longDescription": "Review platform boundaries and prepare reusable skills for tested distribution.",
+        "shortDescription": "Product and platform boundary review",
+        "longDescription": "Keep product behavior separate from platform and distribution adapters.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",

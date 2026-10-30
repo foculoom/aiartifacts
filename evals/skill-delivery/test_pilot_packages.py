@@ -1,7 +1,9 @@
 """Repository integration checks; require this checkout, never a model or installer."""
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -11,8 +13,8 @@ import zipfile
 
 
 REPO = Path(__file__).resolve().parents[2]
-SKILL = REPO / 'plugins/engineering/skills/skill-delivery'
-SPEC = importlib.util.spec_from_file_location('export_skill', SKILL / 'scripts/export_skill.py')
+TOOL = REPO / 'scripts/skill-delivery'
+SPEC = importlib.util.spec_from_file_location('export_skill', TOOL / 'export_skill.py')
 exporter = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(exporter)
 
@@ -61,16 +63,31 @@ class PilotPackageTests(unittest.TestCase):
         self.assertEqual(json.loads((plugin / 'plugin.json').read_text())['name'], 'editorial')
         self.assertEqual({p.name for p in (plugin / 'skills').iterdir()}, {'editorial-writing'})
 
-    def test_standalone_skill_suite_needs_no_other_repository_files(self):
-        # Exercise the real installed layout that exposed repository assumptions.
-        isolated = self.base / '.agents/skills/skill-delivery'
-        shutil.copytree(SKILL, isolated, ignore=shutil.ignore_patterns('__pycache__'))
+    def test_tool_suite_needs_no_other_repository_files(self):
+        isolated = self.base / 'tools/skill-delivery'
+        shutil.copytree(TOOL, isolated, ignore=shutil.ignore_patterns('__pycache__'))
         completed = subprocess.run(
             [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests',
              '-p', 'test_*.py', '-q'],
             cwd=isolated, text=True, capture_output=True, check=False)
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
         self.assertRegex(completed.stderr, r'Ran [1-9][0-9]* tests')
+
+    def test_deferred_candidate_is_not_an_active_plugin_skill(self):
+        catalog = json.loads((REPO / '.agents/plugins/marketplace.json').read_text())
+        for plugin in catalog['plugins']:
+            root = REPO / plugin['source']['path']
+            for entry in root.rglob('SKILL.md'):
+                self.assertNotEqual(entry.parent.name, 'skill-delivery')
+                self.assertIsNone(re.search(r'^name:\s*skill-delivery\s*$',
+                                            entry.read_text(), re.MULTILINE))
+        candidate = REPO / 'evals/skill-delivery/candidate'
+        self.assertEqual(list(candidate.rglob('SKILL.md')), [])
+        self.assertEqual(
+            hashlib.sha256((candidate / 'SKILL.md.txt').read_bytes()).hexdigest(),
+            'fd0e23926156028f9446b43c275eb9fb667b8af9aa3cc5dbf3282a02fb464733')
+        manifest = json.loads((REPO / 'plugins/engineering/plugin.json').read_text())
+        self.assertIsNone(re.search(r'\bskill[ -]delivery\b', json.dumps(manifest).lower()))
 
 
 if __name__ == '__main__':

@@ -1,10 +1,38 @@
 # Maintainer handoff
 
-## Skill delivery implementation — October 30, 2026
+## Skill delivery tooling fallback — October 30, 2026
+
+The owner selected **integrate the tested tooling and documentation; keep the
+extra skill deferred**. The canonical exporter, license and portable tests are
+now under `scripts/skill-delivery/`; current procedures are under
+`docs/skill-delivery/`. The evaluated entrypoint is retained byte-for-byte only
+as [SKILL.md.txt](evals/skill-delivery/candidate/SKILL.md.txt), outside ordinary
+skill discovery. Engineering's original 0.1.2 manifest is restored; its existing
+platform-boundary skill is unchanged. Editorial 0.1.1's packaging improvements
+remain. No historical result, payload, source pin or privacy record was erased.
+
+Reproduce current preparation with the
+[pilot commands](evals/skill-delivery/pilot/README.md). Run the portable suite
+with `python3 -m unittest discover -s scripts/skill-delivery/tests -q`, repository
+checks with `python3 -m unittest discover -s evals/skill-delivery -p 'test_*.py' -q`,
+and `python3 scripts/validate_catalog.py`. Expected discovery is seven plugins
+and eight skills. Local macOS checks use a canonical temporary directory;
+existing Ubuntu CI runs the same source checks. The new discovery regression
+guards the deferral; model/provider tests are not repeated for a path-only
+tooling move and removal of the installed entrypoint.
+
+[PR #30](https://github.com/foculoom/aiartifacts/pull/30) owns the final source
+review, checks and normal merge receipt for this selected scope. Source
+integration is authorized; extra-skill adoption, release, external submission
+and consumer updates remain separate. The previous experiment and its verified
+outcomes are preserved below. Its failure to demonstrate incremental benefit
+does not hold the independently useful tooling and documentation indefinitely.
+
+## Skill delivery experiment — October 30, 2026
 
 Work started from clean default-branch source
-`1ce208bf7fb4b102bac8f31b192bc378790ed712`. Engineering 0.2.0 adds the
-[skill-delivery workflow](plugins/engineering/skills/skill-delivery/SKILL.md),
+`1ce208bf7fb4b102bac8f31b192bc378790ed712`. The initial Engineering 0.2.0 proposal
+added the [skill-delivery workflow](evals/skill-delivery/candidate/SKILL.md.txt),
 three focused references and a standard-library exporter. Editorial 0.1.1 is
 the real shared-source pilot: plugin and standalone-skill license text,
 dependency declarations and explicit missing-tool/access behavior. See the
@@ -25,8 +53,11 @@ links dated receipts, independent reviews and selected-file hashes: the original
 base SHA alone does not identify changed candidate bytes. The implemented source
 at `211ad9da8b7a3d0740d1896a74c018ed3ad097be` passed 148 Python tests,
 10 JavaScript tests and both hosted Ubuntu checks. Separate reviewers covered
-the exporter/integration and authored skill references. Later evidence and the
-three-test runtime harness require final-head review/checks. Fresh installed-file
+the exporter/integration and authored skill references. Final scoped independent
+reviews accepted head `4592a641d9fc6ea39e055d943a8dc71521442060`, and both
+[hosted checks](https://github.com/foculoom/aiartifacts/actions/runs/41104482894)
+passed there: 156 Python methods and 10 JavaScript tests. Those review and
+validation milestones are complete. Fresh installed-file
 comparison and runtime behavior are separate evidence. Copilot CLI 1.0.54 successfully installed the isolated
 local Editorial plugin, but its unrelated connectivity probe returned
 `Access denied by policy settings` before any skill evaluation. Copilot behavior
@@ -38,8 +69,8 @@ unverified. Original failed sandbox setup attempts remain in the record.
 
 Source review, hosted checks, independent behavioral grading and paired usefulness
 results must be read at their exact recorded identities before claiming acceptance.
-[PR #30](https://github.com/foculoom/aiartifacts/pull/30) remains a draft candidate
-because the paired trials did not support adoption: baseline/helper corrections
+The initial PR #30 experiment was held as a draft because the paired trials
+did not support adoption: baseline/helper corrections
 were 1/0, 0/0 and 0/1, favoring the helper in one of three pairs against the
 predeclared two-pair threshold. Full context/model controls remain unverified.
 All six meta tasks reach scoped acceptance after one finishing correction;
@@ -58,8 +89,9 @@ Source/packages and the adoption hold are unchanged by that correction.
 Four new offline host-path regression tests pass and are picked up by the
 existing evaluation-test CI command. The prior 152-test receipt is retained;
 these checks add bounded retention coverage rather than a privacy certificate.
-The next source step is final evidence review and exact-head hosted checks;
-source remains a draft rather than an adoption or merge recommendation. The release owner
+The extra skill remains deferred because adoption has not met its stated
+threshold; final review and checks at the recorded head are not pending work.
+The tooling-only follow-up above has its own review/checks. The release owner
 separately resolves remaining runtime/usefulness gates and rights review before
 any tag or external submission. The prepared packet is not sent automatically.
 

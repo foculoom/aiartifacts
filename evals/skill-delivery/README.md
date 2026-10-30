@@ -1,6 +1,8 @@
 # Skill delivery evaluations
 
 These synthetic cases evaluate the new workflow separately from its packager.
+The entrypoint is now a [deferred fixture](candidate/README.md); current source
+retains the tools and documentation without adding a discoverable skill.
 They do not establish publication, ecosystem acceptance, revenue, or runtime
 compatibility merely because metadata or scripts pass. The existing
 [editorial cases](../editorial/cases.md) remain the real pilot's six positive

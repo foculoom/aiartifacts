@@ -2,9 +2,9 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
-## Unreleased — Engineering 0.2.0 and Editorial 0.1.1 candidates
+## Unreleased — skill delivery tooling and Editorial 0.1.1
 
-- Add a narrow skill-delivery workflow, ecosystem references and a Python
+- Retain skill-delivery documentation, ecosystem references and a Python
   standard-library exporter with explicit file allowlists, exact inventory,
   hashes, executable modes and bounded privacy/path checks. It never installs,
   submits, publishes or grants access.
@@ -19,7 +19,11 @@ Changes to released artifacts are recorded here. The repository and each plugin 
   below the predeclared adoption threshold; controlled runtime/model evidence
   remains incomplete. Retain tooling/documentation and defer the extra skill.
 - Keep standalone exporter tests independent of repository-only pilot fixtures;
-  CI separately exercises those integration checks and an isolated skill copy.
+  CI separately exercises those integration checks and an isolated tool copy.
+- Apply the owner's selected fallback: keep the exporter/tests under
+  `scripts/skill-delivery`, procedures under `docs/skill-delivery`, and the
+  experimental entrypoint only as `evals/skill-delivery/candidate/SKILL.md.txt`.
+  Restore Engineering's existing 0.1.2 metadata; no extra skill is discoverable.
 
 ## Unreleased — evidence and recovery safeguards
 

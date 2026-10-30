@@ -36,7 +36,7 @@ jobs:
         run: python -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q
       - name: Test skill delivery and Editorial package isolation
         run: |
-          python -m unittest discover -s plugins/engineering/skills/skill-delivery/tests -q
+          python -m unittest discover -s scripts/skill-delivery/tests -q
           python -m unittest discover -s evals/skill-delivery -p 'test_*.py' -q
       - name: Validate catalog and skill references
         run: python scripts/validate_catalog.py
