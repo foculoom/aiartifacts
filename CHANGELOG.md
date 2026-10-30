@@ -2,6 +2,20 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — Engineering 0.2.0 and Editorial 0.1.1 candidates
+
+- Add a narrow skill-delivery workflow, ecosystem references and a Python
+  standard-library exporter with explicit file allowlists, exact inventory,
+  hashes, executable modes and bounded privacy/path checks. It never installs,
+  submits, publishes or grants access.
+- Reuse Editorial as the shared-source pilot. Include Apache-2.0 text at the
+  plugin and skill installation boundaries, declare dependencies, and handle
+  missing optional lint or denied source access explicitly.
+- Add independent runtime/activation/failure cases, three paired usefulness
+  tasks, exact packaging checks and an unsent Awesome Copilot intake packet.
+  Record blocked and unverified gates separately from completed checks.
+- Preserve v0.5.0, installed consumers and external distribution decisions.
+
 ## Unreleased — evidence and recovery safeguards
 
 - Extend reporting, retrospective and Release source guidance to distinguish

@@ -4,6 +4,20 @@ For the latest cross-session checkpoint, read [HANDOFF.md](HANDOFF.md) before da
 
 Reusable AI workflows from Foculoom live in one repository. A plugin is an installable bundle, a skill is a focused workflow inside a plugin, and an agent is an optional role configuration. Product-specific voice, unpublished writing, and private examples stay with the product that owns them.
 
+## Skill delivery source candidate
+
+Engineering 0.2.0 adds [skill-delivery](plugins/engineering/skills/skill-delivery/SKILL.md)
+to reuse existing authoring tools, test behavior, and prepare explicit distribution
+payloads. The [Editorial pilot](evals/skill-delivery/pilot/README.md) keeps one
+canonical skill for skills.sh installation and Awesome Copilot external-plugin
+preparation. Editorial 0.1.1 adds package-local Apache licenses, dependencies and
+missing-tool guidance. [Evaluations](evals/skill-delivery/README.md) distinguish
+metadata, isolated installation, runtime behavior and usefulness.
+
+These are unreleased source candidates. The submission packet remains unsent;
+no ecosystem listing, package release or consumer update follows from this work.
+The published v0.5.0 tag and existing consumer pins remain unchanged.
+
 ## Available artifacts
 
 | Artifact | Purpose | Location |

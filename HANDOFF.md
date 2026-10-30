@@ -1,6 +1,47 @@
 # Maintainer handoff
 
-## Strict Release manifest candidate — October 30, 2026
+## Skill delivery implementation — October 30, 2026
+
+Work started from clean default-branch source
+`1ce208bf7fb4b102bac8f31b192bc378790ed712`. Engineering 0.2.0 adds the
+[skill-delivery workflow](plugins/engineering/skills/skill-delivery/SKILL.md),
+three focused references and a standard-library exporter. Editorial 0.1.1 is
+the real shared-source pilot: plugin and standalone-skill license text,
+dependency declarations and explicit missing-tool/access behavior. See the
+[pilot](evals/skill-delivery/pilot/README.md) for exact selection configs,
+fresh export commands and the unsent external-plugin packet. No separate
+instruction fork, generator, evaluation service or runtime dependency was added.
+
+Portable preparation used the existing authorized local macOS environment after
+no attached or listed authorized cloud environment was available. Bundled Python
+3.12.14 and Node 24.19.0 worked; the default Homebrew Node had a missing simdjson
+library and was not used. The existing Ubuntu CI now discovers the new exporter
+tests. Runtime evaluation uses existing sign-in; no paid API fallback, credential
+transfer or policy change is authorized by the toolkit.
+
+The [evaluation procedure](evals/skill-delivery/README.md) keeps prompts and
+held-out criteria separate. Dated execution receipts under its results directory
+retain exact selected-file hashes: the original base SHA alone does not identify
+uncommitted candidate bytes. Fresh installed-file comparison and runtime behavior
+are separate evidence. Copilot CLI 1.0.54 successfully installed the isolated
+local Editorial plugin, but its unrelated connectivity probe returned
+`Access denied by policy settings` before any skill evaluation. Copilot behavior
+remains access-blocked; the cause beyond that observed denial is unverified.
+
+Source review, hosted checks, independent behavioral grading and paired usefulness
+results must be read at their exact recorded identities before claiming acceptance.
+The next source step is exact-head review and required checks. The release owner
+separately resolves remaining runtime/usefulness gates and rights review before
+any tag or external submission. The prepared packet is not sent automatically.
+
+Public availability is unchanged: v0.5.0 was published October 24; release
+metadata was rechecked October 30 and archive acquisition was last explicitly
+verified October 28. This candidate is unreleased, with no Awesome Copilot
+submission or listing created and skills.sh public listing/acquisition still
+unverified. Local telemetry-disabled installations do not establish public
+discovery. Preserve all published tags and consumer pins.
+
+## Strict Release manifest integration — October 30, 2026
 
 The [red–green–refactor record](evals/release/manifest-validation-20261030.md)
 reproduces silent inventory/hash loss from duplicate JSON members in the
@@ -10,19 +51,19 @@ correction `a6cbba40941a95fc07796bd8802237c051b59392` passes all 10 Release
 methods. The final refactor separates complete validation from network readback.
 Release 10/10 and neighboring Design 11/11 pass in cloud Linux/Python 3.12.14.
 The record includes exact commands and the local catalog setup limitation:
-the connector text snapshot omits existing rendered PNGs. Hosted validation of
-the complete checkout and independent final-head review remain merge gates;
-follow the focused PR for their receipts rather than treating this checkpoint
-as a completed review or merge.
+the connector text snapshot omits existing rendered PNGs. Reviewed
+[PR #29](https://github.com/foculoom/aiartifacts/pull/29) merged on October 30
+at 08:13:08 UTC as `1ce208bf7fb4b102bac8f31b192bc378790ed712`.
+The [default-branch validation](https://github.com/foculoom/aiartifacts/actions/runs/41024980232)
+passed. Those source review, integration and hosted checks are achieved.
 
 No instruction evaluation, consumer compatibility, deployment or live customer
 path is claimed. Maintainer owns source integration; consumer owners separately
 review adoption. Existing v0.5.0 is still the latest non-draft release in the
 October 30 GitHub metadata readback; no package/tag/version or consumer pin
 changes. Archive download, native/provider acceptance and new publication are
-not part of this work. Next: complete exact-head review and required checks,
-then use the normal protected source merge; any adoption/publication remains a
-distinct owning workflow.
+not part of this work. Next: a consumer owner may review explicit adoption;
+any package publication remains a distinct owning workflow.
 
 ## Evidence and recovery source integration — October 29, 2026
 
