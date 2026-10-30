@@ -131,6 +131,20 @@ with private machine paths stay in private evidence; retain a safe member/hash
 inventory and clearly state that limit. Reviewers can inspect the original
 authorized artifacts independently.
 
+Before a public evidence push, run the bounded host-path regression against the
+staged/committed evidence and wait for independent privacy review of that exact
+revision. It checks both macOS temporary-path forms, common home prefixes and
+capped ZIP members. It does not establish rights or comprehensive privacy:
+
+```sh
+python3 -m unittest discover -s evals/skill-delivery -p test_evidence_privacy.py -q
+```
+
+The check selects Git-tracked paths and reads current checkout bytes. Stage new
+evidence first; require a clean working tree at the reviewed commit. Preserve
+raw originals privately, update snapshot transforms/hashes after redaction, and
+do not describe a corrective commit as recall of earlier public copies.
+
 The subscription guard has three synthetic, offline regression tests:
 
 ```sh

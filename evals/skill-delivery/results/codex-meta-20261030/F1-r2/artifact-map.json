@@ -455,8 +455,8 @@
     "original_sha256": "59ee41d7cb323b357ce556a0859696315d97657c1aa1a4d2ebc9020e3fa7bb1e",
     "bytes": 253,
     "snapshot": "artifacts/metadata.log.txt",
-    "snapshot_sha256": "59ee41d7cb323b357ce556a0859696315d97657c1aa1a4d2ebc9020e3fa7bb1e",
-    "transform": "UTF-8 text snapshot; .txt suffix only; exact bytes"
+    "snapshot_sha256": "83b730c1b0741b9756d0d5e75b470194b29203460fae0d184a875693a2c6cda5",
+    "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {
     "original_path": "output/package-inventory.json",
@@ -543,7 +543,7 @@
     "original_sha256": "0708fd0c68a61782c1a3d0dedd89f11d1a21923b84d338738204bd1ec59afb9e",
     "bytes": 6400,
     "snapshot": "artifacts/tests-default-temp.log.txt",
-    "snapshot_sha256": "b5042e81ae0177a00d8bb35e7efb664293578476a6d0769969b5cb1ad9cefe6d",
+    "snapshot_sha256": "b3d6ce65f141b7ec8a26297a1c611de890d9367c594de388058a7c4fe4dd6104",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {

@@ -31,6 +31,16 @@ from the public evidence snapshots. Their maps retain original hashes, sizes
 and omission reasons; candidate payloads were unaffected. Complete public text
 and reviewed ZIP-member scans found no remaining machine-path/provider-key
 patterns. Those bounded scans do not replace human rights/privacy decisions.
+An additional final review found a missed macOS temporary-path alias after the
+first evidence push. The [corrective record](../../../docs/skill-delivery-evidence-redaction-20261030.md)
+preserves the scope and exact revision: 17 text files were sanitized and their
+snapshot inventories updated. The current packet correction does not erase
+earlier public copies or repository history; previous broad privacy-clear
+wording was incomplete and is superseded by that record.
+Four additional offline regression tests cover common host-path aliases,
+redaction placeholders, capped compressed members and the retained evidence
+tree. These passed after the correction; the earlier 152-test receipt remains
+dated evidence for its original source state.
 
 Each receipt distinguishes the original working-tree inputs from later committed
 equivalence. Selected-file hashes identify the tested content. Evaluation

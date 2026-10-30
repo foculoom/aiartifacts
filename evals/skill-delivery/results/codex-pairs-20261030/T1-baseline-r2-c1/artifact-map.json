@@ -266,7 +266,7 @@
     "original_sha256": "ea8b105956209fcbea93c8277c3cbcd71cfd799db77a182d43fad5732b93772d",
     "bytes": 8206,
     "snapshot": "artifacts/validation/tests-python312.txt.txt",
-    "snapshot_sha256": "1d9e0fd30200ad6ad614460bd73a3fad7d5667fbe358b457e8a5dfc22b2d4d91",
+    "snapshot_sha256": "6c314d3bd8f2de7f9775542edf08c8f81a5a8e15760d7cb3bee6a783024951ef",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {
@@ -282,7 +282,7 @@
     "original_sha256": "a339cf38a5017dcb57de2c8b3505e75b50743cfa140d6b368577a010959c12f7",
     "bytes": 6397,
     "snapshot": "artifacts/validation/tests-python39.txt.txt",
-    "snapshot_sha256": "32b6be53aa6b3dba752058954e1c992ac415800f394098cbc403de3f5b7b9965",
+    "snapshot_sha256": "8d545d9ea0786bef97a753ecbf6660bb2ce5ab01f22a44d8e259f70a2a35aa3d",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   }
 ]

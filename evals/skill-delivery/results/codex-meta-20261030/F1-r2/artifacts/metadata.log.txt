@@ -1,5 +1,5 @@
 COMMAND: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', 'existing-authoring/scripts/quick_validate.py', 'source/editorial-writing']
-TMPDIR: /var/folders/v2/jy8b1_517rx_kgg_hzspd5vm0000gn/T/
+TMPDIR: <SYSTEM_TMP>/
 EXIT: 0
 STDOUT:
 Skill is valid!

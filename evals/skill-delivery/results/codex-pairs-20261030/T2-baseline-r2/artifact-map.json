@@ -244,7 +244,7 @@
     "original_sha256": "f8ef84c95c80b112281213e83b37c90706cd3c7794e7bda5e66e809bd9af45d6",
     "bytes": 6897,
     "snapshot": "artifacts/evidence/unittest-default-temp.json.txt",
-    "snapshot_sha256": "3844a1be0c27ed797b52e25d302c2c1f70d322985d7ccc6dae2ee6f0d9a92663",
+    "snapshot_sha256": "75c218663e371fc73eae4956bf11ef449a5a733f15e6b06f7c2bcba7be05402e",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {

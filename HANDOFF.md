@@ -51,6 +51,13 @@ other repository files. All 23 portable tests pass in an isolated installed
 layout; three integration tests stay in `evals/`. The final local checks pass
 152 Python methods and 10 JavaScript tests, with instructions/exporter unchanged.
 Historical runtime receipts retain their old test hashes and 22/25 result.
+The [evidence-redaction record](docs/skill-delivery-evidence-redaction-20261030.md)
+documents temporary paths found after the first evidence push, the corrected
+current packet, and the fact that earlier public history has not been erased.
+Source/packages and the adoption hold are unchanged by that correction.
+Four new offline host-path regression tests pass and are picked up by the
+existing evaluation-test CI command. The prior 152-test receipt is retained;
+these checks add bounded retention coverage rather than a privacy certificate.
 The next source step is final evidence review and exact-head hosted checks;
 source remains a draft rather than an adoption or merge recommendation. The release owner
 separately resolves remaining runtime/usefulness gates and rights review before

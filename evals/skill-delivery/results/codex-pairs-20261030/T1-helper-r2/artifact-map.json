@@ -218,7 +218,7 @@
     "original_sha256": "392bcd16ae8827dee5d66c303f1af33c5e8090892e0f55fa26ced38bcfefa46c",
     "bytes": 7951,
     "snapshot": "artifacts/initial-validation-results.json.txt",
-    "snapshot_sha256": "1f8a7105b6a8291f6ea34cfa26098e98a702b534c84792f549743bdc8a7f7b5c",
+    "snapshot_sha256": "dd8220384c1765facfa72b7139c390c56189b416b0727d38849030fb612da0a6",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {

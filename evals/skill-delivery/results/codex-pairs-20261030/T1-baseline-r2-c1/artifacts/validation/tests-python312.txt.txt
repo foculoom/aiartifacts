@@ -38,7 +38,7 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<RUN_ROOT>/codex-pair-T1-baseline-r2/output/candidate/skills/editorial-writing/scripts/prose_lint.py", line 328, in _safe_absolute
     raise LintError(f"Symlink input is not followed: {path}")
-prose_lint.LintError: Symlink input is not followed: /var/folders/v2/jy8b1_517rx_kgg_hzspd5vm0000gn/T/prose-lint-s1pp2lto
+prose_lint.LintError: Symlink input is not followed: <SYSTEM_TMP>/prose-lint-s1pp2lto
 
 ======================================================================
 ERROR: test_symlinks_are_skipped_and_explicit_links_rejected (test_prose_lint.FilesAndCliTests.test_symlinks_are_skipped_and_explicit_links_rejected)
@@ -52,7 +52,7 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<RUN_ROOT>/codex-pair-T1-baseline-r2/output/candidate/skills/editorial-writing/scripts/prose_lint.py", line 328, in _safe_absolute
     raise LintError(f"Symlink input is not followed: {path}")
-prose_lint.LintError: Symlink input is not followed: /var/folders/v2/jy8b1_517rx_kgg_hzspd5vm0000gn/T/prose-lint-e0qqf3gv
+prose_lint.LintError: Symlink input is not followed: <SYSTEM_TMP>/prose-lint-e0qqf3gv
 
 ======================================================================
 FAIL: test_clean_and_empty_directories_return_zero_without_quality_claim (test_prose_lint.FilesAndCliTests.test_clean_and_empty_directories_return_zero_without_quality_claim)

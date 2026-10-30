@@ -36,7 +36,7 @@
     "original_sha256": "e7536ab809f8b4646699d45c83bc03d2e13aed1690b9359401bafabaac326e1b",
     "bytes": 22793,
     "snapshot": "artifacts/evidence/commands.json.txt",
-    "snapshot_sha256": "73a07f47de8c305a9633fd8239d0a138df9ff9741b5ade4c1cb4b038f13b06af",
+    "snapshot_sha256": "1e2788eba32cf9a427f462f7c7e587df9bd51da3367915cf34138199700aa6eb",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {

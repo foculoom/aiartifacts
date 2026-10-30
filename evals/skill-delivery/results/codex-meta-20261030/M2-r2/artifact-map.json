@@ -132,7 +132,7 @@
     "original_sha256": "bd2eef50f84685b0b8eead870e1b02519cbf8df9d86cdb93114226155ae4820d",
     "bytes": 6529,
     "snapshot": "artifacts/evidence/checker-tests-default-temp.json.txt",
-    "snapshot_sha256": "bbe6bea4b2df0dbd558622154adbe715f8e9c31d1be2d1b58b9709d8d9081cbf",
+    "snapshot_sha256": "0b3a2b7fc75aabf440b701019f10de020e4e04e2c331bb6888536f579f306d7b",
     "transform": "UTF-8 text snapshot; .txt suffix; path/session redaction"
   },
   {
