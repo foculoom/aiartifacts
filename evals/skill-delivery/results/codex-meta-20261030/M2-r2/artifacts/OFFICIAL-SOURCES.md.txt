@@ -1,0 +1,25 @@
+# Documentation evidence
+
+Reviewed 2026-10-30. The workspace supplies inspected snapshots, with upstream revisions recorded in `source-record.json`:
+
+- Awesome Copilot: `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`; local `official-sources/awesome-instructions.md`, `awesome-contributing.md`, `awesome-external-plugin.yml`.
+- skills CLI: `92a9a34ac3bf88e695e468b90c7bf32f163d32c8`; local `official-sources/skills-creating.md`, `skills-commands.md`.
+
+Those documents and the available authoring/export workflows were inspected before packaging. Hashes of local documents/tools are in `evidence/tool-hashes.json`. The snapshot revisions identify documentation provenance, not installed tool versions.
+
+Official pages additionally retrieved with the web tool during this task:
+
+| Official page | Scope used |
+| --- | --- |
+| [Awesome AGENTS.md](https://github.com/github/awesome-copilot/blob/main/AGENTS.md) and [raw view](https://raw.githubusercontent.com/github/awesome-copilot/main/AGENTS.md) | Existing skill/plugin workflows and repository checks. |
+| [CONTRIBUTING.md](https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md) and [raw view](https://raw.githubusercontent.com/github/awesome-copilot/main/CONTRIBUTING.md) | Usefulness requirement, contribution routes and review boundary. |
+| [External-plugin form](https://raw.githubusercontent.com/github/awesome-copilot/main/.github/ISSUE_TEMPLATE/external-plugin.yml) | Draft intake fields and unattested checklist. |
+| [skills creation guide](https://raw.githubusercontent.com/vercel-labs/skills/main/docs/creating-skills.md) | Metadata and discovery layouts. |
+| [skills command reference](https://raw.githubusercontent.com/vercel-labs/skills/main/docs/commands.md) | Direct URL/local inputs and CLI contract. |
+| [skills.sh docs](https://skills.sh/docs), [FAQ](https://skills.sh/docs/faq) | Directory versus installer; listing mechanism. |
+| [Agent Skills specification](https://agentskills.io/specification) | Frontmatter, name/folder rules and optional fields. |
+| [Agent Plugins specification](https://agent-plugins.org/specification) | Root manifest and standard skill directory boundary. |
+
+Live retrievals were read through the web tool; immutable response snapshots were not saved locally and no exact live commit was resolved. Some responses were cached by the provider. They corroborate the preparation route, not a guarantee of the contract at a later submission. Recheck current policies, form fields, schema and gate versions immediately before an authorized external action.
+
+No current source-release subtree, marketplace entry, skills.sh detail page, public install route or customer receipt was inspected. No external status claim is inferred from documentation.

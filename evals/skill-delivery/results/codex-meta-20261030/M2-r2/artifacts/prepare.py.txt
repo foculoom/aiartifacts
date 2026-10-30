@@ -1,0 +1,105 @@
+"""Reproduce local preparation with existing tools only; run from workspace root.
+
+Writes only under output/. Export directories must not already exist.
+No network, installation, submission, publication, or source edits.
+"""
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'output'
+SOURCE = ROOT / 'source'
+EXPORTER = ROOT / '.agents/skills/skill-delivery/scripts/export_skill.py'
+RECORD = json.loads((ROOT / 'source-record.json').read_text())
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(path, data):
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n')
+
+
+def snapshot():
+    return {p.relative_to(SOURCE).as_posix(): {
+        'sha256': sha(p), 'mode': oct(p.stat().st_mode & 0o777),
+        'symlink': p.is_symlink()} for p in sorted(SOURCE.rglob('*')) if p.is_file()}
+
+
+def run(label, args, extra_env=None):
+    env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')
+    env.update(extra_env or {})
+    result = subprocess.run(args, cwd=ROOT, env=env, capture_output=True, text=True)
+    log = {'argv': list(map(str, args)), 'extra_env': extra_env or {},
+           'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr}
+    write_json(OUT / 'evidence' / (label + '.json'), log)
+    print(label, result.returncode)
+    return result
+
+
+before = snapshot()
+write_json(OUT / 'evidence/source-before.json', before)
+mismatches = [name for name, expected in RECORD['files'].items()
+              if sha(SOURCE / 'editorial-writing' / name) != expected]
+write_json(OUT / 'evidence/source-record-check.json', {
+    'supplied_base_revision': RECORD['base_revision'],
+    'matched_files': len(RECORD['files']) - len(mismatches), 'mismatches': mismatches,
+    'limitation': 'Supplied record, not an authenticated Git checkout or remote revision comparison.'})
+assert not mismatches
+write_json(OUT / 'evidence/environment.json', {
+    'observation_date': '2026-10-30', 'python': sys.version,
+    'python_executable': sys.executable, 'platform': platform.platform(),
+    'model': 'GPT-6 via host; exact serving build not exposed',
+    'permissions': 'Local workspace writes; restricted network; no installs or external mutations authorized'})
+
+# Use an explicit allowlist from the supplied source record, excluding caches.
+selected = sorted(name for name in RECORD['files'] if '__pycache__' not in Path(name).parts)
+skill_files = {name: 'editorial-writing/' + name for name in selected}
+plugin_files = {'skills/editorial-writing/' + name: origin for name, origin in skill_files.items()}
+plugin_files.update({'plugin.json': 'existing-plugin.json',
+                     'LICENSE': 'editorial-writing/LICENSE',
+                     'DEPENDENCIES.md': 'editorial-writing/DEPENDENCIES.md'})
+for kind, name, files in [('skill', 'editorial-writing', skill_files), ('plugin', 'editorial', plugin_files)]:
+    config = OUT / (kind + '-export.json')
+    write_json(config, {'version': 1, 'name': name, 'kind': kind,
+                        'source_commit': RECORD['base_revision'], 'files': files})
+    target = OUT / (kind + '-export')
+    assert run(kind + '-export', [sys.executable, '-B', str(EXPORTER), 'export',
+        '--source-root', str(SOURCE), '--config', str(config), '--output', str(target)]).returncode == 0
+    for label, flag, path in [('archive', '--archive', target / 'skill.zip'),
+                              ('staged', '--installed-root', target / 'payload')]:
+        assert run(kind + '-' + label, [sys.executable, '-B', str(EXPORTER), 'verify',
+            '--manifest', str(target / 'manifest.json'), flag, str(path)]).returncode == 0
+
+run('quick-validate', [sys.executable, '-B', 'existing-authoring/scripts/quick_validate.py',
+                     'source/editorial-writing'])
+run('checker-tests-default-temp', [sys.executable, '-B', '-m', 'unittest', 'discover',
+                                  '-s', 'source/editorial-writing/tests', '-v'])
+temp_dir = OUT / 'evidence' / 'tmp'
+temp_dir.mkdir(exist_ok=True)
+run('checker-tests-physical-temp', [sys.executable, '-B', '-m', 'unittest', 'discover',
+                                   '-s', 'source/editorial-writing/tests', '-v'],
+    {'TMPDIR': str(temp_dir.resolve())})
+run('exporter-tests', [sys.executable, '-B', '-m', 'unittest', 'discover',
+                       '-s', '.agents/skills/skill-delivery/tests', '-v'],
+    {'TMPDIR': str(temp_dir.resolve())})
+run('node-version', ['node', '--version'])
+run('tool-paths', ['/bin/zsh', '-c', 'command -v skills copilot gh'])
+run('git-revision', ['git', 'rev-parse', 'HEAD'])
+run('pyyaml-version', [sys.executable, '-B', '-c', 'import yaml; print(yaml.__version__)'])
+
+after = snapshot()
+write_json(OUT / 'evidence/source-after.json', after)
+write_json(OUT / 'evidence/source-preservation.json', {'identical': before == after,
+    'scope': 'Complete source/ regular-file inventory, SHA-256, modes and symlink flags',
+    'before_file_count': len(before), 'after_file_count': len(after)})
+assert before == after
+write_json(OUT / 'evidence/package-hashes.json', {
+    str(p.relative_to(OUT)): sha(p) for folder in ('skill-export', 'plugin-export')
+    for p in [OUT / folder / 'manifest.json', OUT / folder / 'skill.zip']})

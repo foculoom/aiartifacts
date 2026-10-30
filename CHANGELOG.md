@@ -15,6 +15,11 @@ Changes to released artifacts are recorded here. The repository and each plugin 
   tasks, exact packaging checks and an unsent Awesome Copilot intake packet.
   Record blocked and unverified gates separately from completed checks.
 - Preserve v0.5.0, installed consumers and external distribution decisions.
+- October 30 paired preparation trials favor the helper in one of three pairs,
+  below the predeclared adoption threshold; controlled runtime/model evidence
+  remains incomplete. Retain tooling/documentation and defer the extra skill.
+- Keep standalone exporter tests independent of repository-only pilot fixtures;
+  CI separately exercises those integration checks and an isolated skill copy.
 
 ## Unreleased — evidence and recovery safeguards
 

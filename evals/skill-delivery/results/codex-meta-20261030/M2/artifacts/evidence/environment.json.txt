@@ -1,0 +1,23 @@
+{
+  "PyYAML": "6.0.3",
+  "agent": "Codex (host session); exact backend model/build not exposed; no independent runtime trial",
+  "authoring_validator_sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+  "available_executables": {
+    "codex": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "copilot": "/opt/homebrew/bin/copilot",
+    "gh": "/opt/homebrew/bin/gh",
+    "node": "/opt/homebrew/bin/node",
+    "python3": "/usr/bin/python3",
+    "skills": null
+  },
+  "date": "2026-10-30",
+  "export_helper_sha256": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+  "installs": "None",
+  "node_probe": "node --version failed: missing libsimdjson.29.dylib; runtime not repaired",
+  "official_document_snapshots": {
+    "awesome": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+    "skills": "92a9a34ac3bf88e695e468b90c7bf32f163d32c8"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]"
+}

@@ -1,0 +1,46 @@
+# Editorial-writing sharing candidate
+
+Prepared 2026-10-30. **Ready for a reviewer decision; skills.sh installation and public discovery remain unverified.**
+
+The self-contained candidate is `candidate/skills/editorial-writing/`, also bundled in `editorial-writing-candidate.zip` with the same `skills/editorial-writing/` layout. All 12 included files retain their source bytes, including canonical instructions, profiles, helper, tests, dependency notes and Apache-2.0 license. Only two generated `__pycache__/*.pyc` files were excluded. No plugin manifest, authoring toolkit, project prose or company planning records are bundled. No dependencies were installed, and no submission, publication, global configuration change or source edit was performed.
+
+## Validation
+
+| Check | Result |
+| --- | --- |
+| Supplied input and source-record SHA-256 checks | All matched before packaging; source and supplied inputs matched again at completion |
+| Existing authoring `quick_validate.py` | Passed using already available PyYAML |
+| Bundled checker tests, Python 3.9.6 and 3.12 | 27/27 passed on each with a physical temporary directory |
+| Initial tests using macOS default temp path | Each had 3 failures and 2 errors: `/var` is a symlink, which the checker refuses to traverse |
+| Relative Markdown file links | All 9 resolve inside the skill |
+| Advisory prose checker on packaged Markdown | 9 files checked; no findings; no editorial-quality or authorship claim |
+| Candidate file set, hashes and archive | Verified; no bytecode caches, symlinks or missing runtime resources |
+| skills CLI / target-agent installation | Not run: standalone CLI unavailable; no installation authorized |
+| Editorial behavior in a consuming agent | Not tested; static review and checker tests do not establish writing quality |
+
+Raw results and logs are in `validation/`. `file-inventory.json` maps every source skill file to its packaged path or exclusion, with size and SHA-256. `source-inventory.json` covers the entire supplied `source/` tree, including the unchanged external plugin metadata. `SHA256SUMS` covers every output file except itself, relative to `output/`.
+
+## skills.sh installation/discovery preparation — unexecuted
+
+Based on the supplied [`skills-commands.md`](../official-sources/skills-commands.md) and [`skills-creating.md`](../official-sources/skills-creating.md) snapshots at documentation revision `92a9a34ac3bf88e695e468b90c7bf32f163d32c8`: use the exact local `output/candidate/` below, whose `skills/editorial-writing/` contains the 12 unchanged files. The recorded repository alternative is `https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing`; its remote contents and availability have not been independently verified.
+
+Intended target: **Claude Code, project scope**, in a separately prepared empty, disposable project directory, with copies under that project's `.claude/skills/`. Run from that isolated directory, using the absolute source path below. `--copy` requests independent copies; omit `--global` and `--yes` to retain project scope and confirmation prompts. Installer choice: npm's `skills` CLI through `npx`, with `SKILLS_CLI_VERSION` set to a reviewed exact release before any future execution; no release has been selected or verified. The guard rejects an unset version, but the reviewer must ensure it is an exact version rather than a range or tag. Even listing can download/execute the installer. Telemetry choice remains unresolved: the supplied snapshots document no telemetry control, so verify the selected release's behavior and opt-out before execution; no telemetry setting or opt-out success is claimed.
+
+```sh
+# UNEXECUTED — discover this exact local candidate without installing the skill.
+npx "skills@${SKILLS_CLI_VERSION:?set a reviewed exact release}" add <CASE_ROOT>/output/candidate --list
+
+# UNEXECUTED — proposed isolated project installation, requiring separate authorization.
+npx "skills@${SKILLS_CLI_VERSION:?set a reviewed exact release}" add <CASE_ROOT>/output/candidate --skill editorial-writing --agent claude-code --copy
+```
+
+These are preparation instructions only. Local listing would not establish skills.sh public indexing or public acquisition, and installation would not establish editorial behavior. All existing evidence and limits below still apply.
+
+## Remaining work for the reviewer
+
+1. Decide whether to share this unchanged Apache-2.0 candidate and confirm the selected public source/ref and applicable attribution/NOTICE requirements. No NOTICE file was supplied; no new copyright attribution or license was invented.
+2. In an authorized distribution environment with a reviewed, pinned installer, verify discovery and an isolated installation for the intended agent. The supplied documentation supports the standard `skills/<name>/SKILL.md` layout, but this run did not execute the installer or confirm current upstream behavior.
+3. Exercise representative adult web, longform, game UI/dialogue and early-reader requests in a consuming agent, including preservation of facts, placeholders and deliberate repetition. These are future behavioral checks, not completed acceptance tests.
+4. Accept or separately address the existing symlink-ancestor restriction: normal macOS `/var` and `/tmp` aliases can cause optional lint to reject an input. Canonical physical paths work; this package preserves the checker unchanged.
+
+This candidate exists only as local review artifacts as of 2026-10-30. This task did not establish public acquisition, a skills.sh listing, installation counts or existing upstream public availability. Any later sharing action requires separate authorization.

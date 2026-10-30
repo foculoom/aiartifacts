@@ -1,0 +1,386 @@
+{
+  "evidence_limit": "This inventory records current local bytes and modes only. It does not rerun or upgrade validation receipts, authenticate remote source identity, or establish runtime behavior, installation, external review, publication or acquisition.",
+  "excluded_paths": [
+    "packet-inventory.json"
+  ],
+  "exclusion_reason": "The inventory excludes itself to avoid a recursive content hash.",
+  "file_count": 74,
+  "files": {
+    "DISTRIBUTION.md": {
+      "mode": "0644",
+      "sha256": "ba14b2107dfbe5d8fd47e32b7588fbec13f4c1d5d7b717c5d9801f19eef45aa8",
+      "size_bytes": 7106
+    },
+    "OFFICIAL-SOURCES.md": {
+      "mode": "0644",
+      "sha256": "a9c646766c8be4f66ad1bdd58902fc552e6a1b058713b8f34d57d956fd452af1",
+      "size_bytes": 2746
+    },
+    "PROVENANCE.md": {
+      "mode": "0644",
+      "sha256": "72d8ebacca1d278100d64f674ff9ad8b571103a11792fac79faf831ac2a4f60a",
+      "size_bytes": 4551
+    },
+    "README.md": {
+      "mode": "0644",
+      "sha256": "7ff2bf3e7ae314dea36711ce780aca3f4b7ef4811d3d6850e5502542d143ff1a",
+      "size_bytes": 4680
+    },
+    "VALIDATION.md": {
+      "mode": "0644",
+      "sha256": "023d46d0f21ea2a76d7a79ad1f8b0e826a3a95be794ac976641876246a454d61",
+      "size_bytes": 4807
+    },
+    "evaluation/README.md": {
+      "mode": "0644",
+      "sha256": "0a118da42be61c09f70bc4cd8ee6cd54ff05b3ecdc5a0d891a0c0614df5cb699",
+      "size_bytes": 2249
+    },
+    "evaluation/fixture-hashes.json": {
+      "mode": "0644",
+      "sha256": "3c87fa2f09f78983db219a7900ceab95e8b77f89805310aba88aa898a9d2b7a4",
+      "size_bytes": 776
+    },
+    "evaluation/inputs/01-web.txt": {
+      "mode": "0644",
+      "sha256": "4eb3c6ce968581bd94ad47e517761b5fc2290f97fac191dd23f93abd2296f884",
+      "size_bytes": 482
+    },
+    "evaluation/inputs/02-early-reader.txt": {
+      "mode": "0644",
+      "sha256": "4294a656ff19dc0f7be230b5ba23e399f1ea18bcf89c0520d7565d06fff8f270",
+      "size_bytes": 365
+    },
+    "evaluation/inputs/03-game-ui.txt": {
+      "mode": "0644",
+      "sha256": "d221b36769df58bdbc00d15ae1407c6151f4e38b370ca8343c3e4fc617b8a0d6",
+      "size_bytes": 483
+    },
+    "evaluation/inputs/04-unrelated.txt": {
+      "mode": "0644",
+      "sha256": "98f2052eed5488feede769961c9198fc258b7077a417787b3a2fbf78ed948082",
+      "size_bytes": 224
+    },
+    "evaluation/inputs/05-sound-copy.txt": {
+      "mode": "0644",
+      "sha256": "1fb938c3d6297473705d181b913d1f3272b6e724616994bcb20c06f307b63566",
+      "size_bytes": 334
+    },
+    "evaluation/inputs/06-no-python.txt": {
+      "mode": "0644",
+      "sha256": "f97f09e4d3f125a63326260084adeb634be403ffd26cd289cbb72ad89f4a3161",
+      "size_bytes": 377
+    },
+    "evaluation/inputs/07-unreadable.txt": {
+      "mode": "0644",
+      "sha256": "1b1425fcbb7e17648a03edaa9d5ece0e6c37515664a2f4a95d8edc2a4dc59549",
+      "size_bytes": 224
+    },
+    "evaluation/inputs/08-untrusted.txt": {
+      "mode": "0644",
+      "sha256": "0aeca12bcfd41104466a1573077fa8d1fb965009c4bbc1272f01d1e43f90eb07",
+      "size_bytes": 534
+    },
+    "evaluation/reviewer-only/criteria.md": {
+      "mode": "0644",
+      "sha256": "c5224a95b90314dc718fef2c79dab72b1a48e58d73a59861b3fa1cd27b374ce3",
+      "size_bytes": 2380
+    },
+    "evidence/checker-tests-default-temp.json": {
+      "mode": "0644",
+      "sha256": "bd2eef50f84685b0b8eead870e1b02519cbf8df9d86cdb93114226155ae4820d",
+      "size_bytes": 6529
+    },
+    "evidence/checker-tests-physical-temp.json": {
+      "mode": "0644",
+      "sha256": "cfcbc239723a1b01cf8c9c6586cdfc3e925db00e6f97a61928912163f0590284",
+      "size_bytes": 2848
+    },
+    "evidence/environment.json": {
+      "mode": "0644",
+      "sha256": "22f052282d7bbe0d0b753171f48b820192b1e118601f60c008d76ab95527f630",
+      "size_bytes": 431
+    },
+    "evidence/exporter-tests.json": {
+      "mode": "0644",
+      "sha256": "eb2ebf4570d95d15e58f3df5b9376d6867de1ab1ece6c3d7e6b55cdf585cf3d8",
+      "size_bytes": 6341
+    },
+    "evidence/git-revision.json": {
+      "mode": "0644",
+      "sha256": "856844be55d490ecbc97edbe5335de77cbcb0d3b1449b4cfb27cad91c96ef0e8",
+      "size_bytes": 200
+    },
+    "evidence/node-version.json": {
+      "mode": "0644",
+      "sha256": "c2e69e1ed04a9b2677c21344af3c75b726349f0cf78652deb8c38e1f86ab1d07",
+      "size_bytes": 841
+    },
+    "evidence/package-hashes.json": {
+      "mode": "0644",
+      "sha256": "7af551bb7f010206bed02be58a85115685f416e0cf0c7c45e20ccb16996848c4",
+      "size_bytes": 397
+    },
+    "evidence/plugin-archive.json": {
+      "mode": "0644",
+      "sha256": "29066cba8e6df1ad4222d2e2a11f3b56198b6b85b2b87d9966cceafa8c94539b",
+      "size_bytes": 676
+    },
+    "evidence/plugin-export.json": {
+      "mode": "0644",
+      "sha256": "1abc61bf586692c225fa3441a5e421c99d366acbc864183ffb7781534007c7ac",
+      "size_bytes": 1040
+    },
+    "evidence/plugin-staged.json": {
+      "mode": "0644",
+      "sha256": "60bb61ec57ba5fabfeb45dc927e14a8ac7e6ac12ef5727eab9b3656651091b3f",
+      "size_bytes": 681
+    },
+    "evidence/pyyaml-version.json": {
+      "mode": "0644",
+      "sha256": "e422db1da93445e29f348e19a4c82ba1867d763c6a332f92de9cc0466fac7fe4",
+      "size_bytes": 225
+    },
+    "evidence/quick-validate.json": {
+      "mode": "0644",
+      "sha256": "00370418325e33e33ad084fc56e3d80b5c30eaeac3cdeb7eca3ad71400604604",
+      "size_bytes": 265
+    },
+    "evidence/shared-skill-identity.json": {
+      "mode": "0644",
+      "sha256": "80ae7d84af3f5401d5ed13aeadf59c40e90d26d6964094407dc304cf2cb95a61",
+      "size_bytes": 117
+    },
+    "evidence/skill-archive.json": {
+      "mode": "0644",
+      "sha256": "9c1f497ab2a98dc9070908501fa1889250b5d4c39d6714a404312646a66d7e08",
+      "size_bytes": 674
+    },
+    "evidence/skill-export.json": {
+      "mode": "0644",
+      "sha256": "6758c4a0ea8fc5e839cfccb370734ae43dccfd3f1aec91940c49210ce164aa65",
+      "size_bytes": 1038
+    },
+    "evidence/skill-staged.json": {
+      "mode": "0644",
+      "sha256": "180027d2cf3a6d3783879d86f4daf5557c724a738e1cb262684bf16d0eb678c2",
+      "size_bytes": 679
+    },
+    "evidence/source-after.json": {
+      "mode": "0644",
+      "sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+      "size_bytes": 2700
+    },
+    "evidence/source-before.json": {
+      "mode": "0644",
+      "sha256": "e80e53acacf0555c114b4d6fd405e90f3f705c957bce4157b1209e84b56e0309",
+      "size_bytes": 2700
+    },
+    "evidence/source-preservation.json": {
+      "mode": "0644",
+      "sha256": "518f59ec079a8a3b250e0902dd38e2dab2a7892b5cfd546f5162fa935bb61dd3",
+      "size_bytes": 165
+    },
+    "evidence/source-record-check.json": {
+      "mode": "0644",
+      "sha256": "d2e724491ad1d5861738f410ecace00694e6016e6d563fa68059be274681c608",
+      "size_bytes": 219
+    },
+    "evidence/source-vs-input-inventory.json": {
+      "mode": "0644",
+      "sha256": "5382e989cc0d2d689827de1ffd79900caa04d2ac31070c9a25d71ec0d407837f",
+      "size_bytes": 145
+    },
+    "evidence/tmp/xcrun_db": {
+      "mode": "0600",
+      "sha256": "1c480b3dc7be7b5a9a02928cd06b2e8c4041e7af08c48870a5518a63c05f176c",
+      "size_bytes": 728
+    },
+    "evidence/tool-hashes.json": {
+      "mode": "0644",
+      "sha256": "3fb3f5ba024b91b64ae1f6eb09d377664aac9ffbac8da4a95e54ba24d4d30435",
+      "size_bytes": 1753
+    },
+    "evidence/tool-paths.json": {
+      "mode": "0644",
+      "sha256": "0b80488e6e95d1fc7427007332e8ad82cb956feefc73ddf92c4ca816dd14d90b",
+      "size_bytes": 199
+    },
+    "plugin-export.json": {
+      "mode": "0644",
+      "sha256": "5616bcb450b793298156a2c9d7189bea0fae4006c9e351448d2d2a1590467981",
+      "size_bytes": 1499
+    },
+    "plugin-export/manifest.json": {
+      "mode": "0644",
+      "sha256": "039717bd4e904aa1ae7c9a98a507c246f03b1cf6e42d95aba1a7ce357d90dd04",
+      "size_bytes": 4042
+    },
+    "plugin-export/payload/DEPENDENCIES.md": {
+      "mode": "0644",
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "size_bytes": 1856
+    },
+    "plugin-export/payload/LICENSE": {
+      "mode": "0644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_bytes": 11357
+    },
+    "plugin-export/payload/plugin.json": {
+      "mode": "0644",
+      "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+      "size_bytes": 1270
+    },
+    "plugin-export/payload/skills/editorial-writing/DEPENDENCIES.md": {
+      "mode": "0644",
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "size_bytes": 1856
+    },
+    "plugin-export/payload/skills/editorial-writing/LICENSE": {
+      "mode": "0644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_bytes": 11357
+    },
+    "plugin-export/payload/skills/editorial-writing/SKILL.md": {
+      "mode": "0644",
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "size_bytes": 4282
+    },
+    "plugin-export/payload/skills/editorial-writing/references/audience/adult.md": {
+      "mode": "0644",
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "size_bytes": 941
+    },
+    "plugin-export/payload/skills/editorial-writing/references/audience/early-reader.md": {
+      "mode": "0644",
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "size_bytes": 1283
+    },
+    "plugin-export/payload/skills/editorial-writing/references/examples.md": {
+      "mode": "0644",
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "size_bytes": 2108
+    },
+    "plugin-export/payload/skills/editorial-writing/references/medium/game-dialogue.md": {
+      "mode": "0644",
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "size_bytes": 1096
+    },
+    "plugin-export/payload/skills/editorial-writing/references/medium/game-ui.md": {
+      "mode": "0644",
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "size_bytes": 1156
+    },
+    "plugin-export/payload/skills/editorial-writing/references/medium/longform.md": {
+      "mode": "0644",
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "size_bytes": 1457
+    },
+    "plugin-export/payload/skills/editorial-writing/references/medium/web.md": {
+      "mode": "0644",
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "size_bytes": 1131
+    },
+    "plugin-export/payload/skills/editorial-writing/scripts/prose_lint.py": {
+      "mode": "0644",
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "size_bytes": 16864
+    },
+    "plugin-export/payload/skills/editorial-writing/tests/test_prose_lint.py": {
+      "mode": "0644",
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "size_bytes": 12983
+    },
+    "plugin-export/skill.zip": {
+      "mode": "0644",
+      "sha256": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b",
+      "size_bytes": 73375
+    },
+    "prepare.py": {
+      "mode": "0644",
+      "sha256": "87966af0673d2fa6de8134c1895de09c57a54fcf622600037d70dcfbbf3c3583",
+      "size_bytes": 5336
+    },
+    "skill-export.json": {
+      "mode": "0644",
+      "sha256": "c6bbd12b85f2537591c28436274d5fe2a5697bcb07db6fd147032512b1a86741",
+      "size_bytes": 1059
+    },
+    "skill-export/manifest.json": {
+      "mode": "0644",
+      "sha256": "02a14826f34e81da5a41d68d80387a0de57a375e4b3bea46ba76f902c8bc0361",
+      "size_bytes": 3212
+    },
+    "skill-export/payload/DEPENDENCIES.md": {
+      "mode": "0644",
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "size_bytes": 1856
+    },
+    "skill-export/payload/LICENSE": {
+      "mode": "0644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_bytes": 11357
+    },
+    "skill-export/payload/SKILL.md": {
+      "mode": "0644",
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "size_bytes": 4282
+    },
+    "skill-export/payload/references/audience/adult.md": {
+      "mode": "0644",
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "size_bytes": 941
+    },
+    "skill-export/payload/references/audience/early-reader.md": {
+      "mode": "0644",
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "size_bytes": 1283
+    },
+    "skill-export/payload/references/examples.md": {
+      "mode": "0644",
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "size_bytes": 2108
+    },
+    "skill-export/payload/references/medium/game-dialogue.md": {
+      "mode": "0644",
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "size_bytes": 1096
+    },
+    "skill-export/payload/references/medium/game-ui.md": {
+      "mode": "0644",
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "size_bytes": 1156
+    },
+    "skill-export/payload/references/medium/longform.md": {
+      "mode": "0644",
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "size_bytes": 1457
+    },
+    "skill-export/payload/references/medium/web.md": {
+      "mode": "0644",
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "size_bytes": 1131
+    },
+    "skill-export/payload/scripts/prose_lint.py": {
+      "mode": "0644",
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "size_bytes": 16864
+    },
+    "skill-export/payload/tests/test_prose_lint.py": {
+      "mode": "0644",
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "size_bytes": 12983
+    },
+    "skill-export/skill.zip": {
+      "mode": "0644",
+      "sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+      "size_bytes": 57998
+    }
+  },
+  "hash_algorithm": "SHA-256",
+  "mode_scope": "Observed local permission bits; ownership, ACLs and extended attributes are not inventoried.",
+  "observation_date": "2026-10-30",
+  "root": "output/",
+  "scope": "Every regular file recursively under output/, including payloads, archives, manifests, preparation scripts, documentation, evaluation fixtures, reviewer criteria and raw evidence. Paths are relative to output/.",
+  "version": 1
+}

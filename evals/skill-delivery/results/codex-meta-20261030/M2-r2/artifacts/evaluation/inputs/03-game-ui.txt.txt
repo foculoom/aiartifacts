@@ -1,0 +1,7 @@
+Review these game interface strings for clarity. Preserve {slot_name}. The game writes locally first; cloud sync happens later. The save is still pending in state A, local save has succeeded in state B, and local storage failed in state C. Only these strings and states are available; there is no running build or screenshot.
+
+A: Saved {slot_name} everywhere!
+B: Done!
+C: Whoops, the gremlins won.
+
+Return one suggested string per state and a short note on any unresolved UI checks.

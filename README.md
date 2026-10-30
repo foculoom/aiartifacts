@@ -17,6 +17,9 @@ metadata, isolated installation, runtime behavior and usefulness.
 These are unreleased source candidates. The submission packet remains unsent;
 no ecosystem listing, package release or consumer update follows from this work.
 The published v0.5.0 tag and existing consumer pins remain unchanged.
+The [October 30 evaluation](evals/skill-delivery/results/README.md) did not meet
+the incremental-usefulness threshold; retain the checks and documentation while
+deferring adoption of the extra skill.
 
 ## Available artifacts
 

@@ -1,0 +1,8 @@
+[
+  {"id":"implicit-web","request":"Revise this help-page sentence for adult readers. Keep every condition and avoid adding promises: ‘Refunds are processed within 10 business days after inspection, provided the item is unused.’"},
+  {"id":"explicit-ui","request":"Use $editorial-writing to review a game save message. The UI currently says ‘Saved!’ immediately after a click. The save is still pending and may fail. Give wording for pending, successful local storage and failure states."},
+  {"id":"preserve-voice","request":"Review this early-reader page. The brief says the repeated lines invite children to join in, and each line accompanies a new footprint: ‘Tap, tap, tap. Pip took one step. Tap, tap, tap. Pip took two.’ Suggest changes only if they help the intended reader."},
+  {"id":"nonactivation","request":"Fix a Python function that returns a list sorted in descending order when the caller requests ascending order. Do not edit prose."},
+  {"id":"missing-tool","request":"Review this short web heading and label. Python is unavailable and installing tools is forbidden. Heading: ‘Return your order’. Button: ‘Read the return steps’. The button opens instructions; it does not start a return."},
+  {"id":"unreadable-source","request":"Review a chapter at /restricted/chapter.md. Existing filesystem permission denies access. Do not request broader permissions or invent a passage."}
+]

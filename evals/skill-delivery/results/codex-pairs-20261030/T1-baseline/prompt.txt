@@ -1,0 +1,6 @@
+Prepare source/editorial-writing so a reviewer can decide whether to share it
+through skills.sh. Preserve the canonical instructions and declared license.
+Create a self-contained candidate package under output/, a file/hash inventory,
+dependency/provenance notes and a concise validation/remaining-work report.
+Use the existing authoring workflow and tools available here. Do not install
+dependencies, submit, publish, or alter source/.

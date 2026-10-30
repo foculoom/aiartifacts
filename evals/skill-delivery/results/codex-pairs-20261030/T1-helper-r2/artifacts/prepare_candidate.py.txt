@@ -1,0 +1,86 @@
+"""Reproduce local preparation with existing tools; never install or publish."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import shutil
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'output'
+os.chdir(ROOT)
+os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def snapshot():
+    return {p.relative_to(ROOT / 'source').as_posix():
+            {'sha256': sha(p), 'mode': oct(p.stat().st_mode & 0o777)}
+            for p in sorted((ROOT / 'source').rglob('*')) if p.is_file()}
+
+def write(name, data):
+    (OUT / name).write_text(json.dumps(data, indent=2, sort_keys=True) + '\n')
+
+before = snapshot()
+record = json.loads((ROOT / 'source-record.json').read_text())
+assert all(sha(ROOT / 'source/editorial-writing' / p) == h for p, h in record['files'].items())
+selected = [
+    'SKILL.md', 'LICENSE', 'DEPENDENCIES.md', 'scripts/prose_lint.py',
+    'tests/test_prose_lint.py', 'references/examples.md',
+    'references/audience/adult.md', 'references/audience/early-reader.md',
+    'references/medium/web.md', 'references/medium/longform.md',
+    'references/medium/game-ui.md', 'references/medium/game-dialogue.md',
+]
+assert set(record['files']) - set(selected) == {
+    'scripts/__pycache__/prose_lint.cpython-312.pyc',
+    'tests/__pycache__/test_prose_lint.cpython-312.pyc'}
+config = dict(version=1, name='editorial-writing', kind='skill',
+              source_commit=record['base_revision'],
+              files={p: 'editorial-writing/' + p for p in selected})
+write('export-config.json', config)
+results = []
+
+def run(name, args, required=True):
+    proc = subprocess.run(args, capture_output=True, text=True, env=os.environ)
+    results.append(dict(check=name, command=args, exit_code=proc.returncode,
+                        stdout=proc.stdout, stderr=proc.stderr))
+    if required and proc.returncode:
+        write('validation-results.json', results)
+        raise RuntimeError(name + ' failed')
+
+exporter = '.agents/skills/skill-delivery/scripts/export_skill.py'
+if not (OUT / 'candidate').exists():
+    run('export', [sys.executable, exporter, 'export', '--source-root', str(ROOT / 'source'),
+              '--config', str(OUT / 'export-config.json'), '--output', str(OUT / 'candidate')])
+run('authoring-validator', [sys.executable, 'existing-authoring/scripts/quick_validate.py',
+                          'output/candidate/payload'])
+temp_root = OUT / 'test-tmp'
+temp_root.mkdir(exist_ok=True)
+os.environ['TMPDIR'] = str(temp_root.resolve())
+run('checker-tests-canonical-temp', [sys.executable, '-m', 'unittest', 'discover', '-s',
+                      'output/candidate/payload/tests', '-v'])
+run('archive-integrity', [sys.executable, exporter, 'verify', '--manifest',
+                         'output/candidate/manifest.json', '--archive', 'output/candidate/skill.zip'])
+run('staged-integrity', [sys.executable, exporter, 'verify', '--manifest',
+                        'output/candidate/manifest.json', '--installed-root', str(OUT / 'candidate/payload')])
+run('git-version', ['git', '--version'])
+run('git-state', ['git', 'status', '--short'], required=False)
+run('node-version', ['node', '--version'], required=False)
+import yaml
+write('environment.json', dict(observation_date='2026-10-30', python=sys.version,
+      platform=platform.platform(), pyyaml=yaml.__version__, skills_cli=shutil.which('skills'),
+      agent='Codex', model_version='Not exposed by local preparation tools; no behavioral runtime trial run',
+      network='Not used', permissions='Local preparation only; no installation, submission or publication',
+      tools={p: sha(ROOT / p) for p in [exporter, 'existing-authoring/scripts/quick_validate.py']},
+      documentation={p.relative_to(ROOT).as_posix(): sha(p) for p in sorted((ROOT / 'official-sources').glob('skills-*.md'))}))
+after = snapshot()
+assert before == after, 'source/ changed'
+write('source-integrity.json', dict(source_unchanged=True, recorded_skill_hashes_match=True,
+      source_url=record['source_url'], source_path=record['skill_path'], base_revision=record['base_revision'],
+      revision_verification='Supplied source record only; no Git checkout or remote revision verification',
+      before=before, after=after))
+write('validation-results.json', results)
+print(json.dumps({r['check']: r['exit_code'] for r in results}, indent=2))

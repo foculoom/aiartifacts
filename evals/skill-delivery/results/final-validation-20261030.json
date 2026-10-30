@@ -1,0 +1,169 @@
+{
+  "observed_at_utc": "2026-10-30T17:53:37.151809+00:00",
+  "base_commit": "f5061ad33fcb553e623ca87b31759d6eb9d77282",
+  "state": "Working-tree portability test follow-up; exact file hashes below. Earlier model trials used their retained older test snapshots.",
+  "python_version": "Python 3.12.14",
+  "node_version": "v24.19.0",
+  "environment": "Existing local macOS; TMPDIR canonical physical /private/tmp; no live provider calls.",
+  "source_files": {
+    "plugins/engineering/skills/skill-delivery/scripts/export_skill.py": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+    "plugins/engineering/skills/skill-delivery/tests/test_export_skill.py": "5f87e95740c3d6631efedab3f7a7d2025f0ce2fa46182793d7e9a9f3ecaee37c",
+    "evals/skill-delivery/test_pilot_packages.py": "6146b8bc5bad1cd5bbcc1b5a2ce1a478da759783864b136befa6d13b804c3f56",
+    "evals/skill-delivery/run_codex_case.py": "5c87c4a91a3da0de98f0d3aa728df0b2618c6715b14a5333600df1e9c88772a4",
+    "evals/skill-delivery/test_runtime_runner.py": "44a68cf5a976ff8ebf421b88c4b9ba948ff7a7f1833b8b74e0eab07fc495c5f7",
+    ".github/workflows/validate.yml": "0bfc2a3bcf48d0899e633c689457c6472d576cbd2ca48fc82ce0eca67ceaa479"
+  },
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/editorial/skills/editorial-writing/tests",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 27 tests in 0.656s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/engineering/skills/platform-boundaries/scripts",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 28 tests in 0.034s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/engineering/skills/skill-delivery/tests",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 23 tests in 0.504s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "evals/skill-delivery",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 6 tests in 1.258s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/release/skills/release-evidence/scripts",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "PASS\n----------------------------------------------------------------------\nRan 10 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/reporting/skills/decision-reporting/scripts",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 20 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/automation/skills/local-credential-runner/tests",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 17 tests in 0.212s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/design/skills/product-identity/tests",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 11 tests in 0.132s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "plugins/performance/skills/performance-regression/tests",
+        "-q"
+      ],
+      "exit": 0,
+      "output": "----------------------------------------------------------------------\nRan 10 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/validate_catalog.py"
+      ],
+      "working_directory": ".",
+      "exit": 0,
+      "output": "PASS 7 plugins, 9 skills; local Markdown references resolve\n"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "test.mjs"
+      ],
+      "working_directory": "plugins/engineering/skills/platform-boundaries/scripts/js-import-graph",
+      "exit": 0,
+      "output": "\u2714 accepts an adapter importing pure rules (8.949333ms)\n\u2714 rejects inward boundary violation and cycle (2.136625ms)\n\u2714 reports literal and variable dynamic imports (2.890542ms)\n\u2714 rejects variable require and unsupported import meta loader (1.716625ms)\n\u2714 reports invalid syntax instead of silently accepting it (2.316292ms)\n\u2714 rejects missing, ambiguous and external core imports (2.187417ms)\n\u2714 rejects an unowned imported file, not just a missing file (2.025084ms)\n\u2714 rejects invalid profile references and symlink source (4.67675ms)\n\u2714 requires newly classified source extensions to be explicit (2.845291ms)\n\u2714 parses CommonJS and returns useful CLI exit codes (96.514208ms)\n\u2139 tests 10\n\u2139 suites 0\n\u2139 pass 10\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 198.048375\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "working_directory": ".",
+      "exit": 0,
+      "output": ""
+    }
+  ],
+  "limitations": [
+    "Static/script checks only, not behavioral or release acceptance.",
+    "Existing locked JavaScript dependency was already installed.",
+    "Final remote head and hosted checks remain separately recorded in PR."
+  ]
+}

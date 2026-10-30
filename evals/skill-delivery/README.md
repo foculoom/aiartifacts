@@ -6,6 +6,9 @@ compatibility merely because metadata or scripts pass. The existing
 [editorial cases](../editorial/cases.md) remain the real pilot's six positive
 and three negative tasks; use their existing [rubric](../editorial/README.md).
 
+See [runtime.md](runtime.md) for disposable setup, exact runner commands,
+subscription-only execution and safe public retention of the receipts.
+
 ## Fresh-session procedure
 
 1. Record the source revision and SHA-256 inventory of the installed skill,
@@ -36,8 +39,8 @@ Run the meta-skill cases M1–M2, N1–N2 and F1–F2 in both Copilot CLI and Co
 CLI. Run the editorial pilot P1–P6, N1–N3 and E-F1–E-F2 in both runtimes.
 Installer discovery, copied-file identity, metadata validation, script tests,
 agent behavior and external acceptance are separate results. Do not use the
-skills.sh CLI as an agent runtime. Explicit invocation is an optional separate
-diagnostic and cannot replace an ordinary-prompt activation test.
+skills.sh CLI as an agent runtime. Run X1 and X2 as required, separate explicit
+invocation diagnostics; neither replaces an ordinary-prompt activation test.
 
 ## Supplied fixtures and failure injection
 

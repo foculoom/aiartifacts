@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "payload-metadata",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "existing-authoring/scripts/quick_validate.py",
+        "output/editorial-writing/payload"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "payload-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "output/editorial-writing/payload/tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "payload-prose-warnings",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "output/editorial-writing/payload/scripts/prose_lint.py",
+        "<CASE_ROOT>/output/editorial-writing/payload",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_unchanged_after_checks": true
+}

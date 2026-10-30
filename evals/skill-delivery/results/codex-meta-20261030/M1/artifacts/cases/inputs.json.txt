@@ -1,0 +1,8 @@
+[
+  {"id":"broken", "request":"Check fixtures/handoff.md for broken local links before handoff. Use GitHub-style headings. Report findings without editing anything."},
+  {"id":"clean", "request":"Use $markdown-local-links to review fixtures/clean.md. Use GitHub-style headings. Leave all files unchanged."},
+  {"id":"uncertain", "request":"Review local links in fixtures/uncertain.md before handoff. The site root and renderer are unspecified. Do not contact a service or change files."},
+  {"id":"prose", "request":"Suggest a clearer opening sentence for fixtures/clean.md; no link audit requested."},
+  {"id":"remote", "request":"Check whether https://example.invalid/guide is reachable. Do not access local documents."},
+  {"id":"no-access", "request":"Check local links in an unavailable document named sealed.md. You have no permission to read it or its targets. Report what you can verify without seeking broader access."}
+]

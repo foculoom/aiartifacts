@@ -1,0 +1,24 @@
+# Intended files
+
+These 12 files are copied unchanged in `skill-candidate/payload/`. This is a review candidate, not an MIT-ready direct contribution.
+
+| Intended direct-PR destination (held) | Supplied source | SHA-256 |
+| --- | --- | --- |
+| `skills/editorial-writing/SKILL.md` | `source/editorial-writing/SKILL.md` | `8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4` |
+| `skills/editorial-writing/LICENSE` | `source/editorial-writing/LICENSE` | `c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4` |
+| `skills/editorial-writing/DEPENDENCIES.md` | `source/editorial-writing/DEPENDENCIES.md` | `0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b` |
+| `skills/editorial-writing/references/examples.md` | `source/editorial-writing/references/examples.md` | `b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3` |
+| `skills/editorial-writing/references/audience/adult.md` | `source/editorial-writing/references/audience/adult.md` | `5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d` |
+| `skills/editorial-writing/references/audience/early-reader.md` | `source/editorial-writing/references/audience/early-reader.md` | `d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052` |
+| `skills/editorial-writing/references/medium/web.md` | `source/editorial-writing/references/medium/web.md` | `c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615` |
+| `skills/editorial-writing/references/medium/longform.md` | `source/editorial-writing/references/medium/longform.md` | `07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc` |
+| `skills/editorial-writing/references/medium/game-ui.md` | `source/editorial-writing/references/medium/game-ui.md` | `0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952` |
+| `skills/editorial-writing/references/medium/game-dialogue.md` | `source/editorial-writing/references/medium/game-dialogue.md` | `8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d` |
+| `skills/editorial-writing/scripts/prose_lint.py` | `source/editorial-writing/scripts/prose_lint.py` | `5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8` |
+| `skills/editorial-writing/tests/test_prose_lint.py` | `source/editorial-writing/tests/test_prose_lint.py` | `e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192` |
+
+Exclude both supplied `__pycache__/*.pyc` files. Tests are development evidence; the prose helper is optional at runtime. No fixtures, evaluation logs, credentials, authoring tools, or unrelated repository files belong in the payload.
+
+The alternative `plugin-candidate/payload/` has 14 files: the same 12 under `skills/editorial-writing/`, the unchanged supplied manifest as `plugin.json`, and an unchanged copy of the skill LICENSE at plugin root. This reconstructed local layout is not proof of the remote subtree inventory. It preserves `extensions.com.openai`; no new plugin or MCP integration is needed.
+
+A future direct PR must also regenerate upstream README tables via `npm run build` and inspect the resulting diff; no guessed README row is included. It must not include this entire packet or an initial edit to `plugins/external.json`.

@@ -1,0 +1,47 @@
+# Synthetic editorial examples
+
+These invented fragments show how to diagnose a reader problem. They are not a house voice or reusable product copy.
+
+## Longform explanation for adults
+
+**Passage:** “The map was very important. Maps are crucial when finding a route. Good maps help travelers.”
+
+**Issue:** Three sentences repeat the claim without showing how the map changes a decision.
+
+**Possible edit:** “The river had two crossings. The map marked the northern bridge as closed, so Mira took the longer road before dusk.”
+
+The edit gives the reader a cause and consequence. A different chapter might need a diagram or a more detailed explanation instead.
+
+## Web action
+
+**Passage:** A button labeled “Learn more” below a paragraph about returning an order.
+
+**Issue:** A scanning reader cannot tell whether it opens return instructions or starts a return.
+
+**Possible edit:** “Read the return steps” if the destination is an explanation; “Start a return” if it begins the process. Verify the actual destination before choosing.
+
+## Game UI
+
+**Passage:** “Done!” appears as soon as the player taps Save while the game is offline.
+
+**Issue:** The message claims success before the state is durable.
+
+**Possible edit:** “Saving…” followed by “Saved on this device” after local persistence succeeds. Use different wording if the game also promises cloud sync.
+
+## Game dialogue
+
+**Passage:** A character who hid a key says, “I have never seen the key,” in every branch, including one where the player watched her hide it.
+
+**Issue:** The repeated line breaks continuity in the witnessed branch.
+
+**Possible edit:** In that branch, “You saw me take it. You don't know why.” Keep the original denial only in branches where it remains plausible.
+
+## Early-reader story
+
+**Passage:** “Pip waited. Pip waited. Pip waited.”
+
+**Issue to test in context:** The repetition may build a page-turn pause or may stall the story. Read it aloud with the illustration and next page before cutting it. If nothing changes, let the third beat reveal a sound, action, or surprise.
+
+## Synthetic update for this trial
+
+For a short help panel, explain the next action before background detail.

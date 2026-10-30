@@ -1,0 +1,27 @@
+# Editorial-writing candidate review
+
+Observed 2026-10-30. **Ready for package review; runtime and distribution acceptance remain untested.**
+
+The standalone candidate is `candidate/payload/`; `candidate/skill.zip` contains the same 12 files at its root. `candidate/manifest.json` maps each file to its source, SHA-256 and normalized mode. `inventory.json` inventories the full review bundle, excluding itself. Only the payload/ZIP is the proposed distributable; local logs and review records are not part of it.
+
+Canonical instructions, supporting prose, checker, tests, dependency declaration and Apache-2.0 license are byte-for-byte copies. All source-record hashes match. A before/after inventory confirms no file bytes, inventory or file modes changed anywhere in `source/`. Two pre-existing `.pyc` caches are excluded. The separate plugin manifest is not needed for a standalone skills.sh route. No authoring template, generated client metadata, alternative license or adapter was added.
+
+| Check | Result and practical limit |
+| --- | --- |
+| Existing authoring validator | Pass. Frontmatter/name/description and scaffold checks; not editorial behavior certification. |
+| Existing checker tests | 27/27 pass on Python 3.9.6 with canonical `TMPDIR` under `output/test-tmp/`. Includes input preservation, Markdown masking, CLI results, unsupported inputs and symlink rejection. |
+| Initial checker run | 22 passed; 3 failures and 2 errors under macOS's default `/var/...` temporary path. The checker rejects symlink ancestors. Retained in `initial-validation-results.json`; no checker or test changes were made. |
+| Package integrity | Pass. Archive and staged folder each match all 12 manifest entries, bytes and modes. Staged-folder verification is a local directory comparison, not an install receipt. |
+| Dependency/reference/privacy inspection | All bundled text and reachable code inspected; local references resolve within payload. Export helper's narrow secret/path checks pass. No private briefs, logs, credentials or machine paths found in selected payload. This is bounded inspection, not proof of rights or absence of every secret. |
+| Independent agent trials | Untested: activation, non-activation, useful completion, unchanged-good-text case, safe failure and baseline comparison. Helper tests do not establish writing quality, factual preservation in model output or runtime compatibility. |
+| skills CLI / installation | Not run. `skills` absent from PATH; available Node cannot start due to missing `libsimdjson.29.dylib`. No dependencies installed or environment repaired. |
+| Git/source revision | Supplied revision and file hashes recorded; workspace is not a Git checkout. No remote source verification. |
+| Public availability/acquisition | Not checked as of 2026-10-30. This session produced local artifacts only; no new public acquisition path, listing, submission or publication was created. Existing upstream availability and skills.sh indexing remain unknown. |
+
+The current instructions give useful decisions beyond generic prose editing: audience/medium routing, factual and voice preservation, branching continuity, truthful UI state, and contextual treatment of warnings. Selection precision and actual editorial benefit still need observation. The description has no explicit non-activation exclusions; evaluate adjacent code-only and authorship-detection requests before deciding whether a source change is warranted.
+
+Reviewer next actions: review `DEPENDENCIES-PROVENANCE.md`, the payload and manifest; confirm distribution authority and any applicable upstream notices; then choose a target runtime and run independent input-only trials against these exact hashes. Include explicit and implicit requests, an unrelated coding task, fact-preserving web revision, intentional early-reader repetition that should stay, game UI state copy, and unavailable Python/source access. Hold expected judgments separately, record runtime/model/version and complete input/output, compare a no-skill baseline, and test actual discovery rather than supplying the body for selection claims. No fresh independent agent trial was performed in this preparation.
+
+After separate authorization for installer tests or sharing, use `SKILLS-SH-DRAFT.md`. Recheck official contracts and confirm immutable remote bytes before executing external steps. Rights and sharing decisions belong to the source owner; runtime acceptance belongs to the chosen runtime reviewer. Missing downstream checks do not invalidate the completed package checks.
+
+Detailed commands and outputs: `validation-results.json`; environment/tool hashes: `environment.json`; unchanged-source evidence: `source-integrity.json`. `prepare_candidate.py` reuses existing tools without installing; it exports only when `candidate/` is absent and otherwise validates the existing candidate. Regenerate `inventory.json` after changing any review artifact. Tests set `PYTHONDONTWRITEBYTECODE=1` and an absolute, ordinary temporary directory. All changes made in this session are under `output/`.

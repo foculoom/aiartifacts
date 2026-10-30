@@ -1,0 +1,9 @@
+COMMAND: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', 'output/editorial-writing/payload/scripts/prose_lint.py', '<CASE_ROOT>/output/editorial-writing/payload', '--format', 'json']
+EXIT: 0
+STDOUT:
+{
+  "files_checked": 9,
+  "findings": []
+}
+
+STDERR:

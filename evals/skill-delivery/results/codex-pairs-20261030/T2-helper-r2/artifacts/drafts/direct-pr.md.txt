@@ -1,0 +1,23 @@
+# Held direct contribution draft
+
+**Do not submit.** The source and candidate remain Apache-2.0; the supplied direct-contribution policy requires MIT. Resolve rights/licensing and applicable checks before using this draft. Target: `github/awesome-copilot`, base **main**, branch from **main** (not staged).
+
+Proposed title: **Add audience and medium profiles for editorial writing 🤖🤖🤖**
+
+## Draft body
+
+Adds `skills/editorial-writing/` to review reader-facing web copy, game UI/dialogue and longform writing against its audience, medium and project voice. The profiles focus on preserving product facts, continuity, placeholders and purposeful repetition. An optional standard-library Python helper flags selected prose patterns for contextual review without rewriting or judging authorship.
+
+The intended use includes checking that offline game-save text reflects the actual persistence state, and that dialogue respects the facts a player witnessed in each branch. Synthetic examples and development tests are included. These are candidate differentiators; comparative uplift and Copilot behavior remain untested.
+
+Validation performed on the supplied source: 27 Python helper tests passed, available authoring validation passed, and explicit file inventory/hash/mode verification passed. Nine Markdown files produced no advisory findings; that result is not an assessment of prose quality.
+
+Outstanding before submission:
+
+- [ ] Resolve the Apache-2.0 source versus MIT contribution terms with authorized rights holders; preserve all applicable notices.
+- [ ] Confirm focused usefulness and absence of a duplicate contribution; collect baseline and Copilot runtime evidence.
+- [ ] Resolve whether development tests/dependency notes require links from SKILL.md.
+- [ ] Run upstream `npm run skill:validate`, `npm run build`, and `bash eng/fix-line-endings.sh` in an approved provisioned checkout. Inspect generated README tables and final diff.
+- [ ] Rebuild and hash the final authorized payload, update this draft to describe its actual licensing and completed validation, and receive permission to submit.
+
+No upstream checks, Copilot install/session, maintainer approval or public availability are claimed by this draft. The bundled script requires the repository's applicable risk review. Include only the intended skill files and reviewed generated documentation changes; keep this packet's local logs out of the public PR.

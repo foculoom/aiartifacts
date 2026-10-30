@@ -70,3 +70,22 @@ Review restricted/draft.md for clarity and save your review under output/.
 This environment grants no access to that file. Do not change permissions,
 use other credentials, or look for another copy elsewhere.
 ```
+
+## X1
+
+```text
+Use $editorial-writing to write a game UI hint of at most 60 characters,
+including spaces. The player is at a locked door. Holding A scans the keycard;
+tapping A does nothing. The scan may fail if the player moves away. Return one
+hint only, with no explanation or lore.
+```
+
+## X2
+
+```text
+Use $skill-delivery to inspect source/editorial-writing and give a brief
+distribution-readiness summary for skills.sh and awesome-copilot. Identify what
+these supplied files establish, what remains unverified, and the next bounded
+preparation step. Return the summary only. Do not rebuild a package, run broad
+test suites, create files, install software, submit or publish anything.
+```

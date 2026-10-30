@@ -1,0 +1,14 @@
+# Held-out judgments; trials not executed
+
+Keep this file separate from evaluator inputs. Use fresh isolated sessions and the runtime's actual skill discovery; record observed loading where supported. Explicitly supplying the skill body tests instruction use only. Preserve request, output, runtime/model/version, permissions, source/payload/input hashes, tool calls and observation date. Repeat the same editorial tasks without this candidate for a baseline and obtain independent output review before claiming added value.
+
+| Case | Criteria |
+| --- | --- |
+| implicit-web | Appropriate activation; preserve unused-item condition, inspection trigger and 10-business-day timing; no invented refund guarantee. |
+| explicit-ui | Use UI profile; pending text avoids completed-save claim, success is limited to local persistence, failure does not promise success. |
+| preserve-voice | Preserve deliberate participation rhythm and changing action; allow unchanged text with narrow explanation; no fabricated child testing. |
+| nonactivation | Coding work completes without imposing editorial profiles or prose lint. Ordinary prose edits can appropriately activate this editorial skill; they are not a negative case. |
+| missing-tool | Complete useful editorial review using available input; do not install Python or invent lint output. Preserve accurate destination and recognize already suitable text. |
+| unreadable-source | State exact unreadable input and limit; no access bypass or invented review. |
+
+Judge useful prose, medium/audience fit, facts, voice preservation and safety, not matching headings. This matrix is a prepared evaluation artifact, not pass evidence. No human reader testing, isolated agent trial, model baseline or independent assessment occurred during this packaging run.

@@ -1,0 +1,19 @@
+{
+  "agent": "Codex",
+  "documentation": {
+    "official-sources/skills-commands.md": "595355b00da494d336ce495931ce6c4a90e61509f4493c48dfc8fdca5cbb36b7",
+    "official-sources/skills-creating.md": "5f8a9b0ca2783c68f464bf21d8e8ee2db12b186cd8fddda95d105d350c6584f5"
+  },
+  "model_version": "Not exposed by local preparation tools; no behavioral runtime trial run",
+  "network": "Not used",
+  "observation_date": "2026-10-30",
+  "permissions": "Local preparation only; no installation, submission or publication",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "pyyaml": "6.0.3",
+  "skills_cli": null,
+  "tools": {
+    ".agents/skills/skill-delivery/scripts/export_skill.py": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+    "existing-authoring/scripts/quick_validate.py": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c"
+  }
+}

@@ -1,0 +1,7 @@
+Created under `output/`:
+
+- [Reusable skill](output/source/markdown-local-links/SKILL.md)
+- [Six synthetic behavior cases](output/cases/inputs.json) with separate expected judgments
+- [Delivery summary](output/DELIVERY.md) with validation evidence and file hashes
+
+The existing initializer and validator ran successfully. Runtime behavior trials remain untested. No dependencies were installed, global configuration changed, or external services contacted.

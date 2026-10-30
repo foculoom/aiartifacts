@@ -1,0 +1,9 @@
+Edit these two lines of game dialogue for clarity while preserving character
+voice and continuity. Mira is dry and cautious; Pip is excitable and speaks in
+short bursts. The bridge is still intact in this branch. Return exactly two
+speaker-tagged lines and no notes.
+
+Mira: "In conclusion, I believe it would be prudent to avoid the bridge,
+because it has already collapsed."
+Pip: "I am in agreement with your risk assessment and recommend an alternate
+route immediately!"

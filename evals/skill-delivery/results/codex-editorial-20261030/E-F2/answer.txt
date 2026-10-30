@@ -1,0 +1,3 @@
+I couldn’t review the inaccessible draft or save a status note under `output/`: the command runner failed to initialize, and the file-write attempt also failed.
+
+I did not access the draft, change permissions, use other credentials, or seek another copy.

@@ -1,0 +1,47 @@
+# Preparation-only distribution drafts
+
+Prepared 2026-10-30 from bundled official-source snapshots: Awesome Copilot `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`; skills CLI docs `92a9a34ac3bf88e695e468b90c7bf32f163d32c8`. These are documentation revisions, not executed tool versions. Recheck official sources before an external action. Nothing below was submitted, installed or published.
+
+## Awesome Copilot external-plugin issue draft
+
+Title: `[External Plugin]: editorial`
+
+- Plugin name: editorial
+- Description: Review and revise writing for its audience, medium, and project voice.
+- GitHub repository: foculoom/aiartifacts
+- Plugin source path: plugins/editorial
+- Immutable SHA to review: 211ad9da8b7a3d0740d1896a74c018ed3ad097be
+- Immutable ref: omitted; no verified tag supplied
+- Version: 0.1.1
+- License: Apache-2.0
+- Author: Foculoom
+- Author URL: https://github.com/foculoom
+- Homepage: https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial
+- Keywords: editorial, writing, accessibility, review
+- Notes: Existing Agent Plugins manifest and OpenAI extension metadata retained. Local candidate inventory and helper results prepared separately. Verify that the remote plugin subtree at the supplied SHA contains these exact reviewed bytes before intake. Local assembly does not prove remote equality.
+
+Leave the intake attestations unchecked until verified: public repository, immutable revision, policy compliance and absence of an existing marketplace entry. Use the external-plugin issue intake route, not an initial PR editing `plugins/external.json`. Do not change Apache-2.0 to MIT to fit the separate direct-contribution route.
+
+## skills.sh standalone route
+
+Candidate locator for later verification:
+
+`https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing`
+
+With a separately authorized, already reviewed and version-pinned CLI, first inspect its actual help, then use telemetry-disabled discovery:
+
+```sh
+DISABLE_TELEMETRY=1 skills add "https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing" --list
+```
+
+For a later authorized local installation in an isolated project, an illustrative command is:
+
+```sh
+DISABLE_TELEMETRY=1 skills add /absolute/path/to/output/editorial-writing/payload --skill editorial-writing --agent github-copilot --copy
+```
+
+Replace the illustrative local path with the reviewed payload. Verify actual resolved/installed file hashes and record CLI version, provenance transforms and lock data. No unpinned npx, global install, telemetry-driven test installs, skills.sh API publisher, paid service or additional integration is needed for local preparation. CLI placement is separate from runtime behavior and directory indexing.
+
+## Copilot candidate route
+
+An installation command should target the reviewed local `output/editorial/payload` in an isolated runtime under separate installation authorization. Inspect that runtime's actual plugin-install interface first. The documented floating direct-source locator `foculoom/aiartifacts:plugins/editorial` is not evidence that this exact candidate was installed. Use `editorial@awesome-copilot` only after independently verifying marketplace listing. Preserve the previous consumer pin for rollback when an update is later authorized.

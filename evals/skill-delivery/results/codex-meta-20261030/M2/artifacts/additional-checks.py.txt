@@ -1,0 +1,22 @@
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'output'
+results = json.loads((OUT / 'evidence/commands.json').read_text())
+tmp = OUT / 'evidence/tmp'
+tmp.mkdir(exist_ok=True)
+env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', TMPDIR=str(tmp.resolve()))
+args = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'source/editorial-writing/tests', '-v']
+r = subprocess.run(args, cwd=ROOT, env=env, capture_output=True, text=True)
+results.append({'label': 'checker tests with ordinary absolute TMPDIR', 'command': args, 'cwd': '.', 'environment_override': {'TMPDIR': 'output/evidence/tmp (resolved absolute path)', 'PYTHONDONTWRITEBYTECODE': '1'}, 'exit_code': r.returncode, 'status': 'pass' if r.returncode == 0 else 'fail', 'stdout': r.stdout, 'stderr': r.stderr, 'observation_date': '2026-10-30'})
+(OUT / 'evidence/commands.json').write_text(json.dumps(results, indent=2) + '\n')
+before = json.loads((OUT / 'evidence/source-before.json').read_text())
+after = {p.relative_to(ROOT / 'source').as_posix(): {'sha256': hashlib.sha256(p.read_bytes()).hexdigest(), 'mode': oct(p.stat().st_mode & 0o777), 'symlink': p.is_symlink()} for p in sorted((ROOT / 'source').rglob('*')) if p.is_file()}
+assert before == after
+(OUT / 'evidence/source-after.json').write_text(json.dumps(after, indent=2, sort_keys=True) + '\n')
+print(r.stderr[-180:])
+print('Source unchanged:', before == after)

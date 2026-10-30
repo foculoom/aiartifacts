@@ -1,0 +1,3 @@
+I couldn’t read `draft.md` or the editorial-writing skill because the sandbox rejected file access (`sandbox_apply: Operation not permitted`). No review was saved, and I couldn’t check for a prose-warning tool.
+
+Please restore workspace access or paste the draft and skill instructions here. I haven’t installed software or changed permissions.

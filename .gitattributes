@@ -1,0 +1,4 @@
+# Preserve literal evaluator stderr and diff context; hashes identify these bytes.
+evals/skill-delivery/results/**/stderr.txt whitespace=-blank-at-eof
+evals/skill-delivery/results/**/*.patch.txt whitespace=-blank-at-eol
+evals/skill-delivery/results/**/*.diff.txt whitespace=-blank-at-eol

@@ -1,0 +1,5 @@
+{
+  "files": 12,
+  "identical": true,
+  "scope": "Standalone skill and nested plugin skill hashes/modes identical"
+}

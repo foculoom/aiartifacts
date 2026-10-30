@@ -1,0 +1,9 @@
+{
+  "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "SKILL.md": "fd0e23926156028f9446b43c275eb9fb667b8af9aa3cc5dbf3282a02fb464733",
+  "references/packaging.md": "ad724ceabc2ca9725efa993b2e0f7487b9e4ced500fa5f537fe6f2c0d032763f",
+  "references/ecosystems.md": "29c79ec1f0a3cf2c5797fa8ea2434c748ed96cd6c0d67a442029c33af4e4b238",
+  "references/evaluation.md": "e69f0334fc26c76e49a71b35cc1c549c11ddac50ad1030b3f726bb773c4558f3",
+  "tests/test_export_skill.py": "151117ac558363bdf83ae25ee1a6a40a3fb83b74cfb6fdaa2858f8d63996b7b8",
+  "scripts/export_skill.py": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe"
+}

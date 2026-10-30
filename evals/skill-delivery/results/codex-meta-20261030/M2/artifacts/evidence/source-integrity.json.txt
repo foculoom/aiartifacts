@@ -1,0 +1,13 @@
+{
+  "all_skill_files_match_supplied_source_record": true,
+  "before_equals_after_inventory_hashes_modes": true,
+  "excluded_from_both_payloads": [
+    "scripts/__pycache__/prose_lint.cpython-312.pyc",
+    "tests/__pycache__/test_prose_lint.cpython-312.pyc"
+  ],
+  "plugin_matches_input_inventory": true,
+  "revision_limit": "Supplied snapshot; no .git checkout or remote byte verification. Commit is a provenance label, not proof of remote identity.",
+  "source_file_count": 15,
+  "source_revision": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "status": "pass"
+}

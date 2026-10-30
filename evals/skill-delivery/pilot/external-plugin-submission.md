@@ -11,7 +11,7 @@ marketplace as part of preparation.
 | Description | Review and revise writing for its audience, medium and project voice. |
 | GitHub repository | foculoom/aiartifacts |
 | Plugin path | plugins/editorial |
-| Commit SHA | Use the full independently reviewed candidate commit from the evidence record; unresolved until that review completes. |
+| Commit SHA | `211ad9da8b7a3d0740d1896a74c018ed3ad097be`; independently reviewed Editorial source with matching package hashes. Submission remains held pending runtime acceptance and owner release/rights approval. |
 | Ref | Omit when using a full SHA; never substitute a mutable branch or move an existing tag. |
 | Version | 0.1.1; confirm against the manifest at the submitted SHA. |
 | License | Apache-2.0 |

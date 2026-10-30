@@ -1,0 +1,27 @@
+# skills.sh sharing draft — no commands executed
+
+Use the existing canonical skill subtree rather than creating a prose fork, plugin marketplace, npm package or skills.sh API integration. The supplied creating guide supports root `SKILL.md` discovery and explicit skill URLs. A standalone payload includes its own license and dependency record. The companion `source/existing-plugin.json` remains unchanged outside this package.
+
+Proposed immutable source locator (remote contents/access not verified here):
+
+https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing
+
+Before sharing that locator, verify the remote subtree matches the 12 selected manifest files, including LICENSE and DEPENDENCIES.md. Confirm how the reviewed installer treats any upstream caches or extra files; the local ZIP excludes them. Do not describe a remote install as identical without a complete installed inventory comparison.
+
+After separate authorization, with an already reviewed/pinned CLI and working Node in an isolated project, the documentation-derived discovery draft is:
+
+```sh
+DISABLE_TELEMETRY=1 skills add "https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing" --list
+```
+
+Future local-copy installation draft, from this workspace root in an isolated authorized project (resolve the candidate path before changing directories):
+
+```sh
+DISABLE_TELEMETRY=1 skills add /ABSOLUTE/PATH/TO/output/candidate/payload --skill editorial-writing --agent github-copilot --copy
+```
+
+Replace the placeholder with the actual reviewed directory and choose the intended runtime explicitly. This command is an installation, not part of the authorized preparation. Review installed `skills --help` first; do not use unpinned `npx`, global/all-agent flags, or manufacture telemetry for ranking. Preserve any prior pin for rollback.
+
+Compare the installed ordinary absolute directory with `candidate/manifest.json` using the existing export helper's `verify --installed-root` option. Record installer-added metadata or mode transformations separately; do not silently ignore mismatches. Exercise real runtime discovery and editorial cases afterward. No Copilot or other runtime compatibility is claimed by the agent flag.
+
+Sharing source, a successful installer run, runtime behavior, skills.sh indexing/ranking and customer acquisition are separate stages. As of 2026-10-30, public source accessibility and directory listing/acquisition are unverified in this session. No submission or publication was attempted. Recheck the official creating/command guides and skills.sh FAQ before external action; retain the canonical Apache-2.0 license.

@@ -1,0 +1,8 @@
+{
+  "model": "GPT-6 via host; exact serving build not exposed",
+  "observation_date": "2026-10-30",
+  "permissions": "Local workspace writes; restricted network; no installs or external mutations authorized",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3"
+}

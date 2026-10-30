@@ -1,0 +1,127 @@
+{
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "output (absolute at execution)"
+  },
+  "checks": [
+    {
+      "name": "candidate-structure",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "existing-authoring/scripts/quick_validate.py",
+        "output/candidate/payload"
+      ],
+      "exit_code": 0,
+      "log": "validation/candidate-structure.log"
+    },
+    {
+      "name": "old-helper-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/old/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "validation/old-helper-tests.log"
+    },
+    {
+      "name": "new-helper-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/new/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "validation/new-helper-tests.log"
+    },
+    {
+      "name": "export-helper-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".agents/skills/skill-delivery/tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "log": "validation/export-helper-tests.log"
+    },
+    {
+      "name": "archive-verify",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        ".agents/skills/skill-delivery/scripts/export_skill.py",
+        "verify",
+        "--manifest",
+        "output/candidate/manifest.json",
+        "--archive",
+        "output/candidate/skill.zip"
+      ],
+      "exit_code": 0,
+      "log": "validation/archive-verify.log"
+    },
+    {
+      "name": "payload-verify",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        ".agents/skills/skill-delivery/scripts/export_skill.py",
+        "verify",
+        "--manifest",
+        "output/candidate/manifest.json",
+        "--installed-root",
+        "output/candidate/payload"
+      ],
+      "exit_code": 2,
+      "log": "validation/payload-verify.log"
+    },
+    {
+      "name": "packaged-helper-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "output/validation-work/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "validation/packaged-helper-tests.log"
+    },
+    {
+      "name": "payload-verify-absolute",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        ".agents/skills/skill-delivery/scripts/export_skill.py",
+        "verify",
+        "--manifest",
+        "<RUN_ROOT>/codex-pair-T3-helper-r2/output/candidate/manifest.json",
+        "--installed-root",
+        "<RUN_ROOT>/codex-pair-T3-helper-r2/output/candidate/payload"
+      ],
+      "exit_code": 0,
+      "log": "validation/payload-verify-absolute.log"
+    }
+  ],
+  "pyyaml_version": "6.0.3"
+}

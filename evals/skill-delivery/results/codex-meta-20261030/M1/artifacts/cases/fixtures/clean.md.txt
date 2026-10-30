@@ -1,0 +1,11 @@
+# Clean handoff
+
+This synthetic guide is ready for review.
+
+[Setup][guide]
+![Marker](media/marker.svg)
+[Section](#clean-handoff)
+[Space](docs/space%20guide.md?view=small)
+[Guide][] and [guide].
+
+[guide]: docs/guide.md#setup

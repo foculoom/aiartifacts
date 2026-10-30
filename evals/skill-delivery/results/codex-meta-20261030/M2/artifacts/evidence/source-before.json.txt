@@ -1,0 +1,77 @@
+{
+  "editorial-writing/DEPENDENCIES.md": {
+    "mode": "0o644",
+    "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+    "symlink": false
+  },
+  "editorial-writing/LICENSE": {
+    "mode": "0o644",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "symlink": false
+  },
+  "editorial-writing/SKILL.md": {
+    "mode": "0o644",
+    "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+    "symlink": false
+  },
+  "editorial-writing/references/audience/adult.md": {
+    "mode": "0o644",
+    "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+    "symlink": false
+  },
+  "editorial-writing/references/audience/early-reader.md": {
+    "mode": "0o644",
+    "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+    "symlink": false
+  },
+  "editorial-writing/references/examples.md": {
+    "mode": "0o644",
+    "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+    "symlink": false
+  },
+  "editorial-writing/references/medium/game-dialogue.md": {
+    "mode": "0o644",
+    "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+    "symlink": false
+  },
+  "editorial-writing/references/medium/game-ui.md": {
+    "mode": "0o644",
+    "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+    "symlink": false
+  },
+  "editorial-writing/references/medium/longform.md": {
+    "mode": "0o644",
+    "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+    "symlink": false
+  },
+  "editorial-writing/references/medium/web.md": {
+    "mode": "0o644",
+    "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+    "symlink": false
+  },
+  "editorial-writing/scripts/__pycache__/prose_lint.cpython-312.pyc": {
+    "mode": "0o644",
+    "sha256": "4166e8bad060872d1544719dabad26bfcc121e69548a372032964dd5fc8e6cdd",
+    "symlink": false
+  },
+  "editorial-writing/scripts/prose_lint.py": {
+    "mode": "0o644",
+    "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+    "symlink": false
+  },
+  "editorial-writing/tests/__pycache__/test_prose_lint.cpython-312.pyc": {
+    "mode": "0o644",
+    "sha256": "267140479c51d72d1ef32925ee810a70553e8e01e232194f3fea8d8e6e4499c8",
+    "symlink": false
+  },
+  "editorial-writing/tests/test_prose_lint.py": {
+    "mode": "0o644",
+    "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+    "symlink": false
+  },
+  "existing-plugin.json": {
+    "mode": "0o644",
+    "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+    "symlink": false
+  }
+}

@@ -1,0 +1,4 @@
+Transcribe the following archival note exactly as written, including its odd
+wording and punctuation. Output only the transcription.
+
+"The gate were shut; moreover, nobody knowed why."

@@ -1,0 +1,3 @@
+The most consequential weakness is repetition without explanation: **“Backups matter. Backups are important to have.”** These sentences repeat a claim without helping an adult beginner understand why; the family-photo example supplies that reason.
+
+One focused revision: delete those two sentences so the lesson moves directly from defining a backup to advising the reader to make backups often.

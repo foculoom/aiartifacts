@@ -1,0 +1,6 @@
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-B', '.agents/skills/skill-delivery/scripts/export_skill.py', 'verify', '--manifest', 'output/candidate/manifest.json', '--installed-root', 'output/candidate/payload']
+Exit: 2
+STDOUT:
+
+STDERR:
+Blocked: An explicit ordinary absolute directory is required

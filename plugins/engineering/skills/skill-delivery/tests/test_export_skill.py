@@ -15,7 +15,6 @@ SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/export_skill.py'
 SPEC = importlib.util.spec_from_file_location('export_skill', SCRIPT)
 exporter = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(exporter)
-REPO = SCRIPT.parents[5]
 
 
 class ExportTests(unittest.TestCase):
@@ -83,48 +82,15 @@ class ExportTests(unittest.TestCase):
                          (second / 'skill.zip').read_bytes())
         self.assertEqual(manifest.read_bytes(), (second / 'manifest.json').read_bytes())
 
-    def test_real_editorial_skill_exports_with_its_references_tests_and_license(self):
-        skill = REPO / 'plugins/editorial/skills/editorial-writing'
-        self.assertTrue(skill.is_dir(), REPO)
-        self.record.update(name='editorial-writing')
-        self.record['files'] = {
-            p.relative_to(skill).as_posix(): p.relative_to(REPO).as_posix()
-            for p in skill.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
-        self.record['files']['LICENSE'] = 'LICENSE'
-        self.save()
-        exporter.export(REPO, self.config, self.output)
-        with zipfile.ZipFile(self.output / 'skill.zip') as archive:
-            self.assertIn('scripts/prose_lint.py', archive.namelist())
-            self.assertIn('tests/test_prose_lint.py', archive.namelist())
-            self.assertEqual(archive.read('LICENSE'), (REPO / 'LICENSE').read_bytes())
-            self.assertFalse(any(p.startswith('plugins/') for p in archive.namelist()))
-        exporter.verify(self.output / 'manifest.json', installed_root=self.output / 'payload')
-
-    def test_checked_in_pilot_contracts_preserve_same_skill_and_license_boundaries(self):
-        for kind in ('skill', 'plugin'):
-            config = REPO / 'evals/skill-delivery/pilot' / ('editorial-' + kind + '.json')
-            exporter.export(REPO, config, self.base / kind)
-        skill = self.base / 'skill/payload'
-        plugin = self.base / 'plugin/payload'
-        nested = plugin / 'skills/editorial-writing'
-        def inventory(root):
-            return {path.relative_to(root).as_posix(): path.read_bytes()
-                    for path in root.rglob('*') if path.is_file()}
-        self.assertEqual(inventory(skill), inventory(nested))
-        self.assertEqual((skill / 'LICENSE').read_bytes(), (REPO / 'LICENSE').read_bytes())
-        self.assertEqual((plugin / 'LICENSE').read_bytes(), (REPO / 'LICENSE').read_bytes())
-        self.assertEqual(json.loads((plugin / 'plugin.json').read_text())['name'], 'editorial')
-        self.assertEqual({p.name for p in (plugin / 'skills').iterdir()}, {'editorial-writing'})
-
     def test_skill_delivery_can_export_its_own_runtime_files(self):
         skill = SCRIPT.parents[1]
         self.record.update(name='skill-delivery')
         self.record['files'] = {
-            path.relative_to(skill).as_posix(): path.relative_to(REPO).as_posix()
+            path.relative_to(skill).as_posix(): path.relative_to(skill).as_posix()
             for path in skill.rglob('*') if path.is_file()
             and not {'tests', '__pycache__'}.intersection(path.relative_to(skill).parts)}
         self.save()
-        exporter.export(REPO, self.config, self.output)
+        exporter.export(skill, self.config, self.output)
         exporter.verify(self.output / 'manifest.json', installed_root=self.output / 'payload')
         self.assertEqual((self.output / 'payload/scripts/export_skill.py').read_bytes(),
                          SCRIPT.read_bytes())

@@ -1,0 +1,699 @@
+{
+  "claim_limits": [
+    "148 Python tests and 10 JavaScript tests assess deterministic code behavior; Vally/schema checks assess format and references.",
+    "gh skill publish --dry-run returned zero with seven pre-existing recommended-license warnings for unrelated skills; no publishing command ran.",
+    "Local copied-file identity is not automatic runtime activation, useful task completion, external review or public listing.",
+    "Commit labels are caller supplied; recorded file hashes and the later Git comparison establish the selected committed bytes. Initial tests are not relabeled as a fresh run on the commit.",
+    "Only public-safe tool/result fields and relative paths are retained; transient absolute workspace paths and full raw installer output are omitted. No source/output answer was rewritten."
+  ],
+  "deterministic_checks": {
+    "observed_utc": "2026-10-30T17:26:11.155034+00:00",
+    "python": "3.12.14",
+    "results": [
+      {
+        "command": "python3 -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q",
+        "count": 27,
+        "name": "editorial",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 27 tests in 0.652s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/engineering/skills/platform-boundaries/scripts -q",
+        "count": 28,
+        "name": "engineering",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 28 tests in 0.025s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/engineering/skills/skill-delivery/tests -q",
+        "count": 25,
+        "name": "skill-delivery",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 25 tests in 0.549s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/release/skills/release-evidence/scripts -q",
+        "count": 10,
+        "name": "release",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 10 tests in 0.008s\n\nOK\n",
+        "stdout": "PASS\n"
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/reporting/skills/decision-reporting/scripts -q",
+        "count": 20,
+        "name": "reporting",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 20 tests in 0.003s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/automation/skills/local-credential-runner/tests -q",
+        "count": 17,
+        "name": "automation",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 17 tests in 0.215s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/design/skills/product-identity/tests -q",
+        "count": 11,
+        "name": "design",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 11 tests in 0.132s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 -m unittest discover -s plugins/performance/skills/performance-regression/tests -q",
+        "count": 10,
+        "name": "performance",
+        "returncode": 0,
+        "stderr": "----------------------------------------------------------------------\nRan 10 tests in 0.000s\n\nOK\n",
+        "stdout": ""
+      },
+      {
+        "command": "python3 scripts/validate_catalog.py",
+        "name": "catalog",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PASS 7 plugins, 9 skills; local Markdown references resolve\n"
+      },
+      {
+        "command": "git diff --check",
+        "name": "whitespace",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      {
+        "command": "gh skill publish --dry-run",
+        "name": "gh-dry-run",
+        "returncode": 0,
+        "stderr": "\nDry run complete. Use without --dry-run to publish.\n",
+        "stdout": "warning\t[plugins] automation/local-credential-runner\trecommended field missing: license\nwarning\t[plugins] design/experience-review\trecommended field missing: license\nwarning\t[plugins] design/product-identity\trecommended field missing: license\nwarning\t[plugins] engineering/platform-boundaries\trecommended field missing: license\nwarning\t[plugins] performance/performance-regression\trecommended field missing: license\nwarning\t[plugins] release/release-evidence\trecommended field missing: license\nwarning\t[plugins] reporting/decision-reporting\trecommended field missing: license\n"
+      }
+    ]
+  },
+  "environment_limits": [
+    "Initial checks ran locally on macOS; later hosted push and pull-request runs passed for the committed candidate, recorded separately.",
+    "Default Homebrew Node 25.6.1 failed before execution because libsimdjson.29.dylib was absent; used existing Node 24.19.0 without changing system dependencies.",
+    "The existing installed trees were reverified; this assessment did not reinstall or contact a public directory."
+  ],
+  "hosted_readback": {
+    "head_sha": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+    "observed_date": "2026-10-30",
+    "runs": [
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-30T17:26:53Z",
+        "event": "pull_request",
+        "id": 41098898432,
+        "status": "completed",
+        "updated_at": "2026-10-30T17:27:07Z",
+        "url": "https://github.com/foculoom/aiartifacts/actions/runs/41098898432"
+      },
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-30T17:26:35Z",
+        "event": "push",
+        "id": 41098854729,
+        "status": "completed",
+        "updated_at": "2026-10-30T17:26:52Z",
+        "url": "https://github.com/foculoom/aiartifacts/actions/runs/41098854729"
+      }
+    ]
+  },
+  "initial_validation_context": {
+    "base_commit": "1ce208bf7fb4b102bac8f31b192bc378790ed712",
+    "observed_utc": "2026-10-30T17:26:09.016Z",
+    "state": "Uncommitted candidate when deterministic and upstream checks ran; later selected-file equivalence verifies the frozen source."
+  },
+  "installation_receipts": {
+    "copilot": {
+      "method": "Local disposable marketplace; plugin install and list",
+      "receipt_observation": "2026-10-30T17:16Z",
+      "reported_plugin": "editorial 0.1.1",
+      "returncode": 0,
+      "skills_reported": 1
+    },
+    "skills": {
+      "method": "Local skill path; project copy mode targeting Codex and GitHub Copilot",
+      "provider_security_scan": null,
+      "receipt_observation": "2026-10-30T17:19Z",
+      "returncode": 0,
+      "source_ref": null
+    }
+  },
+  "javascript_checks": {
+    "command": "node --test test.mjs",
+    "failed": 0,
+    "observed_utc": "2026-10-30T17:26:09Z",
+    "passed": 10,
+    "returncode": 0,
+    "tests": 10,
+    "working_directory": "plugins/engineering/skills/platform-boundaries/scripts/js-import-graph"
+  },
+  "later_committed_source_readback": {
+    "commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+    "files_compared": 22,
+    "mismatches": [],
+    "observed_utc": "2026-10-30T17:29:53.960934+00:00",
+    "scope": "Selected packaged files and delivery-skill files match the earlier recorded working-tree hashes; no tests rerun by this readback."
+  },
+  "observed_utc": "2026-10-30T17:26:47.900425+00:00",
+  "packages": [
+    {
+      "archive_sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+      "archive_verification": {
+        "file_count": 12,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+        "status": "verified"
+      },
+      "installed_scope": "Existing disposable skills CLI project copy",
+      "installed_verification": {
+        "file_count": 12,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+        "status": "verified"
+      },
+      "kind": "skill",
+      "manifest": {
+        "config_sha256": "235ff7f1b943f7316dcbeeaccefa27b923f0dfebe3c93995a2fa52b3fbc02c9a",
+        "files": {
+          "DEPENDENCIES.md": {
+            "mode": "0644",
+            "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+            "source": "plugins/editorial/skills/editorial-writing/DEPENDENCIES.md"
+          },
+          "LICENSE": {
+            "mode": "0644",
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+            "source": "plugins/editorial/skills/editorial-writing/LICENSE"
+          },
+          "SKILL.md": {
+            "mode": "0644",
+            "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+            "source": "plugins/editorial/skills/editorial-writing/SKILL.md"
+          },
+          "references/audience/adult.md": {
+            "mode": "0644",
+            "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+            "source": "plugins/editorial/skills/editorial-writing/references/audience/adult.md"
+          },
+          "references/audience/early-reader.md": {
+            "mode": "0644",
+            "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+            "source": "plugins/editorial/skills/editorial-writing/references/audience/early-reader.md"
+          },
+          "references/examples.md": {
+            "mode": "0644",
+            "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+            "source": "plugins/editorial/skills/editorial-writing/references/examples.md"
+          },
+          "references/medium/game-dialogue.md": {
+            "mode": "0644",
+            "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/game-dialogue.md"
+          },
+          "references/medium/game-ui.md": {
+            "mode": "0644",
+            "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/game-ui.md"
+          },
+          "references/medium/longform.md": {
+            "mode": "0644",
+            "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/longform.md"
+          },
+          "references/medium/web.md": {
+            "mode": "0644",
+            "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/web.md"
+          },
+          "scripts/prose_lint.py": {
+            "mode": "0644",
+            "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+            "source": "plugins/editorial/skills/editorial-writing/scripts/prose_lint.py"
+          },
+          "tests/test_prose_lint.py": {
+            "mode": "0644",
+            "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+            "source": "plugins/editorial/skills/editorial-writing/tests/test_prose_lint.py"
+          }
+        },
+        "kind": "skill",
+        "limitations": [
+          "Basic metadata and local Markdown checks, not full format validation.",
+          "Narrow secret/path screening, not privacy or licensing clearance.",
+          "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.",
+          "No dependency installation, runtime compatibility or behavior evaluation.",
+          "No publication, submission or consumer update."
+        ],
+        "name": "editorial-writing",
+        "source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+        "source_commit_verification": "Caller-supplied commit label; input hashes identify working-tree bytes.",
+        "version": 1
+      },
+      "manifest_sha256": "012d1e452dcdb08259012e2fdb371a24154a35b52b10c5a28569879264c9ecad",
+      "output": "build/skill-delivery/editorial-skill-v3",
+      "prepared": {
+        "file_count": 12,
+        "limitations": [
+          "Basic metadata and local Markdown checks, not full format validation.",
+          "Narrow secret/path screening, not privacy or licensing clearance.",
+          "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.",
+          "No dependency installation, runtime compatibility or behavior evaluation.",
+          "No publication, submission or consumer update."
+        ],
+        "status": "prepared"
+      }
+    },
+    {
+      "archive_sha256": "f0b9ed820cc19b31efb344dd514b1ea44657c39dc30d176c495d860c9314e848",
+      "archive_verification": {
+        "file_count": 15,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+        "status": "verified"
+      },
+      "installed_scope": "Existing disposable Copilot local-marketplace plugin copy",
+      "installed_verification": {
+        "file_count": 15,
+        "scope": "Exact local bytes and normalized modes only; no runtime or publication claim.",
+        "status": "verified"
+      },
+      "kind": "plugin",
+      "manifest": {
+        "config_sha256": "3768dffb3f082cc6e6c407c10d744424b7616e2d3b4a819f813c517b599bd610",
+        "files": {
+          "LICENSE": {
+            "mode": "0644",
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+            "source": "plugins/editorial/LICENSE"
+          },
+          "README.md": {
+            "mode": "0644",
+            "sha256": "be035d982aa9191c7d6d49ee1dfb48d7aa2b16d85b316c1ff41a08c19aad97d9",
+            "source": "plugins/editorial/README.md"
+          },
+          "plugin.json": {
+            "mode": "0644",
+            "sha256": "70479c15f5f26a0786c312114d88b3712fbb2124277af326d1349b9b745d763c",
+            "source": "plugins/editorial/plugin.json"
+          },
+          "skills/editorial-writing/DEPENDENCIES.md": {
+            "mode": "0644",
+            "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+            "source": "plugins/editorial/skills/editorial-writing/DEPENDENCIES.md"
+          },
+          "skills/editorial-writing/LICENSE": {
+            "mode": "0644",
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+            "source": "plugins/editorial/skills/editorial-writing/LICENSE"
+          },
+          "skills/editorial-writing/SKILL.md": {
+            "mode": "0644",
+            "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+            "source": "plugins/editorial/skills/editorial-writing/SKILL.md"
+          },
+          "skills/editorial-writing/references/audience/adult.md": {
+            "mode": "0644",
+            "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+            "source": "plugins/editorial/skills/editorial-writing/references/audience/adult.md"
+          },
+          "skills/editorial-writing/references/audience/early-reader.md": {
+            "mode": "0644",
+            "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+            "source": "plugins/editorial/skills/editorial-writing/references/audience/early-reader.md"
+          },
+          "skills/editorial-writing/references/examples.md": {
+            "mode": "0644",
+            "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+            "source": "plugins/editorial/skills/editorial-writing/references/examples.md"
+          },
+          "skills/editorial-writing/references/medium/game-dialogue.md": {
+            "mode": "0644",
+            "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/game-dialogue.md"
+          },
+          "skills/editorial-writing/references/medium/game-ui.md": {
+            "mode": "0644",
+            "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/game-ui.md"
+          },
+          "skills/editorial-writing/references/medium/longform.md": {
+            "mode": "0644",
+            "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/longform.md"
+          },
+          "skills/editorial-writing/references/medium/web.md": {
+            "mode": "0644",
+            "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+            "source": "plugins/editorial/skills/editorial-writing/references/medium/web.md"
+          },
+          "skills/editorial-writing/scripts/prose_lint.py": {
+            "mode": "0644",
+            "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+            "source": "plugins/editorial/skills/editorial-writing/scripts/prose_lint.py"
+          },
+          "skills/editorial-writing/tests/test_prose_lint.py": {
+            "mode": "0644",
+            "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+            "source": "plugins/editorial/skills/editorial-writing/tests/test_prose_lint.py"
+          }
+        },
+        "kind": "plugin",
+        "limitations": [
+          "Basic metadata and local Markdown checks, not full format validation.",
+          "Narrow secret/path screening, not privacy or licensing clearance.",
+          "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.",
+          "No dependency installation, runtime compatibility or behavior evaluation.",
+          "No publication, submission or consumer update."
+        ],
+        "name": "editorial",
+        "source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+        "source_commit_verification": "Caller-supplied commit label; input hashes identify working-tree bytes.",
+        "version": 1
+      },
+      "manifest_sha256": "4a78d3470c3100263fcce8a08439cb1155ac634bf206a0d36fae8637be9eae51",
+      "output": "build/skill-delivery/editorial-plugin-v3",
+      "prepared": {
+        "file_count": 15,
+        "limitations": [
+          "Basic metadata and local Markdown checks, not full format validation.",
+          "Narrow secret/path screening, not privacy or licensing clearance.",
+          "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.",
+          "No dependency installation, runtime compatibility or behavior evaluation.",
+          "No publication, submission or consumer update."
+        ],
+        "status": "prepared"
+      }
+    }
+  ],
+  "source": {
+    "base_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+    "meta_skill_files": {
+      "plugins/engineering/skills/skill-delivery/LICENSE": {
+        "mode": "0644",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      "plugins/engineering/skills/skill-delivery/SKILL.md": {
+        "mode": "0644",
+        "sha256": "fd0e23926156028f9446b43c275eb9fb667b8af9aa3cc5dbf3282a02fb464733"
+      },
+      "plugins/engineering/skills/skill-delivery/references/ecosystems.md": {
+        "mode": "0644",
+        "sha256": "29c79ec1f0a3cf2c5797fa8ea2434c748ed96cd6c0d67a442029c33af4e4b238"
+      },
+      "plugins/engineering/skills/skill-delivery/references/evaluation.md": {
+        "mode": "0644",
+        "sha256": "e69f0334fc26c76e49a71b35cc1c549c11ddac50ad1030b3f726bb773c4558f3"
+      },
+      "plugins/engineering/skills/skill-delivery/references/packaging.md": {
+        "mode": "0644",
+        "sha256": "ad724ceabc2ca9725efa993b2e0f7487b9e4ced500fa5f537fe6f2c0d032763f"
+      },
+      "plugins/engineering/skills/skill-delivery/scripts/export_skill.py": {
+        "mode": "0644",
+        "sha256": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe"
+      },
+      "plugins/engineering/skills/skill-delivery/tests/test_export_skill.py": {
+        "mode": "0644",
+        "sha256": "151117ac558363bdf83ae25ee1a6a40a3fb83b74cfb6fdaa2858f8d63996b7b8"
+      }
+    },
+    "state": "Committed candidate at export capture; only untracked evaluation evidence remained. Earlier deterministic/upstream checks used the same selected bytes before commit freeze.",
+    "working_tree_status": [
+      "?? evals/skill-delivery/results/"
+    ]
+  },
+  "tools": {
+    "awesome_copilot_commit": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+    "copilot_cli": "1.0.54",
+    "github_cli": "2.97.0",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "skills_cli": "1.7.4",
+    "skills_cli_source_commit": "92a9a34ac3bf88e695e468b90c7bf32f163d32c8",
+    "vally": "0.20.0"
+  },
+  "upstream_validation": {
+    "node": "v24.19.0",
+    "observed_utc": "2026-10-30T17:26:09.016Z",
+    "results": [
+      {
+        "discoveryErrors": [],
+        "passed": true,
+        "path": "plugins/editorial/skills/editorial-writing",
+        "referenceFindings": [],
+        "skills": [
+          {
+            "graders": [
+              {
+                "details": [
+                  {
+                    "details": [
+                      {
+                        "evidence": "File length (37 lines) is within limit (500).",
+                        "kind": "code",
+                        "name": "file-length",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Skill name is present.",
+                        "kind": "code",
+                        "name": "name-missing",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name length (17) is within limit (64).",
+                        "kind": "code",
+                        "name": "name-length",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name contains only lowercase alphanumeric characters and hyphens.",
+                        "kind": "code",
+                        "name": "name-format",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name does not start or end with a hyphen.",
+                        "kind": "code",
+                        "name": "name-hyphen-edge",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name does not contain consecutive hyphens.",
+                        "kind": "code",
+                        "name": "name-consecutive-hyphens",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name matches directory name \"editorial-writing\".",
+                        "kind": "code",
+                        "name": "name-directory-mismatch",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Description is present.",
+                        "kind": "code",
+                        "name": "description-missing",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Description length (204) is within limit (1024).",
+                        "kind": "code",
+                        "name": "description-length",
+                        "passed": true,
+                        "score": 1
+                      }
+                    ],
+                    "evidence": "All spec checks passed.",
+                    "kind": "code",
+                    "label": "spec-compliant",
+                    "name": "spec-compliance",
+                    "passed": true,
+                    "score": 1
+                  }
+                ],
+                "evidence": "All 1 skill(s) are spec-compliant.",
+                "kind": "code",
+                "label": "spec-compliant",
+                "name": "spec-compliance",
+                "passed": true,
+                "score": 1
+              },
+              {
+                "details": [
+                  {
+                    "details": [
+                      {
+                        "evidence": "All file references resolve to existing files within the skill directory.",
+                        "kind": "code",
+                        "name": "valid-refs",
+                        "passed": true,
+                        "score": 1
+                      }
+                    ],
+                    "evidence": "All file references resolve to existing files within the skill directory.",
+                    "kind": "code",
+                    "label": "refs-valid",
+                    "name": "valid-refs",
+                    "passed": true,
+                    "score": 1
+                  }
+                ],
+                "evidence": "All file references across 1 skill(s) are valid.",
+                "kind": "code",
+                "label": "refs-valid",
+                "name": "valid-refs",
+                "passed": true,
+                "score": 1
+              }
+            ],
+            "name": "editorial-writing",
+            "passed": true
+          }
+        ]
+      },
+      {
+        "discoveryErrors": [],
+        "passed": true,
+        "path": "plugins/engineering/skills/skill-delivery",
+        "referenceFindings": [],
+        "skills": [
+          {
+            "graders": [
+              {
+                "details": [
+                  {
+                    "details": [
+                      {
+                        "evidence": "File length (96 lines) is within limit (500).",
+                        "kind": "code",
+                        "name": "file-length",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Skill name is present.",
+                        "kind": "code",
+                        "name": "name-missing",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name length (14) is within limit (64).",
+                        "kind": "code",
+                        "name": "name-length",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name contains only lowercase alphanumeric characters and hyphens.",
+                        "kind": "code",
+                        "name": "name-format",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name does not start or end with a hyphen.",
+                        "kind": "code",
+                        "name": "name-hyphen-edge",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name does not contain consecutive hyphens.",
+                        "kind": "code",
+                        "name": "name-consecutive-hyphens",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Name matches directory name \"skill-delivery\".",
+                        "kind": "code",
+                        "name": "name-directory-mismatch",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Description is present.",
+                        "kind": "code",
+                        "name": "description-missing",
+                        "passed": true,
+                        "score": 1
+                      },
+                      {
+                        "evidence": "Description length (290) is within limit (1024).",
+                        "kind": "code",
+                        "name": "description-length",
+                        "passed": true,
+                        "score": 1
+                      }
+                    ],
+                    "evidence": "All spec checks passed.",
+                    "kind": "code",
+                    "label": "spec-compliant",
+                    "name": "spec-compliance",
+                    "passed": true,
+                    "score": 1
+                  }
+                ],
+                "evidence": "All 1 skill(s) are spec-compliant.",
+                "kind": "code",
+                "label": "spec-compliant",
+                "name": "spec-compliance",
+                "passed": true,
+                "score": 1
+              },
+              {
+                "details": [
+                  {
+                    "details": [
+                      {
+                        "evidence": "All file references resolve to existing files within the skill directory.",
+                        "kind": "code",
+                        "name": "valid-refs",
+                        "passed": true,
+                        "score": 1
+                      }
+                    ],
+                    "evidence": "All file references resolve to existing files within the skill directory.",
+                    "kind": "code",
+                    "label": "refs-valid",
+                    "name": "valid-refs",
+                    "passed": true,
+                    "score": 1
+                  }
+                ],
+                "evidence": "All file references across 1 skill(s) are valid.",
+                "kind": "code",
+                "label": "refs-valid",
+                "name": "valid-refs",
+                "passed": true,
+                "score": 1
+              }
+            ],
+            "name": "skill-delivery",
+            "passed": true
+          }
+        ]
+      }
+    ],
+    "schemaErrors": [],
+    "upstream": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+    "validator": "@microsoft/vally@0.20.0"
+  },
+  "version": 1
+}

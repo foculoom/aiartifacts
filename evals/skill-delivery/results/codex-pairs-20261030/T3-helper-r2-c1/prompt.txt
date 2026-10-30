@@ -1,0 +1,1 @@
+Correct the validation report's claim that human review occurred. Identify the inspection actually performed by the agent, leave human approval/review explicitly pending, and refresh affected output checksums. Preserve package bytes, original failures, evidence and all other limitations; do not perform external actions.

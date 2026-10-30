@@ -1,0 +1,6 @@
+{
+  "limitation": "Supplied record, not an authenticated Git checkout or remote revision comparison.",
+  "matched_files": 14,
+  "mismatches": [],
+  "supplied_base_revision": "211ad9da8b7a3d0740d1896a74c018ed3ad097be"
+}

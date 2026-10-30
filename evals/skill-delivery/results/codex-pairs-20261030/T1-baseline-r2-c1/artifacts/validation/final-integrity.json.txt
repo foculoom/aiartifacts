@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-30",
+  "source_unchanged": true,
+  "all_supplied_input_hashes_match": true,
+  "candidate_files": 12,
+  "all_candidate_hashes_match_source": true,
+  "archive_crc_and_file_hashes_match": true,
+  "excluded_generated_caches": 2
+}

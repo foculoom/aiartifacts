@@ -1,0 +1,64 @@
+# Review findings and contribution requirements
+
+Observation date: 2026-10-30. Source: `foculoom/aiartifacts`, recorded revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`, original path `plugins/editorial/skills/editorial-writing`. The supplied record's hashes match all 14 source files, including two excluded bytecode files. This verifies the supplied snapshot, not its current remote publication state or ownership rights.
+
+## Licensing and route decision
+
+| Evidence | Observed state | Review consequence |
+| --- | --- | --- |
+| Local `LICENSE`, `SKILL.md`, `DEPENDENCIES.md` | Apache-2.0 | All preserved. Existing plugin metadata also declares Apache-2.0. |
+| Live awesome-copilot `main/LICENSE`, inspected through browser on 2026-10-30 | MIT; copyright GitHub, Inc. | The target's general license differs from this candidate. |
+| Supplied CONTRIBUTING, final License section; browser observation of current contribution terms | Contributions are required under MIT | Do not submit the unchanged Apache candidate as an MIT contribution or silently relabel it. |
+| Supplied external-plugin requirements and issue form | Explicit license field; Apache-2.0 is an example of accepted SPDX metadata | A remotely hosted plugin can be proposed for review with its own declared license. Listing eligibility is not approval. |
+
+Primary live links: [LICENSE](https://github.com/github/awesome-copilot/blob/main/LICENSE), [contribution terms](https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md#license). Browser observations are saved in `evidence/upstream/`. The raw contribution page was reported as crawled the preceding day and LICENSE as crawled the inspection day. The browser API request could not resolve the current main SHA; shell networking also failed DNS. Consequently no immutable current upstream revision is asserted. The supplied official contribution records are pinned to awesome-copilot `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`, and installer documentation to `92a9a34ac3bf88e695e468b90c7bf32f163d32c8`.
+
+The rights holder must decide whether to authorize MIT terms for the exact direct contribution, dual licensing, or another arrangement acceptable to maintainers. Confirm ownership and notice obligations for all included material first. Repository license differences alone do not establish either a blanket legal incompatibility or permission to relicense. No license text or metadata was changed here.
+
+The existing external manifest is evidence under `evidence/existing-plugin.json`; it is not an awesome-copilot curated-plugin manifest. It declares `editorial` version `0.1.1` and a `com.openai` interface, with no awesome-copilot composition fields. Do not copy it into awesome-copilot's `plugins/` and claim curated-plugin validation. External intake still needs actual manifest/spec lint and a Copilot install smoke test at the reviewed revision.
+
+## Proposed contribution and value
+
+Proposed direct source destination: `skills/editorial-writing/`. Include the entrypoint, four medium profiles, two audience profiles, synthetic examples, standard-library checker, checker tests, dependencies/provenance and existing license. Exact target paths and hashes are in `file-manifest.json`. Exclude both `__pycache__` files; exclude `source/existing-plugin.json` from direct inclusion. No agent, instructions file, hook, MCP configuration or plugin is needed for this standalone-skill proposal.
+
+One output-only paragraph in `SKILL.md` makes dependencies, tests and the existing license discoverable alongside its existing profile and checker links. The patch shows this full adaptation. Every other candidate file is byte-identical to its source; license metadata is unchanged. The uppercase required filename `SKILL.md` and conventional `LICENSE`/`DEPENDENCIES.md` are retained.
+
+The case for specialized value is strongest for game UI state accuracy, branching-dialogue continuity, early-reader repetition, medium-specific evidence and preserving a supplied project voice. The advisory checker adds deterministic Markdown-aware warnings and cross-document repetition checks without rewriting or attributing authorship. These are plausible benefits over generic writing advice; no comparative model uplift or absence of duplicate upstream skills has been demonstrated. Frame the submission around developer-facing website and game workflows, and ask maintainers to assess whether the broader longform/early-reader scope fits the collection. The skill currently contains synthetic examples and no consumer project voice brief. Private project material must stay outside the contributed package.
+
+## Supplied official requirements mapped to evidence
+
+Requirements below come from the copied official snapshots in `evidence/official-sources/`.
+
+| Requirement | Result or required next action |
+| --- | --- |
+| Specific, focused, useful content; meaningful uplift; responsible AI/security policies | Domain-specific rationale above; suitability and comparative benefit still need review. No bypass or authorship-detection workflow is proposed. |
+| Folder in `skills/`, `SKILL.md` with YAML name matching folder, lowercase hyphenated name <=64 chars | Prepared `skills/editorial-writing/SKILL.md`; supplied quick validator and local checks pass. |
+| Description 10–1024 chars; linked resources <5 MB each | Description 204 chars; all 11 resources linked from entrypoint; largest file 16,864 bytes; local checks pass. |
+| Scaffold with `npm run skill:create` | Existing skill was adapted as a review copy; initializer/scaffolder not run over it. |
+| Run `npm run skill:validate` | Not run; upstream checkout and its dependency tree are absent. Local validator is not its substitute. |
+| Run `npm run build`, verify generated README; submission guide also names `npm start` | Deferred to authorized upstream checkout with dependencies already available. Include actual generated changes and inspect the skill's entry before submission. Do not fabricate a generated README diff. |
+| Run `bash eng/fix-line-endings.sh` before committing | Not run: upstream script absent. Candidate byte check finds LF-only files. Later run the actual upstream script and review its diff. |
+| Test with GitHub Copilot | Not run; behavioral plan supplied separately. Unit tests cover the optional checker only. |
+| Branch from and target `main`, never `staged` | Recorded in draft; no branch or PR created. |
+| AI-prepared PR title marker | Draft title ends in `🤖🤖🤖` as required by supplied contribution guide. |
+| Submission-gate review and risk classification | Bundled scripts put this proposal in the guide's high-risk category; actual automation and required approvals have not run. |
+| Plugin validation if adding a curated plugin | Not applicable to this standalone-skill candidate. If scope changes, supply the required composition manifest and run `npm run plugin:validate`. |
+| No dependency installation | Honored. Available Python 3.9.6 and PyYAML 6.0.3 were reused; helper runtime is standard library only. |
+
+The supplied installer docs describe skill discovery and `skills add ... --list`. They do not define awesome-copilot contribution acceptance. An `npx` command may fetch a package even with `--list`, so none was run. Discovery documentation, format validity and an installer supporting Copilot do not establish behavior, installation success, public availability or demand.
+
+## Alternative external-plugin workflow
+
+If the owner prefers retaining the externally hosted Apache-2.0 distribution, use the external-plugin issue form, not a direct edit to `plugins/external.json`. The draft includes the known manifest fields and the supplied full source SHA; public repository access and exact remote plugin contents are unverified. Omit a tag unless an immutable release tag is verified; SHA alone is allowed by the form. If both are supplied they must agree.
+
+Intake checks public GitHub hosting, metadata, immutable locator, manifest version matching and schema, `vally lint`/skill references, and Copilot installation. All applicable quality gates must pass before human maintainer review, unless a maintainer explicitly exercises a documented override. Approval automation creates the listing PR and generated marketplace changes. No owner decision, successful intake, maintainer approval or acquisition availability can be inferred from this draft.
+
+## Unresolved decisions and work
+
+1. **Owner: choose direct skill inclusion or external-plugin review.** Both drafts are prepared; neither is approved for sending.
+2. **Rights holder, then maintainers: resolve direct-contribution licensing.** Obtain explicit permission for the exact files and terms, retain required attribution/notices and agree packaging. This packet does not supply a replacement license.
+3. **Owner: review temporary-path behavior.** The helper rejects any symlinked ancestor. On this Mac, default test temporary paths under `/var/...` trigger five failures; canonical paths pass all 27 tests. Decide whether to document that limitation or request a separately authorized code change. No helper or test code was changed.
+4. **Contributor: check current upstream catalog for overlap and validate useful Copilot behavior.** Execute the supplied scenarios with synthetic data and record host/model/version and before/after outputs; do not represent checker tests as writing-quality acceptance.
+5. **Contributor: complete native upstream checks and generated documentation.** Use an authorized checkout and existing dependencies; follow the current default-branch requirements again before any future submission. Installation needs separate authority if dependencies remain absent.
+6. **For the external route: verify public repo, reviewed SHA/plugin path, version, manifest/spec compliance, duplicate-listing status and installation.** The supplied base revision is provenance evidence, not live verification that customers can install the plugin now.
+7. **Owner: separately authorize any later issue, PR or publication.** Preparing this packet does not authorize those actions. No confirmation is needed to inspect these local artifacts.

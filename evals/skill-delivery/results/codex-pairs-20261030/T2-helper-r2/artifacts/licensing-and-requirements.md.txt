@@ -1,0 +1,40 @@
+# Licensing, provenance and contribution contract
+
+Observation date: **2026-10-30**. Primary evidence is the supplied official snapshot at Awesome Copilot revision `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`, identified in `source-record.json`. Its bytes were verified against `input-inventory.json`.
+
+Read sources: `official-sources/awesome-contributing.md`, `official-sources/awesome-instructions.md` (supplied upstream AGENTS.md), and `official-sources/awesome-external-plugin.yml`. Read the existing authoring skill and validator before using them. These files are requirements evidence, not files to contribute.
+
+Supplemental read-only web checks opened the current default-branch [CONTRIBUTING.md](https://github.com/github/awesome-copilot/blob/main/CONTRIBUTING.md), [AGENTS.md](https://github.com/github/awesome-copilot/blob/main/AGENTS.md), and [external-plugin form](https://github.com/github/awesome-copilot/blob/main/.github/ISSUE_TEMPLATE/external-plugin.yml). The rendered contribution page still states MIT for repository contributions and an issue-first route for public external plugins; the form still requests a public GitHub repository, immutable locator and license. No live Git revision or byte-for-byte equivalence with the supplied snapshot was established. Recheck the contract at actual submission.
+
+## Source licensing and rights boundary
+
+| Evidence | Observation | Review consequence |
+| --- | --- | --- |
+| `source/editorial-writing/SKILL.md` | `license: Apache-2.0` | Retained unchanged |
+| `source/editorial-writing/LICENSE` | Full Apache License 2.0 text; SHA-256 `c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4` | Travels with each standalone payload and at plugin root |
+| `source/editorial-writing/DEPENDENCIES.md` | Attributes skill, profiles, synthetic examples and helper to Foculoom AI Artifacts; no vendored third-party prose/code declared | Preserve provenance; supplied README calls candidate cleared, but that does not authorize MIT relicensing |
+| `source/existing-plugin.json` | Apache-2.0, author Foculoom, version 0.1.1 | Reuse unchanged for external route |
+| Contribution policy, License section | “By contributing to this repository, you agree that your contributions will be licensed under the MIT License.” | Direct contribution held until rights holder resolves this requirement |
+
+Do not replace the license label, delete the license, add MIT or dual-license language, or assert MIT permission. Apache-to-MIT compatibility is not decided by a format check. An authorized rights holder must establish the terms under which these exact files can be offered; alternatively retain Apache-2.0 through the external route and obtain any required policy clarification. No separate NOTICE file was supplied. The license appendix has template placeholders, not an identified copyright holder to invent or overwrite. Preserve all applicable supplied notices and resolve any further attribution requirements with the owner.
+
+## Requirements matrix from supplied official files
+
+| Requirement | Current result / next step |
+| --- | --- |
+| Meaningful uplift beyond ordinary model capability; specific focused workflow | Candidate offers audience/medium routing, cross-branch continuity, accurate state messaging and a context-sensitive advisory helper. Plausible differentiation, not proven uplift; compare identical cases with and without the skill and review existing upstream listings |
+| Folder `skills/editorial-writing/`, matching lowercase hyphenated name, max 64 characters | Bounded local checks pass; intended destinations recorded separately |
+| Clear nonempty description, 10–1024 characters | 204 characters; available authoring validator passes |
+| Self-contained bundled references/assets under 5MB, referenced from SKILL.md | All selected files are below limit; profile/example/helper links resolve within payload. Dependencies and development test file are not linked from SKILL.md: review whether to link or exclude those supporting files before direct PR |
+| Use `npm run skill:create -- --name ... --description ...` for new folders | Documented scaffolding route; existing canonical skill reused locally rather than generating duplicate prose |
+| `npm run skill:validate`, then `npm run build`; inspect generated README | Not run: upstream checkout/toolchain not supplied; dependency installation forbidden. Use an already provisioned approved upstream checkout later |
+| `bash eng/fix-line-endings.sh` before committing | Not run: upstream script absent here. Selected files already contain no CR bytes; this is not a substitute for upstream's required script |
+| Branch from and target `main`, not `staged`; clear purpose and testing in PR | Included in held direct PR draft; no branch or PR created |
+| AI-agent PR title suffix `🤖🤖🤖` | Included in draft title |
+| Copilot testing | Not executed; helper tests cannot prove runtime selection or editorial quality |
+| Risk/automation review | Supplied policy puts bundled scripts in high risk; maintainer/automation classification remains authoritative. Do not mark submission-gate passed |
+| External public plugin: issue form first, public GitHub source, license and immutable ref and/or full SHA | Draft provided using existing repo/path and supplied full SHA; remote/public/duplicate attestations remain unchecked |
+| External quality gates: Agent Plugins manifest schema, Vally skill/reference lint, Copilot install smoke, version/locator consistency | Not run; local helper checks do not replace these gates. Retain existing `extensions.com.openai` rather than removing metadata to guess compatibility |
+| Human approval then automation-created listing PR | Pending external process; never add an initial direct PR editing `plugins/external.json` |
+
+The supplied external policy permits Apache-2.0 metadata; MIT-only direct contribution terms must not be used as a reason to silently relicense an external plugin. No new marketplace, MCP server, provider SDK or platform adapter is needed for this preparation.

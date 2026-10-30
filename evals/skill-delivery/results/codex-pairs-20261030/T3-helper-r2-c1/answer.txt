@@ -1,0 +1,3 @@
+Corrected the [validation report](output/VALIDATION-AND-REMAINING-WORK.md) to identify agent static inspection and explicitly leave human review and approval pending.
+
+Refreshed and verified output checksums. Package bytes, original failures, evidence, and all other limitations remain unchanged. No external actions were performed.

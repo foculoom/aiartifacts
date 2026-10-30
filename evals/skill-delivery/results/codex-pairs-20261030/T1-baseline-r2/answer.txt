@@ -1,0 +1,10 @@
+Prepared under `output/`:
+
+- [Candidate archive](output/editorial-writing-candidate.zip)
+- [Validation and remaining-work report](output/REPORT.md)
+- [Dependency/provenance notes](output/PROVENANCE.md)
+- [File inventory](output/file-inventory.json) and [SHA-256 checksums](output/SHA256SUMS)
+
+Canonical instructions and Apache-2.0 license are unchanged. Authoring validation passed; all 27 tests passed on Python 3.9 and 3.12 using physical temp paths. The report documents the macOS symlink limitation and untested installer/agent behavior.
+
+`source/` remains unchanged. Nothing was installed, submitted or published.

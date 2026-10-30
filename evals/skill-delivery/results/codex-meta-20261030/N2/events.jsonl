@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"<EPHEMERAL_SESSION>"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Version 2.4 is now available with keyboard shortcuts to open and close the search panel."}}
+{"type":"turn.completed","usage":{"input_tokens":14178,"cached_input_tokens":12032,"cache_write_input_tokens":0,"output_tokens":23,"reasoning_output_tokens":0}}

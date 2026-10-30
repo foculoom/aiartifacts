@@ -1,0 +1,9 @@
+{
+  "old_archive_matches_old_tree_on_all_14_shared_files": true,
+  "source_record_matches_old_tree_on_all_14_files": true,
+  "candidate_matches_new_source_on_all_11_selected_files": true,
+  "unique_archive_inventory_and_crc_and_payload_bytes": "pass",
+  "source_and_old_archive_unchanged": true,
+  "supplied_input_inventory_all_files_match": true,
+  "input_inventory_file_count": 55
+}

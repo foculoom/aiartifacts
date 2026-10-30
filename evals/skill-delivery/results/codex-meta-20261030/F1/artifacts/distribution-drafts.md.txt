@@ -1,0 +1,44 @@
+# Distribution drafts — not submitted
+
+Prepared 2026-10-30 from supplied upstream documentation snapshots: Awesome Copilot `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd`, skills CLI docs `92a9a34ac3bf88e695e468b90c7bf32f163d32c8`. These are documentation revisions, not tested CLI versions. Recheck official contracts and remote candidate bytes before external action. This task authorizes no installation or submission.
+
+## Awesome Copilot external-plugin intake draft
+
+Title: `[External Plugin]: editorial`
+
+| Field | Draft value |
+| --- | --- |
+| Plugin name | editorial |
+| Description | Review and revise writing for its audience, medium, and project voice. |
+| GitHub repository | foculoom/aiartifacts |
+| Plugin path | plugins/editorial |
+| Immutable SHA | 211ad9da8b7a3d0740d1896a74c018ed3ad097be |
+| Ref | Omitted; no tag verified |
+| Version | 0.1.1 |
+| License | Apache-2.0 |
+| Author | Foculoom |
+| Author URL | https://github.com/foculoom |
+| Homepage | https://github.com/foculoom/aiartifacts/tree/main/plugins/editorial |
+| Keywords | editorial, writing, accessibility, review |
+
+Additional notes: Retains existing `extensions.com.openai` metadata and standard skills discovery. Prepared plugin payload and exact inventory are supplied locally. Local structure, archive checks and checker tests passed. Full schema/Vally gates, installation and editorial runtime behavior remain untested. Verify that the remote plugin subtree at the supplied SHA includes the reviewed bytes and complete notices/dependencies before using this locator for intake; a base-revision label alone does not establish that.
+
+Submission checklist remains unchecked: current public repository accessibility, immutable remote contents, contribution/security/AI-policy compliance and absence of an existing listing have not been freshly verified. Use the external-plugin issue workflow; do not directly edit `plugins/external.json`. Preserve Apache-2.0 rather than converting the skill to an MIT direct contribution. Maintainers decide acceptance and listing.
+
+Present acquisition status as of 2026-10-30: a supplied source locator and a locally prepared package exist. Remote public availability, direct installability, Awesome Copilot listing and customer acquisition are unverified in this environment. No submission or publication was performed here.
+
+## skills.sh draft
+
+Use the same standalone skill bytes; no new plugin or adapter is needed. Candidate locator from supplied provenance:
+
+`https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing`
+
+After verifying remote contents and an already reviewed, pinned CLI and its help output, the discovery-only draft is:
+
+```sh
+DISABLE_TELEMETRY=1 skills add "https://github.com/foculoom/aiartifacts/tree/211ad9da8b7a3d0740d1896a74c018ed3ad097be/plugins/editorial/skills/editorial-writing" --list
+```
+
+This command was not run. Do not use unpinned npx or install software to execute it in this task. For a later authorized installation, use an isolated project, explicit target agent, copy semantics and disabled telemetry; compare the full installed inventory, hashes and modes to the standalone manifest, separately recording installer-added metadata or permission changes. The staged payload here is not an installed runtime skill. Keep any earlier consumer pin for rollback.
+
+Present acquisition status as of 2026-10-30: skills.sh indexing/ranking, directory availability, CLI discovery and customer acquisition are unverified. No installation or telemetry event was generated. Directory visibility or installs would not establish runtime behavior or revenue.

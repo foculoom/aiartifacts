@@ -1,0 +1,9 @@
+Revise this paragraph for an adult nonfiction chapter about running a small
+software service. Keep the supplied numbers and show the decision they imply.
+Do not add facts. Return the revised paragraph only.
+
+"In today's fast-paced world, support capacity is very important. From my years
+advising hundreds of founders, I know that a $40/month plan with 25 customers
+is an exciting opportunity. Each customer sends one support request a week,
+and each request takes 20 minutes. It is important to be mindful of support
+capacity when determining whether this is a good business."

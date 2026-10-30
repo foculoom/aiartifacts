@@ -1,0 +1,8 @@
+As of 2026-10-30, the supplied files support distribution preparation, not a release-readiness claim.
+
+- **Established:** All 14 skill files match `source-record.json`, which records base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. The candidate includes audience/medium profiles, synthetic examples, Apache-2.0 license text, dependency/provenance documentation, and an optional standard-library Python checker with tests. This enables review of an identified source candidate.
+- **skills.sh:** The supplied documentation supports standalone discovery from the explicit skill path. Installer resolution, installed-file integrity, runtime behavior, directory indexing, and present public acquisition remain unverified.
+- **awesome-copilot:** The supplied Editorial `0.1.1` manifest supports preparing an external-plugin issue for `foculoom/aiartifacts`, path `plugins/editorial`, retaining Apache-2.0. It does not establish a complete plugin payload, passed intake checks, maintainer acceptance, marketplace listing, or present public acquisition.
+- **Next bounded step:** Review an explicit file allowlist, excluding `__pycache__`, and reconcile it with the complete plugin subtree and immutable revision. Then draft the two route-specific preparation records, identifying missing validation and behavior evidence. Recheck current upstream requirements before submission.
+
+No package rebuild, test execution, installation, file creation, submission, or publication was performed.

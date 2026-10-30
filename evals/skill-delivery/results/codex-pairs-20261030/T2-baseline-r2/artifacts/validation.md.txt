@@ -1,0 +1,20 @@
+# Validation evidence
+
+Observed 2026-10-30 on macOS 27.0.1 arm64, Python 3.9.6, already available PyYAML 6.0.3. Reproducer: `python3 -B output/validate_packet.py`, from the workspace root. Each command's actual argument array, exit code, stdout and stderr is saved under `evidence/`. Bytecode writing was disabled for all validation commands and their subprocesses.
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Every supplied input SHA-256 against input inventory | Pass; no supplied input changed | `evidence/input-integrity.json` |
+| Source files against recorded base snapshot | Pass, including both existing bytecode files; no new source files | `evidence/validation-summary.json` and reproducer |
+| Candidate set, source/candidate hashes | 12 files; only entrypoint resource links changed; bytecode excluded | `file-manifest.json`, `candidate-adaptation.patch` |
+| Supplied `quick_validate.py` | Exit 0, “Skill is valid!” | `evidence/quick-validate.json` |
+| Name, description length, local links, direct resource links, sizes, LF endings | Pass; description 204 chars; max size 16,864 bytes | `evidence/validation-summary.json` |
+| Checker unit tests with default temporary directory | Exit 1; 27 run, 3 failures and 2 errors | `evidence/unittest-default-temp.json` |
+| Same unchanged tests with canonical `TMPDIR` under output | Exit 0; all 27 pass | `evidence/unittest-canonical-temp.json` |
+| Advisory prose lint on candidate documents | Exit 0; nine files checked, zero findings | `evidence/prose-lint.json` |
+
+The default temporary directory resolves through macOS `/var`, a symlink to `/private/var`. `_safe_absolute` deliberately rejects any symlinked ancestor, so temporary fixtures cannot be read through that alias. Setting only the test process's `TMPDIR` to the resolved `output/test-tmp` path removes the alias and all 27 tests pass. This isolates an environment-dependent path limitation; it does not fix it. The failed default run is retained and remains an unresolved portability decision. Tests that deliberately exercise input symlinks still execute and pass with the canonical temporary root.
+
+The suite checks Markdown masking and source positions, exact warning boundaries, repetition across documents, opt-in heading checks, JSON/CLI behavior, input errors, symlink handling and no-rewrite behavior. It does not verify editorial quality, factual correctness, actual reader feedback, Copilot skill invocation or installation. A zero-finding advisory lint run has no such implication.
+
+Not run: upstream `npm run skill:validate`, `npm run build`/README regeneration, `npm start`, `bash eng/fix-line-endings.sh`, upstream CI, actual Copilot behavior, `vally lint`, plugin schema validation or install smoke tests. The complete upstream checkout/dependencies and required hosts are absent; no dependencies were installed. Shell HTTP retrieval failed DNS; browser inspection succeeded for licensing, but pinning the current main commit failed. `evidence/upstream/retrieval.json` records failed shell requests; browser observations are separately saved, so those failures do not mean licensing went unchecked.

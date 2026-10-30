@@ -1,0 +1,29 @@
+# Actual validation and limits
+
+Date: **2026-10-30**. Execution used Python **3.9.6** on macOS arm64, standard library for the helper/tests/exporter and the already available PyYAML for the authoring validator. See `evidence/environment.json`, `evidence/tool-versions.json` and `evidence/commands.json` for exact environment and commands. No dependency installation or inference call was performed.
+
+PyYAML version is **6.0.3**. Read-only `node --version` and `npm --version` attempts both exited **-6** without a version on this host; their versions are unverified, and neither was used for candidate validation. No repair or dependency installation was attempted. Upstream checks therefore also need a working approved Node/npm environment.
+
+| Evidence layer | Result | Evidence / limit |
+| --- | --- | --- |
+| Supplied input integrity | PASS | `evidence/input-integrity.json`: all inventoried inputs match supplied hashes |
+| Source preservation | PASS | `source-before.json`, `source-after.json`, `source-preservation.json`: all 15 source files unchanged, including existing caches and manifest |
+| Existing helper behavior | PASS | `helper-tests.log`: 27 tests pass; covers Markdown masking, contextual allowances, cross-document repetition, input discovery, symlink rejection, CLI exit codes, invalid/missing inputs and no rewriting |
+| Existing authoring validator | PASS, bounded | `authoring-validator.log`: “Skill is valid!”; supports the candidate's name/description/license fields; not the upstream validator |
+| Additional local metadata/assets checks | PASS, bounded | `structure.json`: matching name, 204-character description, size limits, no CR bytes, no selected symlinks; supporting-file reference question recorded |
+| Advisory prose lint | PASS, limited | `advisory-lint.log`: 9 Markdown files checked, zero findings; not an editorial-quality or factual-accuracy judgment |
+| Skill export | PASS | 12 explicit files, no caches; helper checks basic structure, contained local Markdown destinations and a narrow sensitive-content screen |
+| Plugin reconstruction | PASS for local package; PARTIAL for remote candidate | 14 explicit files, existing manifest preserved and LICENSE at root and skill root; remote subtree identity not established |
+| Exact package integrity | PASS | Both archive and staged folder independently match each manifest's full inventory, SHA-256 and normalized modes; `*-archive-verify.log`, `*-payload-verify.log` and `package-hashes.json` |
+| Provenance/privacy review | PARTIAL | Read selected skill, helper, tests, references, dependencies and license. Supplied fixtures are synthetic; no customer manuscripts, private company planning, credentials or unrelated product files selected. Bounded automated scan is not proof of rights or absence of secrets |
+| Upstream validation/build/normalization | NOT RUN | No awesome-copilot checkout or upstream scripts here; no dependencies installed. Required commands listed in requirements report |
+| External manifest schema/Vally/intake | NOT RUN | Existing JSON parsed and required metadata observed only; Vally executable absent; no tool downloaded and no schema acceptance asserted |
+| Copilot install/discovery/editorial behavior | UNTESTED | Copilot executable is present; no isolated installation or model session performed under this preparation-only task. No version/model behavior claim |
+| Baseline comparison/independent review | UNTESTED | Input-only cases and separate rubric prepared; no independent evaluator or baseline run occurred |
+| Submission, approval, listing and acquisition | NOT PERFORMED / NOT VERIFIED | No external mutation; present remote acquisition and marketplace listing were not established as of this observation date |
+
+Candidate identity is tied to the supplied source hashes and manifests. The exporter records the supplied source commit as a caller-provided label, not a Git attestation. The helper's `--installed-root` verification was pointed at a local staging folder; it is **not evidence that an installer was run**.
+
+`prepare.py` records commands and checks with `PYTHONDONTWRITEBYTECODE=1`; test temporary files were directed to `output/tmp/`. Exporter version is identified by `input-inventory.json` and preserved input-integrity evidence. The script refuses to overwrite candidate export directories, so rerun in a fresh workspace/output after retaining the evidence you need.
+
+For later runtime trials, expose the unchanged skill through actual Copilot discovery in an approved isolated workspace. Keep expected judgments separate, record the loaded skill/installed hashes, runtime/model/version, permissions, complete inputs/outputs and a baseline with no skill. Use the prepared cases; repeat borderline results. Public submission notes should summarize only cleared evidence rather than upload this entire local packet, whose logs contain workspace paths.

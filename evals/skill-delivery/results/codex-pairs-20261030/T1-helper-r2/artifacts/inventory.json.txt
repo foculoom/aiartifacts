@@ -1,0 +1,132 @@
+{
+  "algorithm": "SHA-256",
+  "files": {
+    "DEPENDENCIES-PROVENANCE.md": {
+      "bytes": 4574,
+      "mode": "0644",
+      "sha256": "58e17c1d5fd751b9769286e3b2ee8fa3f8e9d78ac128b6085ce939e3ca53ea2b"
+    },
+    "REVIEW.md": {
+      "bytes": 5072,
+      "mode": "0644",
+      "sha256": "ffcda85e436947a7400d87d6a6c2b0e31cd724bb6f5dbd3769bc2dfbb7a565ca"
+    },
+    "SKILLS-SH-DRAFT.md": {
+      "bytes": 2762,
+      "mode": "0644",
+      "sha256": "e0c9482d0c23f5ba20597198042cb4d0caf602f4872f3f6c883b2719f84a0b2b"
+    },
+    "candidate/manifest.json": {
+      "bytes": 3212,
+      "mode": "0644",
+      "sha256": "02a14826f34e81da5a41d68d80387a0de57a375e4b3bea46ba76f902c8bc0361"
+    },
+    "candidate/payload/DEPENDENCIES.md": {
+      "bytes": 1856,
+      "mode": "0644",
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b"
+    },
+    "candidate/payload/LICENSE": {
+      "bytes": 11357,
+      "mode": "0644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "candidate/payload/SKILL.md": {
+      "bytes": 4282,
+      "mode": "0644",
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4"
+    },
+    "candidate/payload/references/audience/adult.md": {
+      "bytes": 941,
+      "mode": "0644",
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d"
+    },
+    "candidate/payload/references/audience/early-reader.md": {
+      "bytes": 1283,
+      "mode": "0644",
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052"
+    },
+    "candidate/payload/references/examples.md": {
+      "bytes": 2108,
+      "mode": "0644",
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3"
+    },
+    "candidate/payload/references/medium/game-dialogue.md": {
+      "bytes": 1096,
+      "mode": "0644",
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d"
+    },
+    "candidate/payload/references/medium/game-ui.md": {
+      "bytes": 1156,
+      "mode": "0644",
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952"
+    },
+    "candidate/payload/references/medium/longform.md": {
+      "bytes": 1457,
+      "mode": "0644",
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc"
+    },
+    "candidate/payload/references/medium/web.md": {
+      "bytes": 1131,
+      "mode": "0644",
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615"
+    },
+    "candidate/payload/scripts/prose_lint.py": {
+      "bytes": 16864,
+      "mode": "0644",
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8"
+    },
+    "candidate/payload/tests/test_prose_lint.py": {
+      "bytes": 12983,
+      "mode": "0644",
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192"
+    },
+    "candidate/skill.zip": {
+      "bytes": 57998,
+      "mode": "0644",
+      "sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc"
+    },
+    "environment.json": {
+      "bytes": 957,
+      "mode": "0644",
+      "sha256": "7a5d4bf55e552646b47e49e65014b98be5db34270e5280fc6b443b5077ff908b"
+    },
+    "export-config.json": {
+      "bytes": 1059,
+      "mode": "0644",
+      "sha256": "c6bbd12b85f2537591c28436274d5fe2a5697bcb07db6fd147032512b1a86741"
+    },
+    "initial-validation-results.json": {
+      "bytes": 7951,
+      "mode": "0644",
+      "sha256": "392bcd16ae8827dee5d66c303f1af33c5e8090892e0f55fa26ced38bcfefa46c"
+    },
+    "prepare_candidate.py": {
+      "bytes": 4439,
+      "mode": "0644",
+      "sha256": "4e45d4077dd69681e7f19da4f8092c0a73727ef7c24851681de5aef87ef04353"
+    },
+    "source-integrity.json": {
+      "bytes": 5371,
+      "mode": "0644",
+      "sha256": "d9a021cb93fc7f5232e0f0f6fb762d26805c50468de737133bee6fe92795efbb"
+    },
+    "source-record.json": {
+      "bytes": 1783,
+      "mode": "0644",
+      "sha256": "636550dcf043a58988a13376dfdc28ddd6d05d8b16ec28c097dabeee694b647e"
+    },
+    "test-tmp/xcrun_db": {
+      "bytes": 720,
+      "mode": "0600",
+      "sha256": "c2a69ba4987480a314eec2d2864e1487d3002ec6602364ae2362cb4f239a4a7a"
+    },
+    "validation-results.json": {
+      "bytes": 5504,
+      "mode": "0644",
+      "sha256": "e78fd06761344201c87a88db5f726321853c8a6e291a9c24d0b17eecbb70559f"
+    }
+  },
+  "observation_date": "2026-10-30",
+  "scope": "All regular files under output/, excluding inventory.json itself; review metadata is outside candidate payload"
+}

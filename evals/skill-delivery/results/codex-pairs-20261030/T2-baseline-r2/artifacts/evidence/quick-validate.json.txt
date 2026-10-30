@@ -1,0 +1,13 @@
+{
+  "check": "quick-validate",
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "existing-authoring/scripts/quick_validate.py",
+    "<CASE_ROOT>/output/candidate/skills/editorial-writing"
+  ],
+  "environment_overrides": {},
+  "exit_code": 0,
+  "stdout": "Skill is valid!\n",
+  "stderr": ""
+}

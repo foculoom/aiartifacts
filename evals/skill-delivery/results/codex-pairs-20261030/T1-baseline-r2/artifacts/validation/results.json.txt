@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-30",
+  "python39": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "python312": "Python 3.12.13",
+  "authoring_validator_dependency": {
+    "PyYAML": "6.0.3"
+  },
+  "initial_default_temp_tests": {
+    "per_interpreter": {
+      "tests": 27,
+      "failures": 3,
+      "errors": 2
+    },
+    "reason": "macOS /var is a symlink; checker rejects symlink ancestors",
+    "logs": [
+      "validation/tests-python39.txt",
+      "validation/tests-python312.txt"
+    ]
+  },
+  "canonical_temp_tests": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "output/candidate/skills/editorial-writing/tests",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "<absolute output/validation/tmp>"
+      },
+      "exit_code": 0,
+      "log": "validation/tests-python39-canonical-temp.txt",
+      "tests": 27
+    },
+    {
+      "command": [
+        "python3.12",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "output/candidate/skills/editorial-writing/tests",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "<absolute output/validation/tmp>"
+      },
+      "exit_code": 0,
+      "log": "validation/tests-python312-canonical-temp.txt",
+      "tests": 27
+    }
+  ],
+  "relative_links_checked": 9,
+  "prose_lint": {
+    "files_checked": 9,
+    "findings": 0,
+    "exit_code": 0
+  },
+  "quick_validate": {
+    "exit_code": 0,
+    "log": "validation/quick-validate.txt"
+  }
+}

@@ -1,0 +1,30 @@
+# Change and provenance notes
+
+Observed 2026-10-30. This is a local distribution candidate prepared from the supplied cleared `source/new/editorial-writing` tree. It has not been published, installed, submitted, or accepted by a distribution provider.
+
+## Source comparison
+
+New versus old source: 14 regular files compared, 13 unchanged, one modified, none added or removed. The only content change is four appended lines in `references/examples.md`: a heading, “Synthetic update for this trial,” and advice to put the next action before background detail in a short help panel. The exact patch is `source-changes.diff`. The candidate deliberately preserves these supplied bytes, including the trial heading; no editorial rewrite was needed for packaging.
+
+The old ZIP has all 14 old-source files with matching bytes, plus `private-notes.txt`. Its SHA-256 is `fbd1864d573f818e5975a8f80299d3b61841e8ac2db5b3c258162784ff5058b6`. It was inspected in place without extraction or modification. Private-note contents were neither copied nor included in these reports; the comparison records only its path, size and hash.
+
+The candidate ZIP contains a single `editorial-writing/` skill directory with 12 regular files. Relative to the old ZIP, it changes `references/examples.md` and omits `private-notes.txt` and both Python bytecode caches. All other included bytes match the old source/archive.
+
+## Inclusion decisions
+
+The explicit allowlist in `prepare.py` includes SKILL.md, LICENSE, DEPENDENCIES.md, all seven supplied reference profiles/examples, the portable checker and its synthetic development tests. Tests are retained to permit self-contained checker validation and are explicitly described as development-only in DEPENDENCIES.md. The checker needs only optional Python 3.9+ and the standard library; the writing instructions can be used without Python.
+
+Excluded from both package directory and ZIP: `scripts/__pycache__/prose_lint.cpython-312.pyc`, `tests/__pycache__/test_prose_lint.cpython-312.pyc`, archive-only `private-notes.txt`, the existing plugin manifest, authoring tools, upstream documentation, input records and these delivery reports. Caches are generated, interpreter-specific artifacts. The archive is not a clearance source for extra content. No new license, UI metadata, plugin wrapper, runtime dependency, or project/customer text was introduced.
+
+## Provenance limits
+
+The supplied source record identifies `https://github.com/foculoom/aiartifacts`, path `plugins/editorial/skills/editorial-writing`, base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. These are supplied provenance claims, not a live checkout verification. All 14 old-source hashes match that record. The new tree matches 13 of those 14 hashes. The changed examples file has:
+
+- Recorded/base SHA-256: `b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3`
+- Actual candidate SHA-256: `6e2b4b986ea6b7f506a8dcfdc6cd7157fdb8cf09adad79a37e44d21aaa8b572d`
+
+Accordingly this candidate is described as the supplied base plus a local examples change, not as byte-identical to the base commit. The supplied `input-inventory.json` correctly records the new examples hash; every entry in that inventory was verified before packaging. `comparison.json` records exact source/archive inventories and the stale source-record entry. `package-inventory.json` and `package-files.sha256` describe the actual delivered files, rather than copying the stale record.
+
+The package retains the complete Apache-2.0 license and supplied Foculoom provenance/dependency statements. No NOTICE file is present in either source tree or old ZIP. No package file was edited during this preparation. Clearance rests on the supplied workspace declaration and authorized source tree; no additional independent rights certification is asserted.
+
+The existing skill-authoring workflow was read and its existing quick validator used. Supplied upstream contribution/installer snapshots were consulted as background, not bundled. The source record labels their upstream revisions as `5269f7ea2d6c3a9bfda5ed878b6726cf509121fd` (awesome) and `92a9a34ac3bf88e695e468b90c7bf32f163d32c8` (skills). Those snapshots are not a live compatibility or marketplace acceptance check. The plugin manifest's version 0.1.1 describes the supplied plugin, not a newly released version of this standalone skill candidate.

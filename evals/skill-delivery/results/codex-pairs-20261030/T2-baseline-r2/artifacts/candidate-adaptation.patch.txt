@@ -1,0 +1,8 @@
+--- a/skills/editorial-writing/SKILL.md
++++ b/skills/editorial-writing/SKILL.md
+@@ -34,3 +34,5 @@
+ If Python or the checker is unavailable, complete the editorial work you can and state that lint was not run. If a requested source cannot be read with existing permission, explain the missing input; do not bypass access controls or claim to have reviewed it.
+ 
+ Deliver the requested prose or review in the requested format. Keep production notes out of reader-facing copy unless asked for them.
++
++See [dependencies and provenance](DEPENDENCIES.md) for runtime requirements and limits, [checker tests](tests/test_prose_lint.py) for development validation, and [LICENSE](LICENSE) for the supplied Apache-2.0 terms.

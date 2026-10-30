@@ -1,0 +1,4 @@
+Write a game UI hint of at most 60 characters, including spaces. The player is
+at a locked door. Holding the A button scans the keycard; tapping A does
+nothing. The scan may fail if the player moves away. Give one hint only, with
+no explanation or lore.

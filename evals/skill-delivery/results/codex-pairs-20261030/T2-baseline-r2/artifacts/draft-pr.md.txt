@@ -1,0 +1,43 @@
+# Draft direct-inclusion submission — do not send
+
+Target repository: `github/awesome-copilot`; base and target: `main`.
+
+Proposed title:
+
+```text
+Add editorial-writing skill for medium and audience-aware prose review 🤖🤖🤖
+```
+
+Proposed body:
+
+---
+
+This adds `skills/editorial-writing/` for reviewing and revising website copy, game UI, branching dialogue and longer prose against the intended reader, medium and supplied project voice. It includes four medium profiles, adult and early-reader profiles, synthetic diagnosis examples and an optional Python 3.9+ standard-library warning checker with tests.
+
+The specialized workflow checks such details as save-state wording, branch continuity and purposeful early-reader repetition while preserving facts, terminology and project constraints. The checker reports review candidates without rewriting text, scoring quality or detecting authorship. Python is optional for editorial work; the skill reports when optional lint cannot run.
+
+All proposed source files are under `skills/editorial-writing/`; generated documentation still needs to be built in the target checkout. Existing bytecode and the source plugin manifest are excluded. The only content adaptation adds links to dependencies, tests and the supplied license.
+
+Provenance: Foculoom AI Artifacts, source revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`, skill path `plugins/editorial/skills/editorial-writing`. This draft was prepared with AI assistance. The source declares Apache-2.0; direct contribution under this repository's MIT terms is unresolved. Do not submit this draft until the rights holder and maintainers resolve the terms and the final files accurately reflect that decision.
+
+Validation completed locally:
+
+- Supplied skill-authoring validator and local metadata/reference/size/LF checks pass.
+- All 27 checker tests pass with a canonical temporary directory. The default macOS temporary alias produces three failures and two errors because the helper rejects symlinked ancestors; this limitation remains documented for review.
+- Advisory prose lint checks nine candidate documents and reports zero findings. This is not evidence of editorial quality.
+
+Before submission:
+
+- [ ] Resolve rights and MIT contribution terms; confirm final notices and provenance.
+- [ ] Check existing upstream skills for overlap and substantiate the specialized value.
+- [ ] Run upstream `npm run skill:validate`.
+- [ ] Run `npm run build` and the submission guide's documented update command as applicable; include and inspect actual generated README changes.
+- [ ] Run `bash eng/fix-line-endings.sh` and inspect the final diff.
+- [ ] Test the skill with GitHub Copilot and attach actual behavioral results.
+- [ ] Resolve or accept the documented temporary-path limitation.
+
+Bundled executable code makes the proposal subject to the guide's high-risk review category. No upstream CI, reviewer approval or installation success is claimed.
+
+---
+
+Local-only note: The checklist is intentionally incomplete. This body requires updating against final licensing and validation evidence before any separately authorized submission. No PR was opened.

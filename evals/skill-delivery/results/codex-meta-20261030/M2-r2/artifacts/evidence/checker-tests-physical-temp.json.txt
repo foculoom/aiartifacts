@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/editorial-writing/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "extra_env": {
+    "TMPDIR": "<CASE_ROOT>/output/evidence/tmp"
+  },
+  "stderr": "test_clean_and_empty_directories_return_zero_without_quality_claim (test_prose_lint.FilesAndCliTests) ... ok\ntest_cli_does_not_rewrite_source (test_prose_lint.FilesAndCliTests) ... ok\ntest_default_success_and_explicit_strict_failure (test_prose_lint.FilesAndCliTests) ... ok\ntest_discovery_filters_types_generated_dirs_and_duplicate_inputs (test_prose_lint.FilesAndCliTests) ... ok\ntest_json_contract_and_repeatable_allow_option (test_prose_lint.FilesAndCliTests) ... ok\ntest_missing_unsupported_invalid_utf8_and_usage_exit_two (test_prose_lint.FilesAndCliTests) ... ok\ntest_symlinks_are_skipped_and_explicit_links_rejected (test_prose_lint.FilesAndCliTests) ... ok\ntest_allow_terms_are_exact_case_insensitive_and_repeatable (test_prose_lint.ProseTests) ... ok\ntest_blank_quoted_line_ends_lazy_continuation (test_prose_lint.ProseTests) ... ok\ntest_blockquote_ends_at_unquoted_heading (test_prose_lint.ProseTests) ... ok\ntest_bom_and_alternate_yaml_end (test_prose_lint.ProseTests) ... ok\ntest_comment_markers_inside_code_do_not_swallow_prose (test_prose_lint.ProseTests) ... ok\ntest_each_requested_word_is_detected (test_prose_lint.ProseTests) ... ok\ntest_exact_word_boundaries_and_case (test_prose_lint.ProseTests) ... ok\ntest_fences_support_tildes_lengths_and_matching_character (test_prose_lint.ProseTests) ... ok\ntest_frontmatter_comments_quotes_and_source_lines (test_prose_lint.ProseTests) ... ok\ntest_inline_code_exact_runs_and_multiline (test_prose_lint.ProseTests) ... ok\ntest_links_keep_labels_but_not_destinations_or_titles (test_prose_lint.ProseTests) ... ok\ntest_long_line_excerpt_includes_the_flagged_word (test_prose_lint.ProseTests) ... ok\ntest_masked_repeated_paragraphs_do_not_count (test_prose_lint.ProseTests) ... ok\ntest_only_longest_qualifying_heading_suffix_is_reported (test_prose_lint.ProseTests) ... ok\ntest_repeated_h2_check_is_optional_and_has_thresholds (test_prose_lint.ProseTests) ... ok\ntest_repeated_substantive_paragraph_across_documents (test_prose_lint.ProseTests) ... ok\ntest_short_or_same_document_repeat_is_not_cross_input_finding (test_prose_lint.ProseTests) ... ok\ntest_stock_phrases_apostrophes_whitespace_and_boundaries (test_prose_lint.ProseTests) ... ok\ntest_unclosed_fence_is_not_prose (test_prose_lint.ProseTests) ... ok\ntest_unmatched_code_does_not_hide_later_paragraph (test_prose_lint.ProseTests) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.616s\n\nOK\n",
+  "stdout": ""
+}

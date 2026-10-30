@@ -1,0 +1,16 @@
+# Requirements
+
+Required: an agent with read-only access to the supplied Markdown and permitted
+local targets, including directory listings for exact filename comparison.
+No bundled executable, package installation, network, credentials, or global
+configuration is needed. No particular operating system or agent runtime is
+required by the instructions; runtime compatibility has not been certified.
+
+Optional: an already available renderer-aware Markdown parser or local link
+checker. Inspect its capabilities and use only read-only, offline operation.
+Do not rely on a regular expression alone to parse arbitrary Markdown. For a
+small document, direct inspection is sufficient; note unsupported syntax.
+
+If a tool, target, renderer mapping, or permission is absent, complete the
+remaining checks and name the precise unverified portion. Do not install tools
+or broaden permissions to complete the review.

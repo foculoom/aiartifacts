@@ -1,0 +1,25 @@
+# Checks actually performed
+
+Observation date: 2026-10-30. Commands, exit codes and full output are in `evidence/*.json`. Local Python 3.9.6; already present PyYAML 6.0.3. Host model identifies as GPT-6; exact serving build is not exposed. No isolated agent runtime was exercised.
+
+| Layer | Result | Evidence and practical limit |
+| --- | --- | --- |
+| Source identity | Pass, against supplied record | `source-record-check.json`: all 14 recorded skill files match. Base commit is supplied, not authenticated. `git-revision.json`: exit 128, no Git repository. |
+| Source preservation | Pass | `source-before.json`, `source-after.json`, `source-preservation.json`: same complete 15-file `source/` inventory, hashes, modes and symlink flags. |
+| Metadata | Pass, bounded | `quick-validate.json`: existing authoring validator says valid. Its allowed fields include license but omit portable compatibility. No metadata was removed or added to appease this validator. Manual inspection confirms nonempty name/description, matching canonical folder name and relative resource routing. This is not upstream Vally validation. |
+| Checker tests, ordinary environment | Fail | `checker-tests-default-temp.json`: 27 run, 3 failures and 2 errors; 22 pass. Temporary paths begin `/var`, a macOS symlink ancestor; the helper refuses them. This exposed an environment constraint, not permission to relax symlink checks. |
+| Checker tests, physical temp path | Pass | `checker-tests-physical-temp.json`: same unchanged 27 tests pass, no skips, after setting TMPDIR to a physical directory under this packet. Covers warning rules, masking, repeat thresholds, JSON/exit contracts, no rewrite, missing/invalid inputs, generated directories and symlink rejection. Does not establish writing quality or actual OS-denied file handling. |
+| Export helper tests | Partial | `exporter-tests.json`: 25 run, 22 pass, 1 failure and 2 errors. Three integration cases assume the original repository layout/pilot configs, unavailable in this relocated workspace; the self-export case selects the relocated `.agents` path, rejected by the helper. Tests and paths were not patched. No claim of a fully passing exporter suite. |
+| Skill and plugin export | Pass | `skill-export.json`, `plugin-export.json`: explicit selections, root licenses, local Markdown targets and bounded sensitive-content/path screening accepted. 12/15 files selected, caches excluded. |
+| ZIP and staged folder identity | Pass | `skill-archive.json`, `skill-staged.json`, `plugin-archive.json`, `plugin-staged.json`: inventories, bytes and normalized modes match each manifest. The helper's `--installed-root` option checked staged folders, not actual installs. |
+| Node environment | Blocked | `node-version.json`: exit -6; installed Node 25.6.1 cannot load `libsimdjson.29.dylib`. No repair or install attempted. `tool-paths.json`: no skills executable found; copilot and gh paths exist. Presence does not prove versions or functionality. |
+| Upstream schema/Vally/build | Untested | No reviewed dependency workspace supplied. Did not run npm, npx, Vally, upstream npm tasks or full Agent Plugins schema validation. Local export checks are narrower. |
+| Installation/discovery | Untested | Neither skills CLI nor Copilot installation was executed. No global config, consumer pin or lockfile was changed. |
+| Skill selection/editorial behavior | Untested | Prepared fixtures and held-out criteria only. No independent trials, no baseline, no reader testing, no runtime compatibility certification. |
+| External state | Unverified | No submission, approval, listing, current public acquisition or customer receipt checked. Source docs were inspected, not acceptance outcomes. |
+
+Every reachable payload script and all selected prose/reference files were inspected. The checker reads UTF-8 Markdown/text, filters generated directories, rejects explicit symlink paths, returns advisory findings, and does not rewrite inputs. Its exact Python/OS portability beyond this environment remains untested. For paths that traverse system symlinks, an already authorized physical path may work; do not bypass access controls or silently follow links.
+
+No candidate defect requiring a prose change was demonstrated. Activation precision, whether the guidance improves editorial output, and cross-runtime behavior remain evaluation questions. Retaining existing source avoids introducing untested editorial changes merely for distribution.
+
+Future acceptance needs separate receipts for discovery/install bytes, runtime selection and useful output, upstream gates and maintainer acceptance. Rerun affected cases if payload bytes or target contracts change. Preserve the current archive and manifest as a rollback/reference artifact; do not update consumers' pins automatically.

@@ -1,0 +1,6 @@
+{
+  "plugin-export/manifest.json": "039717bd4e904aa1ae7c9a98a507c246f03b1cf6e42d95aba1a7ce357d90dd04",
+  "plugin-export/skill.zip": "accedfdf115aa82c6f0ec0c8f3460a3d41eb1fba66bb4c4a24b3e2bb6294646b",
+  "skill-export/manifest.json": "02a14826f34e81da5a41d68d80387a0de57a375e4b3bea46ba76f902c8bc0361",
+  "skill-export/skill.zip": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc"
+}

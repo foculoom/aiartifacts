@@ -1,0 +1,18 @@
+{
+  "observed_at_utc": "2026-10-30T17:47:53.270508+00:00",
+  "prepared_packet_links": "pass",
+  "copied_upstream_document_links": "retain upstream context; not checked as local packet links",
+  "all_supplied_input_hashes": "unchanged",
+  "source_file_set": "unchanged",
+  "candidate_hashes": "match manifest",
+  "license_file_and_frontmatter": "unchanged; Apache-2.0",
+  "content_adaptation": "resource links only",
+  "submitted_or_published": false,
+  "unresolved": [
+    "direct-contribution licensing and route",
+    "macOS symlinked temporary paths",
+    "upstream native checks and generated docs",
+    "Copilot behavior and installation",
+    "current catalog overlap and external public source verification"
+  ]
+}

@@ -1,0 +1,5 @@
+Use $skill-delivery to inspect source/editorial-writing and give a brief
+distribution-readiness summary for skills.sh and awesome-copilot. Identify what
+these supplied files establish, what remains unverified, and the next bounded
+preparation step. Return the summary only. Do not rebuild a package, run broad
+test suites, create files, install software, submit or publish anything.

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "<RUN_ROOT>/codex-meta-M2-r2/.agents/skills/skill-delivery/scripts/export_skill.py",
+    "export",
+    "--source-root",
+    "<RUN_ROOT>/codex-meta-M2-r2/source",
+    "--config",
+    "<RUN_ROOT>/codex-meta-M2-r2/output/skill-export.json",
+    "--output",
+    "<RUN_ROOT>/codex-meta-M2-r2/output/skill-export"
+  ],
+  "exit_code": 0,
+  "extra_env": {},
+  "stderr": "",
+  "stdout": "{\"file_count\": 12, \"limitations\": [\"Basic metadata and local Markdown checks, not full format validation.\", \"Narrow secret/path screening, not privacy or licensing clearance.\", \"Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.\", \"No dependency installation, runtime compatibility or behavior evaluation.\", \"No publication, submission or consumer update.\"], \"status\": \"prepared\"}\n"
+}

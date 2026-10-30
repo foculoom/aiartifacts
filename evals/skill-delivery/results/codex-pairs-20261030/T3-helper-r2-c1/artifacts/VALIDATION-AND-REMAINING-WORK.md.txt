@@ -1,0 +1,37 @@
+# Validation and remaining work
+
+Observation date: 2026-10-30. Status: local distribution candidate prepared and verified; runtime behavior and external distribution remain untested.
+
+| Layer | Result and evidence |
+| --- | --- |
+| Metadata | PASS: supplied authoring validator accepts packaged SKILL.md; name, description and Apache-2.0 metadata retained. See `validation/candidate-structure.log`. This is that validator's bounded check, not every ecosystem's acceptance. |
+| Selection and privacy | PASS within reviewed scope: explicit 11-file allowlist, agent static inspection of all selected prose/code, required resources and license included; caches/private entry/development files excluded. Export helper's bounded path, secret-marker and local-link screens pass. Human review and approval remain PENDING. These scans are not exhaustive privacy or legal proof. |
+| Helper behavior | PASS: 27/27 existing tests on old source, 27/27 on new source, 27/27 on a copy of packaged helper plus the unchanged test file. No skipped tests. Logs identify cases and commands. Includes exact terms, Markdown masking, repetition thresholds, JSON/exit behavior, missing and unsupported input, invalid UTF-8, symlink rejection, and no rewriting. These are checker tests, not editorial-quality tests. |
+| Export helper suite | PARTIAL: 22/25 pass; one failure and two errors in repository-specific tests. The relocated suite assumes its original upstream repository layout: missing original editorial tree, missing pilot config files, and a self-export source path now under denied `.agents`. The complete failed run is retained in `validation/export-helper-tests.log`. Source and helper were not patched to conceal these failures. |
+| Exact package integrity | PASS: candidate ZIP and staged payload separately match the manifest's complete 11-file inventory, SHA-256 values and normalized modes. ZIP CRC passes, names are unique and the archive contains no extra/obsolete entries. See archive/folder logs, `inventory.tsv` and `validation/integrity.json`. |
+| Folder verification retry | First invocation FAILED because a relative folder path was supplied to a tool requiring an absolute path. Corrected absolute-path invocation PASSED. Both logs are retained; no payload change was needed. This checked the staging directory, not an actual installation. |
+| Provenance comparison | PASS: all 14 old source files match the supplied base record and corresponding old ZIP entries. Only the examples file differs in new source. All packaged bytes match the selected new-source bytes. |
+| Preservation | PASS: before/after source hashes and all entries of supplied input-inventory.json match. Old ZIP remains unchanged. No dependency installation, publication, submission, or global configuration change was performed. |
+| Runtime/editorial behavior | UNTESTED: no isolated runtime discovery, implicit/explicit activation, non-activation, independent editorial completion, baseline comparison, or agent safe-failure trial was executed. No named host/model compatibility or editorial-quality acceptance is established. Static fallback instructions and checker tests do not prove agent behavior. |
+| Installation and distribution | NOT PERFORMED: no installation, external validation, release, submission, acceptance, listing or customer-acquisition check. As of this observation, this artifact is available locally under output/ only; public availability of this exact candidate is not established. Earlier source/plugin availability cannot establish availability of these new bytes. |
+
+## Remaining work and next actions
+
+1. Human review and release approval remain PENDING. The skill owner should review the synthetic help-panel addition, retained trial heading and exact manifest before approving a release. The supplied clearance enables local packaging; this work does not claim external release approval.
+2. In an already authorized isolated target runtime, run independent input-only trials with separately held criteria: implicit/explicit activation; nearby non-activation; a cleared real editing case preserving facts and deliberate voice; a case needing no edits; missing-tool/unreadable-input/private-content behavior. Record runtime/model/version, actual discovery/loading, complete inputs/outputs, fixture and candidate hashes, permissions and reviewer judgments. Compare the same editorial case without the candidate. Repeat borderline results. No paid inference or new dependency installation is authorized by this report.
+3. If release policy requires a green complete exporter suite, run the three layout-dependent tests in their original authorized checkout with the original pilot fixtures. The observed exact candidate verification is already complete and need not be treated as undone.
+4. Only for a separately chosen and authorized distribution route, check its current official requirements, validate the exact artifact there, and draft the appropriate release/submission. This standalone ZIP has root SKILL.md and is not the existing plugin manifest. Preserve Apache-2.0 and required notices, retain the old artifact for rollback, and verify installed bytes separately from behavior.
+5. After any approved release, verify public acquisition and record its date and exact revision. There is no evidence here of curated acceptance, directory indexing, customer receipts or revenue.
+
+## Local review and verification draft
+
+Only `candidate/skill.zip` and its equivalent `candidate/payload/` are the distributable skill. Reports and validation workspaces are review evidence outside the package. Extract the ZIP into an empty directory named `editorial-writing` for inspection; no wrapper folder exists inside the archive. No extraction or installation into a runtime was performed.
+
+From the supplied workspace, the reviewed helper can repeat integrity checks without installation:
+
+```sh
+python3 -B .agents/skills/skill-delivery/scripts/export_skill.py verify --manifest "$PWD/output/candidate/manifest.json" --archive "$PWD/output/candidate/skill.zip"
+python3 -B .agents/skills/skill-delivery/scripts/export_skill.py verify --manifest "$PWD/output/candidate/manifest.json" --installed-root "$PWD/output/candidate/payload"
+```
+
+The second command's option name is supplied by the tool; here it refers only to the local staged payload. `SHA256SUMS` inventories all output files other than itself; its payload entries duplicate the exact hashes in the manifest. Hashes establish identity, not trust or authorship.

@@ -1,0 +1,24 @@
+# Source, dependencies and export review
+
+Reviewed 2026-10-30. Canonical source remains `foculoom/aiartifacts:plugins/editorial/skills/editorial-writing`; this packet reuses `source/editorial-writing/` without edits. `source-record.json` supplies base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`. The existing plugin metadata supplies name `editorial`, version `0.1.1`, author Foculoom, Apache-2.0 and the `extensions.com.openai` interface. That extension is retained verbatim; no client-specific prose fork was created.
+
+The local README calls this a cleared candidate. Its bundled dependencies record attributes instructions, profiles, synthetic examples and checker to Foculoom AI Artifacts, with no vendored third-party prose or code. Those statements are the available provenance evidence; remote history, contributor agreements and any additional upstream NOTICE were not independently inspected. Maintainer confirmation remains a release decision. Apache-2.0 text and existing identifiers are preserved. The standard license appendix contains its sample copyright placeholders; they were not replaced with invented authorship.
+
+| Component | Source and license | Dependency/permission boundary |
+| --- | --- | --- |
+| SKILL.md and seven references | Supplied Foculoom candidate, Apache-2.0 | Agent Skills discovery and permitted file reads. No network or credentials inherently required. Project facts, canon and prose stay in the user's project. |
+| prose_lint.py | Same source, Apache-2.0 | Optional Python 3.9+, standard library. Tested here on 3.9.6. No network, package installation, credentials or text rewriting. If unavailable, do editorial work and disclose omitted lint. |
+| test_prose_lint.py | Same source, synthetic fixtures, Apache-2.0 | Development-only unittest. Physical temp path needed for this macOS test run. |
+| LICENSE / DEPENDENCIES.md | Existing skill files | Both accompany each standalone skill and the reconstructed plugin root. No new licensing terms. |
+| plugin.json | `source/existing-plugin.json`, unchanged | Existing plugin metadata, author and Apache-2.0 declaration. Its full SHA-256 is in the plugin manifest. Version not a release receipt. |
+| Authoring validator | Existing workspace workflow, `existing-authoring/license.txt` | Development check only; used existing PyYAML 6.0.3. Not copied into either payload. |
+| Export helper | `.agents/skills/skill-delivery`, Apache-2.0 | Python standard library only. Reused in place, not vendored into payloads. Tool hash recorded in `evidence/tool-hashes.json`. |
+| skills CLI / Vally / Copilot | External tooling, not bundled or installed | Need separately reviewed versions and runtime requirements. Do not infer their exact dependency licenses or working versions from documentation snapshots. Tool lock/version review remains open. |
+
+The explicit maps in `skill-export.json` and `plugin-export.json` are the complete export allowlists. Each file's origin, SHA-256 and normalized mode appears in the corresponding manifest. Plugin packaging adds only three mapped root files: existing manifest, license, dependencies. The nested skill matches the standalone selection byte for byte. Source files with executable bits normalize to 0755, others to 0644; ownership, ACLs and extended attributes are not preserved.
+
+Both `__pycache__` entries are intentionally excluded. Also excluded: workspace instructions, skill-delivery/authoring workflows, source-record/input inventory, internal logs, evaluation rubric, local skills lock, official documentation snapshots and unrelated files. The supplied lock pins a local skill-delivery path; it is not an editorial consumer pin and must not be shared as an installation lock.
+
+Manual inspection of the 12 skill files and manifest found synthetic examples, ordinary public attribution URLs, no customer manuscripts, private project briefs, credentials or dependency on another Foculoom product. The export helper also applied its narrow secret and denied-path screen. These bounded checks do not prove absence of secrets, privacy compliance or publication rights. Keep the entire evidence packet internal until separately cleared; distribute only the reviewed payload and an approved public description.
+
+No additional required portable environment constraint was discovered, so no speculative compatibility metadata was added. The existing dependency record already explains optional Python and fallback behavior. Remote release identity, publication rights and client compatibility remain distinct questions.

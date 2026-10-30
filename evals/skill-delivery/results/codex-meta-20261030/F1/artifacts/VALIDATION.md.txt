@@ -1,0 +1,61 @@
+# Validation evidence
+
+Observation date: 2026-10-30. Result: local packaging and checker validation passed; external and runtime acceptance remain untested.
+
+## Source and rights
+
+The supplied README describes this as a cleared candidate from Foculoom AI Artifacts. `source-record.json` identifies base revision `211ad9da8b7a3d0740d1896a74c018ed3ad097be`, repository `https://github.com/foculoom/aiartifacts`, skill path `plugins/editorial/skills/editorial-writing`. All 14 source skill files, including pre-existing caches, match the supplied hashes. Before/after file hashes, sizes and modes match exactly (`evidence/source-before.json`, `evidence/source-after.json`). No source file or source mode was changed. The base revision is supplied provenance; no Git checkout is present and no remote revision-to-bytes verification was performed.
+
+Payload prose, profiles, examples, and helper are identified as Foculoom-authored in the supplied dependency record. Apache-2.0 is retained, with full license text and provenance/dependency records in each independently installable skill and plugin root. No relicensing or third-party content was added. No separate NOTICE was supplied. Rights review relies on the supplied clearance and provenance; automated screening is not legal clearance.
+
+## Selection and review
+
+Reviewed SKILL.md, all seven referenced profiles/examples, the reachable checker script, dependency/license records, and checker tests. Explicit mappings are recorded in each export config. The standalone payload contains instructions, seven references, checker, license and dependency record. The plugin reuses those exact bytes plus the existing manifest and root license/dependency copies. No prose fork or new adapter was introduced.
+
+Excluded: both `__pycache__` bytecode files, development test script, repository/authoring workflows, input inventories, internal evidence and unrelated files. The existing plugin manifest is byte-identical to `source/existing-plugin.json`; it retains the Apache license and OpenAI extension namespace. Reviewed contents include only generic instructions and synthetic examples, with public provenance URLs; no manuscript, customer data, credentials or private company context was selected. The helper's narrow marker/path scan passed, but is not proof that all possible secrets are absent.
+
+## Actual checks
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Input integrity | Pass: all 14 supplied skill hashes match | source-before.json; prepare.py assertions |
+| Source preservation | Pass: hashes, sizes and modes identical after build | source-before.json; source-after.json |
+| Existing checker suite | Pass: 27 tests, no skips reported | prose-tests.log |
+| Existing authoring validator on source | Pass, exit 0 | authoring-validator.log |
+| Same validator on both packaged skills | Pass, exit 0 each | standalone-validator.log; plugin-skill-validator.log |
+| Read-only helper checks | Pass: metadata delimiters, local reference closure, explicit safe paths, narrow marker scan, required license and plugin discovery | prepare.py; inventory.json |
+| Exact archive inventory/hashes/modes | Pass for both archives | standalone-archive.log; plugin-archive.log |
+| Exact staged folder inventory/hashes/modes | Pass for both staged payloads | inventory.json (staged folders are not installations) |
+| Advisory prose lint on standalone payload | Pass, exit 0: nine Markdown files, zero findings | payload-prose-lint.json |
+| Agent Plugins schema and upstream Vally quality gates | Untested: no reviewed Node/Vally tool workspace available | Not represented as passed by local checks |
+| skills CLI discovery or installation | Untested; installation prohibited | No install receipt |
+| Copilot/Codex discovery and editorial behavior | Untested in isolated target runtimes | runtime-trials.json is a plan only |
+| Independent editorial quality review / baseline comparison | Untested | Unit tests and lint do not establish editorial quality |
+| External intake, acceptance, listing, acquisition | Unverified; nothing submitted or published by this task | distribution-drafts.md |
+
+Evidence files in the table are under `evidence/` unless noted otherwise. Existing tests cover warning rules, masking Markdown, repetition, CLI JSON/exit codes, invalid and missing inputs, symlink rejection, and preservation of input bytes. These are helper behavior checks, not skill-selection or writing-quality trials.
+
+## Tools and commands
+
+Python 3.9.6, standard library; existing PyYAML 6.0.3 for the authoring validator. Full interpreter/platform details and validator/helper hashes appear in `evidence/environment.json`. No dependency was installed. Python was absent from PATH but `/usr/bin/python3` was available and resolves to the installed Xcode interpreter. Git, Node, gh, skills and Copilot were not found on PATH. No inference/runtime version is claimed for behavioral acceptance.
+
+Executed from the workspace root, with bytecode disabled throughout:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/output/tmp" /usr/bin/python3 -B -m unittest discover -s source/editorial-writing/tests -v
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B existing-authoring/scripts/quick_validate.py source/editorial-writing
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B output/prepare.py
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B existing-authoring/scripts/quick_validate.py output/standalone/payload
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B existing-authoring/scripts/quick_validate.py output/plugin/payload/skills/editorial-writing
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B .agents/skills/skill-delivery/scripts/export_skill.py verify --manifest "$PWD/output/standalone/manifest.json" --archive "$PWD/output/standalone/skill.zip"
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B .agents/skills/skill-delivery/scripts/export_skill.py verify --manifest "$PWD/output/plugin/manifest.json" --archive "$PWD/output/plugin/skill.zip"
+PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B output/standalone/payload/scripts/prose_lint.py output/standalone/payload --format json
+```
+
+The standard helper exporter calls chmod, so it was not invoked. `prepare.py` reuses its read-only checks/verification and creates files using default permissions without chmod, ACL changes or source mode changes. ZIP entry mode metadata matches the actual staged modes. No permission normalization was performed. The helper's generic manifest limitation about normalized modes describes its own usual exporter; the permission policy in inventory.json records this build's actual behavior. All staged files are invoked through the interpreter where execution is needed. ZIP timestamps/order are fixed for deterministic packaging; inventory.json binds review to the resulting archive hashes.
+
+## Dependencies and remaining actions
+
+Consumers need a skill-capable runtime that can read the directory. Python 3.9+ is optional for prose lint; its checker uses only the standard library and needs no network or credentials. If unavailable, perform editorial work and explicitly report lint as unrun. Unreadable requested input must be reported without bypassing access controls. Development tests require Python unittest; the authoring validator additionally uses existing PyYAML. Dependency and provenance records travel in the payloads.
+
+The candidate enables exact local review and later testing without altering canonical source. Next: the owner/reviewer can run the prepared isolated behavior trials with held-out grading, review actual upstream schema/Vally gates with already approved tools, and verify remote bytes and current channel status before any separately authorized submission or installation. Maintainers own curated acceptance. No runtime, listing, acquisition or revenue claim follows from these package checks.

@@ -1,0 +1,15 @@
+{
+  "check": "prose-lint",
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "<CASE_ROOT>/output/candidate/skills/editorial-writing/scripts/prose_lint.py",
+    "<CASE_ROOT>/output/candidate/skills/editorial-writing",
+    "--format",
+    "json"
+  ],
+  "environment_overrides": {},
+  "exit_code": 0,
+  "stdout": "{\n  \"files_checked\": 9,\n  \"findings\": []\n}\n",
+  "stderr": ""
+}

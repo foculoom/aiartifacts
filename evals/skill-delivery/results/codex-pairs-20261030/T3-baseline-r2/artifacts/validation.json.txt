@@ -1,0 +1,90 @@
+{
+  "observation_date": "2026-10-30",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "commands": [
+    {
+      "name": "frontmatter",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "existing-authoring/scripts/quick_validate.py",
+        "output/editorial-writing"
+      ],
+      "exit_code": 0,
+      "log": "frontmatter.log"
+    },
+    {
+      "name": "unit-tests",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "output/editorial-writing/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "unit-tests.log"
+    },
+    {
+      "name": "prose-lint",
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-B",
+        "output/editorial-writing/scripts/prose_lint.py",
+        "output/editorial-writing",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "log": "prose-lint.log"
+    }
+  ],
+  "local_links": [
+    {
+      "from": "DEPENDENCIES.md",
+      "target": "LICENSE"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/medium/longform.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/medium/web.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/medium/game-ui.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/medium/game-dialogue.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/audience/adult.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/audience/early-reader.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "references/examples.md"
+    },
+    {
+      "from": "SKILL.md",
+      "target": "scripts/prose_lint.py"
+    }
+  ],
+  "local_links_resolve": true,
+  "input_inventory_verified": true,
+  "source_and_old_archive_unchanged": true,
+  "archive_crc_and_hashes_verified": true,
+  "package_allowlist_verified": true,
+  "package_matches_new_source_bytes": true,
+  "bytecode_absent": true
+}

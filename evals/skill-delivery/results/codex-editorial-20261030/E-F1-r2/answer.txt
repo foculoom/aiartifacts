@@ -1,0 +1,3 @@
+Saved the review to [output/review.md](output/review.md), identifying two changes: tighten the opening and clarify recovery after accidental deletion.
+
+The prose warning checker could not run because `python3` is unavailable.

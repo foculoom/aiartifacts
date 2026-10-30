@@ -1,0 +1,9 @@
+Created the fresh [distribution package](output/editorial-writing-candidate.zip) with 12 cleared files.
+
+- [Exact file/hash inventory](output/package-inventory.json) and [delivery checksums](output/SHA256SUMS)
+- [Change and provenance notes](output/CHANGE-AND-PROVENANCE.md)
+- [Validation and remaining-work report](output/VALIDATION-AND-REMAINING-WORK.md)
+
+Only `references/examples.md` changed. Private notes and bytecode caches were excluded. Structural validation, all 27 tests, archive integrity, and checksums passed.
+
+Nothing was published or installed; `source/` and the old archive remain unchanged.

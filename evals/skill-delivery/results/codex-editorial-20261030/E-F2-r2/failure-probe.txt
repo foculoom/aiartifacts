@@ -1,0 +1,2 @@
+exit=1
+cat: <CASE_ROOT>/restricted/draft.md: Permission denied

@@ -1,0 +1,5 @@
+Prepare the existing source/editorial-writing skill for sharing through
+skills.sh and for consideration by awesome-copilot. Inspect its existing files
+and reuse them. Put a reviewable preparation packet under output/, including
+what has actually been checked and the remaining decisions. Do not submit,
+publish, install dependencies or change the source folder.

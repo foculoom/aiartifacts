@@ -20,17 +20,39 @@ tests. Runtime evaluation uses existing sign-in; no paid API fallback, credentia
 transfer or policy change is authorized by the toolkit.
 
 The [evaluation procedure](evals/skill-delivery/README.md) keeps prompts and
-held-out criteria separate. Dated execution receipts under its results directory
-retain exact selected-file hashes: the original base SHA alone does not identify
-uncommitted candidate bytes. Fresh installed-file comparison and runtime behavior
-are separate evidence. Copilot CLI 1.0.54 successfully installed the isolated
+held-out criteria separate. The [evidence index](evals/skill-delivery/results/README.md)
+links dated receipts, independent reviews and selected-file hashes: the original
+base SHA alone does not identify changed candidate bytes. The implemented source
+at `211ad9da8b7a3d0740d1896a74c018ed3ad097be` passed 148 Python tests,
+10 JavaScript tests and both hosted Ubuntu checks. Separate reviewers covered
+the exporter/integration and authored skill references. Later evidence and the
+three-test runtime harness require final-head review/checks. Fresh installed-file
+comparison and runtime behavior are separate evidence. Copilot CLI 1.0.54 successfully installed the isolated
 local Editorial plugin, but its unrelated connectivity probe returned
 `Access denied by policy settings` before any skill evaluation. Copilot behavior
 remains access-blocked; the cause beyond that observed denial is unverified.
+A bounded retry after restored workspace usage returned the same provider denial.
+Eleven Codex Editorial outcomes pass independent task grading within their
+recorded scope; initial instruction isolation and exact model identity remain
+unverified. Original failed sandbox setup attempts remain in the record.
 
 Source review, hosted checks, independent behavioral grading and paired usefulness
 results must be read at their exact recorded identities before claiming acceptance.
-The next source step is exact-head review and required checks. The release owner
+[PR #30](https://github.com/foculoom/aiartifacts/pull/30) remains a draft candidate
+because the paired trials did not support adoption: baseline/helper corrections
+were 1/0, 0/0 and 0/1, favoring the helper in one of three pairs against the
+predeclared two-pair threshold. Full context/model controls remain unverified.
+All six meta tasks reach scoped acceptance after one finishing correction;
+explicit invocation diagnostics pass. Preserve those achieved outcomes and the
+original failures. Retain reusable tooling/documentation; defer the extra skill.
+
+A final test-layout correction removes the standalone suite's dependency on
+other repository files. All 23 portable tests pass in an isolated installed
+layout; three integration tests stay in `evals/`. The final local checks pass
+152 Python methods and 10 JavaScript tests, with instructions/exporter unchanged.
+Historical runtime receipts retain their old test hashes and 22/25 result.
+The next source step is final evidence review and exact-head hosted checks;
+source remains a draft rather than an adoption or merge recommendation. The release owner
 separately resolves remaining runtime/usefulness gates and rights review before
 any tag or external submission. The prepared packet is not sent automatically.
 

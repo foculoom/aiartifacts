@@ -1,0 +1,10 @@
+Prepared under `output/`:
+
+- [Standalone skill ZIP](output/editorial-writing/skill.zip) and [plugin ZIP](output/editorial/skill.zip)
+- [Package inventory and hashes](output/package-inventory.json)
+- [Validation evidence](output/VALIDATION.md)
+- [Distribution drafts](output/DISTRIBUTION-DRAFTS.md)
+
+Both packages passed exact inventory/hash verification. All 27 checker tests passed with a canonical temporary path; the default macOS path limitation is documented.
+
+Source remained unchanged. No software was installed, permissions changed, or content published. Runtime and external distribution checks remain untested.

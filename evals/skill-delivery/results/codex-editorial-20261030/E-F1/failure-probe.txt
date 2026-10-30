@@ -1,0 +1,2 @@
+exit=71
+sandbox-exec: execvp() of '/usr/bin/python3' failed: Operation not permitted

@@ -1,0 +1,15 @@
+{
+  "status": "partial",
+  "checks": "Parsed supplied JSON; checked required fields only, no external schema/intake run",
+  "name": "editorial",
+  "version": "0.1.1",
+  "license": "Apache-2.0",
+  "schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions_preserved": [
+    "com.openai"
+  ],
+  "source_repo": "foculoom/aiartifacts",
+  "source_path": "plugins/editorial",
+  "candidate_sha_from_supplied_record": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "remote_subtree_bytes_verified": false
+}

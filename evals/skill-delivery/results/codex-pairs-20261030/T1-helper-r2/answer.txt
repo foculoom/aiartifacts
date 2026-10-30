@@ -1,0 +1,12 @@
+Prepared the candidate under `output/`.
+
+- [Validation and remaining-work report](output/REVIEW.md)
+- [Candidate ZIP](output/candidate/skill.zip)
+- [Payload manifest and hashes](output/candidate/manifest.json)
+- [Full file inventory](output/inventory.json)
+- [Dependency and provenance notes](output/DEPENDENCIES-PROVENANCE.md)
+- [skills.sh sharing draft](output/SKILLS-SH-DRAFT.md)
+
+Canonical instructions and Apache-2.0 license are unchanged. Validation, all 27 checker tests, and package integrity checks pass. Runtime trials and remote distribution checks remain untested.
+
+Nothing was installed, submitted, or published; `source/` is unchanged.

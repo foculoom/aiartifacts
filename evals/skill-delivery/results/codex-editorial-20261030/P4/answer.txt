@@ -1,0 +1,1 @@
+Hold A to scan keycard. Stay close until scan completes.

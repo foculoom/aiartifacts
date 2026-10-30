@@ -1,0 +1,10 @@
+{
+  "inputs/01-web.txt": "4eb3c6ce968581bd94ad47e517761b5fc2290f97fac191dd23f93abd2296f884",
+  "inputs/02-early-reader.txt": "4294a656ff19dc0f7be230b5ba23e399f1ea18bcf89c0520d7565d06fff8f270",
+  "inputs/03-game-ui.txt": "d221b36769df58bdbc00d15ae1407c6151f4e38b370ca8343c3e4fc617b8a0d6",
+  "inputs/04-unrelated.txt": "98f2052eed5488feede769961c9198fc258b7077a417787b3a2fbf78ed948082",
+  "inputs/05-sound-copy.txt": "1fb938c3d6297473705d181b913d1f3272b6e724616994bcb20c06f307b63566",
+  "inputs/06-no-python.txt": "f97f09e4d3f125a63326260084adeb634be403ffd26cd289cbb72ad89f4a3161",
+  "inputs/07-unreadable.txt": "1b1425fcbb7e17648a03edaa9d5ece0e6c37515664a2f4a95d8edc2a4dc59549",
+  "inputs/08-untrusted.txt": "0aeca12bcfd41104466a1573077fa8d1fb965009c4bbc1272f01d1e43f90eb07"
+}
