@@ -1,0 +1,17 @@
+[
+  {
+    "name": "editorial-writing",
+    "status": "installed",
+    "source": "foculoom/aiartifacts",
+    "ref": "c6fd52080ee50165ac673c72d5dd7adbe0b43e3c",
+    "hash": "095cc40f14186f990e2b609d06c6508b37f3f0c78b43a856295ad43dbce7c0c3",
+    "path": "<DISPOSABLE_PROJECT>/.agents/skills/editorial-writing",
+    "scope": "project",
+    "agents": [
+      "Codex",
+      "GitHub Copilot"
+    ],
+    "mode": "copy",
+    "security": null
+  }
+]

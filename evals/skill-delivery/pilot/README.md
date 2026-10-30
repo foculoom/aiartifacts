@@ -1,5 +1,11 @@
 # Editorial delivery pilot
 
+For the selected single-skill candidate, exact merged source, verified public
+acquisition and remaining runtime/review work, start with
+[October 30 readiness](editorial-readiness-20261030.md). Earlier configs below
+remain historical allowlists; the new receipt includes configs pinned to the
+reviewed merged source.
+
 One canonical workflow serves both channels: the existing Editorial plugin for
 Awesome Copilot external-plugin intake, and its `editorial-writing` folder for
 the skills.sh installer. No source copy, MCP server or provider dependency is

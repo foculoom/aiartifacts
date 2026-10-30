@@ -1,0 +1,15 @@
+
+┌   skills
+│
+│  Tip: use the --yes (-y) and --global (-g) flags to install without prompts.
+│
+●  Selected 1 skill: editorial-writing
+
+│
+◇  Installation Summary ───────────────╮
+│                                      │
+│  ./.agents/skills/editorial-writing  │
+│    copy → Codex, GitHub Copilot      │
+│                                      │
+├──────────────────────────────────────╯
+

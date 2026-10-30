@@ -1,5 +1,40 @@
 # Maintainer handoff
 
+## Editorial-only distribution preparation — October 30, 2026
+
+The owner requested a rubber-duck review and continuation of the minimal pilot.
+Use existing Editorial only; keep the extra skill deferred. Preparation began
+on clean default-branch `c6fd52080ee50165ac673c72d5dd7adbe0b43e3c`:
+[PR #30](https://github.com/foculoom/aiartifacts/pull/30) is merged and
+[main CI](https://github.com/foculoom/aiartifacts/actions/runs/41107455838) passed
+157 Python methods and ten JavaScript tests. Those integration checks are done.
+
+The [dated readiness record](evals/skill-delivery/pilot/editorial-readiness-20261030.md)
+pins fresh twelve-file skill/fifteen-file plugin exports to that merged source,
+retains exact manifests/configs, and updates the unsent intake packet. All
+Editorial bytes/modes match the evaluated `211ad9d` candidate. New public GitHub
+acquisition using existing skills CLI 1.7.4 resolved the full SHA and installed
+twelve exact files/modes in one shared project skill folder for the two selected
+agent targets. This is remote acquisition evidence, not two runtime tests or a
+directory listing. Installer telemetry was disabled; raw machine paths remain
+private and sanitized full installer output/hash maps travel with the receipt.
+
+Rubber-duck review does not establish Editorial's uplift over the base model:
+prior Codex task passes remain achieved, while a controlled Editorial comparison
+and Copilot task behavior remain unverified. No saved cloud environment was
+available; local Copilot remains 1.0.54. Its already-retried provider policy denial
+was not retried unchanged. Next: use an already-authorized working Copilot
+runtime for existing activation, negative and safe-failure cases, then review
+actual task quality, provenance/rights and upstream submission decisions.
+
+Public source acquisition is verified October 30; Awesome Copilot listing was
+absent from inspected catalogs and skills.sh listing remains unverified. Existing
+v0.5.0 was released October 24, with metadata last checked October 30 and archive
+acquisition October 28. No new release, external submission or consumer pin
+change follows. The prior evidence-redaction incident/history limits still apply.
+This follow-up changes records only; existing Ubuntu CI and independent review
+cover its source integration through the owning PR.
+
 ## Skill delivery tooling fallback — October 30, 2026
 
 The owner selected **integrate the tested tooling and documentation; keep the
