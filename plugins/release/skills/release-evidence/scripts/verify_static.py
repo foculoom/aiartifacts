@@ -39,10 +39,8 @@ def manifest(root):
         raise ValueError('Empty payload')
     return {'version': 1, 'files': files}
 
-def verify(record, origin):
-    url = urlsplit(origin)
-    if url.scheme != 'https' or not url.hostname or url.username or url.password or url.path not in ('', '/') or url.query or url.fragment:
-        raise ValueError('Plain HTTPS origin required')
+def checked_files(record):
+    """Validate the complete inventory before constructing a network client."""
     if (not isinstance(record, dict) or type(record.get('version')) is not int or
             record['version'] != 1 or not isinstance(record.get('files'), dict) or not record['files']):
         raise ValueError('Invalid manifest')
@@ -55,9 +53,16 @@ def verify(record, origin):
             raise ValueError('Unsafe manifest path')
         if not isinstance(expected, str) or len(expected) != 64 or any(c not in '0123456789abcdef' for c in expected):
             raise ValueError('Invalid digest')
+    return record['files']
+
+def verify(record, origin):
+    url = urlsplit(origin)
+    if url.scheme != 'https' or not url.hostname or url.username or url.password or url.path not in ('', '/') or url.query or url.fragment:
+        raise ValueError('Plain HTTPS origin required')
+    files = checked_files(record)
     opener = build_opener(NoRedirect())
     results = []
-    for name, expected in record['files'].items():
+    for name, expected in files.items():
         route = name[:-10] if (name == 'index.html' or name.endswith('/index.html')) else name
         status = None
         try:

@@ -1,5 +1,29 @@
 # Maintainer handoff
 
+## Strict Release manifest candidate — October 30, 2026
+
+The [red–green–refactor record](evals/release/manifest-validation-20261030.md)
+reproduces silent inventory/hash loss from duplicate JSON members in the
+anonymous static verifier at baseline `8b7d4fd92c361cb0ba8697322e50a5b7878efffa`.
+Red commit `c6915d147017c219703404d51f8dc07ae091213e` has 8 failing subcases;
+correction `a6cbba40941a95fc07796bd8802237c051b59392` passes all 10 Release
+methods. The final refactor separates complete validation from network readback.
+Release 10/10 and neighboring Design 11/11 pass in cloud Linux/Python 3.12.14.
+The record includes exact commands and the local catalog setup limitation:
+the connector text snapshot omits existing rendered PNGs. Hosted validation of
+the complete checkout and independent final-head review remain merge gates;
+follow the focused PR for their receipts rather than treating this checkpoint
+as a completed review or merge.
+
+No instruction evaluation, consumer compatibility, deployment or live customer
+path is claimed. Maintainer owns source integration; consumer owners separately
+review adoption. Existing v0.5.0 is still the latest non-draft release in the
+October 30 GitHub metadata readback; no package/tag/version or consumer pin
+changes. Archive download, native/provider acceptance and new publication are
+not part of this work. Next: complete exact-head review and required checks,
+then use the normal protected source merge; any adoption/publication remains a
+distinct owning workflow.
+
 ## Evidence and recovery source integration — October 29, 2026
 
 The [evaluation record](evals/engineering/evidence-recovery/results-20261029.md)
