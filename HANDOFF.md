@@ -1,15 +1,21 @@
 # Maintainer handoff
 
-## Evidence and recovery source candidate — October 29, 2026
+## Evidence and recovery source integration — October 29, 2026
 
 The [evaluation record](evals/engineering/evidence-recovery/results-20261029.md)
 now retains the original six passes/one partial, the second F partial under the
 original criterion, independent identification of an over-specific criterion,
 and a third blinded F pass against its corrected general requirement. Earlier
-answers were not silently relabeled. The final independent source review and
-normal protected merge remain separate; no new all-seven run, installed
-adoption or live-provider recovery is claimed. The dated initial structural
-checkpoint below remains evidence for its original revision.
+answers were not silently relabeled. [PR #27](https://github.com/foculoom/aiartifacts/pull/27)
+merged on October 29 at 22:52:46 UTC as
+`f44c5284c3124c1006b91fc0244ddabf126eaaf3`, after
+[independent agent review](https://github.com/foculoom/aiartifacts/pull/27#issuecomment-6510390903)
+of exact head `de1426ff254658b920856f5b0d2b2a4ef2655d58`.
+The [default-branch validation](https://github.com/foculoom/aiartifacts/actions/runs/40969157279)
+passed both hosted Ubuntu jobs. These are source integration and cloud CI
+receipts, not a new all-seven evaluation, installed adoption, live-provider
+recovery or package release. The dated initial structural checkpoint below
+remains evidence for its original revision.
 
 This candidate extends repository reporting instructions, the engineering
 retrospective template and the existing Release skill with dated claim evidence,
@@ -19,9 +25,9 @@ bounded causal analysis. Seven original fictional
 evaluator inputs separate from expected judgments. Actual product incidents,
 private correlation and provider receipts remain in their owning repositories.
 
-Source base: `7bacdfe91e80f670b41eddef859afddb6ffd9ad1`. From this checkout,
-`git rev-parse HEAD` identifies the exact candidate; preserve that commit and
-input hashes in the behavioral evaluation and final independent review.
+Historical candidate base: `7bacdfe91e80f670b41eddef859afddb6ffd9ad1`.
+Preserve the evaluation's exact source and input hashes; a later checkout's
+`git rev-parse HEAD` identifies that checkout, not the earlier evaluated input.
 Local checks on October 29 passed: catalog validation (seven plugins/eight
 skills and local Markdown references), the five-test Release verifier suite,
 the packet's local link check, the skill-authoring frontmatter validator and
@@ -31,15 +37,15 @@ structural/script results. The [initial behavioral assessment](evals/engineering
 at `67ad0d77f188ad679170cea0f74792649cef194e` reports six passes and one
 partial: the contradictory-diagnostics answer kept uncertainty but did not
 specify a sufficiently controlled, bounded comparison. The sanitized result
-retains the partial and trace/metadata limits. Generic investigation guidance
-has been tightened; a fresh case-F rerun and final-head review remain pending.
+retains the partial and trace/metadata limits. Later guidance and criterion
+corrections, the third blinded F pass and final-head review are recorded above
+and in the evaluation record; do not reopen those completed steps.
 No automatic startup-loading or consumer-adoption pass is claimed.
 
-Next: rerun case F in a fresh context with the criteria and previous result
-withheld. Retain complete answers, meaningful tool traces and exact file
-identities. Review the final PR head and required checks before source merge.
-A consuming project must explicitly record adoption of the reviewed source
-commit and its evidence limits; this source change cannot alter installed pins.
+Next: a consuming project may review the integrated source and explicitly
+record its chosen source commit and evidence limits. Any new source changes
+need their own affected checks and exact-head review. This source integration
+cannot alter installed pins or authorize package publication.
 
 Public acquisition is unchanged by this candidate: **v0.5.0 was last verified
 available October 28**, as recorded below. No fresh provider readback is claimed
@@ -47,7 +53,7 @@ here. The new safeguards remain unreleased source; no plugin/package version,
 tag, installation or consumer pin changed, and no toolkit publication is part
 of this work.
 
-## Production-quality source candidate — October 28, 2026
+## Production-quality source integration — October 29, 2026
 
 The [initial toolkit quality audit](docs/quality-audit-20261028.md) records the
 current source baseline, actual checks, new rendered inputs and remaining
@@ -68,9 +74,14 @@ retains full answers, input/skill hashes, new action receipts and captures,
 unsuccessful exploratory checks and scoped limits. R3's native-select keyboard
 gap remains unverified; no physical-device or universal quality claim follows.
 The source-review agent reported no blockers at that evaluated head. This
-evidence/contributor-instruction follow-up still requires final exact-head
-review and checks. Evaluated skills, references, prompts and fixtures are
-unchanged. The audit gives reproduction commands and the next action.
+evidence/contributor-instruction follow-up received
+[final independent agent review](https://github.com/foculoom/aiartifacts/pull/26#pullrequestreview-5692683397)
+at `2c364be7cf241cd0006a20a4053b6326be85a038` and passing hosted checks.
+[PR #26](https://github.com/foculoom/aiartifacts/pull/26) merged October 29 at
+04:00:34 UTC as `7bacdfe91e80f670b41eddef859afddb6ffd9ad1`.
+Evaluated skills, references, prompts and fixtures were unchanged by that
+follow-up. The audit retains reproduction commands and historical limits;
+source adoption and package publication remain separate decisions.
 
 Public acquisition: **v0.5.0 remains available**, with its October 24 publication
 and latest-release/archive readback reverified October 28. New Design 0.1.1,
@@ -184,6 +195,10 @@ Checkpoint: **v0.5.0 was published on 24 October 2026**. Preserve that existing 
 
 ## Start on a new computer
 
+Apply [environment selection](AGENTS.md#cloud-execution-when-feasible) before
+choosing a host. Record actual capability and access limits; the native
+Keychain step does not prevent portable checks from running in cloud CI.
+
 Install Git and Python 3.9 or later. These commands use `python3`; on Windows,
 use an equivalent Python 3 command. From a fresh checkout, record the exact
 source revision before applying any unreleased guidance:
@@ -226,9 +241,13 @@ baseline; a later corrective implementation PR must supply passing evidence.
 For this follow-up, a successful game update means a corrected, reviewed source
 candidate with reproducible before/after evidence and passing gameplay and
 browser checks. It does not require commercial success or completion of the
-whole puzzle expansion. Browser evidence supports browser guidance; native
-claims require separate packaged-app and physical-device evidence. Source merge,
-native submission and public availability remain distinct milestones.
+whole puzzle expansion. Browser evidence supports browser guidance. Native
+claims require the owning project's native acceptance evidence, including the
+exact packaged candidate, runtime and device profile. Use simulators where the
+owning policy accepts them; require physical hardware only for a specific
+claim or provider requirement that needs it. Browser emulation is not native
+testing. Source merge, native submission and public availability remain
+distinct milestones.
 
 | Existing skill or profile | Candidate reusable guidance |
 | --- | --- |

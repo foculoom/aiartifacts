@@ -90,6 +90,29 @@ as a separate reviewed change with synthetic
 [behavior cases](evals/engineering/incident-learning.md). Do not copy private
 receipts or customer data into this public repository.
 
+## Cloud execution when feasible
+
+For repository work, prefer the existing authorized cloud computer and connected
+tools. If it cannot satisfy a specific dependency, check another already
+available, authorized cloud environment before using an authorized local
+computer for that step. Check actual toolchains, runtime, network access,
+provider access and signing requirements; a supported cloud Mac can satisfy a
+macOS requirement. A platform requirement alone does not require the owner's Mac.
+
+Keep environment selection within existing authority. Do not provision paid
+infrastructure, broaden permissions, transfer sensitive credentials or change
+security controls to make a task run. The macOS Keychain runner remains a
+specific implementation with native access requirements, not a default for all
+automation. Its portable synthetic tests do not establish live Keychain access.
+
+Record the selected environment, capability evidence and its date, exact
+commands/results, and verified limits separately from assumptions or untested
+alternatives. If a capability is conclusively unavailable, do not repeat the
+attempt without materially new evidence. Isolate the smallest dependent step;
+continue independent cloud preparation and record its completed work, blocker,
+required environment or owner, and next executable action in the handoff.
+A policy change or hosted check does not prove all agents adopted this choice.
+
 ## Portable handoff and release evidence
 
 Start from the current default branch and record its exact revision and working-tree state; preserve existing changes. Read [README.md](README.md), [HANDOFF.md](HANDOFF.md), and [CHANGELOG.md](CHANGELOG.md) before changing source or claiming release state. Dated checkpoints are evidence to recheck, not proof of current external state. Changes on main are unreleased source until a separately reviewed tag and release; installed consumers keep their explicit pins.
