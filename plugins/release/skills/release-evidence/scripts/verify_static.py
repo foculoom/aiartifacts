@@ -14,6 +14,17 @@ class NoRedirect(HTTPRedirectHandler):
 def digest(data):
     return hashlib.sha256(data).hexdigest()
 
+def parse_manifest(value):
+    """Reject duplicate members before JSON can silently discard inventory."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError('Duplicate manifest member')
+            result[key] = value
+        return result
+    return json.loads(value, object_pairs_hook=unique_object)
+
 def manifest(root):
     root = Path(root)
     if root.is_symlink() or not root.is_dir():
@@ -28,20 +39,30 @@ def manifest(root):
         raise ValueError('Empty payload')
     return {'version': 1, 'files': files}
 
+def checked_files(record):
+    """Validate the complete inventory before constructing a network client."""
+    if (not isinstance(record, dict) or type(record.get('version')) is not int or
+            record['version'] != 1 or not isinstance(record.get('files'), dict) or not record['files']):
+        raise ValueError('Invalid manifest')
+    for name, expected in record['files'].items():
+        if not isinstance(name, str):
+            raise ValueError('Unsafe manifest path')
+        p = PurePosixPath(name)
+        if (p.is_absolute() or any(part in ('', '.', '..') for part in name.split('/')) or
+                str(p) != name or '\\' in name):
+            raise ValueError('Unsafe manifest path')
+        if not isinstance(expected, str) or len(expected) != 64 or any(c not in '0123456789abcdef' for c in expected):
+            raise ValueError('Invalid digest')
+    return record['files']
+
 def verify(record, origin):
     url = urlsplit(origin)
     if url.scheme != 'https' or not url.hostname or url.username or url.password or url.path not in ('', '/') or url.query or url.fragment:
         raise ValueError('Plain HTTPS origin required')
-    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
-        raise ValueError('Invalid manifest')
+    files = checked_files(record)
     opener = build_opener(NoRedirect())
     results = []
-    for name, expected in record['files'].items():
-        p = PurePosixPath(name)
-        if p.is_absolute() or '..' in p.parts or str(p) != name or '\\' in name:
-            raise ValueError('Unsafe manifest path')
-        if not isinstance(expected, str) or len(expected) != 64 or any(c not in '0123456789abcdef' for c in expected):
-            raise ValueError('Invalid digest')
+    for name, expected in files.items():
         route = name[:-10] if (name == 'index.html' or name.endswith('/index.html')) else name
         status = None
         try:
@@ -72,7 +93,7 @@ def main():
         parser.error('Evidence must stay outside the payload')
     if args.manifest and not args.origin:
         parser.error('--origin required for readback')
-    result=manifest(args.root) if args.root else verify(json.loads(args.manifest.read_text()),args.origin)
+    result=manifest(args.root) if args.root else verify(parse_manifest(args.manifest.read_text()),args.origin)
     with args.output.open('x') as f:
         json.dump(result,f,indent=2);f.write('\n')
     print('PASS' if result.get('status','passed')=='passed' else 'CHECK INCOMPLETE')
