@@ -29,6 +29,13 @@ every possible sensitive pattern was detectable.
    entries, and 18 ZIPs containing 229 members. Expanded path/key checks found
    no remaining flagged content in the corrected packet.
 
+The historical paired `grader-verification.json` retains artifact-map hashes
+from commit `e746a509`; four of those maps changed during redaction. Those
+historical map hashes are not assertions about the corrected map bytes. Use the
+current `evidence-files.json` for corrected snapshot/map identities. Original
+artifact hashes and the reviewer judgments are unchanged; the earlier review
+receipt has not been rewritten as a new evaluation.
+
 ## Containment and limits
 
 The corrective branch update supplies a clean current packet for the observed
