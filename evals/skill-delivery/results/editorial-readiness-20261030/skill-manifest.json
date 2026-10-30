@@ -1,0 +1,77 @@
+{
+  "config_sha256": "7d6402444a7666d8a8c7da44fcaf12f4808ea577c72d105c477ddbb60e59b204",
+  "files": {
+    "DEPENDENCIES.md": {
+      "mode": "0644",
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "source": "plugins/editorial/skills/editorial-writing/DEPENDENCIES.md"
+    },
+    "LICENSE": {
+      "mode": "0644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "plugins/editorial/skills/editorial-writing/LICENSE"
+    },
+    "SKILL.md": {
+      "mode": "0644",
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "source": "plugins/editorial/skills/editorial-writing/SKILL.md"
+    },
+    "references/audience/adult.md": {
+      "mode": "0644",
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "source": "plugins/editorial/skills/editorial-writing/references/audience/adult.md"
+    },
+    "references/audience/early-reader.md": {
+      "mode": "0644",
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "source": "plugins/editorial/skills/editorial-writing/references/audience/early-reader.md"
+    },
+    "references/examples.md": {
+      "mode": "0644",
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "source": "plugins/editorial/skills/editorial-writing/references/examples.md"
+    },
+    "references/medium/game-dialogue.md": {
+      "mode": "0644",
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "source": "plugins/editorial/skills/editorial-writing/references/medium/game-dialogue.md"
+    },
+    "references/medium/game-ui.md": {
+      "mode": "0644",
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "source": "plugins/editorial/skills/editorial-writing/references/medium/game-ui.md"
+    },
+    "references/medium/longform.md": {
+      "mode": "0644",
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "source": "plugins/editorial/skills/editorial-writing/references/medium/longform.md"
+    },
+    "references/medium/web.md": {
+      "mode": "0644",
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "source": "plugins/editorial/skills/editorial-writing/references/medium/web.md"
+    },
+    "scripts/prose_lint.py": {
+      "mode": "0644",
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "source": "plugins/editorial/skills/editorial-writing/scripts/prose_lint.py"
+    },
+    "tests/test_prose_lint.py": {
+      "mode": "0644",
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "source": "plugins/editorial/skills/editorial-writing/tests/test_prose_lint.py"
+    }
+  },
+  "kind": "skill",
+  "limitations": [
+    "Basic metadata and local Markdown checks, not full format validation.",
+    "Narrow secret/path screening, not privacy or licensing clearance.",
+    "Executable bits normalize to 0755 or 0644; no ownership, ACL or xattr preservation.",
+    "No dependency installation, runtime compatibility or behavior evaluation.",
+    "No publication, submission or consumer update."
+  ],
+  "name": "editorial-writing",
+  "source_commit": "c6fd52080ee50165ac673c72d5dd7adbe0b43e3c",
+  "source_commit_verification": "Caller-supplied commit label; input hashes identify working-tree bytes.",
+  "version": 1
+}

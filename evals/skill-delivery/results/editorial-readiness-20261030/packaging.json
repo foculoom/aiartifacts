@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "observed_at_utc": "2026-10-30T19:50:39.360632+00:00",
+  "source_repository": "foculoom/aiartifacts",
+  "source_commit": "c6fd52080ee50165ac673c72d5dd7adbe0b43e3c",
+  "prior_reviewed_source_commit": "211ad9da8b7a3d0740d1896a74c018ed3ad097be",
+  "scope": "Fresh local Editorial package preparation; no installation, inference, network/provider request, submission or publication in this run.",
+  "tool": {
+    "path": "scripts/skill-delivery/export_skill.py",
+    "sha256": "397e8c666100fb2797e9a007f28de172417de63c27f9def04760012f3a111dbe",
+    "python_version": "3.12.14"
+  },
+  "config_preparation": "Copy each existing evals/skill-delivery/pilot/editorial-{skill,plugin}.json into a new ignored build/skill-delivery/editorial-readiness-20261030/ directory; replace only source_commit with the recorded exact commit. Refuse existing outputs.",
+  "commands_from_repository_root": [
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "export",
+      "--source-root",
+      "${PWD}",
+      "--config",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/editorial-skill.json",
+      "--output",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/skill"
+    ],
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "verify",
+      "--manifest",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/skill/manifest.json",
+      "--archive",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/skill/skill.zip"
+    ],
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "verify",
+      "--manifest",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/skill/manifest.json",
+      "--installed-root",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/skill/payload"
+    ],
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "export",
+      "--source-root",
+      "${PWD}",
+      "--config",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/editorial-plugin.json",
+      "--output",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/plugin"
+    ],
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "verify",
+      "--manifest",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/plugin/manifest.json",
+      "--archive",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/plugin/skill.zip"
+    ],
+    [
+      "python3",
+      "scripts/skill-delivery/export_skill.py",
+      "verify",
+      "--manifest",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/plugin/manifest.json",
+      "--installed-root",
+      "${PWD}/build/skill-delivery/editorial-readiness-20261030/plugin/payload"
+    ]
+  ],
+  "selected_source_equivalence": {
+    "unique_files": 15,
+    "bytes_and_normalized_modes_match_both_commits": true
+  },
+  "packages": [
+    {
+      "kind": "skill",
+      "name": "editorial-writing",
+      "file_count": 12,
+      "config_sha256": "7d6402444a7666d8a8c7da44fcaf12f4808ea577c72d105c477ddbb60e59b204",
+      "manifest_sha256": "6ef2a7afb555477251f0385b94758d4e8f305ae46da1842056a006df36f91790",
+      "archive_sha256": "afdaed6bc2764a8e2e8a5b7170a0c0606152d62f90f52496d404c188d7aedbcc",
+      "archive_bytes": 57998,
+      "archive_verify": "pass",
+      "staged_payload_verify": "pass",
+      "license_paths": [
+        "LICENSE"
+      ],
+      "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "manifest_file": "skill-manifest.json",
+      "config_file": "editorial-skill.json"
+    },
+    {
+      "kind": "plugin",
+      "name": "editorial",
+      "file_count": 15,
+      "config_sha256": "8fa9495442db87b3f7542ec398e3f873673a075d9f1a87b3e188c0d00c4f0cb5",
+      "manifest_sha256": "b5b7e0aa504f3744a1bdf81a2d8f94a789884ddf303a4ed44c02a5445bfd70e7",
+      "archive_sha256": "f0b9ed820cc19b31efb344dd514b1ea44657c39dc30d176c495d860c9314e848",
+      "archive_bytes": 73555,
+      "archive_verify": "pass",
+      "staged_payload_verify": "pass",
+      "license_paths": [
+        "LICENSE",
+        "skills/editorial-writing/LICENSE"
+      ],
+      "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "manifest_file": "plugin-manifest.json",
+      "config_file": "editorial-plugin.json"
+    }
+  ],
+  "upstream_validation": {
+    "node_version": "v24.19.0",
+    "vally_version": "0.20.0",
+    "awesome_copilot_commit": "5269f7ea2d6c3a9bfda5ed878b6726cf509121fd",
+    "fresh_tools_installed": false,
+    "standalone_generic_payload_directory": {
+      "passed": false,
+      "reason": "Skill name editorial-writing differs from generic staging-directory name payload; valid-refs passed."
+    },
+    "standalone_canonical_named_validation_copy": {
+      "passed": true,
+      "directory_name": "editorial-writing",
+      "copied_without_payload_changes": true,
+      "exact_manifest_verification": "pass",
+      "installation": false
+    },
+    "nested_plugin_skill": {
+      "passed": true
+    },
+    "plugin_manifest_schema_errors": [],
+    "method": "Existing runLint({rootPath}) library API and validateAgentPluginManifest(JSON.parse(plugin.json)); local checks only.",
+    "dependency_scan": "No separate dependency scan or runtime evaluation.",
+    "raw_trace_retention": "Raw validator results stay in the ignored local build directory; this public summary omits machine paths and redundant source text."
+  },
+  "limitations": [
+    "Commit label supplemented by exact selected-file byte/mode comparison to both commits; unrelated working-tree documentation may change concurrently.",
+    "Staged-payload verification is not a new installed-file or runtime receipt.",
+    "Narrow path/secret screening and license-text comparison do not establish exhaustive privacy or publication rights.",
+    "Existing installation and runtime evidence remains dated to its original runs; public acquisition/listing not checked by this run.",
+    "Generic payload/ is an export staging location; a standalone skill folder must be named editorial-writing for the checked upstream spec.",
+    "The original generic-directory lint failure remains in the private raw receipt; canonical-named validation is a separate check.",
+    "Existing dated installed-file and runtime receipts are preserved, not rerun or relabeled by byte-equivalence."
+  ]
+}

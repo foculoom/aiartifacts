@@ -4,6 +4,11 @@ Changes to released artifacts are recorded here. The repository and each plugin 
 
 ## Unreleased — skill delivery tooling and Editorial 0.1.1
 
+- Pin the single Editorial distribution candidate to reviewed merged source,
+  retain fresh package manifests/configs and a verified public-source installer
+  receipt. Distinguish remote acquisition from listing and runtime acceptance;
+  keep the extra skill deferred and the external-plugin packet unsent.
+
 - Retain skill-delivery documentation, ecosystem references and a Python
   standard-library exporter with explicit file allowlists, exact inventory,
   hashes, executable modes and bounded privacy/path checks. It never installs,

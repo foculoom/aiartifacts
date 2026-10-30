@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "editorial",
+  "kind": "plugin",
+  "source_commit": "c6fd52080ee50165ac673c72d5dd7adbe0b43e3c",
+  "files": {
+    "LICENSE": "plugins/editorial/LICENSE",
+    "README.md": "plugins/editorial/README.md",
+    "plugin.json": "plugins/editorial/plugin.json",
+    "skills/editorial-writing/DEPENDENCIES.md": "plugins/editorial/skills/editorial-writing/DEPENDENCIES.md",
+    "skills/editorial-writing/LICENSE": "plugins/editorial/skills/editorial-writing/LICENSE",
+    "skills/editorial-writing/SKILL.md": "plugins/editorial/skills/editorial-writing/SKILL.md",
+    "skills/editorial-writing/references/audience/adult.md": "plugins/editorial/skills/editorial-writing/references/audience/adult.md",
+    "skills/editorial-writing/references/audience/early-reader.md": "plugins/editorial/skills/editorial-writing/references/audience/early-reader.md",
+    "skills/editorial-writing/references/examples.md": "plugins/editorial/skills/editorial-writing/references/examples.md",
+    "skills/editorial-writing/references/medium/game-dialogue.md": "plugins/editorial/skills/editorial-writing/references/medium/game-dialogue.md",
+    "skills/editorial-writing/references/medium/game-ui.md": "plugins/editorial/skills/editorial-writing/references/medium/game-ui.md",
+    "skills/editorial-writing/references/medium/longform.md": "plugins/editorial/skills/editorial-writing/references/medium/longform.md",
+    "skills/editorial-writing/references/medium/web.md": "plugins/editorial/skills/editorial-writing/references/medium/web.md",
+    "skills/editorial-writing/scripts/prose_lint.py": "plugins/editorial/skills/editorial-writing/scripts/prose_lint.py",
+    "skills/editorial-writing/tests/test_prose_lint.py": "plugins/editorial/skills/editorial-writing/tests/test_prose_lint.py"
+  }
+}

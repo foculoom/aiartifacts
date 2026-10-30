@@ -1,0 +1,129 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 2.21,
+  "source": "https://github.com/foculoom/aiartifacts/tree/c6fd52080ee50165ac673c72d5dd7adbe0b43e3c/plugins/editorial/skills/editorial-writing",
+  "telemetry_disabled": true,
+  "skill_payloads": [
+    {
+      "path": ".agents/skills/editorial-writing",
+      "file_count": 12,
+      "matches_canonical": true,
+      "symlinks": false
+    }
+  ],
+  "installer_result": [
+    {
+      "name": "editorial-writing",
+      "status": "installed",
+      "source": "foculoom/aiartifacts",
+      "ref": "c6fd52080ee50165ac673c72d5dd7adbe0b43e3c",
+      "scope": "project",
+      "agents": [
+        "Codex",
+        "GitHub Copilot"
+      ],
+      "mode": "copy"
+    }
+  ],
+  "observed_at_utc": "2026-10-30T19:47:34.726332+00:00",
+  "installer": {
+    "name": "skills",
+    "version": "1.7.4",
+    "entrypoint_sha256": "cda9a4dd5cd209c6f1dc551feacbaef503cefb5d8986d3c4cab9a95e1bbc47e6",
+    "bundle_sha256": "b7d92e2a619e8982d38390572750efb8c2ec81cdf23c33aed2fa426d080a1e4e",
+    "node_version": "24.19.0"
+  },
+  "command": [
+    "node",
+    "<REVIEWED_SKILLS_CLI>",
+    "add",
+    "https://github.com/foculoom/aiartifacts/tree/c6fd52080ee50165ac673c72d5dd7adbe0b43e3c/plugins/editorial/skills/editorial-writing",
+    "--skill",
+    "editorial-writing",
+    "--agent",
+    "codex",
+    "github-copilot",
+    "--copy",
+    "--yes",
+    "--json"
+  ],
+  "environment": {
+    "DISABLE_TELEMETRY": "1",
+    "DO_NOT_TRACK": "1",
+    "GIT_TERMINAL_PROMPT": "0",
+    "NODE_DISABLE_COMPILE_CACHE": "1"
+  },
+  "records": [
+    {
+      "name": "stdout.json",
+      "original_sha256": "f29c3371f265c6d22b59030bf632c86a080cf53108883c3e351ff161d7a93b6b",
+      "original_bytes": 470,
+      "snapshot_sha256": "ac2071576d2747bbe8f51ca046189f34ddebd4b8d407eac600eba5fb94a0db62",
+      "snapshot_bytes": 440,
+      "transforms": [
+        "Replace the disposable project absolute path with <DISPOSABLE_PROJECT>."
+      ]
+    },
+    {
+      "name": "stderr.txt",
+      "original_sha256": "e36c9349aec789996c426d791fd48f63c38501dbf26427e04fdfc631519719b5",
+      "original_bytes": 529,
+      "snapshot_sha256": "5f8b8a0e19c2b61402587ba6cc54ea50bda7e79bb1d68b699d7f2dc4f6b592be",
+      "snapshot_bytes": 528,
+      "transforms": [
+        "Trim trailing horizontal whitespace from terminal decoration; retain original byte hash and size."
+      ]
+    }
+  ],
+  "scope": "Public GitHub acquisition and project-file identity only. Both selected agent targets use one shared folder; neither agent runtime was invoked. No directory listing, curated acceptance or upgrade behavior is established.",
+  "installed_files": {
+    "DEPENDENCIES.md": {
+      "sha256": "0ec3879c856e6a9f9e0fa8201700f861b8df074b9b9b08bcba8f696fb2a2c25b",
+      "mode": "0644"
+    },
+    "LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "mode": "0644"
+    },
+    "SKILL.md": {
+      "sha256": "8f0dfecd8130bbdda22e1728a4a51e9218c42761bfff5bfbf1146839643a40f4",
+      "mode": "0644"
+    },
+    "references/audience/adult.md": {
+      "sha256": "5f3db5d50335cdaa12149ef58c52ebf5b8734f74404851a01509d2b6effb757d",
+      "mode": "0644"
+    },
+    "references/audience/early-reader.md": {
+      "sha256": "d1903bc598016330d069852ccea1d5981f8aeff44025f7fb0f5a43b55f7fe052",
+      "mode": "0644"
+    },
+    "references/examples.md": {
+      "sha256": "b38f4088f46ee2cba199a5588cc32313c9834ff108215a5a5253b87b779320c3",
+      "mode": "0644"
+    },
+    "references/medium/game-dialogue.md": {
+      "sha256": "8e69cca114364aba422acf1c4b30b05f851f50c00ff0231547d95e7661467f5d",
+      "mode": "0644"
+    },
+    "references/medium/game-ui.md": {
+      "sha256": "0c53a0865b2cb5a7e7b742ff9554b8f86d0db18107b3b189e0ea67f360d15952",
+      "mode": "0644"
+    },
+    "references/medium/longform.md": {
+      "sha256": "07291c407e3afde52cc3683b8f340b42013d57a6267764562be74dcfe60c16dc",
+      "mode": "0644"
+    },
+    "references/medium/web.md": {
+      "sha256": "c528441d7689df86d787e53a92fa532809d6a32c9de8adab128039ef57bbc615",
+      "mode": "0644"
+    },
+    "scripts/prose_lint.py": {
+      "sha256": "5c35ae51c803f4b5ec96e14890ec14940654f24e365d45c4b1ee8dee18c4aee8",
+      "mode": "0644"
+    },
+    "tests/test_prose_lint.py": {
+      "sha256": "e7c214834bab200cf3208e6a6e97eac0c2de1e64ff442cb0cb0da2bd9f87f192",
+      "mode": "0644"
+    }
+  }
+}

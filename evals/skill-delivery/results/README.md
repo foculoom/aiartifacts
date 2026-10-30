@@ -1,5 +1,13 @@
 # Skill delivery implementation evidence — 30 October 2026
 
+Latest preparation: the [Editorial-only readiness record](../pilot/editorial-readiness-20261030.md)
+uses merged `c6fd520`, fresh package manifests and the
+[public-source acquisition receipt](editorial-readiness-20261030/acquisition.json).
+The remote installer resolved that exact SHA and copied twelve matching files;
+this adds acquisition evidence without claiming a listing or runtime pass.
+PR #30 and its [post-merge checks](https://github.com/foculoom/aiartifacts/actions/runs/41107455838)
+are achieved. Historical experiment outcomes below retain their original scope.
+
 Follow-up owner decision: integrate the tested tooling and documentation while
 deferring the extra skill. Current source keeps the exporter in
 `scripts/skill-delivery/`, procedures in `docs/skill-delivery/` and the original
@@ -72,8 +80,8 @@ not a new release. No Awesome Copilot listing was created; skills.sh public
 indexing/acquisition remains unverified. Telemetry-disabled local installs are
 not directory visibility, customer demand or revenue evidence.
 
-Next: integrate the selected tooling/documentation scope through normal review
-and CI, retaining the extra skill as a deferred fixture. Any further trial should address a concrete gap,
+The selected tooling/documentation scope is integrated in PR #30; the extra
+skill remains a deferred fixture. Next: any further trial should address a concrete gap,
 use a pinned observable runtime/model and independent grading, and retain the
 original results. An already-authorized Copilot environment is needed to close
 that runtime gate. External submission, package release and consumer adoption
