@@ -10,11 +10,25 @@ authorized export when they are absent, and preserves transcripts, archive
 states, project boundaries and automation settings. Consumer inventories and
 receipts remain private; only synthetic cases belong in this repository.
 
-This section records source intent while implementation and acceptance proceed.
-Record the exact reviewed head, checks, held-out behavior, package hashes,
-runtime coverage, resulting merge SHA, public acquisition, remaining gates and
-next action here before claiming delivery. A catalog entry alone is not a
-release or proof of account compatibility. Preserve v0.5.0 and consumer pins.
+Source candidate `ce892d26ac6509f439cf9cb518532471a1a27942` passed the
+six fictional preservation cases, catalog and skill checks, and isolated
+five-file skill/eight-file plugin export verification. The
+[October 31 evaluation](evals/chat-organizer/results-20261031/README.md)
+records exact hashes and runtime limits. Codex CLI discovery, explicit
+invocation and unrelated non-activation were observed; a ChatGPT private-plugin
+runtime was not tested. The independent blinded matched comparison yielded
+one skill improvement and two ties, with no material regression. This **fails
+the required two-pair usefulness gate**. No defect was demonstrated that
+would justify a targeted rerun.
+
+Hold distribution and source merge while that gate remains unmet. A source
+candidate PR and CI/review may proceed for inspectability. As observed October
+31, Chat Organizer is not on the default-branch catalog and is not publicly
+listed; no consumer installation or live-account compatibility is established.
+The v0.5.0 toolkit tag and consumer pins remain unchanged. Next: preserve the
+candidate and complete PR checks/review, then use a newly predeclared
+evaluation or an explicit revised acceptance decision before release. A
+catalog entry alone is not a release or proof of account compatibility.
 
 ## Agent Supply Chain pilot — October 30, 2026
 
