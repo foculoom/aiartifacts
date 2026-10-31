@@ -10,10 +10,11 @@ authorized export when they are absent, and preserves transcripts, archive
 states, project boundaries and automation settings. Consumer inventories and
 receipts remain private; only synthetic cases belong in this repository.
 
-Behavior source `ce892d26ac6509f439cf9cb518532471a1a27942` and corrected
-package source `e34b75babcedc99407a494b2659c06e9da3761f9` passed the
-six fictional preservation cases, catalog and skill checks, and isolated
-five-file skill/eight-file plugin export verification. The
+Behavior source `ce892d26ac6509f439cf9cb518532471a1a27942` passed the
+six fictional preservation cases. The corrected package source
+`e34b75babcedc99407a494b2659c06e9da3761f9` has identical skill behavior
+files and passed catalog and skill checks plus isolated five-file skill and
+eight-file plugin export verification. The
 [October 31 evaluation](evals/chat-organizer/results-20261031/README.md)
 records exact hashes and runtime limits. Codex CLI discovery, explicit
 invocation and unrelated non-activation were observed; a ChatGPT private-plugin
