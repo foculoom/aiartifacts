@@ -1,0 +1,243 @@
+{
+  "case": "fresh01-advice",
+  "projects": [
+    {
+      "id": "p01",
+      "name": "Grant application",
+      "sharing": "private",
+      "memory": "default",
+      "instructions": "Current grant proposal research and drafts.",
+      "sources": []
+    }
+  ],
+  "sections": [
+    "Work",
+    "Home",
+    "Travel",
+    "Learning",
+    "Unsorted"
+  ],
+  "chats": [
+    {
+      "id": "c01",
+      "kind": "codex",
+      "title": "Grant proposal outline",
+      "project_id": "p01",
+      "section": "Work",
+      "archived": false,
+      "pinned": true,
+      "updated_at": "2026-10-30",
+      "summary": "Active proposal outline; next revision due in November."
+    },
+    {
+      "id": "c02",
+      "kind": "codex",
+      "title": "Grant budget questions",
+      "project_id": "p01",
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-29",
+      "summary": "Budget assumptions for the same grant."
+    },
+    {
+      "id": "c03",
+      "kind": "codex",
+      "title": "Grant reviewer notes",
+      "project_id": "p01",
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-24",
+      "summary": "Feedback to incorporate into the proposal."
+    },
+    {
+      "id": "c04",
+      "kind": "codex",
+      "title": "2026 tax receipts",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-27",
+      "summary": "Running list of receipts to reconcile each month."
+    },
+    {
+      "id": "c05",
+      "kind": "codex",
+      "title": "2026 tax filing questions",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-18",
+      "summary": "Earlier filing questions for this tax year."
+    },
+    {
+      "id": "c06",
+      "kind": "codex",
+      "title": "Weekend trip itinerary",
+      "project_id": null,
+      "section": "Travel",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-12",
+      "summary": "A possible weekend trip; no booking yet."
+    },
+    {
+      "id": "c07",
+      "kind": "codex",
+      "title": "Weekend trip lodging",
+      "project_id": null,
+      "section": "Travel",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-10",
+      "summary": "Lodging options for the same trip."
+    },
+    {
+      "id": "c08",
+      "kind": "codex",
+      "title": "New keyboard options",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": true,
+      "updated_at": "2026-07-02",
+      "summary": "Purchase comparison finished in July."
+    },
+    {
+      "id": "c09",
+      "kind": "codex",
+      "title": "Pasta ideas",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": true,
+      "updated_at": "2026-05-14",
+      "summary": "Recipe ideas last used in May."
+    },
+    {
+      "id": "c10",
+      "kind": "codex",
+      "title": "Apartment maintenance",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-04",
+      "summary": "Maintenance request follow-up."
+    },
+    {
+      "id": "c11",
+      "kind": "codex",
+      "title": "Bike repair",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-03",
+      "summary": "Repair notes."
+    },
+    {
+      "id": "c12",
+      "kind": "codex",
+      "title": "Resume draft",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-23",
+      "summary": "Draft resume, paused."
+    },
+    {
+      "id": "c13",
+      "kind": "codex",
+      "title": "Meeting notes",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-20",
+      "summary": "Routine team meeting notes, unrelated to grant."
+    },
+    {
+      "id": "c14",
+      "kind": "codex",
+      "title": "Course notes",
+      "project_id": null,
+      "section": "Learning",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-11",
+      "summary": "Course notes."
+    },
+    {
+      "id": "c15",
+      "kind": "codex",
+      "title": "Book list",
+      "project_id": null,
+      "section": "Learning",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-06-15",
+      "summary": "Reading list."
+    },
+    {
+      "id": "c16",
+      "kind": "codex",
+      "title": "Insurance comparison",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-01",
+      "summary": "Annual insurance comparison."
+    },
+    {
+      "id": "c17",
+      "kind": "codex",
+      "title": "Gift ideas",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-15",
+      "summary": "Possible gifts."
+    },
+    {
+      "id": "c18",
+      "kind": "codex",
+      "title": "Camera setup",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-06-07",
+      "summary": "Camera settings."
+    },
+    {
+      "id": "a01",
+      "kind": "codex",
+      "title": "2019 move checklist",
+      "project_id": null,
+      "section": "Home",
+      "archived": true,
+      "pinned": false,
+      "updated_at": "2019-11-01",
+      "summary": "Completed move checklist."
+    },
+    {
+      "id": "a02",
+      "kind": "codex",
+      "title": "Expired coupon search",
+      "project_id": null,
+      "section": "Home",
+      "archived": true,
+      "pinned": false,
+      "updated_at": "2025-02-10",
+      "summary": "Expired retail coupons."
+    }
+  ],
+  "automations": []
+}

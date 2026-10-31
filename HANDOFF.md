@@ -1,5 +1,51 @@
 # Maintainer handoff
 
+## Chat Organizer 0.1.0 source candidate — October 31, 2026
+
+The owner approved a focused Chat Organizer plugin for Codex and ChatGPT users,
+with one `organize-chats` skill, an AI Artifacts catalog entry, and standalone
+skill/plugin ZIPs from the same reviewed source. The public Plugins Directory is
+outside this delivery. The skill uses available account tools, supports an
+authorized export when they are absent, and preserves transcripts, archive
+states, project boundaries and automation settings. Consumer inventories and
+receipts remain private; only synthetic cases belong in this repository.
+
+Behavior source `ce892d26ac6509f439cf9cb518532471a1a27942` passed the
+six fictional preservation cases. The corrected package source
+`e34b75babcedc99407a494b2659c06e9da3761f9` has identical skill behavior
+files and passed catalog and skill checks plus isolated five-file skill and
+eight-file plugin export verification. The
+[October 31 evaluation](evals/chat-organizer/results-20261031/README.md)
+records exact hashes and runtime limits. Codex CLI discovery, explicit
+invocation and unrelated non-activation were observed; a ChatGPT private-plugin
+runtime was not tested. The independent blinded matched comparison yielded
+one skill improvement and two ties, with no material regression. This **fails
+the required two-pair usefulness gate**. No defect was demonstrated that
+would justify a targeted rerun.
+
+Hold distribution and source merge while that gate remains unmet. Draft
+[PR #35](https://github.com/foculoom/aiartifacts/pull/35) exposes source for
+review; independent review found and prompted correction of an inaccurate
+marketplace-availability sentence in the package README. The independent
+agent found no remaining actionable issues at `1e18af570387f8fadeb4487eceeb85608a6f9e04`;
+[GitHub CI run 41203339722](https://github.com/foculoom/aiartifacts/actions/runs/41203339722)
+passed at that same head. This handoff-only follow-up changes no plugin bytes.
+As observed October 31, Chat Organizer is not on the
+default-branch catalog and is not publicly listed; no consumer installation or
+live-account compatibility is established.
+The [independently predeclared follow-up](evals/chat-organizer/followup-20261031/README.md)
+was committed before trials at `8e3563e89f1e0ee06da3c008a583a201f54be27e`.
+Its six matched runs used the unchanged skill and passed all preservation
+checks. The blinded reviewer judged **three practical ties**, with no severe
+failure or material regression; the two-pair benefit gate remains unmet.
+Keep the original one-improvement/two-tie result and all private attempts.
+No more favorable-outcome search is justified on the unchanged design.
+
+The v0.5.0 toolkit tag and consumer pins remain unchanged. Next: keep PR #35
+draft and the ZIPs private; the owner can decide whether to change the
+acceptance target or pursue a materially different organizer design. A catalog
+entry alone is not a release or proof of account compatibility.
+
 ## Agent Supply Chain pilot — October 30, 2026
 
 The owner replaced Editorial as the active distribution pilot with an

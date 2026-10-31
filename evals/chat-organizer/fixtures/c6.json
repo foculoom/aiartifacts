@@ -1,0 +1,15 @@
+{
+  "case": "C6",
+  "projects": [],
+  "sections": ["Home", "Garden"],
+  "chats": [
+    {"id": "c-501", "kind": "codex", "title": "Garden — Seed inventory", "project_id": null, "section": "Garden", "archived": false, "pinned": false},
+    {"id": "c-502", "kind": "codex", "title": "Home — Weekly list", "project_id": null, "section": "Home", "archived": false, "pinned": true}
+  ],
+  "automations": [
+    {"id": "a-daily", "target_chat_id": "c-501", "status": "ACTIVE", "schedule": "daily at 09:00", "notification": "meaningful changes"},
+    {"id": "a-paused", "target_chat_id": "c-502", "status": "PAUSED", "schedule": "weekly on Monday", "notification": "failures only"}
+  ],
+  "working_directory": "/synthetic/garden-project",
+  "repository_permissions": "read-write for owner only"
+}

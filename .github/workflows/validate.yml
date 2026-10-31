@@ -38,6 +38,8 @@ jobs:
         run: |
           python -m unittest discover -s scripts/skill-delivery/tests -q
           python -m unittest discover -s evals/skill-delivery -p 'test_*.py' -q
+      - name: Test Chat Organizer recovery simulator
+        run: python -m unittest discover -s evals/chat-organizer -p 'test_*.py' -q
       - name: Validate catalog and skill references
         run: python scripts/validate_catalog.py
       - name: Test static release verifier
