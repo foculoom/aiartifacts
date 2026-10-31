@@ -10,7 +10,8 @@ authorized export when they are absent, and preserves transcripts, archive
 states, project boundaries and automation settings. Consumer inventories and
 receipts remain private; only synthetic cases belong in this repository.
 
-Source candidate `ce892d26ac6509f439cf9cb518532471a1a27942` passed the
+Behavior source `ce892d26ac6509f439cf9cb518532471a1a27942` and corrected
+package source `e34b75babcedc99407a494b2659c06e9da3761f9` passed the
 six fictional preservation cases, catalog and skill checks, and isolated
 five-file skill/eight-file plugin export verification. The
 [October 31 evaluation](evals/chat-organizer/results-20261031/README.md)
@@ -21,10 +22,13 @@ one skill improvement and two ties, with no material regression. This **fails
 the required two-pair usefulness gate**. No defect was demonstrated that
 would justify a targeted rerun.
 
-Hold distribution and source merge while that gate remains unmet. A source
-candidate PR and CI/review may proceed for inspectability. As observed October
-31, Chat Organizer is not on the default-branch catalog and is not publicly
-listed; no consumer installation or live-account compatibility is established.
+Hold distribution and source merge while that gate remains unmet. Draft
+[PR #35](https://github.com/foculoom/aiartifacts/pull/35) exposes source for
+review; independent review found and prompted correction of an inaccurate
+marketplace-availability sentence in the package README. CI and exact-head
+review remain pending. As observed October 31, Chat Organizer is not on the
+default-branch catalog and is not publicly listed; no consumer installation or
+live-account compatibility is established.
 The v0.5.0 toolkit tag and consumer pins remain unchanged. Next: preserve the
 candidate and complete PR checks/review, then use a newly predeclared
 evaluation or an explicit revised acceptance decision before release. A

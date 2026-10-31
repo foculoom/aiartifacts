@@ -1,6 +1,11 @@
 # Chat Organizer 0.1.0 candidate evaluation — October 31, 2026
 
-The tested source is commit `ce892d26ac6509f439cf9cb518532471a1a27942`.
+The behavior-tested skill comes from commit
+`ce892d26ac6509f439cf9cb518532471a1a27942`. Independent source review
+found that the plugin README implied current marketplace availability; commit
+`e34b75babcedc99407a494b2659c06e9da3761f9` corrected that statement
+without changing the skill or its supporting files. The final package
+verification below uses `e34b75babcedc99407a494b2659c06e9da3761f9`.
 The `SKILL.md` SHA-256 is
 `cd664af43f4b96d6dd31d65f0bdbd88dc2d3f078479872b468f52f177b18be05`.
 The final dependency document adds standalone installation guidance after the
@@ -72,11 +77,12 @@ candidate ZIP SHA-256 values are:
 | Package | SHA-256 |
 | --- | --- |
 | Standalone skill | `b60f8da8bd8a5c5f5b81166576aaae1412ee21154391d39084feeace58fcff66` |
-| Plugin | `7c24a716632444198618f345177a960169612eeaa689fd15c8db1001c4a80d44` |
+| Plugin | `e54f00ca8f987f2ebb0232ecf0918d51dd1c31b0ef6bdd067fcd07fbfb917181` |
 
 These candidate archives stay private while the usefulness gate is unmet.
 They do not imply an installed consumer, public listing or successful live
-account organization. As observed October 31, the new plugin is not on the
-default-branch marketplace catalog, and no public Plugins Directory submission
-or new toolkit release was made. The existing v0.5.0 tag and consumer pins are
+account organization. As observed October 31, [draft PR #35](https://github.com/foculoom/aiartifacts/pull/35)
+exposes candidate source for review, while the new plugin is not on the
+default-branch marketplace catalog. No public Plugins Directory submission or
+new toolkit release was made. The existing v0.5.0 tag and consumer pins are
 unchanged.
