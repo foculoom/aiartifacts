@@ -2,6 +2,12 @@
 
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
+## Unreleased — Chat Organizer 0.1.0 source candidate
+
+- Add a portable `chat-organizer` plugin with one `organize-chats` skill for outcome-based chat audits and authorized organization in Codex and ChatGPT.
+- Add capability and recovery guidance, a blank private migration-record template, and synthetic behavioral cases. The plugin has no MCP server, hosted service, hook or schedule.
+- Keep account contents outside the package. Catalog integration, package export, runtime behavior, public acquisition and consumer installation are separate receipts; v0.5.0 and existing consumer pins remain unchanged.
+
 ## Unreleased — upstream Agent Supply Chain pilot
 
 - Extend the existing evaluation runner with an explicit signed-in profile and

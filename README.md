@@ -31,6 +31,7 @@ its existing 0.1.2 manifest and platform-boundary skill.
 
 | Artifact | Purpose | Location |
 | --- | --- | --- |
+| Chat Organizer 0.1.0 source candidate | Audits and organizes accessible chats while preserving history and account boundaries | [`plugins/chat-organizer/`](plugins/chat-organizer/) |
 | Editorial plugin | Reviews and revises writing for its audience and medium | [`plugins/editorial/`](plugins/editorial/) |
 | Editorial writing skill | Applies the editorial method and the selected writing profile | [`plugins/editorial/skills/editorial-writing/`](plugins/editorial/skills/editorial-writing/) |
 | Editorial reviewer agent template | Optional review-only second pass in Codex | [`agents/codex/editorial_reviewer.toml`](agents/codex/editorial_reviewer.toml) |

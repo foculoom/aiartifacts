@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chat-organizer",
+  "version": "0.1.0",
+  "description": "Review and organize accessible Codex and ChatGPT conversations around durable outcomes.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/chat-organizer",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": ["chats", "organization", "continuity", "productivity"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Chat Organizer",
+        "shortDescription": "Find and organize ongoing conversations",
+        "longDescription": "Audit accessible chats, suggest durable work areas, and apply authorized organization changes where supported.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Review my Codex and ChatGPT chats and propose a simpler organization.",
+          "Organize my accessible chats around current outcomes and preserve unfinished work."
+        ]
+      }
+    }
+  }
+}

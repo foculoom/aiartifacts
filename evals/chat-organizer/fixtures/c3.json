@@ -1,0 +1,21 @@
+{
+  "case": "C3",
+  "projects": [
+    {"id": "p-archive", "name": "Archive Notes", "sharing": "owner-only", "memory": "default", "instructions": "", "sources": []},
+    {"id": "p-workshop", "name": "Workshop", "sharing": "owner-only", "memory": "default", "instructions": "", "sources": []}
+  ],
+  "sections": ["Archive Notes", "Workshop"],
+  "chats": [
+    {"id": "c-201", "kind": "chatgpt", "title": "Fixing a small table", "project_id": "p-workshop", "section": "Archive Notes", "archived": false, "pinned": false},
+    {"id": "c-202", "kind": "chatgpt", "title": "Sketching a room", "project_id": "p-archive", "section": "Archive Notes", "archived": false, "pinned": false}
+  ],
+  "automations": [],
+  "migration_record": {
+    "approved_destination": "p-workshop",
+    "original_archive_state": {"c-201": true, "c-202": true},
+    "previous_operations": [
+      "c-201 move timed out; fresh read shows p-workshop and active",
+      "c-202 move reported failure; fresh read shows p-archive and active"
+    ]
+  }
+}

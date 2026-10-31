@@ -1,5 +1,21 @@
 # Maintainer handoff
 
+## Chat Organizer 0.1.0 source candidate — October 31, 2026
+
+The owner approved a focused Chat Organizer plugin for Codex and ChatGPT users,
+with one `organize-chats` skill, an AI Artifacts catalog entry, and standalone
+skill/plugin ZIPs from the same reviewed source. The public Plugins Directory is
+outside this delivery. The skill uses available account tools, supports an
+authorized export when they are absent, and preserves transcripts, archive
+states, project boundaries and automation settings. Consumer inventories and
+receipts remain private; only synthetic cases belong in this repository.
+
+This section records source intent while implementation and acceptance proceed.
+Record the exact reviewed head, checks, held-out behavior, package hashes,
+runtime coverage, resulting merge SHA, public acquisition, remaining gates and
+next action here before claiming delivery. A catalog entry alone is not a
+release or proof of account compatibility. Preserve v0.5.0 and consumer pins.
+
 ## Agent Supply Chain pilot — October 30, 2026
 
 The owner replaced Editorial as the active distribution pilot with an

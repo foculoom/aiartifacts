@@ -1,0 +1,16 @@
+{
+  "case": "C4",
+  "projects": [
+    {"id": "p-personal", "name": "Personal", "sharing": "owner-only", "memory": "default", "instructions": "", "sources": []},
+    {"id": "p-community", "name": "Community", "sharing": "six collaborators", "memory": "default", "instructions": "subject guidance", "sources": []},
+    {"id": "p-vault", "name": "Personal Vault", "sharing": "owner-only", "memory": "project-only", "instructions": "subject guidance", "sources": []},
+    {"id": "p-kitchen", "name": "Kitchen", "sharing": "owner-only", "memory": "default", "instructions": "subject guidance", "sources": []}
+  ],
+  "sections": ["Personal", "Community", "Kitchen"],
+  "chats": [
+    {"id": "c-301", "kind": "chatgpt", "title": "Family health notes", "project_id": "p-personal", "section": "Personal", "archived": false, "pinned": false},
+    {"id": "c-302", "kind": "work", "title": "Household schedule", "project_id": null, "section": "Personal", "archived": false, "pinned": false},
+    {"id": "c-303", "kind": "chatgpt", "title": "Recipe research", "project_id": "p-personal", "section": "Personal", "archived": false, "pinned": false}
+  ],
+  "automations": []
+}
