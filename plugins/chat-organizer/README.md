@@ -9,9 +9,10 @@ inventories or authorized exports when direct chat access is unavailable.
 
 Choose an immutable reviewed commit. Plugin-capable clients install
 `plugins/chat-organizer`; standalone skill installers use
-`plugins/chat-organizer/skills/organize-chats` from the same revision. The AI
-Artifacts marketplace catalog makes the plugin available to compatible desktop
-clients. Client installation commands and supported chat tools vary; verify the
+`plugins/chat-organizer/skills/organize-chats` from the same revision. Once a
+reviewed source revision is merged, the AI Artifacts marketplace catalog can
+make this plugin available to compatible desktop clients. Client installation
+commands and supported chat tools vary; verify the
 installed file inventory and test the actual runtime before claiming support.
 Installing the skill does not grant access to chats or change account settings.
 
