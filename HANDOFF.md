@@ -33,10 +33,18 @@ passed at that same head. This handoff-only follow-up changes no plugin bytes.
 As observed October 31, Chat Organizer is not on the
 default-branch catalog and is not publicly listed; no consumer installation or
 live-account compatibility is established.
-The v0.5.0 toolkit tag and consumer pins remain unchanged. Next: preserve the
-candidate and complete PR checks/review, then use a newly predeclared
-evaluation or an explicit revised acceptance decision before release. A
-catalog entry alone is not a release or proof of account compatibility.
+The [independently predeclared follow-up](evals/chat-organizer/followup-20261031/README.md)
+was committed before trials at `8e3563e89f1e0ee06da3c008a583a201f54be27e`.
+Its six matched runs used the unchanged skill and passed all preservation
+checks. The blinded reviewer judged **three practical ties**, with no severe
+failure or material regression; the two-pair benefit gate remains unmet.
+Keep the original one-improvement/two-tie result and all private attempts.
+No more favorable-outcome search is justified on the unchanged design.
+
+The v0.5.0 toolkit tag and consumer pins remain unchanged. Next: keep PR #35
+draft and the ZIPs private; the owner can decide whether to change the
+acceptance target or pursue a materially different organizer design. A catalog
+entry alone is not a release or proof of account compatibility.
 
 ## Agent Supply Chain pilot — October 30, 2026
 

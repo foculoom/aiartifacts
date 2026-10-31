@@ -28,3 +28,6 @@ The fixture's ChatGPT side is a partial user-supplied export with no connected
 ChatGPT tool. This suite tests Codex organization and honest manual handoff,
 not direct ChatGPT runtime compatibility. No real account data or credentials
 belong in these files or public results.
+
+The completed [result](results.md) retains all three practical ties and the
+continued release hold.
