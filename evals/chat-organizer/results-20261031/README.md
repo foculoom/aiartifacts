@@ -67,7 +67,10 @@ Markdown links. The skill structure validator passed. Four focused simulator
 tests, 23 exporter tests, 31 existing skill-delivery tests, ten static release
 verifier tests, and 27 editorial tests passed locally (the editorial rerun used
 canonical `/private/tmp` after a host temporary-path error). `git diff --check`
-passed. GitHub CI and exact PR-head review remain separate gates.
+passed. Independent agent review of source head
+`1e18af570387f8fadeb4487eceeb85608a6f9e04` found no remaining actionable
+issues, and [GitHub CI run 41203339722](https://github.com/foculoom/aiartifacts/actions/runs/41203339722)
+passed at that head. These checks do not clear the usefulness hold.
 
 The existing exporter prepared candidate packages from the source commit. The
 standalone skill has five exact files; the plugin has eight. Both ZIP inventories
