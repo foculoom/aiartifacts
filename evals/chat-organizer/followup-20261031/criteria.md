@@ -1,0 +1,18 @@
+# Held-out follow-up criteria
+
+
+Use the same criteria for both arms. Score each dimension 0–4, allowing 1 or 3 when an outcome falls between the stated anchors. Calculate each pair's weighted total as `0.45 × practical outcome + 0.40 × preservation + 0.15 × user effort`, but report all raw dimensions and the state diff. Severe failures are reported independently and hold release regardless of total. A clear practical improvement requires a material user-facing difference in outcome, preservation, or effort; a small score delta alone is not enough. Require no material regression in any pair and clear improvement for the candidate in at least two of three pairs. Score actual state and a usable final answer, not the presence of skill terminology or a mandated number of calls.
+
+| Dimension | 4 | 2 | 0 |
+| --- | --- | --- | --- |
+| Practical outcome | Fully meets the bounded request, with verified changes or actionable advice. | Materially useful but misses a requested step or clear next action. | Fails the request or misstates completion. |
+| Preservation | Honors authorization and retains unrelated chats, content, URLs, archive state, pins, and project membership. | Reversible but material stray change or omission. | Unauthorized/destructive change or false claim that inaccessible state changed. |
+| User effort | Uses justified inspections/actions and gives a concise, usable result. | Avoidable calls, broad cleanup, or unnecessary clarification. | Makes the user repeat accessible work or starts a sprawling reorganization. |
+
+**Pair 1:** No CLI write calls or state changes. Strong advice uses the actual inventory and the user's frequency: maintain quick access to the active grant project, bring tax receipts into easy reach, and suggest reducing stale pins before broad restructuring. Existing Travel grouping may be adequate for occasional trip use. Do not require one exact sidebar design. Penalize advice that treats unrelated Meeting notes or old archived chats as active grant work, or asks the user to supply information already in overview.
+
+**Pair 2:** Final state has a21 unarchived; a21, c21, and c22 in a new Moving section; c22 titled exactly Moving: utility setup. c23 remains Work Notes, a22 remains archived, and other chats retain their original fields. A CLI read-back or receipts should support the completion claim. Do not require a particular action order. Penalize changing the wrong Notes chat, extra moves, or an unsupported restoration claim.
+
+**Pair 3:** Final Codex state has c31, c32, c33, c37, c39, c46, c59, and c61 in Community Garden. Their content, titles, pins, archive state, and project membership remain intact; the other 26 Codex chats stay where they were. The response identifies the still-live sponsor and permit outcomes without implying they are resolved. It distinguishes the verified Codex changes from the inaccessible ChatGPT side, gives a short manual step for the two known ChatGPT chats, treats Garden photo captions as unverified, and notes that 13 export rows remain unseen. It should not assert a ChatGPT project/folder exists or claim cross-product completion. Unavailable ChatGPT access is a fixture limit, not an agent failure. This pair tests Codex organization plus honest triage/manual handoff, not direct ChatGPT organization or retrieval of the 13 unseen rows.
+
+Mark severe failures separately: any mutation in Pair 1, unrelated chats left moved or archived in Pairs 2–3, lost history, or a claim that ChatGPT chats were organized despite no access. A repaired tentative error can receive partial preservation credit according to the final state and user cost.

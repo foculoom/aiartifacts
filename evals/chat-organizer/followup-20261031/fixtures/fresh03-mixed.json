@@ -1,0 +1,406 @@
+{
+  "case": "fresh03-mixed",
+  "projects": [
+    {
+      "id": "p31",
+      "name": "Donation tracker",
+      "sharing": "private",
+      "memory": "default",
+      "instructions": "Prototype details and implementation notes for a donation tracker.",
+      "sources": []
+    },
+    {
+      "id": "p32",
+      "name": "Invoice tools",
+      "sharing": "private",
+      "memory": "default",
+      "instructions": "Unrelated invoice export work.",
+      "sources": []
+    }
+  ],
+  "sections": [
+    "Work",
+    "Home",
+    "Projects",
+    "Learning",
+    "Travel",
+    "Unsorted"
+  ],
+  "chats": [
+    {
+      "id": "c31",
+      "kind": "codex",
+      "title": "Garden fundraiser page",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-30",
+      "summary": "Copy and layout for the Community Garden fundraiser."
+    },
+    {
+      "id": "c32",
+      "kind": "codex",
+      "title": "Donation tracker prototype",
+      "project_id": "p31",
+      "section": "Projects",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-29",
+      "summary": "Prototype for the Community Garden fundraiser; still needs a handoff."
+    },
+    {
+      "id": "c33",
+      "kind": "codex",
+      "title": "Garden volunteer schedule",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-26",
+      "summary": "Volunteer shifts for the Community Garden fundraiser."
+    },
+    {
+      "id": "c34",
+      "kind": "codex",
+      "title": "Spring garden planning",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-03-15",
+      "summary": "Personal vegetable bed layout, unrelated to the fundraiser."
+    },
+    {
+      "id": "c35",
+      "kind": "codex",
+      "title": "School fundraiser ideas",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-17",
+      "summary": "Ideas for a separate school event."
+    },
+    {
+      "id": "c36",
+      "kind": "codex",
+      "title": "Invoice export bug",
+      "project_id": "p32",
+      "section": "Projects",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-28",
+      "summary": "Unrelated software task."
+    },
+    {
+      "id": "c37",
+      "kind": "codex",
+      "title": "Notes",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-30",
+      "summary": "Sponsor replies for the Community Garden fundraiser; two answers still pending."
+    },
+    {
+      "id": "c38",
+      "kind": "codex",
+      "title": "Notes",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-25",
+      "summary": "Apartment chores and cleaning schedule."
+    },
+    {
+      "id": "c39",
+      "kind": "codex",
+      "title": "Sponsor deck draft",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-24",
+      "summary": "Current sponsor deck for the Community Garden fundraiser."
+    },
+    {
+      "id": "c40",
+      "kind": "codex",
+      "title": "Receipt export design",
+      "project_id": null,
+      "section": "Projects",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-23",
+      "summary": "Export screen for an unrelated finance app."
+    },
+    {
+      "id": "c41",
+      "kind": "codex",
+      "title": "Home budget",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-21",
+      "summary": "Monthly household budget."
+    },
+    {
+      "id": "c42",
+      "kind": "codex",
+      "title": "Meal planner",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-20",
+      "summary": "Weekly meals."
+    },
+    {
+      "id": "c43",
+      "kind": "codex",
+      "title": "Travel itinerary",
+      "project_id": null,
+      "section": "Travel",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-19",
+      "summary": "Winter family trip."
+    },
+    {
+      "id": "c44",
+      "kind": "codex",
+      "title": "Book notes",
+      "project_id": null,
+      "section": "Learning",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-18",
+      "summary": "Notes on a novel."
+    },
+    {
+      "id": "c45",
+      "kind": "codex",
+      "title": "2026 taxes",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-17",
+      "summary": "Tax prep checklist."
+    },
+    {
+      "id": "c46",
+      "kind": "codex",
+      "title": "Community Garden permit follow-up",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-16",
+      "summary": "Permit application for the fundraiser; decision still pending."
+    },
+    {
+      "id": "c47",
+      "kind": "codex",
+      "title": "School volunteer list",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-15",
+      "summary": "Volunteers for a school classroom."
+    },
+    {
+      "id": "c48",
+      "kind": "codex",
+      "title": "Project handoff",
+      "project_id": null,
+      "section": "Projects",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-14",
+      "summary": "Handoff for an unrelated app."
+    },
+    {
+      "id": "c49",
+      "kind": "codex",
+      "title": "Client call",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-13",
+      "summary": "Notes for an unrelated client call."
+    },
+    {
+      "id": "c50",
+      "kind": "codex",
+      "title": "Recipe ideas",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-12",
+      "summary": "Dinner recipes."
+    },
+    {
+      "id": "c51",
+      "kind": "codex",
+      "title": "Performance dashboard",
+      "project_id": null,
+      "section": "Projects",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-11",
+      "summary": "Unrelated dashboard prototype."
+    },
+    {
+      "id": "c52",
+      "kind": "codex",
+      "title": "Bike repair",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-10",
+      "summary": "Brake replacement."
+    },
+    {
+      "id": "c53",
+      "kind": "codex",
+      "title": "Spring planting beds",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-04-21",
+      "summary": "Personal garden layout, no fundraiser connection."
+    },
+    {
+      "id": "c54",
+      "kind": "codex",
+      "title": "Garden photo captions",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-30",
+      "summary": "Family garden photos, not the community event."
+    },
+    {
+      "id": "c55",
+      "kind": "codex",
+      "title": "Community fair booth",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-28",
+      "summary": "Booth for a separate neighborhood fair."
+    },
+    {
+      "id": "c56",
+      "kind": "codex",
+      "title": "Grant application outline",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-25",
+      "summary": "Grant for a local library, not the garden."
+    },
+    {
+      "id": "c57",
+      "kind": "codex",
+      "title": "Sponsor outreach script",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-22",
+      "summary": "Outreach for the school fundraiser, not the garden."
+    },
+    {
+      "id": "c58",
+      "kind": "codex",
+      "title": "Utilities account",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-18",
+      "summary": "Apartment utility bills."
+    },
+    {
+      "id": "c59",
+      "kind": "codex",
+      "title": "Garden fundraiser receipts",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-28",
+      "summary": "Donation receipts for the Community Garden fundraiser."
+    },
+    {
+      "id": "c60",
+      "kind": "codex",
+      "title": "Chat sidebar ideas",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-03",
+      "summary": "Ideas for reorganizing chat navigation."
+    },
+    {
+      "id": "c61",
+      "kind": "codex",
+      "title": "Notes",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-27",
+      "summary": "Event-day checklist for the Community Garden fundraiser."
+    },
+    {
+      "id": "c62",
+      "kind": "codex",
+      "title": "Archive cleanup",
+      "project_id": null,
+      "section": "Unsorted",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-09-02",
+      "summary": "Personal archive cleanup notes."
+    },
+    {
+      "id": "c63",
+      "kind": "codex",
+      "title": "Team agenda",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-07",
+      "summary": "Routine team agenda."
+    },
+    {
+      "id": "c64",
+      "kind": "codex",
+      "title": "Furniture layout",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-12",
+      "summary": "Living room furniture."
+    }
+  ],
+  "automations": []
+}

@@ -1,0 +1,99 @@
+{
+  "case": "fresh02-recovery",
+  "projects": [],
+  "sections": [
+    "Home",
+    "Work"
+  ],
+  "chats": [
+    {
+      "id": "c21",
+      "kind": "codex",
+      "title": "Packing checklist",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-30",
+      "summary": "Boxes, labels, and move-day tasks."
+    },
+    {
+      "id": "c22",
+      "kind": "codex",
+      "title": "Notes",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-29",
+      "summary": "Electricity transfer, internet installation, and water account."
+    },
+    {
+      "id": "c23",
+      "kind": "codex",
+      "title": "Notes",
+      "project_id": null,
+      "section": "Work",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-28",
+      "summary": "Agenda for a team planning meeting."
+    },
+    {
+      "id": "c24",
+      "kind": "codex",
+      "title": "Lease template questions",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-08-02",
+      "summary": "General lease clauses for a relative."
+    },
+    {
+      "id": "c25",
+      "kind": "codex",
+      "title": "Laptop comparison",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": true,
+      "updated_at": "2026-10-14",
+      "summary": "Personal purchase research."
+    },
+    {
+      "id": "c26",
+      "kind": "codex",
+      "title": "Birthday dinner",
+      "project_id": null,
+      "section": "Home",
+      "archived": false,
+      "pinned": false,
+      "updated_at": "2026-10-13",
+      "summary": "Restaurant ideas."
+    },
+    {
+      "id": "a21",
+      "kind": "codex",
+      "title": "Apartment lease",
+      "project_id": null,
+      "section": "Home",
+      "archived": true,
+      "pinned": false,
+      "updated_at": "2026-10-30",
+      "summary": "Current apartment lease terms and landlord follow-up."
+    },
+    {
+      "id": "a22",
+      "kind": "codex",
+      "title": "Old moving checklist",
+      "project_id": null,
+      "section": "Home",
+      "archived": true,
+      "pinned": false,
+      "updated_at": "2026-01-05",
+      "summary": "Prior move, completed."
+    }
+  ],
+  "automations": []
+}
