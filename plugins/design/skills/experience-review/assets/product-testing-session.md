@@ -31,6 +31,8 @@ implied. Reference shared definitions rather than creating a second persona list
 - Reviewer identity/type; implementer; independence limits: [fill in]
 - Evidence mode: [agent analysis / scripted execution / agent-operated UI / human]
 - Actual runtime/version, viewport/device profile, input and assistive tools: [fill in]
+- Relevant media and review capability: [visual / audio / synchronized / not applicable; actual tool, reviewer type, model/version if verifiable]
+- Capture provenance and inspected range: [artifact/hash, frames/timestamps, device/output context, capture-path sanity check; unavailable or unreviewed media and why]
 - Start state, fixture, parameters/seed, knowledge and help supplied: [fill in]
 - Expected observable outcome and requirement: [fill in before execution]
 - Steps actually attempted and time observed: [fill in]

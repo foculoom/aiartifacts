@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — relevant audiovisual evidence
+
+- Extend experience-review with relevant visual, audio and synchronized evidence,
+  capture-path sanity checks, capability/provenance records and explicit limits.
+- Add synthetic app/game evidence-boundary cases, including deliberate silence,
+  text-only tools, capture failure and non-game voice playback. These are text
+  decisions, not proof of perceptual quality or human acceptance.
+- Preserve package versions, release gates, consumer pins and data-sharing scope.
+
 ## Unreleased — reusable product-testing personas
 
 - Extend the existing Design experience-review skill with shared behavior lenses, accessibility/context overlays and distinct app/game/nonvisual scenarios.

@@ -1,5 +1,39 @@
 # Maintainer handoff
 
+## Relevant audiovisual evidence — November 3, 2026
+
+Prepared from merged default-branch source
+`e9b57c18dd01d8f5b5871e4c60653999fc0f13b1` (persona PR #36). The existing
+experience-review skill now distinguishes relevant visual, audio and synchronized
+evidence, requires a capture-path sanity check before attributing missing media,
+and records actual capability and inspected scope in its existing session form.
+Intentional silence, nonvisual products and product-owned acceptance remain
+intact. No new plugin, required vendor, paid service or automatic upload is added.
+
+The [evaluation record](evals/design/audiovisual/results-20261103/README.md)
+retains seven original synthetic input-only agent answers and held-out assessment,
+with exact input/skill/output hashes. This change is scoped to source guidance
+and textual evidence decisions. Actual listening, rendered interaction, native
+audio routing, installed activation and comparative usefulness are not accepted
+by these text cases. Use real authorized artifacts and the existing acceptance
+record before making any such claim.
+
+Preparation used an exact-file Linux cloud snapshot and canonical Git tree,
+not a full clone. Baseline blob, source-diff, link, scope and privacy checks are
+recorded with the evaluation. On a fresh checkout, run `git diff --check`,
+`python scripts/validate_catalog.py`, and from the repository root
+`sha256sum -c evals/design/audiovisual/results-20261103/evidence.sha256`.
+The PR's current head, independent agent review and existing `editorial` and
+`engineering_js` CI results own source-integration evidence. Recheck them after
+any edit; a dated earlier pass does not accept a different head.
+
+The owner authorized public publication and protected-PR source merge of this
+generic update on November 3. Private product audits remain outside this public
+change. Preserve package versions, v0.5.0, all existing consumer pins and unrelated
+release holds. Public source can be read directly at the merged revision once
+integration is verified; installed consumers do not adopt it automatically.
+Package release and consumer-pin changes require separately reviewed authority.
+
 ## Reusable app and game testing personas — November 3, 2026
 
 Prepared against default-branch source
