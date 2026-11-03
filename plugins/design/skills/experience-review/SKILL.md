@@ -1,6 +1,6 @@
 ---
 name: experience-review
-description: Review a rendered website or interface against its product and identity brief, with evidence-based usability, visual hierarchy, and customer-journey findings. Use for experience audits, not authorship detection or automatic redesign.
+description: Review a rendered website or interface against its product and identity brief, with evidence-based usability, visual hierarchy, and customer-journey findings. Use for experience audits or persona-based product testing across apps and games, not authorship detection or automatic redesign.
 ---
 
 # Experience review
@@ -14,6 +14,7 @@ Use the available browser or rendering tools and follow navigation and direct-en
 - [Publisher sites](references/publisher-sites.md): a portfolio with products at different release stages.
 - [Product pages](references/product-pages.md): audience, value, availability, and conversion paths.
 - [Interactive experiences](references/interactive-experiences.md): state, feedback, help, input, and return paths.
+- [Product-testing personas](references/product-testing-personas.md): reusable behavior lenses, accessibility/context overlays and app/game scenarios. Use when persona-based coverage is requested or would address a specific audience risk, not for every small correction.
 - [Operational status](references/operational-status.md): public health claims, incident states, and private measurement views.
 - [Production acceptance](references/production-acceptance.md): a requested production-quality decision, material visual/game-art change, or owning-project acceptance gate. It is not required for every small edit.
 
@@ -21,11 +22,13 @@ Compare with approved identity decisions and the project's voice brief. Review h
 
 For a stateful experience, inspect starting, active, paused or overview, and recovery states separately. Compare the controls shown with actions that actually work in each state, including keyboard focus and touch affordances. When a released experience, canonical source, and candidate build differ, identify each exact revision or artifact and test the relevant journey in each; a source diff does not establish what visitors receive. Follow the [interactive experience reference](references/interactive-experiences.md) for the bounded state and artifact comparison.
 
+For persona-based testing, select lenses from the product's actual audience and requirements; record simulated analysis, scripted execution, agent-operated UI and human sessions separately. Use the owning test/finding record rather than creating a parallel gate. Personas never supply missing human evidence or authorize real-world actions.
+
 Do not submit live forms, make purchases, alter settings, or publish content without task authorization. Use local fixtures for destructive or externally visible states. Never infer delivery from a submit button, a public release from a marketing page, or privacy compliance from the absence of an obvious analytics script.
 
 ## Report useful findings
 
-For each actionable finding, provide the URL or component, source file when verified, observed evidence, consequence for the visitor, classification, proposed correction, and testable acceptance criterion. Classify findings as defect, strategic tradeoff, aesthetic preference, or hypothesis; do not disguise preference as a failure. Prioritize critical broken journeys or exposure as P0, important usability/clarity problems as P1, and optional refinements as P2. Do not manufacture findings or numerical quality scores.
+For each actionable finding, provide the URL or component, source file when verified, observed evidence, consequence for the visitor, classification, proposed correction, and testable acceptance criterion. Classify findings as defect, strategic tradeoff, aesthetic preference, or hypothesis; do not disguise preference as a failure. Use the owning project's severity scale. If it has none, prioritize critical broken journeys or exposure as P0, important usability/clarity problems as P1, and optional refinements as P2. Do not manufacture findings or numerical quality scores.
 
 State what works and should remain. Separate observed facts from inferred causes and proposed changes. Include coverage and untested states. A passing automated check is not accessibility certification; clicks are not demand or purchases; a polished forecast interface is not accuracy evidence. Do not invent uplift, customers, measurements, or test results.
 

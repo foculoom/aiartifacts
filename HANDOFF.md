@@ -1,5 +1,51 @@
 # Maintainer handoff
 
+## Reusable app and game testing personas — November 3, 2026
+
+Prepared against default-branch source
+`7618ac6a52f9da5190cf475136959e8e5005ab69`. This extends the existing Design
+experience-review skill with shared behavior lenses, functional accessibility and
+context overlays, product-specific app/game/nonvisual scenarios, and a fallback
+private-project session template. It adds no plugin, dependency, CI change,
+automatic acceptance gate, package version or consumer-pin change. Generic
+source definitions belong here; completed product studies and private data do not.
+
+The [evaluation record](evals/design/personas/results-20261103/README.md) retains
+complete input-only agent answers, exact input hashes, held-out assessment and
+independent source review. Eight fictional text cases met their bounded criteria.
+This is guidance-decision coverage, not rendered app/game testing, human research,
+accessibility certification or demonstrated improvement over the base model.
+
+Preparation used exact GitHub file contents and a canonical path inventory in an
+authorized Linux cloud workspace, not a full Git clone. Base blob hashes,
+changed-file relative links, unchanged seven-plugin/eight-skill discovery and
+patch application passed. The public [PR #36](https://github.com/foculoom/aiartifacts/pull/36)
+was created and read back at source `6c454a804b4462797263b051c055f2d5e8a3f4e4`;
+all fourteen remote files matched the reviewed content. Both existing CI jobs
+passed on that exact head in [run 41610328585](https://github.com/foculoom/aiartifacts/actions/runs/41610328585).
+A later documentation-only head must pass its own checks; the PR owns its current
+head and merge receipt. Installed runtime routing remains untested.
+
+The owner subsequently authorized source integration after rubber-duck review
+on November 3, superseding the initial draft-only hold for this PR. Review the
+final head and required checks, then use the normal protected PR merge path.
+No GitHub review approval, admin bypass, package release, product release or
+consumer-pin change is authorized by that source-merge decision. Existing
+released versions and unrelated acceptance holds remain unchanged.
+
+After source integration, ongoing work can read these definitions directly at
+the merged commit as advisory test-planning guidance; a new package release is
+not required for that explicit source-reference use. Record the exact revision
+and product-specific mapping. Existing installed plugins and pinned consumers
+do not gain the change automatically: update their source pin or install a later
+released package only through the owning project's separately reviewed adoption.
+
+Before claiming improved actual testing, run representative rendered app and
+game journeys using the existing acceptance method. Keep source integration,
+rendered behavior acceptance, package publication and explicit consumer adoption
+distinct. Do not silently update consumer pins or replace required human testing.
+
+
 ## Agent Supply Chain pilot — October 30, 2026
 
 The owner replaced Editorial as the active distribution pilot with an

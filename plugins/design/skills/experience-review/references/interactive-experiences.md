@@ -14,3 +14,6 @@ For stateful interfaces, sample the journey as a sequence rather than a single s
 Record the device or viewport, input method, exact artifact and observed result for each check. A browser-emulated viewport does not establish physical-device legibility or native behavior. For a dense overview, ask a target-device user to identify a relevant item and exit; fitting content on screen is not a readability criterion.
 
 If released bytes, canonical source and an unpublished candidate differ, compare the relevant routes and actions across all three with exact revisions or hashes and observation dates. Keep a previously accepted candidate milestone even when a later change needs review. State which artifact a finding concerns, whether a public user can reach it now, and which release decision remains. Preserve existing routes and saved progress unless a change is authorized; do not turn an unrelated archived route into a new primary navigation action.
+
+
+For persona-based coverage, use the shared [product-testing lenses](product-testing-personas.md) with a product-specific task. They apply to apps as well as games and preserve the distinction between simulated analysis, executed behavior and human testing.

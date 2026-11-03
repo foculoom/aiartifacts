@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — reusable product-testing personas
+
+- Extend the existing Design experience-review skill with shared behavior lenses, accessibility/context overlays and distinct app/game/nonvisual scenarios.
+- Add a private-project session template and synthetic selection/evidence-boundary cases. Distinguish analysis, scripted execution, agent-operated UI and real human sessions without a universal persona gate.
+- Preserve existing plugin versions, release tags, consumer pins and product-owned acceptance rules.
+
 Changes to released artifacts are recorded here. The repository and each plugin can have independent versions; consuming projects should pin a tag or commit SHA.
 
 ## Unreleased — upstream Agent Supply Chain pilot
