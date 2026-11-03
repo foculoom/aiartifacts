@@ -19,19 +19,31 @@ accessibility certification or demonstrated improvement over the base model.
 Preparation used exact GitHub file contents and a canonical path inventory in an
 authorized Linux cloud workspace, not a full Git clone. Base blob hashes,
 changed-file relative links, unchanged seven-plugin/eight-skill discovery and
-patch application were checked. Full repository CI and runtime skill routing
-were not run. The owner authorized publication of this generic source as a public draft PR
-on November 3. Merge, new release and consumer adoption remain unauthorized;
-keep the PR draft. Existing released versions and unrelated acceptance holds
-remain unchanged. The PR and hosted checks must be read back before claiming
-publication or CI success.
+patch application passed. The public [PR #36](https://github.com/foculoom/aiartifacts/pull/36)
+was created and read back at source `6c454a804b4462797263b051c055f2d5e8a3f4e4`;
+all fourteen remote files matched the reviewed content. Both existing CI jobs
+passed on that exact head in [run 41610328585](https://github.com/foculoom/aiartifacts/actions/runs/41610328585).
+A later documentation-only head must pass its own checks; the PR owns its current
+head and merge receipt. Installed runtime routing remains untested.
 
-Next: refresh main, apply the focused patch on a topic branch, run `python3 scripts/validate_catalog.py` and
-existing relevant checks from `.github/workflows/validate.yml`, then obtain
-independent review of the exact PR head. Before claiming improved actual testing,
-run representative rendered app and game journeys using the existing acceptance
-method. Keep source integration, rendered behavior acceptance, package publication
-and explicit consumer adoption distinct; do not silently update consumer pins.
+The owner subsequently authorized source integration after rubber-duck review
+on November 3, superseding the initial draft-only hold for this PR. Review the
+final head and required checks, then use the normal protected PR merge path.
+No GitHub review approval, admin bypass, package release, product release or
+consumer-pin change is authorized by that source-merge decision. Existing
+released versions and unrelated acceptance holds remain unchanged.
+
+After source integration, ongoing work can read these definitions directly at
+the merged commit as advisory test-planning guidance; a new package release is
+not required for that explicit source-reference use. Record the exact revision
+and product-specific mapping. Existing installed plugins and pinned consumers
+do not gain the change automatically: update their source pin or install a later
+released package only through the owning project's separately reviewed adoption.
+
+Before claiming improved actual testing, run representative rendered app and
+game journeys using the existing acceptance method. Keep source integration,
+rendered behavior acceptance, package publication and explicit consumer adoption
+distinct. Do not silently update consumer pins or replace required human testing.
 
 
 ## Agent Supply Chain pilot — October 30, 2026

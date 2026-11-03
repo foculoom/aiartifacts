@@ -1,9 +1,13 @@
 # Persona guidance evaluation — November 3, 2026
 
 Preparation baseline: local source candidate against AI Artifacts default-branch
-commit `7618ac6a52f9da5190cf475136959e8e5005ab69`. The owner subsequently authorized a public draft PR on November 3. This
-evaluation record does not establish PR creation, hosted CI, merge, package
-release, product release or consumer adoption. Merge and release remain held.
+commit `7618ac6a52f9da5190cf475136959e8e5005ab69`. Public
+[PR #36](https://github.com/foculoom/aiartifacts/pull/36) was created and its initial
+source `6c454a804b4462797263b051c055f2d5e8a3f4e4` passed both existing CI jobs in
+[run 41610328585](https://github.com/foculoom/aiartifacts/actions/runs/41610328585).
+The owner subsequently authorized source integration after rubber-duck review
+on November 3. The PR owns final-head checks and the actual merge receipt;
+package release, product release and consumer adoption remain separate.
 
 ## Evidence and procedure
 
@@ -52,17 +56,17 @@ was checked on a clean disposable copy of the materialized baseline. These are
 bounded source consistency checks, not the full repository CI suite, exhaustive
 privacy proof, installed routing, rendered usability or improved test discovery.
 
-Full clone/catalog CI, final published PR-head review, rendered app/game use,
-human research and any incremental-usefulness study remain unperformed for this
-candidate. The existing [production-acceptance method](../../../../plugins/design/skills/experience-review/references/production-acceptance.md)
+The initial source head passed full hosted catalog/repository CI and independent
+remote-content review after local preparation. Later documentation-only heads
+need their own exact-head checks and review. Rendered app/game use, human
+research and an incremental-usefulness study remain unperformed for this candidate. The existing [production-acceptance method](../../../../plugins/design/skills/experience-review/references/production-acceptance.md)
 controls relevant rendered claims. The source reviewer accepts only its named
 file hashes; later documentation additions require their own scoped readback.
 
 ## Next action
 
-Use the owner-authorized public draft PR path; do not merge or release.
-Refresh the default branch before publication, retain existing holds and pins,
-run normal repository checks, and review the exact final source head. Verify
-the resulting PR and hosted checks separately from these local preparation results. Adopt the
-method in a consumer only through that product's explicit reviewed change.
+Use the owner-authorized source integration path after final-head review and
+required checks. Keep package/product releases and consumer pins unchanged.
+Direct advisory source-reference use can name the merged revision; installed
+consumers need their own explicit adoption before claiming they use the change.
 Do not convert these planning cases into a product or release certificate.
