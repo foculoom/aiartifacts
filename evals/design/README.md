@@ -47,3 +47,9 @@ review, native/device checks and package-release authorization.
 ## Reusable product-testing persona cases
 
 [Persona cases](personas/README.md) cover cross-product selection, evidence modes, accessibility limits and safe execution. Input prompts and held-out assessment criteria are separate. These text cases evaluate guidance decisions; they do not establish rendered usability, human playtesting or marketplace readiness.
+
+## Relevant audiovisual evidence cases
+
+[Audiovisual cases](audiovisual/README.md) cover media selection, capture integrity,
+capability limits and authorized review for apps and games. Their text-only
+results do not establish actual listening, image perception or product quality.
