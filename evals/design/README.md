@@ -42,3 +42,8 @@ retains four fresh input-only evaluations at `7b6bf416173666d20b35def9c1200e0054
 All four meet the held-out behavior criteria with actual rendered/interaction
 evidence. This is bounded Design behavior coverage, separate from source-PR
 review, native/device checks and package-release authorization.
+
+
+## Reusable product-testing persona cases
+
+[Persona cases](personas/README.md) cover cross-product selection, evidence modes, accessibility limits and safe execution. Input prompts and held-out assessment criteria are separate. These text cases evaluate guidance decisions; they do not establish rendered usability, human playtesting or marketplace readiness.

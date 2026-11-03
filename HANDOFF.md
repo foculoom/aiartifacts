@@ -1,5 +1,39 @@
 # Maintainer handoff
 
+## Reusable app and game testing personas — November 3, 2026
+
+Prepared against default-branch source
+`7618ac6a52f9da5190cf475136959e8e5005ab69`. This extends the existing Design
+experience-review skill with shared behavior lenses, functional accessibility and
+context overlays, product-specific app/game/nonvisual scenarios, and a fallback
+private-project session template. It adds no plugin, dependency, CI change,
+automatic acceptance gate, package version or consumer-pin change. Generic
+source definitions belong here; completed product studies and private data do not.
+
+The [evaluation record](evals/design/personas/results-20261103/README.md) retains
+complete input-only agent answers, exact input hashes, held-out assessment and
+independent source review. Eight fictional text cases met their bounded criteria.
+This is guidance-decision coverage, not rendered app/game testing, human research,
+accessibility certification or demonstrated improvement over the base model.
+
+Preparation used exact GitHub file contents and a canonical path inventory in an
+authorized Linux cloud workspace, not a full Git clone. Base blob hashes,
+changed-file relative links, unchanged seven-plugin/eight-skill discovery and
+patch application were checked. Full repository CI and runtime skill routing
+were not run. The owner authorized publication of this generic source as a public draft PR
+on November 3. Merge, new release and consumer adoption remain unauthorized;
+keep the PR draft. Existing released versions and unrelated acceptance holds
+remain unchanged. The PR and hosted checks must be read back before claiming
+publication or CI success.
+
+Next: refresh main, apply the focused patch on a topic branch, run `python3 scripts/validate_catalog.py` and
+existing relevant checks from `.github/workflows/validate.yml`, then obtain
+independent review of the exact PR head. Before claiming improved actual testing,
+run representative rendered app and game journeys using the existing acceptance
+method. Keep source integration, rendered behavior acceptance, package publication
+and explicit consumer adoption distinct; do not silently update consumer pins.
+
+
 ## Agent Supply Chain pilot — October 30, 2026
 
 The owner replaced Editorial as the active distribution pilot with an

@@ -115,6 +115,19 @@ on `main` does not update an installed plugin, a published tag or a consuming
 project's pinned version. For fresh-machine setup, exact revisions and
 validation commands, start with [HANDOFF.md](HANDOFF.md).
 
+## Reusable product-testing personas (unreleased source)
+
+The existing Design experience-review skill includes
+[shared product-testing lenses](plugins/design/skills/experience-review/references/product-testing-personas.md)
+for apps, games, websites and nonvisual tools. Select relevant novice, experienced,
+critic, practitioner, rushed, returning and cautious perspectives, with separate
+accessibility/context overlays and product-specific scenarios. A portable
+[session template](plugins/design/skills/experience-review/assets/product-testing-session.md)
+fits the owning project's existing test record. These are behavior hypotheses,
+not recruited participants; simulated analysis, executed checks and human research
+remain distinct. No extra plugin, automatic release gate or consumer update is added.
+[Synthetic cases](evals/design/personas/README.md) test the bounded guidance.
+
 ## Engineering source candidate
 
 Engineering 0.1.0 adds the [platform-boundaries skill](plugins/engineering/skills/platform-boundaries/SKILL.md) and a dependency-free, bounded lexical guard with synthetic failure tests. Source candidate only; existing release tags and consumer pins are unchanged. The guard does not certify dependency graphs, device behavior, purchases or store readiness.
