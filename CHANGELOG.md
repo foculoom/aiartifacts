@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — expert-source maintenance
+
+- Add a read-only bundle comparison helper and synthetic conflict/unavailable
+  cases; record a real Release skill dependency change missed by wrapper-only
+  checks.
+- Record Acorn 8.19.0 as available for assessment while retaining the 8.18.0
+  lock, and update Awesome Copilot's moved first-party validation paths.
+- Set a monthly review proposal within the existing engineering cadence.
+  Preserve v0.5.0, plugin versions, installed consumers and their pins.
+
 ## Unreleased — relevant audiovisual evidence
 
 - Extend experience-review with relevant visual, audio and synchronized evidence,

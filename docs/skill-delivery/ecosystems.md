@@ -1,14 +1,19 @@
 # Distribution routes
 
-Official documentation checked **2026-10-30**. Recheck the linked contracts
+Official documentation checked **2026-10-30**; the Awesome Copilot source
+paths and external-plugin contract below were rechecked **2026-11-10** at
+[`227949a`](https://github.com/github/awesome-copilot/tree/227949a7542a55d2155c00e7cdb998d9a0fee4f3). Recheck the linked contracts
 before an external action; record the tool version and source revision used.
 Commands below illustrate separately authorized checks or installation using
 already reviewed tools. They do not authorize downloading executables, enabling
 telemetry, installing globally, submitting, or publishing.
 
-Inspected source snapshots: [Awesome Copilot `5269f7e`](https://github.com/github/awesome-copilot/tree/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd)
+Original inspected source snapshots: [Awesome Copilot `5269f7e`](https://github.com/github/awesome-copilot/tree/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd)
 and [skills CLI `92a9a34`](https://github.com/vercel-labs/skills/tree/92a9a34ac3bf88e695e468b90c7bf32f163d32c8).
 These identify the documentation review, not installed or behavior-tested tools.
+The skills CLI command documentation was rechecked at
+[`26dc8e4`](https://github.com/vercel-labs/skills/tree/26dc8e4755a11fea22ed788256c3db50001b013d)
+on 2026-11-10; this was source inspection, not an installed CLI test.
 
 ## Shared source and runtime boundary
 
@@ -39,11 +44,18 @@ locators are supplied they must agree. Do not open an initial PR editing
 Vally skill/reference lint, version consistency and Copilot install checks;
 human maintainers decide acceptance, then automation prepares a listing PR.
 Listed-version changes use reviewed PRs; periodic re-review is also documented.
+The current [external-plugin validator](https://github.com/github/awesome-copilot/blob/227949a7542a55d2155c00e7cdb998d9a0fee4f3/.github/scripts/external-plugins/external-plugin-validation.mjs)
+is the canonical data-rule source. The current contribution policy says the
+root `plugin.json` is authoritative when legacy manifests coexist. This is a
+source-contract update for preparation, not a new pilot acceptance result.
 
 Use the tool interface actually installed. `@microsoft/vally@0.20.0` is a
 library, not the `@microsoft/vally-cli` executable package. The upstream
-[quality-gate implementation](https://github.com/github/awesome-copilot/blob/5269f7ea2d6c3a9bfda5ed878b6726cf509121fd/eng/external-plugin-quality-gates.mjs)
-calls `runLint({ rootPath })`; it does not need model inference. In an already
+[quality-gate implementation](https://github.com/github/awesome-copilot/blob/227949a7542a55d2155c00e7cdb998d9a0fee4f3/.github/scripts/external-plugins/external-plugin-quality-gates.mjs)
+resolves skill directories and calls `runLint({ rootPath })` on each, falling
+back to the plugin root when none resolve. It does not need model inference.
+The earlier `eng/external-plugin-quality-gates.mjs` path belongs to the
+`5269f7e` snapshot and is absent from the current source. In an already
 reviewed tool workspace resolving that exact library version, the equivalent
 bounded check is:
 

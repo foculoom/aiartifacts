@@ -1,5 +1,48 @@
 # Maintainer handoff
 
+## Expert-source maintenance — November 10, 2026
+
+Prepared from default-branch source `67e6e0d3f4dd833f2f768a2351932136af3dc394`
+in an authorized Linux cloud checkout. The new
+[maintenance procedure](docs/skill-delivery/upstream-maintenance.md) fits a
+first-Monday due item into the existing Monday engineering review, with the toolkit
+maintainer responsible for discovery and product maintainers for adoption. The
+last bounded source inspection was November 10; the proposed next review is
+December 7. No scheduler, installed plugin, toolkit release, or consumer pin
+was changed.
+
+Inspection of the seven package manifests, eight packaged skill folders,
+existing dependency notes, lockfiles and evaluation records found no active
+adopted third-party instruction bundle in this toolkit. The packaged methods
+are recorded as Foculoom source; Editorial's dependency record explicitly
+identifies its local profiles and helper. The external Awesome Copilot Agent
+Supply Chain work remains an unsubmitted improvement in a contribution fork,
+not a toolkit install. The optional Anthropic source is a candidate rather
+than an active dependency. This classification follows recorded use and does
+not infer an unknown method's historical author from an installed name.
+
+The active Acorn 8.18.0 parser remains locked; its first-party 8.19.0 release
+is [recorded as awaiting assessment](plugins/engineering/skills/platform-boundaries/references/import-graph-adoption.md).
+Design's Anthropic frontend source remains [optional and unadopted](plugins/design/DEPENDENCIES.md).
+The Awesome Copilot [distribution notes](docs/skill-delivery/ecosystems.md)
+now point to the current external-plugin validation scripts at upstream
+`227949a7542a55d2155c00e7cdb998d9a0fee4f3`; this source-contract correction
+does not clear the paused Agent Supply Chain pilot or establish runtime behavior.
+The Release skill's real post-pin script changes were detected even though its
+wrapper was unchanged. Synthetic conflict/unavailable cases are exercised in
+the new comparison tests; actual fresh-agent local loading remains a separate
+runtime check. The accepted versions remain recoverable while each affected
+consumer reviews the correction and records adoption or deferral.
+The read-only Release comparison returned `change_for_assessment` with
+`entrypoint_changed=false`, two changed script files and no local conflict;
+its accepted and candidate normalized bundle identities were
+`4c6f08d28e3395d5977762691e7e4c4883990312f3d4e4e4c0021cef09176b79`
+and `1621a36527a6c3c51c3f998ea7f82f820801ebb9e6a0bcd5da667ae9ae668be8`.
+`python3 -m unittest discover -s scripts/skill-delivery/tests -q` passed
+30 tests in this checkout; `git diff --cached --check` and
+`python3 scripts/validate_catalog.py` passed (7 plugins, 8 skills). These are
+source/deterministic checks, not runtime skill loading or consumer acceptance.
+
 ## Relevant audiovisual evidence — November 3, 2026
 
 Prepared from merged default-branch source
