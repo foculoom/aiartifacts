@@ -65,6 +65,11 @@ release a plugin, alter a package version or update a consuming project's pin.
 
 ## Toolkit production-quality acceptance
 
+For adopted expert-source methods and third-party tooling, use the
+[upstream-maintenance procedure](docs/skill-delivery/upstream-maintenance.md)
+at the existing maintenance review or a relevant trigger. Preserve accepted
+versions and product pins during discovery; record product adoption separately.
+
 For material guidance changes, state the intended user task and the scope that
 would justify acceptance. Extend existing skills and use synthetic or cleared
 evaluations. When the change concerns rendered experience judgment, inspect

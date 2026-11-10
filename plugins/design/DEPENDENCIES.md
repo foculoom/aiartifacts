@@ -13,3 +13,13 @@ The optional design-export checker uses Python's standard library only. It does
 not install an image renderer or QR decoder. Record the separately available
 renderer/decoder and actual final-raster result in the consuming project's
 private handoff; the checker does not claim that validation itself.
+
+On **2026-11-10**, the toolkit maintainer confirmed that the optional
+`anthropics/skills` source was reachable at
+[`2c5958ecac7cee2b583967a2c4981d0f4a75c579`](https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/frontend-design).
+This is a discovery snapshot, not an accepted or tested version: no revision is
+pinned as an active Design dependency, so there is no accepted upstream baseline
+from which to claim an update. Reassess authorship, exact included files,
+license, environment and representative behavior if a product task actually
+needs this optional workflow. The toolkit maintainer reviews this candidate at
+that trigger; no recurring install or consumer change is scheduled.
