@@ -117,6 +117,14 @@ member rejection and inventory/path validation before network readback. This is
 or a cross-provider behavior test. Check affected consumer pins and manifests
 before deciding whether the correction changes earlier evidence.
 
+In separate disposable copies of those exact Git trees, the accepted verifier's
+unit suite passed **5/5** and the candidate's passed **10/10**. A synthetic
+manifest with two `index.html` keys was silently collapsed to one key by the
+accepted `json.loads` path; the candidate's `parse_manifest` raised
+`ValueError: Duplicate manifest member` before any network readback. This is
+deterministic script behavior on a fixture, not an agent-behavior comparison,
+product adoption or proof about previously issued release evidence.
+
 The local, clearly synthetic comparison tests in
 `scripts/skill-delivery/tests/test_check_upstream.py` exercise an unchanged
 wrapper with a changed dependency, an upstream/local edit conflict, an

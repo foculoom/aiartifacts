@@ -41,6 +41,12 @@ The read-only Release comparison returned `change_for_assessment` with
 its accepted and candidate normalized bundle identities were
 `4c6f08d28e3395d5977762691e7e4c4883990312f3d4e4e4c0021cef09176b79`
 and `1621a36527a6c3c51c3f998ea7f82f820801ebb9e6a0bcd5da667ae9ae668be8`.
+In separate disposable Git-tree copies, the accepted Release verifier passed
+5/5 unit tests and the candidate passed 10/10. On a synthetic duplicate-key
+manifest, the accepted JSON parse collapsed the two `index.html` entries to
+one; the candidate raised `Duplicate manifest member` before network access.
+This is a bounded script comparison, not model behavior, product adoption or a
+retroactive judgment about prior releases.
 `python3 -m unittest discover -s scripts/skill-delivery/tests -q` passed
 30 tests in this checkout; `git diff --cached --check` and
 `python3 scripts/validate_catalog.py` passed (7 plugins, 8 skills). These are
