@@ -24,6 +24,10 @@ class WeeklyWindowTests(unittest.TestCase):
         self.assertEqual((window['start'], window['end']),
                          ('2026-10-24T04:17:31Z', '2026-10-26T07:00:00Z'))
 
+    def test_first_activation_preserves_fractional_seconds(self):
+        window = bounds('2026-10-26', 'America/Los_Angeles', '2026-10-24T04:17:31.900Z')
+        self.assertEqual(window['start'], '2026-10-24T04:17:31.900000Z')
+
     def test_invalid_activation_and_timezone(self):
         with self.assertRaises(ValueError):
             bounds('2026-11-09', 'America/Los_Angeles', '2026-11-02T08:00:00')

@@ -4,7 +4,7 @@
 
 - Add exact local-week UTC window calculation across daylight-saving changes and a focused acquisition procedure for Tally, Gmail, website analytics and separately reported aggregates.
 - Require private source identity, pagination, filter, precision and freshness evidence before interpreting a complete window; preserve missing data and credential boundaries.
-- Exercise the revised skill against a private, previously captured Noraze weekly source set. This source revision does not change the published v0.5.0 tag or consumer pins.
+- Exercise the revised skill against a previously captured private weekly source set. This source revision does not change the published v0.5.0 tag or consumer pins.
 
 ## Unreleased — expert-source maintenance
 

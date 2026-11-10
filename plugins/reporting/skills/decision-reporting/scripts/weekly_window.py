@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
 def iso_utc(value):
-    return value.astimezone(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
+    return value.astimezone(timezone.utc).isoformat().replace('+00:00', 'Z')
 
 
 def bounds(end_date, timezone_name, first_start=None):
