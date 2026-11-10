@@ -2,6 +2,10 @@
 
 For the latest cross-session checkpoint, read [HANDOFF.md](HANDOFF.md) before dated historical notes.
 
+The [toolkit PRD](docs/PRD.md) is the authoritative requirements entry point.
+Repair missing, stale or contradictory requirements before implementation;
+see [contributor instructions](AGENTS.md#requirements-before-implementation).
+
 Reusable AI workflows from Foculoom live in one repository. A plugin is an installable bundle, a skill is a focused workflow inside a plugin, and an agent is an optional role configuration. Product-specific voice, unpublished writing, and private examples stay with the product that owns them.
 
 ## Skill delivery tooling
