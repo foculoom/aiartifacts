@@ -1,6 +1,6 @@
 # Normalized input contract (version 1)
 
-The helper accepts one JSON document. It makes no network calls. Use authorized exports/connectors and write private input files with restrictive permissions. All timestamps must include timezone; the reporting interval is start-inclusive, end-exclusive.
+The helper accepts one JSON document. It makes no network calls. Use authorized exports/connectors and write private input files with restrictive permissions. Follow [source acquisition](source-acquisition.md) and keep its identity, pagination, filter, and precision receipt private; `status: ok` is an attestation by the collector, not independent provider proof. All timestamps must include timezone; the reporting interval is start-inclusive, end-exclusive.
 
 - `window`: `start`, `end`; `as_of` is at or after end.
 - `config`: `products`, `contact_types`, `themes` arrays of approved lowercase slugs (letters, digits, underscore, hyphen; max 48 characters), and optional `max_source_age_hours` (default 48). Optional `editions` and `builds` arrays approve normalized product-edition/build slugs; for example `three-room` and `ios-1_0-3`. Normalize raw version strings upstream. Optional `pages`, `referrers`, `devices` slug arrays approve analytics categories (for example home/support, direct/search/social, desktop/mobile). These categories are not source text.

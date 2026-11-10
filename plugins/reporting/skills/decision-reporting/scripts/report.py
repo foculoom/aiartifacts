@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import re
 
-REVISION = 'reporting/0.1.1'
+REVISION = 'reporting/0.1.2'
 SOURCES = ('tally', 'gmail', 'analytics')
 METRICS = ('visits', 'page_views', 'lcp_p75_ms', 'inp_p75_ms', 'cls_p75')
 USAGE_CONTEXTS = ('free_used', 'paid_used', 'pre_use', 'qa', 'owner_test', 'unknown')
