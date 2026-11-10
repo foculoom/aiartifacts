@@ -1,5 +1,18 @@
 # Contributor instructions
 
+## Requirements before implementation
+
+Start with [the toolkit PRD](docs/PRD.md), the authoritative requirements entry
+point, and its relevant linked contract. Before implementation, reconcile newer
+documented owner decisions. If requirements are missing, stale or contradictory,
+repair and review them before continuing implementation in this repository.
+Read-only investigation and requirements repair remain available; this gate
+does not pause unrelated repositories. Scope changes need reviewed requirements
+first; fixes to accepted behavior reference existing acceptance criteria. Keep
+approved direction, proposals and achieved outcomes distinct, and record
+unresolved decisions with their responsible owner. Preserve stronger project,
+review and release gates.
+
 ## Planning and status reports
 
 Apply this section to planning, progress/status reports and their final summaries

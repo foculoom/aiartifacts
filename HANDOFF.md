@@ -1,5 +1,35 @@
 # Maintainer handoff
 
+## Toolkit requirements authority — November 10, 2026
+
+Prepared from default-branch source
+`097eda5278af1b604d85c8a4a4686e17278dc1c4` in a clean Linux cloud clone.
+The [toolkit PRD](docs/PRD.md) now provides one requirements entry point for the
+existing single-repository toolkit. It links contribution, packaging,
+evaluation, maintenance and release contracts rather than replacing them.
+README and root instructions point to it and require missing, stale or
+contradictory requirements to be repaired and reviewed before implementation.
+Read-only investigation and requirements repair remain available; fixes to
+accepted behavior trace existing criteria.
+
+This documentation change adds no artifact, installation, runtime experiment,
+release, dependency or consumer-pin update. The published v0.5.0 snapshot,
+unreleased source candidates and existing evaluation holds remain distinct.
+Private project evidence and configuration remain outside this repository.
+The source PR owns the final head, independent agent review, required checks
+and merge receipt. Next: complete that review and normal source integration,
+then use the PRD and linked contract for the next authorized toolkit task.
+
+Validation in this checkout: `git diff --check` passed;
+`python3 scripts/validate_catalog.py` passed (7 plugins, 8 skills); and
+`python3 -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q`
+passed 27 tests. A path check resolved all 113 relative Markdown links in the
+four changed documents, and source inspection found only public toolkit
+requirements and references in the additions. The PR records hosted checks
+against its exact head. These are documentation/source checks, not evidence
+of automatic discovery, installed behavior, comparative usefulness or release
+readiness. No external runtime or provider acceptance was exercised.
+
 ## Reporting source acquisition candidate — November 10, 2026
 
 Reporting 0.1.2 source extends the existing `decision-reporting` skill with a separate acquisition reference and exact local-week UTC bounds helper. It retains the three-source offline report schema and leaves separately authorized product aggregates in a private companion report. The private source-to-report replay passed; the 26 Reporting tests, skill structural check, and seven-plugin/eight-skill catalog check passed. Independent review found and fixed fractional-second truncation in the first-activation bound. This does not establish unattended sign-in, provider API credentials, future schedule execution or a fresh customer result. The public repository contains only reusable instructions and synthetic tests. Keep project identifiers, QA ledgers, inputs and reports private. This source change does not retag v0.5.0 or silently update consumers.
