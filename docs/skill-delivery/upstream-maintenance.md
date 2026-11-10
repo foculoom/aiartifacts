@@ -124,6 +124,14 @@ unavailable source and missing required file, and separate accepted-local
 identity. Additional guard cases check generated caches, unchanged upstream
 with a local adaptation, permissions and size limits. They assert that no
 candidate replaces the accepted files. These
-deterministic tests do not show a fresh agent loading a repository-local skill;
-that requires a separate runtime receipt with the observed source path and
-task behavior. They also do not treat simulated changes as upstream events.
+deterministic tests do not show agent loading. A separate no-history agent check
+on **2026-11-10** in an authorized private consumer checkout read the repository
+instructions, explicitly opened its accepted repository-local `SKILL.md`,
+matched the file to that product's recorded baseline, and applied the procedure
+to a fictional prose sentence. No global skill was invoked in that check. The
+exact source identity and task receipt remain in the owning private repository.
+This demonstrates one explicit local load and use, not automatic skill discovery,
+same-name global precedence, another provider, or real-product acceptance. A
+separate Codex CLI attempt stopped before agent initialization because its
+configuration directory was not writable; it supplies no runtime result. No
+simulated update is described as a real upstream event.

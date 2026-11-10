@@ -30,8 +30,11 @@ now point to the current external-plugin validation scripts at upstream
 does not clear the paused Agent Supply Chain pilot or establish runtime behavior.
 The Release skill's real post-pin script changes were detected even though its
 wrapper was unchanged. Synthetic conflict/unavailable cases are exercised in
-the new comparison tests; actual fresh-agent local loading remains a separate
-runtime check. The accepted versions remain recoverable while each affected
+the new comparison tests. A separate no-history agent explicitly read and used
+an accepted repository-local skill in a private consumer checkout on November 10;
+the [procedure](docs/skill-delivery/upstream-maintenance.md) states the bounded
+result and the exact receipt remains private. This does not prove automatic
+discovery or cross-provider behavior. The accepted versions remain recoverable while each affected
 consumer reviews the correction and records adoption or deferral.
 The read-only Release comparison returned `change_for_assessment` with
 `entrypoint_changed=false`, two changed script files and no local conflict;
