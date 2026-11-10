@@ -12,7 +12,7 @@ class ReportTests(unittest.TestCase):
         result = generate(self.data)
         self.assertEqual(result['feedback']['total'], 1)
         self.assertEqual(result['feedback']['exclusions']['linked_notifications'], 1)
-        self.assertEqual(result['skill_revision'], 'reporting/0.1.1')
+        self.assertEqual(result['skill_revision'], 'reporting/0.1.2')
 
     def test_legacy_missing_context_and_identity_stay_unknown(self):
         feedback = generate(self.data)['feedback']

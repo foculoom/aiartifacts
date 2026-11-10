@@ -1,5 +1,9 @@
 # Maintainer handoff
 
+## Reporting source acquisition candidate — November 10, 2026
+
+Reporting 0.1.2 source extends the existing `decision-reporting` skill with a separate acquisition reference and exact local-week UTC bounds helper. It retains the three-source offline report schema and leaves separately authorized product aggregates in a private companion report. The private source-to-report replay passed; the 26 Reporting tests, skill structural check, and seven-plugin/eight-skill catalog check passed. Independent review found and fixed fractional-second truncation in the first-activation bound. This does not establish unattended sign-in, provider API credentials, future schedule execution or a fresh customer result. The public repository contains only reusable instructions and synthetic tests. Keep project identifiers, QA ledgers, inputs and reports private. This source change does not retag v0.5.0 or silently update consumers.
+
 ## Expert-source maintenance — November 10, 2026
 
 Prepared from default-branch source `67e6e0d3f4dd833f2f768a2351932136af3dc394`
