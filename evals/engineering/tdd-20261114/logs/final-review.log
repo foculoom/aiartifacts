@@ -1,0 +1,21 @@
+Original five-test Checks class preserved byte-for-byte: True
+Review: schema/path/digest validation completes before build_opener and report results creation. JSON hook rejects decoded duplicate names at every object level. Valid routes and request/report code remain unchanged.
+Evidence files:
+evidence/acceptance.log
+evidence/baseline.log
+evidence/cycle-1-green.log
+evidence/cycle-1-red.log
+evidence/cycle-1-refactor.log
+evidence/cycle-2-green.log
+evidence/cycle-2-red.log
+evidence/cycle-2-refactor.log
+evidence/cycle-3-green.log
+evidence/cycle-3-red.log
+evidence/cycle-3-refactor.log
+evidence/cycle-4-green.log
+evidence/cycle-4-red-confirmed.log
+evidence/cycle-4-red.log
+evidence/cycle-4-refactor.log
+evidence/original-test_verify_static.py.txt
+evidence/run_phase.py
+evidence/work-log.md

@@ -1,0 +1,287 @@
+COMMAND: python3 -B -m unittest -v test_verify_static
+PYTHON: 3.9.6 (default, Oct 19 2026, 19:18:13)
+[Clang 21.0.0 (clang-2100.4.1.1)]
+test_http_failure_is_not_success (test_verify_static.Checks) ... ok
+test_manifest_detects_changes (test_verify_static.Checks) ... ok
+test_readback_and_index_routes (test_verify_static.Checks) ... ok
+test_symlink_rejected (test_verify_static.Checks) ... ok
+test_unsafe_inputs_rejected_before_network (test_verify_static.Checks) ... ok
+test_all_digests_validated_before_network (test_verify_static.ContractChecks) ... test_all_paths_validated_before_network (test_verify_static.ContractChecks) ... ok
+test_record_shape_rejected_before_network (test_verify_static.ContractChecks) ... ok
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=None, invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10607bbb0>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=None, invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106084af0>),
+ call().open(<urllib.request.Request object at 0x106089b20>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=True, invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1060af6a0>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=True, invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1060b95e0>),
+ call().open(<urllib.request.Request object at 0x1060bd610>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=64, invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1060713a0>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=64, invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x105f8d220>),
+ call().open(<urllib.request.Request object at 0x105f8b190>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=[], invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1060dca60>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest=[], invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1060e48e0>),
+ call().open(<urllib.request.Request object at 0x1060e7850>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10610b160>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106113fa0>),
+ call().open(<urllib.request.Request object at 0x106118f10>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10613c820>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1061446a0>),
+ call().open(<urllib.request.Request object at 0x106148610>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10616cf10>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106173e50>),
+ call().open(<urllib.request.Request object at 0x106177e80>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10619fa00>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1061a6940>),
+ call().open(<urllib.request.Request object at 0x1061ab970>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1061d14f0>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1061d8430>),
+ call().open(<urllib.request.Request object at 0x1061dd460>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106202fa0>)].
+
+======================================================================
+FAIL: test_all_digests_validated_before_network (test_verify_static.ContractChecks) (digest='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 78, in test_all_digests_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106209ee0>),
+ call().open(<urllib.request.Request object at 0x10620df10>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.025s
+
+FAILED (failures=20)
+
+EXIT CODE: 1

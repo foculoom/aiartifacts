@@ -1,0 +1,484 @@
+test_direct_verify_rejects_before_network (__main__.Acceptance) ... test_duplicate_members_at_both_levels (__main__.Acceptance) ... test_invalid_later_paths_and_digests (__main__.Acceptance) ... test_valid_inventory_cli_preserved (__main__.Acceptance) ... ok
+test_versions_and_shapes (__main__.Acceptance) ...
+======================================================================
+ERROR: test_direct_verify_rejects_before_network (__main__.Acceptance) (record={'version': 1, 'files': {'a': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 7: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 56, in test_direct_verify_rejects_before_network
+    with self.assertRaises(ValueError): subject.verify(record,'https://example.com')
+  File "<baseline>/verify_static.py", line 40, in verify
+    p = PurePosixPath(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 665, in __new__
+    return cls._from_parts(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 697, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 681, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not int
+
+======================================================================
+ERROR: test_duplicate_members_at_both_levels (__main__.Acceptance) (raw='{"version":1,"version":1,"files":{"a":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 36, in test_duplicate_members_at_both_levels
+    with self.subTest(raw=raw): self.cli(raw)
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_duplicate_members_at_both_levels (__main__.Acceptance) (raw='{"version":1,"files":{"a":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","a":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 36, in test_duplicate_members_at_both_levels
+    with self.subTest(raw=raw): self.cli(raw)
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_duplicate_members_at_both_levels (__main__.Acceptance) (raw='{"version":1,"files":{"a":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},"files":{"b":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 36, in test_duplicate_members_at_both_levels
+    with self.subTest(raw=raw): self.cli(raw)
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_versions_and_shapes (__main__.Acceptance) (version=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 41, in test_versions_and_shapes
+    self.cli(json.dumps({'version':version,'files':{'a':HASH}}))
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_versions_and_shapes (__main__.Acceptance) (version=1.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 41, in test_versions_and_shapes
+    self.cli(json.dumps({'version':version,'files':{'a':HASH}}))
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 77, in main
+    json.dump(result,f,indent=2);f.write('\n')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_versions_and_shapes (__main__.Acceptance) (record=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 43, in test_versions_and_shapes
+    with self.subTest(record=record): self.cli(json.dumps(record))
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 75, in main
+    result=manifest(args.root) if args.root else verify(json.loads(args.manifest.read_text()),args.origin)
+  File "<baseline>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_versions_and_shapes (__main__.Acceptance) (record=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 43, in test_versions_and_shapes
+    with self.subTest(record=record): self.cli(json.dumps(record))
+  File "<evaluation>/heldout_verify.py", line 26, in cli
+    subject.main()
+  File "<baseline>/verify_static.py", line 75, in main
+    result=manifest(args.root) if args.root else verify(json.loads(args.manifest.read_text()),args.origin)
+  File "<baseline>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'list' object has no attribute 'get'
+
+======================================================================
+FAIL: test_direct_verify_rejects_before_network (__main__.Acceptance) (record={'version': True, 'files': {'a': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 56, in test_direct_verify_rejects_before_network
+    with self.assertRaises(ValueError): subject.verify(record,'https://example.com')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_direct_verify_rejects_before_network (__main__.Acceptance) (record={'version': 1, 'files': {'a': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'bad/': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 57, in test_direct_verify_rejects_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1062fd3a0>),
+ call().open(<urllib.request.Request object at 0x1063003a0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1063ae2b0>),
+ call().open(<urllib.request.Request object at 0x1063b1bb0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='/a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106286bb0>),
+ call().open(<urllib.request.Request object at 0x10627c550>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='../a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1062ef190>),
+ call().open(<urllib.request.Request object at 0x1062ed3a0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='a/../b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106405d90>),
+ call().open(<urllib.request.Request object at 0x10640ad90>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='a/./b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10642faf0>),
+ call().open(<urllib.request.Request object at 0x106437af0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='a//b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10645d340>),
+ call().open(<urllib.request.Request object at 0x106461340>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='a/')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1064880a0>),
+ call().open(<urllib.request.Request object at 0x10648c0a0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (path='a\\b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 48, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,path:HASH}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1064b1eb0>),
+ call().open(<urllib.request.Request object at 0x1064b6c10>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1064ddb20>),
+ call().open(<urllib.request.Request object at 0x1064e3970>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106509370>),
+ call().open(<urllib.request.Request object at 0x10650d1c0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1065350d0>),
+ call().open(<urllib.request.Request object at 0x1065380d0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value='gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10655dee0>),
+ call().open(<urllib.request.Request object at 0x106561df0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x106588b50>),
+ call().open(<urllib.request.Request object at 0x10658fb50>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_invalid_later_paths_and_digests (__main__.Acceptance) (value='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<evaluation>/heldout_verify.py", line 51, in test_invalid_later_paths_and_digests
+    self.cli(json.dumps({'version':1,'files':{'valid.txt':HASH,'later.txt':value}}))
+  File "<evaluation>/heldout_verify.py", line 27, in cli
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1065b43a0>),
+ call().open(<urllib.request.Request object at 0x1065b73a0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.056s
+
+FAILED (failures=16, errors=9)
+
+EXIT 1

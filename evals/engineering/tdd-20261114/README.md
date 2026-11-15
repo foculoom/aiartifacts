@@ -42,8 +42,9 @@ Only the minimal replay files were supplied, not the complete baseline tree.
 | Independent held-out probes | Baseline failed (16 failed subcases, 9 error subcases); replay passed all 5 probe methods |
 
 Full [phase logs](logs) preserve stdout/stderr, command, Python version and exit
-status, including the failed setup attempt. Local workspace prefixes alone are
-replaced with `<replay>`, `<baseline>` or `<evaluation>`; original log hashes
+status, including the failed setup attempt. Local workspace prefixes are
+replaced with `<replay>`, `<baseline>` or `<evaluation>` and trailing whitespace
+is stripped; original log hashes
 are retained in [original-log-hashes.json](original-log-hashes.json).
 Tests derive new expected values from the contract and literal known hashes,
 not the verifier. Four bounded behavior corrections each precede a refactor

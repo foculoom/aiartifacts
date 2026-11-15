@@ -1,0 +1,10 @@
+test_direct_verify_rejects_before_network (__main__.Acceptance) ... ok
+test_duplicate_members_at_both_levels (__main__.Acceptance) ... ok
+test_invalid_later_paths_and_digests (__main__.Acceptance) ... ok
+test_valid_inventory_cli_preserved (__main__.Acceptance) ... ok
+test_versions_and_shapes (__main__.Acceptance) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.026s
+
+OK
