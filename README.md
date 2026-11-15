@@ -28,8 +28,10 @@ no ecosystem listing, package release or consumer update follows from this work.
 The published v0.5.0 tag and existing consumer pins remain unchanged.
 The [October 30 evaluation](evals/skill-delivery/results/README.md) did not meet
 the incremental-usefulness threshold. Its [archived entrypoint](evals/skill-delivery/candidate/README.md)
-is an evaluation fixture, outside normal skill discovery. Engineering retains
-its existing 0.1.2 manifest and platform-boundary skill.
+is an evaluation fixture, outside normal skill discovery. Engineering 0.2.0 source retains platform-boundaries and adds the pinned
+[test-driven-development skill](plugins/engineering/skills/test-driven-development/SKILL.md).
+See its [dependency record](plugins/engineering/DEPENDENCIES.md) for provenance
+and bounded validation. This is unreleased source, not an installed update.
 
 ## Available artifacts
 
