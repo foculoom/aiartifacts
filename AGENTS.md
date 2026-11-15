@@ -13,6 +13,15 @@ approved direction, proposals and achieved outcomes distinct, and record
 unresolved decisions with their responsible owner. Preserve stronger project,
 review and release gates.
 
+## Test-driven behavior changes
+
+For authorized testable behavior changes, explicitly read the repository-local
+[test-driven-development skill](plugins/engineering/skills/test-driven-development/SKILL.md)
+and its relevant examples. Derive boundaries from approved requirements and
+preserve project acceptance gates. Pure refactoring may start with passing
+characterization tests. See [adoption requirements](docs/tdd-adoption.md).
+This source-local route does not install a plugin or update another repository.
+
 ## Planning and status reports
 
 Apply this section to planning, progress/status reports and their final summaries

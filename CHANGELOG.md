@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Engineering 0.2.0 source
+
+- Add a small pinned adaptation of Matt Pocock’s MIT TDD method, with original
+  examples and mocking guidance, explicit requirements-derived boundaries and
+  red–green–refactor including characterization-first pure refactoring.
+- Record provenance, source-local loading and an offline regression replay.
+  Preserve published v0.5.0 and all consumer pins; no package release is included.
+
 ## Unreleased — Reporting 0.1.2 source
 
 - Add exact local-week UTC window calculation across daylight-saving changes and a focused acquisition procedure for Tally, Gmail, website analytics and separately reported aggregates.

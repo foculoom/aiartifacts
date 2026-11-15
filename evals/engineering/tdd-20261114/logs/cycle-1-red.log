@@ -1,0 +1,81 @@
+COMMAND: python3 -B -m unittest -v test_verify_static
+PYTHON: 3.9.6 (default, Oct 19 2026, 19:18:13)
+[Clang 21.0.0 (clang-2100.4.1.1)]
+test_http_failure_is_not_success (test_verify_static.Checks) ... ok
+test_manifest_detects_changes (test_verify_static.Checks) ... ok
+test_readback_and_index_routes (test_verify_static.Checks) ... ok
+test_symlink_rejected (test_verify_static.Checks) ... ok
+test_unsafe_inputs_rejected_before_network (test_verify_static.Checks) ... ok
+test_record_shape_rejected_before_network (test_verify_static.ContractChecks) ...
+======================================================================
+ERROR: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+  File "<replay>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'NoneType' object has no attribute 'get'
+
+======================================================================
+ERROR: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+  File "<replay>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'list' object has no attribute 'get'
+
+======================================================================
+ERROR: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record='record')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+  File "<replay>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'str' object has no attribute 'get'
+
+======================================================================
+ERROR: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+  File "<replay>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'int' object has no attribute 'get'
+
+======================================================================
+ERROR: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+  File "<replay>/verify_static.py", line 35, in verify
+    if record.get('version') != 1 or not isinstance(record.get('files'), dict) or not record['files']:
+AttributeError: 'bool' object has no attribute 'get'
+
+======================================================================
+FAIL: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record={'version': True, 'files': {'a.txt': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_record_shape_rejected_before_network (test_verify_static.ContractChecks) (record={'version': 1.0, 'files': {'a.txt': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 52, in test_record_shape_rejected_before_network
+    verify(record, 'https://example.com')
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.013s
+
+FAILED (failures=2, errors=5)
+
+EXIT CODE: 1

@@ -1,0 +1,21 @@
+{
+  "cycle-3-refactor.log": "8fbc2e0aa16cb26f8a4232d406f8a85b3913b6affe35d11bc7f13f3392f91684",
+  "cycle-4-refactor.log": "47d45da5ee1666646c04e4ea0edcb35583744e3dcf8b90ad6fe1bf1e9d73baaf",
+  "cycle-1-green.log": "ebfb2ce1cf904cd726a713eb3cb620fc45f704d6aae037835efab786678faf59",
+  "cycle-3-red.log": "fe89d7ffaf181af991a0575a2a9adcebf99e908fc70c4562801060a4b0067361",
+  "cycle-2-refactor.log": "8cbee295333caaa459f6aacf2f860e4b2afa1e68ba57bda64865e1bf24670449",
+  "cycle-2-red.log": "77dbb79c826407727a935f8d122837613a70cf80314c4419c719ded2231219ef",
+  "acceptance.log": "7dac4b8e95c249c2cfcc9452dc8aca1c7806aa9a3b2276f20d4a55d9eec50dbe",
+  "final-review.log": "12458d33aa4ea04a398bedefa77849a2df3b3775a6ed6cb9f5b8254b90b22c61",
+  "cycle-1-red.log": "6a0501a49b1bea404d63dc2468b6485153acf6f38598772e31ce97f98a0cd554",
+  "cycle-4-red.log": "d343bcf73056ff618a14a49f4660ecb8e9e28c871c27dc1447949c9dc465f8c9",
+  "cycle-3-green.log": "a6be76df27d1261b9591a9eb488404a6281a2930886ae506d514c5d73cde46da",
+  "baseline.log": "3b4c51ca0c09f721663194a11fe5f35c435b9236fefbc0c7b848bf42c37744e1",
+  "cycle-4-red-confirmed.log": "e429552d410d57980b402e252cb127708a9a904c93811cdac756785539e17656",
+  "cycle-2-green.log": "8cbee295333caaa459f6aacf2f860e4b2afa1e68ba57bda64865e1bf24670449",
+  "cycle-4-green.log": "a041bd64cb8cf7c71c4050ba268b5f026db78bd962c08baaa91e6916009cb480",
+  "cycle-1-refactor.log": "833cc0e3844311d6005560cd4aa6f67e5abc137716d68260092ba1c9c0d3d9b8",
+  "work-log.md": "11499bf12dd71bf9f0735484821bdb72cacdb96489e37459cf5ef58217c6c999",
+  "heldout-baseline.log": "31aaa5606846464af453a58fb9d6aef8e2d571cd2754e5ec99cf89754ef5f51c",
+  "heldout-candidate.log": "05bf4c932445622e68802fc63b9d773cfe7b9d89b6173a1e6258d5799897b9a0"
+}

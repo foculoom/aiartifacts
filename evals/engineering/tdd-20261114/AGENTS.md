@@ -1,0 +1,1 @@
+For this authorized behavior change, explicitly read plugins/engineering/skills/test-driven-development/SKILL.md and its test/mocking references before implementation. Derive test boundaries from the accepted contract in contract.md. Use no external repository or network resources. Keep baseline, per-cycle red, green and refactor logs under evidence/.

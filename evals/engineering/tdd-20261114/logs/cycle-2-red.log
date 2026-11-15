@@ -1,0 +1,339 @@
+COMMAND: python3 -B -m unittest -v test_verify_static
+PYTHON: 3.9.6 (default, Oct 19 2026, 19:18:13)
+[Clang 21.0.0 (clang-2100.4.1.1)]
+test_http_failure_is_not_success (test_verify_static.Checks) ... ok
+test_manifest_detects_changes (test_verify_static.Checks) ... ok
+test_readback_and_index_routes (test_verify_static.Checks) ... ok
+test_symlink_rejected (test_verify_static.Checks) ... ok
+test_unsafe_inputs_rejected_before_network (test_verify_static.Checks) ... ok
+test_all_paths_validated_before_network (test_verify_static.ContractChecks) ... test_record_shape_rejected_before_network (test_verify_static.ContractChecks) ... ok
+
+======================================================================
+ERROR: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name=1, invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+  File "<replay>/verify_static.py", line 42, in verify
+    p = PurePosixPath(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 665, in __new__
+    return cls._from_parts(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 697, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 681, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not int
+
+======================================================================
+ERROR: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name=1, invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+  File "<replay>/verify_static.py", line 42, in verify
+    p = PurePosixPath(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 665, in __new__
+    return cls._from_parts(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 697, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 681, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not int
+
+======================================================================
+ERROR: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name=None, invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+  File "<replay>/verify_static.py", line 42, in verify
+    p = PurePosixPath(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 665, in __new__
+    return cls._from_parts(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 697, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 681, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+======================================================================
+ERROR: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name=None, invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+  File "<replay>/verify_static.py", line 42, in verify
+    p = PurePosixPath(name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 665, in __new__
+    return cls._from_parts(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 697, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 681, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10793cf10>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107944af0>),
+ call().open(<urllib.request.Request object at 0x107949b20>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='.', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='.', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 65, in test_all_paths_validated_before_network
+    verify({'version': 1, 'files': files}, 'https://example.com')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='..', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10798e400>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='..', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107995280>),
+ call().open(<urllib.request.Request object at 0x1079991f0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='./a', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1079bbac0>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='./a', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1079c2940>),
+ call().open(<urllib.request.Request object at 0x1079c88b0>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/.', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1079ee1c0>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/.', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1079f5040>),
+ call().open(<urllib.request.Request object at 0x1079f7f70>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/../b', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x10784a670>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/../b', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x1078bc9a0>),
+ call().open(<urllib.request.Request object at 0x1078a5760>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='/a', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a23100>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='/a', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a2b040>),
+ call().open(<urllib.request.Request object at 0x107a2f070>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a//b', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a56bb0>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a//b', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a5eaf0>),
+ call().open(<urllib.request.Request object at 0x107a63b20>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a896a0>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a/', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107a905e0>),
+ call().open(<urllib.request.Request object at 0x107a94610>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a\\b', invalid_after_valid=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107abb190>)].
+
+======================================================================
+FAIL: test_all_paths_validated_before_network (test_verify_static.ContractChecks) (name='a\\b', invalid_after_valid=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<replay>/test_verify_static.py", line 66, in test_all_paths_validated_before_network
+    network.assert_not_called()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 868, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'build_opener' to not have been called. Called 1 times.
+Calls: [call(<verify_static.NoRedirect object at 0x107ac20d0>),
+ call().open(<urllib.request.Request object at 0x107ac7100>, timeout=30),
+ call().open().__enter__(),
+ call().open().__enter__().read(16777217),
+ call().open().__enter__().status.__eq__(200),
+ call().open().__exit__(None, None, None)].
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.035s
+
+FAILED (failures=20, errors=4)
+
+EXIT CODE: 1

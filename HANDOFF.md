@@ -1,5 +1,44 @@
 # Maintainer handoff
 
+## Pinned TDD source adoption — November 14, 2026 Pacific
+
+Engineering 0.2.0 source adds the small MIT-licensed adaptation under
+[approved requirements](docs/tdd-adoption.md), reviewed before implementation.
+Method source `b84e461d140d62a9dd0eed8271c7e1fc0be59cab` pins upstream
+`5863806dd4e15c63174bee4e7515a4256792ecfa`; the
+[dependency record](plugins/engineering/DEPENDENCIES.md) retains included-file
+hashes, adaptations, license and maintainer. Existing consumer pins remain.
+
+A fresh history-free agent explicitly loaded the local method and replayed
+completed PR29 from its five-test baseline. Four observed red/green/refactor
+cycles and 13 passing final tests are retained in the
+[evaluation receipt](evals/engineering/tdd-20261114/README.md). Independent
+held-out probes failed on baseline and passed all five on the replay. The
+original setup-error attempt remains recorded. This establishes bounded loading
+and behavior, not automatic discovery, productivity or organization-wide adoption.
+PR29's October 30 correction remains achieved; no production code was replaced.
+
+Local validation: skill structural check; catalog/link check (7 plugins, 9
+skills); platform-boundary 28 tests, source-maintenance 30, Release 10,
+Editorial 27 and delivery evaluations 31 passed. Editorial initially rejected
+macOS's symlinked temporary root (3 failures/2 errors); rerunning with
+`TMPDIR=/private/tmp` passed without changing source. One preliminary test command
+used the parent directory and failed discovery; the correct repository-root
+run is the evidence above. Python 3.9.6 and standard library were available in
+this authorized local environment; no cloud shell tool was exposed. GitHub
+connectors supplied remote evidence. Hosted final-head checks and independent
+agent source review are recorded in the focused PR before normal merge/readback.
+
+Reproduce: `python3 scripts/validate_catalog.py`, the evaluation receipt's
+commands and existing workflow suites. Source merge enables deliberate later
+consumer assessment on its next suitable task, not an automatic pin update.
+No package publication, global install, app API/schema change or release follows.
+Public v0.5.0 remains listed (GitHub release readback November 14 Pacific),
+with source acquisition last verified October 28 in the existing record; archive
+transfer was not freshly exercised. Engineering 0.2.0 has no new package release.
+Next: complete final source review/CI and normal integration, then assess actual
+consumer tasks individually under the existing maintenance review.
+
 ## Toolkit requirements authority — November 10, 2026
 
 Prepared from default-branch source

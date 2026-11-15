@@ -40,6 +40,9 @@ an authorized project task.
 | Maintain an adopted source | The [maintenance procedure](skill-delivery/upstream-maintenance.md) records the accepted revision, candidate, provenance, task evidence and disposition without replacing accepted files during discovery. Each consumer owns adoption or deferral. |
 | Resume or release work | The [handoff and release rules](../AGENTS.md#portable-handoff-and-release-evidence) require reproducible evidence, independent review of the exact head and required checks. A source merge does not authorize a package release or establish consumer acceptance. |
 
+The [pinned TDD adoption contract](tdd-adoption.md) defines the approved
+Engineering 0.2.0 source increment and bounded replay acceptance.
+
 ## Exclusions and decision ownership
 
 The toolkit is not a repository for private product operations or customer
