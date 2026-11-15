@@ -28,9 +28,11 @@ guidance; make observed-red, focused/full checks and boundary assertions explici
 | mocking.md | `3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef` | `3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef` |
 | LICENSE | `0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5` | `0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5` |
 
-Disposition: source adaptation under evaluation; the owning
-[requirements](../../docs/tdd-adoption.md) and subsequent handoff/evaluation
-receipt distinguish reviewed source, explicit runtime loading and publication.
+Disposition: bounded explicit loading and replay accepted on November 14;
+[full evaluation](../../evals/engineering/tdd-20261114/README.md) retains the
+observed red/green/refactor evidence and independent probes. The owning
+[requirements](../../docs/tdd-adoption.md) and final PR receipt distinguish
+source review, integration and publication.
 No global install, package publication or existing consumer adoption is implied.
 
 ## Existing parser
