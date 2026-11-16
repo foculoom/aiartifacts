@@ -6,8 +6,10 @@ Prepared from clean default-branch revision `e3e603567762a0952dec133e99ef366ad18
 The root now requires per-outcome evidence, contract-required completion receipts,
 scoped dependencies and actual independent authorized continuation. This implements
 the owner's approved governance maintenance; product scope and stronger local
-requirements remain unchanged. The focused PR records the exact reviewed final
-revision and check/merge receipts; this preparation is not yet source integration.
+requirements remain unchanged. Root-rule source revision: `d6a5383791e72c70b4bd6900454c7ec62efc8ca8`. The
+[focused PR #43](https://github.com/foculoom/aiartifacts/pull/43)
+owns the independent review of the exact final revision and check/merge receipts;
+its current receipt supersedes this pre-integration preparation checkpoint.
 
 Manual discovery: the implementer read the current root and its owning handoff and
 requirements in this checkout. Documentation path/link and whitespace checks passed on November 16; these
