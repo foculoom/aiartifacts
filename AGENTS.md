@@ -1,5 +1,23 @@
 # Contributor instructions
 
+## Approved outcomes and completion receipts
+
+Before ending material work, reconcile each approved outcome in the existing
+handoff: achieved evidence and observation date, remaining acceptance, dependency
+category, actual authority or policy, accountable role and executable next action.
+Distinguish unfinished engineering, missing inputs or credentials, tool/runtime
+limits, explicit policy handoffs and external review. Complete available independent
+authorized work when a dependency holds only part of the task; naming future work
+is not continuation. Cite the actual rule when intervention is necessary; missing
+tools do not revoke existing authority. Preserve pauses and stronger local gates.
+
+Completion requires the contract's receipt, whether deployment with live readback,
+publication, downloadable package, verified recovery or store submission. Preserve
+achievements and distinguish source, artifacts, approval, availability and customer
+receipts. Do not invent approvals or re-request granted authority. Record guidance
+adoption, behavioral evaluation, manual discovery, automatic loading and operational
+effectiveness separately; changed instructions alone do not prove prevention.
+
 ## Requirements before implementation
 
 Start with [the toolkit PRD](docs/PRD.md), the authoritative requirements entry

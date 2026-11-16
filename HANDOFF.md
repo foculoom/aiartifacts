@@ -1,5 +1,40 @@
 # Maintainer handoff
 
+## Outcome safeguard adoption — November 16, 2026
+
+Prepared from clean default-branch revision `e3e603567762a0952dec133e99ef366ad18a6711`.
+The root now requires per-outcome evidence, contract-required completion receipts,
+scoped dependencies and actual independent authorized continuation. This implements
+the owner's approved governance maintenance; product scope and stronger local
+requirements remain unchanged. Root-rule source revision: `d6a5383791e72c70b4bd6900454c7ec62efc8ca8`. The
+[focused PR #43](https://github.com/foculoom/aiartifacts/pull/43)
+owns the independent review of the exact final revision and check/merge receipts;
+its current receipt supersedes this pre-integration preparation checkpoint.
+
+Manual discovery: the implementer read the current root and its owning handoff and
+requirements in this checkout. Documentation path/link and whitespace checks passed on November 16; these
+are the applicable local checks for this documentation-only change. Independent final-head review and required
+hosted checks remain due before integration. Behavioral evaluation, automatic
+instruction loading and operational effectiveness are separate, unestablished
+claims for this repository; the coordinator and independent reviewer must assess
+the next authorized material handoff against the root rule. No new schedule or
+consumer pin is introduced.
+
+The [independently fictional receipt cases](evals/engineering/completion-receipts.md)
+provide input-only package, publication, website and archive-recovery scenarios.
+They have not yet been run; no behavioral pass is claimed.
+`python3 scripts/validate_catalog.py` passed: 7 plugins, 9 skills and local
+Markdown references. Only generic instructions and independently fictional evaluation cases belong
+in this public increment. Package versions, published tags and consumer pins are
+unchanged. Public v0.5.0 remains listed at the November 14 Pacific readback;
+archive acquisition is not freshly exercised here. Engineering 0.2.0 remains
+integrated source, separate from package publication and installed adoption.
+
+Next: complete independent review and the applicable normal PR path, retaining
+any separate release hold. At the next authorized material task, record actual
+continuation and the contract's receipt or the exact remaining dependency in this
+existing handoff; do not close operational verification from this source change.
+
 ## Pinned TDD integration readback — November 16, 2026
 
 [PR #41](https://github.com/foculoom/aiartifacts/pull/41) merged on November 15
