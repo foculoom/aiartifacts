@@ -1,5 +1,23 @@
 # Maintainer handoff
 
+## Pinned TDD integration readback — November 16, 2026
+
+[PR #41](https://github.com/foculoom/aiartifacts/pull/41) merged on November 15
+at 04:07:06 UTC as `8c45c0bf8b1e0a0b6893c11620c6df1f3f40f825`, confirmed
+against GitHub on November 16. The final review/check/merge stage below is
+complete. Engineering 0.2.0 is integrated source, available for deliberate
+consumer assessment; it is not a new published package or an automatic consumer
+pin update. The bounded replay and evaluation receipts below remain achieved.
+Public v0.5.0 remains listed at the November 14 Pacific release readback;
+archive acquisition was not freshly exercised for this documentation correction.
+Next: assess the method on a suitable authorized consumer task under the existing
+maintenance procedure, preserving each consumer's current pin until reviewed.
+
+This correction starts from the clean merge revision above and changes only this
+handoff. Whitespace and linked-target checks pass; no runtime, package, install
+or provider changes occur. Exact-head independent agent review and normal PR
+checks precede integration of this correction.
+
 ## Pinned TDD source adoption — November 14, 2026 Pacific
 
 Engineering 0.2.0 source adds the small MIT-licensed adaptation under
@@ -36,8 +54,8 @@ No package publication, global install, app API/schema change or release follows
 Public v0.5.0 remains listed (GitHub release readback November 14 Pacific),
 with source acquisition last verified October 28 in the existing record; archive
 transfer was not freshly exercised. Engineering 0.2.0 has no new package release.
-Next: complete final source review/CI and normal integration, then assess actual
-consumer tasks individually under the existing maintenance review.
+Source integration completed as recorded above. Assess actual consumer tasks
+individually under the existing maintenance review.
 
 ## Toolkit requirements authority — November 10, 2026
 
