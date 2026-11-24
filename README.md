@@ -50,6 +50,10 @@ The optional [Design plugin](plugins/design/) includes `product-identity` for br
 
 Design starts at 0.1.0; Editorial remains 0.1.0. Repository tag v0.2.0 pins this combined snapshot.
 
+## Public Skills plugin
+
+The optional [Public Skills plugin](plugins/public-skills/) vendors pinned copies of approved public upstream skills (Playwright CLI, frontend design, security best practices, selected Superpowers review skills, advisory App Store review, and official Cloudflare skills). See [PROVENANCE.md](plugins/public-skills/PROVENANCE.md) for upstream URLs, commits, and licenses. Do not run vendored scripts. Cloudflare skills are dry-run only; App Store review does not submit. Official Stripe skills are not in this snapshot.
+
 ## Use the editorial plugin
 
 The repository's [marketplace catalog](.agents/plugins/marketplace.json) lists the editorial plugin as an optional install. For local testing, add this repository as a marketplace source:
