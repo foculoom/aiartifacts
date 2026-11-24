@@ -81,6 +81,32 @@ class PublicSkillsProvenanceTests(unittest.TestCase):
                 AssertionError, 'cloudflare file manifest sha256'):
             validate_public_skills_provenance(self.package)
 
+    def test_deleted_license_copy_fails(self):
+        (self.package / 'licenses' / 'cloudflare' / 'LICENSE').unlink()
+        with self.assertRaisesRegex(
+                AssertionError,
+                'recorded license copy is missing: licenses/cloudflare/LICENSE'):
+            validate_public_skills_provenance(self.package)
+
+    def test_skill_md_sha256_line_disagrees_fails(self):
+        provenance = self.package / 'PROVENANCE.md'
+        text = provenance.read_text()
+        needle = (
+            '- SKILL.md sha256: '
+            '`ec07841c9c47b311d9c20111397e69411004e7ea46481aa12f7b9e0510195aa7`'
+        )
+        self.assertIn(needle, text)
+        self.assertEqual(text.count(needle), 1)
+        provenance.write_text(text.replace(
+            needle,
+            '- SKILL.md sha256: '
+            '`0000000000000000000000000000000000000000000000000000000000000000`',
+            1))
+        with self.assertRaisesRegex(
+                AssertionError,
+                'playwright-cli narrative SKILL.md sha256 does not match'):
+            validate_public_skills_provenance(self.package)
+
     def test_mismatched_name_quotes_fails(self):
         skill_dir = self.temp / 'editorial-writing'
         skill_dir.mkdir()

@@ -132,6 +132,24 @@ is set and `0644` otherwise.
 | `workers-profiling` | `14472d57ac968d1a0322a568077277209b259183` | `b7bd8a2462a9bcf13aa4f038f6c74ff52617508c6b286fd894f20ce7439e2ec3` | `skills/workers-profiling/LICENSE` | |
 | `wrangler` | `14472d57ac968d1a0322a568077277209b259183` | `7a3dfefbe4da7f8f6d1d280617d56ae0a149f8610b861cdcd3451a27f890ee3f` | `skills/wrangler/LICENSE` | |
 
+## License copies
+
+Top-level copies under `licenses/` are convenience copies of upstream
+license texts. They are not a substitute for the per-skill LICENSE files.
+`scripts/validate_catalog.py` requires each listed path to exist and the
+directory manifest (same format as the per-skill manifests) to match.
+
+- licenses/ manifest sha256: `66c1c1fd81ecf858aa146eb93951a59afcabdd2aafacec9a6b45a5ee84d78bca`
+
+| path |
+| --- |
+| `licenses/app-store-review/LICENSE` |
+| `licenses/cloudflare/LICENSE` |
+| `licenses/frontend-design/LICENSE.txt` |
+| `licenses/playwright/LICENSE` |
+| `licenses/playwright/NOTICE` |
+| `licenses/security-best-practices/LICENSE.txt` |
+| `licenses/superpowers/LICENSE` |
 
 ## Gitleaks note
 
