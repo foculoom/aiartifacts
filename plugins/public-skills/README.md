@@ -28,7 +28,10 @@ plugin to a universal directory.
   [PROVENANCE.md](PROVENANCE.md) for why.
 - `turnstile-spin` is omitted because its instructions tell agents to run
   scripts that create Turnstile widgets and secrets.
+  The vendored `skills/cloudflare/SKILL.md` still mentions the
+  `turnstile-spin` skill in plain text; that mention is unchanged upstream
+  text, and the skill is intentionally not vendored here.
 
 Skill bodies are copied from upstream without edits. License texts travel with
-each skill. Pins, licenses, and `SKILL.md` hashes are in
+each skill. Pins, licenses, NOTICE paths, and per-skill file manifest hashes are in
 [PROVENANCE.md](PROVENANCE.md).
