@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "public-skills",
+  "version": "0.1.0",
+  "description": "Advisory / dry-run only, no deploys. Pinned copies of approved public upstream skills: Playwright CLI, frontend design, security best practices, proof-of-work review, advisory App Store review, and official Cloudflare skills (turnstile-spin omitted).",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/public-skills",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0 AND MIT",
+  "keywords": [
+    "playwright",
+    "frontend",
+    "security",
+    "review",
+    "app-store",
+    "cloudflare",
+    "vendor"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Public Skills",
+        "shortDescription": "Advisory / dry-run only, no deploys",
+        "longDescription": "Advisory / dry-run only, no deploys. Pinned, licensed copies of approved public skills. App Store review is advisory and must not submit. Cloudflare skills are dry-run only; do not deploy. See plugins/public-skills/README.md.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Use the pinned Playwright CLI skill for local browser tests.",
+          "Review this change with the pinned security-best-practices and requesting-code-review skills."
+        ]
+      }
+    }
+  }
+}
