@@ -93,40 +93,63 @@ store submissions stay owner-only.
 ## Pin records
 
 These rows are the catalog pin records. Every vendored skill appears exactly
-once with a 40-character lowercase hex commit, a `SKILL.md` sha256, and a
-license file path that must exist in this plugin. `scripts/validate_catalog.py`
-enforces that the hashes match the files on disk.
+once with a 40-character lowercase hex commit, a per-skill file manifest
+sha256, a license file path, and any NOTICE paths that must exist.
+`scripts/validate_catalog.py` checks that narrative `- Commit:` lines agree
+with this table, that listed LICENSE and NOTICE files are present, and that
+the manifest hash matches every regular file in the skill folder (not only
+`SKILL.md`). The manifest is the SHA-256 of sorted lines
+`path<NUL>file-sha256<NUL>mode\n`, where mode is `0755` if any execute bit
+is set and `0644` otherwise.
 
-| skill | commit | skill_md_sha256 | license |
-| --- | --- | --- | --- |
-| `agents-sdk` | `14472d57ac968d1a0322a568077277209b259183` | `9bda4bd3adc5ab09e30c19ea6b9a0bf673f0a4b190bf7624fc1b0dc5f1fcf9c1` | `skills/agents-sdk/LICENSE` |
-| `app-store-review` | `7197cff003728b660542b37d6b6d0167fe2ec1ed` | `6499f09f671ce01c68c0460e3ae4ca5056960b10775a2314bd3775e82f53419b` | `skills/app-store-review/LICENSE` |
-| `basin` | `14472d57ac968d1a0322a568077277209b259183` | `5f62ae9b86544c352db2829e1f28009b1e97e9549e10bb3081a09a08d060ef1e` | `skills/basin/LICENSE` |
-| `cf-cli` | `14472d57ac968d1a0322a568077277209b259183` | `868b100095aefbaa83d8f08892044e2a6f2428760bdc12490517aab98c289bce` | `skills/cf-cli/LICENSE` |
-| `cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `7eadb373863b7550bad9411f33af44ca6ef3c545d2a653383db61488cb0419ee` | `skills/cloudflare/LICENSE` |
-| `cloudflare-app-bootstrap` | `14472d57ac968d1a0322a568077277209b259183` | `0e844a5d3fc39f922a51b906b4e48892610132a207c5e994521a8b0eb7535d91` | `skills/cloudflare-app-bootstrap/LICENSE` |
-| `cloudflare-email-service` | `14472d57ac968d1a0322a568077277209b259183` | `3f0448eb0f9f98e1762cb5e9bedb60531587ba003d8809b3e082f6dd82cb5912` | `skills/cloudflare-email-service/LICENSE` |
-| `cloudflare-one` | `14472d57ac968d1a0322a568077277209b259183` | `5e9b81bfe4ebd1737346123679eaca0004b9d3ab9a0239729103b442e0f89614` | `skills/cloudflare-one/LICENSE` |
-| `cloudflare-one-migrations` | `14472d57ac968d1a0322a568077277209b259183` | `3ecfe6dba6056996af6ba0b7b7f7d180640bea1fd7a5b3187623494ce1297868` | `skills/cloudflare-one-migrations/LICENSE` |
-| `durable-objects` | `14472d57ac968d1a0322a568077277209b259183` | `ef690603d7d998a25ba9748c79f399bb75d943fe1955ba258167116c101ef98c` | `skills/durable-objects/LICENSE` |
-| `frameworks-on-cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `0edfc9c8090988c32b76a0be007264073a67be1c8623b72c172976d510eccda4` | `skills/frameworks-on-cloudflare/LICENSE` |
-| `frontend-design` | `41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f` | `d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3` | `skills/frontend-design/LICENSE.txt` |
-| `gateway-workers` | `14472d57ac968d1a0322a568077277209b259183` | `63f3d183f531ceba625b33761b993264c29c3fc00dbd982e2180767d1e9fb768` | `skills/gateway-workers/LICENSE` |
-| `k2` | `14472d57ac968d1a0322a568077277209b259183` | `94c199923bd4d3eb836dbdd360a37d254b2249ed9f1cb3e20421ed2d34996587` | `skills/k2/LICENSE` |
-| `nextjs-on-cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `2e7d42b5a42a871a9ac3f1f638ac4d44e612650544058480164bd4994251a7dd` | `skills/nextjs-on-cloudflare/LICENSE` |
-| `playwright-cli` | `99d4c415db3794d1c989be16ac4987f4529e3220` | `ec07841c9c47b311d9c20111397e69411004e7ea46481aa12f7b9e0510195aa7` | `skills/playwright-cli/LICENSE` |
-| `requesting-code-review` | `bb92a77741419a4ab5f06e711a283343f1ada0c3` | `2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc` | `skills/requesting-code-review/LICENSE` |
-| `sandbox-migrate-to-next` | `14472d57ac968d1a0322a568077277209b259183` | `a3afd0eccaf4100ff48613f985c201469365fa58b1747006c49486aecdc5564c` | `skills/sandbox-migrate-to-next/LICENSE` |
-| `sandbox-next` | `14472d57ac968d1a0322a568077277209b259183` | `86e00416e89acf7f77b4d3926301345725abbc6e3dedec81493fd62ee69f1104` | `skills/sandbox-next/LICENSE` |
-| `sandbox-stable` | `14472d57ac968d1a0322a568077277209b259183` | `be65d5c94fc2baf862b5025a9782188af226778e1a2126dfe8681e2501d8ae0a` | `skills/sandbox-stable/LICENSE` |
-| `security-best-practices` | `5c8f1e26803bcfaffeceef1e7accbcf7e388417a` | `7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f` | `skills/security-best-practices/LICENSE.txt` |
-| `verification-before-completion` | `3be5aad3dd2400ef23b15680969f4bcd3b6d7b8b` | `2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3` | `skills/verification-before-completion/LICENSE` |
-| `web-perf` | `14472d57ac968d1a0322a568077277209b259183` | `0160c9e7f1b73eb80347efd899a6082219d43bb9de30424667c8017628a48469` | `skills/web-perf/LICENSE` |
-| `workers-best-practices` | `14472d57ac968d1a0322a568077277209b259183` | `01c452fd0b6b3caeb4c3b06f87893e52d8e95e32f691911c1644060e00dafa0e` | `skills/workers-best-practices/LICENSE` |
-| `workers-development` | `14472d57ac968d1a0322a568077277209b259183` | `322df9f4013457c2a3ff2790ab7b553e301c418d8de7e5b6e2d560e5ac800b1e` | `skills/workers-development/LICENSE` |
-| `workers-profiling` | `14472d57ac968d1a0322a568077277209b259183` | `fec05a080c90f019e1e93e5e1ca3416bb89362655dfc158458301f461cb29839` | `skills/workers-profiling/LICENSE` |
-| `wrangler` | `14472d57ac968d1a0322a568077277209b259183` | `a39de5c69f50e88759736a6ec7ad07f402c15f7a58a3224bcf979dce42013b13` | `skills/wrangler/LICENSE` |
+| skill | commit | manifest_sha256 | license | notice |
+| --- | --- | --- | --- | --- |
+| `agents-sdk` | `14472d57ac968d1a0322a568077277209b259183` | `c15093574e99161c1bb9279b83ec8c91f30c3e05b0bdcc6313d0c3ab5a289f40` | `skills/agents-sdk/LICENSE` | |
+| `app-store-review` | `7197cff003728b660542b37d6b6d0167fe2ec1ed` | `ff075858f5c228d5f005bcf4ea145b37adf6384768605840640b39e540dbe82c` | `skills/app-store-review/LICENSE` | |
+| `basin` | `14472d57ac968d1a0322a568077277209b259183` | `6db555159c9855d141ea45acd2f55e5fc7d7b20709bd840ebe3fbc6fab90f44a` | `skills/basin/LICENSE` | |
+| `cf-cli` | `14472d57ac968d1a0322a568077277209b259183` | `bf93841304901b9af1300c53cbf3ff5da05e10f40f2abaffc2be115644fbab10` | `skills/cf-cli/LICENSE` | |
+| `cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `a9b58245fc23cd96d99feef351c5731b95f454f64268249d5282f811bdc53000` | `skills/cloudflare/LICENSE` | |
+| `cloudflare-app-bootstrap` | `14472d57ac968d1a0322a568077277209b259183` | `81460010490cce500de0b59f5c9914a3d8ed292bfe0620993d5f63035c6830e9` | `skills/cloudflare-app-bootstrap/LICENSE` | |
+| `cloudflare-email-service` | `14472d57ac968d1a0322a568077277209b259183` | `a91ab52792799e1341391af7d0c838786bb555428631b2d370605942962ad551` | `skills/cloudflare-email-service/LICENSE` | |
+| `cloudflare-one` | `14472d57ac968d1a0322a568077277209b259183` | `d60e177e65ea82398b68e53d65ae233381ce1752be8258b8117e28e366af3839` | `skills/cloudflare-one/LICENSE` | |
+| `cloudflare-one-migrations` | `14472d57ac968d1a0322a568077277209b259183` | `76a1b3f60e933cf3cfc87f8b49037873ecf36b46441007d4ce5aabcb296653d3` | `skills/cloudflare-one-migrations/LICENSE` | |
+| `durable-objects` | `14472d57ac968d1a0322a568077277209b259183` | `32f9b8260f3fd0f1a06478d3ef1bd0e888333229e816a8437c6f6ddf723595ff` | `skills/durable-objects/LICENSE` | |
+| `frameworks-on-cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `d7a7293d2410000b8e962b7b2a2bf23e9434749894243ce8b9ab6cf60447fa55` | `skills/frameworks-on-cloudflare/LICENSE` | |
+| `frontend-design` | `41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f` | `1493db36e9bd1ec97016d781912cfa9cb45ec85f5ec47d587213dd9fef7019eb` | `skills/frontend-design/LICENSE.txt` | |
+| `gateway-workers` | `14472d57ac968d1a0322a568077277209b259183` | `7c36ab1ffb4fd002d9477daf98e321d9480987716f7171fbffe65eab953b474c` | `skills/gateway-workers/LICENSE` | |
+| `k2` | `14472d57ac968d1a0322a568077277209b259183` | `6c5df0b1455f38944c9a6a815f0f84b71b91ea5e5a87febbb83992a92f01f023` | `skills/k2/LICENSE` | |
+| `nextjs-on-cloudflare` | `14472d57ac968d1a0322a568077277209b259183` | `fac3b00e0bf31ac245c19e30d1882725cec803df01b3bbbc8e9687c4e17c3b29` | `skills/nextjs-on-cloudflare/LICENSE` | |
+| `playwright-cli` | `99d4c415db3794d1c989be16ac4987f4529e3220` | `fa1525492e65e7b1dd6269ebf44dd08febcabf9b2af8a82996ac618a22745c9c` | `skills/playwright-cli/LICENSE` | `skills/playwright-cli/NOTICE, licenses/playwright/NOTICE` |
+| `requesting-code-review` | `bb92a77741419a4ab5f06e711a283343f1ada0c3` | `694d2402cc10b14af0afb2c4025d20a8b9d33971f2b483f464f58fac4597c8b0` | `skills/requesting-code-review/LICENSE` | |
+| `sandbox-migrate-to-next` | `14472d57ac968d1a0322a568077277209b259183` | `a8030db83aaf217ddd85aab9991f4fc0c747f2603b6a9e9e340ca1a2a191bde4` | `skills/sandbox-migrate-to-next/LICENSE` | |
+| `sandbox-next` | `14472d57ac968d1a0322a568077277209b259183` | `fac710633b734512f529d880699849a121f3738e2f30f9f33cde4d80f59ac036` | `skills/sandbox-next/LICENSE` | |
+| `sandbox-stable` | `14472d57ac968d1a0322a568077277209b259183` | `99006ff3b6240de0e157e762daa3e05fd6c95604c7e255d674283da713d34bac` | `skills/sandbox-stable/LICENSE` | |
+| `security-best-practices` | `5c8f1e26803bcfaffeceef1e7accbcf7e388417a` | `bc209f6dfc0ec6a3042a0fb7c206f4d37d127fff74a6e27e1c844d612d197e01` | `skills/security-best-practices/LICENSE.txt` | |
+| `verification-before-completion` | `3be5aad3dd2400ef23b15680969f4bcd3b6d7b8b` | `f70bc4fba7bcbb832ae42c87b5449bafd0f3303380389bffda89d7d073cfdc71` | `skills/verification-before-completion/LICENSE` | |
+| `web-perf` | `14472d57ac968d1a0322a568077277209b259183` | `b32489e5568dc4c69d7c81baa44a2024494c00cf09e542bebc1cd8c0e9dba91a` | `skills/web-perf/LICENSE` | |
+| `workers-best-practices` | `14472d57ac968d1a0322a568077277209b259183` | `819de30a59182f6476a1d98783ed6ad1ebcd8945383c7feacf71c2daef0e8dcb` | `skills/workers-best-practices/LICENSE` | |
+| `workers-development` | `14472d57ac968d1a0322a568077277209b259183` | `c8a89329ddc7129506262947138d57ca48f041e2df2b07fb78928f1b661c2178` | `skills/workers-development/LICENSE` | |
+| `workers-profiling` | `14472d57ac968d1a0322a568077277209b259183` | `b7bd8a2462a9bcf13aa4f038f6c74ff52617508c6b286fd894f20ce7439e2ec3` | `skills/workers-profiling/LICENSE` | |
+| `wrangler` | `14472d57ac968d1a0322a568077277209b259183` | `7a3dfefbe4da7f8f6d1d280617d56ae0a149f8610b861cdcd3451a27f890ee3f` | `skills/wrangler/LICENSE` | |
 
+## License copies
+
+Top-level copies under `licenses/` are convenience copies of upstream
+license texts. They are not a substitute for the per-skill LICENSE files.
+`scripts/validate_catalog.py` requires each listed path to exist and the
+directory manifest (same format as the per-skill manifests) to match.
+
+- licenses/ manifest sha256: `66c1c1fd81ecf858aa146eb93951a59afcabdd2aafacec9a6b45a5ee84d78bca`
+
+| path |
+| --- |
+| `licenses/app-store-review/LICENSE` |
+| `licenses/cloudflare/LICENSE` |
+| `licenses/frontend-design/LICENSE.txt` |
+| `licenses/playwright/LICENSE` |
+| `licenses/playwright/NOTICE` |
+| `licenses/security-best-practices/LICENSE.txt` |
+| `licenses/superpowers/LICENSE` |
 
 ## Gitleaks note
 
