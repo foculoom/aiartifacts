@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "public-skills",
   "version": "0.1.0",
-  "description": "Pinned copies of approved public upstream skills: Playwright CLI, frontend design, security best practices, proof-of-work review, advisory App Store review, and official Cloudflare skills (dry-run only).",
+  "description": "Advisory / dry-run only, no deploys. Pinned copies of approved public upstream skills: Playwright CLI, frontend design, security best practices, proof-of-work review, advisory App Store review, and official Cloudflare skills (turnstile-spin omitted).",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -23,8 +23,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Public Skills",
-        "shortDescription": "Pinned public upstream skills",
-        "longDescription": "Pinned, licensed copies of approved public skills. Do not run vendored scripts. Cloudflare skills are dry-run only. App Store review is advisory and does not submit.",
+        "shortDescription": "Advisory / dry-run only, no deploys",
+        "longDescription": "Advisory / dry-run only, no deploys. Pinned, licensed copies of approved public skills. App Store review is advisory and must not submit. Cloudflare skills are dry-run only; do not deploy. See plugins/public-skills/README.md.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",

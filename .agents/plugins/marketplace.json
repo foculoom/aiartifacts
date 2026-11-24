@@ -98,7 +98,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Advisory / dry-run only, no deploys. Pinned public upstream skills. See plugins/public-skills/README.md."
     }
   ]
 }

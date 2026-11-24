@@ -52,7 +52,7 @@ Design starts at 0.1.0; Editorial remains 0.1.0. Repository tag v0.2.0 pins this
 
 ## Public Skills plugin
 
-The optional [Public Skills plugin](plugins/public-skills/) vendors pinned copies of approved public upstream skills (Playwright CLI, frontend design, security best practices, selected Superpowers review skills, advisory App Store review, and official Cloudflare skills). See [PROVENANCE.md](plugins/public-skills/PROVENANCE.md) for upstream URLs, commits, and licenses. Do not run vendored scripts. Cloudflare skills are dry-run only; App Store review does not submit. Official Stripe skills are not in this snapshot.
+The optional [Public Skills plugin](plugins/public-skills/) vendors pinned copies of approved public upstream skills (Playwright CLI, frontend design, security best practices, selected Superpowers review skills, advisory App Store review, and official Cloudflare skills). It is [advisory / dry-run only, no deploys](plugins/public-skills/README.md). See [PROVENANCE.md](plugins/public-skills/PROVENANCE.md) for upstream URLs, commits, and licenses. Official Stripe skills and `turnstile-spin` are not in this snapshot.
 
 ## Use the editorial plugin
 
@@ -82,7 +82,7 @@ Additional skills, agents, or plugins can be added here without creating a repos
 
 Open a focused pull request with the behavior you want to change and a public or cleared example that demonstrates it. Add meaningful positive and negative evaluation cases when a skill's routing or review judgment changes. Do not submit unpublished manuscripts, customer data, credentials, private project briefs, or examples whose publication rights are unclear. Keep prose checks advisory and trace findings to exact passages; do not turn stylistic signals into claims about who wrote the text.
 
-This repository is licensed under [Apache-2.0](LICENSE). See the [changelog](CHANGELOG.md) for release notes.
+This repository's original code is licensed under [Apache-2.0](LICENSE), with vendored MIT (and other third-party) files under [plugins/public-skills](plugins/public-skills/) per [PROVENANCE.md](plugins/public-skills/PROVENANCE.md). See the [changelog](CHANGELOG.md) for release notes.
 
 ## Release plugin
 

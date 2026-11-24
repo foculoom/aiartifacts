@@ -1,7 +1,14 @@
 # Public Skills
 
-Pinned copies of public upstream skills approved for studio use. This plugin is
-the central install point so other repositories do not need their own copies.
+**Advisory / dry-run only, no deploys.** App Store review is advisory and
+must not submit. Cloudflare skills are dry-run only; do not run
+`wrangler deploy`, Pages deploys, or any production publish. Deploy and
+store submission stay owner-only.
+
+Pinned copies of public upstream skills approved for studio use. This plugin
+is the central install point so other repositories do not need their own
+copies. The marketplace catalog points here:
+[`.agents/plugins/marketplace.json`](../../.agents/plugins/marketplace.json).
 
 Install from this repository's marketplace:
 
@@ -15,12 +22,13 @@ plugin to a universal directory.
 
 ## Studio rules for this snapshot
 
-- Do **not** run scripts shipped inside these skills. They are kept only for
-  provenance and review. See [PROVENANCE.md](PROVENANCE.md).
-- Cloudflare skills are **dry-run only**. Do not run `wrangler deploy`, Pages
-  deploys, or any production publish. Deploy remains owner-only.
-- App Store review is **advisory**. Do not submit builds or store listings.
-- Official Stripe skills are **not** in this snapshot; see PROVENANCE for why.
+- **Advisory / dry-run only, no deploys.** See the notice at the top of this
+  file.
+- Official Stripe skills are **not** in this snapshot; see
+  [PROVENANCE.md](PROVENANCE.md) for why.
+- `turnstile-spin` is omitted because its instructions tell agents to run
+  scripts that create Turnstile widgets and secrets.
 
 Skill bodies are copied from upstream without edits. License texts travel with
-each skill.
+each skill. Pins, licenses, and `SKILL.md` hashes are in
+[PROVENANCE.md](PROVENANCE.md).
