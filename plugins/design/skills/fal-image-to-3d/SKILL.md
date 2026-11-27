@@ -30,7 +30,7 @@ Avoid models whose minimum face count exceeds the 20,000-triangle Roblox cap unl
 ## 3. Check, then decimate and UV
 
 1. Check every mesh's triangle count and every map's size before touching it (a dependency-free GLB parser is enough: sum index counts / 3 per primitive).
-2. If it's over budget: headless Blender (`blender -b -P script.py`) with a Decimate modifier to the target ratio, Weighted Normal for stylized shading, Smart UV Project if the UVs broke, glTF export. Installing Blender or `bpy` is large (hundreds of MB), so get a yes first. Without Blender, use a paid remesh endpoint with texture baking (still under the cap).
+2. If it's over budget: headless Blender (`blender -b -P script.py`) with a Decimate modifier to the target ratio, Weighted Normal for stylized shading, Smart UV Project if the UVs broke, glTF export. Installing Blender or `bpy` is large (on Debian, `apt-get install --no-install-recommends blender` is a ~91 MB package but pulls ~525 MB with dependencies), so get a yes first. After installing, smoke-test it: `blender -b --version`, then a script that adds a UV sphere, applies Decimate and exports a GLB, then run the triangle check on that GLB. Blender 4.3 does all of this headless with no display. Without Blender, use a paid remesh endpoint with texture baking (still under the cap).
 
 ## 4. Bake to SurfaceAppearance maps
 

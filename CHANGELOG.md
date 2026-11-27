@@ -21,6 +21,11 @@ The next monthly upstream review remains 2026-12-07.
   the 20,000-triangle per-mesh cap, the 1024² texture-map note and the 120-stud
   light range clamp. The fal model table is a dated catalog snapshot; no model was
   run. Documentation only: no scripts, tests, package release or consumer pin change.
+- Refine the three skills after a first room pass: one shadow caster per lit
+  volume (a second only for an unreachable interior, stated as an exception),
+  smooth-noise flicker at ≤ 3 peaks/s (WCAG 2.3.1), client-side interior
+  sub-key tweens on a zone shared with camera and audio, and a verified
+  headless Blender 4.3 install and smoke test (decimate, GLB export, triangle check).
 
 ## Unreleased — Editorial, Design and Release 0.2.0 source
 

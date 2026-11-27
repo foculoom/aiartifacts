@@ -48,7 +48,7 @@ Run the project's designated vision model, on the project's designated account, 
 ## 6. Severity and verdict
 
 - **High** (blocks): an interactable fails the readability rule on the phone capture; a mesh over 20,000 triangles or a map over the cap; art imported without the owner's yes; content breaks the target content rating; frame time far over budget on the reference device; a gameplay-critical object invisible at quality 1.
-- **Medium** (fix before merge): a budget overrun ≤ 25%; frame value distribution outside band; light colour rules broken; extra shadow-casting lights; Precise fidelity without sign-off; a required shot missing without reason; reuse of a sibling product's signature scheme without a reason; a model finding confirmed by measurement.
+- **Medium** (fix before merge): a budget overrun ≤ 25%; frame value distribution outside band; light colour rules broken; more than one shadow-casting light per lit volume, or an unstated exception; Precise fidelity without sign-off; a required shot missing without reason; reuse of a sibling product's signature scheme without a reason; a model finding confirmed by measurement.
 - **Low**: polish.
 
 Verdict line: `VISUAL_GATE 3D <sha7>: PASS|FAIL H/M/L = x/y/z`. A PASS covers the inspected scope only and is not permission to merge. See [sources](references/sources.md).

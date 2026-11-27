@@ -33,12 +33,13 @@ Compare **stylized low-poly** (flat or gradient albedo, few maps) against **styl
 2. **Lighting service per state**: LightingStyle, PrioritizeLightingQuality, Ambient, OutdoorAmbient, ColorShift_Top/Bottom, Brightness, ExposureCompensation, EnvironmentDiffuseScale, EnvironmentSpecularScale, GlobalShadows, ShadowSoftness, ClockTime, GeographicLatitude. Add tween durations between states.
 3. **Atmosphere** (Density, Offset, Color, Decay, Glare, Haze) and **Sky** per state. Keep Density low enough that the far wall of the play space still reads.
 4. **Post-processing** per state: ColorGradingEffect preset, Bloom (set Threshold so only emissive/Neon blooms), ColorCorrection, SunRays. DepthOfField off during gameplay unless the design needs it; Blur only behind full-screen UI.
-5. **Light plan**: key, fill (often ambient only), one hero practical as the **only** shadow caster, practicals without shadows. Give Color, Brightness, Range, Angle and Shadows for each, plus caps on enabled lights and lights in view.
+5. **Light plan**: key, fill (often ambient only), one hero practical as the **only** shadow caster per lit volume, practicals without shadows. A second caster is allowed only for a separate interior that the first light's Range can't reach, and must be written down as an exception. Give Color, Brightness, Range, Angle and Shadows for each, plus caps on enabled lights and lights in view. Animate flames with smooth noise (no random steps) and keep brightness peaks at or below 3 per second (WCAG 2.3.1).
 6. **Value structure**: on-screen L\* bands (deep, environment low/mid, light pools, interactive) and a frame distribution target (% below L\* 10 and 20, p50).
 7. **Gameplay readability rule**: interactables get a minimum on-screen L\* and a minimum dL against a ring around them, on desktop and on a phone at low quality; hue cues always come with a shape or pulse cue.
 8. **Asset list**: count, unique meshes, triangles each, map size, PBR or atlas, collision. Total the room.
 9. **Performance budget**: on-screen triangles, draw calls, GraphicsTexture and GraphicsMeshParts memory, p95 frame time on a reference phone, streaming settings. Label them starting points until the first measurement.
-10. **Distinctness**: a table comparing this product with sibling products. Don't reuse another product's signature colours without a stated reason.
+10. **Interior sub-keys**: `Lighting` is global, so an interior beat (a cave, a niche, a shrine room) gets its own key through a client-side tween on zone entry: Exposure, Ambient/OutdoorAmbient, EnvironmentDiffuseScale, Atmosphere and ColorCorrection, about 1–1.5 s Sine InOut (faster reads as a pop), reversed on exit. Stay inside the room's palette family: darker albedo, warmer light, no new hue families. Share one zone trigger with the camera and audio changes so they switch on the same frame.
+11. **Distinctness**: a table comparing this product with sibling products. Don't reuse another product's signature colours without a stated reason.
 
 ## 5. Close
 

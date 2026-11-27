@@ -10,6 +10,7 @@ All verified 2026-11-27 on create.roblox.com (pages last updated 2026-11-24).
 - Atmosphere. <https://create.roblox.com/docs/environment/atmosphere>
 - Post-processing effects, ColorGradingEffect. <https://create.roblox.com/docs/environment/post-processing-effects> · <https://create.roblox.com/docs/reference/engine/classes/ColorGradingEffect>
 - Light sources (PointLight, SpotLight, SurfaceLight); range clamp 120 studs. <https://create.roblox.com/docs/effects/light-sources> · <https://create.roblox.com/docs/reference/engine/classes/Lighting>
+- Flicker limit: WCAG 2.3.1 Three Flashes or Below Threshold. <https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html>
 - Performance: draw calls, instancing, shadows off below quality 4, RenderFidelity, CollisionFidelity, texture memory. <https://create.roblox.com/docs/performance-optimization/improve>
 - Instance streaming. <https://create.roblox.com/docs/workspace/streaming>
 - MeshPart RenderFidelity distances. <https://create.roblox.com/docs/reference/engine/classes/MeshPart>
