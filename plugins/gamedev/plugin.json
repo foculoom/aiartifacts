@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gamedev",
+  "version": "0.1.0",
+  "description": "Build, test and render 3D game source headlessly, and state what a headless run does not prove.",
+  "author": {
+    "name": "Foculoom",
+    "url": "https://github.com/foculoom"
+  },
+  "homepage": "https://github.com/foculoom/aiartifacts/tree/main/plugins/gamedev",
+  "repository": "https://github.com/foculoom/aiartifacts",
+  "license": "Apache-2.0",
+  "keywords": [
+    "gamedev",
+    "3d",
+    "roblox",
+    "rojo",
+    "lune",
+    "godot",
+    "headless",
+    "testing"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Gamedev",
+        "shortDescription": "Headless 3D build, test and render checks",
+        "longDescription": "Build, test and render 3D game source headlessly, and state what a headless run does not prove.",
+        "developerName": "Foculoom",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/foculoom/aiartifacts",
+        "defaultPrompt": [
+          "Build and test this 3D project headlessly and report what the run does not prove."
+        ]
+      }
+    }
+  }
+}

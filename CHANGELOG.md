@@ -6,6 +6,18 @@ Catalog review of foculoom/aiartifacts at `2dac4dc` plus the source on this
 branch. The published `v0.5.0` tag and existing consumer pins are unchanged.
 The next monthly upstream review remains 2026-12-07.
 
+## Unreleased — Gamedev 0.1.0 source: headless 3D build and test
+
+- Add a Gamedev plugin with two generic skills: `roblox-rojo-headless-build-test`
+  (Rojo, Lune, TestEZ, Selene and StyLua without Studio; geometry as data with
+  pure rules and a reachability flood fill; a Lune-built `.rbxm` mounted by Rojo;
+  a round-trip check of the built place; deliberate-revert proofs) and
+  `godot-headless-3d-render-export` (Xvfb with llvmpipe or a user-space lavapipe
+  Vulkan driver, deterministic frame capture, golden-image diff, Web export).
+- Both were run on 2026-11-27 on a CPU-only Linux box; each skill records what
+  that run did and did not prove. Documentation only: no scripts, tests, package
+  release or consumer pin change.
+
 ## Unreleased — Design 0.2.0 source: Roblox 3D play pass
 
 - Add a generic `roblox-3d-play-pass` Design skill: a test matrix (small and large

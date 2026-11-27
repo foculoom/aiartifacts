@@ -89,6 +89,18 @@
       "category": "Productivity"
     },
     {
+      "name": "gamedev",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gamedev"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "public-skills",
       "source": {
         "source": "local",

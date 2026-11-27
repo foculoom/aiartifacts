@@ -53,6 +53,10 @@ The optional [Design plugin](plugins/design/) includes `product-identity` for br
 
 Repository tag v0.2.0 pinned Design 0.1.0 with Editorial 0.1.0. Later tags and the unreleased source on `main` supersede those plugin versions; see [Current snapshot: v0.5.0](#current-snapshot-v050) and the changelog.
 
+## Gamedev plugin
+
+The optional [Gamedev plugin](plugins/gamedev/) includes `roblox-rojo-headless-build-test` for linting, unit-testing and building a Roblox place from Luau with Rojo and Lune, including a round-trip check of 3D Instances in the built place, and `godot-headless-3d-render-export` for software-rendered Godot 4 frames, golden-image diffs and Web exports on a machine without a GPU. Both say what a headless run does not prove: engine physics, players and networking, real-GPU rendering and performance still need a playtest on the target platform. They complement the Design plugin's Roblox 3D skills, which cover art direction, visual gates and play passes.
+
 ## Public Skills plugin
 
 The optional [Public Skills plugin](plugins/public-skills/) vendors pinned copies of approved public upstream skills (Playwright CLI, frontend design, security best practices, selected Superpowers review skills, advisory App Store review, and official Cloudflare skills). It is [advisory / dry-run only, no deploys](plugins/public-skills/README.md). See [PROVENANCE.md](plugins/public-skills/PROVENANCE.md) for upstream URLs, commits, and licenses. Official Stripe skills and `turnstile-spin` are not in this snapshot.
@@ -80,6 +84,7 @@ plugins/reporting/                  Private decision reports
 plugins/automation/                 Local scoped credential runner
 plugins/engineering/                Platform boundaries and test-driven development
 plugins/performance/                Advisory runtime regression checks
+plugins/gamedev/                    Headless 3D build, test and render checks
 plugins/public-skills/              Pinned, licensed copies of approved upstream skills
 agents/codex/                       Opt-in Codex agent templates
 evals/                              Public or cleared regression cases
