@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "release",
-  "version": "0.1.1",
-  "description": "Prepare and verify authorized static-site releases without storing credentials.",
+  "version": "0.2.0",
+  "description": "Prepare and verify authorized static-site releases, including a usefulness review and an exact-SHA owner approval, without storing credentials.",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -13,19 +13,23 @@
   "keywords": [
     "release",
     "verification",
-    "evidence"
+    "evidence",
+    "usefulness",
+    "approval"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Release",
         "shortDescription": "Static release evidence and readback",
-        "longDescription": "Prepare and verify authorized static-site releases without storing credentials.",
+        "longDescription": "Prepare and verify authorized static-site releases, including a usefulness review and an exact-SHA owner approval, without storing credentials.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",
         "defaultPrompt": [
-          "Verify this static release and preserve its evidence."
+          "Verify this static release and preserve its evidence.",
+          "Review this preview for usefulness and write a VALUE_GATE report for its exact commit.",
+          "Confirm the owner yes cites this exact 40-character SHA before release."
         ]
       }
     }

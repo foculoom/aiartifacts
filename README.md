@@ -1,5 +1,7 @@
 # Foculoom AI Artifacts
 
+**Last reviewed: 2026-11-26 (America/Los_Angeles).** The next monthly upstream review is due 2026-12-07; see [upstream maintenance](docs/skill-delivery/upstream-maintenance.md). This catalog review added first-party skills for human-voice copy, visual sign-off, vision second opinions, usefulness review, exact-SHA owner approval, and audio PR proof of work. They are unreleased source: the published `v0.5.0` tag and existing consumer pins are unchanged.
+
 For the latest cross-session checkpoint, read [HANDOFF.md](HANDOFF.md) before dated historical notes.
 
 The [toolkit PRD](docs/PRD.md) is the authoritative requirements entry point.
@@ -39,16 +41,17 @@ and bounded validation. This is unreleased source, not an installed update.
 | --- | --- | --- |
 | Editorial plugin | Reviews and revises writing for its audience and medium | [`plugins/editorial/`](plugins/editorial/) |
 | Editorial writing skill | Applies the editorial method and the selected writing profile | [`plugins/editorial/skills/editorial-writing/`](plugins/editorial/skills/editorial-writing/) |
+| Human-voice skill | Lints reader-facing copy for stock AI wording and stiff formulas, then rewrites in the project's voice. Not an authorship test. | [`plugins/editorial/skills/human-voice/`](plugins/editorial/skills/human-voice/) |
 | Editorial reviewer agent template | Optional review-only second pass in Codex | [`agents/codex/editorial_reviewer.toml`](agents/codex/editorial_reviewer.toml) |
 | Project voice brief | Private project overlay to copy into a product repository | [`templates/project-voice-brief.md`](templates/project-voice-brief.md) |
 
-The editorial method is shared. Voice is chosen for the actual work: long-form nonfiction, children's writing, a website, game interface text, and game dialogue have different reader needs. Audience and medium profiles guide the review; a project's own brief supplies its brand, characters, terminology, and approved examples. No single "human voice" score establishes quality or authorship. An automated review also does not replace a human editor or reader.
+The editorial method is shared. Voice is chosen for the actual work: long-form nonfiction, children's writing, a website, game interface text, and game dialogue have different reader needs. Audience and medium profiles guide the review; a project's own brief supplies its brand, characters, terminology, and approved examples. The human-voice skill flags stock wording and stiff formulas; a clean lint is not a quality or authorship certificate, and it does not replace a human editor or reader.
 
 ## Design plugin
 
-The optional [Design plugin](plugins/design/) includes `product-identity` for brand-family briefs and `experience-review` for evidence-based interface audits. Use the [identity brief template](templates/project-identity-brief.md) beside the project voice brief. Keep completed product briefs and private mockups in their owning repositories. The [dependency register](plugins/design/DEPENDENCIES.md) distinguishes reviewed candidates from tested dependencies; neither skill requires an external design skill. [Behavior cases](evals/design/README.md) cover preservation, audience fit, availability, and evidence limits.
+The optional [Design plugin](plugins/design/) includes `product-identity` for brand-family briefs, `experience-review` for evidence-based interface audits, `visual-signoff` for palette and contrast gates, `vision-second-opinion` for a repeatable vision-model review of exact-build screenshots, and `audio-pr-proof-of-work` for loudness and second-opinion checks on audio changes. Use the [identity brief template](templates/project-identity-brief.md) beside the project voice brief. Keep completed product briefs and private mockups in their owning repositories. The [dependency register](plugins/design/DEPENDENCIES.md) distinguishes reviewed candidates from tested dependencies; neither skill requires an external design skill. [Behavior cases](evals/design/README.md) cover preservation, audience fit, availability, and evidence limits.
 
-Design starts at 0.1.0; Editorial remains 0.1.0. Repository tag v0.2.0 pins this combined snapshot.
+Repository tag v0.2.0 pinned Design 0.1.0 with Editorial 0.1.0. Later tags and the unreleased source on `main` supersede those plugin versions; see [Current snapshot: v0.5.0](#current-snapshot-v050) and the changelog.
 
 ## Public Skills plugin
 
@@ -70,10 +73,18 @@ For a product, copy the [voice brief template](templates/project-voice-brief.md)
 
 ```text
 .agents/plugins/marketplace.json    Repository plugin catalog
-plugins/editorial/                Portable editorial plugin and its skills
-agents/codex/                    Opt-in Codex agent templates
-evals/                           Public or cleared regression cases
-templates/                       Reusable project setup documents
+plugins/editorial/                  Editorial writing and human-voice lint
+plugins/design/                     Identity, experience, visual sign-off, vision and audio checks
+plugins/release/                    Release evidence, usefulness review, exact-SHA owner approval
+plugins/reporting/                  Private decision reports
+plugins/automation/                 Local scoped credential runner
+plugins/engineering/                Platform boundaries and test-driven development
+plugins/performance/                Advisory runtime regression checks
+plugins/public-skills/              Pinned, licensed copies of approved upstream skills
+agents/codex/                       Opt-in Codex agent templates
+evals/                              Public or cleared regression cases
+templates/                          Reusable project setup documents
+docs/                               Requirements, CI, and skill-delivery guides
 ```
 
 Additional skills, agents, or plugins can be added here without creating a repository per artifact. Keep each plugin self-contained and give it its own version. A release tag pins the full catalog snapshot. A consuming project should record the tag or commit SHA it tested, especially when an editorial review must be reproduced later.
@@ -86,7 +97,7 @@ This repository's original code is licensed under [Apache-2.0](LICENSE), with ve
 
 ## Release plugin
 
-Release 0.1.0 adds `release-evidence`: reuse existing signed-in access, check history before upload, avoid duplicate deployment retries, compare packaged/live hashes, and publish sanitized evidence. Its optional Python 3.9+ verifier writes a manifest with `--root PAYLOAD --output MANIFEST`, or reads public HTTPS assets with `--manifest MANIFEST --origin https://example.com --output REPORT`. Reports must remain outside the payload. It never deploys, requests credentials, or accepts unexplained host rewrites. Repository snapshot v0.3.0 adds this plugin; Design and Editorial remain at 0.1.0.
+Release 0.1.0 added `release-evidence`: reuse existing signed-in access, check history before upload, avoid duplicate deployment retries, compare packaged/live hashes, and publish sanitized evidence. Unreleased Release 0.2.0 source adds `usefulness-review` (a VALUE_GATE report for an exact commit) and `owner-sha-approval` (an owner yes must cite that same 40-character SHA). Its optional Python 3.9+ verifier writes a manifest with `--root PAYLOAD --output MANIFEST`, or reads public HTTPS assets with `--manifest MANIFEST --origin https://example.com --output REPORT`. Reports must remain outside the payload. It never deploys, requests credentials, or accepts unexplained host rewrites. Repository snapshot v0.3.0 adds this plugin; Design and Editorial remain at 0.1.0.
 
 ## Reporting plugin
 
@@ -181,6 +192,19 @@ Acorn parser installed only when this optional command runs. The
 describes the product-owned policy, limits and ten synthetic tests. Run the
 inventory guard first; neither checker proves behavioral correctness or product
 release readiness. Existing tags and consumer pins remain unchanged.
+
+## Unreleased Editorial, Design and Release 0.2.0 source
+
+Editorial 0.2.0 adds the [human-voice skill](plugins/editorial/skills/human-voice/SKILL.md)
+and a dependency-free Node linter for stock wording and formulas. Design 0.2.0 adds
+[visual sign-off](plugins/design/skills/visual-signoff/SKILL.md),
+[vision second opinion](plugins/design/skills/vision-second-opinion/SKILL.md) and
+[audio PR proof of work](plugins/design/skills/audio-pr-proof-of-work/SKILL.md).
+Release 0.2.0 adds [usefulness review](plugins/release/skills/usefulness-review/SKILL.md)
+and [owner SHA approval](plugins/release/skills/owner-sha-approval/SKILL.md).
+These are source candidates. They do not change the published `v0.5.0` tag or
+consumer pins. A clean lint or second opinion is not a quality, authorship or
+accessibility certificate, and it is not permission to merge or deploy.
 
 ## Performance 0.1.0 source candidate
 

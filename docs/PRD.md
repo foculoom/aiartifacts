@@ -38,6 +38,7 @@ an authorized project task.
 | Prepare a distribution payload | The [packaging guide](skill-delivery/packaging.md) requires an explicit file inventory, identities, licenses, dependencies and review. Package integrity establishes only the checked file properties. |
 | Assess behavior or usefulness | [Evaluation guidance](../evals/skill-delivery/README.md) separates structural checks, loading, behavior and comparative usefulness. Retain actual attempts and limitations; blocked, contaminated or tied comparisons supply no demonstrated benefit. Use the relevant artifact's cases and acceptance contract. |
 | Maintain an adopted source | The [maintenance procedure](skill-delivery/upstream-maintenance.md) records the accepted revision, candidate, provenance, task evidence and disposition without replacing accepted files during discovery. Each consumer owns adoption or deferral. |
+| Record a usefulness, visual, voice, or release check | The relevant skill states required evidence, exact source identity, and limits. A lint or second opinion is not authorship detection, accessibility certification, or permission to merge or deploy. An owner yes must cite the exact 40-character SHA that will ship. |
 | Resume or release work | The [handoff and release rules](../AGENTS.md#portable-handoff-and-release-evidence) require reproducible evidence, independent review of the exact head and required checks. A source merge does not authorize a package release or establish consumer acceptance. |
 
 The [pinned TDD adoption contract](tdd-adoption.md) defines the approved

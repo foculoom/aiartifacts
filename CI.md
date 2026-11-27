@@ -8,7 +8,7 @@ These are the same commands the retired workflow ran. Use Node 24 (or the versio
 
 ```bash
 (cd plugins/engineering/skills/platform-boundaries/scripts/js-import-graph && npm ci --ignore-scripts --no-audit --no-fund && npm test)
-for d in plugins/editorial/skills/editorial-writing/tests plugins/engineering/skills/platform-boundaries/scripts scripts/skill-delivery/tests plugins/release/skills/release-evidence/scripts plugins/reporting/skills/decision-reporting/scripts plugins/automation/skills/local-credential-runner/tests plugins/design/skills/product-identity/tests plugins/performance/skills/performance-regression/tests; do python3 -m unittest discover -s "$d" -q || exit 1; done
+for d in plugins/editorial/skills/editorial-writing/tests plugins/editorial/skills/human-voice/tests plugins/engineering/skills/platform-boundaries/scripts scripts/skill-delivery/tests plugins/release/skills/release-evidence/scripts plugins/release/skills/usefulness-review/tests plugins/release/skills/owner-sha-approval/tests plugins/reporting/skills/decision-reporting/scripts plugins/automation/skills/local-credential-runner/tests plugins/design/skills/product-identity/tests plugins/performance/skills/performance-regression/tests; do python3 -m unittest discover -s "$d" -q || exit 1; done
 python3 -m unittest discover -s evals/skill-delivery -p 'test_*.py' -q
 python3 scripts/validate_catalog.py
 python3 -m json.tool .agents/plugins/marketplace.json >/dev/null && python3 -m json.tool plugins/editorial/plugin.json >/dev/null && python3 -m json.tool plugins/design/plugin.json >/dev/null
@@ -16,6 +16,10 @@ python3 -c 'import pathlib,tomllib;[tomllib.load(open(p,"rb")) for p in pathlib.
 ```
 
 Verified on 2026-11-21 ~02:10 PT on the studio Linux box from a fresh clone of the default branch: **all 12 steps passed**.
+
+Re-run on 2026-11-26 (America/Los_Angeles) from this branch, including the new human-voice, usefulness-review, and owner-sha-approval tests: **all steps passed**.
+The retired `.github/workflows/validate.yml` file was left unchanged on this branch; GitHub Actions stays disabled, and the new local test directories above are what reviewers should run.
+
 
 ## Required status checks
 
