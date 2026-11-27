@@ -6,6 +6,22 @@ Catalog review of foculoom/aiartifacts at `2dac4dc` plus the source on this
 branch. The published `v0.5.0` tag and existing consumer pins are unchanged.
 The next monthly upstream review remains 2026-12-07.
 
+## Unreleased — Design 0.2.0 source: Roblox 3D art direction
+
+- Add three generic Design skills: `roblox-3d-art-direction` (style choice, palette
+  with measured CIE L*, Lighting/Atmosphere/post-processing values per state, light
+  plan, value structure, readability rule, asset and performance budgets),
+  `3d-visual-gate` (fixed Studio camera shots, phone and low-quality captures,
+  L* and dL measurement, triangle/draw-call/memory/frame-time checks, a
+  review-only vision second opinion, High/Medium/Low), and `fal-image-to-3d`
+  (concept → image-to-3D → decimate/UV → ≤1024 PBR bake → import, with spend and
+  import approval gates).
+- Cite Roblox Creator Hub pages verified 2026-11-27, including the deprecation of
+  `Lighting.Technology` in favor of `LightingStyle` and `PrioritizeLightingQuality`,
+  the 20,000-triangle per-mesh cap, the 1024² texture-map note and the 120-stud
+  light range clamp. The fal model table is a dated catalog snapshot; no model was
+  run. Documentation only: no scripts, tests, package release or consumer pin change.
+
 ## Unreleased — Editorial, Design and Release 0.2.0 source
 
 - Add a public, generic human-voice skill with a banned-word list, formula

@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design",
   "version": "0.2.0",
-  "description": "Define product identities, review rendered experiences, sign off palettes, and record audiovisual proof of work.",
+  "description": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, and direct and gate Roblox 3D art.",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -17,14 +17,16 @@
     "review",
     "palette",
     "contrast",
-    "audio"
+    "audio",
+    "3d",
+    "roblox"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Design",
         "shortDescription": "Product identity and experience review",
-        "longDescription": "Define product identities, review rendered experiences, sign off palettes, and record audiovisual proof of work.",
+        "longDescription": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, and direct and gate Roblox 3D art.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",
@@ -32,7 +34,8 @@
           "Define this product identity within its existing brand family.",
           "Review this interface against its brief using observed evidence.",
           "Sign off this palette change against its tokens and contrast targets.",
-          "Record audio proof of work for this pull request."
+          "Record audio proof of work for this pull request.",
+          "Write a Roblox 3D room look with lighting values and triangle budgets."
         ]
       }
     }
