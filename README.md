@@ -49,9 +49,15 @@ The editorial method is shared. Voice is chosen for the actual work: long-form n
 
 ## Design plugin
 
-The optional [Design plugin](plugins/design/) includes `product-identity` for brand-family briefs, `experience-review` for evidence-based interface audits, `visual-signoff` for palette and contrast gates, `vision-second-opinion` for a repeatable vision-model review of exact-build screenshots, and `audio-pr-proof-of-work` for loudness and second-opinion checks on audio changes. Use the [identity brief template](templates/project-identity-brief.md) beside the project voice brief. Keep completed product briefs and private mockups in their owning repositories. The [dependency register](plugins/design/DEPENDENCIES.md) distinguishes reviewed candidates from tested dependencies; neither skill requires an external design skill. [Behavior cases](evals/design/README.md) cover preservation, audience fit, availability, and evidence limits.
+The optional [Design plugin](plugins/design/) includes `product-identity` for brand-family briefs, `experience-review` for evidence-based interface audits, `visual-signoff` for palette and contrast gates, `vision-second-opinion` for a repeatable vision-model review of exact-build screenshots, `audio-pr-proof-of-work` for loudness and second-opinion checks on audio changes, `roblox-3d-art-direction` for implementable Roblox room looks (palette with measured L*, Lighting/Atmosphere/post values, light plan, triangle and texture budgets), `3d-visual-gate` for fixed-shot, phone, luminance and performance checks on 3D pull requests, `fal-image-to-3d` for an approval-gated image-to-3D asset pipeline, `roblox-asset-pipeline` for licence-checked, receipt-tracked generated assets (meshes, images, audio, video) from licence check to an owner-approved group upload, and `roblox-3d-play-pass` for evidence-first Roblox playtests (first 60 seconds, camera comfort, readability, controls per input, frame time, lag, young-player safety and monetization, fun rubric, High/Medium/Low). Use the [identity brief template](templates/project-identity-brief.md) beside the project voice brief. Keep completed product briefs and private mockups in their owning repositories. The [dependency register](plugins/design/DEPENDENCIES.md) distinguishes reviewed candidates from tested dependencies; neither skill requires an external design skill. [Behavior cases](evals/design/README.md) cover preservation, audience fit, availability, and evidence limits.
+
+The Design plugin's 3D feel skills cover how a 3D Roblox scene behaves. `3d-game-feel-tuning` sets camera and movement targets, `roblox-spatial-audio` covers Audio API wiring, attenuation, buses and the asset upload path, and `3d-feel-proof-of-work` records measured camera, movement, spatial-audio and accessibility checks on a pull request, beside `audio-pr-proof-of-work`.
 
 Repository tag v0.2.0 pinned Design 0.1.0 with Editorial 0.1.0. Later tags and the unreleased source on `main` supersede those plugin versions; see [Current snapshot: v0.5.0](#current-snapshot-v050) and the changelog.
+
+## Gamedev plugin
+
+The optional [Gamedev plugin](plugins/gamedev/) includes `roblox-rojo-headless-build-test` for linting, unit-testing and building a Roblox place from Luau with Rojo and Lune, including a round-trip check of 3D Instances in the built place, and `godot-headless-3d-render-export` for software-rendered Godot 4 frames, golden-image diffs and Web exports on a machine without a GPU. Both say what a headless run does not prove: engine physics, players and networking, real-GPU rendering and performance still need a playtest on the target platform. They complement the Design plugin's Roblox 3D skills, which cover art direction, visual gates and play passes.
 
 ## Public Skills plugin
 
@@ -74,12 +80,13 @@ For a product, copy the [voice brief template](templates/project-voice-brief.md)
 ```text
 .agents/plugins/marketplace.json    Repository plugin catalog
 plugins/editorial/                  Editorial writing and human-voice lint
-plugins/design/                     Identity, experience, visual sign-off, vision and audio checks
+plugins/design/                     Identity, experience, visual sign-off, vision, audio and Roblox 3D checks
 plugins/release/                    Release evidence, usefulness review, exact-SHA owner approval
 plugins/reporting/                  Private decision reports
 plugins/automation/                 Local scoped credential runner
 plugins/engineering/                Platform boundaries and test-driven development
 plugins/performance/                Advisory runtime regression checks
+plugins/gamedev/                    Headless 3D build, test and render checks
 plugins/public-skills/              Pinned, licensed copies of approved upstream skills
 agents/codex/                       Opt-in Codex agent templates
 evals/                              Public or cleared regression cases

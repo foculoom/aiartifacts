@@ -6,6 +6,71 @@ Catalog review of foculoom/aiartifacts at `2dac4dc` plus the source on this
 branch. The published `v0.5.0` tag and existing consumer pins are unchanged.
 The next monthly upstream review remains 2026-12-07.
 
+## Unreleased — Gamedev 0.1.0 source: headless 3D build and test
+
+- Add a Gamedev plugin with two generic skills: `roblox-rojo-headless-build-test`
+  (Rojo, Lune, TestEZ, Selene and StyLua without Studio; geometry as data with
+  pure rules and a reachability flood fill; a Lune-built `.rbxm` mounted by Rojo;
+  a round-trip check of the built place; deliberate-revert proofs) and
+  `godot-headless-3d-render-export` (Xvfb with llvmpipe or a user-space lavapipe
+  Vulkan driver, deterministic frame capture, golden-image diff, Web export).
+- Both were run on 2026-11-27 on a CPU-only Linux box; each skill records what
+  that run did and did not prove. Documentation only: no scripts, tests, package
+  release or consumer pin change.
+
+## Unreleased — Design 0.2.0 source: Roblox 3D play pass
+
+- Add a generic `roblox-3d-play-pass` Design skill: a test matrix (small and large
+  phone touch, tablet, keyboard and mouse, gamepad, low-end, VR, network presets),
+  a first-60-second test, camera comfort and motion-sickness checks (FOV, head bob,
+  shake, auto-rotate, occlusion, flashing, FMS rating), readability, controls,
+  MicroProfiler/Developer Console frame-time and memory capture, lag, young-player
+  safety (content ratings, Kids and Select, text filtering, monetization pressure,
+  paid random items, PolicyService, data), a fun rubric, High/Medium/Low severity
+  and a report template. It separates source, headless, Studio-emulation and
+  real-device evidence. Sources dated 2026-11-27; six synthetic, not-yet-run cases
+  in `evals/design/roblox-play-pass/`. Documentation only.
+
+## Unreleased — Design 0.2.0 source: Roblox 3D art direction
+
+- Add three generic Design skills: `roblox-3d-art-direction` (style choice, palette
+  with measured CIE L*, Lighting/Atmosphere/post-processing values per state, light
+  plan, value structure, readability rule, asset and performance budgets),
+  `3d-visual-gate` (fixed Studio camera shots, phone and low-quality captures,
+  L* and dL measurement, triangle/draw-call/memory/frame-time checks, a
+  review-only vision second opinion, High/Medium/Low), and `fal-image-to-3d`
+  (concept → image-to-3D → decimate/UV → ≤1024 PBR bake → import, with spend and
+  import approval gates).
+- Cite Roblox Creator Hub pages verified 2026-11-27, including the deprecation of
+  `Lighting.Technology` in favor of `LightingStyle` and `PrioritizeLightingQuality`,
+  the 20,000-triangle per-mesh cap, the 1024² texture-map note and the 120-stud
+  light range clamp. The fal model table is a dated catalog snapshot; no model was
+  run. Documentation only: no scripts, tests, package release or consumer pin change.
+- Refine the three skills after a first room pass: one shadow caster per lit
+  volume (a second only for an unreachable interior, stated as an exception),
+  smooth-noise flicker at ≤ 3 peaks/s (WCAG 2.3.1), client-side interior
+  sub-key tweens on a zone shared with camera and audio, and a verified
+  headless Blender 4.3 install and smoke test (decimate, GLB export, triangle check).
+- Add three generic 3D feel skills: `3d-game-feel-tuning` (camera damping, zoom
+  and occlusion, FOV kicks, rotation-only trauma shake, reduced motion; speed,
+  acceleration, jump arc, coyote time and jump buffer), `roblox-spatial-audio`
+  (Audio API graphs, attenuation curves, per-category listeners and faders,
+  reverb, sidechain ducking, voice budget, upload path for code-generated audio)
+  and `3d-feel-proof-of-work` (a measured PR checklist beside
+  `audio-pr-proof-of-work`). Cite Roblox Creator Hub pages verified 2026-11-27,
+  including the Studio-only `AudioStreamWriter`. Documentation only.
+
+## Unreleased — Design 0.2.0 source: Roblox asset pipeline
+
+- Add a generic `roblox-asset-pipeline` Design skill: a per-source licence check
+  before generating (fal model badges plus upstream licences, Suno plan and
+  download rules, code-generated inputs), one provenance receipt template for
+  every asset type, Roblox mesh, texture, audio and video limits and Open Cloud
+  asset types with citations checked 2026-11-27, moderation and young-player
+  rules, prep and measurement, and the owner, spend, group-upload and
+  upload-licence gates. The audio sections were written and reviewed by the
+  audio owner. Documentation only; no model was run.
+
 ## Unreleased — Editorial, Design and Release 0.2.0 source
 
 - Add a public, generic human-voice skill with a banned-word list, formula
