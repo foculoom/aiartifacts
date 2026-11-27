@@ -3,8 +3,9 @@
 Use this procedure during the existing Monday 09:00 Pacific engineering review
 when a source check is due, or after a relevant security report, broken method,
 consumer request, or material upstream correction. The proposed toolkit check
-is due on the first Monday of each month; the last actual source inspection
-was **2026-11-10** and the next review date is **2026-12-07**. This is a written procedure and completed bounded
+is due on the first Monday of each month; the last catalog review was
+**2026-11-26**, the last full source inspection recorded before that was
+**2026-11-10**, and the next review date remains **2026-12-07**. This is a written procedure and completed bounded
 inspection, not a configured automation. The toolkit maintainer owns discovery
 for toolkit dependencies; each product maintainer decides adoption for that
 product. Routine contributions do not require a live upstream lookup.

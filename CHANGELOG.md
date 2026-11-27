@@ -1,5 +1,31 @@
 # Changelog
 
+## Last reviewed — 2026-11-26 (America/Los_Angeles)
+
+Catalog review of foculoom/aiartifacts at `2dac4dc` plus the source on this
+branch. The published `v0.5.0` tag and existing consumer pins are unchanged.
+The next monthly upstream review remains 2026-12-07.
+
+## Unreleased — Editorial, Design and Release 0.2.0 source
+
+- Add a public, generic human-voice skill with a banned-word list, formula
+  checks, rewrite guidance, and a dependency-free Node linter. Credit
+  Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+  as a descriptive field guide, not as an authorship test.
+- Add generic templates for visual sign-off against approved tokens and WCAG
+  contrast, a repeatable vision-model second opinion of exact-build screenshots,
+  a usefulness review with a VALUE_GATE report format, exact-SHA owner approval
+  before merge or deploy, and audio PR proof of work (loudness, true peak, loop
+  wraps, and a second opinion).
+- Record that pinned public-skills copies already lag some upstreams
+  (Cloudflare `cloudflare/skills` main has moved past `14472d57` with Flagship
+  and Artifacts skills; Playwright's `playwright-cli` path has a later commit).
+  Re-pinning those vendor copies is deferred to the 2026-12-07 review rather
+  than mixed into this source increment.
+- Clarify stale README snapshot wording for the v0.2.0 tag, and list the full
+  plugin layout. No package release is included.
+
+
 ## Unreleased — Engineering 0.2.0 source
 
 - Add a small pinned adaptation of Matt Pocock’s MIT TDD method, with original

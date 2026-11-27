@@ -33,6 +33,7 @@ Run:
 
 ```sh
 python3 -m unittest discover -s plugins/editorial/skills/editorial-writing/tests -q
+python3 -m unittest discover -s plugins/editorial/skills/human-voice/tests -q
 ```
 
 Keep repository and plugin versions in sync for the first release. Later plugins

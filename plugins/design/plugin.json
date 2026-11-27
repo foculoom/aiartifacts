@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design",
-  "version": "0.1.1",
-  "description": "Define product identities and review rendered experiences against their briefs.",
+  "version": "0.2.0",
+  "description": "Define product identities, review rendered experiences, sign off palettes, and record audiovisual proof of work.",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -14,20 +14,25 @@
     "design",
     "identity",
     "usability",
-    "review"
+    "review",
+    "palette",
+    "contrast",
+    "audio"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Design",
         "shortDescription": "Product identity and experience review",
-        "longDescription": "Define product identities and review rendered experiences against their briefs.",
+        "longDescription": "Define product identities, review rendered experiences, sign off palettes, and record audiovisual proof of work.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",
         "defaultPrompt": [
           "Define this product identity within its existing brand family.",
-          "Review this interface against its brief using observed evidence."
+          "Review this interface against its brief using observed evidence.",
+          "Sign off this palette change against its tokens and contrast targets.",
+          "Record audio proof of work for this pull request."
         ]
       }
     }
