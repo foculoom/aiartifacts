@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design",
   "version": "0.2.0",
-  "description": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, and direct and gate Roblox 3D art.",
+  "description": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, direct and gate Roblox 3D art, and take generated assets through licence, provenance and upload gates.",
   "author": {
     "name": "Foculoom",
     "url": "https://github.com/foculoom"
@@ -20,14 +20,15 @@
     "audio",
     "3d",
     "roblox",
-    "playtest"
+    "playtest",
+    "assets"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Design",
         "shortDescription": "Product identity and experience review",
-        "longDescription": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, and direct and gate Roblox 3D art.",
+        "longDescription": "Define product identities, review rendered experiences, sign off palettes, record audiovisual proof of work, direct and gate Roblox 3D art, and take generated assets through licence, provenance and upload gates.",
         "developerName": "Foculoom",
         "category": "Productivity",
         "websiteURL": "https://github.com/foculoom/aiartifacts",

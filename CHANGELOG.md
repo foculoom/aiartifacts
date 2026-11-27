@@ -60,6 +60,17 @@ The next monthly upstream review remains 2026-12-07.
   `audio-pr-proof-of-work`). Cite Roblox Creator Hub pages verified 2026-11-27,
   including the Studio-only `AudioStreamWriter`. Documentation only.
 
+## Unreleased — Design 0.2.0 source: Roblox asset pipeline
+
+- Add a generic `roblox-asset-pipeline` Design skill: a per-source licence check
+  before generating (fal model badges plus upstream licences, Suno plan and
+  download rules, code-generated inputs), one provenance receipt template for
+  every asset type, Roblox mesh, texture, audio and video limits and Open Cloud
+  asset types with citations checked 2026-11-27, moderation and young-player
+  rules, prep and measurement, and the owner, spend, group-upload and
+  upload-licence gates. The audio sections were written and reviewed by the
+  audio owner. Documentation only; no model was run.
+
 ## Unreleased — Editorial, Design and Release 0.2.0 source
 
 - Add a public, generic human-voice skill with a banned-word list, formula
