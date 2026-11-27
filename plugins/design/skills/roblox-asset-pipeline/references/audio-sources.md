@@ -37,6 +37,12 @@ A vendor listing or a `Commercial use` badge is not a substitute for the cited l
 - Also listed (same family): <https://fal.ai/models/elevenlabs/music> and <https://fal.ai/models/elevenlabs/music/v2>
 - Model page: `fal-ai/lyria3`. <https://fal.ai/models/fal-ai/lyria3>
 - Model page: `fal-ai/lyria3/pro`. <https://fal.ai/models/fal-ai/lyria3/pro>
+- Model page: `elevenlabs/sound-effects/v3`. <https://fal.ai/models/elevenlabs/sound-effects/v3>
+- Model page: `fal-ai/elevenlabs/sound-effects/v2`. <https://fal.ai/models/fal-ai/elevenlabs/sound-effects/v2>
+- Model page: `fal-ai/stable-audio-3/small/sfx/text-to-audio`. <https://fal.ai/models/fal-ai/stable-audio-3/small/sfx/text-to-audio>
+- Model page: `cassetteai/sound-effects-generator`. <https://fal.ai/models/cassetteai/sound-effects-generator>
+- Model page: `sonilo/v1.1/text-to-sound-effects`. <https://fal.ai/models/sonilo/v1.1/text-to-sound-effects>
+- fal product page: Sonilo Sound Effects 1.0 (commercial-use FAQ). <https://fal.ai/sonilo-sound-effects-1.0>
 
 ## Upstream licences for fal-hosted audio models
 
@@ -50,7 +56,16 @@ A vendor listing or a `Commercial use` badge is not a substitute for the cited l
 - CassetteAI Terms & Conditions. Last updated 13 February 2023; effective 13 February 2023. <https://cassetteai.com/terms>
 - MiniMax Audio Music Creation Terms of Use. Effective 19 June 2025. <https://www.minimax.io/audio/doc/terms-of-service-music.html>
 - ElevenLabs, "Can I publish the content I generate on the platform?" <https://elevenlabs.io/docs/help-center/legal/can-i-publish-the-content-i-generate-on-the-platform>
-- ElevenLabs Music Terms, including Exhibit A (Music Commercial Rights Table). Last updated 9 October 2026. <https://elevenlabs.io/music-terms>
+- ElevenLabs Music Terms, including Exhibit A (Music Commercial Rights Table). Last updated 9 October 2026. The Studio Games exclusion is here, and applies to the Music Service only. <https://elevenlabs.io/music-terms>
+- ElevenCreative Terms, including Exhibit 4 (Sound Effects). Last updated 9 October 2026. <https://elevenlabs.io/creative-terms>
+- ElevenLabs Sound Effects marketing / FAQ (paid commercial use, including games; free plan non-commercial). <https://elevenlabs.io/sound-effects>
+- Stability AI Core Models list. Last updated 20 May 2026. Lists Stable Audio Open 1.0, Stable Audio 3.0 Small, and Stable Audio 3.0 Medium. <https://stability.ai/core-models>
+- CassetteAI Pro (Studio plan commercial-use claim: "Creations made on Pro can be used for commercial projects"). <https://cassetteai.com/pro>
+- Sonilo Terms of Service. Last updated 3 November 2026. Especially §6.1–6.2 (output assignment; commercial use by plan; indie vs studio games) and §10 (API use). <https://sonilo.com/terms>
+- Sonilo commercial-rights overview (API output: check API terms rather than assuming a web plan). <https://sonilo.com/licensing>
+- Sonilo help: Can my app's users use audio generated through the Sonilo API commercially? Last reviewed 1 October 2026. <https://sonilo.com/help/licensing/can-my-apps-users-use-sonilo-api-audio-commercially>
+- Sonilo help: Can I edit, remix, loop, or use Sonilo output in games, apps, and broadcast? Last reviewed 1 October 2026. <https://sonilo.com/help/licensing/can-i-edit-remix-or-use-sonilo-output-in-games-apps-and-broadcast>
+- Sonilo blog, "Sonilo on fal.ai: Licensed Video-to-Music API for Commercial Apps," 4 June 2026 (music endpoint; plan-specific language; predates the October 2026 API help page). <https://sonilo.com/blog/sonilo-now-available-on-fal-ai>
 - Google Cloud Lyria 3 documentation (Preview / Pre-GA; commercial use election; SynthID / C2PA). <https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/lyria/lyria-3>
 - Lyria overview on Vertex AI (watermarking). <https://docs.cloud.google.com/vertex-ai/generative-ai/docs/music/overview>
 - Google DeepMind, Lyria 3 model card. Published 18 February 2026; updated March 2026. <https://deepmind.google/models/model-cards/lyria-3/>
