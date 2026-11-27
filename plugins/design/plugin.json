@@ -19,7 +19,8 @@
     "contrast",
     "audio",
     "3d",
-    "roblox"
+    "roblox",
+    "playtest"
   ],
   "extensions": {
     "com.openai": {

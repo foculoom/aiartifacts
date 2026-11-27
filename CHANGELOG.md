@@ -6,6 +6,19 @@ Catalog review of foculoom/aiartifacts at `2dac4dc` plus the source on this
 branch. The published `v0.5.0` tag and existing consumer pins are unchanged.
 The next monthly upstream review remains 2026-12-07.
 
+## Unreleased — Design 0.2.0 source: Roblox 3D play pass
+
+- Add a generic `roblox-3d-play-pass` Design skill: a test matrix (small and large
+  phone touch, tablet, keyboard and mouse, gamepad, low-end, VR, network presets),
+  a first-60-second test, camera comfort and motion-sickness checks (FOV, head bob,
+  shake, auto-rotate, occlusion, flashing, FMS rating), readability, controls,
+  MicroProfiler/Developer Console frame-time and memory capture, lag, young-player
+  safety (content ratings, Kids and Select, text filtering, monetization pressure,
+  paid random items, PolicyService, data), a fun rubric, High/Medium/Low severity
+  and a report template. It separates source, headless, Studio-emulation and
+  real-device evidence. Sources dated 2026-11-27; six synthetic, not-yet-run cases
+  in `evals/design/roblox-play-pass/`. Documentation only.
+
 ## Unreleased — Design 0.2.0 source: Roblox 3D art direction
 
 - Add three generic Design skills: `roblox-3d-art-direction` (style choice, palette
