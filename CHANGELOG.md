@@ -26,6 +26,14 @@ The next monthly upstream review remains 2026-12-07.
   smooth-noise flicker at ≤ 3 peaks/s (WCAG 2.3.1), client-side interior
   sub-key tweens on a zone shared with camera and audio, and a verified
   headless Blender 4.3 install and smoke test (decimate, GLB export, triangle check).
+- Add three generic 3D feel skills: `3d-game-feel-tuning` (camera damping, zoom
+  and occlusion, FOV kicks, rotation-only trauma shake, reduced motion; speed,
+  acceleration, jump arc, coyote time and jump buffer), `roblox-spatial-audio`
+  (Audio API graphs, attenuation curves, per-category listeners and faders,
+  reverb, sidechain ducking, voice budget, upload path for code-generated audio)
+  and `3d-feel-proof-of-work` (a measured PR checklist beside
+  `audio-pr-proof-of-work`). Cite Roblox Creator Hub pages verified 2026-11-27,
+  including the Studio-only `AudioStreamWriter`. Documentation only.
 
 ## Unreleased — Editorial, Design and Release 0.2.0 source
 
